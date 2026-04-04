@@ -388,6 +388,28 @@
             display: none; text-align: center; padding: 1.5rem;
             font-size: 0.9rem; color: var(--accent);
         }
+        .success-overlay {
+            display: none; position: fixed; inset: 0; z-index: 998;
+            background: rgba(0,0,0,0.5); align-items: center; justify-content: center;
+        }
+        .success-overlay.active { display: flex; }
+        .success-box {
+            background: var(--white); border-radius: 16px; padding: 2.5rem;
+            max-width: 420px; width: 90%; text-align: center;
+            box-shadow: 0 8px 40px rgba(0,0,0,0.15); animation: heroIn 0.4s ease;
+        }
+        .success-box .check { font-size: 2.5rem; margin-bottom: 0.8rem; }
+        .success-box h3 {
+            font-family: 'DM Sans', sans-serif; font-size: 1.15rem;
+            font-weight: 700; margin-bottom: 0.5rem; color: var(--dark);
+        }
+        .success-box p { font-size: 0.88rem; color: var(--muted); line-height: 1.6; margin-bottom: 1.2rem; }
+        .success-box button {
+            padding: 0.55rem 1.5rem; background: var(--accent); color: white;
+            border: none; border-radius: 8px; font-size: 0.85rem; font-weight: 600;
+            font-family: 'DM Sans', sans-serif; cursor: pointer; transition: background 0.2s;
+        }
+        .success-box button:hover { background: #1e4535; }
         footer {
             text-align: center; padding: 2.5rem; font-size: 0.78rem;
             color: var(--muted-light); border-top: 1px solid var(--border-light);
@@ -838,20 +860,8 @@
             <p class="contact-subtitle" data-fr="Je serais ravie d'échanger avec vous. Laissez-moi un message et je vous répondrai dès que possible." data-en="I'd love to hear from you. Leave me a message and I'll get back to you as soon as possible.">Je serais ravie d'échanger avec vous. Laissez-moi un message et je vous répondrai dès que possible.</p>
             <form id="contact-form" action="https://formsubmit.co/c.hsuann@gmail.com" method="POST">
                 <input type="hidden" name="_subject" value="Nouveau message depuis votre CV en ligne">
-                <input type="hidden" name="_next" value="https://jochiu.github.io/CV_FR.EN">
-                <input type="hidden" name="_autoresponse" value="Bonjour et merci pour votre message !
-
-Je l'ai bien reçu et je vous répondrai dès que possible.
-
-Mes coordonnées
-
-Email : c.hsuann@gmail.com
-Téléphone : 06 35 71 32 64
-CV en ligne : https://jochiu.github.io/CV_FR.EN
-LinkedIn : www.linkedin.com/in/yihsuan-chiu
-
-À très bientôt,
-Yi-Hsuan Chiu">
+                <input type="hidden" name="_next" value="https://jochiu.github.io/CV_FR.EN?sent=true">
+                <input type="hidden" name="_autoresponse" value="Bonjour et merci pour votre message !&#10;&#10;Je l'ai bien reçu et je vous répondrai dès que possible.&#10;&#10;Mes coordonnées&#10;&#10;Email : c.hsuann@gmail.com&#10;Téléphone : 06 35 71 32 64&#10;CV en ligne : https://jochiu.github.io/CV_FR.EN&#10;LinkedIn : www.linkedin.com/in/yihsuan-chiu&#10;&#10;À très bientôt,&#10;Yi-Hsuan Chiu">
                 <input type="hidden" name="_template" value="table">
                 <input type="text" name="_honey" style="display:none">
                 <div class="form-group">
@@ -888,6 +898,15 @@ Yi-Hsuan Chiu">
 <footer>
     <p>© 2026 Yi-Hsuan Chiu</p>
 </footer>
+
+<div class="success-overlay" id="successOverlay">
+    <div class="success-box">
+        <div class="check">✓</div>
+        <h3 data-fr="Message envoyé !" data-en="Message sent!">Message envoyé !</h3>
+        <p data-fr="Merci pour votre message ! Je vous répondrai dès que possible. Un email de confirmation a été envoyé à votre adresse." data-en="Thank you for your message! I'll get back to you as soon as possible. A confirmation email has been sent to your address.">Merci pour votre message ! Je vous répondrai dès que possible. Un email de confirmation a été envoyé à votre adresse.</p>
+        <button onclick="document.getElementById('successOverlay').classList.remove('active');history.replaceState(null,'',location.pathname)">OK</button>
+    </div>
+</div>
 
 <div class="lightbox" id="lightbox" onclick="closeLightbox()">
     <button class="lightbox-close" onclick="closeLightbox()">&times;</button>
@@ -957,6 +976,10 @@ Yi-Hsuan Chiu">
     document.addEventListener('DOMContentLoaded', () => {
         const saved = localStorage.getItem('cv-lang');
         if (saved) setLang(saved);
+
+        if (new URLSearchParams(window.location.search).get('sent') === 'true') {
+            document.getElementById('successOverlay').classList.add('active');
+        }
     });
 </script>
 </body>
