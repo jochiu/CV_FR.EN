@@ -284,15 +284,42 @@
         .cert-item .cert-issuer { font-size: 0.73rem; color: var(--accent); font-weight: 500; }
         .cert-item .cert-date { font-size: 0.7rem; color: var(--muted-light); margin-top: 0.1rem; }
         .cert-item .cert-id { font-size: 0.68rem; color: var(--muted-light); font-style: italic; margin-top: 0.15rem; line-height: 1.4; }
-        .ambassador-photos { display: flex; gap: 0.5rem; margin-top: 0.6rem; flex-wrap: wrap; }
+        .extra-item.full-width {
+            grid-column: 1 / -1;
+            display: flex; gap: 1.5rem; align-items: flex-start;
+        }
+        .extra-item.full-width .extra-text { flex: 1; min-width: 0; }
+        .extra-item.full-width .ambassador-photos {
+            flex-shrink: 0; margin-top: 0;
+            display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.4rem;
+        }
         .ambassador-photos img {
-            width: 100px; height: 70px; object-fit: cover; border-radius: 6px;
+            width: 110px; height: 75px; object-fit: cover; border-radius: 6px;
             border: 1px solid var(--border-light); transition: transform 0.3s;
         }
         .ambassador-photos img:hover { transform: scale(1.05); }
         .edu-project { margin-top: 0.6rem; padding: 0.8rem 1rem; background: var(--warm-gray); border-radius: 8px; }
         .edu-project h4 { font-size: 0.82rem; font-weight: 600; margin-bottom: 0.3rem; color: var(--dark); }
         .edu-project p { font-size: 0.78rem; color: var(--muted); line-height: 1.6; }
+        .lightbox {
+            display: none; position: fixed; inset: 0; z-index: 999;
+            background: rgba(0,0,0,0.85); align-items: center; justify-content: center;
+            cursor: zoom-out; animation: lbIn 0.25s ease;
+        }
+        .lightbox.active { display: flex; }
+        .lightbox img {
+            max-width: 90vw; max-height: 90vh; border-radius: 10px;
+            box-shadow: 0 8px 40px rgba(0,0,0,0.4); object-fit: contain;
+        }
+        .lightbox-close {
+            position: absolute; top: 1.2rem; right: 1.5rem;
+            background: rgba(255,255,255,0.15); border: none; color: white;
+            width: 36px; height: 36px; border-radius: 50%; font-size: 1.2rem;
+            cursor: pointer; display: flex; align-items: center; justify-content: center;
+            transition: background 0.2s;
+        }
+        .lightbox-close:hover { background: rgba(255,255,255,0.3); }
+        @keyframes lbIn { from { opacity: 0; } to { opacity: 1; } }
         footer {
             text-align: center; padding: 2.5rem; font-size: 0.78rem;
             color: var(--muted-light); border-top: 1px solid var(--border-light);
@@ -317,6 +344,8 @@
             .skills-grid { grid-template-columns: 1fr; }
             .lang-grid { grid-template-columns: repeat(2, 1fr); }
             .extras-grid { grid-template-columns: 1fr; }
+            .extra-item.full-width { flex-direction: column; }
+            .extra-item.full-width .ambassador-photos { grid-template-columns: repeat(4, 1fr); }
             .cert-grid { grid-template-columns: repeat(3, 1fr); }
             .nav-links a.nav-desktop { display: none; }
         }
@@ -690,14 +719,16 @@
             <div class="section-line"></div>
         </div>
         <div class="extras-grid">
-            <div class="extra-item">
-                <h4 data-fr="Ambassadrice Internationale" data-en="International Ambassador">Ambassadrice Internationale</h4>
-                <p data-fr="EM Strasbourg (2022–2024)" data-en="EM Strasbourg (2022–2024)">EM Strasbourg (2022–2024)</p>
-                <ul style="list-style:none;padding:0;margin-top:0.4rem;">
-                    <li style="position:relative;padding-left:1.1rem;font-size:0.8rem;color:var(--muted);margin-bottom:0.3rem;line-height:1.55;"><span style="position:absolute;left:0;top:0.6em;width:4px;height:4px;background:var(--gold);border-radius:50%;display:block;"></span><span data-fr="Représentation institutionnelle : Promotion de l'école lors du salon EEFT Taiwan 2024, agissant comme lien entre l'institution française et les candidats asiatiques" data-en="Institutional representation: Promotion of the school at the EEFT Taiwan 2024 fair, acting as a bridge between the French institution and Asian candidates">Représentation institutionnelle : Promotion de l'école lors du salon EEFT Taiwan 2024, agissant comme lien entre l'institution française et les candidats asiatiques</span></li>
-                    <li style="position:relative;padding-left:1.1rem;font-size:0.8rem;color:var(--muted);margin-bottom:0.3rem;line-height:1.55;"><span style="position:absolute;left:0;top:0.6em;width:4px;height:4px;background:var(--gold);border-radius:50%;display:block;"></span><span data-fr="Accompagnement interculturel : Accueil et intégration des étudiants internationaux, facilitant leur adaptation au système éducatif français" data-en="Intercultural support: Welcoming and integrating international students, facilitating their adaptation to the French education system">Accompagnement interculturel : Accueil et intégration des étudiants internationaux, facilitant leur adaptation au système éducatif français</span></li>
-                    <li style="position:relative;padding-left:1.1rem;font-size:0.8rem;color:var(--muted);margin-bottom:0.3rem;line-height:1.55;"><span style="position:absolute;left:0;top:0.6em;width:4px;height:4px;background:var(--gold);border-radius:50%;display:block;"></span><span data-fr="Animation de communauté : Création de contenus vidéo pour promouvoir les échanges académiques et renforcer la visibilité de l'école à l'international" data-en="Community engagement: Creation of video content to promote academic exchanges and strengthen the school's international visibility">Animation de communauté : Création de contenus vidéo pour promouvoir les échanges académiques et renforcer la visibilité de l'école à l'international</span></li>
-                </ul>
+            <div class="extra-item full-width">
+                <div class="extra-text">
+                    <h4 data-fr="Ambassadrice Internationale" data-en="International Ambassador">Ambassadrice Internationale</h4>
+                    <p data-fr="EM Strasbourg (2022–2024)" data-en="EM Strasbourg (2022–2024)">EM Strasbourg (2022–2024)</p>
+                    <ul style="list-style:none;padding:0;margin-top:0.4rem;">
+                        <li style="position:relative;padding-left:1.1rem;font-size:0.8rem;color:var(--muted);margin-bottom:0.3rem;line-height:1.55;"><span style="position:absolute;left:0;top:0.6em;width:4px;height:4px;background:var(--gold);border-radius:50%;display:block;"></span><span data-fr="Représentation institutionnelle : Promotion de l'école lors du salon EEFT Taiwan 2024, agissant comme lien entre l'institution française et les candidats asiatiques" data-en="Institutional representation: Promotion of the school at the EEFT Taiwan 2024 fair, acting as a bridge between the French institution and Asian candidates">Représentation institutionnelle : Promotion de l'école lors du salon EEFT Taiwan 2024, agissant comme lien entre l'institution française et les candidats asiatiques</span></li>
+                        <li style="position:relative;padding-left:1.1rem;font-size:0.8rem;color:var(--muted);margin-bottom:0.3rem;line-height:1.55;"><span style="position:absolute;left:0;top:0.6em;width:4px;height:4px;background:var(--gold);border-radius:50%;display:block;"></span><span data-fr="Accompagnement interculturel : Accueil et intégration des étudiants internationaux, facilitant leur adaptation au système éducatif français" data-en="Intercultural support: Welcoming and integrating international students, facilitating their adaptation to the French education system">Accompagnement interculturel : Accueil et intégration des étudiants internationaux, facilitant leur adaptation au système éducatif français</span></li>
+                        <li style="position:relative;padding-left:1.1rem;font-size:0.8rem;color:var(--muted);margin-bottom:0.3rem;line-height:1.55;"><span style="position:absolute;left:0;top:0.6em;width:4px;height:4px;background:var(--gold);border-radius:50%;display:block;"></span><span data-fr="Animation de communauté : Création de contenus vidéo pour promouvoir les échanges académiques et renforcer la visibilité de l'école à l'international" data-en="Community engagement: Creation of video content to promote academic exchanges and strengthen the school's international visibility">Animation de communauté : Création de contenus vidéo pour promouvoir les échanges académiques et renforcer la visibilité de l'école à l'international</span></li>
+                    </ul>
+                </div>
                 <div class="ambassador-photos">
                     <img src="Integration%20team.jpeg" alt="Integration team" loading="lazy">
                     <img src="Team%20building.jpeg" alt="Team building" loading="lazy">
@@ -731,7 +762,31 @@
 
 <footer><p>© 2026 Yi-Hsuan Chiu</p></footer>
 
+<div class="lightbox" id="lightbox" onclick="closeLightbox()">
+    <button class="lightbox-close" onclick="closeLightbox()">&times;</button>
+    <img id="lightbox-img" src="" alt="">
+</div>
+
 <script>
+    function openLightbox(src, alt) {
+        const lb = document.getElementById('lightbox');
+        const img = document.getElementById('lightbox-img');
+        img.src = src;
+        img.alt = alt || '';
+        lb.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    }
+    function closeLightbox() {
+        document.getElementById('lightbox').classList.remove('active');
+        document.body.style.overflow = '';
+    }
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(); });
+
+    document.querySelectorAll('.exp-photos img, .ambassador-photos img').forEach(img => {
+        img.style.cursor = 'zoom-in';
+        img.addEventListener('click', () => openLightbox(img.src, img.alt));
+    });
+
     function setLang(lang) {
         document.documentElement.lang = lang;
         document.getElementById('btn-fr').classList.toggle('active', lang === 'fr');
