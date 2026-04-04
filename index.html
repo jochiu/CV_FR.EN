@@ -335,17 +335,18 @@
         }
         .email-cta:hover svg { stroke: var(--accent); }
         .back-to-top {
-            display: none; position: fixed; bottom: 1.5rem; right: 1.5rem; z-index: 90;
-            width: 42px; height: 42px; border-radius: 50%; border: none;
+            display: flex; position: fixed; bottom: 1.5rem; right: 1.5rem; z-index: 90;
+            padding: 0.5rem 1rem; border-radius: 22px; border: none;
             background: var(--accent); color: white; cursor: pointer;
             box-shadow: 0 3px 12px rgba(45,90,71,0.3);
-            align-items: center; justify-content: center;
+            align-items: center; justify-content: center; gap: 0.35rem;
+            font-family: 'DM Sans', sans-serif; font-size: 0.75rem; font-weight: 600;
             transition: opacity 0.3s, transform 0.3s;
             opacity: 0; transform: translateY(10px);
         }
         .back-to-top.visible { opacity: 1; transform: translateY(0); }
         .back-to-top:hover { background: #1e4535; }
-        .back-to-top svg { width: 20px; height: 20px; }
+        .back-to-top svg { width: 16px; height: 16px; }
         .contact-section {
             max-width: 600px; margin: 0 auto; padding: 2.5rem;
             background: var(--white); border: 1px solid var(--border-light);
@@ -386,9 +387,6 @@
         .form-success {
             display: none; text-align: center; padding: 1.5rem;
             font-size: 0.9rem; color: var(--accent);
-        }
-        @media (max-width: 768px) {
-            .back-to-top { display: flex; }
         }
         footer {
             text-align: center; padding: 2.5rem; font-size: 0.78rem;
@@ -441,6 +439,7 @@
         <a href="#education" class="nav-desktop" data-fr="Formation" data-en="Education">Formation</a>
         <a href="#certifications" class="nav-desktop" data-fr="Certifications" data-en="Certifications">Certifications</a>
         <a href="#portfolio" class="nav-desktop" data-fr="Portfolio" data-en="Portfolio">Portfolio</a>
+        <a href="#contact" class="nav-desktop">Contact</a>
         <div class="lang-toggle">
             <button class="lang-btn active" id="btn-fr" onclick="setLang('fr')">FR</button>
             <button class="lang-btn" id="btn-en" onclick="setLang('en')">EN</button>
@@ -461,7 +460,6 @@
                 <a class="contact-chip email-cta" href="mailto:c.hsuann@gmail.com">
                     <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="4" width="16" height="12" rx="2"/><path d="M2 4l8 6 8-6"/></svg>
                     c.hsuann@gmail.com
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="width:15px;height:15px;flex-shrink:0;"><path d="M8 13V4.5a1.5 1.5 0 013 0V12"/><path d="M11 11.5a1.5 1.5 0 013 0V12"/><path d="M14 10.5a1.5 1.5 0 013 0V12"/><path d="M17 11.5a1.5 1.5 0 013 0V16a6 6 0 01-6 6h-2a6 6 0 01-4.24-1.76L4.88 17.36a1.5 1.5 0 012.12-2.12L8 16.12"/></svg>
                 </a>
                 <a class="contact-chip" href="https://www.linkedin.com/in/yihsuan-chiu/" target="_blank" rel="noopener">
                     <svg viewBox="0 0 20 20" fill="currentColor"><path d="M4.5 3A1.5 1.5 0 003 4.5 1.5 1.5 0 004.5 6 1.5 1.5 0 006 4.5 1.5 1.5 0 004.5 3zM3 8h3v9H3V8zm5.5 0H11v1.2h.03c.35-.66 1.2-1.35 2.47-1.35 2.64 0 3.13 1.74 3.13 4v5.15h-3V12.4c0-1.1-.02-2.5-1.53-2.5s-1.76 1.2-1.76 2.43V17H7.5V8z"/></svg>
@@ -871,9 +869,12 @@
 
 <button class="back-to-top" id="backToTop" aria-label="Back to top" onclick="window.scrollTo({top:0,behavior:'smooth'})">
     <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 16V4M4 10l6-6 6 6"/></svg>
+    <span data-fr="Retour en haut" data-en="Back to top">Retour en haut</span>
 </button>
 
-<footer><p>© 2026 Yi-Hsuan Chiu</p></footer>
+<footer>
+    <p>© 2026 Yi-Hsuan Chiu</p>
+</footer>
 
 <div class="lightbox" id="lightbox" onclick="closeLightbox()">
     <button class="lightbox-close" onclick="closeLightbox()">&times;</button>
