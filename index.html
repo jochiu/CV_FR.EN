@@ -292,9 +292,10 @@
         .extra-item.full-width .ambassador-photos {
             flex-shrink: 0; margin-top: 0;
             display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.4rem;
+            width: 200px;
         }
         .ambassador-photos img {
-            width: 110px; height: 75px; object-fit: cover; border-radius: 6px;
+            width: 100%; height: auto; aspect-ratio: 4/3; object-fit: cover; border-radius: 6px;
             border: 1px solid var(--border-light); transition: transform 0.3s;
         }
         .ambassador-photos img:hover { transform: scale(1.05); }
@@ -345,7 +346,7 @@
             .lang-grid { grid-template-columns: repeat(2, 1fr); }
             .extras-grid { grid-template-columns: 1fr; }
             .extra-item.full-width { flex-direction: column; }
-            .extra-item.full-width .ambassador-photos { grid-template-columns: repeat(4, 1fr); }
+            .extra-item.full-width .ambassador-photos { width: 100%; grid-template-columns: repeat(2, 1fr); }
             .cert-grid { grid-template-columns: repeat(3, 1fr); }
             .nav-links a.nav-desktop { display: none; }
         }
