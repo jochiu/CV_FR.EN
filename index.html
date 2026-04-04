@@ -58,7 +58,7 @@
         }
         .top-bar.scrolled { box-shadow: 0 1px 8px rgba(0,0,0,0.06); }
         .top-bar .name-small {
-            font-family: 'Cormorant Garamond', serif;
+            font-family: 'DM Sans', -apple-system, sans-serif;
             font-size: 1.15rem; font-weight: 600; color: var(--dark);
         }
         .nav-links { display: flex; align-items: center; gap: 1.8rem; }
@@ -116,7 +116,7 @@
             font-family: 'Cormorant Garamond', serif; font-weight: 600;
         }
         .hero-text h1 {
-            font-family: 'Cormorant Garamond', serif; font-size: 2.8rem; font-weight: 700;
+            font-family: 'DM Sans', -apple-system, sans-serif; font-size: 2.8rem; font-weight: 700;
             letter-spacing: -0.02em; line-height: 1.1; margin-bottom: 0.4rem;
         }
         .hero-text .tagline {
@@ -323,6 +323,73 @@
         }
         .lightbox-close:hover { background: rgba(255,255,255,0.3); }
         @keyframes lbIn { from { opacity: 0; } to { opacity: 1; } }
+        .email-cta {
+            background: #f8f3e8 !important; color: var(--muted) !important;
+            border-color: var(--border) !important; font-weight: 600;
+        }
+        .email-cta svg { stroke: var(--muted); }
+        .email-cta:hover {
+            background: #f0e8d5 !important; border-color: var(--accent) !important;
+            color: var(--accent) !important;
+            transform: translateY(-1px); box-shadow: var(--shadow-sm) !important;
+        }
+        .email-cta:hover svg { stroke: var(--accent); }
+        .back-to-top {
+            display: none; position: fixed; bottom: 1.5rem; right: 1.5rem; z-index: 90;
+            width: 42px; height: 42px; border-radius: 50%; border: none;
+            background: var(--accent); color: white; cursor: pointer;
+            box-shadow: 0 3px 12px rgba(45,90,71,0.3);
+            align-items: center; justify-content: center;
+            transition: opacity 0.3s, transform 0.3s;
+            opacity: 0; transform: translateY(10px);
+        }
+        .back-to-top.visible { opacity: 1; transform: translateY(0); }
+        .back-to-top:hover { background: #1e4535; }
+        .back-to-top svg { width: 20px; height: 20px; }
+        .contact-section {
+            max-width: 600px; margin: 0 auto; padding: 2.5rem;
+            background: var(--white); border: 1px solid var(--border-light);
+            border-radius: var(--radius); box-shadow: var(--shadow-sm);
+        }
+        .contact-section h3 {
+            font-family: 'Cormorant Garamond', serif; font-size: 1.3rem;
+            font-weight: 700; margin-bottom: 0.3rem;
+        }
+        .contact-section .contact-subtitle {
+            font-size: 0.85rem; color: var(--muted); margin-bottom: 1.5rem;
+        }
+        .form-group { margin-bottom: 1rem; }
+        .form-group label {
+            display: block; font-size: 0.78rem; font-weight: 600;
+            color: var(--dark); margin-bottom: 0.3rem;
+        }
+        .form-group label .optional { font-weight: 400; color: var(--muted-light); }
+        .form-group input, .form-group textarea {
+            width: 100%; padding: 0.6rem 0.8rem; font-size: 0.85rem;
+            font-family: 'DM Sans', sans-serif; border: 1px solid var(--border);
+            border-radius: 8px; background: var(--cream); color: var(--dark);
+            transition: border-color 0.2s, box-shadow 0.2s; outline: none;
+        }
+        .form-group input:focus, .form-group textarea:focus {
+            border-color: var(--accent); box-shadow: 0 0 0 3px rgba(45,90,71,0.1);
+        }
+        .form-group textarea { resize: vertical; min-height: 80px; }
+        .form-submit {
+            display: inline-flex; align-items: center; gap: 0.5rem;
+            padding: 0.65rem 1.5rem; background: var(--accent); color: white;
+            border: none; border-radius: 8px; font-size: 0.85rem; font-weight: 600;
+            font-family: 'DM Sans', sans-serif; cursor: pointer;
+            transition: background 0.2s, transform 0.2s;
+        }
+        .form-submit:hover { background: #1e4535; transform: translateY(-1px); }
+        .form-submit svg { width: 16px; height: 16px; }
+        .form-success {
+            display: none; text-align: center; padding: 1.5rem;
+            font-size: 0.9rem; color: var(--accent);
+        }
+        @media (max-width: 768px) {
+            .back-to-top { display: flex; }
+        }
         footer {
             text-align: center; padding: 2.5rem; font-size: 0.78rem;
             color: var(--muted-light); border-top: 1px solid var(--border-light);
@@ -391,9 +458,10 @@
             <p class="tagline" data-fr="Marketing International & Relation Client · Opérations APAC-EMEA" data-en="International Marketing & Client Relations · APAC-EMEA Operations">Marketing International & Relation Client · Opérations APAC-EMEA</p>
             <p class="intro" data-fr="5 ans et demi d'expérience en relation client, opérations et coordination multi-régionale (APAC/EMEA/Amériques). Je parle français, anglais, mandarin, taïwanais et coréen. Actuellement basée à Bordeaux et mobile géographiquement." data-en="5.5 years of experience in client relations, operations, and multi-regional coordination (APAC/EMEA/Americas). I speak French, English, Mandarin, Taiwanese, and Korean. Currently based in Bordeaux, open to relocation.">5 ans et demi d'expérience en relation client, opérations et coordination multi-régionale (APAC/EMEA/Amériques). Je parle français, anglais, mandarin, taïwanais et coréen. Actuellement basée à Bordeaux et mobile géographiquement.</p>
             <div class="hero-contact">
-                <a class="contact-chip" href="mailto:c.hsuann@gmail.com">
+                <a class="contact-chip email-cta" href="mailto:c.hsuann@gmail.com">
                     <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="4" width="16" height="12" rx="2"/><path d="M2 4l8 6 8-6"/></svg>
                     c.hsuann@gmail.com
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="width:15px;height:15px;flex-shrink:0;"><path d="M8 13V4.5a1.5 1.5 0 013 0V12"/><path d="M11 11.5a1.5 1.5 0 013 0V12"/><path d="M14 10.5a1.5 1.5 0 013 0V12"/><path d="M17 11.5a1.5 1.5 0 013 0V16a6 6 0 01-6 6h-2a6 6 0 01-4.24-1.76L4.88 17.36a1.5 1.5 0 012.12-2.12L8 16.12"/></svg>
                 </a>
                 <a class="contact-chip" href="https://www.linkedin.com/in/yihsuan-chiu/" target="_blank" rel="noopener">
                     <svg viewBox="0 0 20 20" fill="currentColor"><path d="M4.5 3A1.5 1.5 0 003 4.5 1.5 1.5 0 004.5 6 1.5 1.5 0 006 4.5 1.5 1.5 0 004.5 3zM3 8h3v9H3V8zm5.5 0H11v1.2h.03c.35-.66 1.2-1.35 2.47-1.35 2.64 0 3.13 1.74 3.13 4v5.15h-3V12.4c0-1.1-.02-2.5-1.53-2.5s-1.76 1.2-1.76 2.43V17H7.5V8z"/></svg>
@@ -761,7 +829,49 @@
         </div>
     </section>
 
+    <section class="section reveal" id="contact">
+        <div class="section-header">
+            <span class="section-number">09</span>
+            <h2 class="section-title" data-fr="Me contacter" data-en="Get in Touch">Me contacter</h2>
+            <div class="section-line"></div>
+        </div>
+        <div class="contact-section">
+            <h3 data-fr="N'hésitez pas à me contacter !" data-en="Feel free to reach out!">N'hésitez pas à me contacter !</h3>
+            <p class="contact-subtitle" data-fr="Je serais ravie d'échanger avec vous. Laissez-moi un message et je vous répondrai dès que possible." data-en="I'd love to hear from you. Leave me a message and I'll get back to you as soon as possible.">Je serais ravie d'échanger avec vous. Laissez-moi un message et je vous répondrai dès que possible.</p>
+            <form id="contact-form" action="https://formsubmit.co/c.hsuann@gmail.com" method="POST">
+                <input type="hidden" name="_subject" value="Nouveau message depuis votre CV en ligne">
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_next" value="#">
+                <input type="text" name="_honey" style="display:none">
+                <div class="form-group">
+                    <label data-fr="Nom" data-en="Name">Nom</label>
+                    <input type="text" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label>Email</label>
+                    <input type="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label><span data-fr="Téléphone" data-en="Phone">Téléphone</span> <span class="optional">(optional)</span></label>
+                    <input type="tel" name="phone">
+                </div>
+                <div class="form-group">
+                    <label>Message <span class="optional">(optional)</span></label>
+                    <textarea name="message" rows="3"></textarea>
+                </div>
+                <button type="submit" class="form-submit">
+                    <svg viewBox="0 0 20 20" fill="currentColor" stroke="none"><path d="M10 17.5s-7.5-4.5-7.5-9a4 4 0 017.5-1.5A4 4 0 0117.5 8.5c0 4.5-7.5 9-7.5 9z"/></svg>
+                    <span data-fr="Envoyer" data-en="Send">Envoyer</span>
+                </button>
+            </form>
+        </div>
+    </section>
+
 </main>
+
+<button class="back-to-top" id="backToTop" aria-label="Back to top" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+    <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 16V4M4 10l6-6 6 6"/></svg>
+</button>
 
 <footer><p>© 2026 Yi-Hsuan Chiu</p></footer>
 
@@ -818,6 +928,8 @@
 
     window.addEventListener('scroll', () => {
         document.getElementById('topbar').classList.toggle('scrolled', window.scrollY > 10);
+        const btn = document.getElementById('backToTop');
+        if (btn) btn.classList.toggle('visible', window.scrollY > 400);
     }, { passive: true });
 
     document.querySelectorAll('.nav-links a[href^="#"]').forEach(a => {
@@ -831,6 +943,21 @@
     document.addEventListener('DOMContentLoaded', () => {
         const saved = localStorage.getItem('cv-lang');
         if (saved) setLang(saved);
+
+        const form = document.getElementById('contact-form');
+        if (form) {
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+                const data = new FormData(form);
+                fetch(form.action, { method: 'POST', body: data, headers: { 'Accept': 'application/json' } })
+                .then(r => {
+                    if (r.ok) {
+                        form.innerHTML = '<div class="form-success" style="display:block"><p style="font-size:1.5rem;margin-bottom:0.5rem">✓</p><p data-fr="Merci ! Votre message a bien été envoyé." data-en="Thank you! Your message has been sent.">Merci ! Votre message a bien été envoyé.</p></div>';
+                    } else { alert('Erreur, veuillez réessayer.'); }
+                })
+                .catch(() => alert('Erreur, veuillez réessayer.'));
+            });
+        }
     });
 </script>
 </body>
