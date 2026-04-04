@@ -838,8 +838,7 @@
             <p class="contact-subtitle" data-fr="Je serais ravie d'échanger avec vous. Laissez-moi un message et je vous répondrai dès que possible." data-en="I'd love to hear from you. Leave me a message and I'll get back to you as soon as possible.">Je serais ravie d'échanger avec vous. Laissez-moi un message et je vous répondrai dès que possible.</p>
             <form id="contact-form" action="https://formsubmit.co/c.hsuann@gmail.com" method="POST">
                 <input type="hidden" name="_subject" value="Nouveau message depuis votre CV en ligne">
-                <input type="hidden" name="_captcha" value="false">
-                <input type="hidden" name="_next" value="#">
+                <input type="hidden" name="_next" value="https://jochiu.github.io/CV_FR.EN">
                 <input type="hidden" name="_autoresponse" value="Bonjour et merci pour votre message !
 
 Je l'ai bien reçu et je vous répondrai dès que possible.
@@ -958,21 +957,6 @@ Yi-Hsuan Chiu">
     document.addEventListener('DOMContentLoaded', () => {
         const saved = localStorage.getItem('cv-lang');
         if (saved) setLang(saved);
-
-        const form = document.getElementById('contact-form');
-        if (form) {
-            form.addEventListener('submit', function(e) {
-                e.preventDefault();
-                const data = new FormData(form);
-                fetch(form.action, { method: 'POST', body: data, headers: { 'Accept': 'application/json' } })
-                .then(r => {
-                    if (r.ok) {
-                        form.innerHTML = '<div class="form-success" style="display:block"><p style="font-size:1.5rem;margin-bottom:0.5rem">✓</p><p data-fr="Merci ! Votre message a bien été envoyé." data-en="Thank you! Your message has been sent.">Merci ! Votre message a bien été envoyé.</p></div>';
-                    } else { alert('Erreur, veuillez réessayer.'); }
-                })
-                .catch(() => alert('Erreur, veuillez réessayer.'));
-            });
-        }
     });
 </script>
 </body>
