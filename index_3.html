@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Yi-Hsuan Chiu — Marketing International & Relation Client | Opérations APAC-EMEA">
+    <title>Yi-Hsuan Chiu — CV</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --cream: #FAFAF7;
+            --dark: #141414;
+            --accent: #2D5A47;
+            --accent-light: #EBF1EE;
+            --gold: #C5A44E;
+            --gold-light: #F8F3E8;
+            --muted: #5C5C5C;
+            --muted-light: #8A8A8A;
+            --border: #E2E0DB;
+            --border-light: #EEECE8;
+            --warm-gray: #F3F2EE;
+            --white: #FFFFFF;
+            --shadow-sm: 0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.06);
+            --shadow-md: 0 4px 16px rgba(0,0,0,0.06), 0 2px 6px rgba(0,0,0,0.04);
+            --radius: 10px;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'DM Sans', -apple-system, sans-serif;
+            background: var(--cream);
+            color: var(--dark);
+            line-height: 1.65;
+            -webkit-font-smoothing: antialiased;
+        }
+        body::before {
+            content: '';
+            position: fixed;
+            inset: 0;
+            background:
+                radial-gradient(ellipse at 20% 0%, rgba(45,90,71,0.03) 0%, transparent 50%),
+                radial-gradient(ellipse at 80% 100%, rgba(197,164,78,0.03) 0%, transparent 50%);
+            pointer-events: none;
+            z-index: -1;
+        }
+        .top-bar {
+            position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+            background: rgba(250,250,247,0.82);
+            backdrop-filter: blur(20px) saturate(1.2);
+            -webkit-backdrop-filter: blur(20px) saturate(1.2);
+            border-bottom: 1px solid rgba(226,224,219,0.6);
+            padding: 0 2.5rem; height: 56px;
+            display: flex; justify-content: space-between; align-items: center;
+            transition: box-shadow 0.3s;
+        }
+        .top-bar.scrolled { box-shadow: 0 1px 8px rgba(0,0,0,0.06); }
+        .top-bar .name-small {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.15rem; font-weight: 600; color: var(--dark);
+        }
+        .nav-links { display: flex; align-items: center; gap: 1.8rem; }
+        .nav-links a {
+            text-decoration: none; color: var(--muted-light);
+            font-size: 0.8rem; font-weight: 500; letter-spacing: 0.04em;
+            text-transform: uppercase; transition: color 0.25s; position: relative;
+        }
+        .nav-links a::after {
+            content: ''; position: absolute; bottom: -4px; left: 0; right: 0;
+            height: 1.5px; background: var(--accent); transform: scaleX(0); transition: transform 0.25s;
+        }
+        .nav-links a:hover { color: var(--dark); }
+        .nav-links a:hover::after { transform: scaleX(1); }
+        .lang-toggle {
+            display: flex; background: var(--white); border-radius: 22px;
+            overflow: hidden; border: 1px solid var(--border); box-shadow: var(--shadow-sm);
+        }
+        .lang-btn {
+            padding: 0.35rem 1rem; font-size: 0.75rem; font-weight: 600;
+            font-family: 'DM Sans', sans-serif; border: none; cursor: pointer;
+            background: transparent; color: var(--muted-light); transition: all 0.25s;
+            letter-spacing: 0.06em;
+        }
+        .lang-btn.active {
+            background: var(--accent); color: white; border-radius: 20px;
+            box-shadow: 0 2px 8px rgba(45,90,71,0.25);
+        }
+        .hero {
+            margin-top: 56px; padding: 5rem 2.5rem 3.5rem;
+            max-width: 1000px; margin-left: auto; margin-right: auto;
+        }
+        .hero-inner {
+            display: grid; grid-template-columns: 170px 1fr; gap: 3rem; align-items: start;
+            background: var(--white); border: 1px solid var(--border-light);
+            border-radius: 16px; padding: 3rem; box-shadow: var(--shadow-md);
+            position: relative; overflow: hidden;
+        }
+        .hero-inner::before {
+            content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px;
+            background: linear-gradient(90deg, var(--accent), var(--gold));
+        }
+        .hero-photo {
+            width: 170px; height: 170px; border-radius: 50%; object-fit: cover;
+            border: 2px solid var(--border-light); box-shadow: var(--shadow-sm);
+            transition: transform 0.4s, box-shadow 0.4s;
+        }
+        .hero-photo:hover { transform: scale(1.02); box-shadow: var(--shadow-md); }
+        .hero-photo-placeholder {
+            width: 170px; height: 170px; border-radius: 50%;
+            background: linear-gradient(135deg, var(--accent-light), var(--gold-light));
+            border: 2px solid var(--border-light);
+            display: flex; align-items: center; justify-content: center;
+            font-size: 3.5rem; color: var(--accent);
+            font-family: 'Cormorant Garamond', serif; font-weight: 600;
+        }
+        .hero-text h1 {
+            font-family: 'Cormorant Garamond', serif; font-size: 2.8rem; font-weight: 700;
+            letter-spacing: -0.02em; line-height: 1.1; margin-bottom: 0.4rem;
+        }
+        .hero-text .tagline {
+            font-size: 1.05rem; color: var(--accent); font-weight: 500; margin-bottom: 1rem;
+        }
+        .hero-text .intro {
+            font-size: 0.92rem; color: var(--muted); max-width: 520px; line-height: 1.75;
+        }
+        .hero-contact { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1.4rem; }
+        .contact-chip {
+            display: inline-flex; align-items: center; gap: 0.4rem;
+            font-size: 0.78rem; color: var(--muted); text-decoration: none;
+            padding: 0.4rem 0.8rem; border: 1px solid var(--border);
+            border-radius: 8px; transition: all 0.25s; background: var(--cream);
+        }
+        a.contact-chip:hover {
+            border-color: var(--accent); color: var(--accent);
+            background: var(--accent-light); transform: translateY(-1px); box-shadow: var(--shadow-sm);
+        }
+        .contact-chip svg { width: 15px; height: 15px; flex-shrink: 0; }
+        .main { max-width: 1000px; margin: 0 auto; padding: 0 2.5rem 5rem; }
+        .section { margin-bottom: 3.5rem; }
+        .section-header { display: flex; align-items: center; gap: 1rem; margin-bottom: 1.8rem; }
+        .section-number {
+            font-family: 'Cormorant Garamond', serif; font-size: 0.85rem; font-weight: 600;
+            color: var(--gold); background: var(--gold-light);
+            width: 28px; height: 28px; display: flex; align-items: center;
+            justify-content: center; border-radius: 6px; flex-shrink: 0;
+        }
+        .section-title {
+            font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 700;
+            color: var(--dark); letter-spacing: -0.01em;
+        }
+        .section-line { flex: 1; height: 1px; background: var(--border); }
+        .card-wrap {
+            background: var(--white); border: 1px solid var(--border-light);
+            border-radius: var(--radius); padding: 2rem 2.2rem; box-shadow: var(--shadow-sm);
+        }
+        .exp-card {
+            display: grid; grid-template-columns: 160px 1fr; gap: 2rem;
+            padding: 1.8rem 0; border-bottom: 1px solid var(--border-light); position: relative;
+        }
+        .exp-card:last-child { border-bottom: none; }
+        .exp-card::before {
+            content: ''; position: absolute; left: 172px; top: 0; bottom: 0;
+            width: 1px; background: var(--border-light);
+        }
+        .exp-meta { font-size: 0.8rem; color: var(--muted-light); padding-top: 0.15rem; }
+        .exp-meta .dates { font-weight: 600; color: var(--dark); margin-bottom: 0.2rem; font-size: 0.82rem; }
+        .exp-meta .location { font-style: italic; font-size: 0.78rem; }
+        .exp-body { padding-left: 0.5rem; }
+        .exp-body h3 { font-size: 1rem; font-weight: 600; margin-bottom: 0.1rem; line-height: 1.35; }
+        .exp-body .company { font-size: 0.88rem; color: var(--accent); font-weight: 500; margin-bottom: 0.65rem; }
+        .exp-body ul { list-style: none; padding: 0; }
+        .exp-body ul li {
+            position: relative; padding-left: 1.1rem; font-size: 0.87rem;
+            color: var(--muted); margin-bottom: 0.45rem; line-height: 1.65;
+        }
+        .exp-body ul li::before {
+            content: ''; position: absolute; left: 0; top: 0.6em;
+            width: 4px; height: 4px; background: var(--gold); border-radius: 50%;
+        }
+        .skills-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; }
+        .skill-category h3 {
+            font-size: 0.78rem; font-weight: 600; margin-bottom: 0.7rem;
+            color: var(--accent); text-transform: uppercase; letter-spacing: 0.08em;
+        }
+        .skill-tags { display: flex; flex-wrap: wrap; gap: 0.35rem; }
+        .skill-tag {
+            font-size: 0.77rem; padding: 0.3rem 0.6rem; background: var(--warm-gray);
+            border-radius: 5px; color: var(--dark); border: 1px solid var(--border-light);
+            transition: all 0.2s;
+        }
+        .skill-tag:hover { background: var(--accent-light); border-color: var(--accent); color: var(--accent); }
+        .edu-card {
+            background: var(--white); border: 1px solid var(--border-light);
+            border-radius: var(--radius); padding: 1.6rem 2rem;
+            box-shadow: var(--shadow-sm); margin-bottom: 1rem;
+        }
+        .edu-card:last-child { margin-bottom: 0; }
+        .edu-card h3 { font-size: 0.98rem; font-weight: 600; line-height: 1.4; }
+        .edu-card .school { font-size: 0.88rem; color: var(--accent); font-weight: 500; margin-top: 0.1rem; }
+        .edu-achievements {
+            margin-top: 0.75rem; padding-top: 0.75rem; border-top: 1px solid var(--border-light);
+        }
+        .edu-achievements li {
+            position: relative; padding-left: 1.1rem; font-size: 0.85rem;
+            color: var(--muted); margin-bottom: 0.35rem; line-height: 1.6; list-style: none;
+        }
+        .edu-achievements li::before {
+            content: ''; position: absolute; left: 0; top: 0.6em;
+            width: 4px; height: 4px; background: var(--gold); border-radius: 50%;
+        }
+        .reco-link {
+            display: inline-flex; align-items: center; gap: 0.4rem;
+            font-size: 0.8rem; font-weight: 500; color: var(--accent);
+            text-decoration: none; padding: 0.35rem 0.8rem;
+            border: 1px solid var(--accent); border-radius: 6px;
+            transition: all 0.25s; margin-top: 0.5rem; background: transparent;
+        }
+        .reco-link:hover {
+            background: var(--accent); color: var(--white);
+            box-shadow: 0 2px 8px rgba(45,90,71,0.2);
+        }
+        .reco-link svg { width: 14px; height: 14px; }
+        .lang-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; }
+        .lang-item {
+            padding: 1.2rem; background: var(--white); border-radius: var(--radius);
+            border: 1px solid var(--border-light); box-shadow: var(--shadow-sm);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .lang-item:hover { transform: translateY(-2px); box-shadow: var(--shadow-md); }
+        .lang-item .lang-name { font-weight: 600; font-size: 0.92rem; margin-bottom: 0.25rem; }
+        .lang-item .lang-level { font-size: 0.78rem; color: var(--muted-light); line-height: 1.45; }
+        .lang-bar { height: 3px; background: var(--border-light); border-radius: 2px; margin-top: 0.65rem; overflow: hidden; }
+        .lang-bar-fill {
+            height: 100%; border-radius: 2px;
+            background: linear-gradient(90deg, var(--accent), var(--gold));
+            transition: width 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+        .links-row { display: flex; flex-wrap: wrap; gap: 0.8rem; }
+        .link-card {
+            display: inline-flex; align-items: center; gap: 0.6rem;
+            text-decoration: none; padding: 0.85rem 1.4rem;
+            border: 1px solid var(--border); border-radius: var(--radius);
+            color: var(--dark); font-size: 0.85rem; font-weight: 500;
+            transition: all 0.3s; background: var(--white); box-shadow: var(--shadow-sm);
+        }
+        .link-card:hover {
+            border-color: var(--accent); background: var(--accent-light);
+            transform: translateY(-3px); box-shadow: var(--shadow-md); color: var(--accent);
+        }
+        .link-card svg { width: 18px; height: 18px; flex-shrink: 0; }
+        .extras-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+        .extra-item {
+            padding: 1.2rem 1.4rem; background: var(--white); border-radius: var(--radius);
+            border: 1px solid var(--border-light); box-shadow: var(--shadow-sm); transition: transform 0.2s;
+        }
+        .extra-item:hover { transform: translateY(-1px); }
+        .extra-item h4 { font-size: 0.88rem; font-weight: 600; margin-bottom: 0.25rem; }
+        .extra-item p { font-size: 0.8rem; color: var(--muted); line-height: 1.55; }
+        .extra-item a { color: var(--accent); text-decoration: none; font-weight: 500; }
+        .extra-item a:hover { text-decoration: underline; }
+        footer {
+            text-align: center; padding: 2.5rem; font-size: 0.78rem;
+            color: var(--muted-light); border-top: 1px solid var(--border-light);
+            max-width: 1000px; margin: 0 auto;
+        }
+        .reveal { opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease, transform 0.6s ease; }
+        .reveal.visible { opacity: 1; transform: translateY(0); }
+        .hero-inner { opacity: 0; transform: translateY(24px); animation: heroIn 0.7s 0.15s ease forwards; }
+        @keyframes heroIn { to { opacity: 1; transform: translateY(0); } }
+        @media (max-width: 768px) {
+            .hero { padding: 4rem 1.2rem 2.5rem; }
+            .hero-inner { grid-template-columns: 1fr; text-align: center; padding: 2rem 1.5rem; gap: 1.5rem; }
+            .hero-photo, .hero-photo-placeholder { margin: 0 auto; width: 130px; height: 130px; }
+            .hero-contact { justify-content: center; }
+            .hero-text .intro { margin: 0 auto; }
+            .exp-card { grid-template-columns: 1fr; gap: 0.5rem; }
+            .exp-card::before { display: none; }
+            .exp-body { padding-left: 0; }
+            .hero-text h1 { font-size: 2.1rem; }
+            .top-bar { padding: 0 1rem; }
+            .main { padding: 0 1.2rem 3rem; }
+            .skills-grid { grid-template-columns: 1fr; }
+            .lang-grid { grid-template-columns: repeat(2, 1fr); }
+            .extras-grid { grid-template-columns: 1fr; }
+            .nav-links a.nav-desktop { display: none; }
+        }
+        @media (max-width: 480px) {
+            .hero-text h1 { font-size: 1.8rem; }
+            .lang-grid { grid-template-columns: 1fr; }
+        }
+        @media print {
+            .top-bar, .lang-toggle { display: none; }
+            .hero { margin-top: 0; padding-top: 1rem; }
+            body { background: white; }
+            .hero-inner, .card-wrap, .edu-card, .lang-item, .extra-item, .link-card { box-shadow: none; border-color: #ddd; }
+        }
+    </style>
+</head>
+<body>
+
+<nav class="top-bar" id="topbar">
+    <span class="name-small">Yi-Hsuan Chiu</span>
+    <div class="nav-links">
+        <a href="#experience" class="nav-desktop" data-fr="Expérience" data-en="Experience">Expérience</a>
+        <a href="#skills" class="nav-desktop" data-fr="Compétences" data-en="Skills">Compétences</a>
+        <a href="#education" class="nav-desktop" data-fr="Formation" data-en="Education">Formation</a>
+        <a href="#portfolio" class="nav-desktop" data-fr="Portfolio" data-en="Portfolio">Portfolio</a>
+        <div class="lang-toggle">
+            <button class="lang-btn active" id="btn-fr" onclick="setLang('fr')">FR</button>
+            <button class="lang-btn" id="btn-en" onclick="setLang('en')">EN</button>
+        </div>
+    </div>
+</nav>
+
+<header class="hero">
+    <div class="hero-inner">
+        
+        
+        <img src="photo.jpg" alt="Yi-Hsuan Chiu" class="hero-photo">
+        <div class="hero-text">
+            <h1>Yi-Hsuan Chiu</h1>
+            <p class="tagline" data-fr="Marketing International & Relation Client · Opérations APAC-EMEA" data-en="International Marketing & Client Relations · APAC-EMEA Operations">Marketing International & Relation Client · Opérations APAC-EMEA</p>
+            <p class="intro" data-fr="5 ans et demi d'expérience en relation client, opérations et coordination multi-régionale (APAC/EMEA/Amériques). Je parle français, anglais, mandarin, taïwanais et coréen. Actuellement basée à Bordeaux et mobile géographiquement." data-en="5.5 years of experience in client relations, operations, and multi-regional coordination (APAC/EMEA/Americas). I speak French, English, Mandarin, Taiwanese, and Korean. Currently based in Bordeaux, open to relocation.">5 ans et demi d'expérience en relation client, opérations et coordination multi-régionale (APAC/EMEA/Amériques). Je parle français, anglais, mandarin, taïwanais et coréen. Actuellement basée à Bordeaux et mobile géographiquement.</p>
+            <div class="hero-contact">
+                <a class="contact-chip" href="mailto:c.hsuann@gmail.com">
+                    <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="4" width="16" height="12" rx="2"/><path d="M2 4l8 6 8-6"/></svg>
+                    c.hsuann@gmail.com
+                </a>
+                <a class="contact-chip" href="https://www.linkedin.com/in/yihsuan-chiu/" target="_blank" rel="noopener">
+                    <svg viewBox="0 0 20 20" fill="currentColor"><path d="M4.5 3A1.5 1.5 0 003 4.5 1.5 1.5 0 004.5 6 1.5 1.5 0 006 4.5 1.5 1.5 0 004.5 3zM3 8h3v9H3V8zm5.5 0H11v1.2h.03c.35-.66 1.2-1.35 2.47-1.35 2.64 0 3.13 1.74 3.13 4v5.15h-3V12.4c0-1.1-.02-2.5-1.53-2.5s-1.76 1.2-1.76 2.43V17H7.5V8z"/></svg>
+                    LinkedIn
+                </a>
+                <span class="contact-chip">
+                    <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h12a1 1 0 011 1v10a1 1 0 01-1 1H4a1 1 0 01-1-1V5a1 1 0 011-1z"/><path d="M7 8h6M7 11h4"/><circle cx="14" cy="7" r="1.5"/></svg>
+                    <span data-fr="Permis de travail valide" data-en="Valid work permit">Permis de travail valide</span>
+                </span>
+                <span class="contact-chip">
+                    <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M10 11a3 3 0 100-6 3 3 0 000 6z"/><path d="M10 18s-7-4.35-7-9A7 7 0 0117 9c0 4.65-7 9-7 9z"/></svg>
+                    Bordeaux, France
+                </span>
+            </div>
+        </div>
+    </div>
+</header>
+
+<main class="main">
+
+    <section class="section reveal" id="experience">
+        <div class="section-header">
+            <span class="section-number">01</span>
+            <h2 class="section-title" data-fr="Expérience professionnelle" data-en="Professional Experience">Expérience professionnelle</h2>
+            <div class="section-line"></div>
+        </div>
+        <div class="card-wrap">
+            <div class="exp-card">
+                <div class="exp-meta"><div class="dates">08/2025 – 02/2026</div><div class="location">Bordeaux</div></div>
+                <div class="exp-body">
+                    <h3 data-fr="Chargée des Projets et Communautés Bénévoles" data-en="Volunteer Projects & Community Manager">Chargée des Projets et Communautés Bénévoles</h3>
+                    <div class="company">Linkee · <span data-fr="Anti-gaspillage alimentaire" data-en="Food waste reduction">Anti-gaspillage alimentaire</span></div>
+                    <ul>
+                        <li data-fr="Assuré le bon fonctionnement opérationnel pour 550+ bénévoles et 1 000+ bénéficiaires : onboarding, suivi individualisé et résolution proactive" data-en="Ensured smooth operations for 550+ volunteers and 1,000+ beneficiaries: onboarding, individualized follow-up, and proactive issue resolution">Assuré le bon fonctionnement opérationnel pour 550+ bénévoles et 1 000+ bénéficiaires : onboarding, suivi individualisé et résolution proactive</li>
+                        <li data-fr="Piloté 30+ événements de A à Z : coordination logistique et partenariats multi-parties prenantes" data-en="Led 30+ events end-to-end: logistics coordination and multi-stakeholder partnerships">Piloté 30+ événements de A à Z : coordination logistique et partenariats multi-parties prenantes</li>
+                        <li data-fr="Renforcé l'engagement communautaire via une newsletter hebdomadaire ciblée (Sarbacane)" data-en="Strengthened community engagement through a targeted weekly newsletter (Sarbacane)">Renforcé l'engagement communautaire via une newsletter hebdomadaire ciblée (Sarbacane)</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="exp-card">
+                <div class="exp-meta"><div class="dates">04 – 05/2025</div><div class="location">Bordeaux</div></div>
+                <div class="exp-body">
+                    <h3 data-fr="Chargée de Projet Marketing" data-en="Marketing Project Manager">Chargée de Projet Marketing</h3>
+                    <div class="company">Hôtel Le Manoir De Bellerive</div>
+                    <ul>
+                        <li data-fr="Analysé le marché américain et défini l'identité numérique anglophone, posant les bases de la visibilité internationale auprès d'une clientèle CSP+" data-en="Analyzed the US market and defined the English-language digital identity, laying the groundwork for international visibility targeting high-net-worth clientele">Analysé le marché américain et défini l'identité numérique anglophone, posant les bases de la visibilité internationale auprès d'une clientèle CSP+</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="exp-card">
+                <div class="exp-meta"><div class="dates">06 – 12/2024</div><div class="location">Bordeaux</div></div>
+                <div class="exp-body">
+                    <h3 data-fr="Chargée de Marketing Digital International" data-en="International Digital Marketing Manager">Chargée de Marketing Digital International</h3>
+                    <div class="company">UniFox · GreenTech, Web3</div>
+                    <ul>
+                        <li data-fr="Réduit le taux de rebond de 52,6 % grâce à l'optimisation des campagnes APAC/EMEA (Meta/Google Ads), au ciblage stratégique et à la réallocation budgétaire" data-en="Reduced bounce rate by 52.6% through optimization of APAC/EMEA campaigns (Meta/Google Ads), strategic targeting, and budget reallocation">Réduit le taux de rebond de 52,6 % grâce à l'optimisation des campagnes APAC/EMEA (Meta/Google Ads), au ciblage stratégique et à la réallocation budgétaire</li>
+                        <li data-fr="Stimulé la croissance du trafic organique via la mise en place d'une stratégie SEO et la configuration du suivi des conversions (GTM)" data-en="Boosted organic traffic growth through SEO strategy implementation and conversion tracking setup (GTM)">Stimulé la croissance du trafic organique via la mise en place d'une stratégie SEO et la configuration du suivi des conversions (GTM)</li>
+                        <li data-fr="Fourni des recommandations actionnables à la direction via des dashboards GA4 et le reporting de KPI (CPC, ROI, trafic)" data-en="Delivered actionable recommendations to leadership through GA4 dashboards and KPI reporting (CPC, ROI, traffic)">Fourni des recommandations actionnables à la direction via des dashboards GA4 et le reporting de KPI (CPC, ROI, trafic)</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="exp-card">
+                <div class="exp-meta"><div class="dates">06 – 09/2023</div><div class="location">Paris</div></div>
+                <div class="exp-body">
+                    <h3 data-fr="Chargée de Développement Marketing" data-en="Marketing Development Manager">Chargée de Développement Marketing</h3>
+                    <div class="company">Reinventing Carrière Coaching</div>
+                    <ul>
+                        <li data-fr="Permis l'entrée du produit sur le marché en déployant une stratégie Go-to-Market complète de zéro : persona, positionnement, canaux d'acquisition et programmes d'affiliation" data-en="Enabled market entry by deploying a complete Go-to-Market strategy from scratch: persona, positioning, acquisition channels, and affiliate programs">Permis l'entrée du produit sur le marché en déployant une stratégie Go-to-Market complète de zéro : persona, positionnement, canaux d'acquisition et programmes d'affiliation</li>
+                        <li data-fr="Produit 3,5h de contenus de formation et organisé des webinaires pour créer et animer une communauté" data-en="Produced 3.5h of training content and organized webinars to build and engage a community">Produit 3,5h de contenus de formation et organisé des webinaires pour créer et animer une communauté</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="exp-card">
+                <div class="exp-meta"><div class="dates">08/2018 – 12/2020</div><div class="location">Taipei</div></div>
+                <div class="exp-body">
+                    <h3 data-fr="Analyste Documentation Technique" data-en="Technical Documentation Analyst">Analyste Documentation Technique</h3>
+                    <div class="company">Corsair Gaming · <span data-fr="Périphériques gaming" data-en="Gaming peripherals">Périphériques gaming</span></div>
+                    <ul>
+                        <li data-fr="Réduit les incohérences de données inter-régionales en gérant la documentation et la validation de 3 lignes de produits APAC, EMEA et Amériques, avec 10 à 15 projets par trimestre" data-en="Reduced cross-regional data inconsistencies by managing documentation and validation of 3 product lines across APAC, EMEA, and Americas, handling 10–15 projects per quarter">Réduit les incohérences de données inter-régionales en gérant la documentation et la validation de 3 lignes de produits APAC, EMEA et Amériques, avec 10 à 15 projets par trimestre</li>
+                        <li data-fr="Amélioré le temps de réponse inter-équipes en résolvant 20+ tickets techniques et opérationnels par semaine, assurant la continuité des workflows" data-en="Improved cross-team response time by resolving 20+ technical and operational tickets per week, ensuring workflow continuity">Amélioré le temps de réponse inter-équipes en résolvant 20+ tickets techniques et opérationnels par semaine, assurant la continuité des workflows</li>
+                        <li data-fr="Gestion des données via PLM/Oracle et reporting sous Excel" data-en="Data management via PLM/Oracle and Excel reporting">Gestion des données via PLM/Oracle et reporting sous Excel</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="exp-card">
+                <div class="exp-meta"><div class="dates">08/2018 – 12/2020</div><div class="location">Taipei</div></div>
+                <div class="exp-body">
+                    <h3 data-fr="Chargée de Marques & Développement Commercial" data-en="Brand Manager & Business Development">Chargée de Marques & Développement Commercial</h3>
+                    <div class="company">BEST International IP · <span data-fr="Cabinet juridique" data-en="Law firm">Cabinet juridique</span></div>
+                    <ul>
+                        <li data-fr="Maintenu un taux de fidélisation élevé en assurant la gestion de 200+ comptes B2B : suivi proactif, identification de nouvelles opportunités commerciales et développement du portefeuille" data-en="Maintained high retention rate by managing 200+ B2B accounts: proactive follow-up, identification of new business opportunities, and portfolio development">Maintenu un taux de fidélisation élevé en assurant la gestion de 200+ comptes B2B : suivi proactif, identification de nouvelles opportunités commerciales et développement du portefeuille</li>
+                        <li data-fr="Orienté les décisions clients grâce à du conseil stratégique et des analyses sur mesure" data-en="Guided client decisions through strategic advisory and tailored analysis">Orienté les décisions clients grâce à du conseil stratégique et des analyses sur mesure</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section reveal" id="skills">
+        <div class="section-header">
+            <span class="section-number">02</span>
+            <h2 class="section-title" data-fr="Compétences" data-en="Skills">Compétences</h2>
+            <div class="section-line"></div>
+        </div>
+        <div class="card-wrap">
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3 data-fr="Relation client & développement" data-en="Client Relations & Growth">Relation client & développement</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag" data-fr="Gestion de comptes" data-en="Account Management">Gestion de comptes</span>
+                        <span class="skill-tag">CRM B2B/B2C</span>
+                        <span class="skill-tag" data-fr="Fidélisation" data-en="Retention">Fidélisation</span>
+                        <span class="skill-tag" data-fr="Conseil stratégique" data-en="Strategic Advisory">Conseil stratégique</span>
+                        <span class="skill-tag" data-fr="Acquisition multi-marchés" data-en="Multi-market Acquisition">Acquisition multi-marchés</span>
+                        <span class="skill-tag">SEA / SMA / SEO</span>
+                        <span class="skill-tag" data-fr="Stratégie Go-to-Market" data-en="Go-to-Market Strategy">Stratégie Go-to-Market</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3 data-fr="Analyse & reporting" data-en="Analytics & Reporting">Analyse & reporting</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">GA4</span><span class="skill-tag">GTM</span>
+                        <span class="skill-tag">Excel</span><span class="skill-tag">SQL</span>
+                        <span class="skill-tag">Dashboards</span>
+                        <span class="skill-tag" data-fr="Suivi de KPI" data-en="KPI Tracking">Suivi de KPI</span>
+                        <span class="skill-tag" data-fr="Reco. data-driven" data-en="Data-driven Reco.">Reco. data-driven</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3 data-fr="Coordination" data-en="Coordination">Coordination</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag" data-fr="Cross-régionale APAC/EMEA/Amériques" data-en="Cross-regional APAC/EMEA/Americas">Cross-régionale APAC/EMEA/Amériques</span>
+                        <span class="skill-tag" data-fr="Gestion de projets" data-en="Project Management">Gestion de projets</span>
+                        <span class="skill-tag" data-fr="Optimisation des processus" data-en="Process Optimization">Optimisation des processus</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section reveal" id="tools">
+        <div class="section-header">
+            <span class="section-number">03</span>
+            <h2 class="section-title" data-fr="Outils" data-en="Tools">Outils</h2>
+            <div class="section-line"></div>
+        </div>
+        <div class="card-wrap">
+            <div class="skill-tags">
+                <span class="skill-tag">Google Ads</span><span class="skill-tag">Meta Ads</span>
+                <span class="skill-tag">Salesforce</span><span class="skill-tag">Sarbacane</span>
+                <span class="skill-tag">Airtable</span><span class="skill-tag">Jira</span>
+                <span class="skill-tag">Notion</span><span class="skill-tag">Trello</span>
+                <span class="skill-tag">Canva</span><span class="skill-tag">CapCut</span>
+                <span class="skill-tag">Figma</span><span class="skill-tag">Google Suite</span>
+                <span class="skill-tag">Slack</span>
+                <span class="skill-tag">HTML / CSS</span><span class="skill-tag">WordPress</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="section reveal" id="education">
+        <div class="section-header">
+            <span class="section-number">04</span>
+            <h2 class="section-title" data-fr="Formation" data-en="Education">Formation</h2>
+            <div class="section-line"></div>
+        </div>
+        <div class="edu-card">
+            <h3>M1 Strategic & Operational Marketing / M2 International & European Business</h3>
+            <div class="school">Grande École, EM Strasbourg</div>
+            <ul class="edu-achievements">
+                <li data-fr="Mémoire (15/20) : comportement d'achat éthique dans le secteur de la mode en Europe et Afrique" data-en="Master's thesis (15/20): ethical purchasing behavior in the fashion sector across Europe and Africa">Mémoire (15/20) : comportement d'achat éthique dans le secteur de la mode en Europe et Afrique</li>
+                <li data-fr="1ère place : repositionnement de Tupperware pour la Gen Z (16,35/20)" data-en="1st place: Tupperware repositioning strategy for Gen Z (16.35/20)">1ère place : repositionnement de Tupperware pour la Gen Z (16,35/20)</li>
+            </ul>
+            <a class="reco-link" href="https://drive.google.com/file/d/1Qivjg1WIUYeIFS0770pRjLxwXwecH-kw/view?usp=sharing" target="_blank" rel="noopener">
+                <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 2h8l4 4v12a1 1 0 01-1 1H6a1 1 0 01-1-1V3a1 1 0 011-1z"/><path d="M14 2v4h4M8 10h4M8 13h6"/></svg>
+                <span data-fr="Lettre de recommandation (professeur)" data-en="Recommendation letter (professor)">Lettre de recommandation (professeur)</span>
+            </a>
+        </div>
+        <div class="edu-card">
+            <h3 data-fr="Licence en Sciences de l'Éducation, formation des enseignants du primaire" data-en="Bachelor of Education, Primary School Teacher Training">Licence en Sciences de l'Éducation, formation des enseignants du primaire</h3>
+            <div class="school" data-fr="Université nationale d'éducation de Taipei" data-en="National Taipei University of Education">Université nationale d'éducation de Taipei</div>
+        </div>
+    </section>
+
+    <section class="section reveal" id="languages">
+        <div class="section-header">
+            <span class="section-number">05</span>
+            <h2 class="section-title" data-fr="Langues" data-en="Languages">Langues</h2>
+            <div class="section-line"></div>
+        </div>
+        <div class="lang-grid">
+            <div class="lang-item">
+                <div class="lang-name" data-fr="Mandarin & Taïwanais" data-en="Mandarin & Taiwanese">Mandarin & Taïwanais</div>
+                <div class="lang-level" data-fr="Langue maternelle" data-en="Native">Langue maternelle</div>
+                <div class="lang-bar"><div class="lang-bar-fill" data-width="100"></div></div>
+            </div>
+            <div class="lang-item">
+                <div class="lang-name" data-fr="Anglais" data-en="English">Anglais</div>
+                <div class="lang-level" data-fr="C1 (2,5 ans en entreprise américaine)" data-en="C1 (2.5 years in a US company)">C1 (2,5 ans en entreprise américaine)</div>
+                <div class="lang-bar"><div class="lang-bar-fill" data-width="88"></div></div>
+            </div>
+            <div class="lang-item">
+                <div class="lang-name" data-fr="Français" data-en="French">Français</div>
+                <div class="lang-level" data-fr="C1 (1,2 ans en entreprises françaises)" data-en="C1 (1.2 years in French companies)">C1 (1,2 ans en entreprises françaises)</div>
+                <div class="lang-bar"><div class="lang-bar-fill" data-width="85"></div></div>
+            </div>
+            <div class="lang-item">
+                <div class="lang-name" data-fr="Coréen" data-en="Korean">Coréen</div>
+                <div class="lang-level" data-fr="A2 (intermédiaire)" data-en="A2 (intermediate)">A2 (intermédiaire)</div>
+                <div class="lang-bar"><div class="lang-bar-fill" data-width="25"></div></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section reveal" id="portfolio">
+        <div class="section-header">
+            <span class="section-number">06</span>
+            <h2 class="section-title" data-fr="Portfolio & Liens" data-en="Portfolio & Links">Portfolio & Liens</h2>
+            <div class="section-line"></div>
+        </div>
+        <div class="links-row">
+            <a class="link-card" href="https://www.linkedin.com/in/yihsuan-chiu/" target="_blank" rel="noopener">
+                <svg viewBox="0 0 20 20" fill="currentColor"><path d="M4.5 3A1.5 1.5 0 003 4.5 1.5 1.5 0 004.5 6 1.5 1.5 0 006 4.5 1.5 1.5 0 004.5 3zM3 8h3v9H3V8zm5.5 0H11v1.2h.03c.35-.66 1.2-1.35 2.47-1.35 2.64 0 3.13 1.74 3.13 4v5.15h-3V12.4c0-1.1-.02-2.5-1.53-2.5s-1.76 1.2-1.76 2.43V17H7.5V8z"/></svg>
+                LinkedIn
+            </a>
+            <a class="link-card" href="https://123456789fihwihfushgushigs.my.canva.site/yhchiuportfolio" target="_blank" rel="noopener">
+                <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="14" height="14" rx="2"/><path d="M3 8h14M8 3v14"/></svg>
+                Portfolio FR
+            </a>
+            <a class="link-card" href="https://yhchiuportfolio.wordpress.com" target="_blank" rel="noopener">
+                <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="10" cy="10" r="7"/><path d="M3 10h14M10 3c-2 2.5-2 11.5 0 14M10 3c2 2.5 2 11.5 0 14"/></svg>
+                Portfolio EN
+            </a>
+        </div>
+    </section>
+
+    <section class="section reveal" id="extras">
+        <div class="section-header">
+            <span class="section-number">07</span>
+            <h2 class="section-title" data-fr="Engagement & Centres d'intérêts" data-en="Engagement & Interests">Engagement & Centres d'intérêts</h2>
+            <div class="section-line"></div>
+        </div>
+        <div class="extras-grid">
+            <div class="extra-item">
+                <h4 data-fr="Ambassadrice Internationale" data-en="International Ambassador">Ambassadrice Internationale</h4>
+                <p data-fr="EM Strasbourg (2022–2024)" data-en="EM Strasbourg (2022–2024)">EM Strasbourg (2022–2024)</p>
+                <ul style="list-style:none;padding:0;margin-top:0.4rem;">
+                    <li style="position:relative;padding-left:1.1rem;font-size:0.8rem;color:var(--muted);margin-bottom:0.3rem;line-height:1.55;" data-fr="Représentation institutionnelle : Promotion de l'école lors du salon EEFT Taiwan 2024, agissant comme lien entre l'institution française et les candidats asiatiques" data-en="Institutional representation: Promotion of the school at the EEFT Taiwan 2024 fair, acting as a bridge between the French institution and Asian candidates"><span style="position:absolute;left:0;top:0.6em;width:4px;height:4px;background:var(--gold);border-radius:50%;display:block;"></span>Représentation institutionnelle : Promotion de l'école lors du salon EEFT Taiwan 2024, agissant comme lien entre l'institution française et les candidats asiatiques</li>
+                    <li style="position:relative;padding-left:1.1rem;font-size:0.8rem;color:var(--muted);margin-bottom:0.3rem;line-height:1.55;" data-fr="Accompagnement interculturel : Accueil et intégration des étudiants internationaux, facilitant leur adaptation au système éducatif français" data-en="Intercultural support: Welcoming and integrating international students, facilitating their adaptation to the French education system"><span style="position:absolute;left:0;top:0.6em;width:4px;height:4px;background:var(--gold);border-radius:50%;display:block;"></span>Accompagnement interculturel : Accueil et intégration des étudiants internationaux, facilitant leur adaptation au système éducatif français</li>
+                    <li style="position:relative;padding-left:1.1rem;font-size:0.8rem;color:var(--muted);margin-bottom:0.3rem;line-height:1.55;" data-fr="Animation de communauté : Création de contenus vidéo pour promouvoir les échanges académiques et renforcer la visibilité de l'école à l'international" data-en="Community engagement: Creation of video content to promote academic exchanges and strengthen the school's international visibility"><span style="position:absolute;left:0;top:0.6em;width:4px;height:4px;background:var(--gold);border-radius:50%;display:block;"></span>Animation de communauté : Création de contenus vidéo pour promouvoir les échanges académiques et renforcer la visibilité de l'école à l'international</li>
+                </ul>
+            </div>
+            <div class="extra-item">
+                <h4 data-fr="Création de contenu" data-en="Content Creation">Création de contenu</h4>
+                <p>
+                    <span data-fr="Chaîne YouTube voyage et vie quotidienne. Création de contenus multi-plateformes : Facebook, Instagram, LinkedIn, TikTok, X (Twitter)" data-en="YouTube channel on travel and daily life. Multi-platform content creation: Facebook, Instagram, LinkedIn, TikTok, X (Twitter)">Chaîne YouTube voyage et vie quotidienne. Création de contenus multi-plateformes : Facebook, Instagram, LinkedIn, TikTok, X (Twitter)</span>
+                    <br>
+                    <a href="https://www.youtube.com/@josdiary_%E6%88%91%E7%9A%84%E7%95%99%E5%AD%B8%E6%97%A5%E8%A8%98" target="_blank" rel="noopener" data-fr="→ Voir la chaîne YouTube" data-en="→ View YouTube channel">→ Voir la chaîne YouTube</a>
+                </p>
+            </div>
+            <div class="extra-item">
+                <h4 data-fr="Enquêtrice bénévole" data-en="Volunteer Investigator">Enquêtrice bénévole</h4>
+                <p data-fr="Faith for Animals (2020) : Coordination stérilisations canines" data-en="Faith for Animals (2020): Coordination of canine sterilization programs">Faith for Animals (2020) : Coordination stérilisations canines</p>
+            </div>
+            <div class="extra-item">
+                <h4 data-fr="Musique" data-en="Music">Musique</h4>
+                <p data-fr="Piano (8 ans), Clarinette (10 ans)" data-en="Piano (8 years), Clarinet (10 years)">Piano (8 ans), Clarinette (10 ans)</p>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<footer><p>© 2026 Yi-Hsuan Chiu</p></footer>
+
+<script>
+    function setLang(lang) {
+        document.documentElement.lang = lang;
+        document.getElementById('btn-fr').classList.toggle('active', lang === 'fr');
+        document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+        document.querySelectorAll('[data-fr][data-en]').forEach(el => {
+            el.textContent = el.getAttribute('data-' + lang);
+        });
+        try { localStorage.setItem('cv-lang', lang); } catch(e) {}
+    }
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
+    }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+    const barObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.querySelectorAll('.lang-bar-fill').forEach(bar => {
+                    bar.style.width = bar.getAttribute('data-width') + '%';
+                });
+            }
+        });
+    }, { threshold: 0.3 });
+    document.querySelectorAll('#languages').forEach(el => barObserver.observe(el));
+
+    window.addEventListener('scroll', () => {
+        document.getElementById('topbar').classList.toggle('scrolled', window.scrollY > 10);
+    }, { passive: true });
+
+    document.querySelectorAll('.nav-links a[href^="#"]').forEach(a => {
+        a.addEventListener('click', e => {
+            e.preventDefault();
+            const target = document.querySelector(a.getAttribute('href'));
+            if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        });
+    });
+
+    document.addEventListener('DOMContentLoaded', () => {
+        const saved = localStorage.getItem('cv-lang');
+        if (saved) setLang(saved);
+    });
+</script>
+</body>
+</html>
