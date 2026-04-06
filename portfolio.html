@@ -47,6 +47,7 @@
         .content-card ul{list-style:none;padding:0;margin-top:.5rem}
         .content-card ul li{position:relative;padding-left:1.1rem;margin-bottom:.4rem}
         .content-card ul li::before{content:'';position:absolute;left:0;top:.6em;width:4px;height:4px;background:var(--gold);border-radius:50%}
+        .kw{color:var(--dark);font-weight:600}
         .showcase{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-bottom:1.5rem}
         .showcase-item{background:var(--white);border:1px solid var(--border-light);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow-sm);transition:transform .3s,box-shadow .3s}
         .showcase-item:hover{transform:translateY(-3px);box-shadow:var(--shadow-md)}
@@ -56,6 +57,17 @@
         .impact-box{background:linear-gradient(135deg,var(--accent-light),var(--gold-light));border-radius:var(--radius);padding:1.4rem 1.8rem;margin-top:1rem;border-left:3px solid var(--accent)}
         .impact-box h5{font-size:.78rem;text-transform:uppercase;letter-spacing:.06em;color:var(--accent);font-weight:700;margin-bottom:.4rem}
         .impact-box p{font-size:.85rem;color:var(--muted);line-height:1.7}
+        .impact-box .kw{color:var(--accent);font-weight:700}
+        @media(min-width:769px){
+            .content-card h4{font-size:1rem}
+            .content-card p,.content-card li{font-size:.93rem}
+            .page-hero .subtitle{font-size:1.02rem}
+            .project-title{font-size:1.7rem}
+            .project-company{font-size:.9rem}
+            .impact-box p{font-size:.93rem}
+            .showcase-item .caption{font-size:.8rem}
+            .tag{font-size:.78rem;padding:.35rem .8rem}
+        }
         .ref-section{margin-top:1.5rem}
         .ref-section h4{font-size:.82rem;font-weight:700;margin-bottom:.6rem;color:var(--dark)}
         .ref-link{display:inline-flex;align-items:center;gap:.4rem;font-size:.8rem;font-weight:500;color:var(--accent);text-decoration:none;padding:.35rem .8rem;border:1px solid var(--accent);border-radius:6px;transition:all .25s;margin-right:.5rem;margin-bottom:.5rem}
@@ -72,8 +84,8 @@
             .main{padding:0 1.2rem 3rem}
             .content-card{padding:1.4rem 1.2rem}
             .nav-links a.nav-desktop{display:none}
-            .showcase,.showcase.cols-4{grid-template-columns:1fr}
-            .showcase-item img{height:200px}
+            .showcase{grid-template-columns:repeat(2,1fr)}.showcase.cols-4{grid-template-columns:repeat(2,1fr)}
+            .showcase-item img{height:120px}
         }
     </style>
 </head>
@@ -120,14 +132,14 @@
         </div>
         <div class="content-card">
             <h4><span class="icon">🎯</span> <span data-fr="La mission" data-en="The Mission">La mission</span></h4>
-            <p data-fr="Développement et gestion de campagnes marketing digital et de stratégie de contenu, avec optimisation des performances par une approche data-driven pour une plateforme de finance durable." data-en="Developing and managing digital marketing campaigns and content strategy while optimizing performance through data-driven approaches for a sustainable finance platform.">Développement et gestion de campagnes marketing digital et de stratégie de contenu, avec optimisation des performances par une approche data-driven pour une plateforme de finance durable.</p>
+            <p data-fr="Développement et gestion de campagnes marketing digital et de stratégie de contenu, avec optimisation des performances par une approche data-driven pour une plateforme de finance durable." data-en="Developing and managing <span class=kw>digital marketing campaigns</span> and <span class=kw>content strategy</span> while optimizing performance through <span class=kw>data-driven approaches</span> for a sustainable finance platform.">Développement et gestion de campagnes marketing digital et de stratégie de contenu, avec optimisation des performances par une approche data-driven pour une plateforme de finance durable.</p>
         </div>
         <div class="content-card">
             <h4><span class="icon">⚙️</span> <span data-fr="Stratégie de contenu & Analytics" data-en="Content Strategy & Analytics">Stratégie de contenu & Analytics</span></h4>
             <ul>
-                <li data-fr="Implémentation de GA4 et Google Tag Manager pour un suivi avancé des performances" data-en="Implemented GA4 and Google Tag Manager for advanced tracking and performance measurement">Implémentation de GA4 et Google Tag Manager pour un suivi avancé des performances</li>
-                <li data-fr="Création de contenus personnalisés basés sur la segmentation utilisateurs et les données comportementales" data-en="Created personalized content based on user segmentation and behavioral data">Création de contenus personnalisés basés sur la segmentation utilisateurs et les données comportementales</li>
-                <li data-fr="Optimisation du contenu multi-plateformes via l'analyse continue des performances" data-en="Optimized multi-platform content through continuous performance analysis">Optimisation du contenu multi-plateformes via l'analyse continue des performances</li>
+                <li data-fr="Implémentation de GA4 et Google Tag Manager pour un suivi avancé des performances" data-en="Implemented <span class=kw>GA4</span> and <span class=kw>Google Tag Manager</span> for advanced tracking and performance measurement">Implémentation de GA4 et Google Tag Manager pour un suivi avancé des performances</li>
+                <li data-fr="Création de contenus personnalisés basés sur la segmentation utilisateurs et les données comportementales" data-en="Created personalized content based on <span class=kw>user segmentation</span> and <span class=kw>behavioral data</span>">Création de contenus personnalisés basés sur la segmentation utilisateurs et les données comportementales</li>
+                <li data-fr="Optimisation du contenu multi-plateformes via l'analyse continue des performances" data-en="Optimized <span class=kw>multi-platform content</span> through continuous <span class=kw>performance analysis</span>">Optimisation du contenu multi-plateformes via l'analyse continue des performances</li>
                 <li data-fr="Gestion de la diffusion sur LinkedIn, Facebook, Twitter, Instagram, TikTok et Threads" data-en="Managed content distribution across LinkedIn, Facebook, Twitter, Instagram, TikTok and Threads">Gestion de la diffusion sur LinkedIn, Facebook, Twitter, Instagram, TikTok et Threads</li>
             </ul>
         </div>
@@ -136,8 +148,8 @@
             <ul>
                 <li data-fr="Conception de visuels adaptés à chaque plateforme avec Canva, Figma et CapCut" data-en="Designed platform-specific visuals using Canva, Figma and CapCut">Conception de visuels adaptés à chaque plateforme avec Canva, Figma et CapCut</li>
                 <li data-fr="Production de contenus vidéo engageants adaptés au format et à l'audience de chaque canal" data-en="Produced engaging video content adapted to each channel's format and audience">Production de contenus vidéo engageants adaptés au format et à l'audience de chaque canal</li>
-                <li data-fr="Développement de contenus optimisés SEO pour renforcer la visibilité organique" data-en="Developed SEO-optimized content for enhanced organic visibility">Développement de contenus optimisés SEO pour renforcer la visibilité organique</li>
-                <li data-fr="Mise en place de stratégies d'optimisation du taux de conversion sur tous les points de contact" data-en="Implemented conversion rate optimization strategies across all touchpoints">Mise en place de stratégies d'optimisation du taux de conversion sur tous les points de contact</li>
+                <li data-fr="Développement de contenus optimisés SEO pour renforcer la visibilité organique" data-en="Developed <span class=kw>SEO-optimized</span> content for enhanced organic visibility">Développement de contenus optimisés SEO pour renforcer la visibilité organique</li>
+                <li data-fr="Mise en place de stratégies d'optimisation du taux de conversion sur tous les points de contact" data-en="Implemented <span class=kw>conversion rate optimization</span> strategies across all touchpoints">Mise en place de stratégies d'optimisation du taux de conversion sur tous les points de contact</li>
             </ul>
         </div>
         <div class="content-card">
@@ -165,7 +177,7 @@
         </div>
         <div class="impact-box">
             <h5>Impact</h5>
-            <p data-fr="Taux de conversion de 53,52 % grâce à l'optimisation SEO et CRO. Réduction du taux de rebond de 52,6 % par un ciblage stratégique. Engagement utilisateur renforcé via une optimisation data-driven avec une voix de marque cohérente sur 6+ plateformes." data-en="Achieved a 53.52% conversion rate through SEO and CRO optimization. Reduced bounce rate by 52.6% via strategic campaign targeting. Increased user engagement through data-driven content optimization with consistent brand voice across 6+ platforms.">Taux de conversion de 53,52 % grâce à l'optimisation SEO et CRO. Réduction du taux de rebond de 52,6 % par un ciblage stratégique. Engagement utilisateur renforcé via une optimisation data-driven avec une voix de marque cohérente sur 6+ plateformes.</p>
+            <p data-fr="<span class=kw>Taux de conversion de 53,52 %</span> grâce à l'optimisation SEO et CRO. Réduction du taux de rebond de 52,6 % par un ciblage stratégique. Engagement utilisateur renforcé via une optimisation data-driven avec une voix de marque cohérente sur 6+ plateformes." data-en="Achieved a <span class=kw>53.52% conversion rate</span> through SEO and CRO optimization. <span class=kw>Reduced bounce rate by 52.6%</span> via strategic campaign targeting. Increased user engagement through data-driven content optimization with consistent brand voice across 6+ platforms.">Taux de conversion de 53,52 % grâce à l'optimisation SEO et CRO. Réduction du taux de rebond de 52,6 % par un ciblage stratégique. Engagement utilisateur renforcé via une optimisation data-driven avec une voix de marque cohérente sur 6+ plateformes.</p>
         </div>
     </section>
 
@@ -185,12 +197,12 @@
         </div>
         <div class="content-card">
             <h4><span class="icon">🎯</span> <span data-fr="La mission" data-en="The Mission">La mission</span></h4>
-            <p data-fr="Développement complet d'un cours en ligne de formation carrière, de la conception à la mise en marché, pour un cabinet de coaching professionnel certifié ICF (PCC) spécialisé dans l'accompagnement de cadres et indépendants sur le marché international." data-en="Full-cycle development of an online career training course, from concept to market launch, for an ICF (PCC) certified professional coaching firm specializing in supporting executives and independent professionals in the international market.">Développement complet d'un cours en ligne de formation carrière, de la conception à la mise en marché, pour un cabinet de coaching professionnel certifié ICF (PCC) spécialisé dans l'accompagnement de cadres et indépendants sur le marché international.</p>
+            <p data-fr="Développement complet d'un cours en ligne de formation carrière, de la conception à la mise en marché, pour un cabinet de coaching professionnel certifié ICF (PCC) spécialisé dans l'accompagnement de cadres et indépendants sur le marché international." data-en="<span class=kw>Full-cycle development</span> of an online career training course, from concept to market launch, for an ICF (PCC) certified professional coaching firm specializing in supporting executives and independent professionals in the international market.">Développement complet d'un cours en ligne de formation carrière, de la conception à la mise en marché, pour un cabinet de coaching professionnel certifié ICF (PCC) spécialisé dans l'accompagnement de cadres et indépendants sur le marché international.</p>
         </div>
         <div class="content-card">
             <h4><span class="icon">📋</span> <span data-fr="Gestion de projet" data-en="Project Management">Gestion de projet</span></h4>
             <ul>
-                <li data-fr="Coordination de la production de 26 sessions de cours en 2 mois, de bout en bout" data-en="Coordinated the end-to-end production of 26 digital course sessions within 2 months">Coordination de la production de 26 sessions de cours en 2 mois, de bout en bout</li>
+                <li data-fr="Coordination de la production de <span class=kw>26 sessions</span> de cours en 2 mois, de bout en bout" data-en="Coordinated the <span class=kw>end-to-end production of 26 digital course sessions</span> within 2 months">Coordination de la production de 26 sessions de cours en 2 mois, de bout en bout</li>
                 <li data-fr="Exécution fluide et livraison dans les délais à chaque phase du projet" data-en="Ensured seamless execution and timely delivery across all project phases">Exécution fluide et livraison dans les délais à chaque phase du projet</li>
                 <li data-fr="Construction d'un workflow de production scalable pour les futures expansions" data-en="Built a scalable production workflow for future content expansion">Construction d'un workflow de production scalable pour les futures expansions</li>
             </ul>
@@ -198,7 +210,7 @@
         <div class="content-card">
             <h4><span class="icon">🔍</span> <span data-fr="Étude de marché & Analyse concurrentielle" data-en="Market Research & Competitive Analysis">Étude de marché & Analyse concurrentielle</span></h4>
             <ul>
-                <li data-fr="Analyse des concurrents : positionnement, offre produit, structure tarifaire et stratégie de contenu" data-en="Competitor analysis: positioning, product offering, pricing structure and content strategy">Analyse des concurrents : positionnement, offre produit, structure tarifaire et stratégie de contenu</li>
+                <li data-fr="Analyse des concurrents : positionnement, offre produit, structure tarifaire et stratégie de contenu" data-en="<span class=kw>Competitor analysis</span>: positioning, product offering, <span class=kw>pricing structure</span> and content strategy">Analyse des concurrents : positionnement, offre produit, structure tarifaire et stratégie de contenu</li>
                 <li data-fr="Définition des personas cibles et stratégies de positionnement basées sur les insights marché" data-en="Defined target personas and positioning strategies based on market insights">Définition des personas cibles et stratégies de positionnement basées sur les insights marché</li>
                 <li data-fr="Création d'un concept board alignant les fonctionnalités produit avec les besoins de l'audience" data-en="Developed a concept board aligning product features with audience needs">Création d'un concept board alignant les fonctionnalités produit avec les besoins de l'audience</li>
             </ul>
@@ -215,8 +227,8 @@
         <div class="content-card">
             <h4><span class="icon">💰</span> <span data-fr="Stratégie tarifaire & Go-to-Market" data-en="Pricing Strategy & Go-to-Market">Stratégie tarifaire & Go-to-Market</span></h4>
             <ul>
-                <li data-fr="Conception de la stratégie tarifaire basée sur l'analyse concurrentielle et le positionnement" data-en="Designed pricing strategy based on competitive analysis and market positioning">Conception de la stratégie tarifaire basée sur l'analyse concurrentielle et le positionnement</li>
-                <li data-fr="Déploiement de la stratégie Go-to-Market : canaux d'acquisition et programmes d'affiliation" data-en="Deployed Go-to-Market strategy: acquisition channels and affiliate programs">Déploiement de la stratégie Go-to-Market : canaux d'acquisition et programmes d'affiliation</li>
+                <li data-fr="Conception de la stratégie tarifaire basée sur l'analyse concurrentielle et le positionnement" data-en="Designed <span class=kw>pricing strategy</span> based on competitive analysis and market positioning">Conception de la stratégie tarifaire basée sur l'analyse concurrentielle et le positionnement</li>
+                <li data-fr="Déploiement de la stratégie Go-to-Market : canaux d'acquisition et programmes d'affiliation" data-en="Deployed <span class=kw>Go-to-Market strategy</span>: acquisition channels and affiliate programs">Déploiement de la stratégie Go-to-Market : canaux d'acquisition et programmes d'affiliation</li>
                 <li data-fr="Exécution de campagnes marketing ciblées pour accélérer l'adoption" data-en="Executed targeted marketing campaigns to drive adoption and revenue growth">Exécution de campagnes marketing ciblées pour accélérer l'adoption</li>
             </ul>
         </div>
@@ -271,12 +283,12 @@
         </div>
         <div class="content-card">
             <h4><span class="icon">🎯</span> <span data-fr="La mission" data-en="The Mission">La mission</span></h4>
-            <p data-fr="Gestion d'une communauté de 550+ bénévoles et accompagnement de 1 000+ bénéficiaires, maintien des relations partenaires, organisation de 30+ événements variés (prospection, ateliers cuisine, reconditionnement, stands sur forums), coordination logistique et communication via newsletter hebdomadaire et groupes WhatsApp." data-en="Managing a community of 550+ volunteers and supporting 1,000+ beneficiaries, maintaining partner relationships, organizing 30+ diverse events (prospection, cooking workshops, food reconditioning, forum stands), coordinating logistics and handling communications through weekly newsletters and WhatsApp groups.">Gestion d'une communauté de 550+ bénévoles et accompagnement de 1 000+ bénéficiaires, maintien des relations partenaires, organisation de 30+ événements variés (prospection, ateliers cuisine, reconditionnement, stands sur forums), coordination logistique et communication via newsletter hebdomadaire et groupes WhatsApp.</p>
+            <p data-fr="Gestion d'une communauté de <span class=kw>550+</span> bénévoles et accompagnement de 1 000+ bénéficiaires, maintien des relations partenaires, organisation de 30+ événements variés (prospection, ateliers cuisine, reconditionnement, stands sur forums), coordination logistique et communication via newsletter hebdomadaire et groupes WhatsApp." data-en="Managing a community of <span class=kw>550+ volunteers</span> and supporting 1,000+ beneficiaries, maintaining partner relationships, organizing 30+ diverse events (prospection, cooking workshops, food reconditioning, forum stands), coordinating logistics and handling communications through weekly newsletters and WhatsApp groups.">Gestion d'une communauté de 550+ bénévoles et accompagnement de 1 000+ bénéficiaires, maintien des relations partenaires, organisation de 30+ événements variés (prospection, ateliers cuisine, reconditionnement, stands sur forums), coordination logistique et communication via newsletter hebdomadaire et groupes WhatsApp.</p>
         </div>
         <div class="content-card">
             <h4><span class="icon">👥</span> <span data-fr="Gestion de communauté bénévole" data-en="Volunteer Community Management">Gestion de communauté bénévole</span></h4>
             <ul>
-                <li data-fr="Onboarding et formation de 550+ bénévoles avec suivi individualisé" data-en="Onboarded and trained 550+ volunteers with individualized follow-up and engagement tracking">Onboarding et formation de 550+ bénévoles avec suivi individualisé</li>
+                <li data-fr="<span class=kw>Onboarding et formation de 550+</span> bénévoles avec suivi individualisé" data-en="<span class=kw>Onboarded and trained 550+ volunteers</span> with individualized follow-up and engagement tracking">Onboarding et formation de 550+ bénévoles avec suivi individualisé</li>
                 <li data-fr="Mise en place d'un processus structuré du recrutement à la première mission" data-en="Built a structured onboarding process from recruitment to first mission assignment">Mise en place d'un processus structuré du recrutement à la première mission</li>
                 <li data-fr="Médiation et gestion des dynamiques interpersonnelles au sein d'une communauté diverse" data-en="Mediated conflicts and managed interpersonal dynamics across a diverse volunteer base">Médiation et gestion des dynamiques interpersonnelles au sein d'une communauté diverse</li>
                 <li data-fr="Animation de groupes WhatsApp pour l'accompagnement quotidien, l'onboarding et la résolution de questions" data-en="Managed WhatsApp groups for daily volunteer support, onboarding guidance and issue resolution">Animation de groupes WhatsApp pour l'accompagnement quotidien, l'onboarding et la résolution de questions</li>
@@ -285,10 +297,10 @@
         <div class="content-card">
             <h4><span class="icon">📦</span> <span data-fr="Coordination événementielle & Logistique" data-en="Event & Logistics Coordination">Coordination événementielle & Logistique</span></h4>
             <ul>
-                <li data-fr="Organisation de 30+ événements par an : prospection, ateliers cuisine, reconditionnement, stands sur forums" data-en="Organized 30+ events per year: prospection, cooking workshops, food reconditioning, forum stands">Organisation de 30+ événements par an : prospection, ateliers cuisine, reconditionnement, stands sur forums</li>
+                <li data-fr="Organisation de <span class=kw>30+ événements</span> par an : prospection, ateliers cuisine, reconditionnement, stands sur forums" data-en="Organized <span class=kw>30+ events per year</span>: prospection, cooking workshops, food reconditioning, forum stands">Organisation de 30+ événements par an : prospection, ateliers cuisine, reconditionnement, stands sur forums</li>
                 <li data-fr="Coordination logistique de 2 distributions hebdomadaires pour environ 500 bénéficiaires par session" data-en="Coordinated logistics for 2 weekly distributions serving approximately 500 beneficiaries per session">Coordination logistique de 2 distributions hebdomadaires pour environ 500 bénéficiaires par session</li>
                 <li data-fr="Gestion des relations avec 30+ organisations partenaires (supermarchés, restaurants, fermes, boulangeries)" data-en="Managed relationships with 30+ partner organizations (supermarkets, restaurants, farms, bakeries)">Gestion des relations avec 30+ organisations partenaires (supermarchés, restaurants, fermes, boulangeries)</li>
-                <li data-fr="7 500 kg de nourriture redistribuée par semaine grâce à une planification logistique optimisée" data-en="7,500 kg of food redistributed per week through optimized logistics planning">7 500 kg de nourriture redistribuée par semaine grâce à une planification logistique optimisée</li>
+                <li data-fr="<span class=kw>7 500 kg de nourriture redistribuée</span> par semaine grâce à une planification logistique optimisée" data-en="<span class=kw>7,500 kg of food redistributed per week</span> through optimized logistics planning">7 500 kg de nourriture redistribuée par semaine grâce à une planification logistique optimisée</li>
             </ul>
         </div>
         <div class="content-card">
@@ -345,7 +357,7 @@
 </button>
 
 <script>
-function setLang(l){document.documentElement.lang=l;document.getElementById('btn-fr').classList.toggle('active',l==='fr');document.getElementById('btn-en').classList.toggle('active',l==='en');document.querySelectorAll('[data-fr][data-en]').forEach(function(e){e.textContent=e.getAttribute('data-'+l)});try{localStorage.setItem('cv-lang',l)}catch(x){}}
+function setLang(l){document.documentElement.lang=l;document.getElementById('btn-fr').classList.toggle('active',l==='fr');document.getElementById('btn-en').classList.toggle('active',l==='en');document.querySelectorAll('[data-fr][data-en]').forEach(function(e){e.innerHTML=e.getAttribute('data-'+l)});try{localStorage.setItem('cv-lang',l)}catch(x){}}
 window.addEventListener('scroll',function(){document.getElementById('topbar').classList.toggle('scrolled',window.scrollY>10);var b=document.getElementById('backToTop');if(b)b.classList.toggle('visible',window.scrollY>400);var ss=document.querySelectorAll('.project-section'),ls=document.querySelectorAll('.nav-links a[href^="#"]'),c='';ss.forEach(function(s){if(window.scrollY>=s.offsetTop-100)c=s.id});ls.forEach(function(a){a.classList.toggle('active',a.getAttribute('href')==='#'+c)})},{passive:true});
 document.querySelectorAll('.nav-links a[href^="#"]').forEach(function(a){a.addEventListener('click',function(e){e.preventDefault();var t=document.querySelector(a.getAttribute('href'));if(t)t.scrollIntoView({behavior:'smooth',block:'start'})})});
 document.addEventListener('DOMContentLoaded',function(){var s=localStorage.getItem('cv-lang');if(s)setLang(s)});
