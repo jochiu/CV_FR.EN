@@ -59,6 +59,26 @@
         .impact-box h5{font-size:.78rem;text-transform:uppercase;letter-spacing:.06em;color:var(--accent);font-weight:700;margin-bottom:.4rem}
         .impact-box p{font-size:.85rem;color:var(--muted);line-height:1.7}
         .impact-box .kw{color:var(--accent);font-weight:700}
+        /* Strategy split layout */
+        .project-intro{font-size:.88rem;color:var(--muted);line-height:1.7;margin:.7rem 0 0 2.6rem;font-style:italic;max-width:720px}
+        .strategy-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem}
+        .strategy-col{min-width:0}
+        .col-header{background:var(--white);border:1px solid var(--border-light);border-radius:var(--radius);padding:1.1rem 1.4rem;box-shadow:var(--shadow-sm);margin-bottom:.9rem;border-top:3px solid var(--accent)}
+        .col-header h3{font-size:1.1rem;font-weight:700;margin-bottom:.1rem}
+        .col-header .col-sub{font-size:.8rem;color:var(--accent);font-weight:500}
+        .col-header .col-loc{font-size:.73rem;color:var(--muted-light);margin-top:.2rem}
+        .strategy-col .content-card{padding:1.3rem 1.4rem;margin-bottom:.8rem}
+        .strategy-col .content-card h4{font-size:.83rem;margin-bottom:.45rem}
+        .strategy-col .content-card p,.strategy-col .content-card li{font-size:.8rem;line-height:1.65}
+        .strategy-col .tag-row{margin-bottom:.9rem;gap:.3rem}
+        .strategy-col .tag{font-size:.68rem;padding:.22rem .55rem}
+        .strategy-col .showcase{grid-template-columns:1fr 1fr;gap:.5rem;margin-bottom:.9rem}
+        .strategy-col .showcase-item img{height:110px}
+        .strategy-col .showcase-item .caption{font-size:.68rem;padding:.5rem .6rem;line-height:1.45}
+        .strategy-col .impact-box{padding:1rem 1.3rem}
+        .strategy-col .impact-box p{font-size:.8rem}
+        .strategy-col .ref-section{margin-top:.8rem}
+        .strategy-col .ref-section p{font-size:.72rem;color:var(--muted-light);font-style:italic}
         @media(min-width:769px){
             .content-card h4{font-size:1rem}
             .content-card p,.content-card li{font-size:.93rem}
@@ -87,6 +107,9 @@
             .nav-links a.nav-desktop{display:none}
             .showcase{grid-template-columns:repeat(2,1fr)}.showcase.cols-4{grid-template-columns:repeat(2,1fr)}
             .showcase-item img{height:120px}
+            .strategy-grid{grid-template-columns:1fr;gap:1rem}
+            .project-intro{margin-left:0;font-size:.85rem}
+            .strategy-col .showcase-item img{height:100px}
         }
     </style>
 </head>
@@ -118,67 +141,142 @@
 <main class="main">
 
     <!-- ===== 01: Strategy & Content Development ===== -->
+    <!-- ===== 01: Digital Marketing & Brand Strategy ===== -->
     <section class="project-section" id="strategy">
         <hr class="section-divider">
         <div class="project-header">
             <div class="project-number-title">
                 <span class="project-number">01</span>
-                <span class="project-title">Strategy & Content Development</span>
+                <span class="project-title">Digital Marketing & Brand Strategy</span>
             </div>
-            <div class="project-company">UniFox &middot; GreenTech, Web3</div>
-            <div class="project-loc">Bordeaux, France &middot; 06 &ndash; 12/2024</div>
+            <p class="project-intro" data-fr="Deux approches complémentaires : performance marketing data-driven et stratégie de marque pour l'entrée sur de nouveaux marchés." data-en="Two complementary approaches: data-driven performance marketing and brand strategy for new market entry.">Deux approches complémentaires : performance marketing data-driven et stratégie de marque pour l'entrée sur de nouveaux marchés.</p>
         </div>
-        <div class="tag-row">
-            <span class="tag">Messaging Strategy</span><span class="tag">Audience Segmentation</span><span class="tag">Content Strategy</span><span class="tag">Content Planning (Iconosquare)</span><span class="tag">GA4</span><span class="tag">GTM</span><span class="tag">SEO</span><span class="tag">CRO</span><span class="tag">Google Ads</span><span class="tag">Meta Business Suite</span><span class="tag">UX Research</span>
-        </div>
-        <div class="content-card">
-            <h4><span class="icon">🎯</span> <span data-fr="La mission" data-en="The Mission">La mission</span></h4>
-            <p data-fr="Développement et gestion de campagnes marketing digital et de stratégie de contenu, avec optimisation des performances par une approche data-driven pour une plateforme de finance durable." data-en="Developing and managing <span class=kw>digital marketing campaigns</span> and <span class=kw>content strategy</span> while optimizing performance through <span class=kw>data-driven approaches</span> for a sustainable finance platform.">Développement et gestion de campagnes marketing digital et de stratégie de contenu, avec optimisation des performances par une approche data-driven pour une plateforme de finance durable.</p>
-        </div>
-        <div class="content-card">
-            <h4><span class="icon">⚙️</span> <span data-fr="Stratégie de contenu & Analytics" data-en="Content Strategy & Analytics">Stratégie de contenu & Analytics</span></h4>
-            <ul>
-                <li data-fr="Implémentation de GA4 et Google Tag Manager pour un suivi avancé des performances" data-en="Implemented <span class=kw>GA4</span> and <span class=kw>Google Tag Manager</span> for advanced tracking and performance measurement">Implémentation de GA4 et Google Tag Manager pour un suivi avancé des performances</li>
-                <li data-fr="Création de contenus personnalisés basés sur la segmentation utilisateurs et les données comportementales" data-en="Created personalized content based on <span class=kw>user segmentation</span> and <span class=kw>behavioral data</span>">Création de contenus personnalisés basés sur la segmentation utilisateurs et les données comportementales</li>
-                <li data-fr="Optimisation du contenu multi-plateformes via l'analyse continue des performances" data-en="Optimized <span class=kw>multi-platform content</span> through continuous <span class=kw>performance analysis</span>">Optimisation du contenu multi-plateformes via l'analyse continue des performances</li>
-                <li data-fr="Gestion de la diffusion sur LinkedIn, Facebook, Twitter, Instagram, TikTok et Threads" data-en="Managed content distribution across LinkedIn, Facebook, Twitter, Instagram, TikTok and Threads">Gestion de la diffusion sur LinkedIn, Facebook, Twitter, Instagram, TikTok et Threads</li>
-            </ul>
-        </div>
-        <div class="content-card">
-            <h4><span class="icon">🎨</span> <span data-fr="Création de contenu & Outils" data-en="Content Creation & Tools">Création de contenu & Outils</span></h4>
-            <ul>
-                <li data-fr="Conception de visuels adaptés à chaque plateforme avec Canva, Figma et CapCut" data-en="Designed platform-specific visuals using Canva, Figma and CapCut">Conception de visuels adaptés à chaque plateforme avec Canva, Figma et CapCut</li>
-                <li data-fr="Production de contenus vidéo engageants adaptés au format et à l'audience de chaque canal" data-en="Produced engaging video content adapted to each channel's format and audience">Production de contenus vidéo engageants adaptés au format et à l'audience de chaque canal</li>
-                <li data-fr="Développement de contenus optimisés SEO pour renforcer la visibilité organique" data-en="Developed <span class=kw>SEO-optimized</span> content for enhanced organic visibility">Développement de contenus optimisés SEO pour renforcer la visibilité organique</li>
-                <li data-fr="Mise en place de stratégies d'optimisation du taux de conversion sur tous les points de contact" data-en="Implemented <span class=kw>conversion rate optimization</span> strategies across all touchpoints">Mise en place de stratégies d'optimisation du taux de conversion sur tous les points de contact</li>
-            </ul>
-        </div>
-        <div class="content-card">
-            <h4><span class="icon">📊</span> <span data-fr="Suivi des performances" data-en="Performance Tracking">Suivi des performances</span></h4>
-            <ul>
-                <li data-fr="Recherche UX pour identifier les axes d'amélioration du contenu" data-en="Conducted user experience research to identify content improvement opportunities">Recherche UX pour identifier les axes d'amélioration du contenu</li>
-                <li data-fr="Suivi du comportement utilisateurs, sessions, engagement et segmentation" data-en="Monitored user behavior, sessions, engagement metrics and segmentation patterns">Suivi du comportement utilisateurs, sessions, engagement et segmentation</li>
-                <li data-fr="Analyse des sources de trafic et performances des campagnes multi-canaux" data-en="Analyzed traffic sources and multi-channel campaign performance">Analyse des sources de trafic et performances des campagnes multi-canaux</li>
-                <li data-fr="Optimisation des CTAs et entonnoirs de conversion basée sur les données" data-en="Optimized CTAs and conversion funnels based on data insights">Optimisation des CTAs et entonnoirs de conversion basée sur les données</li>
-            </ul>
-        </div>
-        <div class="showcase">
-            <div class="showcase-item">
-                <img src="Content%20Creation_unifox.png" alt="Content Creation" loading="lazy">
-                <div class="caption">Social Media Content Creation (hook, line, value, CTA)</div>
+
+        <div class="strategy-grid">
+
+            <!-- ===== UniFox column ===== -->
+            <div class="strategy-col">
+                <div class="col-header">
+                    <h3>UniFox</h3>
+                    <div class="col-sub">GreenTech, Web3</div>
+                    <div class="col-loc">Bordeaux, France &middot; 06 &ndash; 12/2024</div>
+                </div>
+                <div class="tag-row">
+                    <span class="tag">Content Strategy</span><span class="tag">GA4</span><span class="tag">GTM</span><span class="tag">SEO</span><span class="tag">CRO</span><span class="tag">Google Ads</span><span class="tag">Meta Business Suite</span><span class="tag">Iconosquare</span><span class="tag">UX Research</span>
+                </div>
+                <div class="content-card">
+                    <h4><span class="icon">🎯</span> <span data-fr="La mission" data-en="The Mission">La mission</span></h4>
+                    <p data-fr="Développement et gestion de campagnes marketing digital et de stratégie de contenu, avec optimisation des performances par une approche data-driven pour une plateforme de finance durable." data-en="Developing and managing <span class=kw>digital marketing campaigns</span> and <span class=kw>content strategy</span> with performance optimization through <span class=kw>data-driven approaches</span> for a sustainable finance platform.">Développement et gestion de campagnes marketing digital et de stratégie de contenu, avec optimisation des performances par une approche data-driven pour une plateforme de finance durable.</p>
+                </div>
+                <div class="content-card">
+                    <h4><span class="icon">⚙️</span> <span data-fr="Stratégie de contenu & Analytics" data-en="Content Strategy & Analytics">Stratégie de contenu & Analytics</span></h4>
+                    <ul>
+                        <li data-fr="Implémentation de GA4 et Google Tag Manager pour un suivi avancé des performances" data-en="Implemented <span class=kw>GA4</span> and <span class=kw>Google Tag Manager</span> for advanced performance tracking">Implémentation de GA4 et Google Tag Manager pour un suivi avancé des performances</li>
+                        <li data-fr="Création de contenus personnalisés basés sur la segmentation utilisateurs et les données comportementales" data-en="Created personalized content based on <span class=kw>user segmentation</span> and <span class=kw>behavioral data</span>">Création de contenus personnalisés basés sur la segmentation utilisateurs et les données comportementales</li>
+                        <li data-fr="Optimisation du contenu multi-plateformes via l'analyse continue des performances" data-en="Optimized <span class=kw>multi-platform content</span> through continuous performance analysis">Optimisation du contenu multi-plateformes via l'analyse continue des performances</li>
+                        <li data-fr="Gestion de la diffusion sur LinkedIn, Facebook, Twitter, Instagram, TikTok et Threads" data-en="Managed distribution across LinkedIn, Facebook, Twitter, Instagram, TikTok and Threads">Gestion de la diffusion sur LinkedIn, Facebook, Twitter, Instagram, TikTok et Threads</li>
+                    </ul>
+                </div>
+                <div class="content-card">
+                    <h4><span class="icon">🎨</span> <span data-fr="Création de contenu & Outils" data-en="Content Creation & Tools">Création de contenu & Outils</span></h4>
+                    <ul>
+                        <li data-fr="Conception de visuels adaptés à chaque plateforme avec Canva, Figma et CapCut" data-en="Designed platform-specific visuals using Canva, Figma and CapCut">Conception de visuels adaptés à chaque plateforme avec Canva, Figma et CapCut</li>
+                        <li data-fr="Production de contenus vidéo engageants adaptés à l'audience de chaque canal" data-en="Produced engaging video content adapted to each channel's audience">Production de contenus vidéo engageants adaptés à l'audience de chaque canal</li>
+                        <li data-fr="Développement de contenus optimisés SEO pour renforcer la visibilité organique" data-en="Developed <span class=kw>SEO-optimized</span> content for enhanced organic visibility">Développement de contenus optimisés SEO pour renforcer la visibilité organique</li>
+                        <li data-fr="Mise en place de stratégies d'optimisation du taux de conversion" data-en="Implemented <span class=kw>conversion rate optimization</span> strategies">Mise en place de stratégies d'optimisation du taux de conversion</li>
+                    </ul>
+                </div>
+                <div class="content-card">
+                    <h4><span class="icon">📊</span> <span data-fr="Suivi des performances" data-en="Performance Tracking">Suivi des performances</span></h4>
+                    <ul>
+                        <li data-fr="Recherche UX pour identifier les axes d'amélioration du contenu" data-en="Conducted UX research to identify content improvement opportunities">Recherche UX pour identifier les axes d'amélioration du contenu</li>
+                        <li data-fr="Suivi du comportement utilisateurs, sessions, engagement et segmentation" data-en="Monitored user behavior, sessions, engagement and segmentation">Suivi du comportement utilisateurs, sessions, engagement et segmentation</li>
+                        <li data-fr="Analyse des sources de trafic et performances des campagnes multi-canaux" data-en="Analyzed traffic sources and multi-channel campaign performance">Analyse des sources de trafic et performances des campagnes multi-canaux</li>
+                        <li data-fr="Optimisation des CTAs et entonnoirs de conversion basée sur les données" data-en="Optimized CTAs and conversion funnels based on data insights">Optimisation des CTAs et entonnoirs de conversion basée sur les données</li>
+                    </ul>
+                </div>
+                <div class="showcase">
+                    <div class="showcase-item">
+                        <img src="Content%20Creation_unifox.png" alt="Content Creation" loading="lazy">
+                        <div class="caption">Social Media Content Creation (hook, line, value, CTA)</div>
+                    </div>
+                    <div class="showcase-item">
+                        <img src="Content%20Planning_Unifox.png" alt="Content Planning" loading="lazy">
+                        <div class="caption">Content Planning & Scheduling (Iconosquare)</div>
+                    </div>
+                    <div class="showcase-item">
+                        <img src="Marketing%20Strategy_unifox.png" alt="Marketing Strategy" loading="lazy">
+                        <div class="caption">Marketing Strategy & Analysis (GA4, Google Ads, Meta, PostHog)</div>
+                    </div>
+                </div>
+                <div class="impact-box">
+                    <h5>Impact</h5>
+                    <p data-fr="<span class=kw>Taux de conversion de 53,52 %</span> grâce à l'optimisation SEO et CRO. <span class=kw>Réduction du taux de rebond de 52,6 %</span> par un ciblage stratégique. Engagement utilisateur renforcé via une optimisation data-driven avec une voix de marque cohérente sur 6+ plateformes." data-en="Achieved a <span class=kw>53.52% conversion rate</span> through SEO and CRO optimization. <span class=kw>Reduced bounce rate by 52.6%</span> via strategic targeting. Increased user engagement through data-driven optimization with consistent brand voice across 6+ platforms.">Taux de conversion de 53,52 % grâce à l'optimisation SEO et CRO. Réduction du taux de rebond de 52,6 % par un ciblage stratégique. Engagement utilisateur renforcé via une optimisation data-driven avec une voix de marque cohérente sur 6+ plateformes.</p>
+                </div>
             </div>
-            <div class="showcase-item">
-                <img src="Content%20Planning_Unifox.png" alt="Content Planning" loading="lazy">
-                <div class="caption">Social Media Content Planning & Scheduling (content calendar, auto-scheduling via Iconosquare)</div>
+
+            <!-- ===== Hôtel column ===== -->
+            <div class="strategy-col">
+                <div class="col-header">
+                    <h3 data-fr="Hôtel 4★ Restaurant" data-en="4★ Hotel & Restaurant">Hôtel 4★ Restaurant</h3>
+                    <div class="col-sub" data-fr="Hôtellerie de charme" data-en="Boutique hospitality">Hôtellerie de charme</div>
+                    <div class="col-loc">Dordogne, France &middot; Freelance</div>
+                </div>
+                <div class="tag-row">
+                    <span class="tag">Market Analysis</span><span class="tag">Brand Positioning</span><span class="tag">Persona Definition</span><span class="tag">Bilingual Strategy (FR/EN)</span><span class="tag">Visual Identity</span><span class="tag">Instagram Mockup</span><span class="tag">Competitive Benchmarking</span>
+                </div>
+                <div class="content-card">
+                    <h4><span class="icon">🎯</span> <span data-fr="La mission" data-en="The Mission">La mission</span></h4>
+                    <p data-fr="Définition d'une <span class=kw>stratégie digitale bilingue (FR/EN)</span> pour positionner un établissement hôtelier de charme sur le marché américain CSP+, avec analyse de cible, recommandations éditoriales et maquette de présence Instagram." data-en="Defined a <span class=kw>bilingual digital strategy (FR/EN)</span> to position a boutique hotel on the US premium market, with target analysis, editorial recommendations and Instagram mockup.">Définition d'une stratégie digitale bilingue (FR/EN) pour positionner un établissement hôtelier de charme sur le marché américain CSP+, avec analyse de cible, recommandations éditoriales et maquette de présence Instagram.</p>
+                </div>
+                <div class="content-card">
+                    <h4><span class="icon">🔍</span> <span data-fr="Analyse de marché & Définition de cible" data-en="Market Analysis & Target Definition">Analyse de marché & Définition de cible</span></h4>
+                    <ul>
+                        <li data-fr="Analyse du segment voyageurs américains haut de gamme : durée de séjour, attentes œnotouristiques, comportements d'achat influencés par les avis et réseaux sociaux" data-en="Analyzed the <span class=kw>US premium traveler segment</span>: stay duration, wine tourism expectations, purchase behaviors influenced by reviews and social media">Analyse du segment voyageurs américains haut de gamme : durée de séjour, attentes œnotouristiques, comportements d'achat influencés par les avis et réseaux sociaux</li>
+                        <li data-fr="Définition de personas autour des préférences gastronomiques, culturelles et expérientielles" data-en="Defined <span class=kw>personas</span> around gastronomic, cultural and experiential preferences">Définition de personas autour des préférences gastronomiques, culturelles et expérientielles</li>
+                        <li data-fr="Benchmark de la présence digitale existante et identification des angles morts sur l'audience internationale" data-en="Benchmarked existing digital presence and identified blind spots on the international audience">Benchmark de la présence digitale existante et identification des angles morts sur l'audience internationale</li>
+                    </ul>
+                </div>
+                <div class="content-card">
+                    <h4><span class="icon">🎨</span> <span data-fr="Stratégie de marque & Identité visuelle" data-en="Brand Strategy & Visual Identity">Stratégie de marque & Identité visuelle</span></h4>
+                    <ul>
+                        <li data-fr="Définition d'une palette de couleurs alignée avec l'identité existante de la marque" data-en="Defined a color palette aligned with the existing brand identity">Définition d'une palette de couleurs alignée avec l'identité existante de la marque</li>
+                        <li data-fr="Conception d'une maquette Instagram complète avec structure éditoriale" data-en="Designed a <span class=kw>complete Instagram mockup</span> with editorial structure">Conception d'une maquette Instagram complète avec structure éditoriale</li>
+                        <li data-fr="Création de séries thématiques : gastronomie, témoignages voyageurs, offres saisonnières" data-en="Created thematic series: gastronomy, traveler testimonials, seasonal offers">Création de séries thématiques : gastronomie, témoignages voyageurs, offres saisonnières</li>
+                        <li data-fr="Développement d'une charte hashtags incluant un hashtag de marque pour le contenu généré par les utilisateurs" data-en="Developed a hashtag strategy including a branded hashtag for user-generated content">Développement d'une charte hashtags incluant un hashtag de marque pour le contenu généré par les utilisateurs</li>
+                    </ul>
+                </div>
+                <div class="content-card">
+                    <h4><span class="icon">✍️</span> <span data-fr="Stratégie éditoriale bilingue" data-en="Bilingual Editorial Strategy">Stratégie éditoriale bilingue</span></h4>
+                    <ul>
+                        <li data-fr="Recommandations de publications bilingues FR/EN adaptées au double public local et international" data-en="<span class=kw>Bilingual FR/EN publication</span> recommendations adapted to local and international audiences">Recommandations de publications bilingues FR/EN adaptées au double public local et international</li>
+                        <li data-fr="Conception d'exemples de Reels orientés marché américain : sous-titres anglais, narration émotionnelle, mise en avant du service anglophone et des visites privées" data-en="Designed Reels examples for the US market: English subtitles, emotional storytelling, English-speaking service and private tours">Conception d'exemples de Reels orientés marché américain : sous-titres anglais, narration émotionnelle, mise en avant du service anglophone et des visites privées</li>
+                        <li data-fr="Storytelling axé sur l'expérience authentique de la campagne française" data-en="Storytelling focused on the authentic French countryside experience">Storytelling axé sur l'expérience authentique de la campagne française</li>
+                    </ul>
+                </div>
+                <div class="showcase">
+                    <div class="showcase-item">
+                        <img src="hotel_1.png" alt="Public cible" loading="lazy">
+                        <div class="caption" data-fr="Analyse du public cible et définition des personas" data-en="Target audience analysis and persona definition">Analyse du public cible et définition des personas</div>
+                    </div>
+                    <div class="showcase-item">
+                        <img src="hotel_2.png" alt="Instagram mockup" loading="lazy">
+                        <div class="caption" data-fr="Maquette Instagram & identité visuelle" data-en="Instagram mockup & visual identity">Maquette Instagram & identité visuelle</div>
+                    </div>
+                    <div class="showcase-item">
+                        <img src="hotel_3.png" alt="Content creation" loading="lazy">
+                        <div class="caption" data-fr="Création de contenu bilingue FR/EN" data-en="Bilingual FR/EN content creation">Création de contenu bilingue FR/EN</div>
+                    </div>
+                </div>
+                <div class="impact-box">
+                    <h5>Impact</h5>
+                    <p data-fr="Proposition stratégique complète livrée sous forme de présentation professionnelle, posant les bases d'un <span class=kw>repositionnement digital</span> orienté clientèle internationale haut de gamme. Cadre activable couvrant l'analyse de marché, l'identité visuelle, la ligne éditoriale et les axes de mesure." data-en="Complete strategic proposal delivered as a professional presentation, laying the foundation for a <span class=kw>digital repositioning</span> targeting premium international clientele. Actionable framework covering market analysis, visual identity, editorial line and measurement axes.">Proposition stratégique complète livrée sous forme de présentation professionnelle, posant les bases d'un repositionnement digital orienté clientèle internationale haut de gamme. Cadre activable couvrant l'analyse de marché, l'identité visuelle, la ligne éditoriale et les axes de mesure.</p>
+                </div>
+                <div class="ref-section">
+                    <p data-fr="Document complet et nom du client disponibles sur demande." data-en="Full document and client name available on request.">Document complet et nom du client disponibles sur demande.</p>
+                </div>
             </div>
-            <div class="showcase-item">
-                <img src="Marketing%20Strategy_unifox.png" alt="Marketing Strategy" loading="lazy">
-                <div class="caption">Marketing Strategy & Analysis (GA4, Google Ads, Meta Business Suite, Google Console, PostHog)</div>
-            </div>
-        </div>
-        <div class="impact-box">
-            <h5>Impact</h5>
-            <p data-fr="<span class=kw>Taux de conversion de 53,52 %</span> grâce à l'optimisation SEO et CRO. Réduction du taux de rebond de 52,6 % par un ciblage stratégique. Engagement utilisateur renforcé via une optimisation data-driven avec une voix de marque cohérente sur 6+ plateformes." data-en="Achieved a <span class=kw>53.52% conversion rate</span> through SEO and CRO optimization. <span class=kw>Reduced bounce rate by 52.6%</span> via strategic campaign targeting. Increased user engagement through data-driven content optimization with consistent brand voice across 6+ platforms.">Taux de conversion de 53,52 % grâce à l'optimisation SEO et CRO. Réduction du taux de rebond de 52,6 % par un ciblage stratégique. Engagement utilisateur renforcé via une optimisation data-driven avec une voix de marque cohérente sur 6+ plateformes.</p>
+
         </div>
     </section>
 
@@ -299,7 +397,7 @@
         <div class="content-card">
             <h4><span class="icon">📦</span> <span data-fr="Coordination événementielle & Logistique" data-en="Event & Logistics Coordination">Coordination événementielle & Logistique</span></h4>
             <ul>
-                <li data-fr="Organisation de <span class=kw>30+ événements</span> : prospection, ateliers cuisine, reconditionnement, stands sur forums" data-en="Organized <span class=kw>30+ events</span>: prospection, cooking workshops, food reconditioning, forum stands">Organisation de 30+ événements : prospection, ateliers cuisine, reconditionnement, stands sur forums</li>
+                <li data-fr="Organisation de <span class=kw>30+ événements</span> par an : prospection, ateliers cuisine, reconditionnement, stands sur forums" data-en="Organized <span class=kw>30+ events per year</span>: prospection, cooking workshops, food reconditioning, forum stands">Organisation de 30+ événements par an : prospection, ateliers cuisine, reconditionnement, stands sur forums</li>
                 <li data-fr="Coordination de 2 distributions hebdomadaires pour environ 500 bénéficiaires par session" data-en="Coordinated 2 weekly distributions serving approximately 500 beneficiaries per session">Coordination de 2 distributions hebdomadaires pour environ 500 bénéficiaires par session</li>
                 <li data-fr="Gestion des relations avec les organisations partenaires" data-en="Managed relationships with partner organizations">Gestion des relations avec les organisations partenaires</li>
             </ul>
