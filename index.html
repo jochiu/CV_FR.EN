@@ -181,6 +181,12 @@
             content: ''; position: absolute; left: 0; top: 0.6em;
             width: 4px; height: 4px; background: var(--gold); border-radius: 50%;
         }
+        .exp-tags { display: flex; flex-wrap: wrap; gap: 0.3rem; margin-top: 0.7rem; }
+        .exp-tags .exp-tag {
+            font-size: 0.7rem; padding: 0.2rem 0.55rem; background: var(--accent-light);
+            color: var(--accent); font-weight: 600; border-radius: 12px;
+            border: 1px solid rgba(45,90,71,0.15);
+        }
         .skills-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; }
         .skill-category h3 {
             font-size: 0.78rem; font-weight: 600; margin-bottom: 0.7rem;
@@ -193,6 +199,12 @@
             transition: all 0.2s;
         }
         .skill-tag:hover { background: var(--accent-light); border-color: var(--accent); color: var(--accent); }
+        #skills .card-wrap, #tools .card-wrap { padding: 1.3rem 1.6rem; }
+        #skills, #tools { margin-bottom: 2rem; }
+        #skills .skills-grid { gap: 1.2rem; }
+        #skills .skill-category h3 { margin-bottom: 0.45rem; font-size: 0.74rem; }
+        #skills .skill-tag, #tools .skill-tag { font-size: 0.73rem; padding: 0.22rem 0.5rem; }
+        #skills .skill-tags, #tools .skill-tags { gap: 0.3rem; }
         .edu-card {
             background: var(--white); border: 1px solid var(--border-light);
             border-radius: var(--radius); padding: 1.6rem 2rem;
@@ -443,7 +455,8 @@
             .exp-body ul li { font-size: 0.93rem; }
             .exp-body h3 { font-size: 1.06rem; }
             .exp-body .company { font-size: 0.93rem; }
-            .skill-tag { font-size: 0.82rem; }
+            .skill-tag { font-size: 0.78rem; }
+            #skills .skill-tag, #tools .skill-tag { font-size: 0.76rem; padding: 0.25rem 0.55rem; }
             .edu-card h3 { font-size: 1.04rem; }
             .edu-card .school { font-size: 0.93rem; }
             .edu-achievements li { font-size: 0.9rem; }
@@ -542,7 +555,7 @@
                     Bordeaux, France
                 </span>
                 <a class="contact-chip" href="https://123456789fihwihfushgushigs.my.canva.site/yhchiuportfolio" target="_blank" rel="noopener">
-                    <svg viewBox="0 0 512 512" fill="currentColor"><path d="M184 48H328c4.4 0 8 3.6 8 8V96H176V56c0-4.4 3.6-8 8-8zm-56 8V96H64C28.7 96 0 124.7 0 160V296 416c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V296 160c0-35.3-28.7-64-64-64H384V56c0-30.9-25.1-56-56-56H184c-30.9 0-56 25.1-56 56z"/></svg>
+                    <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="14" height="14" rx="2"/><path d="M3 8h14M8 3v14"/></svg>
                     Portfolio FR
                 </a>
                 <a class="contact-chip" href="https://yhchiuportfolio.wordpress.com" target="_blank" rel="noopener">
@@ -573,6 +586,8 @@
                         <li data-fr="Piloté 30+ événements de A à Z : coordination logistique et partenariats multi-parties prenantes" data-en="Led 30+ events end-to-end, coordinating logistics and multi-stakeholder partnerships">Piloté 30+ événements de A à Z : coordination logistique et partenariats multi-parties prenantes</li>
                         <li data-fr="Renforcé l'engagement communautaire via une newsletter hebdomadaire ciblée (Sarbacane)" data-en="Grew community engagement through weekly targeted newsletters (Sarbacane)">Renforcé l'engagement communautaire via une newsletter hebdomadaire ciblée (Sarbacane)</li>
                     </ul>
+                    <div class="exp-tags"><span class="exp-tag">Community Management</span><span class="exp-tag">Event Coordination</span><span class="exp-tag">Volunteer Onboarding</span><span class="exp-tag">Airtable</span><span class="exp-tag">Sarbacane</span><span class="exp-tag">Google Workspace</span><span class="exp-tag">WhatsApp</span><span class="exp-tag">JeVeuxAider</span></div>
+
                     <div class="exp-photos">
                         <img src="Linkee_Distrib.jpeg" alt="Linkee distribution" loading="lazy">
                         <img src="Linkee_Stand.jpeg" alt="Linkee stand" loading="lazy">
@@ -587,10 +602,12 @@
                 <div class="exp-meta"><div class="dates">04 – 05/2025</div><div class="location">Bordeaux</div></div>
                 <div class="exp-body">
                     <h3 data-fr="Chargée de Projet Marketing" data-en="Marketing Project Specialist">Chargée de Projet Marketing</h3>
-                    <div class="company">Hôtel Le Manoir De Bellerive</div>
+                    <div class="company"><img class="company-logo" src="hotel_logo.webp" alt="Hôtel Le Manoir De Bellerive"><span>Hôtel Le Manoir De Bellerive</span></div>
                     <ul>
                         <li data-fr="Analysé le marché américain et défini l'identité numérique anglophone, posant les bases de la visibilité internationale auprès d'une clientèle CSP+" data-en="Analyzed the US market and defined English-language digital identity, laying the foundation for international visibility among premium clientele">Analysé le marché américain et défini l'identité numérique anglophone, posant les bases de la visibilité internationale auprès d'une clientèle CSP+</li>
                     </ul>
+                    <div class="exp-tags"><span class="exp-tag">Market Analysis</span><span class="exp-tag">Brand Positioning</span><span class="exp-tag">Persona Definition</span><span class="exp-tag">Bilingual Strategy (FR/EN)</span><span class="exp-tag">Visual Identity</span><span class="exp-tag">Instagram Strategy</span></div>
+
                     <a class="exp-link" href="portfolio.html#strategy" target="_blank" rel="noopener">
                         <svg viewBox="0 0 512 512" fill="currentColor"><path d="M184 48H328c4.4 0 8 3.6 8 8V96H176V56c0-4.4 3.6-8 8-8zm-56 8V96H64C28.7 96 0 124.7 0 160V296 416c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V296 160c0-35.3-28.7-64-64-64H384V56c0-30.9-25.1-56-56-56H184c-30.9 0-56 25.1-56 56z"/></svg>
                         <span data-fr="Voir le portfolio" data-en="View portfolio">Voir le portfolio</span>
@@ -603,10 +620,12 @@
                     <h3 data-fr="Chargée de Marketing Digital International" data-en="International Digital Marketing Specialist">Chargée de Marketing Digital International</h3>
                     <div class="company"><img class="company-logo" src="Unifox_logo.webp" alt="UniFox"><span>UniFox · GreenTech, Web3</span></div>
                     <ul>
-                        <li data-fr="Réduit le taux de rebond de 52,6 % grâce à l'optimisation des campagnes APAC/EMEA (Meta/Google Ads), au ciblage stratégique et à la réallocation budgétaire" data-en="Reduced bounce rate by 52.6% through APAC/EMEA campaign optimization (Meta/Google Ads), strategic targeting and budget reallocation">Réduit le taux de rebond de 52,6 % grâce à l'optimisation des campagnes APAC/EMEA (Meta/Google Ads), au ciblage stratégique et à la réallocation budgétaire</li>
-                        <li data-fr="Stimulé la croissance du trafic organique via la mise en place d'une stratégie SEO et la configuration du suivi des conversions (GTM)" data-en="Drove organic traffic growth by implementing SEO strategy and configuring conversion tracking (GTM)">Stimulé la croissance du trafic organique via la mise en place d'une stratégie SEO et la configuration du suivi des conversions (GTM)</li>
-                        <li data-fr="Fourni des recommandations actionnables à la direction via des dashboards GA4 et le reporting de KPI (CPC, ROI, trafic)" data-en="Delivered actionable recommendations to leadership through GA4 dashboards and KPI reporting (CPC, ROI, traffic)">Fourni des recommandations actionnables à la direction via des dashboards GA4 et le reporting de KPI (CPC, ROI, trafic)</li>
+                        <li data-fr="Réduit le taux de rebond de 52,6 % via l'optimisation des campagnes APAC/EMEA, le ciblage stratégique d'audience et l'allocation budgétaire sur Meta/Google Ads" data-en="Reduced bounce rate by 52.6% through APAC/EMEA campaign optimization, strategic audience targeting and budget allocation across Meta/Google Ads">Réduit le taux de rebond de 52,6 % via l'optimisation des campagnes APAC/EMEA, le ciblage stratégique d'audience et l'allocation budgétaire sur Meta/Google Ads</li>
+                        <li data-fr="Stimulé la croissance du trafic organique via le développement d'une stratégie SEO et l'implémentation du suivi des conversions via Google Tag Manager" data-en="Drove organic traffic growth by developing SEO strategy and implementing conversion tracking via Google Tag Manager">Stimulé la croissance du trafic organique via le développement d'une stratégie SEO et l'implémentation du suivi des conversions via Google Tag Manager</li>
+                        <li data-fr="Fourni des recommandations actionnables en construisant des dashboards sur Google Analytics 4, permettant une prise de décision basée sur les KPIs (CPC, ROI, trafic)" data-en="Delivered actionable recommendations by building dashboards in Google Analytics 4, enabling KPI-driven decision-making (CPC, ROI, traffic)">Fourni des recommandations actionnables en construisant des dashboards sur Google Analytics 4, permettant une prise de décision basée sur les KPIs (CPC, ROI, trafic)</li>
                     </ul>
+                    <div class="exp-tags"><span class="exp-tag">GA4</span><span class="exp-tag">Google Tag Manager</span><span class="exp-tag">Meta Ads</span><span class="exp-tag">Google Ads</span><span class="exp-tag">SEO</span><span class="exp-tag">CRO</span><span class="exp-tag">Audience Segmentation</span><span class="exp-tag">Canva</span><span class="exp-tag">Figma</span><span class="exp-tag">CapCut</span><span class="exp-tag">Iconosquare</span></div>
+
                     <a class="exp-link" href="portfolio.html#strategy" target="_blank" rel="noopener">
                         <svg viewBox="0 0 512 512" fill="currentColor"><path d="M184 48H328c4.4 0 8 3.6 8 8V96H176V56c0-4.4 3.6-8 8-8zm-56 8V96H64C28.7 96 0 124.7 0 160V296 416c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V296 160c0-35.3-28.7-64-64-64H384V56c0-30.9-25.1-56-56-56H184c-30.9 0-56 25.1-56 56z"/></svg>
                         <span data-fr="Voir le portfolio" data-en="View portfolio">Voir le portfolio</span>
@@ -622,6 +641,8 @@
                         <li data-fr="Permis l'entrée du produit sur le marché en déployant une stratégie Go-to-Market complète de zéro : persona, concept produit, positionnement, stratégie tarifaire, canaux d'acquisition et programmes d'affiliation" data-en="Enabled the product's market entry by deploying full Go-to-Market strategy from scratch: persona, product concept, positioning, pricing strategy, acquisition channels and affiliate programs">Permis l'entrée du produit sur le marché en déployant une stratégie Go-to-Market complète de zéro : persona, concept produit, positionnement, stratégie tarifaire, canaux d'acquisition et programmes d'affiliation</li>
                         <li data-fr="Produit 3,5h de contenus de formation et organisé des webinaires pour créer et animer une communauté" data-en="Produced 3.5h of training content and organized webinars to build and engage a community">Produit 3,5h de contenus de formation et organisé des webinaires pour créer et animer une communauté</li>
                     </ul>
+                    <div class="exp-tags"><span class="exp-tag">Go-to-Market Strategy</span><span class="exp-tag">Persona</span><span class="exp-tag">Product Concept</span><span class="exp-tag">Pricing Strategy</span><span class="exp-tag">Competitive Analysis</span><span class="exp-tag">Content Production</span><span class="exp-tag">Video Editing</span><span class="exp-tag">Webinars</span></div>
+
                     <a class="exp-link" href="portfolio.html#product" target="_blank" rel="noopener">
                         <svg viewBox="0 0 512 512" fill="currentColor"><path d="M184 48H328c4.4 0 8 3.6 8 8V96H176V56c0-4.4 3.6-8 8-8zm-56 8V96H64C28.7 96 0 124.7 0 160V296 416c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V296 160c0-35.3-28.7-64-64-64H384V56c0-30.9-25.1-56-56-56H184c-30.9 0-56 25.1-56 56z"/></svg>
                         <span data-fr="Voir le portfolio" data-en="View portfolio">Voir le portfolio</span>
@@ -638,17 +659,21 @@
                         <li data-fr="Amélioré le temps de réponse inter-équipes en résolvant 20+ tickets techniques et opérationnels par semaine, assurant la continuité des workflows" data-en="Improved inter-team response time by resolving 20+ technical and operational tickets per week, ensuring workflow continuity">Amélioré le temps de réponse inter-équipes en résolvant 20+ tickets techniques et opérationnels par semaine, assurant la continuité des workflows</li>
                         <li data-fr="Gestion des données via PLM/Oracle et reporting sous Excel" data-en="Data management via PLM/Oracle and reporting under Excel">Gestion des données via PLM/Oracle et reporting sous Excel</li>
                     </ul>
+                    <div class="exp-tags"><span class="exp-tag">PLM / Oracle</span><span class="exp-tag">Excel</span><span class="exp-tag">Cross-regional Coordination</span><span class="exp-tag">APAC / EMEA / Americas</span><span class="exp-tag">Documentation Management</span><span class="exp-tag">Process Optimization</span></div>
+
                 </div>
             </div>
             <div class="exp-card">
                 <div class="exp-meta"><div class="dates">08/2018 – 12/2020</div><div class="location">Taipei</div></div>
                 <div class="exp-body">
                     <h3 data-fr="Chargée de Marques & Développement Commercial" data-en="Trademark and Business Development Specialist">Chargée de Marques & Développement Commercial</h3>
-                    <div class="company"><img class="company-logo" src="best_ip_logo.jpg" alt="BEST International IP"><span>BEST International IP · <span data-fr="Cabinet juridique" data-en="Law firm">Cabinet juridique</span></span></div>
+                    <div class="company"><img class="company-logo" src="best%20ip_logo.jpg" alt="BEST International IP"><span>BEST International IP · <span data-fr="Cabinet juridique" data-en="Law firm">Cabinet juridique</span></span></div>
                     <ul>
                         <li data-fr="Maintenu un taux de fidélisation élevé en assurant la gestion de 200+ comptes B2B : suivi proactif, identification de nouvelles opportunités commerciales et développement du portefeuille" data-en="Drove high client retention and portfolio growth by managing 200+ B2B accounts with proactive follow-up and identifying new commercial opportunities">Maintenu un taux de fidélisation élevé en assurant la gestion de 200+ comptes B2B : suivi proactif, identification de nouvelles opportunités commerciales et développement du portefeuille</li>
                         <li data-fr="Orienté les décisions clients grâce à du conseil stratégique et des analyses sur mesure" data-en="Guided client decisions through strategic advisory and tailored analysis">Orienté les décisions clients grâce à du conseil stratégique et des analyses sur mesure</li>
                     </ul>
+                    <div class="exp-tags"><span class="exp-tag">B2B Account Management</span><span class="exp-tag">Client Retention</span><span class="exp-tag">Strategic Advisory</span><span class="exp-tag">Business Development</span><span class="exp-tag">Trademark Law</span><span class="exp-tag">International Negotiation</span></div>
+
                 </div>
             </div>
         </div>
@@ -855,7 +880,7 @@
                 LinkedIn
             </a>
             <a class="link-card" href="https://123456789fihwihfushgushigs.my.canva.site/yhchiuportfolio" target="_blank" rel="noopener">
-                <svg viewBox="0 0 512 512" fill="currentColor"><path d="M184 48H328c4.4 0 8 3.6 8 8V96H176V56c0-4.4 3.6-8 8-8zm-56 8V96H64C28.7 96 0 124.7 0 160V296 416c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V296 160c0-35.3-28.7-64-64-64H384V56c0-30.9-25.1-56-56-56H184c-30.9 0-56 25.1-56 56z"/></svg>
+                <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="14" height="14" rx="2"/><path d="M3 8h14M8 3v14"/></svg>
                 Portfolio FR
             </a>
             <a class="link-card" href="https://yhchiuportfolio.wordpress.com" target="_blank" rel="noopener">
