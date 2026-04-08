@@ -25,12 +25,12 @@
         .lang-toggle{display:flex;background:var(--white);border-radius:22px;overflow:hidden;border:1px solid var(--border);box-shadow:var(--shadow-sm)}
         .lang-btn{padding:.35rem .8rem;font-size:.7rem;font-weight:600;font-family:'DM Sans',sans-serif;border:none;cursor:pointer;background:transparent;color:var(--muted-light);transition:all .25s;letter-spacing:.06em}
         .lang-btn.active{background:var(--accent);color:white;border-radius:20px;box-shadow:0 2px 8px rgba(45,90,71,.25)}
-        .page-hero{margin-top:56px;padding:3.5rem 1.5rem 2rem;max-width:1100px;margin-left:auto;margin-right:auto}
+        .page-hero{margin-top:56px;padding:3.5rem 1.5rem 2rem;max-width:1280px;margin-left:auto;margin-right:auto}
         .page-hero h1{font-family:'Cormorant Garamond',serif;font-size:2.4rem;font-weight:700;letter-spacing:-.02em;margin-bottom:.4rem}
         .page-hero .subtitle{font-size:.95rem;color:var(--muted);max-width:700px;line-height:1.7}
         .back-link{display:inline-flex;align-items:center;gap:.4rem;font-size:.82rem;color:var(--accent);text-decoration:none;font-weight:500;margin-bottom:1.2rem;transition:gap .2s}
         .back-link:hover{gap:.6rem}.back-link svg{width:16px;height:16px}
-        .main{max-width:1100px;margin:0 auto;padding:0 1.5rem 5rem;overflow-x:hidden}
+        .main{max-width:1280px;margin:0 auto;padding:0 1.5rem 5rem;overflow-x:hidden}
         .project-section{margin-bottom:1.5rem;scroll-margin-top:80px;padding-bottom:3rem}
         .section-divider{height:3px;border:none;border-radius:2px;margin:0 0 2.5rem;background:linear-gradient(90deg,var(--accent),var(--gold))}
         .project-header{margin-bottom:2rem}
@@ -42,6 +42,8 @@
         .tag-row{display:flex;flex-wrap:wrap;gap:.4rem;margin-bottom:1.5rem}
         .tag{font-size:.73rem;padding:.3rem .7rem;background:var(--accent-light);border-radius:20px;color:var(--accent);font-weight:600;border:1px solid rgba(45,90,71,.15)}
         .content-card{background:var(--white);border:1px solid var(--border-light);border-radius:var(--radius);padding:2rem 2.2rem;box-shadow:var(--shadow-sm);margin-bottom:1.2rem}
+        .content-card.has-img{display:grid;grid-template-columns:1fr 320px;gap:1.8rem;align-items:start}
+        .content-card .card-body{min-width:0}
         .content-card h4{font-size:.9rem;font-weight:700;margin-bottom:.6rem;color:var(--dark);display:flex;align-items:center;gap:.5rem}
         .content-card h4 .icon{width:22px;height:22px;background:var(--gold-light);border-radius:5px;display:flex;align-items:center;justify-content:center;font-size:.7rem;flex-shrink:0}
         .content-card p,.content-card li{font-size:.85rem;color:var(--muted);line-height:1.7}
@@ -49,6 +51,13 @@
         .content-card ul li{position:relative;padding-left:1.1rem;margin-bottom:.4rem}
         .content-card ul li::before{content:'';position:absolute;left:0;top:.6em;width:4px;height:4px;background:var(--gold);border-radius:50%}
         .kw{color:var(--dark);font-weight:600}
+        .side-img{align-self:center;display:flex;flex-direction:column;gap:.6rem}
+        .side-img .showcase-item{background:var(--cream);border:1px solid var(--border-light);border-radius:8px;overflow:hidden;box-shadow:var(--shadow-sm)}
+        .side-img .showcase-item img{width:100%;height:160px;object-fit:cover;display:block;border-bottom:1px solid var(--border-light)}
+        .side-img .showcase-item .caption{padding:.5rem .7rem;font-size:.7rem;color:var(--muted);line-height:1.45;font-weight:500}
+        .strategy-col .content-card.has-img{grid-template-columns:1fr 200px;gap:1.2rem}
+        .strategy-col .side-img .showcase-item img{height:140px}
+        .strategy-col .side-img .showcase-item .caption{font-size:.65rem;padding:.4rem .6rem}
         .showcase{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-bottom:1.5rem}
         .showcase-item{background:var(--white);border:1px solid var(--border-light);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow-sm);transition:transform .3s,box-shadow .3s}
         .showcase-item:hover{transform:translateY(-3px);box-shadow:var(--shadow-md)}
@@ -126,6 +135,8 @@
             .strategy-grid{grid-template-columns:1fr;gap:1rem}
             .project-intro{margin-left:0;font-size:.85rem}
             .strategy-col .showcase-item img{height:100px}
+            .content-card.has-img,.strategy-col .content-card.has-img{grid-template-columns:1fr;gap:1rem}
+            .side-img .showcase-item img{height:140px}
         }
     </style>
 </head>
@@ -183,7 +194,8 @@
                     <h4><span class="icon">🎯</span> <span data-fr="La mission" data-en="The Mission">La mission</span></h4>
                     <p data-fr="Développement et gestion de campagnes marketing digital et de stratégie de contenu, avec optimisation des performances par une approche data-driven pour une plateforme de finance durable." data-en="Developing and managing <span class=kw>digital marketing campaigns</span> and <span class=kw>content strategy</span> with performance optimization through <span class=kw>data-driven approaches</span> for a sustainable finance platform.">Développement et gestion de campagnes marketing digital et de stratégie de contenu, avec optimisation des performances par une approche data-driven pour une plateforme de finance durable.</p>
                 </div>
-                <div class="content-card">
+                <div class="content-card has-img">
+                    <div class="card-body">
                     <h4><span class="icon">⚙️</span> <span data-fr="Stratégie de contenu & Analytics" data-en="Content Strategy & Analytics">Stratégie de contenu & Analytics</span></h4>
                     <ul>
                         <li data-fr="Implémentation de GA4 et Google Tag Manager pour un suivi avancé des performances" data-en="Implemented <span class=kw>GA4</span> and <span class=kw>Google Tag Manager</span> for advanced performance tracking">Implémentation de GA4 et Google Tag Manager pour un suivi avancé des performances</li>
@@ -191,15 +203,16 @@
                         <li data-fr="Optimisation du contenu multi-plateformes via l'analyse continue des performances" data-en="Optimized <span class=kw>multi-platform content</span> through continuous performance analysis">Optimisation du contenu multi-plateformes via l'analyse continue des performances</li>
                         <li data-fr="Gestion de la diffusion sur LinkedIn, Facebook, Twitter, Instagram, TikTok et Threads" data-en="Managed distribution across LinkedIn, Facebook, Twitter, Instagram, TikTok and Threads">Gestion de la diffusion sur LinkedIn, Facebook, Twitter, Instagram, TikTok et Threads</li>
                     </ul>
-                
-                    <div class="inline-img cols-1">
+                    </div>
+                    <div class="side-img">
                     <div class="showcase-item">
                         <img src="Content%20Creation_unifox.png" alt="Content Creation" loading="lazy">
                         <div class="caption">Social Media Content Creation (hook, line, value, CTA)</div>
                     </div>
                 </div>
                 </div>
-                <div class="content-card">
+                <div class="content-card has-img">
+                    <div class="card-body">
                     <h4><span class="icon">🎨</span> <span data-fr="Création de contenu & Outils" data-en="Content Creation & Tools">Création de contenu & Outils</span></h4>
                     <ul>
                         <li data-fr="Conception de visuels adaptés à chaque plateforme avec Canva, Figma et CapCut" data-en="Designed platform-specific visuals using Canva, Figma and CapCut">Conception de visuels adaptés à chaque plateforme avec Canva, Figma et CapCut</li>
@@ -207,15 +220,16 @@
                         <li data-fr="Développement de contenus optimisés SEO pour renforcer la visibilité organique" data-en="Developed <span class=kw>SEO-optimized</span> content for enhanced organic visibility">Développement de contenus optimisés SEO pour renforcer la visibilité organique</li>
                         <li data-fr="Mise en place de stratégies d'optimisation du taux de conversion" data-en="Implemented <span class=kw>conversion rate optimization</span> strategies">Mise en place de stratégies d'optimisation du taux de conversion</li>
                     </ul>
-                
-                    <div class="inline-img cols-1">
+                    </div>
+                    <div class="side-img">
                     <div class="showcase-item">
                         <img src="Content%20Planning_Unifox.png" alt="Content Planning" loading="lazy">
                         <div class="caption">Content Planning & Scheduling (Iconosquare)</div>
                     </div>
                 </div>
                 </div>
-                <div class="content-card">
+                <div class="content-card has-img">
+                    <div class="card-body">
                     <h4><span class="icon">📊</span> <span data-fr="Suivi des performances" data-en="Performance Tracking">Suivi des performances</span></h4>
                     <ul>
                         <li data-fr="Recherche UX pour identifier les axes d'amélioration du contenu" data-en="Conducted UX research to identify content improvement opportunities">Recherche UX pour identifier les axes d'amélioration du contenu</li>
@@ -223,8 +237,8 @@
                         <li data-fr="Analyse des sources de trafic et performances des campagnes multi-canaux" data-en="Analyzed traffic sources and multi-channel campaign performance">Analyse des sources de trafic et performances des campagnes multi-canaux</li>
                         <li data-fr="Optimisation des CTAs et entonnoirs de conversion basée sur les données" data-en="Optimized CTAs and conversion funnels based on data insights">Optimisation des CTAs et entonnoirs de conversion basée sur les données</li>
                     </ul>
-                
-                    <div class="inline-img cols-1">
+                    </div>
+                    <div class="side-img">
                     <div class="showcase-item">
                         <img src="Marketing%20Strategy_unifox.png" alt="Marketing Strategy" loading="lazy">
                         <div class="caption">Marketing Strategy & Analysis (GA4, Google Ads, Meta, PostHog)</div>
@@ -250,22 +264,24 @@
                     <h4><span class="icon">🎯</span> <span data-fr="La mission" data-en="The Mission">La mission</span></h4>
                     <p data-fr="Définition d'une <span class=kw>stratégie digitale bilingue (FR/EN)</span> pour positionner un établissement hôtelier de charme sur le marché américain CSP+, avec analyse de cible, recommandations éditoriales et maquette de présence Instagram." data-en="Defined a <span class=kw>bilingual digital strategy (FR/EN)</span> to position a boutique hotel on the US premium market, with target analysis, editorial recommendations and Instagram mockup.">Définition d'une stratégie digitale bilingue (FR/EN) pour positionner un établissement hôtelier de charme sur le marché américain CSP+, avec analyse de cible, recommandations éditoriales et maquette de présence Instagram.</p>
                 </div>
-                <div class="content-card">
+                <div class="content-card has-img">
+                    <div class="card-body">
                     <h4><span class="icon">🔍</span> <span data-fr="Analyse de marché & Définition de cible" data-en="Market Analysis & Target Definition">Analyse de marché & Définition de cible</span></h4>
                     <ul>
                         <li data-fr="Analyse du segment voyageurs américains haut de gamme : durée de séjour, attentes œnotouristiques, comportements d'achat influencés par les avis et réseaux sociaux" data-en="Analyzed the <span class=kw>US premium traveler segment</span>: stay duration, wine tourism expectations, purchase behaviors influenced by reviews and social media">Analyse du segment voyageurs américains haut de gamme : durée de séjour, attentes œnotouristiques, comportements d'achat influencés par les avis et réseaux sociaux</li>
                         <li data-fr="Définition de personas autour des préférences gastronomiques, culturelles et expérientielles" data-en="Defined <span class=kw>personas</span> around gastronomic, cultural and experiential preferences">Définition de personas autour des préférences gastronomiques, culturelles et expérientielles</li>
                         <li data-fr="Benchmark de la présence digitale existante et identification des angles morts sur l'audience internationale" data-en="Benchmarked existing digital presence and identified blind spots on the international audience">Benchmark de la présence digitale existante et identification des angles morts sur l'audience internationale</li>
                     </ul>
-                
-                    <div class="inline-img cols-1">
+                    </div>
+                    <div class="side-img">
                     <div class="showcase-item">
                         <img src="hotel_1.png" alt="Public cible" loading="lazy">
                         <div class="caption" data-fr="Analyse du public cible et définition des personas" data-en="Target audience analysis and persona definition">Analyse du public cible et définition des personas</div>
                     </div>
                 </div>
                 </div>
-                <div class="content-card">
+                <div class="content-card has-img">
+                    <div class="card-body">
                     <h4><span class="icon">🎨</span> <span data-fr="Stratégie de marque & Identité visuelle" data-en="Brand Strategy & Visual Identity">Stratégie de marque & Identité visuelle</span></h4>
                     <ul>
                         <li data-fr="Définition d'une palette de couleurs alignée avec l'identité existante de la marque" data-en="Defined a color palette aligned with the existing brand identity">Définition d'une palette de couleurs alignée avec l'identité existante de la marque</li>
@@ -273,23 +289,24 @@
                         <li data-fr="Création de séries thématiques : gastronomie, témoignages voyageurs, offres saisonnières" data-en="Created thematic series: gastronomy, traveler testimonials, seasonal offers">Création de séries thématiques : gastronomie, témoignages voyageurs, offres saisonnières</li>
                         <li data-fr="Développement d'une charte hashtags incluant un hashtag de marque pour le contenu généré par les utilisateurs" data-en="Developed a hashtag strategy including a branded hashtag for user-generated content">Développement d'une charte hashtags incluant un hashtag de marque pour le contenu généré par les utilisateurs</li>
                     </ul>
-                
-                    <div class="inline-img cols-1">
+                    </div>
+                    <div class="side-img">
                     <div class="showcase-item">
                         <img src="hotel_2.png" alt="Instagram mockup" loading="lazy">
                         <div class="caption" data-fr="Maquette Instagram & identité visuelle" data-en="Instagram mockup & visual identity">Maquette Instagram & identité visuelle</div>
                     </div>
                 </div>
                 </div>
-                <div class="content-card">
+                <div class="content-card has-img">
+                    <div class="card-body">
                     <h4><span class="icon">✍️</span> <span data-fr="Stratégie éditoriale bilingue" data-en="Bilingual Editorial Strategy">Stratégie éditoriale bilingue</span></h4>
                     <ul>
                         <li data-fr="Recommandations de publications bilingues FR/EN adaptées au double public local et international" data-en="<span class=kw>Bilingual FR/EN publication</span> recommendations adapted to local and international audiences">Recommandations de publications bilingues FR/EN adaptées au double public local et international</li>
                         <li data-fr="Conception d'exemples de Reels orientés marché américain : sous-titres anglais, narration émotionnelle, mise en avant du service anglophone et des visites privées" data-en="Designed Reels examples for the US market: English subtitles, emotional storytelling, English-speaking service and private tours">Conception d'exemples de Reels orientés marché américain : sous-titres anglais, narration émotionnelle, mise en avant du service anglophone et des visites privées</li>
                         <li data-fr="Storytelling axé sur l'expérience authentique de la campagne française" data-en="Storytelling focused on the authentic French countryside experience">Storytelling axé sur l'expérience authentique de la campagne française</li>
                     </ul>
-                
-                    <div class="inline-img cols-1">
+                    </div>
+                    <div class="side-img">
                     <div class="showcase-item">
                         <img src="hotel_3.png" alt="Content creation" loading="lazy">
                         <div class="caption" data-fr="Création de contenu bilingue FR/EN" data-en="Bilingual FR/EN content creation">Création de contenu bilingue FR/EN</div>
@@ -331,15 +348,16 @@
                 <li data-fr="Construction d'un workflow de production scalable pour les futures expansions" data-en="Built a scalable production workflow for future content expansion">Construction d'un workflow de production scalable pour les futures expansions</li>
             </ul>
         </div>
-        <div class="content-card">
+        <div class="content-card has-img">
+                    <div class="card-body">
             <h4><span class="icon">🔍</span> <span data-fr="Étude de marché & Analyse concurrentielle" data-en="Market Research & Competitive Analysis">Étude de marché & Analyse concurrentielle</span></h4>
             <ul>
                 <li data-fr="Analyse des concurrents : positionnement, offre produit, structure tarifaire et stratégie de contenu" data-en="<span class=kw>Competitor analysis</span>: positioning, product offering, <span class=kw>pricing structure</span> and content strategy">Analyse des concurrents : positionnement, offre produit, structure tarifaire et stratégie de contenu</li>
                 <li data-fr="Définition des personas cibles et stratégies de positionnement basées sur les insights marché" data-en="Defined target personas and positioning strategies based on market insights">Définition des personas cibles et stratégies de positionnement basées sur les insights marché</li>
                 <li data-fr="Création d'un concept board alignant les fonctionnalités produit avec les besoins de l'audience" data-en="Developed a concept board aligning product features with audience needs">Création d'un concept board alignant les fonctionnalités produit avec les besoins de l'audience</li>
             </ul>
-        
-                    <div class="inline-img cols-2">
+                    </div>
+                    <div class="side-img">
                 <div class="showcase-item">
                     <img src="Product%20Strategy_paris.png" alt="Product Strategy" loading="lazy">
                     <div class="caption" data-fr="Stratégie produit : Persona, Concept Board, Audience cible" data-en="Product Strategy: Persona, Concept Board, Target Audience">Stratégie produit : Persona, Concept Board, Audience cible</div>
@@ -350,7 +368,8 @@
                 </div>
             </div>
                 </div>
-        <div class="content-card">
+        <div class="content-card has-img">
+                    <div class="card-body">
             <h4><span class="icon">📝</span> <span data-fr="Production de contenu & Design" data-en="Content Production & Design">Production de contenu & Design</span></h4>
             <ul>
                 <li data-fr="Production de 3,5h de vidéos de formation avec montage professionnel" data-en="Produced 3.5 hours of training videos with professional editing">Production de 3,5h de vidéos de formation avec montage professionnel</li>
@@ -358,8 +377,8 @@
                 <li data-fr="Création de Reels et contenus Instagram pour la promotion produit" data-en="Created Reels and Instagram content for product promotion">Création de Reels et contenus Instagram pour la promotion produit</li>
                 <li data-fr="Organisation de webinaires pour engager et convertir l'audience cible" data-en="Organized webinars to engage and convert the target audience">Organisation de webinaires pour engager et convertir l'audience cible</li>
             </ul>
-        
-                    <div class="inline-img cols-2">
+                    </div>
+                    <div class="side-img">
                 <div class="showcase-item">
                     <img src="Courses%20video%20editing_Paris.webp" alt="Courses video editing" loading="lazy">
                     <div class="caption" data-fr="Montage vidéo des sessions de formation (26 sessions, 3,5h de contenu)" data-en="Training course video editing (26 sessions, 3.5h of content)">Montage vidéo des sessions de formation (26 sessions, 3,5h de contenu)</div>
@@ -423,15 +442,16 @@
                 <li data-fr="Préparation des contrats bénévoles (engagements de service étudiant), attestations et explication des procédures" data-en="Prepared volunteer contracts (student service engagement agreements), attestations and procedure walkthroughs">Préparation des contrats bénévoles (engagements de service étudiant), attestations et explication des procédures</li>
             </ul>
         </div>
-        <div class="content-card">
+        <div class="content-card has-img">
+                    <div class="card-body">
             <h4><span class="icon">📦</span> <span data-fr="Coordination événementielle & Logistique" data-en="Event & Logistics Coordination">Coordination événementielle & Logistique</span></h4>
             <ul>
                 <li data-fr="Organisation de <span class=kw>30+ événements</span> par an : prospection, ateliers cuisine, reconditionnement, stands sur forums" data-en="Organized <span class=kw>30+ events per year</span>: prospection, cooking workshops, food reconditioning, forum stands">Organisation de 30+ événements par an : prospection, ateliers cuisine, reconditionnement, stands sur forums</li>
                 <li data-fr="Coordination de 2 distributions hebdomadaires pour environ 500 bénéficiaires par session" data-en="Coordinated 2 weekly distributions serving approximately 500 beneficiaries per session">Coordination de 2 distributions hebdomadaires pour environ 500 bénéficiaires par session</li>
                 <li data-fr="Gestion des relations avec les organisations partenaires" data-en="Managed relationships with partner organizations">Gestion des relations avec les organisations partenaires</li>
             </ul>
-        
-                    <div class="inline-img cols-2">
+                    </div>
+                    <div class="side-img">
                 <div class="showcase-item">
                     <img src="Linkee_Distrib.jpeg" alt="Distribution" loading="lazy">
                     <div class="caption" data-fr="Distribution hebdomadaire : coordination de 2 sessions/semaine pour ~500 bénéficiaires, onboarding des nouveaux bénévoles sur le terrain" data-en="Weekly distribution: coordinating 2 sessions/week for ~500 beneficiaries, on-site onboarding of new volunteers">Distribution hebdomadaire : coordination de 2 sessions/semaine pour ~500 bénéficiaires, onboarding des nouveaux bénévoles sur le terrain</div>
@@ -440,14 +460,12 @@
                     <img src="Linkee_Stand.jpeg" alt="Stand forum" loading="lazy">
                     <div class="caption" data-fr="Stand sur forum : présentation de la mission, recrutement de bénévoles, sensibilisation des étudiants éligibles" data-en="Forum stand: presenting the mission, recruiting volunteers, raising awareness among eligible students">Stand sur forum : présentation de la mission, recrutement de bénévoles, sensibilisation des étudiants éligibles</div>
                 </div>
-            </div>
-                </div>
-            <div class="inline-img cols-1">
                 <div class="showcase-item">
                     <img src="reconditionment.JPG" alt="Reconditionnement" loading="lazy">
                     <div class="caption" data-fr="Reconditionnement : répartition des dons en portions individuelles, recrutement et coordination des bénévoles, collaboration logistique avec les partenaires" data-en="Food reconditioning: dividing bulk donations into individual portions, volunteer recruitment and coordination, logistics collaboration with partners">Reconditionnement : répartition des dons en portions individuelles, recrutement et coordination des bénévoles, collaboration logistique avec les partenaires</div>
                 </div>
             </div>
+                </div>
         <div class="content-card">
             <h4><span class="icon">📧</span> <span data-fr="Communication & Reporting" data-en="Communication & Reporting">Communication & Reporting</span></h4>
             <ul>
