@@ -58,6 +58,13 @@
         .strategy-col .content-card.has-img{grid-template-columns:1fr 200px;gap:1.2rem}
         .strategy-col .side-img .showcase-item img{height:140px}
         .strategy-col .side-img .showcase-item .caption{font-size:.65rem;padding:.4rem .6rem}
+        .imgs-below{margin-top:1rem;display:grid;gap:.8rem}
+        .imgs-below.cols-2{grid-template-columns:1fr 1fr}
+        .imgs-below.cols-3{grid-template-columns:repeat(3,1fr)}
+        .imgs-below.cols-4{grid-template-columns:repeat(4,1fr)}
+        .imgs-below .showcase-item{background:var(--cream);border:1px solid var(--border-light);border-radius:8px;overflow:hidden;box-shadow:var(--shadow-sm)}
+        .imgs-below .showcase-item img{width:100%;height:170px;object-fit:cover;display:block;border-bottom:1px solid var(--border-light)}
+        .imgs-below .showcase-item .caption{padding:.55rem .75rem;font-size:.72rem;color:var(--muted);line-height:1.5;font-weight:500}
         .showcase{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-bottom:1.5rem}
         .showcase-item{background:var(--white);border:1px solid var(--border-light);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow-sm);transition:transform .3s,box-shadow .3s}
         .showcase-item:hover{transform:translateY(-3px);box-shadow:var(--shadow-md)}
@@ -137,6 +144,8 @@
             .strategy-col .showcase-item img{height:100px}
             .content-card.has-img,.strategy-col .content-card.has-img{grid-template-columns:1fr;gap:1rem}
             .side-img .showcase-item img{height:140px}
+            .imgs-below.cols-2,.imgs-below.cols-3,.imgs-below.cols-4{grid-template-columns:1fr 1fr}
+            .imgs-below .showcase-item img{height:120px}
         }
     </style>
 </head>
@@ -348,16 +357,15 @@
                 <li data-fr="Construction d'un workflow de production scalable pour les futures expansions" data-en="Built a scalable production workflow for future content expansion">Construction d'un workflow de production scalable pour les futures expansions</li>
             </ul>
         </div>
-        <div class="content-card has-img">
-                    <div class="card-body">
+        <div class="content-card">
             <h4><span class="icon">🔍</span> <span data-fr="Étude de marché & Analyse concurrentielle" data-en="Market Research & Competitive Analysis">Étude de marché & Analyse concurrentielle</span></h4>
             <ul>
                 <li data-fr="Analyse des concurrents : positionnement, offre produit, structure tarifaire et stratégie de contenu" data-en="<span class=kw>Competitor analysis</span>: positioning, product offering, <span class=kw>pricing structure</span> and content strategy">Analyse des concurrents : positionnement, offre produit, structure tarifaire et stratégie de contenu</li>
                 <li data-fr="Définition des personas cibles et stratégies de positionnement basées sur les insights marché" data-en="Defined target personas and positioning strategies based on market insights">Définition des personas cibles et stratégies de positionnement basées sur les insights marché</li>
                 <li data-fr="Création d'un concept board alignant les fonctionnalités produit avec les besoins de l'audience" data-en="Developed a concept board aligning product features with audience needs">Création d'un concept board alignant les fonctionnalités produit avec les besoins de l'audience</li>
             </ul>
-                    </div>
-                    <div class="side-img">
+                    
+                    <div class="imgs-below cols-2">
                 <div class="showcase-item">
                     <img src="Product%20Strategy_paris.png" alt="Product Strategy" loading="lazy">
                     <div class="caption" data-fr="Stratégie produit : Persona, Concept Board, Audience cible" data-en="Product Strategy: Persona, Concept Board, Target Audience">Stratégie produit : Persona, Concept Board, Audience cible</div>
@@ -368,8 +376,7 @@
                 </div>
             </div>
                 </div>
-        <div class="content-card has-img">
-                    <div class="card-body">
+        <div class="content-card">
             <h4><span class="icon">📝</span> <span data-fr="Production de contenu & Design" data-en="Content Production & Design">Production de contenu & Design</span></h4>
             <ul>
                 <li data-fr="Production de 3,5h de vidéos de formation avec montage professionnel" data-en="Produced 3.5 hours of training videos with professional editing">Production de 3,5h de vidéos de formation avec montage professionnel</li>
@@ -377,8 +384,8 @@
                 <li data-fr="Création de Reels et contenus Instagram pour la promotion produit" data-en="Created Reels and Instagram content for product promotion">Création de Reels et contenus Instagram pour la promotion produit</li>
                 <li data-fr="Organisation de webinaires pour engager et convertir l'audience cible" data-en="Organized webinars to engage and convert the target audience">Organisation de webinaires pour engager et convertir l'audience cible</li>
             </ul>
-                    </div>
-                    <div class="side-img">
+                    
+                    <div class="imgs-below cols-2">
                 <div class="showcase-item">
                     <img src="Courses%20video%20editing_Paris.webp" alt="Courses video editing" loading="lazy">
                     <div class="caption" data-fr="Montage vidéo des sessions de formation (26 sessions, 3,5h de contenu)" data-en="Training course video editing (26 sessions, 3.5h of content)">Montage vidéo des sessions de formation (26 sessions, 3,5h de contenu)</div>
@@ -442,16 +449,15 @@
                 <li data-fr="Préparation des contrats bénévoles (engagements de service étudiant), attestations et explication des procédures" data-en="Prepared volunteer contracts (student service engagement agreements), attestations and procedure walkthroughs">Préparation des contrats bénévoles (engagements de service étudiant), attestations et explication des procédures</li>
             </ul>
         </div>
-        <div class="content-card has-img">
-                    <div class="card-body">
+        <div class="content-card">
             <h4><span class="icon">📦</span> <span data-fr="Coordination événementielle & Logistique" data-en="Event & Logistics Coordination">Coordination événementielle & Logistique</span></h4>
             <ul>
                 <li data-fr="Organisation de <span class=kw>30+ événements</span> par an : prospection, ateliers cuisine, reconditionnement, stands sur forums" data-en="Organized <span class=kw>30+ events per year</span>: prospection, cooking workshops, food reconditioning, forum stands">Organisation de 30+ événements par an : prospection, ateliers cuisine, reconditionnement, stands sur forums</li>
                 <li data-fr="Coordination de 2 distributions hebdomadaires pour environ 500 bénéficiaires par session" data-en="Coordinated 2 weekly distributions serving approximately 500 beneficiaries per session">Coordination de 2 distributions hebdomadaires pour environ 500 bénéficiaires par session</li>
                 <li data-fr="Gestion des relations avec les organisations partenaires" data-en="Managed relationships with partner organizations">Gestion des relations avec les organisations partenaires</li>
             </ul>
-                    </div>
-                    <div class="side-img">
+                    
+                    <div class="imgs-below cols-3">
                 <div class="showcase-item">
                     <img src="Linkee_Distrib.jpeg" alt="Distribution" loading="lazy">
                     <div class="caption" data-fr="Distribution hebdomadaire : coordination de 2 sessions/semaine pour ~500 bénéficiaires, onboarding des nouveaux bénévoles sur le terrain" data-en="Weekly distribution: coordinating 2 sessions/week for ~500 beneficiaries, on-site onboarding of new volunteers">Distribution hebdomadaire : coordination de 2 sessions/semaine pour ~500 bénéficiaires, onboarding des nouveaux bénévoles sur le terrain</div>
