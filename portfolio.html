@@ -25,12 +25,12 @@
         .lang-toggle{display:flex;background:var(--white);border-radius:22px;overflow:hidden;border:1px solid var(--border);box-shadow:var(--shadow-sm)}
         .lang-btn{padding:.35rem .8rem;font-size:.7rem;font-weight:600;font-family:'DM Sans',sans-serif;border:none;cursor:pointer;background:transparent;color:var(--muted-light);transition:all .25s;letter-spacing:.06em}
         .lang-btn.active{background:var(--accent);color:white;border-radius:20px;box-shadow:0 2px 8px rgba(45,90,71,.25)}
-        .page-hero{margin-top:56px;padding:3.5rem 2.5rem 2rem;max-width:1000px;margin-left:auto;margin-right:auto}
+        .page-hero{margin-top:56px;padding:3.5rem 1.5rem 2rem;max-width:1100px;margin-left:auto;margin-right:auto}
         .page-hero h1{font-family:'Cormorant Garamond',serif;font-size:2.4rem;font-weight:700;letter-spacing:-.02em;margin-bottom:.4rem}
         .page-hero .subtitle{font-size:.95rem;color:var(--muted);max-width:700px;line-height:1.7}
         .back-link{display:inline-flex;align-items:center;gap:.4rem;font-size:.82rem;color:var(--accent);text-decoration:none;font-weight:500;margin-bottom:1.2rem;transition:gap .2s}
         .back-link:hover{gap:.6rem}.back-link svg{width:16px;height:16px}
-        .main{max-width:1000px;margin:0 auto;padding:0 2.5rem 5rem;overflow-x:hidden}
+        .main{max-width:1100px;margin:0 auto;padding:0 1.5rem 5rem;overflow-x:hidden}
         .project-section{margin-bottom:1.5rem;scroll-margin-top:80px;padding-bottom:3rem}
         .section-divider{height:3px;border:none;border-radius:2px;margin:0 0 2.5rem;background:linear-gradient(90deg,var(--accent),var(--gold))}
         .project-header{margin-bottom:2rem}
@@ -63,10 +63,9 @@
         .project-intro{font-size:.88rem;color:var(--muted);line-height:1.7;margin:.7rem 0 0 2.6rem;font-style:italic;max-width:720px}
         .strategy-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem}
         .strategy-col{min-width:0}
-        .col-header{background:var(--white);border:1px solid var(--border-light);border-radius:var(--radius);padding:1.1rem 1.4rem;box-shadow:var(--shadow-sm);margin-bottom:.9rem;border-top:3px solid var(--accent)}
-        .col-header h3{font-size:1.1rem;font-weight:700;margin-bottom:.1rem}
-        .col-header .col-sub{font-size:.8rem;color:var(--accent);font-weight:500}
-        .col-header .col-loc{font-size:.73rem;color:var(--muted-light);margin-top:.2rem}
+        .col-header{margin-bottom:.9rem;padding-bottom:.7rem;border-bottom:1px solid var(--border-light)}
+        .col-header h3{font-size:.9rem;font-weight:600;color:var(--accent);margin-bottom:.15rem}
+        .col-header .col-loc{font-size:.75rem;color:var(--muted-light)}
         .strategy-col .content-card{padding:1.3rem 1.4rem;margin-bottom:.8rem}
         .strategy-col .content-card h4{font-size:.83rem;margin-bottom:.45rem}
         .strategy-col .content-card p,.strategy-col .content-card li{font-size:.8rem;line-height:1.65}
@@ -79,6 +78,11 @@
         .strategy-col .impact-box p{font-size:.8rem}
         .strategy-col .ref-section{margin-top:.8rem}
         .strategy-col .ref-section p{font-size:.72rem;color:var(--muted-light);font-style:italic}
+        .inline-img{margin-top:.9rem;margin-bottom:1.2rem;display:grid;gap:.6rem}
+        .inline-img.cols-1{grid-template-columns:1fr}
+        .inline-img.cols-2{grid-template-columns:1fr 1fr}
+        .inline-img .showcase-item img{height:160px}
+        .strategy-col .inline-img .showcase-item img{height:130px}
         @media(min-width:769px){
             .content-card h4{font-size:1rem}
             .content-card p,.content-card li{font-size:.93rem}
@@ -157,8 +161,7 @@
             <!-- ===== UniFox column ===== -->
             <div class="strategy-col">
                 <div class="col-header">
-                    <h3>UniFox</h3>
-                    <div class="col-sub">GreenTech, Web3</div>
+                    <h3>UniFox &middot; GreenTech, Web3</h3>
                     <div class="col-loc">Bordeaux, France &middot; 06 &ndash; 12/2024</div>
                 </div>
                 <div class="tag-row">
@@ -177,6 +180,12 @@
                         <li data-fr="Gestion de la diffusion sur LinkedIn, Facebook, Twitter, Instagram, TikTok et Threads" data-en="Managed distribution across LinkedIn, Facebook, Twitter, Instagram, TikTok and Threads">Gestion de la diffusion sur LinkedIn, Facebook, Twitter, Instagram, TikTok et Threads</li>
                     </ul>
                 </div>
+                <div class="inline-img cols-1">
+                    <div class="showcase-item">
+                        <img src="Content%20Creation_unifox.png" alt="Content Creation" loading="lazy">
+                        <div class="caption">Social Media Content Creation (hook, line, value, CTA)</div>
+                    </div>
+                </div>
                 <div class="content-card">
                     <h4><span class="icon">🎨</span> <span data-fr="Création de contenu & Outils" data-en="Content Creation & Tools">Création de contenu & Outils</span></h4>
                     <ul>
@@ -185,6 +194,12 @@
                         <li data-fr="Développement de contenus optimisés SEO pour renforcer la visibilité organique" data-en="Developed <span class=kw>SEO-optimized</span> content for enhanced organic visibility">Développement de contenus optimisés SEO pour renforcer la visibilité organique</li>
                         <li data-fr="Mise en place de stratégies d'optimisation du taux de conversion" data-en="Implemented <span class=kw>conversion rate optimization</span> strategies">Mise en place de stratégies d'optimisation du taux de conversion</li>
                     </ul>
+                </div>
+                <div class="inline-img cols-1">
+                    <div class="showcase-item">
+                        <img src="Content%20Planning_Unifox.png" alt="Content Planning" loading="lazy">
+                        <div class="caption">Content Planning & Scheduling (Iconosquare)</div>
+                    </div>
                 </div>
                 <div class="content-card">
                     <h4><span class="icon">📊</span> <span data-fr="Suivi des performances" data-en="Performance Tracking">Suivi des performances</span></h4>
@@ -195,15 +210,7 @@
                         <li data-fr="Optimisation des CTAs et entonnoirs de conversion basée sur les données" data-en="Optimized CTAs and conversion funnels based on data insights">Optimisation des CTAs et entonnoirs de conversion basée sur les données</li>
                     </ul>
                 </div>
-                <div class="showcase">
-                    <div class="showcase-item">
-                        <img src="Content%20Creation_unifox.png" alt="Content Creation" loading="lazy">
-                        <div class="caption">Social Media Content Creation (hook, line, value, CTA)</div>
-                    </div>
-                    <div class="showcase-item">
-                        <img src="Content%20Planning_Unifox.png" alt="Content Planning" loading="lazy">
-                        <div class="caption">Content Planning & Scheduling (Iconosquare)</div>
-                    </div>
+                <div class="inline-img cols-1">
                     <div class="showcase-item">
                         <img src="Marketing%20Strategy_unifox.png" alt="Marketing Strategy" loading="lazy">
                         <div class="caption">Marketing Strategy & Analysis (GA4, Google Ads, Meta, PostHog)</div>
@@ -218,8 +225,7 @@
             <!-- ===== Hôtel column ===== -->
             <div class="strategy-col">
                 <div class="col-header">
-                    <h3 data-fr="Hôtel 4★ Restaurant" data-en="4★ Hotel & Restaurant">Hôtel 4★ Restaurant</h3>
-                    <div class="col-sub" data-fr="Hôtellerie de charme" data-en="Boutique hospitality">Hôtellerie de charme</div>
+                    <h3 data-fr="Hôtel 4★ Restaurant · Hôtellerie de charme" data-en="4★ Hotel & Restaurant · Boutique hospitality">Hôtel 4★ Restaurant · Hôtellerie de charme</h3>
                     <div class="col-loc">Dordogne, France &middot; Freelance</div>
                 </div>
                 <div class="tag-row">
@@ -237,6 +243,12 @@
                         <li data-fr="Benchmark de la présence digitale existante et identification des angles morts sur l'audience internationale" data-en="Benchmarked existing digital presence and identified blind spots on the international audience">Benchmark de la présence digitale existante et identification des angles morts sur l'audience internationale</li>
                     </ul>
                 </div>
+                <div class="inline-img cols-1">
+                    <div class="showcase-item">
+                        <img src="hotel_1.png" alt="Public cible" loading="lazy">
+                        <div class="caption" data-fr="Analyse du public cible et définition des personas" data-en="Target audience analysis and persona definition">Analyse du public cible et définition des personas</div>
+                    </div>
+                </div>
                 <div class="content-card">
                     <h4><span class="icon">🎨</span> <span data-fr="Stratégie de marque & Identité visuelle" data-en="Brand Strategy & Visual Identity">Stratégie de marque & Identité visuelle</span></h4>
                     <ul>
@@ -246,6 +258,12 @@
                         <li data-fr="Développement d'une charte hashtags incluant un hashtag de marque pour le contenu généré par les utilisateurs" data-en="Developed a hashtag strategy including a branded hashtag for user-generated content">Développement d'une charte hashtags incluant un hashtag de marque pour le contenu généré par les utilisateurs</li>
                     </ul>
                 </div>
+                <div class="inline-img cols-1">
+                    <div class="showcase-item">
+                        <img src="hotel_2.png" alt="Instagram mockup" loading="lazy">
+                        <div class="caption" data-fr="Maquette Instagram & identité visuelle" data-en="Instagram mockup & visual identity">Maquette Instagram & identité visuelle</div>
+                    </div>
+                </div>
                 <div class="content-card">
                     <h4><span class="icon">✍️</span> <span data-fr="Stratégie éditoriale bilingue" data-en="Bilingual Editorial Strategy">Stratégie éditoriale bilingue</span></h4>
                     <ul>
@@ -254,15 +272,7 @@
                         <li data-fr="Storytelling axé sur l'expérience authentique de la campagne française" data-en="Storytelling focused on the authentic French countryside experience">Storytelling axé sur l'expérience authentique de la campagne française</li>
                     </ul>
                 </div>
-                <div class="showcase">
-                    <div class="showcase-item">
-                        <img src="hotel_1.png" alt="Public cible" loading="lazy">
-                        <div class="caption" data-fr="Analyse du public cible et définition des personas" data-en="Target audience analysis and persona definition">Analyse du public cible et définition des personas</div>
-                    </div>
-                    <div class="showcase-item">
-                        <img src="hotel_2.png" alt="Instagram mockup" loading="lazy">
-                        <div class="caption" data-fr="Maquette Instagram & identité visuelle" data-en="Instagram mockup & visual identity">Maquette Instagram & identité visuelle</div>
-                    </div>
+                <div class="inline-img cols-1">
                     <div class="showcase-item">
                         <img src="hotel_3.png" alt="Content creation" loading="lazy">
                         <div class="caption" data-fr="Création de contenu bilingue FR/EN" data-en="Bilingual FR/EN content creation">Création de contenu bilingue FR/EN</div>
@@ -273,7 +283,7 @@
                     <p data-fr="Proposition stratégique complète livrée sous forme de présentation professionnelle, posant les bases d'un <span class=kw>repositionnement digital</span> orienté clientèle internationale haut de gamme. Cadre activable couvrant l'analyse de marché, l'identité visuelle, la ligne éditoriale et les axes de mesure." data-en="Complete strategic proposal delivered as a professional presentation, laying the foundation for a <span class=kw>digital repositioning</span> targeting premium international clientele. Actionable framework covering market analysis, visual identity, editorial line and measurement axes.">Proposition stratégique complète livrée sous forme de présentation professionnelle, posant les bases d'un repositionnement digital orienté clientèle internationale haut de gamme. Cadre activable couvrant l'analyse de marché, l'identité visuelle, la ligne éditoriale et les axes de mesure.</p>
                 </div>
                 <div class="ref-section">
-                    <p data-fr="" data-en=""></p>
+                    <p data-fr="Document complet et nom du client disponibles sur demande." data-en="Full document and client name available on request.">Document complet et nom du client disponibles sur demande.</p>
                 </div>
             </div>
 
@@ -314,6 +324,16 @@
                 <li data-fr="Création d'un concept board alignant les fonctionnalités produit avec les besoins de l'audience" data-en="Developed a concept board aligning product features with audience needs">Création d'un concept board alignant les fonctionnalités produit avec les besoins de l'audience</li>
             </ul>
         </div>
+            <div class="inline-img cols-2">
+                <div class="showcase-item">
+                    <img src="Product%20Strategy_paris.png" alt="Product Strategy" loading="lazy">
+                    <div class="caption" data-fr="Stratégie produit : Persona, Concept Board, Audience cible" data-en="Product Strategy: Persona, Concept Board, Target Audience">Stratégie produit : Persona, Concept Board, Audience cible</div>
+                </div>
+                <div class="showcase-item">
+                    <img src="Competitive%20Analysis_paris.png" alt="Competitive Analysis" loading="lazy">
+                    <div class="caption" data-fr="Analyse concurrentielle : positionnement, offre produit, structure tarifaire et benchmarking" data-en="Competitive Analysis: positioning, product offering, pricing structure and benchmarking">Analyse concurrentielle : positionnement, offre produit, structure tarifaire et benchmarking</div>
+                </div>
+            </div>
         <div class="content-card">
             <h4><span class="icon">📝</span> <span data-fr="Production de contenu & Design" data-en="Content Production & Design">Production de contenu & Design</span></h4>
             <ul>
@@ -323,6 +343,16 @@
                 <li data-fr="Organisation de webinaires pour engager et convertir l'audience cible" data-en="Organized webinars to engage and convert the target audience">Organisation de webinaires pour engager et convertir l'audience cible</li>
             </ul>
         </div>
+            <div class="inline-img cols-2">
+                <div class="showcase-item">
+                    <img src="Courses%20video%20editing_Paris.webp" alt="Courses video editing" loading="lazy">
+                    <div class="caption" data-fr="Montage vidéo des sessions de formation (26 sessions, 3,5h de contenu)" data-en="Training course video editing (26 sessions, 3.5h of content)">Montage vidéo des sessions de formation (26 sessions, 3,5h de contenu)</div>
+                </div>
+                <div class="showcase-item">
+                    <img src="Banner.jpg" alt="Banner design" loading="lazy">
+                    <div class="caption" data-fr="Design de bannières, landing page, Reels et contenus promotionnels Instagram" data-en="Banner design, landing page, Reels and Instagram promotional content">Design de bannières, landing page, Reels and Instagram promotional content</div>
+                </div>
+            </div>
         <div class="content-card">
             <h4><span class="icon">💰</span> <span data-fr="Stratégie tarifaire & Go-to-Market" data-en="Pricing Strategy & Go-to-Market">Stratégie tarifaire & Go-to-Market</span></h4>
             <ul>
@@ -330,24 +360,6 @@
                 <li data-fr="Déploiement de la stratégie Go-to-Market : canaux d'acquisition et programmes d'affiliation" data-en="Deployed <span class=kw>Go-to-Market strategy</span>: acquisition channels and affiliate programs">Déploiement de la stratégie Go-to-Market : canaux d'acquisition et programmes d'affiliation</li>
                 <li data-fr="Exécution de campagnes marketing ciblées pour accélérer l'adoption" data-en="Executed targeted marketing campaigns to drive adoption and revenue growth">Exécution de campagnes marketing ciblées pour accélérer l'adoption</li>
             </ul>
-        </div>
-        <div class="showcase cols-4">
-            <div class="showcase-item">
-                <img src="Product%20Strategy_paris.png" alt="Product Strategy" loading="lazy">
-                <div class="caption" data-fr="Stratégie produit : Persona, Concept Board, Audience cible" data-en="Product Strategy: Persona, Concept Board, Target Audience">Stratégie produit : Persona, Concept Board, Audience cible</div>
-            </div>
-            <div class="showcase-item">
-                <img src="Competitive%20Analysis_paris.png" alt="Competitive Analysis" loading="lazy">
-                <div class="caption" data-fr="Analyse concurrentielle : positionnement, offre produit, structure tarifaire et benchmarking" data-en="Competitive Analysis: positioning, product offering, pricing structure and benchmarking">Analyse concurrentielle : positionnement, offre produit, structure tarifaire et benchmarking</div>
-            </div>
-            <div class="showcase-item">
-                <img src="Courses%20video%20editing_Paris.webp" alt="Courses video editing" loading="lazy">
-                <div class="caption" data-fr="Montage vidéo des sessions de formation (26 sessions, 3,5h de contenu)" data-en="Training course video editing (26 sessions, 3.5h of content)">Montage vidéo des sessions de formation (26 sessions, 3,5h de contenu)</div>
-            </div>
-            <div class="showcase-item">
-                <img src="Banner.jpg" alt="Banner design" loading="lazy">
-                <div class="caption" data-fr="Design de bannières, landing page, Reels et contenus promotionnels Instagram" data-en="Banner design, landing page, Reels and Instagram promotional content">Design de bannières, landing page, Reels et contenus promotionnels Instagram</div>
-            </div>
         </div>
         <div class="impact-box">
             <h5>Impact</h5>
@@ -402,6 +414,22 @@
                 <li data-fr="Gestion des relations avec les organisations partenaires" data-en="Managed relationships with partner organizations">Gestion des relations avec les organisations partenaires</li>
             </ul>
         </div>
+            <div class="inline-img cols-2">
+                <div class="showcase-item">
+                    <img src="Linkee_Distrib.jpeg" alt="Distribution" loading="lazy">
+                    <div class="caption" data-fr="Distribution hebdomadaire : coordination de 2 sessions/semaine pour ~500 bénéficiaires, onboarding des nouveaux bénévoles sur le terrain" data-en="Weekly distribution: coordinating 2 sessions/week for ~500 beneficiaries, on-site onboarding of new volunteers">Distribution hebdomadaire : coordination de 2 sessions/semaine pour ~500 bénéficiaires, onboarding des nouveaux bénévoles sur le terrain</div>
+                </div>
+                <div class="showcase-item">
+                    <img src="Linkee_Stand.jpeg" alt="Stand forum" loading="lazy">
+                    <div class="caption" data-fr="Stand sur forum : présentation de la mission, recrutement de bénévoles, sensibilisation des étudiants éligibles" data-en="Forum stand: presenting the mission, recruiting volunteers, raising awareness among eligible students">Stand sur forum : présentation de la mission, recrutement de bénévoles, sensibilisation des étudiants éligibles</div>
+                </div>
+            </div>
+            <div class="inline-img cols-1">
+                <div class="showcase-item">
+                    <img src="reconditionment.JPG" alt="Reconditionnement" loading="lazy">
+                    <div class="caption" data-fr="Reconditionnement : répartition des dons en portions individuelles, recrutement et coordination des bénévoles, collaboration logistique avec les partenaires" data-en="Food reconditioning: dividing bulk donations into individual portions, volunteer recruitment and coordination, logistics collaboration with partners">Reconditionnement : répartition des dons en portions individuelles, recrutement et coordination des bénévoles, collaboration logistique avec les partenaires</div>
+                </div>
+            </div>
         <div class="content-card">
             <h4><span class="icon">📧</span> <span data-fr="Communication & Reporting" data-en="Communication & Reporting">Communication & Reporting</span></h4>
             <ul>
@@ -421,21 +449,7 @@
                 <li data-fr="Adaptation des opérations aux imprévus (changements d'approvisionnement, manque de bénévoles, météo)" data-en="Adapted operations to unexpected challenges (supply changes, volunteer shortages, weather conditions)">Adaptation des opérations aux imprévus (changements d'approvisionnement, manque de bénévoles, météo)</li>
             </ul>
         </div>
-        <div class="showcase">
-            <div class="showcase-item">
-                <img src="Linkee_Distrib.jpeg" alt="Distribution alimentaire" loading="lazy">
-                <div class="caption" data-fr="Distribution hebdomadaire : coordination de 2 sessions/semaine pour ~500 bénéficiaires, onboarding des nouveaux bénévoles sur le terrain, communication et résolution de problèmes en temps réel" data-en="Weekly distribution: coordinating 2 sessions/week for ~500 beneficiaries, on-site onboarding of new volunteers, real-time communication and problem-solving">Distribution hebdomadaire : coordination de 2 sessions/semaine pour ~500 bénéficiaires, onboarding des nouveaux bénévoles sur le terrain, communication et résolution de problèmes en temps réel</div>
-            </div>
-            <div class="showcase-item">
-                <img src="Linkee_Stand.jpeg" alt="Stand forum" loading="lazy">
-                <div class="caption" data-fr="Stand sur forum : présentation de la mission, recrutement de bénévoles, sensibilisation des étudiants éligibles. Coordination logistique, formation des animateurs, préparation des supports et gestion des imprévus" data-en="Forum stand: presenting the mission, recruiting volunteers, raising awareness among eligible students. Logistics coordination, animator training, preparing materials and handling on-the-spot challenges">Stand sur forum : présentation de la mission, recrutement de bénévoles, sensibilisation des étudiants éligibles. Coordination logistique, formation des animateurs, préparation des supports et gestion des imprévus</div>
-            </div>
-            <div class="showcase-item">
-                <img src="reconditionment.JPG" alt="Reconditionnement" loading="lazy">
-                <div class="caption" data-fr="Reconditionnement : répartition des dons en portions individuelles pour les bénéficiaires. Recrutement et coordination des bénévoles, collaboration logistique, location de salle et communication avec les partenaires" data-en="Food reconditioning: dividing bulk donations into individual portions for beneficiaries. Volunteer recruitment and coordination, logistics collaboration, venue booking and partner communication">Reconditionnement : répartition des dons en portions individuelles pour les bénéficiaires. Recrutement et coordination des bénévoles, collaboration logistique, location de salle et communication avec les partenaires</div>
-            </div>
-        </div>
-        <div class="impact-box">
+<div class="impact-box">
             <h5>Impact</h5>
             <p data-fr="Engagement durable des partenaires grâce à une exécution fiable des événements. Maintien d'une communauté engagée de <span class=kw>550+ bénévoles</span> avec résolution proactive des problèmes. Accompagnement de <span class=kw>1 000+ bénéficiaires</span> sans aucune distribution manquée." data-en="Sustained partner engagement through reliable event execution. Maintained a committed volunteer community of <span class=kw>550+</span> with proactive issue resolution. Supported <span class=kw>1,000+ beneficiaries</span> with zero missed distributions.">Engagement durable des partenaires grâce à une exécution fiable des événements. Maintien d'une communauté engagée de 550+ bénévoles avec résolution proactive des problèmes. Accompagnement de 1 000+ bénéficiaires sans aucune distribution manquée.</p>
         </div>
