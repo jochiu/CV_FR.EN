@@ -64,8 +64,9 @@
         .strategy-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem}
         .strategy-col{min-width:0}
         .col-header{margin-bottom:.9rem;padding-bottom:.7rem;border-bottom:1px solid var(--border-light)}
-        .col-header h3{font-size:.9rem;font-weight:600;color:var(--accent);margin-bottom:.15rem}
-        .col-header .col-loc{font-size:.75rem;color:var(--muted-light)}
+        .col-header .subtitle-sm{font-family:'Cormorant Garamond',serif;font-size:1.35rem;font-weight:700;color:var(--dark);margin-bottom:.4rem;line-height:1.2}
+        .col-header .company-line{font-size:.82rem;color:var(--accent);font-weight:500}
+        .col-header .company-line .loc{color:var(--muted-light);font-weight:400}
         .strategy-col .content-card{padding:1.3rem 1.4rem;margin-bottom:.8rem}
         .strategy-col .content-card h4{font-size:.83rem;margin-bottom:.45rem}
         .strategy-col .content-card p,.strategy-col .content-card li{font-size:.8rem;line-height:1.65}
@@ -83,6 +84,17 @@
         .inline-img.cols-2{grid-template-columns:1fr 1fr}
         .inline-img .showcase-item img{height:160px}
         .strategy-col .inline-img .showcase-item img{height:130px}
+        .content-card .inline-img{margin-top:1rem;margin-bottom:0}
+        .content-card .inline-img .showcase-item{background:var(--cream);border-color:var(--border)}
+        .content-card .inline-img .showcase-item img{height:180px}
+        .strategy-col .content-card .inline-img .showcase-item img{height:140px}
+        .content-card .card-img{margin-top:1rem;border-radius:var(--radius);overflow:hidden;border:1px solid var(--border-light)}
+        .content-card .card-img img{width:100%;display:block;object-fit:cover}
+        .content-card .card-img.h-sm img{height:140px}
+        .content-card .card-img.h-md img{height:180px}
+        .content-card .card-img.split{display:grid;grid-template-columns:1fr 1fr;gap:.5rem;border:none;overflow:visible}
+        .content-card .card-img.split > div{border:1px solid var(--border-light);border-radius:var(--radius);overflow:hidden}
+        .content-card .card-img.split img{height:130px}
         @media(min-width:769px){
             .content-card h4{font-size:1rem}
             .content-card p,.content-card li{font-size:.93rem}
@@ -161,8 +173,8 @@
             <!-- ===== UniFox column ===== -->
             <div class="strategy-col">
                 <div class="col-header">
-                    <h3>UniFox &middot; GreenTech, Web3</h3>
-                    <div class="col-loc">Bordeaux, France &middot; 06 &ndash; 12/2024</div>
+                    <div class="subtitle-sm">Digital Marketing</div>
+                    <div class="company-line">UniFox &middot; GreenTech, Web3 &nbsp;<span class="loc">Bordeaux, France &middot; 06 &ndash; 12/2024</span></div>
                 </div>
                 <div class="tag-row">
                     <span class="tag">Content Strategy</span><span class="tag">GA4</span><span class="tag">GTM</span><span class="tag">SEO</span><span class="tag">CRO</span><span class="tag">Google Ads</span><span class="tag">Meta Business Suite</span><span class="tag">Iconosquare</span><span class="tag">UX Research</span>
@@ -179,12 +191,13 @@
                         <li data-fr="Optimisation du contenu multi-plateformes via l'analyse continue des performances" data-en="Optimized <span class=kw>multi-platform content</span> through continuous performance analysis">Optimisation du contenu multi-plateformes via l'analyse continue des performances</li>
                         <li data-fr="Gestion de la diffusion sur LinkedIn, Facebook, Twitter, Instagram, TikTok et Threads" data-en="Managed distribution across LinkedIn, Facebook, Twitter, Instagram, TikTok and Threads">Gestion de la diffusion sur LinkedIn, Facebook, Twitter, Instagram, TikTok et Threads</li>
                     </ul>
-                </div>
-                <div class="inline-img cols-1">
+                
+                    <div class="inline-img cols-1">
                     <div class="showcase-item">
                         <img src="Content%20Creation_unifox.png" alt="Content Creation" loading="lazy">
                         <div class="caption">Social Media Content Creation (hook, line, value, CTA)</div>
                     </div>
+                </div>
                 </div>
                 <div class="content-card">
                     <h4><span class="icon">🎨</span> <span data-fr="Création de contenu & Outils" data-en="Content Creation & Tools">Création de contenu & Outils</span></h4>
@@ -194,12 +207,13 @@
                         <li data-fr="Développement de contenus optimisés SEO pour renforcer la visibilité organique" data-en="Developed <span class=kw>SEO-optimized</span> content for enhanced organic visibility">Développement de contenus optimisés SEO pour renforcer la visibilité organique</li>
                         <li data-fr="Mise en place de stratégies d'optimisation du taux de conversion" data-en="Implemented <span class=kw>conversion rate optimization</span> strategies">Mise en place de stratégies d'optimisation du taux de conversion</li>
                     </ul>
-                </div>
-                <div class="inline-img cols-1">
+                
+                    <div class="inline-img cols-1">
                     <div class="showcase-item">
                         <img src="Content%20Planning_Unifox.png" alt="Content Planning" loading="lazy">
                         <div class="caption">Content Planning & Scheduling (Iconosquare)</div>
                     </div>
+                </div>
                 </div>
                 <div class="content-card">
                     <h4><span class="icon">📊</span> <span data-fr="Suivi des performances" data-en="Performance Tracking">Suivi des performances</span></h4>
@@ -209,12 +223,13 @@
                         <li data-fr="Analyse des sources de trafic et performances des campagnes multi-canaux" data-en="Analyzed traffic sources and multi-channel campaign performance">Analyse des sources de trafic et performances des campagnes multi-canaux</li>
                         <li data-fr="Optimisation des CTAs et entonnoirs de conversion basée sur les données" data-en="Optimized CTAs and conversion funnels based on data insights">Optimisation des CTAs et entonnoirs de conversion basée sur les données</li>
                     </ul>
-                </div>
-                <div class="inline-img cols-1">
+                
+                    <div class="inline-img cols-1">
                     <div class="showcase-item">
                         <img src="Marketing%20Strategy_unifox.png" alt="Marketing Strategy" loading="lazy">
                         <div class="caption">Marketing Strategy & Analysis (GA4, Google Ads, Meta, PostHog)</div>
                     </div>
+                </div>
                 </div>
                 <div class="impact-box">
                     <h5>Impact</h5>
@@ -225,8 +240,8 @@
             <!-- ===== Hôtel column ===== -->
             <div class="strategy-col">
                 <div class="col-header">
-                    <h3 data-fr="Hôtel 4★ Restaurant · Hôtellerie de charme" data-en="4★ Hotel & Restaurant · Boutique hospitality">Hôtel 4★ Restaurant · Hôtellerie de charme</h3>
-                    <div class="col-loc">Dordogne, France &middot; Freelance</div>
+                    <div class="subtitle-sm">Brand Strategy</div>
+                    <div class="company-line" data-fr="Hôtel 4★ Restaurant · Hôtellerie de charme &nbsp;<span class='loc'>Dordogne, France · Freelance</span>" data-en="4★ Hotel & Restaurant · Boutique hospitality &nbsp;<span class='loc'>Dordogne, France · Freelance</span>">Hôtel 4★ Restaurant · Hôtellerie de charme &nbsp;<span class="loc">Dordogne, France · Freelance</span></div>
                 </div>
                 <div class="tag-row">
                     <span class="tag">Market Analysis</span><span class="tag">Brand Positioning</span><span class="tag">Persona Definition</span><span class="tag">Bilingual Strategy (FR/EN)</span><span class="tag">Visual Identity</span><span class="tag">Instagram Mockup</span><span class="tag">Competitive Benchmarking</span>
@@ -242,12 +257,13 @@
                         <li data-fr="Définition de personas autour des préférences gastronomiques, culturelles et expérientielles" data-en="Defined <span class=kw>personas</span> around gastronomic, cultural and experiential preferences">Définition de personas autour des préférences gastronomiques, culturelles et expérientielles</li>
                         <li data-fr="Benchmark de la présence digitale existante et identification des angles morts sur l'audience internationale" data-en="Benchmarked existing digital presence and identified blind spots on the international audience">Benchmark de la présence digitale existante et identification des angles morts sur l'audience internationale</li>
                     </ul>
-                </div>
-                <div class="inline-img cols-1">
+                
+                    <div class="inline-img cols-1">
                     <div class="showcase-item">
                         <img src="hotel_1.png" alt="Public cible" loading="lazy">
                         <div class="caption" data-fr="Analyse du public cible et définition des personas" data-en="Target audience analysis and persona definition">Analyse du public cible et définition des personas</div>
                     </div>
+                </div>
                 </div>
                 <div class="content-card">
                     <h4><span class="icon">🎨</span> <span data-fr="Stratégie de marque & Identité visuelle" data-en="Brand Strategy & Visual Identity">Stratégie de marque & Identité visuelle</span></h4>
@@ -257,12 +273,13 @@
                         <li data-fr="Création de séries thématiques : gastronomie, témoignages voyageurs, offres saisonnières" data-en="Created thematic series: gastronomy, traveler testimonials, seasonal offers">Création de séries thématiques : gastronomie, témoignages voyageurs, offres saisonnières</li>
                         <li data-fr="Développement d'une charte hashtags incluant un hashtag de marque pour le contenu généré par les utilisateurs" data-en="Developed a hashtag strategy including a branded hashtag for user-generated content">Développement d'une charte hashtags incluant un hashtag de marque pour le contenu généré par les utilisateurs</li>
                     </ul>
-                </div>
-                <div class="inline-img cols-1">
+                
+                    <div class="inline-img cols-1">
                     <div class="showcase-item">
                         <img src="hotel_2.png" alt="Instagram mockup" loading="lazy">
                         <div class="caption" data-fr="Maquette Instagram & identité visuelle" data-en="Instagram mockup & visual identity">Maquette Instagram & identité visuelle</div>
                     </div>
+                </div>
                 </div>
                 <div class="content-card">
                     <h4><span class="icon">✍️</span> <span data-fr="Stratégie éditoriale bilingue" data-en="Bilingual Editorial Strategy">Stratégie éditoriale bilingue</span></h4>
@@ -271,19 +288,17 @@
                         <li data-fr="Conception d'exemples de Reels orientés marché américain : sous-titres anglais, narration émotionnelle, mise en avant du service anglophone et des visites privées" data-en="Designed Reels examples for the US market: English subtitles, emotional storytelling, English-speaking service and private tours">Conception d'exemples de Reels orientés marché américain : sous-titres anglais, narration émotionnelle, mise en avant du service anglophone et des visites privées</li>
                         <li data-fr="Storytelling axé sur l'expérience authentique de la campagne française" data-en="Storytelling focused on the authentic French countryside experience">Storytelling axé sur l'expérience authentique de la campagne française</li>
                     </ul>
-                </div>
-                <div class="inline-img cols-1">
+                
+                    <div class="inline-img cols-1">
                     <div class="showcase-item">
                         <img src="hotel_3.png" alt="Content creation" loading="lazy">
                         <div class="caption" data-fr="Création de contenu bilingue FR/EN" data-en="Bilingual FR/EN content creation">Création de contenu bilingue FR/EN</div>
                     </div>
                 </div>
+                </div>
                 <div class="impact-box">
                     <h5>Impact</h5>
                     <p data-fr="Proposition stratégique complète livrée sous forme de présentation professionnelle, posant les bases d'un <span class=kw>repositionnement digital</span> orienté clientèle internationale haut de gamme. Cadre activable couvrant l'analyse de marché, l'identité visuelle, la ligne éditoriale et les axes de mesure." data-en="Complete strategic proposal delivered as a professional presentation, laying the foundation for a <span class=kw>digital repositioning</span> targeting premium international clientele. Actionable framework covering market analysis, visual identity, editorial line and measurement axes.">Proposition stratégique complète livrée sous forme de présentation professionnelle, posant les bases d'un repositionnement digital orienté clientèle internationale haut de gamme. Cadre activable couvrant l'analyse de marché, l'identité visuelle, la ligne éditoriale et les axes de mesure.</p>
-                </div>
-                <div class="ref-section">
-                    <p data-fr="Document complet et nom du client disponibles sur demande." data-en="Full document and client name available on request.">Document complet et nom du client disponibles sur demande.</p>
                 </div>
             </div>
 
@@ -323,8 +338,8 @@
                 <li data-fr="Définition des personas cibles et stratégies de positionnement basées sur les insights marché" data-en="Defined target personas and positioning strategies based on market insights">Définition des personas cibles et stratégies de positionnement basées sur les insights marché</li>
                 <li data-fr="Création d'un concept board alignant les fonctionnalités produit avec les besoins de l'audience" data-en="Developed a concept board aligning product features with audience needs">Création d'un concept board alignant les fonctionnalités produit avec les besoins de l'audience</li>
             </ul>
-        </div>
-            <div class="inline-img cols-2">
+        
+                    <div class="inline-img cols-2">
                 <div class="showcase-item">
                     <img src="Product%20Strategy_paris.png" alt="Product Strategy" loading="lazy">
                     <div class="caption" data-fr="Stratégie produit : Persona, Concept Board, Audience cible" data-en="Product Strategy: Persona, Concept Board, Target Audience">Stratégie produit : Persona, Concept Board, Audience cible</div>
@@ -334,6 +349,7 @@
                     <div class="caption" data-fr="Analyse concurrentielle : positionnement, offre produit, structure tarifaire et benchmarking" data-en="Competitive Analysis: positioning, product offering, pricing structure and benchmarking">Analyse concurrentielle : positionnement, offre produit, structure tarifaire et benchmarking</div>
                 </div>
             </div>
+                </div>
         <div class="content-card">
             <h4><span class="icon">📝</span> <span data-fr="Production de contenu & Design" data-en="Content Production & Design">Production de contenu & Design</span></h4>
             <ul>
@@ -342,8 +358,8 @@
                 <li data-fr="Création de Reels et contenus Instagram pour la promotion produit" data-en="Created Reels and Instagram content for product promotion">Création de Reels et contenus Instagram pour la promotion produit</li>
                 <li data-fr="Organisation de webinaires pour engager et convertir l'audience cible" data-en="Organized webinars to engage and convert the target audience">Organisation de webinaires pour engager et convertir l'audience cible</li>
             </ul>
-        </div>
-            <div class="inline-img cols-2">
+        
+                    <div class="inline-img cols-2">
                 <div class="showcase-item">
                     <img src="Courses%20video%20editing_Paris.webp" alt="Courses video editing" loading="lazy">
                     <div class="caption" data-fr="Montage vidéo des sessions de formation (26 sessions, 3,5h de contenu)" data-en="Training course video editing (26 sessions, 3.5h of content)">Montage vidéo des sessions de formation (26 sessions, 3,5h de contenu)</div>
@@ -353,6 +369,7 @@
                     <div class="caption" data-fr="Design de bannières, landing page, Reels et contenus promotionnels Instagram" data-en="Banner design, landing page, Reels and Instagram promotional content">Design de bannières, landing page, Reels and Instagram promotional content</div>
                 </div>
             </div>
+                </div>
         <div class="content-card">
             <h4><span class="icon">💰</span> <span data-fr="Stratégie tarifaire & Go-to-Market" data-en="Pricing Strategy & Go-to-Market">Stratégie tarifaire & Go-to-Market</span></h4>
             <ul>
@@ -413,8 +430,8 @@
                 <li data-fr="Coordination de 2 distributions hebdomadaires pour environ 500 bénéficiaires par session" data-en="Coordinated 2 weekly distributions serving approximately 500 beneficiaries per session">Coordination de 2 distributions hebdomadaires pour environ 500 bénéficiaires par session</li>
                 <li data-fr="Gestion des relations avec les organisations partenaires" data-en="Managed relationships with partner organizations">Gestion des relations avec les organisations partenaires</li>
             </ul>
-        </div>
-            <div class="inline-img cols-2">
+        
+                    <div class="inline-img cols-2">
                 <div class="showcase-item">
                     <img src="Linkee_Distrib.jpeg" alt="Distribution" loading="lazy">
                     <div class="caption" data-fr="Distribution hebdomadaire : coordination de 2 sessions/semaine pour ~500 bénéficiaires, onboarding des nouveaux bénévoles sur le terrain" data-en="Weekly distribution: coordinating 2 sessions/week for ~500 beneficiaries, on-site onboarding of new volunteers">Distribution hebdomadaire : coordination de 2 sessions/semaine pour ~500 bénéficiaires, onboarding des nouveaux bénévoles sur le terrain</div>
@@ -424,6 +441,7 @@
                     <div class="caption" data-fr="Stand sur forum : présentation de la mission, recrutement de bénévoles, sensibilisation des étudiants éligibles" data-en="Forum stand: presenting the mission, recruiting volunteers, raising awareness among eligible students">Stand sur forum : présentation de la mission, recrutement de bénévoles, sensibilisation des étudiants éligibles</div>
                 </div>
             </div>
+                </div>
             <div class="inline-img cols-1">
                 <div class="showcase-item">
                     <img src="reconditionment.JPG" alt="Reconditionnement" loading="lazy">
