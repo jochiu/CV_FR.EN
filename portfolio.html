@@ -43,6 +43,10 @@
         .tag{font-size:.73rem;padding:.3rem .7rem;background:var(--accent-light);border-radius:20px;color:var(--accent);font-weight:600;border:1px solid rgba(45,90,71,.15)}
         .content-card{background:var(--white);border:1px solid var(--border-light);border-radius:var(--radius);padding:2rem 2.2rem;box-shadow:var(--shadow-sm);margin-bottom:1.2rem}
         .content-card.has-img{display:grid;grid-template-columns:1fr 320px;gap:1.8rem;align-items:start}
+        .content-card.has-img.has-img-sm{grid-template-columns:1fr 200px;gap:1.4rem}
+        .content-card.has-img-sm .side-img .showcase-item img{height:110px}
+        .content-card.has-img-sm .side-img .showcase-item .caption{font-size:.65rem;padding:.35rem .55rem;line-height:1.4}
+        .content-card.has-img-sm .side-img{gap:.5rem}
         .content-card .card-body{min-width:0}
         .content-card h4{font-size:.9rem;font-weight:700;margin-bottom:.6rem;color:var(--dark);display:flex;align-items:center;gap:.5rem}
         .content-card h4 .icon{width:22px;height:22px;background:var(--gold-light);border-radius:5px;display:flex;align-items:center;justify-content:center;font-size:.7rem;flex-shrink:0}
@@ -357,15 +361,16 @@
                 <li data-fr="Construction d'un workflow de production scalable pour les futures expansions" data-en="Built a scalable production workflow for future content expansion">Construction d'un workflow de production scalable pour les futures expansions</li>
             </ul>
         </div>
-        <div class="content-card">
+        <div class="content-card has-img has-img-sm">
+            <div class="card-body">
             <h4><span class="icon">🔍</span> <span data-fr="Étude de marché & Analyse concurrentielle" data-en="Market Research & Competitive Analysis">Étude de marché & Analyse concurrentielle</span></h4>
             <ul>
                 <li data-fr="Analyse des concurrents : positionnement, offre produit, structure tarifaire et stratégie de contenu" data-en="<span class=kw>Competitor analysis</span>: positioning, product offering, <span class=kw>pricing structure</span> and content strategy">Analyse des concurrents : positionnement, offre produit, structure tarifaire et stratégie de contenu</li>
                 <li data-fr="Définition des personas cibles et stratégies de positionnement basées sur les insights marché" data-en="Defined target personas and positioning strategies based on market insights">Définition des personas cibles et stratégies de positionnement basées sur les insights marché</li>
                 <li data-fr="Création d'un concept board alignant les fonctionnalités produit avec les besoins de l'audience" data-en="Developed a concept board aligning product features with audience needs">Création d'un concept board alignant les fonctionnalités produit avec les besoins de l'audience</li>
             </ul>
-                    
-                    <div class="imgs-below cols-2">
+            </div>
+            <div class="side-img">
                 <div class="showcase-item">
                     <img src="Product%20Strategy_paris.png" alt="Product Strategy" loading="lazy">
                     <div class="caption" data-fr="Stratégie produit : Persona, Concept Board, Audience cible" data-en="Product Strategy: Persona, Concept Board, Target Audience">Stratégie produit : Persona, Concept Board, Audience cible</div>
@@ -375,8 +380,9 @@
                     <div class="caption" data-fr="Analyse concurrentielle : positionnement, offre produit, structure tarifaire et benchmarking" data-en="Competitive Analysis: positioning, product offering, pricing structure and benchmarking">Analyse concurrentielle : positionnement, offre produit, structure tarifaire et benchmarking</div>
                 </div>
             </div>
-                </div>
-        <div class="content-card">
+        </div>
+        <div class="content-card has-img has-img-sm">
+            <div class="card-body">
             <h4><span class="icon">📝</span> <span data-fr="Production de contenu & Design" data-en="Content Production & Design">Production de contenu & Design</span></h4>
             <ul>
                 <li data-fr="Production de 3,5h de vidéos de formation avec montage professionnel" data-en="Produced 3.5 hours of training videos with professional editing">Production de 3,5h de vidéos de formation avec montage professionnel</li>
@@ -384,8 +390,8 @@
                 <li data-fr="Création de Reels et contenus Instagram pour la promotion produit" data-en="Created Reels and Instagram content for product promotion">Création de Reels et contenus Instagram pour la promotion produit</li>
                 <li data-fr="Organisation de webinaires pour engager et convertir l'audience cible" data-en="Organized webinars to engage and convert the target audience">Organisation de webinaires pour engager et convertir l'audience cible</li>
             </ul>
-                    
-                    <div class="imgs-below cols-2">
+            </div>
+            <div class="side-img">
                 <div class="showcase-item">
                     <img src="Courses%20video%20editing_Paris.webp" alt="Courses video editing" loading="lazy">
                     <div class="caption" data-fr="Montage vidéo des sessions de formation (26 sessions, 3,5h de contenu)" data-en="Training course video editing (26 sessions, 3.5h of content)">Montage vidéo des sessions de formation (26 sessions, 3,5h de contenu)</div>
@@ -395,7 +401,7 @@
                     <div class="caption" data-fr="Design de bannières, landing page, Reels et contenus promotionnels Instagram" data-en="Banner design, landing page, Reels and Instagram promotional content">Design de bannières, landing page, Reels and Instagram promotional content</div>
                 </div>
             </div>
-                </div>
+        </div>
         <div class="content-card">
             <h4><span class="icon">💰</span> <span data-fr="Stratégie tarifaire & Go-to-Market" data-en="Pricing Strategy & Go-to-Market">Stratégie tarifaire & Go-to-Market</span></h4>
             <ul>
