@@ -57,10 +57,12 @@
         .tag-row{display:flex;flex-wrap:wrap;gap:.4rem;margin-bottom:1.5rem}
         .tag{font-size:.73rem;padding:.3rem .7rem;background:var(--accent-light);border-radius:20px;color:var(--accent);font-weight:600;border:1px solid rgba(45,90,71,.15)}
         .content-card{background:var(--white);border:1px solid var(--border-light);border-radius:var(--radius);padding:2rem 2.2rem;box-shadow:var(--shadow-sm);margin-bottom:1.2rem}
-        .mission-impact-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1.2rem;align-items:stretch}
-        .mission-impact-row .content-card,.mission-impact-row .impact-box{margin-bottom:0;padding:1.6rem 1.8rem;display:flex;flex-direction:column;justify-content:center}
+        .mission-impact-row{display:grid;grid-template-columns:1fr 1fr;background:var(--white);border:1px solid var(--border-light);border-radius:var(--radius);box-shadow:var(--shadow-sm);margin-bottom:1.2rem;overflow:hidden}
+        .mission-impact-row .content-card,.mission-impact-row .impact-box{margin-bottom:0;box-shadow:none;border:none;border-radius:0;background:transparent;padding:1.6rem 1.8rem}
+        .mission-impact-row .content-card{border-right:1px solid var(--border-light)}
+        .mission-impact-row .impact-box{background:linear-gradient(135deg,var(--accent-light),var(--gold-light));border-left:3px solid var(--accent)}
         .mission-impact-row .impact-box h5{margin-bottom:.5rem}
-        .strategy-col .mission-impact-row .content-card,.strategy-col .mission-impact-row .impact-box{padding:1.1rem 1.3rem}
+        .strategy-col .mission-impact-row .content-card,.strategy-col .mission-impact-row .impact-box{padding:1rem 1.2rem}
         .strategy-col .mission-impact-row .content-card p,.strategy-col .mission-impact-row .impact-box p{font-size:.78rem;line-height:1.6}
         @media(max-width:768px){.mission-impact-row{grid-template-columns:1fr}.content-card.has-img,.content-card.has-img.has-img-sm{grid-template-columns:1fr!important;gap:1rem}.content-card.has-img-sm .side-img{grid-template-columns:1fr 1fr}}
         .content-card.has-img{display:grid;grid-template-columns:1fr 320px;gap:1.8rem;align-items:start}
@@ -297,15 +299,9 @@
                 <div class="tag-row">
                     <span class="tag">Market Analysis</span><span class="tag">Brand Positioning</span><span class="tag">Persona Definition</span><span class="tag">Bilingual Strategy (FR/EN)</span><span class="tag">Visual Identity</span><span class="tag">Instagram Mockup</span><span class="tag">Competitive Benchmarking</span>
                 </div>
-                <div class="mission-impact-row">
-<div class="content-card">
+                <div class="content-card">
                     <h4><span class="icon">🎯</span> <span data-fr="La mission" data-en="The Mission">La mission</span></h4>
                     <p data-fr="Définition d'une <span class=kw>stratégie digitale bilingue (FR/EN)</span> pour positionner un établissement hôtelier de charme sur le marché américain CSP+, avec analyse de cible, recommandations éditoriales et maquette de présence Instagram." data-en="Defined a <span class=kw>bilingual digital strategy (FR/EN)</span> to position a boutique hotel on the US premium market, with target analysis, editorial recommendations and Instagram mockup.">Définition d'une stratégie digitale bilingue (FR/EN) pour positionner un établissement hôtelier de charme sur le marché américain CSP+, avec analyse de cible, recommandations éditoriales et maquette de présence Instagram.</p>
-                </div>
-<div class="impact-box">
-            <h5>Impact</h5>
-            <p data-fr="Engagement durable des partenaires grâce à une exécution fiable des événements. Maintien d'une communauté engagée de <span class=kw>550+ bénévoles</span> avec résolution proactive des problèmes. Accompagnement de <span class=kw>1 000+ bénéficiaires</span> sans aucune distribution manquée." data-en="Sustained partner engagement through reliable event execution. Maintained a committed volunteer community of <span class=kw>550+</span> with proactive issue resolution. Supported <span class=kw>1,000+ beneficiaries</span> with zero missed distributions.">Engagement durable des partenaires grâce à une exécution fiable des événements. Maintien d'une communauté engagée de 550+ bénévoles avec résolution proactive des problèmes. Accompagnement de 1 000+ bénéficiaires sans aucune distribution manquée.</p>
-        </div>
                 </div>
                 <div class="content-card has-img">
                     <div class="card-body">
@@ -478,6 +474,10 @@
 <div class="content-card">
             <h4><span class="icon">🎯</span> <span data-fr="La mission" data-en="The Mission">La mission</span></h4>
             <p data-fr="Gestion d'une communauté de <span class=kw>550+ bénévoles</span> et accompagnement de 1 000+ bénéficiaires, maintien des relations partenaires, organisation de <span class=kw>30+ événements</span> variés (prospection, ateliers cuisine, reconditionnement, stands sur forums), coordination et communication via newsletter, email, WhatsApp et téléphone." data-en="Managing a community of <span class=kw>550+ volunteers</span> and supporting 1,000+ beneficiaries, maintaining partner relationships, organizing <span class=kw>30+ diverse events</span> (prospection, cooking workshops, food reconditioning, forum stands), coordinating operations and handling communications via newsletter, email, WhatsApp and phone.">Gestion d'une communauté de 550+ bénévoles et accompagnement de 1 000+ bénéficiaires, maintien des relations partenaires, organisation de 30+ événements variés (prospection, ateliers cuisine, reconditionnement, stands sur forums), coordination logistique et communication via newsletter hebdomadaire et groupes WhatsApp.</p>
+        </div>
+<div class="impact-box">
+            <h5>Impact</h5>
+            <p data-fr="Engagement durable des partenaires grâce à une exécution fiable des événements. Maintien d'une communauté engagée de <span class=kw>550+ bénévoles</span> avec résolution proactive des problèmes. Accompagnement de <span class=kw>1 000+ bénéficiaires</span> sans aucune distribution manquée." data-en="Sustained partner engagement through reliable event execution. Maintained a committed volunteer community of <span class=kw>550+</span> with proactive issue resolution. Supported <span class=kw>1,000+ beneficiaries</span> with zero missed distributions.">Engagement durable des partenaires grâce à une exécution fiable des événements. Maintien d'une communauté engagée de 550+ bénévoles avec résolution proactive des problèmes. Accompagnement de 1 000+ bénéficiaires sans aucune distribution manquée.</p>
         </div>
 
         </div>
