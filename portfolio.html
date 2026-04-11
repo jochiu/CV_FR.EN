@@ -57,6 +57,9 @@
         .tag-row{display:flex;flex-wrap:wrap;gap:.4rem;margin-bottom:1.5rem}
         .tag{font-size:.73rem;padding:.3rem .7rem;background:var(--accent-light);border-radius:20px;color:var(--accent);font-weight:600;border:1px solid rgba(45,90,71,.15)}
         .content-card{background:var(--white);border:1px solid var(--border-light);border-radius:var(--radius);padding:2rem 2.2rem;box-shadow:var(--shadow-sm);margin-bottom:1.2rem}
+        .mission-impact-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1.2rem}
+        .mission-impact-row .content-card,.mission-impact-row .impact-box{margin-bottom:0}
+        @media(max-width:768px){.mission-impact-row{grid-template-columns:1fr}}
         .content-card.has-img{display:grid;grid-template-columns:1fr 320px;gap:1.8rem;align-items:start}
         .content-card.has-img.has-img-sm{grid-template-columns:1fr 360px;gap:1.4rem}
         .content-card.has-img-sm .side-img{display:grid;grid-template-columns:1fr 1fr;gap:.6rem;flex-direction:initial}
@@ -220,7 +223,7 @@
                 </div>
                 <div class="content-card">
                     <h4><span class="icon">🎯</span> <span data-fr="La mission" data-en="The Mission">La mission</span></h4>
-                    <p data-fr="Développement et gestion de campagnes marketing digital et de stratégie de contenu, avec optimisation des performances par une approche data-driven pour une plateforme de finance durable." data-en="Developing and managing <span class=kw>digital marketing campaigns</span> and <span class=kw>content strategy</span> with performance optimization through <span class=kw>data-driven approaches</span> for a sustainable finance platform.">Développement et gestion de campagnes marketing digital et de stratégie de contenu, avec optimisation des performances par une approche data-driven pour une plateforme de finance durable.</p>
+                    <p data-fr="Développement et gestion de campagnes marketing digital et de stratégie de contenu, avec optimisation des performances par une approche data-driven pour une plateforme GreenTech Web3 de trading crypto avec bot IA." data-en="Developing and managing <span class=kw>digital marketing campaigns</span> and <span class=kw>content strategy</span> with performance optimization through <span class=kw>data-driven approaches</span> for a GreenTech Web3 AI-bot crypto trading platform.">Développement et gestion de campagnes marketing digital et de stratégie de contenu, avec optimisation des performances par une approche data-driven pour une plateforme GreenTech Web3 de trading crypto avec bot IA.</p>
                 </div>
                 <div class="content-card has-img">
                     <div class="card-body">
@@ -343,7 +346,7 @@
                 </div>
                 <div class="impact-box">
                     <h5>Impact</h5>
-                    <p data-fr="Proposition stratégique complète livrée sous forme de présentation professionnelle, posant les bases d'un <span class=kw>repositionnement digital</span> orienté clientèle internationale haut de gamme. Cadre activable couvrant l'analyse de marché, l'identité visuelle, la ligne éditoriale et les axes de mesure." data-en="Complete strategic proposal delivered as a professional presentation, laying the foundation for a <span class=kw>digital repositioning</span> targeting premium international clientele. Actionable framework covering market analysis, visual identity, editorial line and measurement axes.">Proposition stratégique complète livrée sous forme de présentation professionnelle, posant les bases d'un repositionnement digital orienté clientèle internationale haut de gamme. Cadre activable couvrant l'analyse de marché, l'identité visuelle, la ligne éditoriale et les axes de mesure.</p>
+                    <p data-fr="Proposition stratégique complète livrée sous forme de présentation professionnelle, posant les bases d'un <span class=kw>repositionnement digital</span> orienté clientèle internationale haut de gamme. Cadre activable couvrant l'analyse de marché, l'identité visuelle, la ligne éditoriale et les axes de mesure." data-en="Complete strategic proposal delivered as a professional presentation, laying the foundation for a <span class=kw>digital repositioning</span>. Actionable framework covering market analysis, visual identity, editorial line and measurement axes.">Proposition stratégique complète livrée sous forme de présentation professionnelle, posant les bases d'un repositionnement digital orienté clientèle internationale haut de gamme. Cadre activable couvrant l'analyse de marché, l'identité visuelle, la ligne éditoriale et les axes de mesure.</p>
                 </div>
             </div>
 
@@ -366,14 +369,14 @@
         </div>
         <div class="content-card">
             <h4><span class="icon">🎯</span> <span data-fr="La mission" data-en="The Mission">La mission</span></h4>
-            <p data-fr="Développement complet d'un cours en ligne de formation carrière, de la conception à la mise en marché, pour un cabinet de coaching professionnel certifié ICF (PCC) spécialisé dans l'accompagnement de cadres et indépendants sur le marché international." data-en="<span class=kw>Full-cycle development</span> of an online career training course, from concept to market launch, for an ICF (PCC) certified professional coaching firm specializing in supporting executives and independent professionals in the international market.">Développement complet d'un cours en ligne de formation carrière, de la conception à la mise en marché, pour un cabinet de coaching professionnel certifié ICF (PCC) spécialisé dans l'accompagnement de cadres et indépendants sur le marché international.</p>
+            <p data-fr="Développement complet d'un cours en ligne de formation carrière, de la conception à la mise en marché, pour un cabinet de coaching professionnel certifié ICF (PCC) spécialisé dans l'accompagnement des personnes souhaitant travailler à l'international." data-en="<span class=kw>Full-cycle development</span> of an online career training course, from concept to market launch, for an ICF (PCC) certified professional coaching firm specializing in supporting people aiming to work in international environments.">Développement complet d'un cours en ligne de formation carrière, de la conception à la mise en marché, pour un cabinet de coaching professionnel certifié ICF (PCC) spécialisé dans l'accompagnement des personnes souhaitant travailler à l'international.</p>
         </div>
         <div class="content-card">
             <h4><span class="icon">📋</span> <span data-fr="Gestion de projet" data-en="Project Management">Gestion de projet</span></h4>
             <ul>
                 <li data-fr="Coordination de la production de <span class=kw>26 sessions</span> de cours en 2 mois, de bout en bout" data-en="Coordinated the <span class=kw>end-to-end production of 26 digital course sessions</span> within 2 months">Coordination de la production de 26 sessions de cours en 2 mois, de bout en bout</li>
-                <li data-fr="Exécution fluide et livraison dans les délais à chaque phase du projet" data-en="Ensured seamless execution and timely delivery across all project phases">Exécution fluide et livraison dans les délais à chaque phase du projet</li>
-                <li data-fr="Construction d'un workflow de production scalable pour les futures expansions" data-en="Built a scalable production workflow for future content expansion">Construction d'un workflow de production scalable pour les futures expansions</li>
+                <li data-fr="Respect des délais fixés à chaque phase du projet" data-en="Met preset deadlines at every phase of the project">Respect des délais fixés à chaque phase du projet</li>
+                <li data-fr="Mise en place d'un workflow de production organisé et d'un planning structuré" data-en="Built an organized production workflow and structured planning">Mise en place d'un workflow de production organisé et d'un planning structuré</li>
             </ul>
         </div>
         <div class="content-card has-img has-img-sm">
@@ -400,10 +403,10 @@
             <div class="card-body">
             <h4><span class="icon">📝</span> <span data-fr="Production de contenu & Design" data-en="Content Production & Design">Production de contenu & Design</span></h4>
             <ul>
-                <li data-fr="Production de 3,5h de vidéos de formation avec montage professionnel" data-en="Produced 3.5 hours of training videos with professional editing">Production de 3,5h de vidéos de formation avec montage professionnel</li>
+                <li data-fr="Production de 3,5h de contenu de cours" data-en="Produced 3.5h of courses content">Production de 3,5h de contenu de cours</li>
                 <li data-fr="Conception de bannières pour la landing page et visuels promotionnels" data-en="Designed landing page banners and promotional visuals">Conception de bannières pour la landing page et visuels promotionnels</li>
                 <li data-fr="Création de Reels et contenus Instagram pour la promotion produit" data-en="Created Reels and Instagram content for product promotion">Création de Reels et contenus Instagram pour la promotion produit</li>
-                <li data-fr="Organisation de webinaires pour engager et convertir l'audience cible" data-en="Organized webinars to engage and convert the target audience">Organisation de webinaires pour engager et convertir l'audience cible</li>
+                <li data-fr="Organisation d'un webinaire : planification du déroulé et coordination avec les intervenants" data-en="Organized a webinar: flow planning and coordination with guest speakers">Organisation d'un webinaire : planification du déroulé et coordination avec les intervenants</li>
             </ul>
             </div>
             <div class="side-img">
@@ -422,7 +425,7 @@
             <ul>
                 <li data-fr="Conception de la stratégie tarifaire basée sur l'analyse concurrentielle et le positionnement" data-en="Designed <span class=kw>pricing strategy</span> based on competitive analysis and market positioning">Conception de la stratégie tarifaire basée sur l'analyse concurrentielle et le positionnement</li>
                 <li data-fr="Déploiement de la stratégie Go-to-Market : canaux d'acquisition et programmes d'affiliation" data-en="Deployed <span class=kw>Go-to-Market strategy</span>: acquisition channels and affiliate programs">Déploiement de la stratégie Go-to-Market : canaux d'acquisition et programmes d'affiliation</li>
-                <li data-fr="Exécution de campagnes marketing ciblées pour accélérer l'adoption" data-en="Executed targeted marketing campaigns to drive adoption and revenue growth">Exécution de campagnes marketing ciblées pour accélérer l'adoption</li>
+                <li data-fr="Optimisation du contenu marketing sur les canaux existants : articles du site, contenu email et plateformes de promotion" data-en="Optimized marketing content across existing channels: website articles, email content and promotion platforms">Optimisation du contenu marketing sur les canaux existants : articles du site, contenu email et plateformes de promotion</li>
             </ul>
         </div>
         <div class="impact-box">
