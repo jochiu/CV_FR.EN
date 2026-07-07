@@ -22,157 +22,203 @@
     <title>Yi-Hsuan Chiu — Portfolio</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&family=Fraunces:ital,opsz,wght@0,9..144,600;0,9..144,700;1,9..144,600&display=swap" rel="stylesheet">
     <style>
-        :root{--cream:#FAFAF7;--dark:#141414;--accent:#2D5A47;--accent-light:#EBF1EE;--gold:#C5A44E;--gold-light:#F8F3E8;--muted:#5C5C5C;--muted-light:#8A8A8A;--border:#E2E0DB;--border-light:#EEECE8;--warm-gray:#F3F2EE;--white:#FFF;--shadow-sm:0 1px 3px rgba(0,0,0,.04),0 1px 2px rgba(0,0,0,.06);--shadow-md:0 4px 16px rgba(0,0,0,.06),0 2px 6px rgba(0,0,0,.04);--radius:10px}
-        *{margin:0;padding:0;box-sizing:border-box}html{overflow-x:hidden}
-        body{font-family:'DM Sans',-apple-system,sans-serif;background:var(--cream);color:var(--dark);line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
-        body::before{content:'';position:fixed;inset:0;background:radial-gradient(ellipse at 20% 0%,rgba(45,90,71,.03) 0%,transparent 50%),radial-gradient(ellipse at 80% 100%,rgba(197,164,78,.03) 0%,transparent 50%);pointer-events:none;z-index:-1}
-        .top-bar{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(250,250,247,.82);backdrop-filter:blur(20px) saturate(1.2);-webkit-backdrop-filter:blur(20px) saturate(1.2);border-bottom:1px solid rgba(226,224,219,.6);padding:0 2.5rem;height:56px;display:flex;justify-content:space-between;align-items:center;transition:box-shadow .3s}
-        .top-bar.scrolled{box-shadow:0 1px 8px rgba(0,0,0,.06)}
-        .top-bar .name-small{font-family:'DM Sans',-apple-system,sans-serif;font-size:1.15rem;font-weight:600;color:var(--dark);text-decoration:none}
-        .top-bar .name-small:hover{color:var(--accent)}
-        .nav-links{display:flex;align-items:center;gap:1.5rem}
-        .nav-links a{text-decoration:none;color:var(--muted-light);font-size:.75rem;font-weight:500;letter-spacing:.04em;text-transform:uppercase;transition:color .25s;position:relative}
-        .nav-links a::after{content:'';position:absolute;bottom:-4px;left:0;right:0;height:1.5px;background:var(--accent);transform:scaleX(0);transition:transform .25s}
-        .nav-links a:hover{color:var(--dark)}.nav-links a:hover::after{transform:scaleX(1)}
-        .nav-links a.active{color:var(--dark)}.nav-links a.active::after{transform:scaleX(1)}
-        .lang-toggle{display:flex;background:var(--white);border-radius:22px;overflow:hidden;border:1px solid var(--border);box-shadow:var(--shadow-sm)}
-        .lang-btn{padding:.35rem .8rem;font-size:.7rem;font-weight:600;font-family:'DM Sans',sans-serif;border:none;cursor:pointer;background:transparent;color:var(--muted-light);transition:all .25s;letter-spacing:.06em}
-        .lang-btn.active{background:var(--accent);color:white;border-radius:20px;box-shadow:0 2px 8px rgba(45,90,71,.25)}
-        .page-hero{margin-top:56px;padding:3.5rem 1.5rem 2rem;max-width:1280px;margin-left:auto;margin-right:auto}
-        .page-hero h1{font-family:'Cormorant Garamond',serif;font-size:2.4rem;font-weight:700;letter-spacing:-.02em;margin-bottom:.4rem}
-        .page-hero .subtitle{font-size:.95rem;color:var(--muted);max-width:700px;line-height:1.7}
-        .back-link{display:inline-flex;align-items:center;gap:.4rem;font-size:.82rem;color:var(--accent);text-decoration:none;font-weight:500;margin-bottom:1.2rem;transition:gap .2s}
-        .back-link:hover{gap:.6rem}.back-link svg{width:16px;height:16px}
-        .main{max-width:1280px;margin:0 auto;padding:0 1.5rem 5rem;overflow-x:hidden}
-        .project-section{margin-bottom:1.5rem;scroll-margin-top:80px;padding-bottom:3rem}
-        .section-divider{height:3px;border:none;border-radius:2px;margin:0 0 2.5rem;background:linear-gradient(90deg,var(--accent),var(--gold))}
+        :root{
+            --paper:#F3EEE3;
+            --ink:#1C1B18;
+            --gray:#5C594F;
+            --gray-2:#96927F;
+            --line:#1C1B18;
+            --line-soft:#DFD9C9;
+            --white:#FFFFFF;
+            --blue:#2947C4;
+            --tan:#B08A52;
+            --red:#C6392F;
+            --green:#31584A;
+        }
+        *{margin:0;padding:0;box-sizing:border-box}
+        html{overflow-x:hidden;scroll-behavior:smooth}
+        body{font-family:'Open Sans',-apple-system,sans-serif;background:var(--paper);color:var(--ink);line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+        ::selection{background:var(--ink);color:var(--paper)}
+
+        /* ===== Top bar ===== */
+        .top-bar{position:fixed;top:0;left:0;right:0;z-index:100;background:var(--paper);border-bottom:1px solid var(--line-soft);padding:0 2.5rem;height:52px;display:flex;justify-content:space-between;align-items:center}
+        .top-bar .name-small{font-family:'Open Sans',sans-serif;font-size:.7rem;font-weight:600;letter-spacing:.28em;text-transform:uppercase;color:var(--ink);text-decoration:none}
+        .top-bar .name-small:hover{opacity:.6}
+        .nav-links{display:flex;align-items:center;gap:1.6rem}
+        .nav-links a{text-decoration:none;color:var(--gray);font-size:.62rem;font-weight:500;letter-spacing:.18em;text-transform:uppercase;transition:color .2s;position:relative}
+        .nav-links a::after{content:'';position:absolute;bottom:-4px;left:0;right:0;height:1px;background:var(--ink);transform:scaleX(0);transition:transform .2s;transform-origin:left}
+        .nav-links a:hover{color:var(--ink)}.nav-links a:hover::after{transform:scaleX(1)}
+        .nav-links a.active{color:var(--ink)}.nav-links a.active::after{transform:scaleX(1)}
+        .lang-toggle{display:flex;border:1px solid var(--ink);overflow:hidden}
+        .lang-btn{padding:.28rem .7rem;font-size:.62rem;font-weight:600;font-family:'Open Sans',sans-serif;border:none;cursor:pointer;background:transparent;color:var(--ink);transition:all .2s;letter-spacing:.1em}
+        .lang-btn.active{background:var(--ink);color:var(--paper)}
+
+        /* ===== Label pills (editorial) ===== */
+        .pill{display:inline-flex;align-items:center;background:transparent;color:var(--ink);font-size:.6rem;font-weight:600;letter-spacing:.24em;text-transform:uppercase;padding:0;white-space:nowrap}
+        .pill.pill-light{background:rgba(20,19,16,.55);color:#F5F1E6;padding:.32rem .8rem;backdrop-filter:blur(2px);letter-spacing:.2em;font-size:.58rem}
+
+        /* ===== Magazine hero ===== */
+        .mag-hero{margin-top:54px}
+        .mag-hero-media{position:relative;height:min(80vh,660px);overflow:hidden;background:var(--ink)}
+        .mag-hero-media > img{width:100%;height:100%;object-fit:cover;object-position:center 38%;display:block}
+        .mag-hero-toprow{position:absolute;top:1.5rem;left:2.5rem;right:2.5rem;display:flex;justify-content:space-between;align-items:flex-start;gap:1rem}
+        .mag-hero h1{position:absolute;left:2.5rem;bottom:1.8rem;font-family:'Fraunces',serif;font-size:clamp(2.4rem,5vw,3.8rem);font-weight:600;line-height:1;letter-spacing:.03em;text-transform:none;color:#F7F2E7;margin:0}
+        .mag-hero-contact{position:absolute;right:2.5rem;bottom:2rem;text-align:left;color:#F5F1E6;font-size:.7rem;line-height:1.9;max-width:300px;letter-spacing:.04em}
+        .mag-hero-contact b{font-weight:600}
+        .mag-hero-contact a{color:#F5F1E6;text-decoration:none}
+        .mag-hero-contact a:hover{text-decoration:underline}
+
+        .back-link{display:inline-flex;align-items:center;gap:.4rem;font-size:.62rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--ink);text-decoration:none;margin-bottom:1.5rem;transition:gap .2s}
+        .back-link:hover{gap:.7rem}.back-link svg{width:14px;height:14px}
+
+
+        /* ===== Touches artistiques ===== */
+        .fr-accent{font-family:'Fraunces',serif;font-style:italic;font-size:clamp(1rem,1.7vw,1.25rem);font-weight:600;color:var(--accent);margin-bottom:.4rem;letter-spacing:.01em}
+        .project-section{position:relative}
+                .footer-doodle{display:flex;justify-content:center;padding:2.2rem 0 0}
+        .footer-doodle svg{width:72px;height:88px}
+
+
+        /* ===== Bandeau artistique ===== */
+        .banner-row{display:flex;align-items:center;gap:1.2rem;margin:0 0 1.6rem}
+        .outline-banner{flex:1;min-width:0;font-family:'Fraunces',serif;font-weight:600;font-size:clamp(2rem,5.2vw,3.4rem);line-height:1.05;text-transform:uppercase;white-space:nowrap;overflow:hidden;color:var(--accent);opacity:.18;user-select:none;pointer-events:none;letter-spacing:.01em}
+        .big-num{font-family:'Fraunces',serif;font-weight:700;font-size:clamp(1.9rem,4vw,3rem);color:var(--accent);line-height:1;flex-shrink:0}
+        @media(max-width:768px){.outline-banner{font-size:2rem}.big-num{font-size:1.7rem}}
+
+        /* ===== Main / sections ===== */
+        .main{max-width:1180px;margin:0 auto;padding:4rem 2.5rem 5.5rem;overflow-x:hidden}
+        .project-section{margin-bottom:2.5rem;scroll-margin-top:80px;padding-bottom:4.5rem;--accent:var(--ink)}
+        #strategy{--accent:var(--blue)}
+        #brand{--accent:var(--tan)}
+        #product{--accent:var(--red)}
+        #community{--accent:var(--green)}
+        .section-divider{height:2px;border:none;margin:0 0 2.6rem;background:var(--accent)}
         .project-header{margin-bottom:2rem}
-        .project-header .project-number-title{display:flex;align-items:center;gap:1rem;margin-bottom:.3rem}
-        .project-number{font-family:'Cormorant Garamond',serif;font-size:.85rem;font-weight:600;color:var(--gold);background:var(--gold-light);width:28px;height:28px;display:flex;align-items:center;justify-content:center;border-radius:6px;flex-shrink:0}
-        .project-title{font-family:'Cormorant Garamond',serif;font-size:1.6rem;font-weight:700;color:var(--dark)}
-        .project-company{font-size:.85rem;color:var(--accent);font-weight:500;margin-left:2.6rem}
-        .project-loc{font-size:.78rem;color:var(--muted-light);margin-left:2.6rem}
-        .tag-row{display:flex;flex-wrap:wrap;gap:.4rem;margin-bottom:1.5rem}
-        .tag{font-size:.73rem;padding:.3rem .7rem;background:var(--accent-light);border-radius:20px;color:var(--accent);font-weight:600;border:1px solid rgba(45,90,71,.15)}
-        .content-card{background:var(--white);border:1px solid var(--border-light);border-radius:var(--radius);padding:2rem 2.2rem;box-shadow:var(--shadow-sm);margin-bottom:1.2rem}
-        .mission-impact-row{display:grid;grid-template-columns:1fr 1fr;border:1px solid var(--border-light);border-radius:var(--radius);box-shadow:var(--shadow-sm);margin-bottom:1.2rem;overflow:hidden;align-items:stretch}
-        .mission-impact-row .content-card,.mission-impact-row .impact-box{margin-bottom:0;box-shadow:none;border:none;border-radius:0;padding:1.6rem 1.8rem;min-height:100%}
-        .mission-impact-row .content-card{background:var(--white);border-right:3px solid var(--accent)}
-        .mission-impact-row .impact-box{background:linear-gradient(135deg,var(--accent-light),var(--gold-light))}
-        .mission-impact-row .impact-box h5{margin-bottom:.5rem}
-        .strategy-col .mission-impact-row .content-card,.strategy-col .mission-impact-row .impact-box{padding:1rem 1.2rem}
-        .strategy-col .mission-impact-row .content-card p,.strategy-col .mission-impact-row .impact-box p{font-size:.78rem;line-height:1.6}
-        @media(max-width:768px){.mission-impact-row{grid-template-columns:1fr}.content-card.has-img,.content-card.has-img.has-img-sm{grid-template-columns:1fr!important;gap:1rem}.content-card.has-img-sm .side-img{grid-template-columns:1fr 1fr}}
-        .content-card.has-img{display:grid;grid-template-columns:1fr 320px;gap:1.8rem;align-items:start}
-        .content-card.has-img.has-img-sm{grid-template-columns:1fr 360px;gap:1.4rem}
-        .content-card.has-img-sm .side-img{display:grid;grid-template-columns:1fr 1fr;gap:.6rem;flex-direction:initial}
-        .content-card.has-img-sm .side-img .showcase-item img{height:110px}
-        .content-card.has-img-sm .side-img .showcase-item .caption{font-size:.65rem;padding:.35rem .55rem;line-height:1.4}
+        .project-header .head-row{display:flex;align-items:center;gap:1.2rem;margin-bottom:1.6rem;flex-wrap:wrap}
+        .project-header .head-row::after{content:'';flex:1;height:1px;background:var(--accent);order:1;opacity:.65}
+        .project-header .head-row .pill:last-child{order:2;color:var(--gray)}
+        .project-title{font-family:'Fraunces',serif;font-size:clamp(2rem,4.2vw,3.1rem);font-weight:700;letter-spacing:0;line-height:1.05;color:var(--ink);text-transform:none;margin-bottom:.8rem}
+        .project-company{font-size:.76rem;font-weight:600;color:var(--ink);letter-spacing:.06em}
+        .project-loc{font-size:.64rem;color:var(--gray-2);text-transform:uppercase;letter-spacing:.16em;font-weight:500;margin-top:.15rem}
+        .project-intro{font-size:.88rem;color:var(--gray);line-height:1.7;margin:.8rem 0 0;max-width:720px}
+
+        /* ===== Tags ===== */
+        .tag-row{display:flex;flex-wrap:wrap;gap:.4rem;margin-bottom:1.6rem}
+        .tag{font-size:.56rem;padding:.32rem .75rem;background:var(--ink);color:var(--paper);font-weight:500;border:none;border-radius:999px;text-transform:uppercase;letter-spacing:.12em}
+
+        /* ===== Editorial content blocks ===== */
+        .content-card{background:transparent;border:none;padding:2.4rem 0;margin-bottom:0}
+        /* ===== Mission lead + Impact strip ===== */
+        .mi-row{display:grid;grid-template-columns:1.05fr .95fr;gap:1.4rem;align-items:stretch;margin:1.4rem 0 .4rem}
+        .mission-lead{margin:0;max-width:none;background:var(--white);border:1px solid var(--line-soft);border-radius:3px;padding:1.5rem 1.7rem}
+        .lead-label{display:block;font-size:.58rem;font-weight:600;letter-spacing:.3em;text-transform:uppercase;color:var(--gray-2);margin-bottom:.7rem}
+        .lead-label::after{content:'';display:block;width:30px;height:1.5px;background:var(--accent);margin-top:.5rem}
+        .mission-lead p{font-size:.8rem;line-height:1.8;color:var(--ink);font-weight:400}
+        .impact-strip{background:var(--accent);color:#F7F2E7;border:none;border-radius:3px;padding:1.5rem 1.7rem;margin:0}
+        .impact-strip .lead-label{color:rgba(247,242,231,.75)}
+        .impact-strip .lead-label::after{background:rgba(247,242,231,.9)}
+        .impact-stats{display:grid;grid-template-columns:1fr;gap:.85rem;margin-top:1rem}
+        .stat-num{font-family:'Fraunces',serif;font-size:clamp(1.1rem,1.9vw,1.45rem);font-weight:700;letter-spacing:.02em;display:block;line-height:1.15;color:#FDFAF2}
+        .stat-label{font-size:.58rem;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:rgba(247,242,231,.8);display:block;margin-top:.15rem}
+        .impact-statement{margin-top:.9rem;font-size:.88rem;font-weight:600;line-height:1.7;color:#FDFAF2;max-width:none}
+        .impact-note{margin-top:1rem;font-size:.74rem;color:rgba(247,242,231,.88);line-height:1.7;max-width:none}
+        .content-card.has-img{display:grid;grid-template-columns:1.05fr .95fr;gap:3.5rem;align-items:center}
+        .content-card.has-img.img-left{grid-template-columns:.95fr 1.05fr}
+        .content-card.has-img.img-left > .side-img{order:-1}
+        .content-card.has-img.has-img-sm{grid-template-columns:1.05fr .95fr;gap:3rem}
+        .content-card.has-img-sm .side-img{display:grid;grid-template-columns:1fr 1fr;gap:.8rem;flex-direction:initial}
+        .content-card.has-img-sm .side-img .showcase-item img{height:170px}
+        .content-card.has-img-sm .side-img .showcase-item .caption{font-size:.68rem;padding:.4rem .6rem;line-height:1.4}
         .content-card .card-body{min-width:0}
-        .content-card h4{font-size:.9rem;font-weight:700;margin-bottom:.6rem;color:var(--dark);display:flex;align-items:center;gap:.5rem}
-        .content-card h4 .icon{width:22px;height:22px;background:var(--gold-light);border-radius:5px;display:flex;align-items:center;justify-content:center;font-size:.7rem;flex-shrink:0}
-        .content-card p,.content-card li{font-size:.85rem;color:var(--muted);line-height:1.7}
+        .content-card h4{font-family:'Open Sans',sans-serif;font-size:.74rem;font-weight:600;margin-bottom:.9rem;color:var(--ink);display:flex;align-items:center;gap:.5rem;letter-spacing:.26em;text-transform:uppercase}
+        .content-card h4 .icon{display:none}
+        .content-card p,.content-card li{font-size:.8rem;color:var(--gray);line-height:1.8}
         .content-card ul{list-style:none;padding:0;margin-top:.5rem}
         .content-card ul li{position:relative;padding-left:1.1rem;margin-bottom:.4rem}
-        .content-card ul li::before{content:'';position:absolute;left:0;top:.6em;width:4px;height:4px;background:var(--gold);border-radius:50%}
-        .kw{color:var(--dark);font-weight:600}
-        .side-img{align-self:center;display:flex;flex-direction:column;gap:.6rem}
-        .side-img .showcase-item{background:var(--cream);border:1px solid var(--border-light);border-radius:8px;overflow:hidden;box-shadow:var(--shadow-sm)}
-        .side-img .showcase-item img{width:100%;height:160px;object-fit:cover;display:block;border-bottom:1px solid var(--border-light)}
-        .side-img .showcase-item .caption{padding:.5rem .7rem;font-size:.7rem;color:var(--muted);line-height:1.45;font-weight:500}
-        .strategy-col .content-card.has-img{grid-template-columns:1fr 200px;gap:1.2rem}
-        .strategy-col .side-img .showcase-item img{height:140px}
-        .strategy-col .side-img .showcase-item .caption{font-size:.65rem;padding:.4rem .6rem}
+        .content-card ul li::before{content:'';position:absolute;left:0;top:.72em;width:8px;height:1.5px;background:var(--accent)}
+        .kw{color:var(--ink);font-weight:600}
+
+        /* ===== Images ===== */
+        .side-img{align-self:center;display:flex;flex-direction:column;gap:.8rem}
+        .side-img .showcase-item{background:var(--white);border:1px solid var(--line-soft);overflow:hidden}
+        .side-img .showcase-item img{width:100%;height:280px;object-fit:cover;display:block;border-bottom:1px solid var(--line-soft)}
+        .side-img .showcase-item .caption{padding:.55rem .8rem;font-size:.66rem;color:var(--gray-2);line-height:1.55;font-weight:400;letter-spacing:.03em}
         .imgs-below{margin-top:1rem;display:grid;gap:.8rem}
         .imgs-below.cols-2{grid-template-columns:1fr 1fr}
         .imgs-below.cols-3{grid-template-columns:repeat(3,1fr)}
         .imgs-below.cols-4{grid-template-columns:repeat(4,1fr)}
-        .imgs-below .showcase-item{background:var(--cream);border:1px solid var(--border-light);border-radius:8px;overflow:hidden;box-shadow:var(--shadow-sm)}
-        .imgs-below .showcase-item img{width:100%;height:170px;object-fit:cover;display:block;border-bottom:1px solid var(--border-light)}
-        .imgs-below .showcase-item .caption{padding:.55rem .75rem;font-size:.72rem;color:var(--muted);line-height:1.5;font-weight:500}
+        .imgs-below .showcase-item{background:var(--white);border:1px solid var(--line-soft);overflow:hidden}
+        .imgs-below .showcase-item img{width:100%;height:170px;object-fit:cover;display:block;border-bottom:1px solid var(--line-soft)}
+        .imgs-below .showcase-item .caption{padding:.55rem .75rem;font-size:.7rem;color:var(--gray);line-height:1.5;font-weight:500}
         .showcase{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-bottom:1.5rem}
-        .showcase-item{background:var(--white);border:1px solid var(--border-light);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow-sm);transition:transform .3s,box-shadow .3s}
-        .showcase-item:hover{transform:translateY(-3px);box-shadow:var(--shadow-md)}
-        .showcase-item img{width:100%;height:180px;object-fit:cover;border-bottom:1px solid var(--border-light)}
-        .showcase-item .caption{padding:.7rem .9rem;font-size:.75rem;color:var(--muted);line-height:1.5;font-weight:500}
+        .showcase-item{background:var(--white);border:1px solid var(--line-soft);overflow:hidden;transition:transform .25s}
+        .showcase-item:hover{transform:translateY(-3px)}
+        .showcase-item img{width:100%;height:180px;object-fit:cover;border-bottom:1px solid var(--line-soft)}
+        .showcase-item .caption{padding:.7rem .9rem;font-size:.72rem;color:var(--gray);line-height:1.5;font-weight:500}
         .showcase.cols-4{grid-template-columns:repeat(4,1fr)}
-        .impact-box{background:linear-gradient(135deg,var(--accent-light),var(--gold-light));border-radius:var(--radius);padding:1.4rem 1.8rem;margin-top:1rem;border-left:3px solid var(--accent)}
-        .impact-box h5{font-size:.78rem;text-transform:uppercase;letter-spacing:.06em;color:var(--accent);font-weight:700;margin-bottom:.4rem}
-        .impact-box p{font-size:.85rem;color:var(--muted);line-height:1.7}
-        .impact-box .kw{color:var(--accent);font-weight:700}
-        /* Strategy split layout */
-        .project-intro{font-size:.88rem;color:var(--muted);line-height:1.7;margin:.7rem 0 0 2.6rem;font-style:italic;max-width:720px}
-        .strategy-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem}
-        .strategy-col{min-width:0}
-        .col-header{margin-bottom:.9rem;padding-bottom:.7rem;border-bottom:1px solid var(--border-light)}
-        .col-header .subtitle-sm{font-family:'Cormorant Garamond',serif;font-size:1.35rem;font-weight:700;color:var(--dark);margin-bottom:.4rem;line-height:1.2}
-        .col-header .company-line{font-size:.82rem;color:var(--accent);font-weight:500}
-        .col-header .company-line .loc{color:var(--muted-light);font-weight:400}
-        .strategy-col .content-card{padding:1.3rem 1.4rem;margin-bottom:.8rem}
-        .strategy-col .content-card h4{font-size:.83rem;margin-bottom:.45rem}
-        .strategy-col .content-card p,.strategy-col .content-card li{font-size:.8rem;line-height:1.65}
-        .strategy-col .tag-row{margin-bottom:.9rem;gap:.3rem}
-        .strategy-col .tag{font-size:.68rem;padding:.22rem .55rem}
-        .strategy-col .showcase{grid-template-columns:1fr 1fr;gap:.5rem;margin-bottom:.9rem}
-        .strategy-col .showcase-item img{height:110px}
-        .strategy-col .showcase-item .caption{font-size:.68rem;padding:.5rem .6rem;line-height:1.45}
-        .strategy-col .impact-box{padding:1rem 1.3rem}
-        .strategy-col .impact-box p{font-size:.8rem}
-        .strategy-col .ref-section{margin-top:.8rem}
-        .strategy-col .ref-section p{font-size:.72rem;color:var(--muted-light);font-style:italic}
+
+        /* ===== Strategy split ===== */
+        .col-header{margin-bottom:1rem;padding-bottom:.7rem;border-bottom:1px solid var(--line-soft)}
+        .col-header .subtitle-sm{font-family:'Open Sans',sans-serif;font-size:1.5rem;font-weight:800;letter-spacing:-.02em;color:var(--ink);margin-bottom:.3rem;line-height:1.1;text-transform:uppercase}
+        .col-header .company-line{font-size:.78rem;color:var(--ink);font-weight:600}
+        .col-header .company-line .loc{color:var(--gray-2);font-weight:400}
         .inline-img{margin-top:.9rem;margin-bottom:1.2rem;display:grid;gap:.6rem}
         .inline-img.cols-1{grid-template-columns:1fr}
         .inline-img.cols-2{grid-template-columns:1fr 1fr}
         .inline-img .showcase-item img{height:160px}
-        .strategy-col .inline-img .showcase-item img{height:130px}
         .content-card .inline-img{margin-top:1rem;margin-bottom:0}
-        .content-card .inline-img .showcase-item{background:var(--cream);border-color:var(--border)}
+        .content-card .inline-img .showcase-item{background:var(--white)}
         .content-card .inline-img .showcase-item img{height:180px}
-        .strategy-col .content-card .inline-img .showcase-item img{height:140px}
-        .content-card .card-img{margin-top:1rem;border-radius:var(--radius);overflow:hidden;border:1px solid var(--border-light)}
+        .content-card .card-img{margin-top:1rem;overflow:hidden;border:1px solid var(--line-soft)}
         .content-card .card-img img{width:100%;display:block;object-fit:cover}
         .content-card .card-img.h-sm img{height:140px}
         .content-card .card-img.h-md img{height:180px}
         .content-card .card-img.split{display:grid;grid-template-columns:1fr 1fr;gap:.5rem;border:none;overflow:visible}
-        .content-card .card-img.split > div{border:1px solid var(--border-light);border-radius:var(--radius);overflow:hidden}
+        .content-card .card-img.split > div{border:1px solid var(--line-soft);overflow:hidden}
         .content-card .card-img.split img{height:130px}
         @media(min-width:769px){
-            .content-card h4{font-size:1rem}
-            .content-card p,.content-card li{font-size:.93rem}
-            .page-hero .subtitle{font-size:1.02rem}
-            .project-title{font-size:1.7rem}
-            .project-company{font-size:.9rem}
-            .impact-box p{font-size:.93rem}
-            .showcase-item .caption{font-size:.8rem}
-            .tag{font-size:.78rem;padding:.35rem .8rem}
+            .content-card p,.content-card li{font-size:.82rem}
         }
+
+        /* ===== References / footer ===== */
         .ref-section{margin-top:1.5rem}
-        .ref-section h4{font-size:.82rem;font-weight:700;margin-bottom:.6rem;color:var(--dark)}
-        .ref-link{display:inline-flex;align-items:center;gap:.4rem;font-size:.8rem;font-weight:500;color:var(--accent);text-decoration:none;padding:.35rem .8rem;border:1px solid var(--accent);border-radius:6px;transition:all .25s;margin-right:.5rem;margin-bottom:.5rem}
-        .ref-link:hover{background:var(--accent);color:var(--white)}
+        .ref-section h4{font-family:'Open Sans',sans-serif;font-size:.62rem;font-weight:600;margin-bottom:.6rem;color:var(--ink);text-transform:uppercase;letter-spacing:.26em}
+        .ref-link{display:inline-flex;align-items:center;gap:.4rem;font-size:.6rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--ink);text-decoration:none;padding:.4rem .9rem;border:1px solid var(--ink);border-radius:999px;transition:all .2s;margin-right:.5rem;margin-bottom:.5rem;background:transparent}
+        .ref-link:hover{background:var(--ink);color:var(--paper)}
         .ref-link svg{width:14px;height:14px}
-        footer{text-align:center;padding:2.5rem;font-size:.78rem;color:var(--muted-light);border-top:1px solid var(--border-light);max-width:1000px;margin:0 auto}
-        .back-to-top{display:flex;position:fixed;bottom:1.5rem;right:1.5rem;z-index:90;padding:.5rem 1rem;border-radius:22px;border:none;background:var(--accent);color:white;cursor:pointer;box-shadow:0 3px 12px rgba(45,90,71,.3);align-items:center;justify-content:center;gap:.35rem;font-family:'DM Sans',sans-serif;font-size:.75rem;font-weight:600;transition:opacity .3s,transform .3s;opacity:0;transform:translateY(10px)}
+        footer{text-align:center;padding:2.5rem;font-size:.6rem;font-weight:500;letter-spacing:.24em;text-transform:uppercase;color:var(--gray-2);border-top:1px solid var(--line-soft);max-width:1180px;margin:0 auto}
+        .back-to-top{display:flex;position:fixed;bottom:1.5rem;right:1.5rem;z-index:90;padding:.5rem .95rem;border:1px solid var(--ink);background:var(--ink);color:var(--paper);cursor:pointer;align-items:center;justify-content:center;gap:.35rem;font-family:'Open Sans',sans-serif;font-size:.66rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;transition:opacity .3s,transform .3s;opacity:0;transform:translateY(10px)}
         .back-to-top.visible{opacity:1;transform:translateY(0)}
-        .back-to-top:hover{background:#1e4535}
-        .back-to-top svg{width:16px;height:16px}
+        .back-to-top:hover{background:var(--paper);color:var(--ink)}
+        .back-to-top svg{width:14px;height:14px}
+
         @media(max-width:768px){
             .top-bar{padding:0 1rem}
-            .page-hero{padding:3rem 1.2rem 1.5rem}.page-hero h1{font-size:1.8rem}
-            .main{padding:0 1.2rem 3rem}
-            .content-card{padding:1.4rem 1.2rem}
+            .mag-hero-media{height:min(62vh,460px)}
+            .mag-hero-toprow{top:1rem;left:1.2rem;right:1.2rem}
+            .mag-hero h1{left:1.2rem;bottom:1.2rem;font-size:clamp(.9rem,3.6vw,1.2rem);letter-spacing:.42em}
+            .mag-hero-contact{display:none}
+            .main{padding:2.5rem 1.2rem 3rem}
+            .content-card{padding:1.6rem 0}
             .nav-links a.nav-desktop{display:none}
             .showcase{grid-template-columns:repeat(2,1fr)}.showcase.cols-4{grid-template-columns:repeat(2,1fr)}
             .showcase-item img{height:120px}
-            .strategy-grid{grid-template-columns:1fr;gap:1rem}
             .project-intro{margin-left:0;font-size:.85rem}
-            .strategy-col .showcase-item img{height:100px}
-            .content-card.has-img,.strategy-col .content-card.has-img{grid-template-columns:1fr;gap:1rem}
-            .side-img .showcase-item img{height:140px}
+            .project-company,.project-loc{margin-left:0}
+            .mi-row{grid-template-columns:1fr;gap:1rem}
+            .impact-strip{padding:1.4rem 1.2rem}
+            .mission-lead{padding:1.3rem 1.2rem}
+            .content-card.has-img,.content-card.has-img.has-img-sm{grid-template-columns:1fr;gap:1rem}
+            .content-card.has-img-sm .side-img{grid-template-columns:1fr 1fr}
+            .side-img .showcase-item img{height:210px}
             .imgs-below.cols-2,.imgs-below.cols-3,.imgs-below.cols-4{grid-template-columns:1fr 1fr}
             .imgs-below .showcase-item img{height:120px}
+        }
+        @media(prefers-reduced-motion:reduce){
+            *,*::before,*::after{transition:none!important;animation:none!important}
+            html{scroll-behavior:auto}
         }
     </style>
 </head>
@@ -181,9 +227,10 @@
 <nav class="top-bar" id="topbar">
     <a class="name-small" href="index.html">Yi-Hsuan Chiu</a>
     <div class="nav-links">
-        <a href="#strategy" class="nav-desktop">Strategy & Content</a>
+        <a href="#strategy" class="nav-desktop">Digital Marketing</a>
+        <a href="#brand" class="nav-desktop">Brand Strategy</a>
         <a href="#product" class="nav-desktop">Product Strategy</a>
-        <a href="#community" class="nav-desktop">Community & Project</a>
+        <a href="#community" class="nav-desktop">Community</a>
         <a href="index.html" class="nav-desktop">&larr; CV</a>
         <div class="lang-toggle">
             <button class="lang-btn active" id="btn-fr" onclick="setLang('fr')">FR</button>
@@ -192,56 +239,66 @@
     </div>
 </nav>
 
-<header class="page-hero">
+<header class="mag-hero">
+    <div class="mag-hero-media">
+        <img src="bg.jpg" alt="Arc de Triomphe, Paris" loading="eager">
+        <div class="mag-hero-toprow">
+            <span class="pill pill-light" data-fr="Présentation personnelle" data-en="Personal Presentation">Présentation personnelle</span>
+            <span class="pill pill-light">2026</span>
+        </div>
+        <div class="mag-hero-contact">
+            <div><b data-fr="Nom :" data-en="Name:">Nom :</b> Yi-Hsuan Chiu</div>
+            <div><b data-fr="Basée à :" data-en="Based in:">Basée à :</b> <span data-fr="Bordeaux, France · Mobile" data-en="Bordeaux, France · Open to relocation">Bordeaux, France · Mobile</span></div>
+            <div><b>Email :</b> <a href="mailto:c.hsuann@gmail.com">c.hsuann@gmail.com</a></div>
+        </div>
+        <h1>Portfolio</h1>
+    </div>
+</header>
+
+<main class="main">
     <a class="back-link" href="index.html">
         <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 4l-6 6 6 6"/></svg>
         <span data-fr="Retour au CV" data-en="Back to CV">Retour au CV</span>
     </a>
-    <h1>Portfolio</h1>
-    <p class="subtitle" data-fr="Détail de mes expériences en stratégie digitale, développement produit et gestion de communauté." data-en="Details of my experience in digital strategy, product development and community management.">Détail de mes expériences en stratégie digitale, développement produit et gestion de communauté.</p>
-</header>
 
-<main class="main">
-
-    <!-- ===== 01: Strategy & Content Development ===== -->
     <!-- ===== 01: Digital Marketing & Brand Strategy ===== -->
-    <section class="project-section" id="strategy">
+    <section class="project-section accent-blue" id="strategy">
         <hr class="section-divider">
+        <div class="banner-row"><div class="outline-banner" aria-hidden="true">Marketing &middot; Marketing &middot; Marketing &middot; Marketing</div><span class="big-num">01</span></div>
         <div class="project-header">
-            <div class="project-number-title">
-                <span class="project-number">01</span>
-                <span class="project-title">Digital Marketing & Brand Strategy</span>
+            <div class="head-row">
+                <span class="pill" data-fr="Étude de cas 01" data-en="Case Study 01">Étude de cas 01</span>
+                <span class="pill">06 &ndash; 12/2024</span>
             </div>
-            <p class="project-intro" data-fr="Deux approches complémentaires : performance marketing data-driven et stratégie de marque pour l'entrée sur de nouveaux marchés." data-en="Two complementary approaches: data-driven performance marketing and brand strategy for new market entry.">Deux approches complémentaires : performance marketing data-driven et stratégie de marque pour l'entrée sur de nouveaux marchés.</p>
+            <div class="fr-accent" data-fr="la stratégie digitale" data-en="digital strategy">la stratégie digitale</div>
+            <h2 class="project-title">Digital<br>Marketing</h2>
+            <div class="project-company">UniFox &middot; GreenTech, Web3</div>
+            <div class="project-loc">Bordeaux, France &middot; 06 &ndash; 12/2024</div>
         </div>
-
-        <div class="strategy-grid">
-
-            <!-- ===== UniFox column ===== -->
-            <div class="strategy-col">
-                <div class="col-header">
-                    <div class="subtitle-sm">Digital Marketing</div>
-                    <div class="company-line">UniFox &middot; GreenTech, Web3 &nbsp;<span class="loc">Bordeaux, France &middot; 06 &ndash; 12/2024</span></div>
-                </div>
                 <div class="tag-row">
-                    <span class="tag">Content Strategy</span><span class="tag">GA4</span><span class="tag">GTM</span><span class="tag">SEO</span><span class="tag">CRO</span><span class="tag">Google Ads</span><span class="tag">Meta Business Suite</span><span class="tag">Iconosquare</span><span class="tag">UX Research</span>
+                    <span class="tag">Content Strategy</span><span class="tag">GA4</span><span class="tag">GTM</span><span class="tag">PostHog</span><span class="tag">Tableau</span><span class="tag">Google Ads</span><span class="tag">CRO</span><span class="tag">UX & Funnel Analysis</span><span class="tag">SEO</span><span class="tag">Meta Business Suite</span><span class="tag">Iconosquare</span>
                 </div>
-                <div class="mission-impact-row">
-<div class="content-card">
-                    <h4><span class="icon">🎯</span> <span data-fr="La mission" data-en="The Mission">La mission</span></h4>
+                <div class="mi-row">
+                <div class="mission-lead">
+                    <span class="lead-label" data-fr="La mission" data-en="The Mission">La mission</span>
                     <p data-fr="Développement et gestion de campagnes marketing digital et de stratégie de contenu, avec optimisation des performances par une approche data-driven pour une plateforme GreenTech Web3 de trading crypto avec bot IA." data-en="Developing and managing <span class=kw>digital marketing campaigns</span> and <span class=kw>content strategy</span> with performance optimization through <span class=kw>data-driven approaches</span> for a GreenTech Web3 AI-bot crypto trading platform.">Développement et gestion de campagnes marketing digital et de stratégie de contenu, avec optimisation des performances par une approche data-driven pour une plateforme GreenTech Web3 de trading crypto avec bot IA.</p>
                 </div>
-<div class="impact-box">
-                    <h5>Impact</h5>
-                    <p data-fr="<span class=kw>Taux de conversion de 53,52 %</span> grâce à l'optimisation SEO et CRO. <span class=kw>Réduction du taux de rebond de 52,6 %</span> par un ciblage stratégique. Engagement utilisateur renforcé via une optimisation data-driven avec une voix de marque cohérente sur 6+ plateformes." data-en="Achieved a <span class=kw>53.52% conversion rate</span> through SEO and CRO optimization. <span class=kw>Reduced bounce rate by 52.6%</span> via strategic targeting. Increased user engagement through data-driven optimization with consistent brand voice across 6+ platforms.">Taux de conversion de 53,52 % grâce à l'optimisation SEO et CRO. Réduction du taux de rebond de 52,6 % par un ciblage stratégique. Engagement utilisateur renforcé via une optimisation data-driven avec une voix de marque cohérente sur 6+ plateformes.</p>
+                <div class="impact-strip">
+                    <span class="lead-label" data-fr="Impact" data-en="Impact">Impact</span>
+                    <div class="impact-stats">
+                        <div class="stat"><span class="stat-num" data-fr="−52,6 %" data-en="−52.6%">−52,6 %</span><span class="stat-label" data-fr="taux de rebond" data-en="bounce rate">taux de rebond</span></div>
+                        <div class="stat"><span class="stat-num" data-fr="53,52 %" data-en="53.52%">53,52 %</span><span class="stat-label" data-fr="conversion Google Ads" data-en="Google Ads conversion">conversion Google Ads</span></div>
+                        <div class="stat"><span class="stat-num" data-fr="+114 %" data-en="+114%">+114 %</span><span class="stat-label" data-fr="vues mensuelles du site" data-en="monthly site views">vues mensuelles du site</span></div>
+                    </div>
+                    <p class="impact-note" data-fr="Identification et résolution d'un écart de conversion critique iOS vs Android (58,82 % vs 95,2 %) grâce à des correctifs UX ciblés." data-en="Identified and closed a critical iOS vs Android conversion gap (58.82% vs 95.2%) through targeted UX fixes.">Identification et résolution d'un écart de conversion critique iOS vs Android (58,82 % vs 95,2 %) grâce à des correctifs UX ciblés.</p>
                 </div>
                 </div>
                 <div class="content-card has-img">
                     <div class="card-body">
                     <h4><span class="icon">⚙️</span> <span data-fr="Stratégie de contenu & Analytics" data-en="Content Strategy & Analytics">Stratégie de contenu & Analytics</span></h4>
                     <ul>
-                        <li data-fr="Implémentation de GA4 et Google Tag Manager pour un suivi avancé des performances" data-en="Implemented <span class=kw>GA4</span> and <span class=kw>Google Tag Manager</span> for advanced performance tracking">Implémentation de GA4 et Google Tag Manager pour un suivi avancé des performances</li>
-                        <li data-fr="Création de contenus personnalisés basés sur la segmentation utilisateurs et les données comportementales" data-en="Created personalized content based on <span class=kw>user segmentation</span> and <span class=kw>behavioral data</span>">Création de contenus personnalisés basés sur la segmentation utilisateurs et les données comportementales</li>
+                        <li data-fr="Construction de zéro de dashboards de performance centralisés multi-plateformes (GA4, Tableau, Google Ads, LinkedIn, TikTok, Instagram) pour suivre contenus et campagnes en un seul endroit" data-en="Built <span class=kw>centralized, multi-platform performance dashboards from scratch</span> (GA4, Tableau, Google Ads, LinkedIn, TikTok, Instagram) to track content and campaign performance in one place">Construction de zéro de dashboards de performance centralisés multi-plateformes (GA4, Tableau, Google Ads, LinkedIn, TikTok, Instagram) pour suivre contenus et campagnes en un seul endroit</li>
+                        <li data-fr="Création de contenus personnalisés basés sur la segmentation utilisateurs et les données comportementales, avec un taux d'engagement remarquable de 8,67 événements par session sur le social organique" data-en="Created personalized content based on <span class=kw>user segmentation</span> and <span class=kw>behavioral data</span>, including a standout <span class=kw>8.67 events-per-session</span> engagement rate on organic social">Création de contenus personnalisés basés sur la segmentation utilisateurs et les données comportementales, avec un taux d'engagement remarquable de 8,67 événements par session sur le social organique</li>
                         <li data-fr="Optimisation du contenu multi-plateformes via l'analyse continue des performances" data-en="Optimized <span class=kw>multi-platform content</span> through continuous performance analysis">Optimisation du contenu multi-plateformes via l'analyse continue des performances</li>
                         <li data-fr="Gestion de la diffusion sur LinkedIn, Facebook, Twitter, Instagram, TikTok et Threads" data-en="Managed distribution across LinkedIn, Facebook, Twitter, Instagram, TikTok and Threads">Gestion de la diffusion sur LinkedIn, Facebook, Twitter, Instagram, TikTok et Threads</li>
                     </ul>
@@ -253,14 +310,14 @@
                     </div>
                 </div>
                 </div>
-                <div class="content-card has-img">
+                <div class="content-card has-img img-left">
                     <div class="card-body">
                     <h4><span class="icon">🎨</span> <span data-fr="Création de contenu & Outils" data-en="Content Creation & Tools">Création de contenu & Outils</span></h4>
                     <ul>
                         <li data-fr="Conception de visuels adaptés à chaque plateforme avec Canva, Figma et CapCut" data-en="Designed platform-specific visuals using Canva, Figma and CapCut">Conception de visuels adaptés à chaque plateforme avec Canva, Figma et CapCut</li>
                         <li data-fr="Production de contenus vidéo engageants adaptés à l'audience de chaque canal" data-en="Produced engaging video content adapted to each channel's audience">Production de contenus vidéo engageants adaptés à l'audience de chaque canal</li>
-                        <li data-fr="Développement de contenus optimisés SEO pour renforcer la visibilité organique" data-en="Developed <span class=kw>SEO-optimized</span> content for enhanced organic visibility">Développement de contenus optimisés SEO pour renforcer la visibilité organique</li>
-                        <li data-fr="Mise en place de stratégies d'optimisation du taux de conversion" data-en="Implemented <span class=kw>conversion rate optimization</span> strategies">Mise en place de stratégies d'optimisation du taux de conversion</li>
+                        <li data-fr="Développement de contenus optimisés par mots-clés pour renforcer la visibilité organique" data-en="Developed <span class=kw>keyword-optimized content</span> for enhanced organic visibility">Développement de contenus optimisés par mots-clés pour renforcer la visibilité organique</li>
+                        <li data-fr="Mise en place de stratégies d'optimisation du taux de conversion sur les campagnes Google Ads" data-en="Implemented <span class=kw>conversion rate optimization</span> strategies across Google Ads campaigns">Mise en place de stratégies d'optimisation du taux de conversion sur les campagnes Google Ads</li>
                     </ul>
                     </div>
                     <div class="side-img">
@@ -274,10 +331,11 @@
                     <div class="card-body">
                     <h4><span class="icon">📊</span> <span data-fr="Suivi des performances" data-en="Performance Tracking">Suivi des performances</span></h4>
                     <ul>
-                        <li data-fr="Recherche UX pour identifier les axes d'amélioration du contenu" data-en="Conducted UX research to identify content improvement opportunities">Recherche UX pour identifier les axes d'amélioration du contenu</li>
-                        <li data-fr="Suivi du comportement utilisateurs, sessions, engagement et segmentation" data-en="Monitored user behavior, sessions, engagement and segmentation">Suivi du comportement utilisateurs, sessions, engagement et segmentation</li>
+                        <li data-fr="Recherche UX au niveau appareil et navigateur, avec identification d'un écart de conversion critique iOS vs Android (58,82 % vs 95,2 %)" data-en="Conducted <span class=kw>device and browser-level UX research</span>, identifying a critical <span class=kw>iOS vs Android conversion gap (58.82% vs 95.2%)</span>">Recherche UX au niveau appareil et navigateur, avec identification d'un écart de conversion critique iOS vs Android (58,82 % vs 95,2 %)</li>
+                        <li data-fr="Mise en place et suivi de PostHog en complément de GA4 pour un tracking approfondi des sessions et des comportements" data-en="Set up and monitored <span class=kw>PostHog</span> alongside GA4 for deeper session and behavioral tracking">Mise en place et suivi de PostHog en complément de GA4 pour un tracking approfondi des sessions et des comportements</li>
+                        <li data-fr="Suivi du comportement utilisateurs, sessions, engagement et segmentation sur l'ensemble des canaux" data-en="Monitored user behavior, sessions, engagement and segmentation across channels">Suivi du comportement utilisateurs, sessions, engagement et segmentation sur l'ensemble des canaux</li>
                         <li data-fr="Analyse des sources de trafic et performances des campagnes multi-canaux" data-en="Analyzed traffic sources and multi-channel campaign performance">Analyse des sources de trafic et performances des campagnes multi-canaux</li>
-                        <li data-fr="Optimisation des CTAs et entonnoirs de conversion basée sur les données" data-en="Optimized CTAs and conversion funnels based on data insights">Optimisation des CTAs et entonnoirs de conversion basée sur les données</li>
+                        <li data-fr="Implémentation des correctifs identifiés (simplification du formulaire d'inscription, repositionnement des CTA, optimisation du temps de chargement) pour combler l'écart de conversion" data-en="Implemented the resulting fixes (subscription form simplification, CTA repositioning, page-load optimization) to close the conversion gap">Implémentation des correctifs identifiés (simplification du formulaire d'inscription, repositionnement des CTA, optimisation du temps de chargement) pour combler l'écart de conversion</li>
                     </ul>
                     </div>
                     <div class="side-img">
@@ -287,29 +345,38 @@
                     </div>
                 </div>
                 </div>
-                
-            </div>
 
-            <!-- ===== Hôtel column ===== -->
-            <div class="strategy-col">
-                <div class="col-header">
-                    <div class="subtitle-sm">Brand Strategy</div>
-                    <div class="company-line" data-fr="Hôtel 4★ Restaurant · Hôtellerie de charme &nbsp;<span class='loc'>Dordogne, France · Freelance</span>" data-en="4★ Hotel & Restaurant · Boutique hospitality &nbsp;<span class='loc'>Dordogne, France · Freelance</span>">Hôtel 4★ Restaurant · Hôtellerie de charme &nbsp;<span class="loc">Dordogne, France · Freelance</span></div>
-                </div>
+    </section>
+
+    <!-- ===== 02: Brand Strategy (Hôtel) ===== -->
+    <section class="project-section accent-tan" id="brand">
+        <hr class="section-divider">
+        <div class="banner-row"><div class="outline-banner" aria-hidden="true">Branding &middot; Branding &middot; Branding &middot; Branding</div><span class="big-num">02</span></div>
+        <div class="project-header">
+            <div class="head-row">
+                <span class="pill" data-fr="Étude de cas 02" data-en="Case Study 02">Étude de cas 02</span>
+                <span class="pill">Freelance</span>
+            </div>
+            <div class="fr-accent" data-fr="l'image de marque" data-en="the brand image">l'image de marque</div>
+            <h2 class="project-title">Brand<br>Strategy</h2>
+            <div class="project-company" data-fr="Hôtel 4★ Restaurant · Hôtellerie de charme" data-en="4★ Hotel & Restaurant · Boutique hospitality">Hôtel 4★ Restaurant · Hôtellerie de charme</div>
+            <div class="project-loc">Dordogne, France &middot; Freelance</div>
+        </div>
                 <div class="tag-row">
                     <span class="tag">Market Analysis</span><span class="tag">Brand Positioning</span><span class="tag">Persona Definition</span><span class="tag">Bilingual Strategy (FR/EN)</span><span class="tag">Visual Identity</span><span class="tag">Instagram Mockup</span><span class="tag">Competitive Benchmarking</span>
                 </div>
-                <div class="mission-impact-row">
-                <div class="content-card">
-                    <h4><span class="icon">🎯</span> <span data-fr="La mission" data-en="The Mission">La mission</span></h4>
+                <div class="mi-row">
+                <div class="mission-lead">
+                    <span class="lead-label" data-fr="La mission" data-en="The Mission">La mission</span>
                     <p data-fr="Définition d'une <span class=kw>stratégie digitale bilingue (FR/EN)</span> pour positionner un établissement hôtelier de charme sur le marché américain CSP+, avec analyse de cible, recommandations éditoriales et maquette de présence Instagram." data-en="Defined a <span class=kw>bilingual digital strategy (FR/EN)</span> to position a boutique hotel on the US premium market, with target analysis, editorial recommendations and Instagram mockup.">Définition d'une stratégie digitale bilingue (FR/EN) pour positionner un établissement hôtelier de charme sur le marché américain CSP+, avec analyse de cible, recommandations éditoriales et maquette de présence Instagram.</p>
                 </div>
-                <div class="impact-box">
-                    <h5>Impact</h5>
-                    <p data-fr="Proposition stratégique complète livrée sous forme de présentation professionnelle, posant les bases d'un <span class=kw>repositionnement digital</span>. Cadre activable couvrant l'analyse de marché, l'identité visuelle, la ligne éditoriale et les axes de mesure." data-en="Complete strategic proposal delivered as a professional presentation, laying the foundation for a <span class=kw>digital repositioning</span>. Actionable framework covering market analysis, visual identity, editorial line and measurement axes.">Proposition stratégique complète livrée sous forme de présentation professionnelle, posant les bases d'un repositionnement digital. Cadre activable couvrant l'analyse de marché, l'identité visuelle, la ligne éditoriale et les axes de mesure.</p>
+                <div class="impact-strip">
+                    <span class="lead-label" data-fr="Impact" data-en="Impact">Impact</span>
+                    <p class="impact-statement" data-fr="Proposition stratégique complète livrée sous forme de présentation professionnelle, posant les bases d'un repositionnement digital sur le marché américain CSP+." data-en="Complete strategic proposal delivered as a professional presentation, laying the foundation for a digital repositioning on the US premium market.">Proposition stratégique complète livrée sous forme de présentation professionnelle, posant les bases d'un repositionnement digital sur le marché américain CSP+.</p>
+                    <p class="impact-note" data-fr="Cadre activable couvrant l'analyse de marché, l'identité visuelle, la ligne éditoriale et les axes de mesure." data-en="Actionable framework covering market analysis, visual identity, editorial line and measurement axes.">Cadre activable couvrant l'analyse de marché, l'identité visuelle, la ligne éditoriale et les axes de mesure.</p>
                 </div>
                 </div>
-                <div class="content-card has-img">
+                <div class="content-card has-img img-left">
                     <div class="card-body">
                     <h4><span class="icon">🔍</span> <span data-fr="Analyse de marché & Définition de cible" data-en="Market Analysis & Target Definition">Analyse de marché & Définition de cible</span></h4>
                     <ul>
@@ -342,7 +409,7 @@
                     </div>
                 </div>
                 </div>
-                <div class="content-card has-img">
+                <div class="content-card has-img img-left">
                     <div class="card-body">
                     <h4><span class="icon">✍️</span> <span data-fr="Stratégie éditoriale bilingue" data-en="Bilingual Editorial Strategy">Stratégie éditoriale bilingue</span></h4>
                     <ul>
@@ -358,35 +425,40 @@
                     </div>
                 </div>
                 </div>
-            </div>
-
-        </div>
     </section>
 
     <!-- ===== 02: Product Strategy (A to Z) ===== -->
-    <section class="project-section" id="product">
+    <section class="project-section accent-red" id="product">
         <hr class="section-divider">
+        <div class="banner-row"><div class="outline-banner" aria-hidden="true">Product &middot; Product &middot; Product &middot; Product</div><span class="big-num">03</span></div>
         <div class="project-header">
-            <div class="project-number-title">
-                <span class="project-number">02</span>
-                <span class="project-title">Product Strategy (A to Z)</span>
+            <div class="head-row">
+                <span class="pill" data-fr="Étude de cas 03" data-en="Case Study 03">Étude de cas 03</span>
+                <span class="pill">06 &ndash; 09/2023</span>
             </div>
+            <div class="fr-accent" data-fr="de zéro au lancement" data-en="from zero to launch">de zéro au lancement</div>
+            <h2 class="project-title">Product Strategy<br>(A to Z)</h2>
             <div class="project-company">Reinventing Carri&egrave;re Coaching &middot; <span data-fr="Coach professionnel certifié ICF (PCC)" data-en="ICF (PCC) Certified Professional Coach">Coach professionnel certifié ICF (PCC)</span></div>
             <div class="project-loc">Paris, France &middot; 06 &ndash; 09/2023</div>
         </div>
         <div class="tag-row">
             <span class="tag">Persona</span><span class="tag">Product Concept</span><span class="tag">Competitive Analysis</span><span class="tag">Content Production</span><span class="tag">Video Editing</span><span class="tag">Pricing Strategy</span><span class="tag">GTM Strategy</span><span class="tag">Marketing & Positioning</span><span class="tag">Banner & Visual Design</span><span class="tag">Landing Page</span><span class="tag">Reels & Social Content</span>
         </div>
-        <div class="mission-impact-row">
-<div class="content-card">
-            <h4><span class="icon">🎯</span> <span data-fr="La mission" data-en="The Mission">La mission</span></h4>
-            <p data-fr="Développement complet d'un cours en ligne de formation carrière, de la conception à la mise en marché, pour un cabinet de coaching professionnel certifié ICF (PCC) spécialisé dans l'accompagnement des personnes souhaitant travailler à l'international." data-en="<span class=kw>Full-cycle development</span> of an online career training course, from concept to market launch, for an ICF (PCC) certified professional coaching firm specializing in supporting people aiming to work in international environments.">Développement complet d'un cours en ligne de formation carrière, de la conception à la mise en marché, pour un cabinet de coaching professionnel certifié ICF (PCC) spécialisé dans l'accompagnement des personnes souhaitant travailler à l'international.</p>
-        </div>
-<div class="impact-box">
-            <h5>Impact</h5>
-            <p data-fr="Lancement réussi d'une série complète de 26 sessions de cours digitaux. Forts taux d'engagement assurant l'interaction et l'efficacité du contenu. Développement d'un workflow de production scalable, posant les bases des futures créations." data-en="Successfully launched a full digital course series of 26 sessions. Achieved strong engagement rates ensuring interaction and content effectiveness. Developed a scalable end-to-end production workflow, laying a solid foundation for future content creation and expansion.">Lancement réussi d'une série complète de 26 sessions de cours digitaux. Forts taux d'engagement assurant l'interaction et l'efficacité du contenu. Développement d'un workflow de production scalable, posant les bases des futures créations.</p>
-        </div>
-        </div>
+        <div class="mi-row">
+                <div class="mission-lead">
+                    <span class="lead-label" data-fr="La mission" data-en="The Mission">La mission</span>
+                    <p data-fr="Développement complet d'un cours en ligne de formation carrière, de la conception à la mise en marché, pour un cabinet de coaching professionnel certifié ICF (PCC) spécialisé dans l'accompagnement des personnes souhaitant travailler à l'international." data-en="<span class=kw>Full-cycle development</span> of an online career training course, from concept to market launch, for an ICF (PCC) certified professional coaching firm specializing in supporting people aiming to work in international environments.">Développement complet d'un cours en ligne de formation carrière, de la conception à la mise en marché, pour un cabinet de coaching professionnel certifié ICF (PCC) spécialisé dans l'accompagnement des personnes souhaitant travailler à l'international.</p>
+                </div>
+                <div class="impact-strip">
+                    <span class="lead-label" data-fr="Impact" data-en="Impact">Impact</span>
+                    <div class="impact-stats">
+                        <div class="stat"><span class="stat-num">26</span><span class="stat-label" data-fr="sessions de cours lancées" data-en="course sessions launched">sessions de cours lancées</span></div>
+                        <div class="stat"><span class="stat-num">2</span><span class="stat-label" data-fr="mois de production" data-en="months of production">mois de production</span></div>
+                        <div class="stat"><span class="stat-num" data-fr="3,5 h" data-en="3.5h">3,5 h</span><span class="stat-label" data-fr="de contenu produit" data-en="of content produced">de contenu produit</span></div>
+                    </div>
+                    <p class="impact-note" data-fr="Forts taux d'engagement assurant l'interaction et l'efficacité du contenu, avec un workflow de production scalable posant les bases des futures créations." data-en="Strong engagement rates ensuring interaction and content effectiveness, with a scalable production workflow laying the foundation for future content.">Forts taux d'engagement assurant l'interaction et l'efficacité du contenu, avec un workflow de production scalable posant les bases des futures créations.</p>
+                </div>
+                </div>
         <div class="content-card">
             <h4><span class="icon">📋</span> <span data-fr="Gestion de projet" data-en="Project Management">Gestion de projet</span></h4>
             <ul>
@@ -415,7 +487,7 @@
                 </div>
             </div>
         </div>
-        <div class="content-card has-img has-img-sm">
+        <div class="content-card has-img img-left has-img-sm">
             <div class="card-body">
             <h4><span class="icon">📝</span> <span data-fr="Production de contenu & Design" data-en="Content Production & Design">Production de contenu & Design</span></h4>
             <ul>
@@ -432,7 +504,7 @@
                 </div>
                 <div class="showcase-item">
                     <img src="Banner.jpg" alt="Banner design" loading="lazy">
-                    <div class="caption" data-fr="Design de bannières, landing page, Reels et contenus promotionnels Instagram" data-en="Banner design, landing page, Reels and Instagram promotional content">Design de bannières, landing page, Reels and Instagram promotional content</div>
+                    <div class="caption" data-fr="Design de bannières, landing page, Reels et contenus promotionnels Instagram" data-en="Banner design, landing page, Reels and Instagram promotional content">Design de bannières, landing page, Reels et contenus promotionnels Instagram</div>
                 </div>
             </div>
         </div>
@@ -444,7 +516,7 @@
                 <li data-fr="Optimisation du contenu marketing sur les canaux existants : articles du site, contenu email et plateformes de promotion" data-en="Optimized marketing content across existing channels: website articles, email content and promotion platforms">Optimisation du contenu marketing sur les canaux existants : articles du site, contenu email et plateformes de promotion</li>
             </ul>
         </div>
-        
+
         <div class="ref-section">
             <h4>Reference</h4>
             <a class="ref-link" href="https://reinventingcarriere.com/" target="_blank" rel="noopener">
@@ -459,30 +531,37 @@
     </section>
 
     <!-- ===== 03: Community & Project Management ===== -->
-    <section class="project-section" id="community">
+    <section class="project-section accent-green" id="community">
         <hr class="section-divider">
+        <div class="banner-row"><div class="outline-banner" aria-hidden="true">Community &middot; Community &middot; Community &middot; Community</div><span class="big-num">04</span></div>
         <div class="project-header">
-            <div class="project-number-title">
-                <span class="project-number">03</span>
-                <span class="project-title">Community & Project Management</span>
+            <div class="head-row">
+                <span class="pill" data-fr="Étude de cas 04" data-en="Case Study 04">Étude de cas 04</span>
+                <span class="pill">08/2025 &ndash; 02/2026</span>
             </div>
+            <div class="fr-accent" data-fr="l'humain d'abord" data-en="people first">l'humain d'abord</div>
+            <h2 class="project-title">Community & Project<br>Management</h2>
             <div class="project-company">Linkee &middot; <span data-fr="Anti-gaspillage alimentaire" data-en="Food waste reduction">Anti-gaspillage alimentaire</span></div>
             <div class="project-loc">Bordeaux, France &middot; 08/2025 &ndash; 02/2026</div>
         </div>
         <div class="tag-row">
             <span class="tag">Community Management</span><span class="tag">Event Coordination</span><span class="tag">Volunteer Onboarding</span><span class="tag">Newsletter (Sarbacane)</span><span class="tag">WhatsApp</span><span class="tag">Partner Relations</span><span class="tag">Airtable</span><span class="tag">JeVeuxAider</span>
         </div>
-        <div class="mission-impact-row">
-<div class="content-card">
-            <h4><span class="icon">🎯</span> <span data-fr="La mission" data-en="The Mission">La mission</span></h4>
-            <p data-fr="Gestion d'une communauté de <span class=kw>550+ bénévoles</span> et accompagnement de 1 000+ bénéficiaires, maintien des relations partenaires, organisation de <span class=kw>30+ événements</span> variés (prospection, ateliers cuisine, reconditionnement, stands sur forums), coordination et communication via newsletter, email, WhatsApp et téléphone." data-en="Managing a community of <span class=kw>550+ volunteers</span> and supporting 1,000+ beneficiaries, maintaining partner relationships, organizing <span class=kw>30+ diverse events</span> (prospection, cooking workshops, food reconditioning, forum stands), coordinating operations and handling communications via newsletter, email, WhatsApp and phone.">Gestion d'une communauté de 550+ bénévoles et accompagnement de 1 000+ bénéficiaires, maintien des relations partenaires, organisation de 30+ événements variés (prospection, ateliers cuisine, reconditionnement, stands sur forums), coordination logistique et communication via newsletter hebdomadaire et groupes WhatsApp.</p>
-        </div>
-<div class="impact-box">
-            <h5>Impact</h5>
-            <p data-fr="Engagement durable des partenaires grâce à une exécution fiable des événements. Maintien d'une communauté engagée de <span class=kw>550+ bénévoles</span> avec résolution proactive des problèmes. Accompagnement de <span class=kw>1 000+ bénéficiaires</span> sans aucune distribution manquée." data-en="Sustained partner engagement through reliable event execution. Maintained a committed volunteer community of <span class=kw>550+</span> with proactive issue resolution. Supported <span class=kw>1,000+ beneficiaries</span> with zero missed distributions.">Engagement durable des partenaires grâce à une exécution fiable des événements. Maintien d'une communauté engagée de 550+ bénévoles avec résolution proactive des problèmes. Accompagnement de 1 000+ bénéficiaires sans aucune distribution manquée.</p>
-        </div>
-
-        </div>
+        <div class="mi-row">
+                <div class="mission-lead">
+                    <span class="lead-label" data-fr="La mission" data-en="The Mission">La mission</span>
+                    <p data-fr="Gestion d'une communauté de <span class=kw>550+ bénévoles</span> et accompagnement de 1 000+ bénéficiaires, maintien des relations partenaires, organisation de <span class=kw>30+ événements</span> variés (prospection, ateliers cuisine, reconditionnement, stands sur forums), coordination et communication via newsletter, email, WhatsApp et téléphone." data-en="Managing a community of <span class=kw>550+ volunteers</span> and supporting 1,000+ beneficiaries, maintaining partner relationships, organizing <span class=kw>30+ diverse events</span> (prospection, cooking workshops, food reconditioning, forum stands), coordinating operations and handling communications via newsletter, email, WhatsApp and phone.">Gestion d'une communauté de 550+ bénévoles et accompagnement de 1 000+ bénéficiaires, maintien des relations partenaires, organisation de 30+ événements variés (prospection, ateliers cuisine, reconditionnement, stands sur forums), coordination logistique et communication via newsletter hebdomadaire et groupes WhatsApp.</p>
+                </div>
+                <div class="impact-strip">
+                    <span class="lead-label" data-fr="Impact" data-en="Impact">Impact</span>
+                    <div class="impact-stats">
+                        <div class="stat"><span class="stat-num">550+</span><span class="stat-label" data-fr="bénévoles" data-en="volunteers">bénévoles</span></div>
+                        <div class="stat"><span class="stat-num" data-fr="1 000+" data-en="1,000+">1 000+</span><span class="stat-label" data-fr="bénéficiaires" data-en="beneficiaries">bénéficiaires</span></div>
+                        <div class="stat"><span class="stat-num">30+</span><span class="stat-label" data-fr="événements par an" data-en="events per year">événements par an</span></div>
+                    </div>
+                    <p class="impact-note" data-fr="Engagement durable des partenaires grâce à une exécution fiable des événements, et accompagnement des bénéficiaires sans aucune distribution manquée." data-en="Sustained partner engagement through reliable event execution, supporting beneficiaries with zero missed distributions.">Engagement durable des partenaires grâce à une exécution fiable des événements, et accompagnement des bénéficiaires sans aucune distribution manquée.</p>
+                </div>
+                </div>
         <div class="content-card">
             <h4><span class="icon">👥</span> <span data-fr="Gestion de communauté bénévole" data-en="Volunteer Community Management">Gestion de communauté bénévole</span></h4>
             <ul>
@@ -500,7 +579,7 @@
                 <li data-fr="Coordination de 2 distributions hebdomadaires pour environ 500 bénéficiaires par session" data-en="Coordinated 2 weekly distributions serving approximately 500 beneficiaries per session">Coordination de 2 distributions hebdomadaires pour environ 500 bénéficiaires par session</li>
                 <li data-fr="Gestion des relations avec les organisations partenaires" data-en="Managed relationships with partner organizations">Gestion des relations avec les organisations partenaires</li>
             </ul>
-                    
+
                     <div class="imgs-below cols-3">
                 <div class="showcase-item">
                     <img src="Linkee_Distrib.jpeg" alt="Distribution" loading="lazy">
@@ -540,8 +619,22 @@
 
 </main>
 
+
+<div class="footer-doodle">
+    <svg class="doodle" viewBox="0 0 120 140" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M42 90 C40 106 38 122 44 131 C50 137 66 137 72 131 C78 122 76 106 74 90" stroke="#1C1B18" stroke-width="1.5" stroke-linecap="round"/>
+        <path d="M42 90 C48 86 68 86 74 90" stroke="#1C1B18" stroke-width="1.5" stroke-linecap="round"/>
+        <path d="M56 88 C56 62 52 46 44 32" stroke="#31584A" stroke-width="1.3" stroke-linecap="round"/>
+        <path d="M60 88 C62 60 68 44 78 34" stroke="#31584A" stroke-width="1.3" stroke-linecap="round"/>
+        <path d="M58 88 C58 66 60 52 60 40" stroke="#31584A" stroke-width="1.3" stroke-linecap="round"/>
+        <circle cx="42" cy="28" r="4" fill="#D9A62E"/>
+        <circle cx="80" cy="30" r="3.4" fill="#C6392F"/>
+        <circle cx="60" cy="35" r="2.6" fill="#D9A62E"/>
+        <path d="M36 30 C33 27 33 23 36 21 M48 29 C51 26 51 22 48 20" stroke="#D9A62E" stroke-width="1.1" stroke-linecap="round"/>
+    </svg>
+</div>
 <footer>
-    <a href="index.html" style="display:inline-flex;align-items:center;gap:.4rem;text-decoration:none;color:var(--accent);font-size:.82rem;font-weight:500;padding:.5rem 1.2rem;border:1px solid var(--accent);border-radius:8px;transition:all .25s;margin-bottom:1.2rem;" onmouseover="this.style.background='var(--accent)';this.style.color='white'" onmouseout="this.style.background='transparent';this.style.color='var(--accent)'">
+    <a href="index.html" style="display:inline-flex;align-items:center;gap:.4rem;text-decoration:none;color:var(--ink);font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:.5rem 1.2rem;border:1.5px solid var(--ink);transition:all .2s;margin-bottom:1.2rem;" onmouseover="this.style.background='var(--ink)';this.style.color='var(--paper)'" onmouseout="this.style.background='transparent';this.style.color='var(--ink)'">
         <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px"><path d="M12 4l-6 6 6 6"/></svg>
         <span data-fr="Retour au CV" data-en="Back to CV">Retour au CV</span>
     </a>
@@ -555,7 +648,7 @@
 
 <script>
 function setLang(l){document.documentElement.lang=l;document.getElementById('btn-fr').classList.toggle('active',l==='fr');document.getElementById('btn-en').classList.toggle('active',l==='en');document.querySelectorAll('[data-fr][data-en]').forEach(function(e){e.innerHTML=e.getAttribute('data-'+l)});try{localStorage.setItem('cv-lang',l)}catch(x){}}
-window.addEventListener('scroll',function(){document.getElementById('topbar').classList.toggle('scrolled',window.scrollY>10);var b=document.getElementById('backToTop');if(b)b.classList.toggle('visible',window.scrollY>400);var ss=document.querySelectorAll('.project-section'),ls=document.querySelectorAll('.nav-links a[href^="#"]'),c='';ss.forEach(function(s){if(window.scrollY>=s.offsetTop-100)c=s.id});ls.forEach(function(a){a.classList.toggle('active',a.getAttribute('href')==='#'+c)})},{passive:true});
+window.addEventListener('scroll',function(){var b=document.getElementById('backToTop');if(b)b.classList.toggle('visible',window.scrollY>400);var ss=document.querySelectorAll('.project-section'),ls=document.querySelectorAll('.nav-links a[href^="#"]'),c='';ss.forEach(function(s){if(window.scrollY>=s.offsetTop-100)c=s.id});ls.forEach(function(a){a.classList.toggle('active',a.getAttribute('href')==='#'+c)})},{passive:true});
 document.querySelectorAll('.nav-links a[href^="#"]').forEach(function(a){a.addEventListener('click',function(e){e.preventDefault();var t=document.querySelector(a.getAttribute('href'));if(t)t.scrollIntoView({behavior:'smooth',block:'start'})})});
 document.addEventListener('DOMContentLoaded',function(){var s=localStorage.getItem('cv-lang');if(s)setLang(s)});
 </script>
