@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="format-detection" content="telephone=no, date=no, email=no, address=no">
-    <meta name="description" content="Yi-Hsuan Chiu — Marketing International & Relation Client | Opérations APAC-EMEA">
+    <meta name="description" content="Yi-Hsuan Chiu — Marketing opérationnel & CRM | Analytics | Gestion de projet | Coordination APAC/EMEA">
     <!-- Open Graph / Facebook / LinkedIn / WhatsApp / iMessage -->
     <meta property="og:type" content="profile">
     <meta property="og:title" content="Yi-Hsuan Chiu — CV">
-    <meta property="og:description" content="Quadrilingue · Relation client B2B · Marketing digital · Coordination internationale APAC/EMEA/Amériques">
+    <meta property="og:description" content="Marketing opérationnel & CRM · Analytics · Gestion de projet · Coordination internationale APAC/EMEA · FR · EN · 中文">
     <meta property="og:image" content="https://jochiu.github.io/CV_FR.EN/photo.jpg">
     <meta property="og:image:width" content="600">
     <meta property="og:image:height" content="600">
@@ -16,7 +16,7 @@
     <!-- Twitter / X -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Yi-Hsuan Chiu — CV">
-    <meta name="twitter:description" content="Quadrilingue · Relation client B2B · Marketing digital · Coordination internationale APAC/EMEA/Amériques">
+    <meta name="twitter:description" content="Marketing opérationnel & CRM · Analytics · Gestion de projet · Coordination internationale APAC/EMEA · FR · EN · 中文">
     <meta name="twitter:image" content="https://jochiu.github.io/CV_FR.EN/photo.jpg">
     <link rel="icon" type="image/jpeg" href="photo.jpg">
     <title>Yi-Hsuan Chiu — CV</title>
@@ -122,14 +122,6 @@
             transition: transform 0.4s, box-shadow 0.4s;
         }
         .hero-photo:hover { transform: scale(1.02); box-shadow: var(--shadow-md); }
-        .hero-photo-placeholder {
-            width: 170px; height: 170px; border-radius: 50%;
-            background: linear-gradient(135deg, var(--accent-light), var(--gold-light));
-            border: 2px solid var(--border-light);
-            display: flex; align-items: center; justify-content: center;
-            font-size: 3.5rem; color: var(--accent);
-            font-family: 'Cormorant Garamond', serif; font-weight: 600;
-        }
         .hero-text h1 {
             font-family: 'DM Sans', -apple-system, sans-serif; font-size: 2.8rem; font-weight: 700;
             letter-spacing: -0.02em; line-height: 1.1; margin-bottom: 0.4rem;
@@ -138,7 +130,7 @@
             font-size: 1.05rem; color: var(--accent); font-weight: 500; margin-bottom: 1rem;
         }
         .hero-text .intro {
-            font-size: 0.92rem; color: var(--muted); max-width: 520px; line-height: 1.75;
+            font-size: 0.92rem; color: var(--muted); max-width: 560px; line-height: 1.75;
         }
         .hero-contact { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1.4rem; }
         .contact-chip {
@@ -201,7 +193,7 @@
             color: var(--accent); font-weight: 600; border-radius: 12px;
             border: 1px solid rgba(45,90,71,0.15);
         }
-        .skills-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; }
+        .skills-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2rem; }
         .skill-category h3 {
             font-size: 0.78rem; font-weight: 600; margin-bottom: 0.7rem;
             color: var(--accent); text-transform: uppercase; letter-spacing: 0.08em;
@@ -214,7 +206,7 @@
         }
         .skill-tag:hover { background: var(--accent-light); border-color: var(--accent); color: var(--accent); }
         #skills .card-wrap, #tools .card-wrap { padding: 1.3rem 1.6rem; }
-        #skills, #tools { margin-bottom: 2rem; }
+        #skills, #tools, #certifications { margin-bottom: 2rem; }
         #skills .skills-grid { gap: 1.2rem; }
         #skills .skill-category h3 { margin-bottom: 0.45rem; font-size: 0.74rem; }
         #skills .skill-tag, #tools .skill-tag { font-size: 0.73rem; padding: 0.22rem 0.5rem; }
@@ -250,6 +242,18 @@
             box-shadow: 0 2px 8px rgba(45,90,71,0.2);
         }
         .reco-link svg { width: 14px; height: 14px; }
+        /* Recommendations */
+        .reco-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+        .reco-card {
+            background: var(--white); border: 1px solid var(--border-light);
+            border-radius: var(--radius); padding: 1.5rem 1.8rem;
+            box-shadow: var(--shadow-sm); display: flex; flex-direction: column;
+        }
+        .reco-card .reco-who { font-size: 0.95rem; font-weight: 600; line-height: 1.35; }
+        .reco-card .reco-role { font-size: 0.8rem; color: var(--accent); font-weight: 500; margin-top: 0.1rem; }
+        .reco-card .reco-context { font-size: 0.78rem; color: var(--muted-light); font-style: italic; margin-top: 0.15rem; }
+        .reco-card p { font-size: 0.83rem; color: var(--muted); line-height: 1.65; margin-top: 0.7rem; flex: 1; }
+        .reco-card .reco-link { align-self: flex-start; margin-top: 0.9rem; }
         .lang-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; }
         .lang-item {
             padding: 1.2rem; background: var(--white); border-radius: var(--radius);
@@ -278,6 +282,7 @@
             transform: translateY(-3px); box-shadow: var(--shadow-md); color: var(--accent);
         }
         .link-card svg { width: 18px; height: 18px; flex-shrink: 0; }
+        .link-card.primary { border-color: var(--gold); background: var(--gold-light); font-weight: 600; }
         .extras-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; }
         .extra-item {
             padding: 1.2rem 1.4rem; background: var(--white); border-radius: var(--radius);
@@ -288,6 +293,15 @@
         .extra-item p { font-size: 0.8rem; color: var(--muted); line-height: 1.55; }
         .extra-item a { color: var(--accent); text-decoration: none; font-weight: 500; }
         .extra-item a:hover { text-decoration: underline; }
+        .extra-item ul { list-style: none; padding: 0; margin-top: 0.4rem; }
+        .extra-item ul li {
+            position: relative; padding-left: 1.1rem; font-size: 0.8rem;
+            color: var(--muted); margin-bottom: 0.3rem; line-height: 1.55;
+        }
+        .extra-item ul li::before {
+            content: ''; position: absolute; left: 0; top: 0.6em;
+            width: 4px; height: 4px; background: var(--gold); border-radius: 50%;
+        }
         .exp-photos { display: flex; gap: 0.6rem; margin-top: 0.8rem; flex-wrap: wrap; }
         .exp-photos img {
             width: 120px; max-width: calc(50% - 0.3rem); height: 80px; object-fit: cover; border-radius: 6px;
@@ -412,10 +426,6 @@
         }
         .form-submit:hover { background: #1e4535; transform: translateY(-1px); }
         .form-submit svg { width: 16px; height: 16px; }
-        .form-success {
-            display: none; text-align: center; padding: 1.5rem;
-            font-size: 0.9rem; color: var(--accent);
-        }
         .success-overlay {
             display: none; position: fixed; inset: 0; z-index: 998;
             background: rgba(0,0,0,0.5); align-items: center; justify-content: center;
@@ -483,7 +493,7 @@
             .side-nav { display: block; }
             .hero { padding: 4rem 1.2rem 2.5rem; }
             .hero-inner { grid-template-columns: 1fr; text-align: center; padding: 2rem 1.5rem; gap: 1.5rem; }
-            .hero-photo, .hero-photo-placeholder { margin: 0 auto; width: 130px; height: 130px; }
+            .hero-photo { margin: 0 auto; width: 130px; height: 130px; }
             .hero-contact { justify-content: center; }
             .hero-text .intro { margin: 0 auto; }
             .exp-card { grid-template-columns: 1fr; gap: 0.5rem; }
@@ -494,7 +504,7 @@
             .main { padding: 0 1.2rem 3rem; }
             .skills-grid { grid-template-columns: 1fr; }
             .lang-grid { grid-template-columns: repeat(2, 1fr); }
-            .extras-grid { grid-template-columns: 1fr; }
+            .extras-grid, .reco-grid { grid-template-columns: 1fr; }
             .extra-item.full-width { flex-direction: column; }
             .extra-item.full-width .ambassador-photos { width: 100%; grid-template-columns: repeat(2, 1fr); }
             .cert-grid { grid-template-columns: repeat(3, 1fr); }
@@ -508,7 +518,7 @@
             .top-bar, .lang-toggle { display: none; }
             .hero { margin-top: 0; padding-top: 1rem; }
             body { background: white; }
-            .hero-inner, .card-wrap, .edu-card, .lang-item, .extra-item, .link-card { box-shadow: none; border-color: #ddd; }
+            .hero-inner, .card-wrap, .edu-card, .lang-item, .extra-item, .link-card, .reco-card { box-shadow: none; border-color: #ddd; }
         }
     </style>
 </head>
@@ -520,7 +530,7 @@
         <a href="#experience" class="nav-desktop" data-fr="Expérience" data-en="Experience">Expérience</a>
         <a href="#skills" class="nav-desktop" data-fr="Compétences" data-en="Skills">Compétences</a>
         <a href="#education" class="nav-desktop" data-fr="Formation" data-en="Education">Formation</a>
-        <a href="#certifications" class="nav-desktop" data-fr="Certifications" data-en="Certifications">Certifications</a>
+        <a href="#recommendations" class="nav-desktop" data-fr="Recommandations" data-en="Recommendations">Recommandations</a>
         <a href="#contact" class="nav-desktop">Contact</a>
         <a href="portfolio.html" class="nav-desktop" style="color:var(--gold);font-weight:700;" target="_blank">Portfolio ↗</a>
         <div class="lang-toggle">
@@ -531,26 +541,25 @@
 </nav>
 
 <nav class="side-nav" id="sideNav">
-    <a href="#experience" data-short="01">Exp.</a>
-    <a href="#skills" data-short="02">Skills</a>
-    <a href="#tools" data-short="03">Outils</a>
-    <a href="#education" data-short="04">Études</a>
-    <a href="#languages" data-short="05">Langues</a>
-    <a href="#certifications" data-short="06">Certifs</a>
-    <a href="#portfolio" data-short="07">Portfolio</a>
-    <a href="#extras" data-short="08">Extras</a>
-    <a href="#contact" data-short="09">Contact</a>
+    <a href="#experience">Exp.</a>
+    <a href="#skills">Skills</a>
+    <a href="#tools">Outils</a>
+    <a href="#education">Études</a>
+    <a href="#languages">Langues</a>
+    <a href="#certifications">Certifs</a>
+    <a href="#recommendations">Reco.</a>
+    <a href="#portfolio">Portfolio</a>
+    <a href="#extras">Extras</a>
+    <a href="#contact">Contact</a>
 </nav>
 
 <header class="hero">
     <div class="hero-inner">
-        
-        
         <img src="photo.jpg" alt="Yi-Hsuan Chiu" class="hero-photo">
         <div class="hero-text">
             <h1>Yi-Hsuan Chiu</h1>
-            <p class="tagline" data-fr="Marketing International & Relation Client · Opérations APAC-EMEA" data-en="International Marketing & Client Relations · APAC-EMEA Operations">Marketing International & Relation Client · Opérations APAC-EMEA</p>
-            <p class="intro" data-fr="5 ans et demi d'expérience en relation client, opérations et coordination multi-régionale (APAC/EMEA/Amériques). Je parle français, anglais, mandarin, taïwanais et coréen. Actuellement basée à Bordeaux et mobile géographiquement." data-en="5.5 years of experience in client relations, operations, and multi-regional coordination (APAC/EMEA/Americas). I speak French, English, Mandarin, Taiwanese, and Korean. Currently based in Bordeaux, open to relocation.">5 ans et demi d'expérience en relation client, opérations et coordination multi-régionale (APAC/EMEA/Amériques). Je parle français, anglais, mandarin, taïwanais et coréen. Actuellement basée à Bordeaux et mobile géographiquement.</p>
+            <p class="tagline" data-fr="Marketing opérationnel & CRM · Analytics · Gestion de projet · Coordination APAC/EMEA" data-en="Marketing Operations & CRM · Analytics · Project Management · APAC/EMEA Coordination">Marketing opérationnel & CRM · Analytics · Gestion de projet · Coordination APAC/EMEA</p>
+            <p class="intro" data-fr="5,5 ans d'expérience en marketing B2B/B2C et gestion de projets internationaux (APAC, EMEA, Amériques). À l'interface entre stratégie, performance et analyse de données : optimisation des campagnes, des parcours clients et des processus marketing pour soutenir acquisition, conversion et fidélisation. Maîtrise de GA4, Tableau, SQL et des outils CRM. Mandarin natif, anglais professionnel et français C1. Basée à Bordeaux, mobile France entière." data-en="5.5 years of experience in B2B/B2C marketing and international project management (APAC, EMEA, Americas). Working at the intersection of strategy, performance and data analysis: optimizing campaigns, customer journeys and marketing processes to support acquisition, conversion and retention. Proficient in GA4, Tableau, SQL and CRM tools. Native Mandarin, professional English, C1 French. Based in Bordeaux, open to relocation across France.">5,5 ans d'expérience en marketing B2B/B2C et gestion de projets internationaux (APAC, EMEA, Amériques). À l'interface entre stratégie, performance et analyse de données : optimisation des campagnes, des parcours clients et des processus marketing pour soutenir acquisition, conversion et fidélisation. Maîtrise de GA4, Tableau, SQL et des outils CRM. Mandarin natif, anglais professionnel et français C1. Basée à Bordeaux, mobile France entière.</p>
             <div class="hero-contact">
                 <a class="contact-chip email-cta" href="mailto:c.hsuann@gmail.com">
                     <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="4" width="16" height="12" rx="2"/><path d="M2 4l8 6 8-6"/></svg>
@@ -570,15 +579,11 @@
                 </span>
                 <span class="contact-chip">
                     <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M10 11a3 3 0 100-6 3 3 0 000 6z"/><path d="M10 18s-7-4.35-7-9A7 7 0 0117 9c0 4.65-7 9-7 9z"/></svg>
-                    Bordeaux, France
+                    <span data-fr="Bordeaux · Mobilité France entière" data-en="Bordeaux · Open to relocation across France">Bordeaux · Mobilité France entière</span>
                 </span>
-                <a class="contact-chip" href="https://123456789fihwihfushgushigs.my.canva.site/yhchiuportfolio" target="_blank" rel="noopener">
+                <a class="contact-chip" href="portfolio.html" target="_blank" rel="noopener">
                     <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="14" height="14" rx="2"/><path d="M3 8h14M8 3v14"/></svg>
-                    Portfolio FR
-                </a>
-                <a class="contact-chip" href="https://yhchiuportfolio.wordpress.com" target="_blank" rel="noopener">
-                    <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="10" cy="10" r="7"/><path d="M3 10h14M10 3c-2 2.5-2 11.5 0 14M10 3c2 2.5 2 11.5 0 14"/></svg>
-                    Portfolio EN
+                    Portfolio FR / EN
                 </a>
             </div>
         </div>
@@ -597,14 +602,16 @@
             <div class="exp-card">
                 <div class="exp-meta"><div class="dates">08/2025 – 02/2026</div><div class="location">Bordeaux</div></div>
                 <div class="exp-body">
-                    <h3 data-fr="Chargée des Projets et Communautés Bénévoles" data-en="Projects & Community Specialist">Chargée des Projets et Communautés Bénévoles</h3>
+                    <h3 data-fr="Chargée des Projets et Communautés" data-en="Projects & Community Specialist">Chargée des Projets et Communautés</h3>
                     <div class="company"><img class="company-logo" src="Linkee_logo.png" alt="Linkee"><span>Linkee · <span data-fr="Anti-gaspillage alimentaire" data-en="Food waste reduction">Anti-gaspillage alimentaire</span></span></div>
                     <ul>
-                        <li data-fr="Assuré le bon fonctionnement opérationnel pour 550+ bénévoles et 1 000+ bénéficiaires : onboarding, suivi individualisé et résolution proactive" data-en="Ensured smooth operations for 550+ volunteers and 1,000+ beneficiaries, resulting in sustained partner engagement and repeat collaborations">Assuré le bon fonctionnement opérationnel pour 550+ bénévoles et 1 000+ bénéficiaires : onboarding, suivi individualisé et résolution proactive</li>
-                        <li data-fr="Piloté 30+ événements de A à Z : coordination logistique et partenariats multi-parties prenantes" data-en="Led 30+ events end-to-end, coordinating logistics and multi-stakeholder partnerships">Piloté 30+ événements de A à Z : coordination logistique et partenariats multi-parties prenantes</li>
-                        <li data-fr="Renforcé l'engagement communautaire via une newsletter hebdomadaire ciblée (Sarbacane)" data-en="Grew community engagement through weekly targeted newsletters (Sarbacane)">Renforcé l'engagement communautaire via une newsletter hebdomadaire ciblée (Sarbacane)</li>
+                        <li data-fr="Pilotage de 30+ événements, de la prospection B2B à l'onboarding des bénévoles, et développement des relations partenaires" data-en="Led 30+ events, from B2B prospection to volunteer onboarding, and developed partner relationships">Pilotage de 30+ événements, de la prospection B2B à l'onboarding des bénévoles, et développement des relations partenaires</li>
+                        <li data-fr="Suivi d'une communauté de 550+ bénévoles et accompagnement quotidien de 10 à 20 bénéficiaires par téléphone et messagerie (WhatsApp, e-mail)" data-en="Supported a community of 550+ volunteers and provided daily follow-up to 10 to 20 beneficiaries by phone and messaging (WhatsApp, email)">Suivi d'une communauté de 550+ bénévoles et accompagnement quotidien de 10 à 20 bénéficiaires par téléphone et messagerie (WhatsApp, e-mail)</li>
+                        <li data-fr="Pilotage du programme de bénévoles étudiants KEDGE de bout en bout : information, qualification des candidatures, entretiens, onboarding et délivrance des attestations" data-en="Ran the KEDGE student volunteer programme end-to-end: information sessions, application screening, interviews, onboarding and attestations">Pilotage du programme de bénévoles étudiants KEDGE de bout en bout : information, qualification des candidatures, entretiens, onboarding et délivrance des attestations</li>
+                        <li data-fr="Gestion d'une base de 5 000+ abonnés, optimisation des campagnes emailing (Sarbacane) et automatisation via Google Apps Script" data-en="Managed a 5,000+ subscriber base, optimized email campaigns (Sarbacane) and automated workflows with Google Apps Script">Gestion d'une base de 5 000+ abonnés, optimisation des campagnes emailing (Sarbacane) et automatisation via Google Apps Script</li>
+                        <li data-fr="Optimisation des process et outils via Google Drive, Notion, Airtable et WhatsApp" data-en="Optimized processes and tools with Google Drive, Notion, Airtable and WhatsApp">Optimisation des process et outils via Google Drive, Notion, Airtable et WhatsApp</li>
                     </ul>
-                    <div class="exp-tags"><span class="exp-tag">Community Management</span><span class="exp-tag">Event Coordination</span><span class="exp-tag">Onboarding & Formation</span><span class="exp-tag">Client Experience</span><span class="exp-tag">Parcours Bénévole</span><span class="exp-tag">Airtable</span><span class="exp-tag">Sarbacane</span><span class="exp-tag">Google Workspace</span><span class="exp-tag">WhatsApp</span></div>
+                    <div class="exp-tags"><span class="exp-tag">Community Management</span><span class="exp-tag">Event Coordination</span><span class="exp-tag">Onboarding & Formation</span><span class="exp-tag">Partner Relations</span><span class="exp-tag">Emailing</span><span class="exp-tag">Google Apps Script</span><span class="exp-tag">Airtable</span><span class="exp-tag">Sarbacane</span><span class="exp-tag">Notion</span><span class="exp-tag">Google Workspace</span></div>
 
                     <div class="exp-photos">
                         <img src="Linkee_Distrib.jpeg" alt="Linkee distribution" loading="lazy">
@@ -619,14 +626,14 @@
             <div class="exp-card">
                 <div class="exp-meta"><div class="dates">04 – 05/2025</div><div class="location">Bordeaux</div></div>
                 <div class="exp-body">
-                    <h3 data-fr="Chargée de Projet Marketing" data-en="Marketing Project Specialist">Chargée de Projet Marketing</h3>
+                    <h3 data-fr="Chargée de Projets Communication" data-en="Communications Project Specialist">Chargée de Projets Communication</h3>
                     <div class="company"><img class="company-logo" src="hotel_logo.webp" alt="Hôtel Le Manoir De Bellerive"><span>Hôtel Le Manoir De Bellerive</span></div>
                     <ul>
-                        <li data-fr="Analysé le marché américain et défini l'identité numérique anglophone, posant les bases de la visibilité internationale auprès d'une clientèle CSP+" data-en="Analyzed the US market and defined English-language digital identity, laying the foundation for international visibility among premium clientele">Analysé le marché américain et défini l'identité numérique anglophone, posant les bases de la visibilité internationale auprès d'une clientèle CSP+</li>
+                        <li data-fr="Développement de l'identité de marque digitale et de contenus bilingues FR/EN pour les marchés EU/US, avec analyse de marché et localisation B2C premium" data-en="Developed the digital brand identity and bilingual FR/EN content for EU/US markets, with market analysis and premium B2C localization">Développement de l'identité de marque digitale et de contenus bilingues FR/EN pour les marchés EU/US, avec analyse de marché et localisation B2C premium</li>
                     </ul>
-                    <div class="exp-tags"><span class="exp-tag">Market Analysis</span><span class="exp-tag">Brand Positioning</span><span class="exp-tag">Persona Definition</span><span class="exp-tag">Customer Journey</span><span class="exp-tag">Bilingual Strategy (FR/EN)</span><span class="exp-tag">Visual Identity</span></div>
+                    <div class="exp-tags"><span class="exp-tag">Market Analysis</span><span class="exp-tag">Brand Positioning</span><span class="exp-tag">Persona Definition</span><span class="exp-tag">Bilingual Strategy (FR/EN)</span><span class="exp-tag">Visual Identity</span><span class="exp-tag">Instagram</span></div>
 
-                    <a class="exp-link" href="portfolio.html#strategy" target="_blank" rel="noopener">
+                    <a class="exp-link" href="portfolio.html#brand" target="_blank" rel="noopener">
                         <svg viewBox="0 0 512 512" fill="currentColor"><path d="M184 48H328c4.4 0 8 3.6 8 8V96H176V56c0-4.4 3.6-8 8-8zm-56 8V96H64C28.7 96 0 124.7 0 160V296 416c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V296 160c0-35.3-28.7-64-64-64H384V56c0-30.9-25.1-56-56-56H184c-30.9 0-56 25.1-56 56z"/></svg>
                         <span data-fr="Voir le portfolio" data-en="View portfolio">Voir le portfolio</span>
                     </a>
@@ -638,11 +645,12 @@
                     <h3 data-fr="Chargée de Marketing Digital International" data-en="International Digital Marketing Specialist">Chargée de Marketing Digital International</h3>
                     <div class="company"><img class="company-logo" src="Unifox_logo.webp" alt="UniFox"><span>UniFox · GreenTech, Web3</span></div>
                     <ul>
-                        <li data-fr="Réduit le taux de rebond de 52,6 % via l'optimisation des campagnes APAC/EMEA, le ciblage stratégique d'audience et l'allocation budgétaire sur Meta/Google Ads" data-en="Reduced bounce rate by 52.6% through APAC/EMEA campaign optimization, strategic audience targeting and budget allocation across Meta/Google Ads">Réduit le taux de rebond de 52,6 % via l'optimisation des campagnes APAC/EMEA, le ciblage stratégique d'audience et l'allocation budgétaire sur Meta/Google Ads</li>
-                        <li data-fr="Stimulé la croissance du trafic organique via le développement d'une stratégie SEO et l'implémentation du suivi des conversions via Google Tag Manager" data-en="Drove organic traffic growth by developing SEO strategy and implementing conversion tracking via Google Tag Manager">Stimulé la croissance du trafic organique via le développement d'une stratégie SEO et l'implémentation du suivi des conversions via Google Tag Manager</li>
-                        <li data-fr="Fourni des recommandations actionnables en construisant des dashboards sur Google Analytics 4, permettant une prise de décision basée sur les KPIs (CPC, ROI, trafic)" data-en="Delivered actionable recommendations by building dashboards in Google Analytics 4, enabling KPI-driven decision-making (CPC, ROI, traffic)">Fourni des recommandations actionnables en construisant des dashboards sur Google Analytics 4, permettant une prise de décision basée sur les KPIs (CPC, ROI, trafic)</li>
+                        <li data-fr="Stratégie d'acquisition B2C APAC/EMEA via Google Ads et SEO, réduction du taux de rebond de 52,6 %" data-en="B2C acquisition strategy across APAC/EMEA via Google Ads and SEO, reducing bounce rate by 52.6%">Stratégie d'acquisition B2C APAC/EMEA via Google Ads et SEO, réduction du taux de rebond de 52,6 %</li>
+                        <li data-fr="Optimisation du taux de conversion iOS de 58,82 % à 95,2 % via l'analyse UX et la refonte des landing pages" data-en="Improved iOS conversion rate from 58.82% to 95.2% through UX analysis and landing page redesign">Optimisation du taux de conversion iOS de 58,82 % à 95,2 % via l'analyse UX et la refonte des landing pages</li>
+                        <li data-fr="Analyse des performances digitales via GA4, PostHog et Tableau pour orienter les décisions CRO et acquisition" data-en="Analyzed digital performance with GA4, PostHog and Tableau to guide CRO and acquisition decisions">Analyse des performances digitales via GA4, PostHog et Tableau pour orienter les décisions CRO et acquisition</li>
+                        <li data-fr="Gestion des contenus multicanaux et représentation de la marque lors d'un salon tech international" data-en="Managed multichannel content and represented the brand at an international tech trade show">Gestion des contenus multicanaux et représentation de la marque lors d'un salon tech international</li>
                     </ul>
-                    <div class="exp-tags"><span class="exp-tag">KPI & Performance Analysis</span><span class="exp-tag">Data-driven Recommendations</span><span class="exp-tag">GA4</span><span class="exp-tag">Google Tag Manager</span><span class="exp-tag">Meta Ads</span><span class="exp-tag">Google Ads</span><span class="exp-tag">SEO</span><span class="exp-tag">CRO</span><span class="exp-tag">Audience Segmentation</span><span class="exp-tag">Reporting (Excel, GA4)</span><span class="exp-tag">Canva</span><span class="exp-tag">Figma</span><span class="exp-tag">CapCut</span></div>
+                    <div class="exp-tags"><span class="exp-tag">GA4</span><span class="exp-tag">Google Tag Manager</span><span class="exp-tag">PostHog</span><span class="exp-tag">Tableau</span><span class="exp-tag">SQL</span><span class="exp-tag">Google Ads</span><span class="exp-tag">Meta Ads</span><span class="exp-tag">SEO</span><span class="exp-tag">CRO</span><span class="exp-tag">UX & Funnel Analysis</span><span class="exp-tag">Audience Segmentation</span><span class="exp-tag">Canva</span><span class="exp-tag">Figma</span><span class="exp-tag">CapCut</span></div>
 
                     <a class="exp-link" href="portfolio.html#strategy" target="_blank" rel="noopener">
                         <svg viewBox="0 0 512 512" fill="currentColor"><path d="M184 48H328c4.4 0 8 3.6 8 8V96H176V56c0-4.4 3.6-8 8-8zm-56 8V96H64C28.7 96 0 124.7 0 160V296 416c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V296 160c0-35.3-28.7-64-64-64H384V56c0-30.9-25.1-56-56-56H184c-30.9 0-56 25.1-56 56z"/></svg>
@@ -656,10 +664,10 @@
                     <h3 data-fr="Chargée de Développement Marketing" data-en="Marketing Development Specialist">Chargée de Développement Marketing</h3>
                     <div class="company"><img class="company-logo" src="reinventing_logo.png" alt="Reinventing Carrière"><span>Reinventing Carrière Coaching</span></div>
                     <ul>
-                        <li data-fr="Permis l'entrée du produit sur le marché en déployant une stratégie Go-to-Market complète de zéro : persona, concept produit, positionnement, stratégie tarifaire, canaux d'acquisition et programmes d'affiliation" data-en="Enabled the product's market entry by deploying full Go-to-Market strategy from scratch: persona, product concept, positioning, pricing strategy, acquisition channels and affiliate programs">Permis l'entrée du produit sur le marché en déployant une stratégie Go-to-Market complète de zéro : persona, concept produit, positionnement, stratégie tarifaire, canaux d'acquisition et programmes d'affiliation</li>
-                        <li data-fr="Produit 3,5h de contenu de cours et organisé un webinaire : planification du déroulé et coordination avec les intervenants" data-en="Produced 3.5h of courses content and organized a webinar: flow planning and coordination with guest speakers">Produit 3,5h de contenu de cours et organisé un webinaire : planification du déroulé et coordination avec les intervenants</li>
+                        <li data-fr="Déploiement d'une stratégie d'acquisition de A à Z : analyse marché et concurrentielle, personas, positionnement, stratégie tarifaire, canaux et programme d'affiliation" data-en="Deployed an acquisition strategy from A to Z: market and competitive analysis, personas, positioning, pricing, channels and affiliate programme">Déploiement d'une stratégie d'acquisition de A à Z : analyse marché et concurrentielle, personas, positionnement, stratégie tarifaire, canaux et programme d'affiliation</li>
+                        <li data-fr="Production de 3,5 h de vidéos de formation et supports pédagogiques digitaux (26 sessions), conception d'un webinaire et création de contenus digitaux (landing page banners, Reels)" data-en="Produced 3.5h of training videos and digital learning materials (26 sessions), designed a webinar and created digital content (landing page banners, Reels)">Production de 3,5 h de vidéos de formation et supports pédagogiques digitaux (26 sessions), conception d'un webinaire et création de contenus digitaux (landing page banners, Reels)</li>
                     </ul>
-                    <div class="exp-tags"><span class="exp-tag">Go-to-Market Strategy</span><span class="exp-tag">Persona</span><span class="exp-tag">Product Concept</span><span class="exp-tag">Pricing Strategy</span><span class="exp-tag">Competitive Analysis</span><span class="exp-tag">Customer Journey</span><span class="exp-tag">Content Production</span><span class="exp-tag">Video Editing</span><span class="exp-tag">Webinars</span></div>
+                    <div class="exp-tags"><span class="exp-tag">Go-to-Market Strategy</span><span class="exp-tag">Persona</span><span class="exp-tag">Product Concept</span><span class="exp-tag">Pricing Strategy</span><span class="exp-tag">Competitive Analysis</span><span class="exp-tag">Content Production</span><span class="exp-tag">Video Editing</span><span class="exp-tag">Webinars</span><span class="exp-tag">Podia</span></div>
 
                     <a class="exp-link" href="portfolio.html#product" target="_blank" rel="noopener">
                         <svg viewBox="0 0 512 512" fill="currentColor"><path d="M184 48H328c4.4 0 8 3.6 8 8V96H176V56c0-4.4 3.6-8 8-8zm-56 8V96H64C28.7 96 0 124.7 0 160V296 416c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V296 160c0-35.3-28.7-64-64-64H384V56c0-30.9-25.1-56-56-56H184c-30.9 0-56 25.1-56 56z"/></svg>
@@ -670,28 +678,26 @@
             <div class="exp-card">
                 <div class="exp-meta"><div class="dates">12/2020 – 07/2022</div><div class="location">Taipei</div></div>
                 <div class="exp-body">
-                    <h3 data-fr="Analyste Documentation Technique" data-en="Document Control Analyst">Analyste Documentation Technique</h3>
-                    <div class="company"><img class="company-logo" src="corsair_logo.png" alt="Corsair Gaming"><span>Corsair Gaming · <span data-fr="Périphériques gaming" data-en="Gaming peripherals">Périphériques gaming</span></span></div>
+                    <h3 data-fr="Analyste Documentation Technique" data-en="Technical Document Control Analyst">Analyste Documentation Technique</h3>
+                    <div class="company"><img class="company-logo" src="corsair_logo.png" alt="Corsair Gaming"><span>Corsair Gaming · <span data-fr="Périphériques gaming (entreprise américaine)" data-en="Gaming peripherals (US company)">Périphériques gaming (entreprise américaine)</span></span></div>
                     <ul>
-                        <li data-fr="Réduit les incohérences de données inter-régionales en gérant la documentation et la validation de 3 lignes de produits APAC, EMEA et Amériques, avec 10 à 15 projets par trimestre" data-en="Reduced cross-regional data inconsistencies by managing documentation and validation for 3 product lines across APAC, EMEA and Americas, handling 10 to 15 projects per quarter">Réduit les incohérences de données inter-régionales en gérant la documentation et la validation de 3 lignes de produits APAC, EMEA et Amériques, avec 10 à 15 projets par trimestre</li>
-                        <li data-fr="Amélioré le temps de réponse inter-équipes en résolvant 20+ tickets techniques et opérationnels par semaine, assurant la continuité des workflows" data-en="Improved inter-team response time by resolving 20+ technical and operational tickets per week, ensuring workflow continuity">Amélioré le temps de réponse inter-équipes en résolvant 20+ tickets techniques et opérationnels par semaine, assurant la continuité des workflows</li>
-                        <li data-fr="Gestion des données via PLM/Oracle et reporting sous Excel" data-en="Data management via PLM/Oracle and reporting under Excel">Gestion des données via PLM/Oracle et reporting sous Excel</li>
+                        <li data-fr="Coordination de 10 à 15 projets par trimestre avec les équipes APAC, EMEA et Amériques, garantissant la cohérence des données produits sur 3 lignes de produits" data-en="Coordinated 10 to 15 projects per quarter with APAC, EMEA and Americas teams, ensuring product data consistency across 3 product lines">Coordination de 10 à 15 projets par trimestre avec les équipes APAC, EMEA et Amériques, garantissant la cohérence des données produits sur 3 lignes de produits</li>
+                        <li data-fr="Résolution de 20+ tickets techniques et opérationnels par semaine et coordination inter-équipes en anglais" data-en="Resolved 20+ technical and operational tickets per week and coordinated across teams in English">Résolution de 20+ tickets techniques et opérationnels par semaine et coordination inter-équipes en anglais</li>
+                        <li data-fr="Gestion des données produits via Oracle PLM/ERP, automatisations Google Apps Script et reporting sous Excel" data-en="Managed product data in Oracle PLM/ERP, built Google Apps Script automations and reported in Excel">Gestion des données produits via Oracle PLM/ERP, automatisations Google Apps Script et reporting sous Excel</li>
                     </ul>
-                    <div class="exp-tags"><span class="exp-tag">Operations & Performance</span><span class="exp-tag">Process Optimization</span><span class="exp-tag">Data Reliability</span><span class="exp-tag">Product Data Management (PLM)</span><span class="exp-tag">Cross-functional Coordination</span><span class="exp-tag">APAC / EMEA / Americas</span><span class="exp-tag">International Project Management</span><span class="exp-tag">Reporting (Excel)</span></div>
-
+                    <div class="exp-tags"><span class="exp-tag">Operations</span><span class="exp-tag">Process Optimization</span><span class="exp-tag">Product Data Management (PLM)</span><span class="exp-tag">Cross-functional Coordination</span><span class="exp-tag">APAC / EMEA / Americas</span><span class="exp-tag">Oracle PLM/ERP</span><span class="exp-tag">Google Apps Script</span><span class="exp-tag">Reporting (Excel)</span></div>
                 </div>
             </div>
             <div class="exp-card">
                 <div class="exp-meta"><div class="dates">08/2018 – 12/2020</div><div class="location">Taipei</div></div>
                 <div class="exp-body">
-                    <h3 data-fr="Chargée de Marques & Développement Commercial" data-en="Trademark and Business Development Specialist">Chargée de Marques & Développement Commercial</h3>
-                    <div class="company"><img class="company-logo" src="best_ip_logo.jpg" alt="BEST International IP"><span>BEST International IP · <span data-fr="Cabinet juridique" data-en="Law firm">Cabinet juridique</span></span></div>
+                    <h3 data-fr="Chargée de Marques & Développement Commercial" data-en="Trademark & Business Development Specialist">Chargée de Marques & Développement Commercial</h3>
+                    <div class="company"><img class="company-logo" src="best_ip_logo.jpg" alt="BEST International IP"><span>BEST International IP · <span data-fr="Cabinet de propriété intellectuelle" data-en="IP law firm">Cabinet de propriété intellectuelle</span></span></div>
                     <ul>
-                        <li data-fr="Maintenu un taux de fidélisation élevé en assurant la gestion de 200+ comptes B2B : suivi proactif, identification de nouvelles opportunités commerciales et développement du portefeuille" data-en="Drove high client retention and portfolio growth by managing 200+ B2B accounts with proactive follow-up and identifying new commercial opportunities">Maintenu un taux de fidélisation élevé en assurant la gestion de 200+ comptes B2B : suivi proactif, identification de nouvelles opportunités commerciales et développement du portefeuille</li>
-                        <li data-fr="Orienté les décisions clients grâce à du conseil stratégique et des analyses sur mesure" data-en="Guided client decisions through strategic advisory and tailored analysis">Orienté les décisions clients grâce à du conseil stratégique et des analyses sur mesure</li>
+                        <li data-fr="Gestion d'un portefeuille de 200+ clients internationaux B2B sur l'ensemble du cycle de vie des marques" data-en="Managed a portfolio of 200+ international B2B clients across the full trademark lifecycle">Gestion d'un portefeuille de 200+ clients internationaux B2B sur l'ensemble du cycle de vie des marques</li>
+                        <li data-fr="Conseil stratégique, suivi des dossiers, gestion des litiges et coordination de la facturation (devis, suivi des paiements, relances)" data-en="Strategic advisory, case follow-up, dispute handling and invoicing coordination (quotes, payment tracking, reminders)">Conseil stratégique, suivi des dossiers, gestion des litiges et coordination de la facturation (devis, suivi des paiements, relances)</li>
                     </ul>
-                    <div class="exp-tags"><span class="exp-tag">B2B Account Management (200+)</span><span class="exp-tag">Client Retention</span><span class="exp-tag">Business Reviews</span><span class="exp-tag">Strategic Advisory</span><span class="exp-tag">CRM B2B</span><span class="exp-tag">Business Development</span><span class="exp-tag">Portfolio Growth</span><span class="exp-tag">International Negotiation</span></div>
-
+                    <div class="exp-tags"><span class="exp-tag">B2B Account Management (200+)</span><span class="exp-tag">Client Retention</span><span class="exp-tag">Strategic Advisory</span><span class="exp-tag">CRM B2B</span><span class="exp-tag">Business Development</span><span class="exp-tag">Invoicing</span><span class="exp-tag">International Negotiation</span></div>
                 </div>
             </div>
         </div>
@@ -706,33 +712,45 @@
         <div class="card-wrap">
             <div class="skills-grid">
                 <div class="skill-category">
-                    <h3 data-fr="Relation client & développement" data-en="Client Relations & Growth">Relation client & développement</h3>
+                    <h3>Marketing Operations & CRM</h3>
                     <div class="skill-tags">
-                        <span class="skill-tag" data-fr="Gestion de comptes" data-en="Account Management">Gestion de comptes</span>
+                        <span class="skill-tag" data-fr="Gestion de campagnes" data-en="Campaign Management">Gestion de campagnes</span>
                         <span class="skill-tag">CRM B2B/B2C</span>
-                        <span class="skill-tag" data-fr="Fidélisation" data-en="Retention">Fidélisation</span>
-                        <span class="skill-tag" data-fr="Conseil stratégique" data-en="Strategic Advisory">Conseil stratégique</span>
-                        <span class="skill-tag" data-fr="Acquisition multi-marchés" data-en="Multi-market Acquisition">Acquisition multi-marchés</span>
-                        <span class="skill-tag">SEA / SMA / SEO</span>
+                        <span class="skill-tag" data-fr="Automatisation des workflows" data-en="Workflow Automation">Automatisation des workflows</span>
+                        <span class="skill-tag" data-fr="Gestion de projet" data-en="Project Management">Gestion de projet</span>
+                        <span class="skill-tag" data-fr="Coordination APAC/EMEA/Amériques" data-en="APAC/EMEA/Americas Coordination">Coordination APAC/EMEA/Amériques</span>
+                        <span class="skill-tag" data-fr="Optimisation des processus" data-en="Process Optimization">Optimisation des processus</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3 data-fr="Analyse & Data" data-en="Analytics & Data">Analyse & Data</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">GA4</span><span class="skill-tag">GTM</span>
+                        <span class="skill-tag">SQL</span><span class="skill-tag">Tableau</span>
+                        <span class="skill-tag">Dashboards</span>
+                        <span class="skill-tag">Excel / Power Query</span>
+                        <span class="skill-tag">Reporting</span>
+                        <span class="skill-tag">CRO</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Performance & Acquisition</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Google Ads</span><span class="skill-tag">Meta Ads</span>
+                        <span class="skill-tag">SEO / SEA / SMA</span>
+                        <span class="skill-tag" data-fr="Acquisition B2B/B2C" data-en="B2B/B2C Acquisition">Acquisition B2B/B2C</span>
+                        <span class="skill-tag" data-fr="Campagnes emailing" data-en="Email Campaigns">Campagnes emailing</span>
                         <span class="skill-tag" data-fr="Stratégie Go-to-Market" data-en="Go-to-Market Strategy">Stratégie Go-to-Market</span>
                     </div>
                 </div>
                 <div class="skill-category">
-                    <h3 data-fr="Analyse & reporting" data-en="Analytics & Reporting">Analyse & reporting</h3>
+                    <h3 data-fr="Contenu, Marque & IA" data-en="Content, Brand & AI">Contenu, Marque & IA</h3>
                     <div class="skill-tags">
-                        <span class="skill-tag">GA4</span><span class="skill-tag">GTM</span>
-                        <span class="skill-tag">Excel</span><span class="skill-tag">SQL</span>
-                        <span class="skill-tag">Dashboards</span>
-                        <span class="skill-tag" data-fr="Suivi de KPI" data-en="KPI Tracking">Suivi de KPI</span>
-                        <span class="skill-tag" data-fr="Reco. data-driven" data-en="Data-driven Reco.">Reco. data-driven</span>
-                    </div>
-                </div>
-                <div class="skill-category">
-                    <h3 data-fr="Coordination" data-en="Coordination">Coordination</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag" data-fr="Cross-régionale APAC/EMEA/Amériques" data-en="Cross-regional APAC/EMEA/Americas">Cross-régionale APAC/EMEA/Amériques</span>
-                        <span class="skill-tag" data-fr="Gestion de projets" data-en="Project Management">Gestion de projets</span>
-                        <span class="skill-tag" data-fr="Optimisation des processus" data-en="Process Optimization">Optimisation des processus</span>
+                        <span class="skill-tag" data-fr="Calendrier éditorial" data-en="Editorial Calendar">Calendrier éditorial</span>
+                        <span class="skill-tag" data-fr="Rédaction multilingue" data-en="Multilingual Copywriting">Rédaction multilingue</span>
+                        <span class="skill-tag" data-fr="Identité de marque" data-en="Brand Identity">Identité de marque</span>
+                        <span class="skill-tag">LinkedIn · Instagram · TikTok</span>
+                        <span class="skill-tag" data-fr="Automatisations IA (Apps Script)" data-en="AI Automations (Apps Script)">Automatisations IA (Apps Script)</span>
                     </div>
                 </div>
             </div>
@@ -747,13 +765,17 @@
         </div>
         <div class="card-wrap">
             <div class="skill-tags">
-                <span class="skill-tag">Google Ads</span><span class="skill-tag">Meta Ads</span>
-                <span class="skill-tag">Salesforce</span><span class="skill-tag">Sarbacane</span>
-                <span class="skill-tag">Airtable</span><span class="skill-tag">Jira</span>
-                <span class="skill-tag">Notion</span><span class="skill-tag">Trello</span>
-                <span class="skill-tag">Canva</span><span class="skill-tag">CapCut</span>
-                <span class="skill-tag">Figma</span><span class="skill-tag">Google Suite</span>
-                <span class="skill-tag">Slack</span>
+                <span class="skill-tag">HubSpot</span><span class="skill-tag">Salesforce</span>
+                <span class="skill-tag">Airtable</span><span class="skill-tag">Notion</span>
+                <span class="skill-tag">Google Workspace</span><span class="skill-tag">Google Apps Script</span>
+                <span class="skill-tag">Jira</span><span class="skill-tag">Smartsheet</span>
+                <span class="skill-tag">GA4</span><span class="skill-tag">GTM</span>
+                <span class="skill-tag">PostHog</span><span class="skill-tag">Tableau</span>
+                <span class="skill-tag">SQL</span><span class="skill-tag">Google Ads</span>
+                <span class="skill-tag">Meta Ads</span><span class="skill-tag">Sarbacane</span>
+                <span class="skill-tag">Oracle PLM/ERP</span>
+                <span class="skill-tag">Figma</span><span class="skill-tag">Canva</span>
+                <span class="skill-tag">CapCut</span><span class="skill-tag">ChatGPT · Claude · Gemini</span>
                 <span class="skill-tag">HTML / CSS</span><span class="skill-tag">WordPress</span>
             </div>
         </div>
@@ -767,22 +789,22 @@
         </div>
         <div class="edu-card">
             <h3>M2 Strategic & Operational Marketing / M1 International & European Business</h3>
-            <div class="school">Grande École, EM Strasbourg</div>
+            <div class="school" data-fr="Grande École, EM Strasbourg Business School · 2025" data-en="Grande École, EM Strasbourg Business School · 2025">Grande École, EM Strasbourg Business School · 2025</div>
             <ul class="edu-achievements">
                 <li data-fr="Mémoire (15/20) : comportement d'achat éthique dans le secteur de la mode en Europe et Afrique" data-en="Master's thesis (15/20): ethical purchasing behavior in the fashion sector across Europe and Africa">Mémoire (15/20) : comportement d'achat éthique dans le secteur de la mode en Europe et Afrique</li>
-                <li data-fr="1ère place : repositionnement de Tupperware pour la Gen Z (16,35/20)" data-en="1st place: Tupperware repositioning strategy for Gen Z (16.35/20)">1ère place : repositionnement de Tupperware pour la Gen Z (16,35/20)</li>
+                <li data-fr="1ère place : étude de marché Tupperware France, cible millennials (16,35/20)" data-en="1st place: Tupperware France market study, millennial target (16.35/20)">1ère place : étude de marché Tupperware France, cible millennials (16,35/20)</li>
             </ul>
             <div class="edu-project">
                 <h4 data-fr="Mémoire de recherche" data-en="Research Thesis">Mémoire de recherche</h4>
-                <p data-fr="Étude quantitative sur l'influence des valeurs personnelles et des initiatives éthiques sur le comportement des consommateurs dans la mode. 166 répondants, échelle de Likert 7 points, régression multiple et ANOVA. Résultat : la self-transcendance, la conservation et l'ouverture influencent significativement la volonté de récompenser ou punir les entreprises." data-en="Quantitative study on how personal values and ethical initiatives influence consumer behavior in fashion. 166 respondents, 7-point Likert scale, multiple regression and ANOVA. Finding: self-transcendence, conservation and openness significantly influence willingness to reward or punish companies.">Étude quantitative sur l'influence des valeurs personnelles et des initiatives éthiques sur le comportement des consommateurs dans la mode. 166 répondants, échelle de Likert 7 points, régression multiple et ANOVA. Résultat : la self-transcendance, la conservation et l'ouverture influencent significativement la volonté de récompenser ou punir les entreprises.</p>
+                <p data-fr="Étude quantitative sur l'influence des valeurs personnelles et des initiatives éthiques sur le comportement des consommateurs dans la mode. 166 répondants, échelle de Likert 7 points, régression multiple et ANOVA à deux facteurs. Résultat : la self-transcendance, la conservation et l'ouverture influencent significativement la volonté de récompenser ou punir les entreprises." data-en="Quantitative study on how personal values and ethical initiatives influence consumer behavior in fashion. 166 respondents, 7-point Likert scale, multiple regression and two-way ANOVA. Finding: self-transcendence, conservation and openness significantly influence willingness to reward or punish companies.">Étude quantitative sur l'influence des valeurs personnelles et des initiatives éthiques sur le comportement des consommateurs dans la mode. 166 répondants, échelle de Likert 7 points, régression multiple et ANOVA à deux facteurs. Résultat : la self-transcendance, la conservation et l'ouverture influencent significativement la volonté de récompenser ou punir les entreprises.</p>
             </div>
             <div class="edu-project">
-                <h4 data-fr="Cas Tupperware — 1ère place" data-en="Tupperware Case Competition — 1st Place">Cas Tupperware — 1ère place</h4>
-                <p data-fr="Comment Tupperware peut-elle devenir une marque incontournable pour les millennials et la Gen Z ? Analyse des usages, interviews terrain, stratégies de rajeunissement de marque. Meilleure note du département (16,35/20)." data-en="How can Tupperware become a must-have brand for millennials and Gen Z? Usage analysis, field interviews, brand rejuvenation strategies. Highest score in the department (16.35/20).">Comment Tupperware peut-elle devenir une marque incontournable pour les millennials et la Gen Z ? Analyse des usages, interviews terrain, stratégies de rajeunissement de marque. Meilleure note du département (16,35/20).</p>
+                <h4 data-fr="Cas Tupperware, 1ère place" data-en="Tupperware Case Competition, 1st Place">Cas Tupperware, 1ère place</h4>
+                <p data-fr="Cours Product & Brand Management : comment rajeunir la marque auprès des millennials ? Analyse du marché des contenants alimentaires, 12 entretiens semi-directifs et recommandations marketing présentées au directeur général de Tupperware France. Meilleure note de la promotion (16,35/20) et prix sponsorisé par Tupperware." data-en="Product & Brand Management course: how to rejuvenate the brand for millennials? Analysis of the food storage market, 12 semi-structured interviews and marketing recommendations presented to the General Manager of Tupperware France. Highest score in the class (16.35/20) and a Tupperware-sponsored prize.">Cours Product & Brand Management : comment rajeunir la marque auprès des millennials ? Analyse du marché des contenants alimentaires, 12 entretiens semi-directifs et recommandations marketing présentées au directeur général de Tupperware France. Meilleure note de la promotion (16,35/20) et prix sponsorisé par Tupperware.</p>
             </div>
-            <a class="reco-link" href="https://drive.google.com/file/d/1Qivjg1WIUYeIFS0770pRjLxwXwecH-kw/view?usp=sharing" target="_blank" rel="noopener">
+            <a class="reco-link" href="#recommendations">
                 <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 2h8l4 4v12a1 1 0 01-1 1H6a1 1 0 01-1-1V3a1 1 0 011-1z"/><path d="M14 2v4h4M8 10h4M8 13h6"/></svg>
-                <span data-fr="Lettre de recommandation (professeur)" data-en="Recommendation letter (professor)">Lettre de recommandation (professeur)</span>
+                <span data-fr="Voir les lettres de recommandation" data-en="See recommendation letters">Voir les lettres de recommandation</span>
             </a>
         </div>
         <div class="edu-card">
@@ -831,86 +853,74 @@
             <h2 class="section-title" data-fr="Certifications" data-en="Certifications">Certifications</h2>
             <div class="section-line"></div>
         </div>
-        <div class="cert-grid">
-            <div class="cert-item">
-                <h4>Google Analytics Certification</h4>
-                <div class="cert-issuer">Google Digital Academy (Skillshop)</div>
-                <div class="cert-date" data-fr="Délivré août 2024" data-en="Issued Aug 2024">Délivré août 2024</div>
+        <div class="card-wrap" style="padding:1.1rem 1.6rem;">
+            <div class="skill-tags">
+                <span class="skill-tag">Google Analytics</span>
+                <span class="skill-tag">Amazon Ads Retail</span>
+                <span class="skill-tag">Marketing Analytics</span>
+                <span class="skill-tag">Data Analysis with Spreadsheets & SQL</span>
+                <span class="skill-tag">Scrum</span>
+                <span class="skill-tag">CFORCSR© (RSE)</span>
+                <span class="skill-tag">Data Culture Certificate</span>
             </div>
-            <div class="cert-item">
-                <h4>Amazon Ads Retail Certification</h4>
-                <div class="cert-issuer">Amazon Web Services (AWS)</div>
-                <div class="cert-date" data-fr="Délivré oct. 2024" data-en="Issued Oct 2024">Délivré oct. 2024</div>
+        </div>
+    </section>
+
+    <section class="section reveal" id="recommendations">
+        <div class="section-header">
+            <span class="section-number">07</span>
+            <h2 class="section-title" data-fr="Recommandations" data-en="Recommendations">Recommandations</h2>
+            <div class="section-line"></div>
+        </div>
+        <div class="reco-grid">
+            <div class="reco-card">
+                <div class="reco-who">Aline Farah</div>
+                <div class="reco-role" data-fr="Chargée de la promotion et du recrutement à l'international, EM Strasbourg Business School" data-en="International Promotion and Recruitment Officer, EM Strasbourg Business School">Chargée de la promotion et du recrutement à l'international, EM Strasbourg Business School</div>
+                <div class="reco-context" data-fr="Collaboration directe, salon étudiant international (rôle d'ambassadrice)" data-en="Direct collaboration, international student fair (ambassador role)">Collaboration directe, salon étudiant international (rôle d'ambassadrice)</div>
+                <p data-fr="La lettre souligne l'aisance relationnelle avec des publics très divers (étudiants, familles, partenaires institutionnels), la capacité d'adaptation rapide à différents interlocuteurs, ainsi que l'initiative et la rigueur en environnement multiculturel." data-en="The letter highlights ease with very diverse audiences (students, families, institutional partners), quick adaptation to different counterparts, and initiative and rigour in a multicultural setting.">La lettre souligne l'aisance relationnelle avec des publics très divers (étudiants, familles, partenaires institutionnels), la capacité d'adaptation rapide à différents interlocuteurs, ainsi que l'initiative et la rigueur en environnement multiculturel.</p>
+                <a class="reco-link" href="https://drive.google.com/file/d/1lUREkXxnFECmVdLZW3kv-2W_g_X6A1lL/view" target="_blank" rel="noopener">
+                    <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 2h8l4 4v12a1 1 0 01-1 1H6a1 1 0 01-1-1V3a1 1 0 011-1z"/><path d="M14 2v4h4M8 10h4M8 13h6"/></svg>
+                    <span data-fr="Lire la lettre (FR)" data-en="Read the letter (FR)">Lire la lettre (FR)</span>
+                </a>
             </div>
-            <div class="cert-item">
-                <h4>Data Analysis with Spreadsheets and SQL</h4>
-                <div class="cert-issuer">Meta (Coursera)</div>
-                <div class="cert-date" data-fr="Délivré avr. 2024" data-en="Issued Apr 2024">Délivré avr. 2024</div>
-            </div>
-            <div class="cert-item">
-                <h4>Google Analytics for Beginners</h4>
-                <div class="cert-issuer">Google</div>
-                <div class="cert-date" data-fr="Délivré janv. 2024" data-en="Issued Jan 2024">Délivré janv. 2024</div>
-            </div>
-            <div class="cert-item">
-                <h4>CFORCSR©</h4>
-                <div class="cert-issuer">EM Strasbourg Business School</div>
-                <div class="cert-date" data-fr="Délivré fév. 2024" data-en="Issued Feb 2024">Délivré fév. 2024</div>
-                <div class="cert-id" data-fr="RSE : théorie des parties prenantes, ODD, gouvernance responsable, outils pratiques et leadership éthique" data-en="CSR: stakeholder theory, SDGs, responsible governance, practical tools and ethical leadership">RSE : théorie des parties prenantes, ODD, gouvernance responsable, outils pratiques et leadership éthique</div>
-            </div>
-            <div class="cert-item">
-                <h4>Data Culture Certificate</h4>
-                <div class="cert-issuer">EM Strasbourg Business School</div>
-                <div class="cert-date" data-fr="Délivré août 2024" data-en="Issued Aug 2024">Délivré août 2024</div>
-            </div>
-            <div class="cert-item">
-                <h4>Marketing Analytics Foundation</h4>
-                <div class="cert-issuer">Coursera</div>
-                <div class="cert-date" data-fr="Délivré nov. 2023" data-en="Issued Nov 2023">Délivré nov. 2023</div>
-            </div>
-            <div class="cert-item">
-                <h4>Introduction to Data Analytics</h4>
-                <div class="cert-issuer">Coursera</div>
-                <div class="cert-date" data-fr="Délivré nov. 2023" data-en="Issued Nov 2023">Délivré nov. 2023</div>
-            </div>
-            <div class="cert-item">
-                <h4>Inside LVMH — Creation & Branding, Operations & Supply Chain</h4>
-                <div class="cert-issuer">LVMH</div>
-                <div class="cert-date" data-fr="Délivré nov. 2023" data-en="Issued Nov 2023">Délivré nov. 2023</div>
-            </div>
-            <div class="cert-item">
-                <h4 data-fr="Communication et management de la performance en environnement international" data-en="Communication and Performance Management in International Working Environment">Communication et management de la performance en environnement international</h4>
-                <div class="cert-issuer">Reinventing Carrière Coaching</div>
-                <div class="cert-date" data-fr="Délivré sept. 2023" data-en="Issued Sep 2023">Délivré sept. 2023</div>
+            <div class="reco-card">
+                <div class="reco-who">Dr. Nada Maaninou</div>
+                <div class="reco-role" data-fr="Professeure associée en marketing, EM Strasbourg Business School" data-en="Associate Professor of Marketing, EM Strasbourg Business School">Professeure associée en marketing, EM Strasbourg Business School</div>
+                <div class="reco-context" data-fr="Cours Product & Brand Management, étude de marché Tupperware" data-en="Product & Brand Management course, Tupperware market study">Cours Product & Brand Management, étude de marché Tupperware</div>
+                <p data-fr="Attestation du travail réalisé sur l'étude de marché Tupperware France : analyse du marché et du comportement des millennials, 12 entretiens semi-directifs, recommandations présentées au directeur général. Meilleure note de la promotion (16,35/20) et prix sponsorisé par Tupperware." data-en="Attests to the work on the Tupperware France market study: market and millennial behaviour analysis, 12 semi-structured interviews, recommendations presented to the General Manager. Highest score in the class (16.35/20) and a Tupperware-sponsored prize.">Attestation du travail réalisé sur l'étude de marché Tupperware France : analyse du marché et du comportement des millennials, 12 entretiens semi-directifs, recommandations présentées au directeur général. Meilleure note de la promotion (16,35/20) et prix sponsorisé par Tupperware.</p>
+                <a class="reco-link" href="https://drive.google.com/file/d/1Qivjg1WIUYeIFS0770pRjLxwXwecH-kw/view" target="_blank" rel="noopener">
+                    <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 2h8l4 4v12a1 1 0 01-1 1H6a1 1 0 01-1-1V3a1 1 0 011-1z"/><path d="M14 2v4h4M8 10h4M8 13h6"/></svg>
+                    <span data-fr="Lire la lettre (EN)" data-en="Read the letter (EN)">Lire la lettre (EN)</span>
+                </a>
             </div>
         </div>
     </section>
 
     <section class="section reveal" id="portfolio">
         <div class="section-header">
-            <span class="section-number">07</span>
+            <span class="section-number">08</span>
             <h2 class="section-title" data-fr="Portfolio & Liens" data-en="Portfolio & Links">Portfolio & Liens</h2>
             <div class="section-line"></div>
         </div>
         <div class="links-row">
+            <a class="link-card primary" href="portfolio.html" target="_blank" rel="noopener">
+                <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="14" height="14" rx="2"/><path d="M3 8h14M8 3v14"/></svg>
+                <span data-fr="Portfolio (4 études de cas, FR/EN)" data-en="Portfolio (4 case studies, FR/EN)">Portfolio (4 études de cas, FR/EN)</span>
+            </a>
             <a class="link-card" href="https://www.linkedin.com/in/yihsuan-chiu/" target="_blank" rel="noopener">
                 <svg viewBox="0 0 20 20" fill="currentColor"><path d="M4.5 3A1.5 1.5 0 003 4.5 1.5 1.5 0 004.5 6 1.5 1.5 0 006 4.5 1.5 1.5 0 004.5 3zM3 8h3v9H3V8zm5.5 0H11v1.2h.03c.35-.66 1.2-1.35 2.47-1.35 2.64 0 3.13 1.74 3.13 4v5.15h-3V12.4c0-1.1-.02-2.5-1.53-2.5s-1.76 1.2-1.76 2.43V17H7.5V8z"/></svg>
                 LinkedIn
             </a>
-            <a class="link-card" href="https://123456789fihwihfushgushigs.my.canva.site/yhchiuportfolio" target="_blank" rel="noopener">
-                <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="14" height="14" rx="2"/><path d="M3 8h14M8 3v14"/></svg>
-                Portfolio FR
-            </a>
-            <a class="link-card" href="https://yhchiuportfolio.wordpress.com" target="_blank" rel="noopener">
-                <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="10" cy="10" r="7"/><path d="M3 10h14M10 3c-2 2.5-2 11.5 0 14M10 3c2 2.5 2 11.5 0 14"/></svg>
-                Portfolio EN
+            <a class="link-card" href="https://www.youtube.com/@josdiary_%E6%88%91%E7%9A%84%E7%95%99%E5%AD%B8%E6%97%A5%E8%A8%98" target="_blank" rel="noopener">
+                <svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 3.4C4.36 3.4 2 5.06 2 5.06v9.88s2.36 1.66 8 1.66 8-1.66 8-1.66V5.06S15.64 3.4 10 3.4zM8 13V7l5 3-5 3z"/></svg>
+                YouTube
             </a>
         </div>
     </section>
 
     <section class="section reveal" id="extras">
         <div class="section-header">
-            <span class="section-number">08</span>
+            <span class="section-number">09</span>
             <h2 class="section-title" data-fr="Engagement & Centres d'intérêts" data-en="Engagement & Interests">Engagement & Centres d'intérêts</h2>
             <div class="section-line"></div>
         </div>
@@ -918,12 +928,16 @@
             <div class="extra-item full-width">
                 <div class="extra-text">
                     <h4 data-fr="Ambassadrice Internationale" data-en="International Ambassador">Ambassadrice Internationale</h4>
-                    <p data-fr="EM Strasbourg (2022–2024)" data-en="EM Strasbourg (2022–2024)">EM Strasbourg (2022–2024)</p>
-                    <ul style="list-style:none;padding:0;margin-top:0.4rem;">
-                        <li style="position:relative;padding-left:1.1rem;font-size:0.8rem;color:var(--muted);margin-bottom:0.3rem;line-height:1.55;"><span style="position:absolute;left:0;top:0.6em;width:4px;height:4px;background:var(--gold);border-radius:50%;display:block;"></span><span data-fr="Représentation institutionnelle : Promotion de l'école lors du salon EEFT Taiwan 2024, agissant comme lien entre l'institution française et les candidats asiatiques" data-en="Institutional representation: Promotion of the school at the EEFT Taiwan 2024 fair, acting as a bridge between the French institution and Asian candidates">Représentation institutionnelle : Promotion de l'école lors du salon EEFT Taiwan 2024, agissant comme lien entre l'institution française et les candidats asiatiques</span></li>
-                        <li style="position:relative;padding-left:1.1rem;font-size:0.8rem;color:var(--muted);margin-bottom:0.3rem;line-height:1.55;"><span style="position:absolute;left:0;top:0.6em;width:4px;height:4px;background:var(--gold);border-radius:50%;display:block;"></span><span data-fr="Accompagnement interculturel : Accueil et intégration des étudiants internationaux, facilitant leur adaptation au système éducatif français" data-en="Intercultural support: Welcoming and integrating international students, facilitating their adaptation to the French education system">Accompagnement interculturel : Accueil et intégration des étudiants internationaux, facilitant leur adaptation au système éducatif français</span></li>
-                        <li style="position:relative;padding-left:1.1rem;font-size:0.8rem;color:var(--muted);margin-bottom:0.3rem;line-height:1.55;"><span style="position:absolute;left:0;top:0.6em;width:4px;height:4px;background:var(--gold);border-radius:50%;display:block;"></span><span data-fr="Animation de communauté : Création de contenus vidéo pour promouvoir les échanges académiques et renforcer la visibilité de l'école à l'international" data-en="Community engagement: Creation of video content to promote academic exchanges and strengthen the school's international visibility">Animation de communauté : Création de contenus vidéo pour promouvoir les échanges académiques et renforcer la visibilité de l'école à l'international</span></li>
+                    <p data-fr="EM Strasbourg Business School · 12/2022 – 11/2024" data-en="EM Strasbourg Business School · 12/2022 – 11/2024">EM Strasbourg Business School · 12/2022 – 11/2024</p>
+                    <ul>
+                        <li data-fr="Accueil et accompagnement des étudiants internationaux sur leurs démarches d'installation : visa, logement et vie quotidienne en France" data-en="Welcomed and supported international students with their settling-in steps: visa, housing and daily life in France">Accueil et accompagnement des étudiants internationaux sur leurs démarches d'installation : visa, logement et vie quotidienne en France</li>
+                        <li data-fr="Promotion de l'école lors du salon EEFT Taiwan 2024 : présentation des programmes, échanges avec les candidats et suivi post-salon, avec des candidatures abouties à une inscription" data-en="Promoted the school at the EEFT Taiwan 2024 fair: programme presentations, candidate conversations and post-fair follow-up, with applications converted into enrolments">Promotion de l'école lors du salon EEFT Taiwan 2024 : présentation des programmes, échanges avec les candidats et suivi post-salon, avec des candidatures abouties à une inscription</li>
+                        <li data-fr="Création de contenus vidéo pour promouvoir les programmes d'échange auprès des candidats internationaux" data-en="Created video content to promote exchange programmes to international candidates">Création de contenus vidéo pour promouvoir les programmes d'échange auprès des candidats internationaux</li>
                     </ul>
+                    <a class="reco-link" href="https://drive.google.com/file/d/1lUREkXxnFECmVdLZW3kv-2W_g_X6A1lL/view" target="_blank" rel="noopener">
+                        <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 2h8l4 4v12a1 1 0 01-1 1H6a1 1 0 01-1-1V3a1 1 0 011-1z"/><path d="M14 2v4h4M8 10h4M8 13h6"/></svg>
+                        <span data-fr="Lettre de recommandation" data-en="Recommendation letter">Lettre de recommandation</span>
+                    </a>
                 </div>
                 <div class="ambassador-photos">
                     <img src="Integration%20team.jpeg" alt="Integration team" loading="lazy">
@@ -934,18 +948,15 @@
             </div>
             <div class="extra-item">
                 <h4 data-fr="Création de contenu" data-en="Content Creation">Création de contenu</h4>
-                <p>
-                    <span data-fr="Chaîne YouTube voyage et vie quotidienne. Création de contenus multi-plateformes : Facebook, Instagram, LinkedIn, TikTok, X (Twitter)" data-en="YouTube channel on travel and daily life. Multi-platform content creation: Facebook, Instagram, LinkedIn, TikTok, X (Twitter)">Chaîne YouTube voyage et vie quotidienne. Création de contenus multi-plateformes : Facebook, Instagram, LinkedIn, TikTok, X (Twitter)</span>
-                    <br>
-                    <a class="reco-link" href="https://www.youtube.com/@josdiary_%E6%88%91%E7%9A%84%E7%95%99%E5%AD%B8%E6%97%A5%E8%A8%98" target="_blank" rel="noopener" style="margin-top:0.5rem;">
-                        <svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 3.4C4.36 3.4 2 5.06 2 5.06v9.88s2.36 1.66 8 1.66 8-1.66 8-1.66V5.06S15.64 3.4 10 3.4zM8 13V7l5 3-5 3z"/></svg>
-                        <span data-fr="Voir la chaîne" data-en="View channel">Voir la chaîne</span>
-                    </a>
-                </p>
+                <p data-fr="Chaîne YouTube voyage sur les villes françaises et européennes : script, tournage, montage, publication et analyse des performances." data-en="YouTube travel channel on French and European cities: scripting, filming, editing, publishing and performance analysis.">Chaîne YouTube voyage sur les villes françaises et européennes : script, tournage, montage, publication et analyse des performances.</p>
+                <a class="reco-link" href="https://www.youtube.com/@josdiary_%E6%88%91%E7%9A%84%E7%95%99%E5%AD%B8%E6%97%A5%E8%A8%98" target="_blank" rel="noopener">
+                    <svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 3.4C4.36 3.4 2 5.06 2 5.06v9.88s2.36 1.66 8 1.66 8-1.66 8-1.66V5.06S15.64 3.4 10 3.4zM8 13V7l5 3-5 3z"/></svg>
+                    <span data-fr="Voir la chaîne" data-en="View channel">Voir la chaîne</span>
+                </a>
             </div>
             <div class="extra-item">
                 <h4 data-fr="Enquêtrice bénévole" data-en="Volunteer Investigator">Enquêtrice bénévole</h4>
-                <p data-fr="Faith for Animals (2020) : Coordination stérilisations canines" data-en="Faith for Animals (2020): Coordination of canine sterilization programs">Faith for Animals (2020) : Coordination stérilisations canines</p>
+                <p data-fr="Faith for Animals (2020) : coordination de stérilisations canines" data-en="Faith for Animals (2020): coordination of canine sterilization programs">Faith for Animals (2020) : coordination de stérilisations canines</p>
             </div>
             <div class="extra-item">
                 <h4 data-fr="Musique" data-en="Music">Musique</h4>
@@ -956,7 +967,7 @@
 
     <section class="section reveal" id="contact">
         <div class="section-header">
-            <span class="section-number">09</span>
+            <span class="section-number">10</span>
             <h2 class="section-title" data-fr="Me contacter" data-en="Get in Touch">Me contacter</h2>
             <div class="section-line"></div>
         </div>
@@ -978,11 +989,11 @@
                     <input type="email" name="email" required>
                 </div>
                 <div class="form-group">
-                    <label><span data-fr="Téléphone" data-en="Phone">Téléphone</span> <span class="optional">(optional)</span></label>
+                    <label><span data-fr="Téléphone" data-en="Phone">Téléphone</span> <span class="optional" data-fr="(optionnel)" data-en="(optional)">(optionnel)</span></label>
                     <input type="tel" name="phone">
                 </div>
                 <div class="form-group">
-                    <label>Message <span class="optional">(optional)</span></label>
+                    <label>Message <span class="optional" data-fr="(optionnel)" data-en="(optional)">(optionnel)</span></label>
                     <textarea name="message" rows="3"></textarea>
                 </div>
                 <button type="submit" class="form-submit">
@@ -1072,7 +1083,7 @@
         const sideNav = document.getElementById('sideNav');
         if (sideNav) sideNav.classList.toggle('visible', window.scrollY > 300);
 
-        const sections = document.querySelectorAll('.section[id], #contact');
+        const sections = document.querySelectorAll('.section[id]');
         const sideLinks = document.querySelectorAll('.side-nav a');
         let current = '';
         sections.forEach(s => {
@@ -1084,7 +1095,7 @@
         });
     }, { passive: true });
 
-    document.querySelectorAll('.nav-links a[href^="#"], .side-nav a[href^="#"]').forEach(a => {
+    document.querySelectorAll('.nav-links a[href^="#"], .side-nav a[href^="#"], .reco-link[href^="#"]').forEach(a => {
         a.addEventListener('click', e => {
             e.preventDefault();
             const target = document.querySelector(a.getAttribute('href'));
@@ -1093,7 +1104,8 @@
     });
 
     document.addEventListener('DOMContentLoaded', () => {
-        const saved = localStorage.getItem('cv-lang');
+        let saved = null;
+        try { saved = localStorage.getItem('cv-lang'); } catch(e) {}
         if (saved) setLang(saved);
 
         if (new URLSearchParams(window.location.search).get('sent') === 'true') {
