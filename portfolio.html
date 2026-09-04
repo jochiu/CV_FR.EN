@@ -4,217 +4,206 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="format-detection" content="telephone=no, date=no, email=no, address=no">
-    <meta name="description" content="Yi-Hsuan Chiu — Portfolio: stratégie digitale, développement produit et gestion de communauté">
-    <!-- Open Graph / Facebook / LinkedIn / WhatsApp / iMessage -->
+    <meta name="description" content="Yi-Hsuan Chiu — Portfolio : marketing digital, stratégie de marque, stratégie produit et gestion de communauté">
     <meta property="og:type" content="profile">
     <meta property="og:title" content="Yi-Hsuan Chiu — Portfolio">
-    <meta property="og:description" content="Stratégie digitale · Développement produit · Gestion de communauté">
+    <meta property="og:description" content="Marketing digital · Stratégie de marque · Stratégie produit · Communauté">
     <meta property="og:image" content="https://jochiu.github.io/CV_FR.EN/photo.jpg">
     <meta property="og:image:width" content="600">
     <meta property="og:image:height" content="600">
     <meta property="og:url" content="https://jochiu.github.io/CV_FR.EN/portfolio.html">
-    <!-- Twitter / X -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Yi-Hsuan Chiu — Portfolio">
-    <meta name="twitter:description" content="Stratégie digitale · Développement produit · Gestion de communauté">
+    <meta name="twitter:description" content="Marketing digital · Stratégie de marque · Stratégie produit · Communauté">
     <meta name="twitter:image" content="https://jochiu.github.io/CV_FR.EN/photo.jpg">
     <link rel="icon" type="image/jpeg" href="photo.jpg">
     <title>Yi-Hsuan Chiu — Portfolio</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&family=Fraunces:ital,opsz,wght@0,9..144,600;0,9..144,700;1,9..144,600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Fraunces:ital,opsz,wght@0,9..144,700;0,9..144,900;1,9..144,700&display=swap" rel="stylesheet">
     <style>
+        /* =====================================================
+           DESIGN SYSTEM — earthy editorial
+           cream page · khaki panels · terracotta highlight boxes
+           ink text · gold outlined marquee · black pill chips
+           ===================================================== */
         :root{
-            --paper:#F3EEE3;
-            --ink:#1C1B18;
-            --gray:#5C594F;
-            --gray-2:#96927F;
-            --line:#1C1B18;
-            --line-soft:#DFD9C9;
+            --cream:#F4EDDF;
+            --cream-2:#EFE6D3;
+            --khaki:#A39D82;
+            --khaki-deep:#8E886E;
+            --terracotta:#8E4A35;
+            --ink:#2B211A;
+            --ink-soft:#4F4339;
+            --sand:#D6C5A2;
+            --gold:#F0A92B;
             --white:#FFFFFF;
-            --blue:#2947C4;
-            --tan:#B08A52;
-            --red:#C6392F;
-            --green:#31584A;
+            --radius:6px;
+            --pill:999px;
+            --gutter:clamp(1.2rem,5vw,4.5rem);
         }
         *{margin:0;padding:0;box-sizing:border-box}
         html{overflow-x:hidden;scroll-behavior:smooth}
-        body{font-family:'Open Sans',-apple-system,sans-serif;background:var(--paper);color:var(--ink);line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
-        ::selection{background:var(--ink);color:var(--paper)}
+        body{font-family:'Montserrat',-apple-system,sans-serif;background:var(--cream);color:var(--ink);line-height:1.7;-webkit-font-smoothing:antialiased;overflow-x:hidden;font-size:15px}
+        ::selection{background:var(--gold);color:var(--ink)}
+        a:focus-visible,button:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+        img{max-width:100%;display:block}
 
         /* ===== Top bar ===== */
-        .top-bar{position:fixed;top:0;left:0;right:0;z-index:100;background:var(--paper);border-bottom:1px solid var(--line-soft);padding:0 2.5rem;height:52px;display:flex;justify-content:space-between;align-items:center}
-        .top-bar .name-small{font-family:'Open Sans',sans-serif;font-size:.7rem;font-weight:600;letter-spacing:.28em;text-transform:uppercase;color:var(--ink);text-decoration:none}
-        .top-bar .name-small:hover{opacity:.6}
-        .nav-links{display:flex;align-items:center;gap:1.6rem}
-        .nav-links a{text-decoration:none;color:var(--gray);font-size:.62rem;font-weight:500;letter-spacing:.18em;text-transform:uppercase;transition:color .2s;position:relative}
-        .nav-links a::after{content:'';position:absolute;bottom:-4px;left:0;right:0;height:1px;background:var(--ink);transform:scaleX(0);transition:transform .2s;transform-origin:left}
-        .nav-links a:hover{color:var(--ink)}.nav-links a:hover::after{transform:scaleX(1)}
-        .nav-links a.active{color:var(--ink)}.nav-links a.active::after{transform:scaleX(1)}
-        .lang-toggle{display:flex;border:1px solid var(--ink);overflow:hidden}
-        .lang-btn{padding:.28rem .7rem;font-size:.62rem;font-weight:600;font-family:'Open Sans',sans-serif;border:none;cursor:pointer;background:transparent;color:var(--ink);transition:all .2s;letter-spacing:.1em}
-        .lang-btn.active{background:var(--ink);color:var(--paper)}
+        .top-bar{position:fixed;top:0;left:0;right:0;z-index:100;background:var(--cream);padding:0 var(--gutter);height:64px;display:flex;justify-content:space-between;align-items:center}
+        .brand{display:flex;align-items:center;gap:.55rem;text-decoration:none;color:var(--ink);font-family:'Fraunces',serif;font-weight:900;font-size:1.25rem;letter-spacing:-.01em}
+        .brand .spark{position:static;flex-shrink:0;width:20px;height:20px;margin-right:.35rem;color:var(--terracotta)}
+        .nav-links{display:flex;align-items:center;gap:1.8rem}
+        .nav-links a{text-decoration:none;color:var(--ink-soft);font-size:.82rem;font-weight:500;transition:color .2s}
+        .nav-links a:hover,.nav-links a.active{color:var(--ink);font-weight:700}
+        .nav-cta{background:var(--gold);color:var(--ink)!important;font-weight:700!important;padding:.45rem 1.05rem;border-radius:var(--pill);font-size:.8rem!important}
+        .nav-cta:hover{background:#E39C1D}
+        .lang-toggle{display:flex;border:1.5px solid var(--ink);border-radius:var(--pill);overflow:hidden}
+        .lang-btn{padding:.3rem .75rem;font-size:.72rem;font-weight:700;font-family:'Montserrat',sans-serif;border:none;cursor:pointer;background:transparent;color:var(--ink);transition:all .2s}
+        .lang-btn.active{background:var(--ink);color:var(--cream)}
 
-        /* ===== Label pills (editorial) ===== */
-        .pill{display:inline-flex;align-items:center;background:transparent;color:var(--ink);font-size:.6rem;font-weight:600;letter-spacing:.24em;text-transform:uppercase;padding:0;white-space:nowrap}
-        .pill.pill-light{background:rgba(20,19,16,.55);color:#F5F1E6;padding:.32rem .8rem;backdrop-filter:blur(2px);letter-spacing:.2em;font-size:.58rem}
+        /* ===== Display type ===== */
+        .display{font-family:'Fraunces',serif;font-weight:900;line-height:.95;letter-spacing:-.02em;color:var(--ink)}
+        .marquee{font-family:'Fraunces',serif;font-weight:900;font-size:clamp(3.4rem,9vw,7.6rem);line-height:1;text-transform:uppercase;white-space:nowrap;overflow:hidden;color:transparent;-webkit-text-stroke:1.5px var(--gold);letter-spacing:.02em;user-select:none;pointer-events:none;margin-left:calc(var(--gutter) * -1);margin-right:calc(var(--gutter) * -1);padding-left:var(--gutter)}
+        .case-num{font-family:'Fraunces',serif;font-weight:900;font-size:clamp(2.4rem,5vw,3.6rem);line-height:1;color:var(--ink);text-align:right;margin-top:-.6rem}
 
-        /* ===== Magazine hero ===== */
-        .mag-hero{margin-top:54px}
-        .mag-hero-media{position:relative;height:min(80vh,660px);overflow:hidden;background:var(--ink)}
-        .mag-hero-media > img{width:100%;height:100%;object-fit:cover;object-position:center 38%;display:block}
-        .mag-hero-toprow{position:absolute;top:1.5rem;left:2.5rem;right:2.5rem;display:flex;justify-content:space-between;align-items:flex-start;gap:1rem}
-        .mag-hero h1{position:absolute;left:2.5rem;bottom:1.8rem;font-family:'Fraunces',serif;font-size:clamp(2.4rem,5vw,3.8rem);font-weight:600;line-height:1;letter-spacing:.03em;text-transform:none;color:#F7F2E7;margin:0}
-        .mag-hero-contact{position:absolute;right:2.5rem;bottom:2rem;text-align:left;color:#F5F1E6;font-size:.7rem;line-height:1.9;max-width:300px;letter-spacing:.04em}
-        .mag-hero-contact b{font-weight:600}
-        .mag-hero-contact a{color:#F5F1E6;text-decoration:none}
-        .mag-hero-contact a:hover{text-decoration:underline}
+        /* ===== Hero ===== */
+        .hero{margin-top:64px;padding:2.5rem var(--gutter) 3.5rem;display:grid;grid-template-columns:1.1fr .9fr;gap:3rem;align-items:end;max-width:1280px;margin-left:auto;margin-right:auto}
+        .hero h1{font-size:clamp(3rem,8vw,6.4rem)}
+        .hero .sub{font-size:1.02rem;color:var(--ink-soft);max-width:34rem;margin-top:1.4rem}
+        .hero .creds{margin-top:1.1rem;font-size:.8rem;color:var(--khaki-deep);max-width:34rem;line-height:1.6}
+        .hero .meta{margin-top:1.4rem;display:flex;flex-wrap:wrap;gap:.7rem 1.6rem;font-size:.85rem}
+        .hero .meta a{color:var(--ink);text-decoration:none;font-weight:600}
+        .hero .meta a:hover{text-decoration:underline}
+        .hero-photo{position:relative}
+        .hero-photo img{width:100%;height:min(56vh,480px);object-fit:cover;object-position:center 30%;border-radius:var(--radius)}
+        .hero-photo::after{content:'';position:absolute;inset:auto -14px -14px auto;width:60%;height:60%;background:var(--khaki);z-index:-1;border-radius:var(--radius)}
+        .chapters{padding:0 var(--gutter) 3rem;max-width:1280px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:.8rem}
+        .chapters a{text-decoration:none;color:var(--ink);background:var(--cream-2);border-radius:var(--radius);padding:1rem 1.1rem;display:flex;flex-direction:column;gap:.25rem;transition:background .2s}
+        .chapters a:hover{background:var(--sand)}
+        .chapters .n{font-family:'Fraunces',serif;font-weight:900;font-size:1.4rem;color:var(--terracotta)}
+        .chapters .t{font-weight:700;font-size:.9rem}
+        .chapters .s{font-size:.76rem;color:var(--ink-soft)}
 
-        .back-link{display:inline-flex;align-items:center;gap:.4rem;font-size:.62rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--ink);text-decoration:none;margin-bottom:1.5rem;transition:gap .2s}
-        .back-link:hover{gap:.7rem}.back-link svg{width:14px;height:14px}
+        /* ===== Recommendations ===== */
+        .recs{padding:0 var(--gutter) 3.5rem;max-width:1280px;margin:0 auto}
+        .recs h2{font-family:'Fraunces',serif;font-weight:900;font-size:clamp(1.9rem,3.6vw,2.7rem);line-height:.95;letter-spacing:-.02em;margin-bottom:1.1rem}
+        .recs .row{display:grid;grid-template-columns:1fr 1fr;gap:.9rem}
+        .rec{background:var(--khaki);color:var(--cream);border-radius:var(--radius);padding:1.6rem 1.7rem;display:flex;flex-direction:column;gap:.6rem}
+        .rec .who{font-weight:700;font-size:.95rem;color:var(--white);line-height:1.35}
+        .rec .who small{display:block;font-weight:500;font-size:.78rem;color:var(--cream);margin-top:.15rem}
+        .rec p{font-size:.86rem;line-height:1.65}
+        .rec a{align-self:flex-start;margin-top:.4rem;display:inline-flex;align-items:center;gap:.45rem;text-decoration:none;color:var(--ink);background:var(--gold);font-size:.78rem;font-weight:700;padding:.5rem 1rem;border-radius:var(--pill);transition:background .2s}
+        .rec a:hover{background:#E39C1D}
+        .rec a svg{width:13px;height:13px}
+        @media(max-width:900px){.recs .row{grid-template-columns:1fr}}
 
+        /* ===== Case study skeleton ===== */
+        .case{padding:2rem var(--gutter) 5rem;scroll-margin-top:70px}
+        .case .inner{max-width:1280px;margin:0 auto}
+        .case:nth-of-type(even){background:var(--cream-2)}
 
-        /* ===== Touches artistiques ===== */
-        .fr-accent{font-family:'Fraunces',serif;font-style:italic;font-size:clamp(1rem,1.7vw,1.25rem);font-weight:600;color:var(--accent);margin-bottom:.4rem;letter-spacing:.01em}
-        .project-section{position:relative}
-                .footer-doodle{display:flex;justify-content:center;padding:2.2rem 0 0}
-        .footer-doodle svg{width:72px;height:88px}
+        /* Intro panel (khaki) */
+        .intro{display:grid;grid-template-columns:1.05fr .95fr;gap:0;margin-top:1rem}
+        .intro-panel{background:var(--khaki);color:var(--cream);padding:3rem 3rem 2.6rem;border-radius:var(--radius) 0 0 var(--radius);display:flex;flex-direction:column;justify-content:flex-end}
+        .intro-panel h2{font-family:'Fraunces',serif;font-weight:900;font-size:clamp(2.6rem,5.6vw,4.6rem);line-height:.95;letter-spacing:-.02em;color:var(--cream)}
+        .intro-panel .org{font-weight:700;font-size:.92rem;margin-top:1.4rem;color:var(--white)}
+        .intro-panel .desc{font-size:.92rem;line-height:1.75;margin-top:.9rem;max-width:32rem;color:var(--cream)}
+        .intro-panel .loc{margin-top:1.3rem;font-size:.82rem;display:flex;flex-wrap:wrap;gap:.4rem 1.4rem;color:var(--white)}
+        .intro-panel .loc span{display:inline-flex;align-items:center;gap:.4rem}
+        .intro-panel .loc svg{width:14px;height:14px}
+        .intro-visual{background:var(--white);border-radius:0 var(--radius) var(--radius) 0;overflow:hidden;display:flex;flex-direction:column}
+        .intro-visual img{width:100%;height:100%;min-height:360px;object-fit:cover;flex:1}
+        .intro-visual .cap{padding:.7rem 1rem;font-size:.74rem;color:var(--ink-soft);font-weight:500;background:var(--white)}
 
+        /* Goals + skills + tools row */
+        .gst{display:grid;grid-template-columns:1fr 1fr;gap:3rem;margin-top:3rem;align-items:start}
+        .h-mid{font-family:'Fraunces',serif;font-weight:900;font-size:clamp(2.4rem,4.6vw,3.6rem);line-height:.95;letter-spacing:-.02em;margin-bottom:1.2rem}
+        .box{background:var(--terracotta);color:var(--cream);border-radius:var(--radius);padding:1.6rem 1.8rem}
+        .check{list-style:none}
+        .check li{position:relative;padding-left:1.6rem;margin-bottom:.45rem;font-size:.92rem;line-height:1.6}
+        .check li::before{content:'';position:absolute;left:0;top:.42em;width:.9em;height:.9em;border:1.5px solid currentColor;border-radius:3px}
+        .check li::after{content:'';position:absolute;left:.26em;top:.52em;width:.28em;height:.5em;border:solid currentColor;border-width:0 1.5px 1.5px 0;transform:rotate(45deg)}
+        .h-sm{font-weight:700;font-size:1.15rem;margin:1.8rem 0 .9rem}
+        .pills{display:flex;flex-wrap:wrap;gap:.55rem}
+        .pill{background:var(--ink);color:var(--cream);font-size:.78rem;font-weight:600;padding:.55rem 1.15rem;border-radius:var(--pill);white-space:nowrap}
+        .tools{display:grid;grid-template-columns:1fr 1fr;gap:1rem 1.6rem}
+        .tool{display:flex;gap:.8rem;align-items:flex-start}
+        .tool .ic{width:40px;height:40px;flex-shrink:0;border-radius:10px;background:var(--ink);color:var(--cream);display:grid;place-items:center;font-family:'Fraunces',serif;font-weight:900;font-size:1.05rem}
+        .tool b{display:block;font-size:.92rem;font-weight:700;line-height:1.3}
+        .tool small{display:block;font-size:.74rem;color:var(--ink-soft);line-height:1.4;margin-top:.15rem}
 
-        /* ===== Bandeau artistique ===== */
-        .banner-row{display:flex;align-items:center;gap:1.2rem;margin:0 0 1.6rem}
-        .outline-banner{flex:1;min-width:0;font-family:'Fraunces',serif;font-weight:600;font-size:clamp(2rem,5.2vw,3.4rem);line-height:1.05;text-transform:uppercase;white-space:nowrap;overflow:hidden;color:var(--accent);opacity:.18;user-select:none;pointer-events:none;letter-spacing:.01em}
-        .big-num{font-family:'Fraunces',serif;font-weight:700;font-size:clamp(1.9rem,4vw,3rem);color:var(--accent);line-height:1;flex-shrink:0}
-        @media(max-width:768px){.outline-banner{font-size:2rem}.big-num{font-size:1.7rem}}
+        /* Image grid */
+        .grid{display:grid;gap:.8rem;margin-top:2.4rem}
+        .grid.c3{grid-template-columns:repeat(3,1fr)}
+        .grid.c2{grid-template-columns:repeat(2,1fr)}
+        .shot{background:var(--white);border-radius:var(--radius);overflow:hidden}
+        .shot img{width:100%;height:220px;object-fit:cover}
+        .shot .cap{padding:.65rem .9rem;font-size:.74rem;color:var(--ink-soft);line-height:1.5;font-weight:500}
 
-        /* ===== Main / sections ===== */
-        .main{max-width:1180px;margin:0 auto;padding:4rem 2.5rem 5.5rem;overflow-x:hidden}
-        .project-section{margin-bottom:2.5rem;scroll-margin-top:80px;padding-bottom:4.5rem;--accent:var(--ink)}
-        #strategy{--accent:var(--blue)}
-        #brand{--accent:var(--tan)}
-        #product{--accent:var(--red)}
-        #community{--accent:var(--green)}
-        .section-divider{height:2px;border:none;margin:0 0 2.6rem;background:var(--accent)}
-        .project-header{margin-bottom:2rem}
-        .project-header .head-row{display:flex;align-items:center;gap:1.2rem;margin-bottom:1.6rem;flex-wrap:wrap}
-        .project-header .head-row::after{content:'';flex:1;height:1px;background:var(--accent);order:1;opacity:.65}
-        .project-header .head-row .pill:last-child{order:2;color:var(--gray)}
-        .project-title{font-family:'Fraunces',serif;font-size:clamp(2rem,4.2vw,3.1rem);font-weight:700;letter-spacing:0;line-height:1.05;color:var(--ink);text-transform:none;margin-bottom:.8rem}
-        .project-company{font-size:.76rem;font-weight:600;color:var(--ink);letter-spacing:.06em}
-        .project-loc{font-size:.64rem;color:var(--gray-2);text-transform:uppercase;letter-spacing:.16em;font-weight:500;margin-top:.15rem}
-        .project-intro{font-size:.88rem;color:var(--gray);line-height:1.7;margin:.8rem 0 0;max-width:720px}
+        /* Tasks */
+        .tasks{margin-top:4rem}
+        .task{display:grid;grid-template-columns:1fr 1.15fr;gap:2.2rem 3rem;padding:2.2rem 0;border-top:1.5px solid var(--sand);align-items:start}
+        .task:first-of-type{border-top:0}
+        .task h4{font-weight:700;font-size:1.25rem;line-height:1.3}
+        .task h4 .k{font-family:'Fraunces',serif;font-weight:900;color:var(--terracotta);margin-right:.5rem}
+        .task ul{list-style:none;margin-top:.3rem}
+        .task li{position:relative;padding-left:1.6rem;margin-bottom:.5rem;font-size:.92rem;color:var(--ink-soft)}
+        .task li::before{content:'';position:absolute;left:0;top:.42em;width:.9em;height:.9em;border:1.5px solid var(--terracotta);border-radius:3px}
+        .task li::after{content:'';position:absolute;left:.26em;top:.52em;width:.28em;height:.5em;border:solid var(--terracotta);border-width:0 1.5px 1.5px 0;transform:rotate(45deg)}
+        .task .kw{color:var(--ink);font-weight:600}
+        .task .tri{grid-column:1/-1;display:grid;grid-template-columns:repeat(3,1fr);gap:1.6rem}
+        .task .tri b{display:block;font-family:'Fraunces',serif;font-weight:700;font-size:1.15rem;color:var(--khaki-deep);margin-bottom:.35rem}
+        .task .tri p{font-size:.9rem;color:var(--ink-soft)}
+        .swatches{display:flex;gap:.8rem;margin-top:1rem}
+        .swatches span{width:42px;height:42px;border-radius:50%;display:block}
 
-        /* ===== Tags ===== */
-        .tag-row{display:flex;flex-wrap:wrap;gap:.4rem;margin-bottom:1.6rem}
-        .tag{font-size:.56rem;padding:.32rem .75rem;background:var(--ink);color:var(--paper);font-weight:500;border:none;border-radius:999px;text-transform:uppercase;letter-spacing:.12em}
+        /* Results */
+        .results{margin-top:3.5rem;display:grid;grid-template-columns:1fr 1fr;gap:2.5rem;align-items:end}
+        .results .box{padding:2rem 2.2rem}
+        .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin:1.2rem 0 .8rem}
+        .stat b{font-family:'Fraunces',serif;font-weight:900;font-size:clamp(1.5rem,3vw,2.2rem);line-height:1;display:block;color:var(--white)}
+        .stat span{font-size:.74rem;font-weight:500;display:block;margin-top:.3rem;color:var(--cream)}
+        .results .note{font-size:.88rem;line-height:1.65;color:var(--cream);margin-top:.6rem}
+        .results-visual{position:relative}
+        .results-visual img{width:100%;height:100%;min-height:280px;object-fit:cover;border-radius:var(--radius)}
+        .results-visual .spark{position:absolute;width:38px;height:38px;color:var(--gold)}
+        .results-visual .spark.a{top:-16px;left:-14px}.results-visual .spark.b{bottom:-14px;right:-12px;width:28px;height:28px}
+        .refs{margin-top:1.6rem;display:flex;flex-wrap:wrap;gap:.6rem}
+        .refs a{display:inline-flex;align-items:center;gap:.45rem;text-decoration:none;color:var(--ink);font-size:.8rem;font-weight:600;padding:.5rem 1rem;border:1.5px solid var(--ink);border-radius:var(--pill);transition:all .2s}
+        .refs a:hover{background:var(--ink);color:var(--cream)}
+        .refs svg{width:14px;height:14px}
+        .case-foot{margin-top:3.5rem;display:flex;justify-content:space-between;font-size:.86rem;font-weight:700;color:var(--khaki-deep)}
 
-        /* ===== Editorial content blocks ===== */
-        .content-card{background:transparent;border:none;padding:2.4rem 0;margin-bottom:0}
-        /* ===== Mission lead + Impact strip ===== */
-        .mi-row{display:grid;grid-template-columns:1.05fr .95fr;gap:1.4rem;align-items:stretch;margin:1.4rem 0 .4rem}
-        .mission-lead{margin:0;max-width:none;background:var(--white);border:1px solid var(--line-soft);border-radius:3px;padding:1.5rem 1.7rem}
-        .lead-label{display:block;font-size:.58rem;font-weight:600;letter-spacing:.3em;text-transform:uppercase;color:var(--gray-2);margin-bottom:.7rem}
-        .lead-label::after{content:'';display:block;width:30px;height:1.5px;background:var(--accent);margin-top:.5rem}
-        .mission-lead p{font-size:.8rem;line-height:1.8;color:var(--ink);font-weight:400}
-        .impact-strip{background:var(--accent);color:#F7F2E7;border:none;border-radius:3px;padding:1.5rem 1.7rem;margin:0}
-        .impact-strip .lead-label{color:rgba(247,242,231,.75)}
-        .impact-strip .lead-label::after{background:rgba(247,242,231,.9)}
-        .impact-stats{display:grid;grid-template-columns:1fr;gap:.85rem;margin-top:1rem}
-        .stat-num{font-family:'Fraunces',serif;font-size:clamp(1.1rem,1.9vw,1.45rem);font-weight:700;letter-spacing:.02em;display:block;line-height:1.15;color:#FDFAF2}
-        .stat-label{font-size:.58rem;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:rgba(247,242,231,.8);display:block;margin-top:.15rem}
-        .impact-statement{margin-top:.9rem;font-size:.88rem;font-weight:600;line-height:1.7;color:#FDFAF2;max-width:none}
-        .impact-note{margin-top:1rem;font-size:.74rem;color:rgba(247,242,231,.88);line-height:1.7;max-width:none}
-        .content-card.has-img{display:grid;grid-template-columns:1.05fr .95fr;gap:3.5rem;align-items:center}
-        .content-card.has-img.img-left{grid-template-columns:.95fr 1.05fr}
-        .content-card.has-img.img-left > .side-img{order:-1}
-        .content-card.has-img.has-img-sm{grid-template-columns:1.05fr .95fr;gap:3rem}
-        .content-card.has-img-sm .side-img{display:grid;grid-template-columns:1fr 1fr;gap:.8rem;flex-direction:initial}
-        .content-card.has-img-sm .side-img .showcase-item img{height:170px}
-        .content-card.has-img-sm .side-img .showcase-item .caption{font-size:.68rem;padding:.4rem .6rem;line-height:1.4}
-        .content-card .card-body{min-width:0}
-        .content-card h4{font-family:'Open Sans',sans-serif;font-size:.74rem;font-weight:600;margin-bottom:.9rem;color:var(--ink);display:flex;align-items:center;gap:.5rem;letter-spacing:.26em;text-transform:uppercase}
-        .content-card h4 .icon{display:none}
-        .content-card p,.content-card li{font-size:.8rem;color:var(--gray);line-height:1.8}
-        .content-card ul{list-style:none;padding:0;margin-top:.5rem}
-        .content-card ul li{position:relative;padding-left:1.1rem;margin-bottom:.4rem}
-        .content-card ul li::before{content:'';position:absolute;left:0;top:.72em;width:8px;height:1.5px;background:var(--accent)}
-        .kw{color:var(--ink);font-weight:600}
+        /* Footer */
+        footer{background:var(--ink);color:var(--cream);padding:4rem var(--gutter) 2.5rem}
+        footer .inner{max-width:1280px;margin:0 auto;display:grid;grid-template-columns:1.2fr .8fr;gap:2rem;align-items:end}
+        footer h2{font-family:'Fraunces',serif;font-weight:900;font-size:clamp(2.2rem,5vw,4rem);line-height:.95;letter-spacing:-.02em}
+        footer p{margin-top:1rem;font-size:.9rem;color:var(--sand);max-width:28rem}
+        footer .links{display:flex;flex-direction:column;gap:.6rem;align-items:flex-start}
+        footer .links a{color:var(--cream);text-decoration:none;font-weight:600;font-size:.92rem}
+        footer .links a:hover{color:var(--gold)}
+        footer .links .cta{background:var(--gold);color:var(--ink);padding:.6rem 1.3rem;border-radius:var(--pill);font-weight:700}
+        footer .copy{grid-column:1/-1;margin-top:2.5rem;font-size:.74rem;color:var(--khaki)}
 
-        /* ===== Images ===== */
-        .side-img{align-self:center;display:flex;flex-direction:column;gap:.8rem}
-        .side-img .showcase-item{background:var(--white);border:1px solid var(--line-soft);overflow:hidden}
-        .side-img .showcase-item img{width:100%;height:280px;object-fit:cover;display:block;border-bottom:1px solid var(--line-soft)}
-        .side-img .showcase-item .caption{padding:.55rem .8rem;font-size:.66rem;color:var(--gray-2);line-height:1.55;font-weight:400;letter-spacing:.03em}
-        .imgs-below{margin-top:1rem;display:grid;gap:.8rem}
-        .imgs-below.cols-2{grid-template-columns:1fr 1fr}
-        .imgs-below.cols-3{grid-template-columns:repeat(3,1fr)}
-        .imgs-below.cols-4{grid-template-columns:repeat(4,1fr)}
-        .imgs-below .showcase-item{background:var(--white);border:1px solid var(--line-soft);overflow:hidden}
-        .imgs-below .showcase-item img{width:100%;height:170px;object-fit:cover;display:block;border-bottom:1px solid var(--line-soft)}
-        .imgs-below .showcase-item .caption{padding:.55rem .75rem;font-size:.7rem;color:var(--gray);line-height:1.5;font-weight:500}
-        .showcase{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-bottom:1.5rem}
-        .showcase-item{background:var(--white);border:1px solid var(--line-soft);overflow:hidden;transition:transform .25s}
-        .showcase-item:hover{transform:translateY(-3px)}
-        .showcase-item img{width:100%;height:180px;object-fit:cover;border-bottom:1px solid var(--line-soft)}
-        .showcase-item .caption{padding:.7rem .9rem;font-size:.72rem;color:var(--gray);line-height:1.5;font-weight:500}
-        .showcase.cols-4{grid-template-columns:repeat(4,1fr)}
-
-        /* ===== Strategy split ===== */
-        .col-header{margin-bottom:1rem;padding-bottom:.7rem;border-bottom:1px solid var(--line-soft)}
-        .col-header .subtitle-sm{font-family:'Open Sans',sans-serif;font-size:1.5rem;font-weight:800;letter-spacing:-.02em;color:var(--ink);margin-bottom:.3rem;line-height:1.1;text-transform:uppercase}
-        .col-header .company-line{font-size:.78rem;color:var(--ink);font-weight:600}
-        .col-header .company-line .loc{color:var(--gray-2);font-weight:400}
-        .inline-img{margin-top:.9rem;margin-bottom:1.2rem;display:grid;gap:.6rem}
-        .inline-img.cols-1{grid-template-columns:1fr}
-        .inline-img.cols-2{grid-template-columns:1fr 1fr}
-        .inline-img .showcase-item img{height:160px}
-        .content-card .inline-img{margin-top:1rem;margin-bottom:0}
-        .content-card .inline-img .showcase-item{background:var(--white)}
-        .content-card .inline-img .showcase-item img{height:180px}
-        .content-card .card-img{margin-top:1rem;overflow:hidden;border:1px solid var(--line-soft)}
-        .content-card .card-img img{width:100%;display:block;object-fit:cover}
-        .content-card .card-img.h-sm img{height:140px}
-        .content-card .card-img.h-md img{height:180px}
-        .content-card .card-img.split{display:grid;grid-template-columns:1fr 1fr;gap:.5rem;border:none;overflow:visible}
-        .content-card .card-img.split > div{border:1px solid var(--line-soft);overflow:hidden}
-        .content-card .card-img.split img{height:130px}
-        @media(min-width:769px){
-            .content-card p,.content-card li{font-size:.82rem}
-        }
-
-        /* ===== References / footer ===== */
-        .ref-section{margin-top:1.5rem}
-        .ref-section h4{font-family:'Open Sans',sans-serif;font-size:.62rem;font-weight:600;margin-bottom:.6rem;color:var(--ink);text-transform:uppercase;letter-spacing:.26em}
-        .ref-link{display:inline-flex;align-items:center;gap:.4rem;font-size:.6rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--ink);text-decoration:none;padding:.4rem .9rem;border:1px solid var(--ink);border-radius:999px;transition:all .2s;margin-right:.5rem;margin-bottom:.5rem;background:transparent}
-        .ref-link:hover{background:var(--ink);color:var(--paper)}
-        .ref-link svg{width:14px;height:14px}
-        footer{text-align:center;padding:2.5rem;font-size:.6rem;font-weight:500;letter-spacing:.24em;text-transform:uppercase;color:var(--gray-2);border-top:1px solid var(--line-soft);max-width:1180px;margin:0 auto}
-        .back-to-top{display:flex;position:fixed;bottom:1.5rem;right:1.5rem;z-index:90;padding:.5rem .95rem;border:1px solid var(--ink);background:var(--ink);color:var(--paper);cursor:pointer;align-items:center;justify-content:center;gap:.35rem;font-family:'Open Sans',sans-serif;font-size:.66rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;transition:opacity .3s,transform .3s;opacity:0;transform:translateY(10px)}
+        .back-to-top{position:fixed;bottom:1.5rem;right:1.5rem;z-index:90;padding:.55rem 1rem;border:1.5px solid var(--ink);background:var(--ink);color:var(--cream);cursor:pointer;display:flex;align-items:center;gap:.4rem;font-family:'Montserrat',sans-serif;font-size:.74rem;font-weight:700;border-radius:var(--pill);transition:opacity .3s,transform .3s;opacity:0;transform:translateY(10px)}
         .back-to-top.visible{opacity:1;transform:translateY(0)}
-        .back-to-top:hover{background:var(--paper);color:var(--ink)}
+        .back-to-top:hover{background:var(--gold);color:var(--ink);border-color:var(--gold)}
         .back-to-top svg{width:14px;height:14px}
 
-        @media(max-width:768px){
-            .top-bar{padding:0 1rem}
-            .mag-hero-media{height:min(62vh,460px)}
-            .mag-hero-toprow{top:1rem;left:1.2rem;right:1.2rem}
-            .mag-hero h1{left:1.2rem;bottom:1.2rem;font-size:clamp(.9rem,3.6vw,1.2rem);letter-spacing:.42em}
-            .mag-hero-contact{display:none}
-            .main{padding:2.5rem 1.2rem 3rem}
-            .content-card{padding:1.6rem 0}
-            .nav-links a.nav-desktop{display:none}
-            .showcase{grid-template-columns:repeat(2,1fr)}.showcase.cols-4{grid-template-columns:repeat(2,1fr)}
-            .showcase-item img{height:120px}
-            .project-intro{margin-left:0;font-size:.85rem}
-            .project-company,.project-loc{margin-left:0}
-            .mi-row{grid-template-columns:1fr;gap:1rem}
-            .impact-strip{padding:1.4rem 1.2rem}
-            .mission-lead{padding:1.3rem 1.2rem}
-            .content-card.has-img,.content-card.has-img.has-img-sm{grid-template-columns:1fr;gap:1rem}
-            .content-card.has-img-sm .side-img{grid-template-columns:1fr 1fr}
-            .side-img .showcase-item img{height:210px}
-            .imgs-below.cols-2,.imgs-below.cols-3,.imgs-below.cols-4{grid-template-columns:1fr 1fr}
-            .imgs-below .showcase-item img{height:120px}
+        @media(max-width:900px){
+            .hero,.intro,.gst,.results,.task,footer .inner{grid-template-columns:1fr}
+            .intro-panel{border-radius:var(--radius) var(--radius) 0 0;padding:2.2rem 1.5rem}
+            .intro-visual{border-radius:0 0 var(--radius) var(--radius)}
+            .intro-visual img{min-height:240px}
+            .chapters{grid-template-columns:1fr 1fr}
+            .grid.c3{grid-template-columns:1fr 1fr}
+            .shot img{height:160px}
+            .task .tri{grid-template-columns:1fr}
+            .tools{grid-template-columns:1fr}
+            .nav-desktop{display:none}
+            .hero-photo::after{display:none}
+            .marquee{font-size:3rem}
         }
         @media(prefers-reduced-motion:reduce){
             *,*::before,*::after{transition:none!important;animation:none!important}
@@ -225,13 +214,15 @@
 <body>
 
 <nav class="top-bar" id="topbar">
-    <a class="name-small" href="index.html">Yi-Hsuan Chiu</a>
+    <a class="brand" href="index.html">
+        <svg class="spark" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c1 6 5 10 12 12-7 2-11 6-12 12-1-6-5-10-12-12C7 10 11 6 12 0z"/></svg>
+        Yi-Hsuan Chiu
+    </a>
     <div class="nav-links">
-        <a href="#strategy" class="nav-desktop">Digital Marketing</a>
-        <a href="#brand" class="nav-desktop">Brand Strategy</a>
-        <a href="#product" class="nav-desktop">Product Strategy</a>
-        <a href="#community" class="nav-desktop">Community</a>
-        <a href="index.html" class="nav-desktop">&larr; CV</a>
+        <a href="index.html" class="nav-desktop" data-fr="Mon CV" data-en="About me">Mon CV</a>
+        <a href="#work" class="nav-desktop active" data-fr="Projets" data-en="Work">Projets</a>
+        <a href="#recommandations" class="nav-desktop" data-fr="Recommandations" data-en="Recommendations">Recommandations</a>
+        <a href="mailto:c.hsuann@gmail.com" class="nav-cta nav-desktop" data-fr="Me contacter" data-en="Get in touch">Me contacter</a>
         <div class="lang-toggle">
             <button class="lang-btn active" id="btn-fr" onclick="setLang('fr')">FR</button>
             <button class="lang-btn" id="btn-en" onclick="setLang('en')">EN</button>
@@ -239,418 +230,523 @@
     </div>
 </nav>
 
-<header class="mag-hero">
-    <div class="mag-hero-media">
-        <img src="bg.png" alt="Arc de Triomphe, Paris" loading="eager">
-        <div class="mag-hero-toprow">
-            <span class="pill pill-light" data-fr="Présentation personnelle" data-en="Personal Presentation">Présentation personnelle</span>
-            <span class="pill pill-light">2026</span>
+<header class="hero">
+    <div>
+        <h1 class="display">Portfolio</h1>
+        <p class="sub" data-fr="Quatre projets qui montrent comment je passe de la donnée à l'action : marketing digital, image de marque, lancement produit et animation de communauté. Chaque étude de cas suit le même fil : la mission, les objectifs, les tâches, les résultats." data-en="Four projects showing how I move from data to action: digital marketing, brand identity, product launch and community management. Each case study follows the same thread: the mission, the goals, the tasks, the results.">Quatre projets qui montrent comment je passe de la donnée à l'action : marketing digital, image de marque, lancement produit et animation de communauté. Chaque étude de cas suit le même fil : la mission, les objectifs, les tâches, les résultats.</p>
+        <p class="creds" data-fr="Certifications : Google Analytics, Amazon Ads Retail, Marketing Analytics, Data Analysis with Spreadsheets & SQL, Scrum. Ambassadrice internationale EM Strasbourg (2022–2024)." data-en="Certifications: Google Analytics, Amazon Ads Retail, Marketing Analytics, Data Analysis with Spreadsheets & SQL, Scrum. International ambassador, EM Strasbourg (2022–2024).">Certifications : Google Analytics, Amazon Ads Retail, Marketing Analytics, Data Analysis with Spreadsheets & SQL, Scrum. Ambassadrice internationale EM Strasbourg (2022–2024).</p>
+        <div class="meta">
+            <span><span data-fr="Basée à " data-en="Based in ">Basée à </span><b data-fr="Bordeaux · mobile France entière" data-en="Bordeaux · open to relocation across France">Bordeaux · mobile France entière</b></span>
+            <a href="mailto:c.hsuann@gmail.com">c.hsuann@gmail.com</a>
+            <a href="https://www.linkedin.com/in/yihsuan-chiu/" target="_blank" rel="noopener">LinkedIn</a>
         </div>
-        <div class="mag-hero-contact">
-            <div><b data-fr="Nom :" data-en="Name:">Nom :</b> Yi-Hsuan Chiu</div>
-            <div><b data-fr="Basée à :" data-en="Based in:">Basée à :</b> <span data-fr="Bordeaux, France · Mobile" data-en="Bordeaux, France · Open to relocation">Bordeaux, France · Mobile</span></div>
-            <div><b>Email :</b> <a href="mailto:c.hsuann@gmail.com">c.hsuann@gmail.com</a></div>
-        </div>
-        <h1>Portfolio</h1>
+    </div>
+    <div class="hero-photo">
+        <img src="photo.jpg" alt="Yi-Hsuan Chiu" loading="eager">
     </div>
 </header>
 
-<main class="main">
-    <a class="back-link" href="index.html">
-        <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 4l-6 6 6 6"/></svg>
-        <span data-fr="Retour au CV" data-en="Back to CV">Retour au CV</span>
-    </a>
+<nav class="chapters" id="work" aria-label="Sommaire des projets">
+    <a href="#strategy"><span class="n">01</span><span class="t">Digital Marketing</span><span class="s">UniFox · GreenTech, Web3</span></a>
+    <a href="#brand"><span class="n">02</span><span class="t">Brand Strategy</span><span class="s" data-fr="Hôtel 4★ · Dordogne" data-en="4★ Hotel · Dordogne">Hôtel 4★ · Dordogne</span></a>
+    <a href="#product"><span class="n">03</span><span class="t">Product Strategy</span><span class="s">Reinventing Carrière · Paris</span></a>
+    <a href="#community"><span class="n">04</span><span class="t">Community & Project</span><span class="s">Linkee · Bordeaux</span></a>
+</nav>
 
-    <!-- ===== 01: Digital Marketing & Brand Strategy ===== -->
-    <section class="project-section accent-blue" id="strategy">
-        <hr class="section-divider">
-        <div class="banner-row"><div class="outline-banner" aria-hidden="true">Marketing &middot; Marketing &middot; Marketing &middot; Marketing</div><span class="big-num">01</span></div>
-        <div class="project-header">
-            <div class="head-row">
-                <span class="pill" data-fr="Étude de cas 01" data-en="Case Study 01">Étude de cas 01</span>
-                <span class="pill">06 &ndash; 12/2024</span>
+<section class="recs" id="recommandations">
+    <h2 data-fr="Ils recommandent" data-en="Recommendations">Ils recommandent</h2>
+    <div class="row">
+        <div class="rec">
+            <div class="who">Aline Farah<small data-fr="Chargée de la promotion et du recrutement à l'international, EM Strasbourg Business School" data-en="International Promotion and Recruitment Officer, EM Strasbourg Business School">Chargée de la promotion et du recrutement à l'international, EM Strasbourg Business School</small></div>
+            <p data-fr="Collaboration sur plusieurs événements, dont un salon étudiant international en tant qu'ambassadrice. La lettre souligne l'aisance relationnelle avec des publics très divers (étudiants, familles, partenaires institutionnels), la capacité d'adaptation et le sens de l'initiative en environnement multiculturel." data-en="Worked together on several events, including an international student fair as school ambassador. The letter highlights ease with very diverse audiences (students, families, institutional partners), adaptability and initiative in a multicultural setting.">Collaboration sur plusieurs événements, dont un salon étudiant international en tant qu'ambassadrice. La lettre souligne l'aisance relationnelle avec des publics très divers (étudiants, familles, partenaires institutionnels), la capacité d'adaptation et le sens de l'initiative en environnement multiculturel.</p>
+            <a href="https://drive.google.com/file/d/1lUREkXxnFECmVdLZW3kv-2W_g_X6A1lL/view" target="_blank" rel="noopener"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 2h8l4 4v12a1 1 0 01-1 1H6a1 1 0 01-1-1V3a1 1 0 011-1z"/><path d="M14 2v4h4M8 10h4M8 13h6"/></svg><span data-fr="Lire la lettre (FR)" data-en="Read the letter (FR)">Lire la lettre (FR)</span></a>
+        </div>
+        <div class="rec">
+            <div class="who">Dr. Nada Maaninou<small data-fr="Professeure associée en marketing, EM Strasbourg Business School" data-en="Associate Professor of Marketing, EM Strasbourg Business School">Professeure associée en marketing, EM Strasbourg Business School</small></div>
+            <p data-fr="Cours Product & Brand Management : étude de marché pour Tupperware France sur les attentes des millennials, avec 12 entretiens semi-directifs et des recommandations marketing présentées au directeur général. Meilleure note de la promotion (16,35/20) et prix du challenge sponsorisé par Tupperware." data-en="Product & Brand Management course: market study for Tupperware France on millennials' expectations, with 12 semi-structured interviews and marketing recommendations presented to the General Manager. Highest score in the class (16.35/20) and winner of the Tupperware-sponsored challenge.">Cours Product & Brand Management : étude de marché pour Tupperware France sur les attentes des millennials, avec 12 entretiens semi-directifs et des recommandations marketing présentées au directeur général. Meilleure note de la promotion (16,35/20) et prix du challenge sponsorisé par Tupperware.</p>
+            <a href="https://drive.google.com/file/d/1Qivjg1WIUYeIFS0770pRjLxwXwecH-kw/view" target="_blank" rel="noopener"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 2h8l4 4v12a1 1 0 01-1 1H6a1 1 0 01-1-1V3a1 1 0 011-1z"/><path d="M14 2v4h4M8 10h4M8 13h6"/></svg><span data-fr="Lire la lettre (EN)" data-en="Read the letter (EN)">Lire la lettre (EN)</span></a>
+        </div>
+    </div>
+</section>
+
+<!-- ===================================================== 01 ===================================================== -->
+<section class="case" id="strategy">
+<div class="inner">
+    <div class="marquee" aria-hidden="true">Digital Marketing Digital Marketing Digital Marketing</div>
+    <div class="case-num">01</div>
+
+    <div class="intro">
+        <div class="intro-panel">
+            <h2>UniFox</h2>
+            <div class="org" data-fr="Plateforme GreenTech Web3 de trading crypto avec bot IA" data-en="GreenTech Web3 AI-bot crypto trading platform">Plateforme GreenTech Web3 de trading crypto avec bot IA</div>
+            <p class="desc" data-fr="Stage de six mois en marketing digital international. Pilotage de la stratégie de campagne et de contenu sur les marchés APAC et EMEA, du ciblage au reporting, avec construction de toute l'infrastructure de tracking." data-en="Six-month internship in international digital marketing. Led campaign and content strategy across APAC and EMEA markets, from targeting to reporting, and built the entire tracking infrastructure from scratch.">Stage de six mois en marketing digital international. Pilotage de la stratégie de campagne et de contenu sur les marchés APAC et EMEA, du ciblage au reporting, avec construction de toute l'infrastructure de tracking.</p>
+            <div class="loc">
+                <span><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M10 18s6-5.2 6-10a6 6 0 10-12 0c0 4.8 6 10 6 10z"/><circle cx="10" cy="8" r="2"/></svg>Bordeaux, France</span>
+                <span><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="4" width="14" height="13" rx="1.5"/><path d="M3 8h14M7 2v4M13 2v4"/></svg>06 – 12/2024</span>
             </div>
-            <div class="fr-accent" data-fr="la stratégie digitale" data-en="digital strategy">la stratégie digitale</div>
-            <h2 class="project-title">Digital<br>Marketing</h2>
-            <div class="project-company">UniFox &middot; GreenTech, Web3</div>
-            <div class="project-loc">Bordeaux, France &middot; 06 &ndash; 12/2024</div>
         </div>
-                <div class="tag-row">
-                    <span class="tag">Content Strategy</span><span class="tag">GA4</span><span class="tag">GTM</span><span class="tag">PostHog</span><span class="tag">Tableau</span><span class="tag">Google Ads</span><span class="tag">CRO</span><span class="tag">UX & Funnel Analysis</span><span class="tag">SEO</span><span class="tag">Meta Business Suite</span><span class="tag">Iconosquare</span>
-                </div>
-                <div class="mi-row">
-                <div class="mission-lead">
-                    <span class="lead-label" data-fr="La mission" data-en="The Mission">La mission</span>
-                    <p data-fr="Développement et gestion de campagnes marketing digital et de stratégie de contenu, avec optimisation des performances par une approche data-driven pour une plateforme GreenTech Web3 de trading crypto avec bot IA." data-en="Developing and managing <span class=kw>digital marketing campaigns</span> and <span class=kw>content strategy</span> with performance optimization through <span class=kw>data-driven approaches</span> for a GreenTech Web3 AI-bot crypto trading platform.">Développement et gestion de campagnes marketing digital et de stratégie de contenu, avec optimisation des performances par une approche data-driven pour une plateforme GreenTech Web3 de trading crypto avec bot IA.</p>
-                </div>
-                <div class="impact-strip">
-                    <span class="lead-label" data-fr="Impact" data-en="Impact">Impact</span>
-                    <div class="impact-stats">
-                        <div class="stat"><span class="stat-num" data-fr="−52,6 %" data-en="−52.6%">−52,6 %</span><span class="stat-label" data-fr="taux de rebond" data-en="bounce rate">taux de rebond</span></div>
-                        <div class="stat"><span class="stat-num" data-fr="53,52 %" data-en="53.52%">53,52 %</span><span class="stat-label" data-fr="conversion Google Ads" data-en="Google Ads conversion">conversion Google Ads</span></div>
-                        <div class="stat"><span class="stat-num" data-fr="+114 %" data-en="+114%">+114 %</span><span class="stat-label" data-fr="vues mensuelles du site" data-en="monthly site views">vues mensuelles du site</span></div>
-                    </div>
-                    <p class="impact-note" data-fr="Identification et résolution d'un écart de conversion critique iOS vs Android (58,82 % vs 95,2 %) grâce à des correctifs UX ciblés." data-en="Identified and closed a critical iOS vs Android conversion gap (58.82% vs 95.2%) through targeted UX fixes.">Identification et résolution d'un écart de conversion critique iOS vs Android (58,82 % vs 95,2 %) grâce à des correctifs UX ciblés.</p>
-                </div>
-                </div>
-                <div class="content-card has-img">
-                    <div class="card-body">
-                    <h4><span class="icon">⚙️</span> <span data-fr="Stratégie de contenu & Analytics" data-en="Content Strategy & Analytics">Stratégie de contenu & Analytics</span></h4>
-                    <ul>
-                        <li data-fr="Construction de zéro de dashboards de performance centralisés multi-plateformes (GA4, Tableau, Google Ads, LinkedIn, TikTok, Instagram) pour suivre contenus et campagnes en un seul endroit" data-en="Built <span class=kw>centralized, multi-platform performance dashboards from scratch</span> (GA4, Tableau, Google Ads, LinkedIn, TikTok, Instagram) to track content and campaign performance in one place">Construction de zéro de dashboards de performance centralisés multi-plateformes (GA4, Tableau, Google Ads, LinkedIn, TikTok, Instagram) pour suivre contenus et campagnes en un seul endroit</li>
-                        <li data-fr="Création de contenus personnalisés basés sur la segmentation utilisateurs et les données comportementales, avec un taux d'engagement remarquable de 8,67 événements par session sur le social organique" data-en="Created personalized content based on <span class=kw>user segmentation</span> and <span class=kw>behavioral data</span>, including a standout <span class=kw>8.67 events-per-session</span> engagement rate on organic social">Création de contenus personnalisés basés sur la segmentation utilisateurs et les données comportementales, avec un taux d'engagement remarquable de 8,67 événements par session sur le social organique</li>
-                        <li data-fr="Optimisation du contenu multi-plateformes via l'analyse continue des performances" data-en="Optimized <span class=kw>multi-platform content</span> through continuous performance analysis">Optimisation du contenu multi-plateformes via l'analyse continue des performances</li>
-                        <li data-fr="Gestion de la diffusion sur LinkedIn, Facebook, Twitter, Instagram, TikTok et Threads" data-en="Managed distribution across LinkedIn, Facebook, Twitter, Instagram, TikTok and Threads">Gestion de la diffusion sur LinkedIn, Facebook, Twitter, Instagram, TikTok et Threads</li>
-                    </ul>
-                    </div>
-                    <div class="side-img">
-                    <div class="showcase-item">
-                        <img src="Content%20Creation_unifox.png" alt="Content Creation" loading="lazy">
-                        <div class="caption">Social Media Content Creation (hook, line, value, CTA)</div>
-                    </div>
-                </div>
-                </div>
-                <div class="content-card has-img img-left">
-                    <div class="card-body">
-                    <h4><span class="icon">🎨</span> <span data-fr="Création de contenu & Outils" data-en="Content Creation & Tools">Création de contenu & Outils</span></h4>
-                    <ul>
-                        <li data-fr="Conception de visuels adaptés à chaque plateforme avec Canva, Figma et CapCut" data-en="Designed platform-specific visuals using Canva, Figma and CapCut">Conception de visuels adaptés à chaque plateforme avec Canva, Figma et CapCut</li>
-                        <li data-fr="Production de contenus vidéo engageants adaptés à l'audience de chaque canal" data-en="Produced engaging video content adapted to each channel's audience">Production de contenus vidéo engageants adaptés à l'audience de chaque canal</li>
-                        <li data-fr="Développement de contenus optimisés par mots-clés pour renforcer la visibilité organique" data-en="Developed <span class=kw>keyword-optimized content</span> for enhanced organic visibility">Développement de contenus optimisés par mots-clés pour renforcer la visibilité organique</li>
-                        <li data-fr="Mise en place de stratégies d'optimisation du taux de conversion sur les campagnes Google Ads" data-en="Implemented <span class=kw>conversion rate optimization</span> strategies across Google Ads campaigns">Mise en place de stratégies d'optimisation du taux de conversion sur les campagnes Google Ads</li>
-                    </ul>
-                    </div>
-                    <div class="side-img">
-                    <div class="showcase-item">
-                        <img src="Content%20Planning_Unifox.png" alt="Content Planning" loading="lazy">
-                        <div class="caption">Content Planning & Scheduling (Iconosquare)</div>
-                    </div>
-                </div>
-                </div>
-                <div class="content-card has-img">
-                    <div class="card-body">
-                    <h4><span class="icon">📊</span> <span data-fr="Suivi des performances" data-en="Performance Tracking">Suivi des performances</span></h4>
-                    <ul>
-                        <li data-fr="Recherche UX au niveau appareil et navigateur, avec identification d'un écart de conversion critique iOS vs Android (58,82 % vs 95,2 %)" data-en="Conducted <span class=kw>device and browser-level UX research</span>, identifying a critical <span class=kw>iOS vs Android conversion gap (58.82% vs 95.2%)</span>">Recherche UX au niveau appareil et navigateur, avec identification d'un écart de conversion critique iOS vs Android (58,82 % vs 95,2 %)</li>
-                        <li data-fr="Mise en place et suivi de PostHog en complément de GA4 pour un tracking approfondi des sessions et des comportements" data-en="Set up and monitored <span class=kw>PostHog</span> alongside GA4 for deeper session and behavioral tracking">Mise en place et suivi de PostHog en complément de GA4 pour un tracking approfondi des sessions et des comportements</li>
-                        <li data-fr="Suivi du comportement utilisateurs, sessions, engagement et segmentation sur l'ensemble des canaux" data-en="Monitored user behavior, sessions, engagement and segmentation across channels">Suivi du comportement utilisateurs, sessions, engagement et segmentation sur l'ensemble des canaux</li>
-                        <li data-fr="Analyse des sources de trafic et performances des campagnes multi-canaux" data-en="Analyzed traffic sources and multi-channel campaign performance">Analyse des sources de trafic et performances des campagnes multi-canaux</li>
-                        <li data-fr="Implémentation des correctifs identifiés (simplification du formulaire d'inscription, repositionnement des CTA, optimisation du temps de chargement) pour combler l'écart de conversion" data-en="Implemented the resulting fixes (subscription form simplification, CTA repositioning, page-load optimization) to close the conversion gap">Implémentation des correctifs identifiés (simplification du formulaire d'inscription, repositionnement des CTA, optimisation du temps de chargement) pour combler l'écart de conversion</li>
-                    </ul>
-                    </div>
-                    <div class="side-img">
-                    <div class="showcase-item">
-                        <img src="Marketing%20Strategy_unifox.png" alt="Marketing Strategy" loading="lazy">
-                        <div class="caption">Marketing Strategy & Analysis (GA4, Google Ads, Meta, PostHog)</div>
-                    </div>
-                </div>
-                </div>
+        <div class="intro-visual">
+            <img src="Marketing%20Strategy_unifox.png" alt="Marketing Strategy & Analysis" loading="lazy">
+            <div class="cap" data-fr="Stratégie marketing & analyse (GA4, Google Ads, Meta, PostHog)" data-en="Marketing strategy & analysis (GA4, Google Ads, Meta, PostHog)">Stratégie marketing & analyse (GA4, Google Ads, Meta, PostHog)</div>
+        </div>
+    </div>
 
-    </section>
-
-    <!-- ===== 02: Brand Strategy (Hôtel) ===== -->
-    <section class="project-section accent-tan" id="brand">
-        <hr class="section-divider">
-        <div class="banner-row"><div class="outline-banner" aria-hidden="true">Branding &middot; Branding &middot; Branding &middot; Branding</div><span class="big-num">02</span></div>
-        <div class="project-header">
-            <div class="head-row">
-                <span class="pill" data-fr="Étude de cas 02" data-en="Case Study 02">Étude de cas 02</span>
-                <span class="pill">Freelance</span>
+    <div class="gst">
+        <div>
+            <h3 class="h-mid display" data-fr="Les objectifs" data-en="The goals">Les objectifs</h3>
+            <div class="box">
+                <ul class="check">
+                    <li data-fr="Réduire le taux de rebond et améliorer la conversion" data-en="Reduce bounce rate and improve conversion">Réduire le taux de rebond et améliorer la conversion</li>
+                    <li data-fr="Centraliser le suivi des performances multi-plateformes" data-en="Centralize multi-platform performance tracking">Centraliser le suivi des performances multi-plateformes</li>
+                    <li data-fr="Développer la visibilité organique et payante sur APAC / EMEA" data-en="Grow organic and paid visibility across APAC / EMEA">Développer la visibilité organique et payante sur APAC / EMEA</li>
+                    <li data-fr="Comprendre les parcours utilisateurs par appareil et navigateur" data-en="Understand user journeys by device and browser">Comprendre les parcours utilisateurs par appareil et navigateur</li>
+                </ul>
             </div>
-            <div class="fr-accent" data-fr="l'image de marque" data-en="the brand image">l'image de marque</div>
-            <h2 class="project-title">Brand<br>Strategy</h2>
-            <div class="project-company" data-fr="Hôtel 4★ Restaurant · Hôtellerie de charme" data-en="4★ Hotel & Restaurant · Boutique hospitality">Hôtel 4★ Restaurant · Hôtellerie de charme</div>
-            <div class="project-loc">Dordogne, France &middot; Freelance</div>
-        </div>
-                <div class="tag-row">
-                    <span class="tag">Market Analysis</span><span class="tag">Brand Positioning</span><span class="tag">Persona Definition</span><span class="tag">Bilingual Strategy (FR/EN)</span><span class="tag">Visual Identity</span><span class="tag">Instagram Mockup</span><span class="tag">Competitive Benchmarking</span>
-                </div>
-                <div class="mi-row">
-                <div class="mission-lead">
-                    <span class="lead-label" data-fr="La mission" data-en="The Mission">La mission</span>
-                    <p data-fr="Définition d'une <span class=kw>stratégie digitale bilingue (FR/EN)</span> pour positionner un établissement hôtelier de charme sur le marché américain CSP+, avec analyse de cible, recommandations éditoriales et maquette de présence Instagram." data-en="Defined a <span class=kw>bilingual digital strategy (FR/EN)</span> to position a boutique hotel on the US premium market, with target analysis, editorial recommendations and Instagram mockup.">Définition d'une stratégie digitale bilingue (FR/EN) pour positionner un établissement hôtelier de charme sur le marché américain CSP+, avec analyse de cible, recommandations éditoriales et maquette de présence Instagram.</p>
-                </div>
-                <div class="impact-strip">
-                    <span class="lead-label" data-fr="Impact" data-en="Impact">Impact</span>
-                    <p class="impact-statement" data-fr="Proposition stratégique complète livrée sous forme de présentation professionnelle, posant les bases d'un repositionnement digital sur le marché américain CSP+." data-en="Complete strategic proposal delivered as a professional presentation, laying the foundation for a digital repositioning on the US premium market.">Proposition stratégique complète livrée sous forme de présentation professionnelle, posant les bases d'un repositionnement digital sur le marché américain CSP+.</p>
-                    <p class="impact-note" data-fr="Cadre activable couvrant l'analyse de marché, l'identité visuelle, la ligne éditoriale et les axes de mesure." data-en="Actionable framework covering market analysis, visual identity, editorial line and measurement axes.">Cadre activable couvrant l'analyse de marché, l'identité visuelle, la ligne éditoriale et les axes de mesure.</p>
-                </div>
-                </div>
-                <div class="content-card has-img img-left">
-                    <div class="card-body">
-                    <h4><span class="icon">🔍</span> <span data-fr="Analyse de marché & Définition de cible" data-en="Market Analysis & Target Definition">Analyse de marché & Définition de cible</span></h4>
-                    <ul>
-                        <li data-fr="Analyse du segment voyageurs américains haut de gamme : durée de séjour, attentes œnotouristiques, comportements d'achat influencés par les avis et réseaux sociaux" data-en="Analyzed the <span class=kw>US premium traveler segment</span>: stay duration, wine tourism expectations, purchase behaviors influenced by reviews and social media">Analyse du segment voyageurs américains haut de gamme : durée de séjour, attentes œnotouristiques, comportements d'achat influencés par les avis et réseaux sociaux</li>
-                        <li data-fr="Définition de personas autour des préférences gastronomiques, culturelles et expérientielles" data-en="Defined <span class=kw>personas</span> around gastronomic, cultural and experiential preferences">Définition de personas autour des préférences gastronomiques, culturelles et expérientielles</li>
-                        <li data-fr="Benchmark de la présence digitale existante et identification des angles morts sur l'audience internationale" data-en="Benchmarked existing digital presence and identified blind spots on the international audience">Benchmark de la présence digitale existante et identification des angles morts sur l'audience internationale</li>
-                    </ul>
-                    </div>
-                    <div class="side-img">
-                    <div class="showcase-item">
-                        <img src="hotel_1.png" alt="Public cible" loading="lazy">
-                        <div class="caption" data-fr="Analyse du public cible et définition des personas" data-en="Target audience analysis and persona definition">Analyse du public cible et définition des personas</div>
-                    </div>
-                </div>
-                </div>
-                <div class="content-card has-img">
-                    <div class="card-body">
-                    <h4><span class="icon">🎨</span> <span data-fr="Stratégie de marque & Identité visuelle" data-en="Brand Strategy & Visual Identity">Stratégie de marque & Identité visuelle</span></h4>
-                    <ul>
-                        <li data-fr="Définition d'une palette de couleurs alignée avec l'identité existante de la marque" data-en="Defined a color palette aligned with the existing brand identity">Définition d'une palette de couleurs alignée avec l'identité existante de la marque</li>
-                        <li data-fr="Conception d'une maquette Instagram complète avec structure éditoriale" data-en="Designed a <span class=kw>complete Instagram mockup</span> with editorial structure">Conception d'une maquette Instagram complète avec structure éditoriale</li>
-                        <li data-fr="Création de séries thématiques : gastronomie, témoignages voyageurs, offres saisonnières" data-en="Created thematic series: gastronomy, traveler testimonials, seasonal offers">Création de séries thématiques : gastronomie, témoignages voyageurs, offres saisonnières</li>
-                        <li data-fr="Développement d'une charte hashtags incluant un hashtag de marque pour le contenu généré par les utilisateurs" data-en="Developed a hashtag strategy including a branded hashtag for user-generated content">Développement d'une charte hashtags incluant un hashtag de marque pour le contenu généré par les utilisateurs</li>
-                    </ul>
-                    </div>
-                    <div class="side-img">
-                    <div class="showcase-item">
-                        <img src="hotel_2.png" alt="Instagram mockup" loading="lazy">
-                        <div class="caption" data-fr="Maquette Instagram & identité visuelle" data-en="Instagram mockup & visual identity">Maquette Instagram & identité visuelle</div>
-                    </div>
-                </div>
-                </div>
-                <div class="content-card has-img img-left">
-                    <div class="card-body">
-                    <h4><span class="icon">✍️</span> <span data-fr="Stratégie éditoriale bilingue" data-en="Bilingual Editorial Strategy">Stratégie éditoriale bilingue</span></h4>
-                    <ul>
-                        <li data-fr="Recommandations de publications bilingues FR/EN adaptées au double public local et international" data-en="<span class=kw>Bilingual FR/EN publication</span> recommendations adapted to local and international audiences">Recommandations de publications bilingues FR/EN adaptées au double public local et international</li>
-                        <li data-fr="Conception d'exemples de Reels orientés marché américain : sous-titres anglais, narration émotionnelle, mise en avant du service anglophone et des visites privées" data-en="Designed Reels examples for the US market: English subtitles, emotional storytelling, English-speaking service and private tours">Conception d'exemples de Reels orientés marché américain : sous-titres anglais, narration émotionnelle, mise en avant du service anglophone et des visites privées</li>
-                        <li data-fr="Storytelling axé sur l'expérience authentique de la campagne française" data-en="Storytelling focused on the authentic French countryside experience">Storytelling axé sur l'expérience authentique de la campagne française</li>
-                    </ul>
-                    </div>
-                    <div class="side-img">
-                    <div class="showcase-item">
-                        <img src="hotel_3.png" alt="Content creation" loading="lazy">
-                        <div class="caption" data-fr="Création de contenu bilingue FR/EN" data-en="Bilingual FR/EN content creation">Création de contenu bilingue FR/EN</div>
-                    </div>
-                </div>
-                </div>
-    </section>
-
-    <!-- ===== 02: Product Strategy (A to Z) ===== -->
-    <section class="project-section accent-red" id="product">
-        <hr class="section-divider">
-        <div class="banner-row"><div class="outline-banner" aria-hidden="true">Product &middot; Product &middot; Product &middot; Product</div><span class="big-num">03</span></div>
-        <div class="project-header">
-            <div class="head-row">
-                <span class="pill" data-fr="Étude de cas 03" data-en="Case Study 03">Étude de cas 03</span>
-                <span class="pill">06 &ndash; 09/2023</span>
+            <div class="h-sm" data-fr="Compétences mobilisées" data-en="Skills applied">Compétences mobilisées</div>
+            <div class="pills">
+                <span class="pill">Content strategy</span><span class="pill">CRO</span><span class="pill" data-fr="Analyse UX & funnel" data-en="UX & funnel analysis">Analyse UX & funnel</span><span class="pill">SEO</span><span class="pill" data-fr="Campagnes payantes" data-en="Paid campaigns">Campagnes payantes</span><span class="pill">Dashboards</span>
             </div>
-            <div class="fr-accent" data-fr="de zéro au lancement" data-en="from zero to launch">de zéro au lancement</div>
-            <h2 class="project-title">Product Strategy<br>(A to Z)</h2>
-            <div class="project-company">Reinventing Carri&egrave;re Coaching &middot; <span data-fr="Coach professionnel certifié ICF (PCC)" data-en="ICF (PCC) Certified Professional Coach">Coach professionnel certifié ICF (PCC)</span></div>
-            <div class="project-loc">Paris, France &middot; 06 &ndash; 09/2023</div>
         </div>
-        <div class="tag-row">
-            <span class="tag">Persona</span><span class="tag">Product Concept</span><span class="tag">Competitive Analysis</span><span class="tag">Content Production</span><span class="tag">Video Editing</span><span class="tag">Pricing Strategy</span><span class="tag">GTM Strategy</span><span class="tag">Marketing & Positioning</span><span class="tag">Banner & Visual Design</span><span class="tag">Landing Page</span><span class="tag">Reels & Social Content</span>
+        <div>
+            <div class="h-sm" style="margin-top:0" data-fr="Outils & apps" data-en="Tools & apps">Outils & apps</div>
+            <div class="tools">
+                <div class="tool"><div class="ic">G</div><div><b>GA4 + Google Tag Manager</b><small data-fr="Tracking des événements et conversions, mis en place de zéro" data-en="Event and conversion tracking, set up from scratch">Tracking des événements et conversions, mis en place de zéro</small></div></div>
+                <div class="tool"><div class="ic">P</div><div><b>PostHog</b><small data-fr="Replays de sessions et analyse comportementale" data-en="Session replays and behavioral analysis">Replays de sessions et analyse comportementale</small></div></div>
+                <div class="tool"><div class="ic">T</div><div><b>Tableau + SQL</b><small data-fr="Dashboards centralisés et requêtes sur les métriques" data-en="Centralized dashboards and metric queries">Dashboards centralisés et requêtes sur les métriques</small></div></div>
+                <div class="tool"><div class="ic">A</div><div><b>Google Ads · Meta Business Suite</b><small data-fr="Campagnes payantes et gestion des comptes" data-en="Paid campaigns and account management">Campagnes payantes et gestion des comptes</small></div></div>
+                <div class="tool"><div class="ic">I</div><div><b>Iconosquare</b><small data-fr="Planification et programmation du contenu social" data-en="Social content planning and scheduling">Planification et programmation du contenu social</small></div></div>
+                <div class="tool"><div class="ic">C</div><div><b>Canva · Figma · CapCut</b><small data-fr="Visuels et vidéos adaptés à chaque plateforme" data-en="Platform-specific visuals and videos">Visuels et vidéos adaptés à chaque plateforme</small></div></div>
+            </div>
         </div>
-        <div class="mi-row">
-                <div class="mission-lead">
-                    <span class="lead-label" data-fr="La mission" data-en="The Mission">La mission</span>
-                    <p data-fr="Développement complet d'un cours en ligne de formation carrière, de la conception à la mise en marché, pour un cabinet de coaching professionnel certifié ICF (PCC) spécialisé dans l'accompagnement des personnes souhaitant travailler à l'international." data-en="<span class=kw>Full-cycle development</span> of an online career training course, from concept to market launch, for an ICF (PCC) certified professional coaching firm specializing in supporting people aiming to work in international environments.">Développement complet d'un cours en ligne de formation carrière, de la conception à la mise en marché, pour un cabinet de coaching professionnel certifié ICF (PCC) spécialisé dans l'accompagnement des personnes souhaitant travailler à l'international.</p>
-                </div>
-                <div class="impact-strip">
-                    <span class="lead-label" data-fr="Impact" data-en="Impact">Impact</span>
-                    <div class="impact-stats">
-                        <div class="stat"><span class="stat-num">26</span><span class="stat-label" data-fr="sessions de cours lancées" data-en="course sessions launched">sessions de cours lancées</span></div>
-                        <div class="stat"><span class="stat-num">2</span><span class="stat-label" data-fr="mois de production" data-en="months of production">mois de production</span></div>
-                        <div class="stat"><span class="stat-num" data-fr="3,5 h" data-en="3.5h">3,5 h</span><span class="stat-label" data-fr="de contenu produit" data-en="of content produced">de contenu produit</span></div>
-                    </div>
-                    <p class="impact-note" data-fr="Forts taux d'engagement assurant l'interaction et l'efficacité du contenu, avec un workflow de production scalable posant les bases des futures créations." data-en="Strong engagement rates ensuring interaction and content effectiveness, with a scalable production workflow laying the foundation for future content.">Forts taux d'engagement assurant l'interaction et l'efficacité du contenu, avec un workflow de production scalable posant les bases des futures créations.</p>
-                </div>
-                </div>
-        <div class="content-card">
-            <h4><span class="icon">📋</span> <span data-fr="Gestion de projet" data-en="Project Management">Gestion de projet</span></h4>
+    </div>
+
+    <div class="grid c2">
+        <div class="shot"><img src="Content%20Creation_unifox.png" alt="Content Creation" loading="lazy"><div class="cap" data-fr="Création de contenu social (hook, line, value, CTA)" data-en="Social media content creation (hook, line, value, CTA)">Création de contenu social (hook, line, value, CTA)</div></div>
+        <div class="shot"><img src="Content%20Planning_Unifox.png" alt="Content Planning" loading="lazy"><div class="cap" data-fr="Planification et programmation du contenu (Iconosquare)" data-en="Content planning & scheduling (Iconosquare)">Planification et programmation du contenu (Iconosquare)</div></div>
+    </div>
+
+    <div class="tasks">
+        <h3 class="h-mid display" data-fr="Les tâches" data-en="The tasks">Les tâches</h3>
+
+        <div class="task">
+            <h4><span class="k">01</span><span data-fr="Stratégie de contenu & analytics" data-en="Content strategy & analytics">Stratégie de contenu & analytics</span></h4>
             <ul>
-                <li data-fr="Coordination de la production de <span class=kw>26 sessions</span> de cours en 2 mois, de bout en bout" data-en="Coordinated the <span class=kw>end-to-end production of 26 digital course sessions</span> within 2 months">Coordination de la production de 26 sessions de cours en 2 mois, de bout en bout</li>
-                <li data-fr="Respect des délais fixés à chaque phase du projet" data-en="Met preset deadlines at every phase of the project">Respect des délais fixés à chaque phase du projet</li>
-                <li data-fr="Mise en place d'un workflow de production organisé et d'un planning structuré" data-en="Built an organized production workflow and structured planning">Mise en place d'un workflow de production organisé et d'un planning structuré</li>
+                <li data-fr="Construction de zéro de dashboards de performance centralisés multi-plateformes (GA4, Tableau, Google Ads, LinkedIn, TikTok, Instagram)" data-en="Built <span class=kw>centralized multi-platform performance dashboards from scratch</span> (GA4, Tableau, Google Ads, LinkedIn, TikTok, Instagram)">Construction de zéro de dashboards de performance centralisés multi-plateformes (GA4, Tableau, Google Ads, LinkedIn, TikTok, Instagram)</li>
+                <li data-fr="Contenus personnalisés basés sur la segmentation et les données comportementales : 8,67 événements par session sur le social organique" data-en="Personalized content based on <span class=kw>segmentation and behavioral data</span>: <span class=kw>8.67 events per session</span> on organic social">Contenus personnalisés basés sur la segmentation et les données comportementales : 8,67 événements par session sur le social organique</li>
+                <li data-fr="Gestion de la diffusion sur LinkedIn, Facebook, Twitter, Instagram, TikTok et Threads" data-en="Managed distribution across LinkedIn, Facebook, Twitter, Instagram, TikTok and Threads">Gestion de la diffusion sur LinkedIn, Facebook, Twitter, Instagram, TikTok et Threads</li>
+                <li data-fr="Représentation de la marque lors d'un salon tech international" data-en="Represented the brand at an international tech trade show">Représentation de la marque lors d'un salon tech international</li>
             </ul>
         </div>
-        <div class="content-card has-img has-img-sm">
-            <div class="card-body">
-            <h4><span class="icon">🔍</span> <span data-fr="Étude de marché & Analyse concurrentielle" data-en="Market Research & Competitive Analysis">Étude de marché & Analyse concurrentielle</span></h4>
+
+        <div class="task">
+            <h4><span class="k">02</span><span data-fr="Création de contenu & optimisation" data-en="Content creation & optimization">Création de contenu & optimisation</span></h4>
+            <ul>
+                <li data-fr="Visuels et vidéos adaptés à chaque plateforme avec Canva, Figma et CapCut" data-en="Platform-specific visuals and videos with Canva, Figma and CapCut">Visuels et vidéos adaptés à chaque plateforme avec Canva, Figma et CapCut</li>
+                <li data-fr="Stratégie d'acquisition B2C APAC/EMEA via Google Ads et SEO, avec contenus optimisés par mots-clés pour la visibilité organique" data-en="<span class=kw>B2C acquisition strategy across APAC/EMEA</span> via Google Ads and SEO, with keyword-optimized content for organic visibility">Stratégie d'acquisition B2C APAC/EMEA via Google Ads et SEO, avec contenus optimisés par mots-clés pour la visibilité organique</li>
+                <li data-fr="Stratégies d'optimisation du taux de conversion sur les campagnes Google Ads" data-en="<span class=kw>Conversion rate optimization</span> across Google Ads campaigns">Stratégies d'optimisation du taux de conversion sur les campagnes Google Ads</li>
+            </ul>
+        </div>
+
+        <div class="task">
+            <h4><span class="k">03</span><span data-fr="Suivi des performances & UX" data-en="Performance tracking & UX">Suivi des performances & UX</span></h4>
+            <ul>
+                <li data-fr="Recherche UX par appareil et navigateur : identification d'un écart de conversion critique iOS vs Android (58,82 % vs 95,2 %)" data-en="<span class=kw>Device and browser-level UX research</span>: identified a critical <span class=kw>iOS vs Android conversion gap (58.82% vs 95.2%)</span>">Recherche UX par appareil et navigateur : identification d'un écart de conversion critique iOS vs Android (58,82 % vs 95,2 %)</li>
+                <li data-fr="PostHog en complément de GA4 pour un tracking approfondi des sessions et des comportements" data-en="<span class=kw>PostHog</span> alongside GA4 for deeper session and behavioral tracking">PostHog en complément de GA4 pour un tracking approfondi des sessions et des comportements</li>
+                <li data-fr="Correctifs implémentés : simplification du formulaire d'inscription, repositionnement des CTA, optimisation du temps de chargement" data-en="Fixes implemented: subscription form simplification, CTA repositioning, page-load optimization">Correctifs implémentés : simplification du formulaire d'inscription, repositionnement des CTA, optimisation du temps de chargement</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="results">
+        <div>
+            <h3 class="h-mid display" data-fr="Les résultats" data-en="The results">Les résultats</h3>
+            <div class="box">
+                <div class="stats">
+                    <div class="stat"><b data-fr="−52,6 %" data-en="−52.6%">−52,6 %</b><span data-fr="taux de rebond" data-en="bounce rate">taux de rebond</span></div>
+                    <div class="stat"><b data-fr="53,52 %" data-en="53.52%">53,52 %</b><span data-fr="conversion Google Ads" data-en="Google Ads conversion">conversion Google Ads</span></div>
+                    <div class="stat"><b data-fr="+114 %" data-en="+114%">+114 %</b><span data-fr="vues mensuelles du site" data-en="monthly site views">vues mensuelles du site</span></div>
+                </div>
+                <ul class="check">
+                    <li data-fr="Écart de conversion iOS vs Android comblé grâce à des correctifs UX ciblés" data-en="iOS vs Android conversion gap closed through targeted UX fixes">Écart de conversion iOS vs Android comblé grâce à des correctifs UX ciblés</li>
+                    <li data-fr="Un seul endroit pour suivre contenus et campagnes sur six plateformes" data-en="One place to track content and campaigns across six platforms">Un seul endroit pour suivre contenus et campagnes sur six plateformes</li>
+                </ul>
+            </div>
+        </div>
+        <div class="results-visual">
+            <svg class="spark a" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c1 6 5 10 12 12-7 2-11 6-12 12-1-6-5-10-12-12C7 10 11 6 12 0z"/></svg>
+            <img src="Marketing%20Strategy_unifox.png" alt="Dashboards GA4 / PostHog" loading="lazy">
+            <svg class="spark b" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c1 6 5 10 12 12-7 2-11 6-12 12-1-6-5-10-12-12C7 10 11 6 12 0z"/></svg>
+        </div>
+    </div>
+
+    <div class="case-foot"><span data-fr="Projet 01 | UniFox" data-en="Project 01 | UniFox">Projet 01 | UniFox</span><span>Digital Marketing</span></div>
+</div>
+</section>
+
+<!-- ===================================================== 02 ===================================================== -->
+<section class="case" id="brand">
+<div class="inner">
+    <div class="marquee" aria-hidden="true">Brand Strategy Brand Strategy Brand Strategy Brand</div>
+    <div class="case-num">02</div>
+
+    <div class="intro">
+        <div class="intro-panel">
+            <h2 data-fr="Hôtel 4★" data-en="4★ Hotel">Hôtel 4★</h2>
+            <div class="org" data-fr="Hôtellerie de charme & restaurant · Dordogne" data-en="Boutique hotel & restaurant · Dordogne">Hôtellerie de charme & restaurant · Dordogne</div>
+            <p class="desc" data-fr="Mission freelance : définir une stratégie digitale bilingue FR/EN pour positionner l'établissement auprès d'une clientèle premium sur les marchés européen et américain, avec analyse de marché, localisation B2C, recommandations éditoriales et maquette de présence Instagram." data-en="Freelance mission: define a bilingual FR/EN digital strategy to position the hotel with a premium clientele on the EU and US markets, with market analysis, B2C localization, editorial recommendations and an Instagram mockup.">Mission freelance : définir une stratégie digitale bilingue FR/EN pour positionner l'établissement auprès d'une clientèle premium sur les marchés européen et américain, avec analyse de marché, localisation B2C, recommandations éditoriales et maquette de présence Instagram.</p>
+            <div class="loc">
+                <span><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M10 18s6-5.2 6-10a6 6 0 10-12 0c0 4.8 6 10 6 10z"/><circle cx="10" cy="8" r="2"/></svg>Dordogne, France</span>
+                <span><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="4" width="14" height="13" rx="1.5"/><path d="M3 8h14M7 2v4M13 2v4"/></svg>04 – 05/2025 · Freelance</span>
+            </div>
+        </div>
+        <div class="intro-visual">
+            <img src="hotel_2.png" alt="Instagram mockup" loading="lazy">
+            <div class="cap" data-fr="Maquette Instagram & identité visuelle" data-en="Instagram mockup & visual identity">Maquette Instagram & identité visuelle</div>
+        </div>
+    </div>
+
+    <div class="gst">
+        <div>
+            <h3 class="h-mid display" data-fr="Les objectifs" data-en="The goals">Les objectifs</h3>
+            <div class="box">
+                <ul class="check">
+                    <li data-fr="Attirer une clientèle américaine haut de gamme" data-en="Attract a US premium clientele">Attirer une clientèle américaine haut de gamme</li>
+                    <li data-fr="Rendre l'offre lisible pour un public anglophone" data-en="Make the offer legible to an English-speaking audience">Rendre l'offre lisible pour un public anglophone</li>
+                    <li data-fr="Donner une ligne éditoriale cohérente à Instagram" data-en="Give Instagram a coherent editorial line">Donner une ligne éditoriale cohérente à Instagram</li>
+                    <li data-fr="Poser des axes de mesure pour la suite" data-en="Set measurement axes for what comes next">Poser des axes de mesure pour la suite</li>
+                </ul>
+            </div>
+            <div class="h-sm" data-fr="Compétences mobilisées" data-en="Skills applied">Compétences mobilisées</div>
+            <div class="pills">
+                <span class="pill" data-fr="Analyse de marché" data-en="Market analysis">Analyse de marché</span><span class="pill">Brand positioning</span><span class="pill">Personas</span><span class="pill" data-fr="Stratégie bilingue FR/EN" data-en="Bilingual strategy FR/EN">Stratégie bilingue FR/EN</span><span class="pill" data-fr="Identité visuelle" data-en="Visual identity">Identité visuelle</span><span class="pill">Benchmark</span>
+            </div>
+        </div>
+        <div>
+            <div class="h-sm" style="margin-top:0" data-fr="Outils & apps" data-en="Tools & apps">Outils & apps</div>
+            <div class="tools">
+                <div class="tool"><div class="ic">F</div><div><b>Figma</b><small data-fr="Maquette Instagram et système visuel" data-en="Instagram mockup and visual system">Maquette Instagram et système visuel</small></div></div>
+                <div class="tool"><div class="ic">C</div><div><b>Canva</b><small data-fr="Séries de contenus et exemples de Reels" data-en="Content series and Reels examples">Séries de contenus et exemples de Reels</small></div></div>
+                <div class="tool"><div class="ic">M</div><div><b>Meta Business Suite</b><small data-fr="Benchmark de la présence existante" data-en="Benchmark of the existing presence">Benchmark de la présence existante</small></div></div>
+                <div class="tool"><div class="ic">P</div><div><b>PowerPoint</b><small data-fr="Proposition stratégique livrée au client" data-en="Strategic proposal delivered to the client">Proposition stratégique livrée au client</small></div></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="tasks">
+        <h3 class="h-mid display" data-fr="Les tâches" data-en="The tasks">Les tâches</h3>
+
+        <div class="task">
+            <h4><span class="k">01</span><span data-fr="Recherche de marque" data-en="Brand research">Recherche de marque</span></h4>
+            <div class="tri">
+                <div><b>Image</b><p data-fr="Charme, authenticité, campagne française, gastronomie et vin, service attentif et anglophone." data-en="Charm, authenticity, French countryside, gastronomy and wine, attentive English-speaking service.">Charme, authenticité, campagne française, gastronomie et vin, service attentif et anglophone.</p></div>
+                <div><b data-fr="Cible" data-en="Target">Cible</b><p data-fr="Voyageurs américains CSP+ : séjours longs, attentes œnotouristiques, décisions influencées par les avis et les réseaux sociaux." data-en="US premium travelers: long stays, wine tourism expectations, decisions influenced by reviews and social media.">Voyageurs américains CSP+ : séjours longs, attentes œnotouristiques, décisions influencées par les avis et les réseaux sociaux.</p></div>
+                <div><b data-fr="Valeurs" data-en="Values">Valeurs</b><p data-fr="Expérience plutôt que luxe ostentatoire. Rencontre, terroir, temps long." data-en="Experience over ostentatious luxury. Encounter, terroir, slow time.">Expérience plutôt que luxe ostentatoire. Rencontre, terroir, temps long.</p></div>
+            </div>
+        </div>
+
+        <div class="task">
+            <h4><span class="k">02</span><span data-fr="Identité visuelle & concept de feed" data-en="Visual identity & feed concept">Identité visuelle & concept de feed</span></h4>
+            <div>
+                <ul>
+                    <li data-fr="Palette de couleurs alignée avec l'identité existante de la marque" data-en="Color palette aligned with the existing brand identity">Palette de couleurs alignée avec l'identité existante de la marque</li>
+                    <li data-fr="Maquette Instagram complète avec structure éditoriale et séries thématiques : gastronomie, témoignages voyageurs, offres saisonnières" data-en="<span class=kw>Complete Instagram mockup</span> with editorial structure and thematic series: gastronomy, traveler testimonials, seasonal offers">Maquette Instagram complète avec structure éditoriale et séries thématiques : gastronomie, témoignages voyageurs, offres saisonnières</li>
+                    <li data-fr="Charte hashtags incluant un hashtag de marque pour le contenu généré par les clients" data-en="Hashtag guidelines including a branded hashtag for guest-generated content">Charte hashtags incluant un hashtag de marque pour le contenu généré par les clients</li>
+                </ul>
+                <div class="swatches" aria-hidden="true"><span style="background:#4A3B2E"></span><span style="background:#B08A52"></span><span style="background:#DDD3C2"></span><span style="background:#8E4A35"></span></div>
+            </div>
+        </div>
+
+        <div class="task">
+            <h4><span class="k">03</span><span data-fr="Stratégie éditoriale bilingue" data-en="Bilingual editorial strategy">Stratégie éditoriale bilingue</span></h4>
+            <ul>
+                <li data-fr="Recommandations de publications FR/EN adaptées au double public local et international" data-en="<span class=kw>FR/EN publication</span> recommendations adapted to local and international audiences">Recommandations de publications FR/EN adaptées au double public local et international</li>
+                <li data-fr="Exemples de Reels pour le marché américain : sous-titres anglais, narration émotionnelle, mise en avant du service anglophone et des visites privées" data-en="Reels examples for the US market: English subtitles, emotional storytelling, English-speaking service and private tours">Exemples de Reels pour le marché américain : sous-titres anglais, narration émotionnelle, mise en avant du service anglophone et des visites privées</li>
+                <li data-fr="Storytelling axé sur l'expérience authentique de la campagne française" data-en="Storytelling focused on the authentic French countryside experience">Storytelling axé sur l'expérience authentique de la campagne française</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="grid c3">
+        <div class="shot"><img src="hotel_1.png" alt="Public cible" loading="lazy"><div class="cap" data-fr="Analyse du public cible et définition des personas" data-en="Target audience analysis and persona definition">Analyse du public cible et définition des personas</div></div>
+        <div class="shot"><img src="hotel_2.png" alt="Instagram mockup" loading="lazy"><div class="cap" data-fr="Maquette Instagram & identité visuelle" data-en="Instagram mockup & visual identity">Maquette Instagram & identité visuelle</div></div>
+        <div class="shot"><img src="hotel_3.png" alt="Content creation" loading="lazy"><div class="cap" data-fr="Création de contenu bilingue FR/EN" data-en="Bilingual FR/EN content creation">Création de contenu bilingue FR/EN</div></div>
+    </div>
+
+    <div class="results">
+        <div>
+            <h3 class="h-mid display" data-fr="Les résultats" data-en="The results">Les résultats</h3>
+            <div class="box">
+                <ul class="check">
+                    <li data-fr="Proposition stratégique complète livrée sous forme de présentation professionnelle" data-en="Complete strategic proposal delivered as a professional presentation">Proposition stratégique complète livrée sous forme de présentation professionnelle</li>
+                    <li data-fr="Cadre activable : analyse de marché, identité visuelle, ligne éditoriale, axes de mesure" data-en="Actionable framework: market analysis, visual identity, editorial line, measurement axes">Cadre activable : analyse de marché, identité visuelle, ligne éditoriale, axes de mesure</li>
+                    <li data-fr="Bases posées pour un repositionnement digital sur le marché américain CSP+" data-en="Foundation laid for a digital repositioning on the US premium market">Bases posées pour un repositionnement digital sur le marché américain CSP+</li>
+                </ul>
+            </div>
+        </div>
+        <div class="results-visual">
+            <svg class="spark a" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c1 6 5 10 12 12-7 2-11 6-12 12-1-6-5-10-12-12C7 10 11 6 12 0z"/></svg>
+            <img src="hotel_3.png" alt="Bilingual content" loading="lazy">
+        </div>
+    </div>
+
+    <div class="case-foot"><span data-fr="Projet 02 | Hôtel 4★" data-en="Project 02 | 4★ Hotel">Projet 02 | Hôtel 4★</span><span>Brand Strategy</span></div>
+</div>
+</section>
+
+<!-- ===================================================== 03 ===================================================== -->
+<section class="case" id="product">
+<div class="inner">
+    <div class="marquee" aria-hidden="true">Product Strategy Product Strategy Product Strategy</div>
+    <div class="case-num">03</div>
+
+    <div class="intro">
+        <div class="intro-panel">
+            <h2>Reinventing Carrière</h2>
+            <div class="org" data-fr="Cabinet de coaching professionnel certifié ICF (PCC) · Paris" data-en="ICF (PCC) certified professional coaching firm · Paris">Cabinet de coaching professionnel certifié ICF (PCC) · Paris</div>
+            <p class="desc" data-fr="Développement complet d'un cours en ligne de formation carrière, de la conception à la mise en marché, pour un cabinet spécialisé dans l'accompagnement des personnes souhaitant travailler à l'international." data-en="Full-cycle development of an online career training course, from concept to market launch, for a firm specializing in supporting people aiming to work internationally.">Développement complet d'un cours en ligne de formation carrière, de la conception à la mise en marché, pour un cabinet spécialisé dans l'accompagnement des personnes souhaitant travailler à l'international.</p>
+            <div class="loc">
+                <span><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M10 18s6-5.2 6-10a6 6 0 10-12 0c0 4.8 6 10 6 10z"/><circle cx="10" cy="8" r="2"/></svg>Paris, France</span>
+                <span><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="4" width="14" height="13" rx="1.5"/><path d="M3 8h14M7 2v4M13 2v4"/></svg>06 – 09/2023</span>
+            </div>
+        </div>
+        <div class="intro-visual">
+            <img src="Banner.jpg" alt="Banner design" loading="lazy">
+            <div class="cap" data-fr="Bannières, landing page, Reels et contenus promotionnels" data-en="Banners, landing page, Reels and promotional content">Bannières, landing page, Reels et contenus promotionnels</div>
+        </div>
+    </div>
+
+    <div class="gst">
+        <div>
+            <h3 class="h-mid display" data-fr="Les objectifs" data-en="The goals">Les objectifs</h3>
+            <div class="box">
+                <ul class="check">
+                    <li data-fr="Lancer un produit de formation en ligne complet en deux mois" data-en="Launch a complete online training product in two months">Lancer un produit de formation en ligne complet en deux mois</li>
+                    <li data-fr="Positionner l'offre face aux concurrents avec un prix cohérent" data-en="Position the offer against competitors with coherent pricing">Positionner l'offre face aux concurrents avec un prix cohérent</li>
+                    <li data-fr="Créer un workflow de production réutilisable" data-en="Create a reusable production workflow">Créer un workflow de production réutilisable</li>
+                    <li data-fr="Activer les canaux d'acquisition existants" data-en="Activate existing acquisition channels">Activer les canaux d'acquisition existants</li>
+                </ul>
+            </div>
+            <div class="h-sm" data-fr="Compétences mobilisées" data-en="Skills applied">Compétences mobilisées</div>
+            <div class="pills">
+                <span class="pill" data-fr="Gestion de projet" data-en="Project management">Gestion de projet</span><span class="pill" data-fr="Analyse concurrentielle" data-en="Competitive analysis">Analyse concurrentielle</span><span class="pill">Pricing</span><span class="pill">Go-to-market</span><span class="pill" data-fr="Production vidéo" data-en="Video production">Production vidéo</span><span class="pill">Landing page</span>
+            </div>
+        </div>
+        <div>
+            <div class="h-sm" style="margin-top:0" data-fr="Outils & apps" data-en="Tools & apps">Outils & apps</div>
+            <div class="tools">
+                <div class="tool"><div class="ic">P</div><div><b>Podia</b><small data-fr="Hébergement du cours et page produit" data-en="Course hosting and product page">Hébergement du cours et page produit</small></div></div>
+                <div class="tool"><div class="ic">C</div><div><b>CapCut</b><small data-fr="Montage de 3,5 h de contenu de cours" data-en="Editing of 3.5h of course content">Montage de 3,5 h de contenu de cours</small></div></div>
+                <div class="tool"><div class="ic">C</div><div><b>Canva</b><small data-fr="Bannières, visuels promotionnels, Reels" data-en="Banners, promotional visuals, Reels">Bannières, visuels promotionnels, Reels</small></div></div>
+                <div class="tool"><div class="ic">N</div><div><b>Notion</b><small data-fr="Planning de production et suivi des phases" data-en="Production planning and phase tracking">Planning de production et suivi des phases</small></div></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="tasks">
+        <h3 class="h-mid display" data-fr="Les tâches" data-en="The tasks">Les tâches</h3>
+
+        <div class="task">
+            <h4><span class="k">01</span><span data-fr="Étude de marché & concept" data-en="Market research & concept">Étude de marché & concept</span></h4>
             <ul>
                 <li data-fr="Analyse des concurrents : positionnement, offre produit, structure tarifaire et stratégie de contenu" data-en="<span class=kw>Competitor analysis</span>: positioning, product offering, <span class=kw>pricing structure</span> and content strategy">Analyse des concurrents : positionnement, offre produit, structure tarifaire et stratégie de contenu</li>
-                <li data-fr="Définition des personas cibles et stratégies de positionnement basées sur les insights marché" data-en="Defined target personas and positioning strategies based on market insights">Définition des personas cibles et stratégies de positionnement basées sur les insights marché</li>
-                <li data-fr="Création d'un concept board alignant les fonctionnalités produit avec les besoins de l'audience" data-en="Developed a concept board aligning product features with audience needs">Création d'un concept board alignant les fonctionnalités produit avec les besoins de l'audience</li>
+                <li data-fr="Personas cibles et stratégies de positionnement basées sur les insights marché" data-en="Target personas and positioning strategies based on market insights">Personas cibles et stratégies de positionnement basées sur les insights marché</li>
+                <li data-fr="Concept board alignant les fonctionnalités du produit avec les besoins de l'audience" data-en="Concept board aligning product features with audience needs">Concept board alignant les fonctionnalités du produit avec les besoins de l'audience</li>
             </ul>
-            </div>
-            <div class="side-img">
-                <div class="showcase-item">
-                    <img src="Product%20Strategy_paris.png" alt="Product Strategy" loading="lazy">
-                    <div class="caption" data-fr="Stratégie produit : Persona, Concept Board, Audience cible" data-en="Product Strategy: Persona, Concept Board, Target Audience">Stratégie produit : Persona, Concept Board, Audience cible</div>
-                </div>
-                <div class="showcase-item">
-                    <img src="Competitive%20Analysis_paris.png" alt="Competitive Analysis" loading="lazy">
-                    <div class="caption" data-fr="Analyse concurrentielle : positionnement, offre produit, structure tarifaire et benchmarking" data-en="Competitive Analysis: positioning, product offering, pricing structure and benchmarking">Analyse concurrentielle : positionnement, offre produit, structure tarifaire et benchmarking</div>
-                </div>
-            </div>
         </div>
-        <div class="content-card has-img img-left has-img-sm">
-            <div class="card-body">
-            <h4><span class="icon">📝</span> <span data-fr="Production de contenu & Design" data-en="Content Production & Design">Production de contenu & Design</span></h4>
+
+        <div class="task">
+            <h4><span class="k">02</span><span data-fr="Production & gestion de projet" data-en="Production & project management">Production & gestion de projet</span></h4>
             <ul>
-                <li data-fr="Production de 3,5h de contenu de cours" data-en="Produced 3.5h of courses content">Production de 3,5h de contenu de cours</li>
-                <li data-fr="Conception de bannières pour la landing page et visuels promotionnels" data-en="Designed landing page banners and promotional visuals">Conception de bannières pour la landing page et visuels promotionnels</li>
-                <li data-fr="Création de Reels et contenus Instagram pour la promotion produit" data-en="Created Reels and Instagram content for product promotion">Création de Reels et contenus Instagram pour la promotion produit</li>
-                <li data-fr="Organisation d'un webinaire : planification du déroulé et coordination avec les intervenants" data-en="Organized a webinar: flow planning and coordination with guest speakers">Organisation d'un webinaire : planification du déroulé et coordination avec les intervenants</li>
+                <li data-fr="Coordination de la production de 26 sessions de cours en 2 mois, de bout en bout, avec respect des délais à chaque phase" data-en="Coordinated the <span class=kw>end-to-end production of 26 course sessions</span> in 2 months, meeting deadlines at every phase">Coordination de la production de 26 sessions de cours en 2 mois, de bout en bout, avec respect des délais à chaque phase</li>
+                <li data-fr="Production de 3,5 h de vidéos de formation et de supports pédagogiques digitaux, bannières pour la landing page et visuels promotionnels" data-en="Produced 3.5h of training videos and digital learning materials, landing page banners and promotional visuals">Production de 3,5 h de vidéos de formation et de supports pédagogiques digitaux, bannières pour la landing page et visuels promotionnels</li>
+                <li data-fr="Organisation d'un webinaire : déroulé et coordination avec les intervenants" data-en="Organized a webinar: flow planning and coordination with guest speakers">Organisation d'un webinaire : déroulé et coordination avec les intervenants</li>
             </ul>
+        </div>
+
+        <div class="task">
+            <h4><span class="k">03</span><span data-fr="Prix & go-to-market" data-en="Pricing & go-to-market">Prix & go-to-market</span></h4>
+            <ul>
+                <li data-fr="Stratégie tarifaire basée sur l'analyse concurrentielle et le positionnement" data-en="<span class=kw>Pricing strategy</span> based on competitive analysis and positioning">Stratégie tarifaire basée sur l'analyse concurrentielle et le positionnement</li>
+                <li data-fr="Déploiement go-to-market : canaux d'acquisition et programmes d'affiliation" data-en="<span class=kw>Go-to-market</span> rollout: acquisition channels and affiliate programs">Déploiement go-to-market : canaux d'acquisition et programmes d'affiliation</li>
+                <li data-fr="Optimisation du contenu marketing sur les canaux existants : articles du site, emails, plateformes de promotion" data-en="Optimized marketing content on existing channels: website articles, emails, promotion platforms">Optimisation du contenu marketing sur les canaux existants : articles du site, emails, plateformes de promotion</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="grid c3">
+        <div class="shot"><img src="Product%20Strategy_paris.png" alt="Product Strategy" loading="lazy"><div class="cap" data-fr="Stratégie produit : persona, concept board, audience cible" data-en="Product strategy: persona, concept board, target audience">Stratégie produit : persona, concept board, audience cible</div></div>
+        <div class="shot"><img src="Competitive%20Analysis_paris.png" alt="Competitive Analysis" loading="lazy"><div class="cap" data-fr="Analyse concurrentielle : positionnement, offre, prix, benchmark" data-en="Competitive analysis: positioning, offer, pricing, benchmark">Analyse concurrentielle : positionnement, offre, prix, benchmark</div></div>
+        <div class="shot"><img src="Courses%20video%20editing_Paris.webp" alt="Courses video editing" loading="lazy"><div class="cap" data-fr="Montage vidéo des sessions de formation (26 sessions, 3,5 h)" data-en="Training course video editing (26 sessions, 3.5h)">Montage vidéo des sessions de formation (26 sessions, 3,5 h)</div></div>
+    </div>
+
+    <div class="results">
+        <div>
+            <h3 class="h-mid display" data-fr="Les résultats" data-en="The results">Les résultats</h3>
+            <div class="box">
+                <div class="stats">
+                    <div class="stat"><b>26</b><span data-fr="sessions de cours lancées" data-en="course sessions launched">sessions de cours lancées</span></div>
+                    <div class="stat"><b>2</b><span data-fr="mois de production" data-en="months of production">mois de production</span></div>
+                    <div class="stat"><b data-fr="3,5 h" data-en="3.5h">3,5 h</b><span data-fr="de contenu produit" data-en="of content produced">de contenu produit</span></div>
+                </div>
+                <ul class="check">
+                    <li data-fr="Forts taux d'engagement sur les sessions livrées" data-en="Strong engagement rates on the delivered sessions">Forts taux d'engagement sur les sessions livrées</li>
+                    <li data-fr="Workflow de production scalable, réutilisé pour les créations suivantes" data-en="Scalable production workflow, reused for later content">Workflow de production scalable, réutilisé pour les créations suivantes</li>
+                </ul>
             </div>
-            <div class="side-img">
-                <div class="showcase-item">
-                    <img src="Courses%20video%20editing_Paris.webp" alt="Courses video editing" loading="lazy">
-                    <div class="caption" data-fr="Montage vidéo des sessions de formation (26 sessions, 3,5h de contenu)" data-en="Training course video editing (26 sessions, 3.5h of content)">Montage vidéo des sessions de formation (26 sessions, 3,5h de contenu)</div>
-                </div>
-                <div class="showcase-item">
-                    <img src="Banner.jpg" alt="Banner design" loading="lazy">
-                    <div class="caption" data-fr="Design de bannières, landing page, Reels et contenus promotionnels Instagram" data-en="Banner design, landing page, Reels and Instagram promotional content">Design de bannières, landing page, Reels et contenus promotionnels Instagram</div>
-                </div>
+            <div class="refs">
+                <a href="https://reinventingcarriere.com/" target="_blank" rel="noopener"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="10" cy="10" r="7"/><path d="M3 10h14M10 3c-2 2.5-2 11.5 0 14M10 3c2 2.5 2 11.5 0 14"/></svg><span data-fr="Site de l'entreprise" data-en="Company website">Site de l'entreprise</span></a>
+                <a href="https://member.reinventingcarriere.com/career" target="_blank" rel="noopener"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 2h8l4 4v12a1 1 0 01-1 1H6a1 1 0 01-1-1V3a1 1 0 011-1z"/><path d="M14 2v4h4M8 10h4M8 13h6"/></svg><span data-fr="Page produit" data-en="Product page">Page produit</span></a>
             </div>
         </div>
-        <div class="content-card">
-            <h4><span class="icon">💰</span> <span data-fr="Stratégie tarifaire & Go-to-Market" data-en="Pricing Strategy & Go-to-Market">Stratégie tarifaire & Go-to-Market</span></h4>
-            <ul>
-                <li data-fr="Conception de la stratégie tarifaire basée sur l'analyse concurrentielle et le positionnement" data-en="Designed <span class=kw>pricing strategy</span> based on competitive analysis and market positioning">Conception de la stratégie tarifaire basée sur l'analyse concurrentielle et le positionnement</li>
-                <li data-fr="Déploiement de la stratégie Go-to-Market : canaux d'acquisition et programmes d'affiliation" data-en="Deployed <span class=kw>Go-to-Market strategy</span>: acquisition channels and affiliate programs">Déploiement de la stratégie Go-to-Market : canaux d'acquisition et programmes d'affiliation</li>
-                <li data-fr="Optimisation du contenu marketing sur les canaux existants : articles du site, contenu email et plateformes de promotion" data-en="Optimized marketing content across existing channels: website articles, email content and promotion platforms">Optimisation du contenu marketing sur les canaux existants : articles du site, contenu email et plateformes de promotion</li>
-            </ul>
+        <div class="results-visual">
+            <svg class="spark a" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c1 6 5 10 12 12-7 2-11 6-12 12-1-6-5-10-12-12C7 10 11 6 12 0z"/></svg>
+            <img src="Courses%20video%20editing_Paris.webp" alt="Course editing" loading="lazy">
         </div>
+    </div>
 
-        <div class="ref-section">
-            <h4>Reference</h4>
-            <a class="ref-link" href="https://reinventingcarriere.com/" target="_blank" rel="noopener">
-                <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="10" cy="10" r="7"/><path d="M3 10h14M10 3c-2 2.5-2 11.5 0 14M10 3c2 2.5 2 11.5 0 14"/></svg>
-                <span data-fr="Site de l'entreprise" data-en="Company website">Site de l'entreprise</span>
-            </a>
-            <a class="ref-link" href="https://member.reinventingcarriere.com/career" target="_blank" rel="noopener">
-                <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 2h8l4 4v12a1 1 0 01-1 1H6a1 1 0 01-1-1V3a1 1 0 011-1z"/><path d="M14 2v4h4M8 10h4M8 13h6"/></svg>
-                <span data-fr="Page produit" data-en="Product landing page">Page produit</span>
-            </a>
-        </div>
-    </section>
-
-    <!-- ===== 03: Community & Project Management ===== -->
-    <section class="project-section accent-green" id="community">
-        <hr class="section-divider">
-        <div class="banner-row"><div class="outline-banner" aria-hidden="true">Community &middot; Community &middot; Community &middot; Community</div><span class="big-num">04</span></div>
-        <div class="project-header">
-            <div class="head-row">
-                <span class="pill" data-fr="Étude de cas 04" data-en="Case Study 04">Étude de cas 04</span>
-                <span class="pill">08/2025 &ndash; 02/2026</span>
-            </div>
-            <div class="fr-accent" data-fr="l'humain d'abord" data-en="people first">l'humain d'abord</div>
-            <h2 class="project-title">Community & Project<br>Management</h2>
-            <div class="project-company">Linkee &middot; <span data-fr="Anti-gaspillage alimentaire" data-en="Food waste reduction">Anti-gaspillage alimentaire</span></div>
-            <div class="project-loc">Bordeaux, France &middot; 08/2025 &ndash; 02/2026</div>
-        </div>
-        <div class="tag-row">
-            <span class="tag">Community Management</span><span class="tag">Event Coordination</span><span class="tag">Volunteer Onboarding</span><span class="tag">Newsletter (Sarbacane)</span><span class="tag">WhatsApp</span><span class="tag">Partner Relations</span><span class="tag">Airtable</span><span class="tag">JeVeuxAider</span>
-        </div>
-        <div class="mi-row">
-                <div class="mission-lead">
-                    <span class="lead-label" data-fr="La mission" data-en="The Mission">La mission</span>
-                    <p data-fr="Gestion d'une communauté de <span class=kw>550+ bénévoles</span> et accompagnement de 1 000+ bénéficiaires, maintien des relations partenaires, organisation de <span class=kw>30+ événements</span> variés (prospection, ateliers cuisine, reconditionnement, stands sur forums), coordination et communication via newsletter, email, WhatsApp et téléphone." data-en="Managing a community of <span class=kw>550+ volunteers</span> and supporting 1,000+ beneficiaries, maintaining partner relationships, organizing <span class=kw>30+ diverse events</span> (prospection, cooking workshops, food reconditioning, forum stands), coordinating operations and handling communications via newsletter, email, WhatsApp and phone.">Gestion d'une communauté de 550+ bénévoles et accompagnement de 1 000+ bénéficiaires, maintien des relations partenaires, organisation de 30+ événements variés (prospection, ateliers cuisine, reconditionnement, stands sur forums), coordination logistique et communication via newsletter hebdomadaire et groupes WhatsApp.</p>
-                </div>
-                <div class="impact-strip">
-                    <span class="lead-label" data-fr="Impact" data-en="Impact">Impact</span>
-                    <div class="impact-stats">
-                        <div class="stat"><span class="stat-num">550+</span><span class="stat-label" data-fr="bénévoles" data-en="volunteers">bénévoles</span></div>
-                        <div class="stat"><span class="stat-num" data-fr="1 000+" data-en="1,000+">1 000+</span><span class="stat-label" data-fr="bénéficiaires" data-en="beneficiaries">bénéficiaires</span></div>
-                        <div class="stat"><span class="stat-num">30+</span><span class="stat-label" data-fr="événements par an" data-en="events per year">événements par an</span></div>
-                    </div>
-                    <p class="impact-note" data-fr="Engagement durable des partenaires grâce à une exécution fiable des événements, et accompagnement des bénéficiaires sans aucune distribution manquée." data-en="Sustained partner engagement through reliable event execution, supporting beneficiaries with zero missed distributions.">Engagement durable des partenaires grâce à une exécution fiable des événements, et accompagnement des bénéficiaires sans aucune distribution manquée.</p>
-                </div>
-                </div>
-        <div class="content-card">
-            <h4><span class="icon">👥</span> <span data-fr="Gestion de communauté bénévole" data-en="Volunteer Community Management">Gestion de communauté bénévole</span></h4>
-            <ul>
-                <li data-fr="Gestion d'une communauté de <span class=kw>550+ bénévoles</span> avec onboarding d'environ 10 nouveaux bénévoles par semaine et suivi individualisé" data-en="Managed a community of <span class=kw>550+ volunteers</span>, onboarding approximately 10 new volunteers per week with individualized follow-up">Gestion d'une communauté de 550+ bénévoles avec onboarding d'environ 10 nouveaux bénévoles par semaine et suivi individualisé</li>
-                <li data-fr="Mise en place d'un processus structuré du recrutement à la première mission" data-en="Built a structured onboarding process from recruitment to first mission assignment">Mise en place d'un processus structuré du recrutement à la première mission</li>
-                <li data-fr="Médiation et gestion des dynamiques interpersonnelles au sein d'une communauté diverse" data-en="Mediated conflicts and managed interpersonal dynamics across a diverse volunteer base">Médiation et gestion des dynamiques interpersonnelles au sein d'une communauté diverse</li>
-                <li data-fr="Animation de groupes WhatsApp pour l'accompagnement quotidien, l'onboarding et la résolution de questions" data-en="Managed WhatsApp groups for daily volunteer support, onboarding guidance and issue resolution">Animation de groupes WhatsApp pour l'accompagnement quotidien, l'onboarding et la résolution de questions</li>
-                <li data-fr="Préparation des contrats bénévoles (engagements de service étudiant), attestations et explication des procédures" data-en="Prepared volunteer contracts (student service engagement agreements), attestations and procedure walkthroughs">Préparation des contrats bénévoles (engagements de service étudiant), attestations et explication des procédures</li>
-            </ul>
-        </div>
-        <div class="content-card">
-            <h4><span class="icon">📦</span> <span data-fr="Coordination événementielle & Logistique" data-en="Event & Logistics Coordination">Coordination événementielle & Logistique</span></h4>
-            <ul>
-                <li data-fr="Organisation de <span class=kw>30+ événements</span> par an : prospection, ateliers cuisine, reconditionnement, stands sur forums" data-en="Organized <span class=kw>30+ events per year</span>: prospection, cooking workshops, food reconditioning, forum stands">Organisation de 30+ événements par an : prospection, ateliers cuisine, reconditionnement, stands sur forums</li>
-                <li data-fr="Coordination de 2 distributions hebdomadaires pour environ 500 bénéficiaires par session" data-en="Coordinated 2 weekly distributions serving approximately 500 beneficiaries per session">Coordination de 2 distributions hebdomadaires pour environ 500 bénéficiaires par session</li>
-                <li data-fr="Gestion des relations avec les organisations partenaires" data-en="Managed relationships with partner organizations">Gestion des relations avec les organisations partenaires</li>
-            </ul>
-
-                    <div class="imgs-below cols-3">
-                <div class="showcase-item">
-                    <img src="Linkee_Distrib.jpeg" alt="Distribution" loading="lazy">
-                    <div class="caption" data-fr="Distribution hebdomadaire : coordination de 2 sessions/semaine pour ~500 bénéficiaires, onboarding des nouveaux bénévoles sur le terrain" data-en="Weekly distribution: coordinating 2 sessions/week for ~500 beneficiaries, on-site onboarding of new volunteers">Distribution hebdomadaire : coordination de 2 sessions/semaine pour ~500 bénéficiaires, onboarding des nouveaux bénévoles sur le terrain</div>
-                </div>
-                <div class="showcase-item">
-                    <img src="Linkee_Stand.jpeg" alt="Stand forum" loading="lazy">
-                    <div class="caption" data-fr="Stand sur forum : présentation de la mission, recrutement de bénévoles, sensibilisation des étudiants éligibles" data-en="Forum stand: presenting the mission, recruiting volunteers, raising awareness among eligible students">Stand sur forum : présentation de la mission, recrutement de bénévoles, sensibilisation des étudiants éligibles</div>
-                </div>
-                <div class="showcase-item">
-                    <img src="reconditionment.JPG" alt="Reconditionnement" loading="lazy">
-                    <div class="caption" data-fr="Reconditionnement : répartition des dons en portions individuelles, recrutement et coordination des bénévoles, collaboration logistique avec les partenaires" data-en="Food reconditioning: dividing bulk donations into individual portions, volunteer recruitment and coordination, logistics collaboration with partners">Reconditionnement : répartition des dons en portions individuelles, recrutement et coordination des bénévoles, collaboration logistique avec les partenaires</div>
-                </div>
-            </div>
-                </div>
-        <div class="content-card">
-            <h4><span class="icon">📧</span> <span data-fr="Communication & Reporting" data-en="Communication & Reporting">Communication & Reporting</span></h4>
-            <ul>
-                <li data-fr="Production d'une newsletter hebdomadaire via Sarbacane à destination des bénéficiaires" data-en="Produced a weekly newsletter via Sarbacane for beneficiaries">Production d'une newsletter hebdomadaire via Sarbacane à destination des bénéficiaires</li>
-                <li data-fr="Communication avec les bénévoles par email, WhatsApp, messages et téléphone" data-en="Volunteer communications via email, WhatsApp, messaging and phone">Communication avec les bénévoles par email, WhatsApp, messages et téléphone</li>
-                <li data-fr="Gestion et mise à jour des données et fiches bénévoles sur Airtable ; planification des événements et gestion partenaires via Google Sheets et Google Docs" data-en="Managed and updated volunteer data and records on Airtable; event planning and partner management via Google Sheets and Google Docs">Gestion et mise à jour des données et fiches bénévoles sur Airtable ; planification des événements et gestion partenaires via Google Sheets et Google Docs</li>
-                <li data-fr="Reporting oral hebdomadaire à l'équipe nationale et co-édition de documents partagés" data-en="Weekly oral reporting to the national team and co-editing of shared documents">Reporting oral hebdomadaire à l'équipe nationale et co-édition de documents partagés</li>
-                <li data-fr="Gestion du recrutement bénévole via la plateforme JeVeuxAider" data-en="Managed volunteer recruitment through the JeVeuxAider platform">Gestion du recrutement bénévole via la plateforme JeVeuxAider</li>
-            </ul>
-        </div>
-        <div class="content-card">
-            <h4><span class="icon">🤝</span> <span data-fr="Coordination multi-parties prenantes" data-en="Multi-Stakeholder Coordination">Coordination multi-parties prenantes</span></h4>
-            <ul>
-                <li data-fr="Point de contact principal entre partenaires, bénévoles, bénéficiaires et l'équipe nationale" data-en="Primary point of contact between partners, volunteers, beneficiaries, and the national team">Point de contact principal entre partenaires, bénévoles, bénéficiaires et l'équipe nationale</li>
-                <li data-fr="Communication et maintien des relations avec les partenaires et les lieux d'événements" data-en="Maintained communication with partners and coordinated event venues">Communication et maintien des relations avec les partenaires et les lieux d'événements</li>
-                <li data-fr="Organisation d'événements spéciaux : campagnes de sensibilisation, team-building, collectes saisonnières" data-en="Organized special events: awareness campaigns, team-building activities, and seasonal food drives">Organisation d'événements spéciaux : campagnes de sensibilisation, team-building, collectes saisonnières</li>
-                <li data-fr="Adaptation des opérations aux imprévus (changements d'approvisionnement, manque de bénévoles, météo)" data-en="Adapted operations to unexpected challenges (supply changes, volunteer shortages, weather conditions)">Adaptation des opérations aux imprévus (changements d'approvisionnement, manque de bénévoles, météo)</li>
-            </ul>
-        </div>
-
-    </section>
-
-</main>
-
-
-<div class="footer-doodle">
-    <svg class="doodle" viewBox="0 0 120 140" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M42 90 C40 106 38 122 44 131 C50 137 66 137 72 131 C78 122 76 106 74 90" stroke="#1C1B18" stroke-width="1.5" stroke-linecap="round"/>
-        <path d="M42 90 C48 86 68 86 74 90" stroke="#1C1B18" stroke-width="1.5" stroke-linecap="round"/>
-        <path d="M56 88 C56 62 52 46 44 32" stroke="#31584A" stroke-width="1.3" stroke-linecap="round"/>
-        <path d="M60 88 C62 60 68 44 78 34" stroke="#31584A" stroke-width="1.3" stroke-linecap="round"/>
-        <path d="M58 88 C58 66 60 52 60 40" stroke="#31584A" stroke-width="1.3" stroke-linecap="round"/>
-        <circle cx="42" cy="28" r="4" fill="#D9A62E"/>
-        <circle cx="80" cy="30" r="3.4" fill="#C6392F"/>
-        <circle cx="60" cy="35" r="2.6" fill="#D9A62E"/>
-        <path d="M36 30 C33 27 33 23 36 21 M48 29 C51 26 51 22 48 20" stroke="#D9A62E" stroke-width="1.1" stroke-linecap="round"/>
-    </svg>
+    <div class="case-foot"><span data-fr="Projet 03 | Reinventing Carrière" data-en="Project 03 | Reinventing Carrière">Projet 03 | Reinventing Carrière</span><span>Product Strategy</span></div>
 </div>
+</section>
+
+<!-- ===================================================== 04 ===================================================== -->
+<section class="case" id="community">
+<div class="inner">
+    <div class="marquee" aria-hidden="true">Community Community Community Community Community</div>
+    <div class="case-num">04</div>
+
+    <div class="intro">
+        <div class="intro-panel">
+            <h2>Linkee</h2>
+            <div class="org" data-fr="Association anti-gaspillage alimentaire · Bordeaux" data-en="Food waste reduction nonprofit · Bordeaux">Association anti-gaspillage alimentaire · Bordeaux</div>
+            <p class="desc" data-fr="Animation d'une communauté de 550+ bénévoles et accompagnement de 1 000+ bénéficiaires. Maintien des relations avec les partenaires existants, organisation de 30+ événements et communication hebdomadaire par newsletter, email, WhatsApp et téléphone." data-en="Managed a community of 550+ volunteers and supported 1,000+ beneficiaries. Maintained relationships with existing partners, organized 30+ events and handled weekly communications via newsletter, email, WhatsApp and phone.">Animation d'une communauté de 550+ bénévoles et accompagnement de 1 000+ bénéficiaires. Maintien des relations avec les partenaires existants, organisation de 30+ événements et communication hebdomadaire par newsletter, email, WhatsApp et téléphone.</p>
+            <div class="loc">
+                <span><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M10 18s6-5.2 6-10a6 6 0 10-12 0c0 4.8 6 10 6 10z"/><circle cx="10" cy="8" r="2"/></svg>Bordeaux, France</span>
+                <span><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="4" width="14" height="13" rx="1.5"/><path d="M3 8h14M7 2v4M13 2v4"/></svg>08/2025 – 02/2026</span>
+            </div>
+        </div>
+        <div class="intro-visual">
+            <img src="Linkee_Distrib.jpeg" alt="Distribution" loading="lazy">
+            <div class="cap" data-fr="Distribution hebdomadaire : 2 sessions/semaine, ~500 bénéficiaires par session" data-en="Weekly distribution: 2 sessions/week, ~500 beneficiaries per session">Distribution hebdomadaire : 2 sessions/semaine, ~500 bénéficiaires par session</div>
+        </div>
+    </div>
+
+    <div class="gst">
+        <div>
+            <h3 class="h-mid display" data-fr="Les objectifs" data-en="The goals">Les objectifs</h3>
+            <div class="box">
+                <ul class="check">
+                    <li data-fr="Assurer chaque distribution avec assez de bénévoles" data-en="Staff every distribution with enough volunteers">Assurer chaque distribution avec assez de bénévoles</li>
+                    <li data-fr="Fluidifier l'onboarding des nouveaux bénévoles" data-en="Smooth the onboarding of new volunteers">Fluidifier l'onboarding des nouveaux bénévoles</li>
+                    <li data-fr="Maintenir la confiance des partenaires par une exécution fiable" data-en="Keep partners' trust through reliable execution">Maintenir la confiance des partenaires par une exécution fiable</li>
+                    <li data-fr="Tenir les bénéficiaires informés chaque semaine" data-en="Keep beneficiaries informed every week">Tenir les bénéficiaires informés chaque semaine</li>
+                </ul>
+            </div>
+            <div class="h-sm" data-fr="Compétences mobilisées" data-en="Skills applied">Compétences mobilisées</div>
+            <div class="pills">
+                <span class="pill">Community management</span><span class="pill" data-fr="Coordination d'événements" data-en="Event coordination">Coordination d'événements</span><span class="pill">Onboarding</span><span class="pill" data-fr="Relations partenaires" data-en="Partner relations">Relations partenaires</span><span class="pill">Newsletter</span><span class="pill" data-fr="Médiation" data-en="Mediation">Médiation</span>
+            </div>
+        </div>
+        <div>
+            <div class="h-sm" style="margin-top:0" data-fr="Outils & apps" data-en="Tools & apps">Outils & apps</div>
+            <div class="tools">
+                <div class="tool"><div class="ic">S</div><div><b>Sarbacane</b><small data-fr="Newsletter hebdomadaire à 5 000+ abonnés" data-en="Weekly newsletter to 5,000+ subscribers">Newsletter hebdomadaire à 5 000+ abonnés</small></div></div>
+                <div class="tool"><div class="ic">A</div><div><b>Airtable</b><small data-fr="Base bénévoles et fiches de suivi" data-en="Volunteer database and tracking records">Base bénévoles et fiches de suivi</small></div></div>
+                <div class="tool"><div class="ic">W</div><div><b>WhatsApp</b><small data-fr="Accompagnement quotidien et onboarding" data-en="Daily support and onboarding">Accompagnement quotidien et onboarding</small></div></div>
+                <div class="tool"><div class="ic">J</div><div><b>JeVeuxAider</b><small data-fr="Recrutement de bénévoles" data-en="Volunteer recruitment">Recrutement de bénévoles</small></div></div>
+                <div class="tool"><div class="ic">G</div><div><b>Google Sheets · Docs · Apps Script</b><small data-fr="Planning des événements, gestion partenaires, automatisation des emails" data-en="Event planning, partner management, email automation">Planning des événements, gestion partenaires, automatisation des emails</small></div></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="tasks">
+        <h3 class="h-mid display" data-fr="Les tâches" data-en="The tasks">Les tâches</h3>
+
+        <div class="task">
+            <h4><span class="k">01</span><span data-fr="Communauté bénévole" data-en="Volunteer community">Communauté bénévole</span></h4>
+            <ul>
+                <li data-fr="Animation d'une communauté de 550+ bénévoles, avec onboarding d'environ 10 nouveaux bénévoles par semaine et suivi individualisé" data-en="Managed a community of <span class=kw>550+ volunteers</span>, onboarding about 10 new volunteers per week with individualized follow-up">Animation d'une communauté de 550+ bénévoles, avec onboarding d'environ 10 nouveaux bénévoles par semaine et suivi individualisé</li>
+                <li data-fr="Guides d'onboarding pour les Linkers (bénévoles de collecte) et SOP ajoutées là où elles manquaient (prospection, certains ateliers)" data-en="Onboarding guides for Linkers (food collection volunteers) and SOPs added where missing (prospection, some workshops)">Guides d'onboarding pour les Linkers (bénévoles de collecte) et SOP ajoutées là où elles manquaient (prospection, certains ateliers)</li>
+                <li data-fr="Programme des bénévoles étudiants KEDGE géré de bout en bout : information, sélection, onboarding, Q&A, attestations" data-en="KEDGE student volunteer programme managed end-to-end: information, screening, onboarding, Q&A, attestations">Programme des bénévoles étudiants KEDGE géré de bout en bout : information, sélection, onboarding, Q&A, attestations</li>
+                <li data-fr="Médiation et gestion des dynamiques interpersonnelles au sein d'une communauté diverse" data-en="Mediation and interpersonal dynamics across a diverse community">Médiation et gestion des dynamiques interpersonnelles au sein d'une communauté diverse</li>
+            </ul>
+        </div>
+
+        <div class="task">
+            <h4><span class="k">02</span><span data-fr="Événements & logistique" data-en="Events & logistics">Événements & logistique</span></h4>
+            <ul>
+                <li data-fr="Organisation de 30+ événements : prospection B2B, ateliers cuisine, reconditionnement, stands sur forums, campagnes de sensibilisation, collectes saisonnières" data-en="Organized <span class=kw>30+ events</span>: B2B prospection, cooking workshops, food reconditioning, forum stands, awareness campaigns, seasonal food drives">Organisation de 30+ événements : prospection B2B, ateliers cuisine, reconditionnement, stands sur forums, campagnes de sensibilisation, collectes saisonnières</li>
+                <li data-fr="Coordination de 2 distributions hebdomadaires pour environ 500 bénéficiaires par session, et accompagnement quotidien de 10 à 20 bénéficiaires" data-en="Coordinated 2 weekly distributions serving around 500 beneficiaries per session, plus daily support for 10 to 20 beneficiaries">Coordination de 2 distributions hebdomadaires pour environ 500 bénéficiaires par session, et accompagnement quotidien de 10 à 20 bénéficiaires</li>
+                <li data-fr="Adaptation des opérations aux imprévus : changements d'approvisionnement, manque de bénévoles, météo" data-en="Adapted operations to the unexpected: supply changes, volunteer shortages, weather">Adaptation des opérations aux imprévus : changements d'approvisionnement, manque de bénévoles, météo</li>
+            </ul>
+        </div>
+
+        <div class="task">
+            <h4><span class="k">03</span><span data-fr="Partenaires, communication & reporting" data-en="Partners, communication & reporting">Partenaires, communication & reporting</span></h4>
+            <ul>
+                <li data-fr="Point de contact principal entre partenaires, bénévoles, bénéficiaires et équipe nationale ; maintien des relations avec les partenaires et lieux d'événements existants" data-en="Primary point of contact between partners, volunteers, beneficiaries and the national team; maintained relationships with existing partners and venues">Point de contact principal entre partenaires, bénévoles, bénéficiaires et équipe nationale ; maintien des relations avec les partenaires et lieux d'événements existants</li>
+                <li data-fr="Newsletter hebdomadaire via Sarbacane à 5 000+ abonnés, avec optimisation des campagnes emailing" data-en="Weekly Sarbacane newsletter to 5,000+ subscribers, with ongoing optimization of the email campaigns">Newsletter hebdomadaire via Sarbacane à 5 000+ abonnés, avec optimisation des campagnes emailing</li>
+                <li data-fr="Automatisation des emails avec Google Apps Script ; données bénévoles sur Airtable ; reporting oral hebdomadaire à l'équipe nationale" data-en="Email automation with Google Apps Script; volunteer data on Airtable; weekly oral reporting to the national team">Automatisation des emails avec Google Apps Script ; données bénévoles sur Airtable ; reporting oral hebdomadaire à l'équipe nationale</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="grid c3">
+        <div class="shot"><img src="Linkee_Distrib.jpeg" alt="Distribution" loading="lazy"><div class="cap" data-fr="Distribution : coordination et onboarding des nouveaux bénévoles sur le terrain" data-en="Distribution: coordination and on-site onboarding of new volunteers">Distribution : coordination et onboarding des nouveaux bénévoles sur le terrain</div></div>
+        <div class="shot"><img src="Linkee_Stand.jpeg" alt="Stand forum" loading="lazy"><div class="cap" data-fr="Stand sur forum : présentation de la mission, recrutement, sensibilisation des étudiants éligibles" data-en="Forum stand: presenting the mission, recruiting, raising awareness among eligible students">Stand sur forum : présentation de la mission, recrutement, sensibilisation des étudiants éligibles</div></div>
+        <div class="shot"><img src="reconditionment.JPG" alt="Reconditionnement" loading="lazy"><div class="cap" data-fr="Reconditionnement : portions individuelles, coordination des bénévoles, logistique avec les partenaires" data-en="Food reconditioning: individual portions, volunteer coordination, logistics with partners">Reconditionnement : portions individuelles, coordination des bénévoles, logistique avec les partenaires</div></div>
+    </div>
+
+    <div class="results">
+        <div>
+            <h3 class="h-mid display" data-fr="Les résultats" data-en="The results">Les résultats</h3>
+            <div class="box">
+                <div class="stats">
+                    <div class="stat"><b>550+</b><span data-fr="bénévoles" data-en="volunteers">bénévoles</span></div>
+                    <div class="stat"><b data-fr="1 000+" data-en="1,000+">1 000+</b><span data-fr="bénéficiaires" data-en="beneficiaries">bénéficiaires</span></div>
+                    <div class="stat"><b>30+</b><span data-fr="événements" data-en="events">événements</span></div>
+                </div>
+                <ul class="check">
+                    <li data-fr="Aucune distribution manquée sur la période" data-en="Zero missed distributions over the period">Aucune distribution manquée sur la période</li>
+                    <li data-fr="Engagement durable des partenaires grâce à une exécution fiable des événements" data-en="Sustained partner engagement through reliable event execution">Engagement durable des partenaires grâce à une exécution fiable des événements</li>
+                    <li data-fr="Processus d'onboarding documenté et transmissible" data-en="Documented, transferable onboarding process">Processus d'onboarding documenté et transmissible</li>
+                </ul>
+            </div>
+        </div>
+        <div class="results-visual">
+            <svg class="spark a" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c1 6 5 10 12 12-7 2-11 6-12 12-1-6-5-10-12-12C7 10 11 6 12 0z"/></svg>
+            <img src="Linkee_Stand.jpeg" alt="Stand forum" loading="lazy">
+            <svg class="spark b" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c1 6 5 10 12 12-7 2-11 6-12 12-1-6-5-10-12-12C7 10 11 6 12 0z"/></svg>
+        </div>
+    </div>
+
+    <div class="case-foot"><span data-fr="Projet 04 | Linkee" data-en="Project 04 | Linkee">Projet 04 | Linkee</span><span>Community & Project Management</span></div>
+</div>
+</section>
+
 <footer>
-    <a href="index.html" style="display:inline-flex;align-items:center;gap:.4rem;text-decoration:none;color:var(--ink);font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:.5rem 1.2rem;border:1.5px solid var(--ink);transition:all .2s;margin-bottom:1.2rem;" onmouseover="this.style.background='var(--ink)';this.style.color='var(--paper)'" onmouseout="this.style.background='transparent';this.style.color='var(--ink)'">
-        <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px"><path d="M12 4l-6 6 6 6"/></svg>
-        <span data-fr="Retour au CV" data-en="Back to CV">Retour au CV</span>
-    </a>
-    <p>&copy; 2026 Yi-Hsuan Chiu</p>
+    <div class="inner">
+        <div>
+            <h2 data-fr="Envie d'en parler ?" data-en="Let's talk.">Envie d'en parler ?</h2>
+            <p data-fr="Je cherche un poste en opérations marketing, analytics ou gestion de projet, partout en France. Je parle français, anglais et mandarin." data-en="I'm looking for a role in marketing operations, analytics or project management, anywhere in France. I speak French, English and Mandarin.">Je cherche un poste en opérations marketing, analytics ou gestion de projet, partout en France. Je parle français, anglais et mandarin.</p>
+        </div>
+        <div class="links">
+            <a class="cta" href="mailto:c.hsuann@gmail.com">c.hsuann@gmail.com</a>
+            <a href="https://www.linkedin.com/in/yihsuan-chiu/" target="_blank" rel="noopener">LinkedIn</a>
+            <a href="index.html" data-fr="Voir mon CV" data-en="See my CV">Voir mon CV</a>
+        </div>
+        <p class="copy">&copy; 2026 Yi-Hsuan Chiu</p>
+    </div>
 </footer>
 
 <button class="back-to-top" id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">
     <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 16V4M4 10l6-6 6 6"/></svg>
-    <span data-fr="Retour en haut" data-en="Back to top">Retour en haut</span>
+    <span data-fr="Haut de page" data-en="Back to top">Haut de page</span>
 </button>
 
 <script>
 function setLang(l){document.documentElement.lang=l;document.getElementById('btn-fr').classList.toggle('active',l==='fr');document.getElementById('btn-en').classList.toggle('active',l==='en');document.querySelectorAll('[data-fr][data-en]').forEach(function(e){e.innerHTML=e.getAttribute('data-'+l)});try{localStorage.setItem('cv-lang',l)}catch(x){}}
-window.addEventListener('scroll',function(){var b=document.getElementById('backToTop');if(b)b.classList.toggle('visible',window.scrollY>400);var ss=document.querySelectorAll('.project-section'),ls=document.querySelectorAll('.nav-links a[href^="#"]'),c='';ss.forEach(function(s){if(window.scrollY>=s.offsetTop-100)c=s.id});ls.forEach(function(a){a.classList.toggle('active',a.getAttribute('href')==='#'+c)})},{passive:true});
-document.querySelectorAll('.nav-links a[href^="#"]').forEach(function(a){a.addEventListener('click',function(e){e.preventDefault();var t=document.querySelector(a.getAttribute('href'));if(t)t.scrollIntoView({behavior:'smooth',block:'start'})})});
-document.addEventListener('DOMContentLoaded',function(){var s=localStorage.getItem('cv-lang');if(s)setLang(s)});
+window.addEventListener('scroll',function(){var b=document.getElementById('backToTop');if(b)b.classList.toggle('visible',window.scrollY>400)},{passive:true});
+document.addEventListener('DOMContentLoaded',function(){var s=null;try{s=localStorage.getItem('cv-lang')}catch(x){}if(s)setLang(s)});
 </script>
     <!-- Start of HubSpot Embed Code -->
     <script type="text/javascript" id="hs-script-loader" async defer src="//js-eu1.hs-scripts.com/148257116.js"></script>
