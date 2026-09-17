@@ -1,745 +1,1100 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="format-detection" content="telephone=no, date=no, email=no, address=no">
-    <meta name="description" content="Yi-Hsuan Chiu — Portfolio : marketing digital, stratégie de marque, stratégie produit et gestion de communauté">
-    <meta property="og:type" content="profile">
-    <meta property="og:title" content="Yi-Hsuan Chiu — Portfolio">
-    <meta property="og:description" content="Marketing digital · Stratégie de marque · Stratégie produit · Communauté">
-    <meta property="og:image" content="https://jochiu.github.io/CV_FR.EN/photo.jpg">
-    <meta property="og:image:width" content="600">
-    <meta property="og:image:height" content="600">
-    <meta property="og:url" content="https://jochiu.github.io/CV_FR.EN/portfolio.html">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Yi-Hsuan Chiu — Portfolio">
-    <meta name="twitter:description" content="Marketing digital · Stratégie de marque · Stratégie produit · Communauté">
-    <meta name="twitter:image" content="https://jochiu.github.io/CV_FR.EN/photo.jpg">
-    <link rel="icon" type="image/jpeg" href="photo.jpg">
-    <title>Yi-Hsuan Chiu — Portfolio</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Fraunces:ital,opsz,wght@0,9..144,700;0,9..144,900;1,9..144,700&display=swap" rel="stylesheet">
-    <style>
-        :root{
-            --cream:#F4EDDF;--cream-2:#EDE4D1;--khaki:#A39D82;--khaki-deep:#7F795F;
-            --terracotta:#8E4A35;--ink:#2B211A;--ink-soft:#4F4339;--sand:#D6C5A2;
-            --gold:#F0A92B;--white:#FFFFFF;--radius:8px;--pill:999px;--gutter:clamp(1.2rem,5vw,4.5rem);--max:1180px;
-        }
-        *{margin:0;padding:0;box-sizing:border-box}
-        html{overflow-x:hidden;scroll-behavior:smooth}
-        body{font-family:'Montserrat',-apple-system,sans-serif;background:var(--cream);color:var(--ink);line-height:1.7;-webkit-font-smoothing:antialiased;overflow-x:hidden;font-size:15px}
-        ::selection{background:var(--gold);color:var(--ink)}
-        a:focus-visible,button:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
-        img{max-width:100%;display:block}
-        .display{font-family:'Fraunces',serif;font-weight:900;line-height:.95;letter-spacing:-.02em;color:var(--ink)}
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="format-detection" content="telephone=no, date=no, email=no, address=no">
+<meta name="description" content="Yi-Hsuan Chiu, portfolio : marketing digital, stratégie de marque, stratégie produit, communauté et chaîne YouTube voyage">
+<meta property="og:type" content="profile">
+<meta property="og:title" content="Yi-Hsuan Chiu | Portfolio">
+<meta property="og:image" content="https://jochiu.github.io/CV_FR.EN/photo.jpg">
+<meta property="og:url" content="https://jochiu.github.io/CV_FR.EN/portfolio.html">
+<link rel="icon" type="image/jpeg" href="photo.jpg">
+<title>Yi-Hsuan Chiu | Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Fraunces:ital,opsz,wght@0,9..144,700;0,9..144,900;1,9..144,700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#F4EDDF;--bg-2:#EDE4D1;--panel:#FFFFFF;--ink:#2B211A;--ink-soft:#4F4339;
+  --sand:#D6C5A2;--khaki:#A39D82;--khaki-deep:#7F795F;--terracotta:#8E4A35;--gold:#F0A92B;
+  --solid:#2B211A;--on-solid:#F4EDDF;--cream:#F4EDDF;
+  --radius:10px;--pill:999px;--gutter:clamp(1.2rem,5vw,4.5rem);--max:1180px;
+  --serif:'Fraunces',Georgia,'Times New Roman',serif;--sans:'Montserrat',-apple-system,'Segoe UI',Arial,sans-serif;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#1E1813;--bg-2:#251E18;--panel:#2C241D;--ink:#F1E8D8;--ink-soft:#CDBFA9;
+  --sand:#4A3E33;--khaki:#6E6852;--khaki-deep:#B9B196;--terracotta:#A8593F;
+  --solid:#F1E8D8;--on-solid:#2B211A;
+}}
+:root[data-theme="dark"]{
+  --bg:#1E1813;--bg-2:#251E18;--panel:#2C241D;--ink:#F1E8D8;--ink-soft:#CDBFA9;
+  --sand:#4A3E33;--khaki:#6E6852;--khaki-deep:#B9B196;--terracotta:#A8593F;
+  --solid:#F1E8D8;--on-solid:#2B211A;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{overflow-x:hidden;scroll-behavior:smooth}
+body{font-family:var(--sans);background:var(--bg);color:var(--ink);line-height:1.7;-webkit-font-smoothing:antialiased;overflow-x:hidden;font-size:15px}
+::selection{background:var(--gold);color:#2B211A}
+a:focus-visible,button:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+img{max-width:100%;display:block}
+button{font-family:inherit}
 
-        /* ===== Top bar ===== */
-        .top-bar{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(244,237,223,.94);backdrop-filter:blur(8px);padding:0 var(--gutter);height:64px;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--sand)}
-        .brand{display:flex;align-items:center;text-decoration:none;color:var(--ink);font-family:'Fraunces',serif;font-weight:900;font-size:1.25rem;letter-spacing:-.01em}
-        .brand .spark{position:static;flex-shrink:0;width:20px;height:20px;margin-right:.45rem;color:var(--terracotta)}
-        .nav-links{display:flex;align-items:center;gap:1.6rem}
-        .nav-links a{text-decoration:none;color:var(--ink-soft);font-size:.82rem;font-weight:500;transition:color .2s}
-        .nav-links a:hover,.nav-links a.active{color:var(--ink);font-weight:700}
-        .nav-cta{background:var(--gold);color:var(--ink)!important;font-weight:700!important;padding:.45rem 1.05rem;border-radius:var(--pill);font-size:.8rem!important}
-        .nav-cta:hover{background:#E39C1D}
-        .lang-toggle{display:flex;border:1.5px solid var(--ink);border-radius:var(--pill);overflow:hidden}
-        .lang-btn{padding:.3rem .75rem;font-size:.72rem;font-weight:700;font-family:'Montserrat',sans-serif;border:none;cursor:pointer;background:transparent;color:var(--ink);transition:all .2s}
-        .lang-btn.active{background:var(--ink);color:var(--cream)}
+/* image fallback for preview */
+.ph{position:relative;background:repeating-linear-gradient(135deg,var(--bg-2) 0 14px,var(--sand) 14px 15px)}
+.ph::after{content:attr(data-file);position:absolute;inset:auto 0 50% 0;transform:translateY(50%);text-align:center;font-size:.72rem;font-weight:600;color:var(--khaki-deep)}
 
-        /* ===== Hero ===== */
-        .hero{margin-top:64px}
-        .hero-media{position:relative;height:min(70vh,560px);background:var(--ink);overflow:hidden}
-        .hero-media img{width:100%;height:100%;object-fit:cover;object-position:center 40%}
-        .hero-media::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(43,33,26,.05) 40%,rgba(43,33,26,.55) 100%)}
-        .hero-top{position:absolute;top:1.4rem;left:var(--gutter);right:var(--gutter);display:flex;justify-content:space-between;z-index:2}
-        .tag-light{background:rgba(43,33,26,.55);color:var(--cream);font-size:.66rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;padding:.35rem .8rem;border-radius:var(--pill);backdrop-filter:blur(3px)}
-        .hero-media h1{position:absolute;left:var(--gutter);bottom:1.6rem;z-index:2;color:var(--cream);font-size:clamp(3rem,8vw,6.4rem)}
-        .hero-body{max-width:var(--max);margin:0 auto;padding:2.4rem var(--gutter) 2rem;display:grid;grid-template-columns:1.4fr .6fr;gap:2.5rem;align-items:start}
-        .hero-body .sub{font-size:1rem;color:var(--ink-soft);max-width:38rem}
-        .hero-body .creds{margin-top:1rem;font-size:.8rem;color:var(--khaki-deep);max-width:38rem;line-height:1.6}
-        .hero-body .meta{font-size:.86rem;line-height:1.9;border-left:2px solid var(--terracotta);padding-left:1.1rem}
-        .hero-body .meta a{color:var(--ink);text-decoration:none;font-weight:600}
-        .hero-body .meta a:hover{text-decoration:underline}
+/* progress */
+.progress{position:fixed;top:0;left:0;height:3px;width:100%;transform-origin:0 50%;transform:scaleX(0);background:var(--gold);z-index:200}
 
-        /* ===== Chapters / recs ===== */
-        .chapters{padding:0 var(--gutter) 2.5rem;max-width:var(--max);margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:.8rem}
-        .chapters a{text-decoration:none;color:var(--ink);background:var(--white);border:1px solid var(--sand);border-radius:var(--radius);padding:1rem 1.1rem;display:flex;flex-direction:column;gap:.2rem;transition:all .2s}
-        .chapters a:hover{background:var(--khaki);color:var(--cream);border-color:var(--khaki)}
-        .chapters a:hover .s{color:var(--cream)}
-        .chapters .n{font-family:'Fraunces',serif;font-weight:900;font-size:1.4rem;color:var(--terracotta)}
-        .chapters a:hover .n{color:var(--gold)}
-        .chapters .t{font-weight:700;font-size:.9rem}
-        .chapters .s{font-size:.76rem;color:var(--ink-soft)}
-        .recs{padding:0 var(--gutter) 3.5rem;max-width:var(--max);margin:0 auto}
-        .recs h2{font-family:'Fraunces',serif;font-weight:900;font-size:clamp(1.8rem,3.4vw,2.5rem);line-height:.95;letter-spacing:-.02em;margin-bottom:1rem}
-        .recs .row{display:grid;grid-template-columns:1fr 1fr;gap:.9rem}
-        .rec{background:var(--khaki);color:var(--cream);border-radius:var(--radius);padding:1.5rem 1.6rem;display:flex;flex-direction:column;gap:.55rem}
-        .rec .who{font-weight:700;font-size:.95rem;color:var(--white);line-height:1.35}
-        .rec .who small{display:block;font-weight:500;font-size:.78rem;color:var(--cream);margin-top:.15rem}
-        .rec p{font-size:.85rem;line-height:1.65}
-        .rec a{align-self:flex-start;margin-top:.3rem;display:inline-flex;align-items:center;gap:.45rem;text-decoration:none;color:var(--ink);background:var(--gold);font-size:.78rem;font-weight:700;padding:.5rem 1rem;border-radius:var(--pill)}
-        .rec a:hover{background:#E39C1D}
-        .rec a svg{width:13px;height:13px}
+/* top bar */
+.top-bar{position:fixed;top:0;left:0;right:0;z-index:100;background:color-mix(in srgb,var(--bg) 92%,transparent);backdrop-filter:blur(8px);padding:0 var(--gutter);height:64px;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--sand)}
+.brand{display:flex;align-items:center;gap:.45rem;text-decoration:none;color:var(--ink);font-family:var(--serif);font-weight:900;font-size:1.2rem}
+.brand svg{width:20px;height:20px;color:var(--terracotta);transition:transform .6s}
+.brand:hover svg{transform:rotate(180deg)}
+.nav-links{display:flex;align-items:center;gap:1.3rem}
+.nav-links a{text-decoration:none;color:var(--ink-soft);font-size:.82rem;font-weight:500;position:relative}
+.nav-links a.nl::after{content:'';position:absolute;left:0;right:0;bottom:-4px;height:2px;background:var(--gold);transform:scaleX(0);transition:transform .3s}
+.nav-links a.nl.active{color:var(--ink);font-weight:700}
+.nav-links a.nl.active::after,.nav-links a.nl:hover::after{transform:scaleX(1)}
+.nav-cta{background:var(--gold);color:#2B211A!important;font-weight:700!important;padding:.45rem 1.05rem;border-radius:var(--pill)}
+.lang-toggle{display:flex;border:1.5px solid var(--ink);border-radius:var(--pill);overflow:hidden}
+.lang-btn{padding:.3rem .7rem;font-size:.72rem;font-weight:700;border:none;cursor:pointer;background:transparent;color:var(--ink)}
+.lang-btn.active{background:var(--solid);color:var(--on-solid)}
+.music{display:flex;align-items:center;gap:.5rem;border:1.5px solid var(--ink);background:transparent;color:var(--ink);border-radius:var(--pill);padding:.28rem .8rem .28rem .6rem;font-size:.72rem;font-weight:700;cursor:pointer}
+.music[aria-pressed="true"]{background:var(--gold);border-color:var(--gold);color:#2B211A}
+.eq{display:flex;align-items:flex-end;gap:2px;height:12px}
+.eq i{display:block;width:3px;height:3px;background:currentColor;border-radius:1px}
+.music[aria-pressed="true"] .eq i{animation:eq .9s ease-in-out infinite}
+.eq i:nth-child(2){animation-delay:.2s!important}.eq i:nth-child(3){animation-delay:.45s!important}.eq i:nth-child(4){animation-delay:.1s!important}
+@keyframes eq{0%,100%{height:3px}50%{height:12px}}
 
-        /* ===== Case study ===== */
-        .case{padding:3rem var(--gutter) 4rem;scroll-margin-top:70px;border-top:1px solid var(--sand)}
-        .case .inner{max-width:var(--max);margin:0 auto}
-        .case:nth-of-type(even){background:var(--cream-2)}
-        .case-head{display:flex;align-items:flex-end;justify-content:space-between;gap:1rem;margin-bottom:1.2rem}
-        .marquee{flex:1;min-width:0;font-family:'Fraunces',serif;font-weight:900;font-size:clamp(2.6rem,6.5vw,5.2rem);line-height:1;text-transform:uppercase;white-space:nowrap;overflow:hidden;color:transparent;-webkit-text-stroke:1.5px var(--gold);letter-spacing:.02em;user-select:none;pointer-events:none}
-        .case-num{font-family:'Fraunces',serif;font-weight:900;font-size:clamp(2.2rem,4.5vw,3.4rem);line-height:1;color:var(--ink);flex-shrink:0}
+/* hero */
+.hero{margin-top:64px}
+.hero-media{position:relative;height:min(72vh,580px);background:#2B211A;overflow:hidden}
+.hero-media>img,.hero-media>.ph{width:100%;height:100%;object-fit:cover;object-position:center 40%}
+.hero-media::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(43,33,26,.1) 30%,rgba(43,33,26,.7) 100%);pointer-events:none}
+.hero-top{position:absolute;top:1.4rem;left:var(--gutter);right:var(--gutter);display:flex;justify-content:space-between;z-index:2}
+.tag-light{background:rgba(43,33,26,.55);color:#F4EDDF;font-size:.7rem;font-weight:600;padding:.35rem .85rem;border-radius:var(--pill);backdrop-filter:blur(3px)}
+.hero h1{position:absolute;left:var(--gutter);bottom:1.4rem;z-index:2;color:#F4EDDF;font-family:var(--serif);font-weight:900;font-size:clamp(3.2rem,11vw,9rem);line-height:.9;letter-spacing:-.03em;display:flex;cursor:default}
+.hero h1 span{display:inline-block;transform:translateY(110%);opacity:0;animation:rise .9s cubic-bezier(.2,.8,.2,1) forwards;transition:transform .35s cubic-bezier(.3,1.6,.5,1),color .3s}
+.hero h1 span:hover{transform:translateY(-12%)!important;color:var(--gold)}
+@keyframes rise{to{transform:translateY(0);opacity:1}}
+.float-spark{position:absolute;z-index:2;color:var(--gold);pointer-events:none;transition:transform .5s cubic-bezier(.2,.8,.2,1)}
+.fs1{width:46px;right:14%;top:26%}.fs2{width:22px;right:28%;top:52%;color:#F4EDDF}.fs3{width:30px;right:8%;top:62%}
+.hero-body{max-width:var(--max);margin:0 auto;padding:2.4rem var(--gutter) 2rem;display:grid;grid-template-columns:1.4fr .6fr;gap:2.5rem}
+.sub{font-size:1.02rem;color:var(--ink-soft);max-width:40rem}
+.sub a{color:var(--terracotta);font-weight:700}
+.creds{margin-top:1rem;font-size:.8rem;color:var(--khaki-deep);max-width:40rem;line-height:1.6}
+.meta{font-size:.86rem;line-height:1.9;border-left:2px solid var(--terracotta);padding-left:1.1rem}
+.meta a{color:var(--ink);font-weight:600;text-decoration:none}
+.meta a:hover{text-decoration:underline}
 
-        /* blocks: one consistent rhythm */
-        .block{margin-top:2.2rem}
-        .block.two{display:grid;grid-template-columns:1fr 1fr;gap:1rem;align-items:stretch}
-        .lbl{font-size:.66rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--khaki-deep);margin-bottom:.9rem;display:flex;align-items:center;gap:.7rem}
-        .lbl::after{content:'';flex:1;height:1px;background:var(--sand)}
-        .card{background:var(--white);border:1px solid var(--sand);border-radius:var(--radius);padding:1.3rem 1.4rem}
-        .h-mid{font-family:'Fraunces',serif;font-weight:900;font-size:clamp(1.9rem,3.6vw,2.7rem);line-height:.95;letter-spacing:-.02em;margin-bottom:1rem}
+/* chapters */
+.chapters{padding:0 var(--gutter) 2.8rem;max-width:var(--max);margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:.7rem}
+.chapters a{text-decoration:none;color:var(--ink);background:var(--panel);border:1px solid var(--sand);border-radius:var(--radius);padding:1rem;display:flex;flex-direction:column;gap:.15rem;position:relative;overflow:hidden;isolation:isolate}
+.chapters a::before{content:'';position:absolute;inset:0;background:var(--khaki);transform:translateY(101%);transition:transform .35s cubic-bezier(.2,.8,.2,1);z-index:-1}
+.chapters a:hover::before{transform:translateY(0)}
+.chapters a:hover,.chapters a:hover .s{color:#F4EDDF}
+.chapters .n{font-family:var(--serif);font-weight:900;font-size:1.35rem;color:var(--terracotta);transition:color .3s}
+.chapters a:hover .n{color:var(--gold)}
+.chapters .t{font-weight:700;font-size:.88rem}
+.chapters .s{font-size:.74rem;color:var(--ink-soft)}
+.chapters a.yt{background:#2B211A;color:#F4EDDF;border-color:#2B211A}
+.chapters a.yt .s{color:var(--sand)}
+.chapters a.yt .n{color:var(--gold)}
 
-        /* intro */
-        .intro{display:grid;grid-template-columns:1.05fr .95fr;border-radius:var(--radius);overflow:hidden}
-        .intro-panel{background:var(--khaki);color:var(--cream);padding:2.6rem 2.6rem 2.3rem;display:flex;flex-direction:column;justify-content:flex-end}
-        .intro-panel h2{font-family:'Fraunces',serif;font-weight:900;font-size:clamp(2.3rem,5vw,4rem);line-height:.95;letter-spacing:-.02em;color:var(--cream)}
-        .intro-panel .org{font-weight:700;font-size:.9rem;margin-top:1.1rem;color:var(--white)}
-        .intro-panel .desc{font-size:.9rem;line-height:1.75;margin-top:.8rem;max-width:32rem;color:var(--cream)}
-        .intro-panel .loc{margin-top:1.2rem;font-size:.8rem;display:flex;flex-wrap:wrap;gap:.4rem 1.4rem;color:var(--white)}
-        .intro-panel .loc span{display:inline-flex;align-items:center;gap:.4rem}
-        .intro-panel .loc svg{width:14px;height:14px}
-        .intro-visual{background:var(--white);display:flex;flex-direction:column}
-        .intro-visual img{width:100%;height:100%;min-height:340px;object-fit:cover;flex:1}
-        .intro-visual .cap{padding:.7rem 1rem;font-size:.74rem;color:var(--ink-soft);font-weight:500;border-top:1px solid var(--sand)}
+/* recs */
+.recs{padding:0 var(--gutter) 3.5rem;max-width:var(--max);margin:0 auto}
+.h-mid{font-family:var(--serif);font-weight:900;font-size:clamp(1.9rem,3.6vw,2.7rem);line-height:.95;letter-spacing:-.02em;margin-bottom:1rem}
+.recs .row{display:grid;grid-template-columns:1fr 1fr;gap:.9rem}
+.rec{background:var(--khaki);color:#F4EDDF;border-radius:var(--radius);padding:1.5rem 1.6rem;display:flex;flex-direction:column;gap:.55rem;transition:transform .3s}
+.rec:hover{transform:translateY(-3px)}
+.rec .who{font-weight:700;font-size:.95rem;color:#fff;line-height:1.35}
+.rec .who small{display:block;font-weight:500;font-size:.78rem;color:#F4EDDF;margin-top:.15rem}
+.rec p{font-size:.85rem;line-height:1.65}
+.rec a{align-self:flex-start;margin-top:.3rem;text-decoration:none;color:#2B211A;background:var(--gold);font-size:.78rem;font-weight:700;padding:.5rem 1rem;border-radius:var(--pill)}
 
-        /* goals */
-        .box{background:var(--terracotta);color:var(--cream);border-radius:var(--radius);padding:1.5rem 1.7rem}
-        .block > .box .check{columns:2;column-gap:2.5rem}
-        .check{list-style:none}
-        .check li{position:relative;padding-left:1.6rem;margin-bottom:.45rem;font-size:.9rem;line-height:1.6;break-inside:avoid}
-        .check li::before{content:'';position:absolute;left:0;top:.42em;width:.9em;height:.9em;border:1.5px solid currentColor;border-radius:3px}
-        .check li::after{content:'';position:absolute;left:.26em;top:.52em;width:.28em;height:.5em;border:solid currentColor;border-width:0 1.5px 1.5px 0;transform:rotate(45deg)}
+/* case */
+.case{padding:3rem var(--gutter) 4rem;scroll-margin-top:66px;border-top:1px solid var(--sand)}
+.case.alt{background:var(--bg-2)}
+.inner{max-width:var(--max);margin:0 auto}
+.case-head{display:flex;align-items:flex-end;gap:1rem;margin-bottom:1.2rem}
+.marquee{flex:1;min-width:0;overflow:hidden;user-select:none;pointer-events:none;-webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}
+.marquee div{display:inline-block;white-space:nowrap;font-family:var(--serif);font-weight:900;font-size:clamp(2.4rem,6vw,5rem);line-height:1.05;text-transform:uppercase;color:transparent;-webkit-text-stroke:1.5px var(--gold);animation:slide 38s linear infinite}
+@keyframes slide{to{transform:translateX(-50%)}}
+.case-num{font-family:var(--serif);font-weight:900;font-size:clamp(2.2rem,4.5vw,3.4rem);line-height:1}
 
-        /* skills / tools */
-        .pills{display:flex;flex-wrap:wrap;gap:.5rem}
-        .pill{background:var(--ink);color:var(--cream);font-size:.76rem;font-weight:600;padding:.5rem 1.05rem;border-radius:var(--pill);white-space:nowrap}
-        .tools{display:grid;grid-template-columns:1fr 1fr;gap:.9rem 1.2rem}
-        .tool{display:flex;gap:.7rem;align-items:flex-start}
-        .tool .ic{width:34px;height:34px;flex-shrink:0;border-radius:8px;background:var(--ink);color:var(--cream);display:grid;place-items:center;font-family:'Fraunces',serif;font-weight:900;font-size:.95rem}
-        .tool b{display:block;font-size:.84rem;font-weight:700;line-height:1.3}
-        .tool small{display:block;font-size:.72rem;color:var(--ink-soft);line-height:1.4;margin-top:.1rem}
+.intro{display:grid;grid-template-columns:1.05fr .95fr;border-radius:var(--radius);overflow:hidden}
+.intro-panel{background:var(--khaki);color:#F4EDDF;padding:2.5rem;display:flex;flex-direction:column;justify-content:flex-end}
+.intro-panel h2{font-family:var(--serif);font-weight:900;font-size:clamp(2.3rem,5vw,4rem);line-height:.95;letter-spacing:-.02em}
+.intro-panel .org{font-weight:700;font-size:.9rem;margin-top:1rem;color:#fff}
+.intro-panel .desc{font-size:.9rem;margin-top:.8rem;max-width:32rem}
+.intro-panel .loc{margin-top:1.1rem;font-size:.8rem;display:flex;flex-wrap:wrap;gap:.4rem 1.4rem;color:#fff}
+.intro-visual{background:var(--panel);display:flex;flex-direction:column;overflow:hidden}
+.intro-visual .im{flex:1;min-height:320px;overflow:hidden}
+.intro-visual img{width:100%;height:100%;object-fit:cover;transition:transform 1.2s cubic-bezier(.2,.8,.2,1)}
+.intro-visual:hover img{transform:scale(1.04)}
+.intro-visual .ph{height:100%;min-height:320px}
+.cap{padding:.7rem 1rem;font-size:.74rem;color:var(--ink-soft);font-weight:500;border-top:1px solid var(--sand)}
 
-        /* tasks: three cards */
-        .task-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
-        .task{background:var(--white);border:1px solid var(--sand);border-radius:var(--radius);padding:1.4rem 1.4rem 1.2rem}
-        .task h4{font-weight:700;font-size:1rem;line-height:1.35;margin-bottom:.8rem;padding-bottom:.7rem;border-bottom:1px solid var(--sand)}
-        .task h4 .k{font-family:'Fraunces',serif;font-weight:900;font-size:1.35rem;color:var(--terracotta);margin-right:.5rem}
-        .task ul{list-style:none}
-        .task li{position:relative;padding-left:1.5rem;margin-bottom:.5rem;font-size:.85rem;color:var(--ink-soft);line-height:1.6}
-        .task li::before{content:'';position:absolute;left:0;top:.42em;width:.85em;height:.85em;border:1.5px solid var(--terracotta);border-radius:3px}
-        .task li::after{content:'';position:absolute;left:.25em;top:.5em;width:.26em;height:.48em;border:solid var(--terracotta);border-width:0 1.5px 1.5px 0;transform:rotate(45deg)}
-        .task .kw{color:var(--ink);font-weight:600}
-        .task .tri{display:grid;gap:.8rem}
-        .task .tri b{display:block;font-family:'Fraunces',serif;font-weight:700;font-size:1.05rem;color:var(--khaki-deep);margin-bottom:.15rem}
-        .task .tri p{font-size:.85rem;color:var(--ink-soft)}
-        .swatches{display:flex;gap:.6rem;margin-top:.9rem}
-        .swatches span{width:34px;height:34px;border-radius:50%;display:block;border:1px solid var(--sand)}
+/* tabs */
+.tablist{display:flex;gap:.4rem;margin:2rem 0 1.4rem;border-bottom:1px solid var(--sand);overflow-x:auto}
+.tab{background:none;border:none;cursor:pointer;padding:.7rem 1.1rem;font-size:.86rem;font-weight:600;color:var(--ink-soft);position:relative;white-space:nowrap}
+.tab::after{content:'';position:absolute;left:0;right:0;bottom:-1px;height:3px;background:var(--terracotta);transform:scaleX(0);transition:transform .3s}
+.tab[aria-selected="true"]{color:var(--ink);font-weight:700}
+.tab[aria-selected="true"]::after{transform:scaleX(1)}
+.panel[hidden]{display:none}
+.panel{animation:fade .45s ease}
+@keyframes fade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
 
-        /* results */
-        .results{display:grid;grid-template-columns:1.1fr .9fr;gap:1rem;align-items:stretch}
-        .results .box{height:100%}
-        .results .h-mid{grid-column:1/-1;margin-bottom:0}
-        .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin:.2rem 0 1.1rem;padding-bottom:1rem;border-bottom:1px solid rgba(244,237,223,.35)}
-        .stat b{font-family:'Fraunces',serif;font-weight:900;font-size:clamp(1.5rem,3vw,2.2rem);line-height:1;display:block;color:var(--white)}
-        .stat span{font-size:.72rem;font-weight:500;display:block;margin-top:.3rem;color:var(--cream)}
-        .results-visual{position:relative;border-radius:var(--radius);overflow:hidden;min-height:260px}
-        .results-visual img{width:100%;height:100%;object-fit:cover;position:absolute;inset:0}
-        .results-visual .spark{position:absolute;width:34px;height:34px;color:var(--gold);z-index:2}
-        .results-visual .spark.a{top:12px;left:12px}.results-visual .spark.b{bottom:12px;right:12px;width:24px;height:24px}
-        .refs{grid-column:1/-1;display:flex;flex-wrap:wrap;gap:.6rem;margin-top:.2rem}
-        .refs a{display:inline-flex;align-items:center;gap:.45rem;text-decoration:none;color:var(--ink);font-size:.8rem;font-weight:600;padding:.5rem 1rem;border:1.5px solid var(--ink);border-radius:var(--pill);transition:all .2s}
-        .refs a:hover{background:var(--ink);color:var(--cream)}
-        .refs svg{width:14px;height:14px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-top:1rem}
+.card{background:var(--panel);border:1px solid var(--sand);border-radius:var(--radius);padding:1.3rem 1.4rem}
+.lbl{font-size:.74rem;font-weight:700;color:var(--khaki-deep);margin-bottom:.8rem}
+.box{background:var(--terracotta);color:#F4EDDF;border-radius:var(--radius);padding:1.5rem 1.7rem}
+.check{list-style:none}
+.box .check.cols{columns:2;column-gap:2.5rem}
+.check li{position:relative;padding-left:1.6rem;margin-bottom:.45rem;font-size:.9rem;break-inside:avoid}
+.check li::before{content:'';position:absolute;left:0;top:.42em;width:.9em;height:.9em;border:1.5px solid currentColor;border-radius:3px}
+.check li::after{content:'';position:absolute;left:.26em;top:.52em;width:.28em;height:.5em;border:solid currentColor;border-width:0 1.5px 1.5px 0;transform:rotate(45deg)}
+.pills{display:flex;flex-wrap:wrap;gap:.5rem}
+.pill{background:var(--solid);color:var(--on-solid);font-size:.76rem;font-weight:600;padding:.48rem 1rem;border-radius:var(--pill)}
+.tools{display:grid;grid-template-columns:1fr 1fr;gap:.9rem 1.2rem}
+.tool{display:flex;gap:.7rem;align-items:flex-start}
+.tool .ic{width:34px;height:34px;flex-shrink:0;border-radius:8px;background:var(--solid);color:var(--on-solid);display:grid;place-items:center;font-family:var(--serif);font-weight:900}
+.tool b{display:block;font-size:.84rem;line-height:1.3}
+.tool small{display:block;font-size:.72rem;color:var(--ink-soft);line-height:1.4;margin-top:.1rem}
 
-        /* gallery */
-        .grid{display:grid;gap:.8rem}
-        .grid.c3{grid-template-columns:repeat(3,1fr)}
-        .grid.c2{grid-template-columns:repeat(2,1fr)}
-        .shot{background:var(--white);border:1px solid var(--sand);border-radius:var(--radius);overflow:hidden}
-        .shot img{width:100%;height:210px;object-fit:cover}
-        .shot .cap{padding:.65rem .9rem;font-size:.74rem;color:var(--ink-soft);line-height:1.5;font-weight:500}
-        .case-foot{margin-top:2.5rem;padding-top:1rem;border-top:1px solid var(--sand);display:flex;justify-content:space-between;font-size:.8rem;font-weight:700;color:var(--khaki-deep)}
+.task-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+.task{background:var(--panel);border:1px solid var(--sand);border-radius:var(--radius);padding:1.4rem}
+.task h4{font-size:1rem;line-height:1.35;margin-bottom:.8rem;padding-bottom:.7rem;border-bottom:1px solid var(--sand)}
+.task ul{list-style:none}
+.task li{position:relative;padding-left:1.1rem;margin-bottom:.5rem;font-size:.85rem;color:var(--ink-soft)}
+.task li::before{content:'';position:absolute;left:0;top:.62em;width:6px;height:6px;border-radius:50%;background:var(--terracotta)}
+.kw{color:var(--ink);font-weight:600}
+.tri{display:grid;gap:.8rem}
+.tri b{display:block;font-family:var(--serif);font-size:1.05rem;color:var(--khaki-deep)}
+.tri p{font-size:.85rem;color:var(--ink-soft)}
+.swatches{display:flex;gap:.5rem;margin-top:.9rem}
+.swatches span{width:30px;height:30px;border-radius:50%;border:1px solid var(--sand);transition:transform .3s}
+.swatches span:hover{transform:scale(1.25)}
 
-        /* footer */
-        footer{background:var(--ink);color:var(--cream);padding:4rem var(--gutter) 2.5rem}
-        footer .inner{max-width:var(--max);margin:0 auto;display:grid;grid-template-columns:1.2fr .8fr;gap:2rem;align-items:end}
-        footer h2{font-family:'Fraunces',serif;font-weight:900;font-size:clamp(2.2rem,5vw,4rem);line-height:.95;letter-spacing:-.02em}
-        footer p{margin-top:1rem;font-size:.9rem;color:var(--sand);max-width:28rem}
-        footer .links{display:flex;flex-direction:column;gap:.6rem;align-items:flex-start}
-        footer .links a{color:var(--cream);text-decoration:none;font-weight:600;font-size:.92rem}
-        footer .links a:hover{color:var(--gold)}
-        footer .links .cta{background:var(--gold);color:var(--ink);padding:.6rem 1.3rem;border-radius:var(--pill);font-weight:700}
-        footer .copy{grid-column:1/-1;margin-top:2.5rem;font-size:.74rem;color:var(--khaki)}
-        .back-to-top{position:fixed;bottom:1.5rem;right:1.5rem;z-index:90;padding:.55rem 1rem;border:1.5px solid var(--ink);background:var(--ink);color:var(--cream);cursor:pointer;display:flex;align-items:center;gap:.4rem;font-family:'Montserrat',sans-serif;font-size:.74rem;font-weight:700;border-radius:var(--pill);transition:opacity .3s,transform .3s;opacity:0;transform:translateY(10px)}
-        .back-to-top.visible{opacity:1;transform:translateY(0)}
-        .back-to-top:hover{background:var(--gold);color:var(--ink);border-color:var(--gold)}
-        .back-to-top svg{width:14px;height:14px}
+.results{display:grid;grid-template-columns:1.1fr .9fr;gap:1rem}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-bottom:1.1rem;padding-bottom:1rem;border-bottom:1px solid rgba(244,237,223,.35)}
+#creator .stat b,.stat b{font-family:var(--serif);font-weight:900;font-size:clamp(1.6rem,3vw,2.3rem);line-height:1;display:block;color:#fff;font-variant-numeric:tabular-nums}
+.stat span{font-size:.72rem;display:block;margin-top:.3rem}
+.refs{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:.9rem}
+.refs a{text-decoration:none;color:var(--ink);font-size:.8rem;font-weight:600;padding:.5rem 1rem;border:1.5px solid var(--ink);border-radius:var(--pill)}
+.refs a:hover{background:var(--solid);color:var(--on-solid)}
 
-        @media(max-width:900px){
-            .hero-body,.intro,.block.two,.results,.task-grid,.recs .row,footer .inner{grid-template-columns:1fr}
-            .hero-media{height:min(50vh,380px)}
-            .intro-visual img{min-height:220px}
-            .block > .box .check{columns:1}
-            .chapters{grid-template-columns:1fr 1fr}
-            .grid.c3,.grid.c2{grid-template-columns:1fr 1fr}
-            .shot img{height:150px}
-            .tools{grid-template-columns:1fr}
-            .nav-desktop{display:none}
-            .marquee{font-size:2.4rem}
-            .results-visual{min-height:200px}
-        }
-        @media(prefers-reduced-motion:reduce){*,*::before,*::after{transition:none!important;animation:none!important}html{scroll-behavior:auto}}
-    </style>
+/* before / after */
+.ba{background:var(--panel);border:1px solid var(--sand);border-radius:var(--radius);padding:1.3rem 1.4rem;display:flex;flex-direction:column;gap:1rem}
+.seg{display:inline-flex;align-self:flex-start;border:1.5px solid var(--ink);border-radius:var(--pill);overflow:hidden}
+.seg button{border:none;background:transparent;color:var(--ink);font-size:.74rem;font-weight:700;padding:.35rem .9rem;cursor:pointer}
+.seg button[aria-pressed="true"]{background:var(--solid);color:var(--on-solid)}
+.bar-row{display:grid;grid-template-columns:5.2rem 1fr 4.2rem;align-items:center;gap:.6rem;font-size:.78rem}
+.bar-row .lab{color:var(--ink-soft);font-weight:600}
+.track{height:12px;background:var(--bg-2);border-radius:var(--pill);overflow:hidden}
+.fill{height:100%;border-radius:var(--pill);background:var(--terracotta);transition:width .9s cubic-bezier(.2,.8,.2,1)}
+.fill.g{background:var(--khaki-deep)}
+.val{text-align:right;font-weight:700;font-variant-numeric:tabular-nums}
+.ba h5{font-size:.8rem;font-weight:700}
+.ba .note{font-size:.72rem;color:var(--ink-soft)}
+
+.gallery{margin-top:1.4rem;display:grid;gap:.8rem}
+.gallery.c3{grid-template-columns:repeat(3,1fr)}.gallery.c2{grid-template-columns:repeat(2,1fr)}
+.shot{background:var(--panel);border:1px solid var(--sand);border-radius:var(--radius);overflow:hidden}
+.shot .im{height:200px;overflow:hidden}
+.shot img,.shot .ph{width:100%;height:100%;object-fit:cover;transition:transform .8s}
+.shot:hover img{transform:scale(1.05)}
+.shot .cap{border-top:none}
+.case-foot{margin-top:2.5rem;padding-top:1rem;border-top:1px solid var(--sand);display:flex;justify-content:space-between;font-size:.8rem;font-weight:700;color:var(--khaki-deep)}
+
+/* creator lab */
+.lab-sec{background:#2B211A;color:#F4EDDF;padding:4rem var(--gutter);scroll-margin-top:64px;position:relative;overflow:hidden}
+.lab-sec .case-num{color:#F4EDDF}
+.lab-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:3rem;align-items:start}
+.lab-sec h2{font-family:var(--serif);font-weight:900;font-size:clamp(2.4rem,5.5vw,4.4rem);line-height:.92;letter-spacing:-.02em}
+.lab-sec .lead{margin-top:1.1rem;color:#D6C5A2;font-size:.95rem;max-width:30rem}
+.yt-btn{display:inline-flex;align-items:center;gap:.6rem;margin-top:1.5rem;background:var(--gold);color:#2B211A;text-decoration:none;font-weight:700;font-size:.85rem;padding:.7rem 1.3rem;border-radius:var(--pill)}
+.yt-btn svg{width:18px;height:18px}
+.yt-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:.8rem;margin-top:2rem}
+.yt-stats div{border-top:1px solid #4F4339;padding-top:.7rem}
+.yt-stats b{font-family:var(--serif);font-size:1.4rem;display:block;color:var(--gold)}
+.yt-stats span{font-size:.72rem;color:#D6C5A2}
+
+.pipe-title{font-size:.8rem;font-weight:700;color:#D6C5A2;margin-bottom:.8rem}
+.pipe{display:grid;grid-template-columns:repeat(5,1fr);gap:.4rem;position:relative}
+.pipe button{background:#3A2E25;border:1px solid #4F4339;color:#F4EDDF;border-radius:var(--radius);padding:.9rem .4rem;cursor:pointer;display:flex;flex-direction:column;align-items:center;gap:.35rem;font-size:.76rem;font-weight:600;transition:background .25s,transform .25s}
+.pipe button:hover{transform:translateY(-2px)}
+.pipe button[aria-pressed="true"]{background:var(--gold);border-color:var(--gold);color:#2B211A}
+.pipe button .k{font-family:var(--serif);font-weight:900;font-size:1.1rem}
+.pipe-out{margin-top:1rem;display:grid;grid-template-columns:1fr 1fr;gap:.8rem}
+.pipe-out div{background:#3A2E25;border-radius:var(--radius);padding:1.1rem 1.2rem;min-height:132px}
+.pipe-out div.pro{background:#F4EDDF;color:#2B211A}
+.pipe-out small{display:block;font-size:.7rem;font-weight:700;color:var(--gold);margin-bottom:.4rem}
+.pipe-out .pro small{color:#8E4A35}
+.pipe-out p{font-size:.86rem;line-height:1.6}
+.pipe-out p.swap{animation:fade .4s ease}
+
+.videos{display:grid;grid-template-columns:repeat(3,1fr);gap:.8rem;margin-top:2.4rem}
+.video{text-decoration:none;color:#F4EDDF;border-radius:var(--radius);overflow:hidden;background:#3A2E25}
+.thumb{aspect-ratio:16/9;position:relative;display:grid;place-items:center;overflow:hidden}
+.thumb img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:left center}
+.thumb.ph::after{font-size:.68rem;color:#2B211A}
+.play{width:48px;height:48px;border-radius:50%;background:rgba(43,33,26,.8);display:grid;place-items:center;position:relative;z-index:1;transition:transform .3s,background .3s}
+.play svg{width:18px;height:18px;margin-left:3px;color:#F4EDDF}
+.video:hover .play{transform:scale(1.15);background:#F0A92B}
+.video:hover .play svg{color:#2B211A}
+.scrub{position:absolute;left:0;bottom:0;height:4px;width:0;background:#F0A92B;z-index:1;transition:width 2.4s linear}
+.video:hover .scrub{width:100%}
+.video .vt{padding:.7rem .9rem;font-size:.8rem;font-weight:600}
+.video .vt small{display:block;color:#D6C5A2;font-weight:500;font-size:.7rem}
+.todo{color:#F0A92B}
+
+/* footer */
+footer{background:var(--bg-2);padding:4rem var(--gutter) 2.5rem;border-top:1px solid var(--sand)}
+footer .inner{display:grid;grid-template-columns:1.2fr .8fr;gap:2rem;align-items:end}
+footer h2{font-family:var(--serif);font-weight:900;font-size:clamp(2.2rem,5vw,4rem);line-height:.95}
+footer p{margin-top:1rem;font-size:.9rem;color:var(--ink-soft);max-width:28rem}
+footer .links{display:flex;flex-direction:column;gap:.6rem;align-items:flex-start}
+footer .links a{color:var(--ink);text-decoration:none;font-weight:600}
+footer .links a:hover{color:var(--terracotta)}
+footer .links .cta{background:var(--gold);color:#2B211A;padding:.6rem 1.3rem;border-radius:var(--pill);font-weight:700}
+footer .copy{grid-column:1/-1;margin-top:2rem;font-size:.74rem;color:var(--khaki-deep)}
+.back-to-top{position:fixed;bottom:1.5rem;right:1.5rem;z-index:90;width:44px;height:44px;border:none;background:var(--solid);color:var(--on-solid);cursor:pointer;display:grid;place-items:center;border-radius:50%;opacity:0;transform:translateY(10px);transition:opacity .3s,transform .3s}
+.back-to-top.visible{opacity:1;transform:none}
+.back-to-top svg{width:16px;height:16px}
+
+
+/* research */
+.hyp{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:1rem}
+.hyp button{border:1.5px solid var(--ink);background:transparent;color:var(--ink);border-radius:var(--pill);padding:.45rem 1rem;font-size:.78rem;font-weight:700;cursor:pointer}
+.hyp button[aria-pressed="true"]{background:var(--solid);color:var(--on-solid)}
+.hyp-out{display:flex;align-items:center;gap:1rem;min-height:84px}
+.gauge{flex-shrink:0;width:64px;height:64px;border-radius:50%;display:grid;place-items:center;font-family:var(--serif);font-weight:900;font-size:1.5rem;background:var(--terracotta);color:#F4EDDF;transition:background .4s,transform .4s}
+.gauge.none{background:var(--sand);color:var(--ink)}
+.hyp-out p{font-size:.88rem}
+.hyp-out p b{display:block;font-size:.95rem}
+/* formats */
+.formats{display:grid;grid-template-columns:1.3fr 1fr;gap:.8rem;margin-top:.8rem}
+.fmt{background:#3A2E25;border-radius:var(--radius);overflow:hidden;display:flex;flex-direction:column}
+.fmt .fim{background:#F4EDDF;height:230px;overflow:hidden}
+.fmt .fim img{width:100%;height:100%;object-fit:contain;transition:transform .8s}
+.fmt:hover .fim img{transform:scale(1.04)}
+.fmt .fb{padding:1rem 1.2rem}
+.fmt h4{font-family:var(--serif);font-size:1.25rem;margin-bottom:.3rem}
+.fmt p{font-size:.83rem;color:#D6C5A2}
+.fmt .fstats{display:flex;gap:1.4rem;margin-top:.6rem}
+.fmt .fstats b{display:block;font-family:var(--serif);color:var(--gold);font-size:1.2rem}
+.fmt .fstats span{font-size:.7rem;color:#D6C5A2}
+.links-row{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1rem}
+.links-row a{color:#F4EDDF;text-decoration:none;font-size:.8rem;font-weight:600;padding:.5rem 1rem;border:1.5px solid #F4EDDF;border-radius:var(--pill)}
+.links-row a:hover{background:#F4EDDF;color:#2B211A}
+.all-videos{display:inline-block;margin-top:1rem;color:var(--gold);font-weight:700;font-size:.85rem}
+.videos{grid-template-columns:repeat(5,1fr)!important}
+.sub-h{font-family:var(--serif);font-weight:900;font-size:1.6rem;margin-top:3rem}
+@media(max-width:900px){.formats{grid-template-columns:1fr}.videos{grid-template-columns:repeat(5,72%)!important;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:.5rem}.video{scroll-snap-align:start}.chapters{grid-template-columns:1fr 1fr}}
+@media(max-width:900px){
+  .hero-body,.intro,.two,.results,.task-grid,.recs .row,footer .inner,.lab-grid{grid-template-columns:1fr}
+  .chapters{grid-template-columns:1fr 1fr}
+  .gallery.c3,.gallery.c2,.videos{grid-template-columns:1fr 1fr}
+  .box .check.cols{columns:1}
+  .tools{grid-template-columns:1fr}
+  .nav-desktop{display:none}
+  .hero-media{height:min(52vh,400px)}
+  .pipe button .t{font-size:.66rem}
+}
+@media(max-width:520px){.videos,.gallery.c3,.gallery.c2,.pipe-out{grid-template-columns:1fr}.stats{grid-template-columns:1fr 1fr 1fr;gap:.5rem}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}.hero h1 span{transform:none;opacity:1}html{scroll-behavior:auto}}
+
+/* ===== lively layer ===== */
+.case{--acc:var(--khaki);--acc2:var(--terracotta)}
+#brand{--acc:#8E4A35;--acc2:#5E6B4E}
+#product{--acc:#5E6B4E;--acc2:#B5652E}
+#community{--acc:#6F7F5E;--acc2:#8E4A35}
+#research{--acc:#7F795F;--acc2:#5E6B4E}
+.case .intro-panel{background:var(--acc)}
+.case .box{background:var(--acc2)}
+.h-mid,.sub-h{text-decoration:underline wavy var(--gold);text-decoration-thickness:3px;text-underline-offset:.22em}
+.hero-media>img{animation:kb 20s ease-in-out infinite alternate;transform-origin:60% 40%}
+@keyframes kb{from{scale:1}to{scale:1.12}}
+.float-spark{animation:spin 14s linear infinite}
+.fs2{animation-duration:9s;animation-direction:reverse}.fs3{animation-duration:11s}
+@keyframes spin{to{rotate:360deg}}
+.sticker{position:absolute;z-index:3;font-family:var(--serif);font-weight:900;font-size:clamp(.9rem,1.6vw,1.2rem);padding:.45rem 1rem;border-radius:var(--pill);cursor:grab;user-select:none;touch-action:none;box-shadow:0 6px 0 rgba(43,33,26,.35);animation:wob 3.2s ease-in-out infinite}
+.sticker:active{cursor:grabbing;animation-play-state:paused}
+.st1{background:var(--gold);color:#2B211A;top:22%;left:58%;rotate:-8deg}
+.st2{background:#F4EDDF;color:#8E4A35;top:44%;left:72%;rotate:6deg;animation-delay:.6s}
+.st3{background:#D98FC7;color:#2B211A;top:14%;left:80%;rotate:10deg;animation-delay:1.2s}
+@keyframes wob{0%,100%{translate:0 0}50%{translate:0 -8px}}
+.drag-hint{position:absolute;z-index:3;right:var(--gutter);bottom:1.6rem;color:#F4EDDF;font-size:.72rem;opacity:.8}
+.rotator{font-family:var(--serif);font-weight:900;font-size:clamp(1.6rem,3.4vw,2.5rem);line-height:1.1;margin-bottom:1rem}
+.rot-word{display:inline-block;color:var(--terracotta);background:linear-gradient(transparent 62%,rgba(240,169,43,.55) 62%);padding:0 .15em;transition:opacity .35s,translate .35s}
+.rot-word.out{opacity:0;translate:0 -.4em}
+.rv{opacity:0;translate:0 34px;scale:.96;transition:opacity .7s ease,translate .8s cubic-bezier(.2,.9,.25,1.2),scale .8s cubic-bezier(.2,.9,.25,1.2);transition-delay:var(--d,0s)}
+.rv.in{opacity:1;translate:0 0;scale:1}
+.tilt{transition:transform .25s ease;transform-style:preserve-3d;will-change:transform}
+.pill{transition:rotate .3s cubic-bezier(.3,1.8,.5,1),scale .3s cubic-bezier(.3,1.8,.5,1),background .2s}
+.pill:hover{rotate:-4deg;scale:1.08;background:var(--gold);color:#2B211A}
+.tool .ic{transition:rotate .4s cubic-bezier(.3,1.8,.5,1),background .2s}
+.tool:hover .ic{rotate:-12deg;background:var(--gold);color:#2B211A}
+.panel{animation:pop .5s cubic-bezier(.2,.9,.25,1.2)}
+@keyframes pop{from{opacity:0;translate:0 14px;scale:.98}to{opacity:1;translate:0 0;scale:1}}
+.stat b{display:inline-block}
+.stat:hover b{animation:jelly .6s}
+@keyframes jelly{30%{scale:1.2 .85}50%{scale:.9 1.1}70%{scale:1.05 .95}100%{scale:1}}
+.magnet{transition:translate .25s cubic-bezier(.2,.9,.25,1.2)}
+.music[aria-pressed="false"]{animation:ping 3s ease-out infinite}
+@keyframes ping{0%{box-shadow:0 0 0 0 rgba(240,169,43,.7)}70%,100%{box-shadow:0 0 0 12px rgba(240,169,43,0)}}
+.back-to-top:hover svg{animation:hop .5s}
+@keyframes hop{50%{translate:0 -4px}}
+.marquee div{animation-duration:22s}
+.cursor{position:fixed;left:0;top:0;width:22px;height:22px;margin:-11px 0 0 -11px;color:var(--gold);pointer-events:none;z-index:300;transition:scale .25s,rotate .25s}
+.cursor.big{scale:1.9;rotate:45deg}
+.burst{position:fixed;width:10px;height:10px;margin:-5px 0 0 -5px;pointer-events:none;z-index:301;color:var(--gold)}
+@media (pointer:coarse){.cursor,.drag-hint{display:none}}
+@media(max-width:900px){.st1{left:48%;top:18%}.st2{left:60%;top:40%}.st3{left:70%;top:8%}}
+@media(prefers-reduced-motion:reduce){.rv{opacity:1;translate:none;scale:none}.cursor{display:none}}
+</style>
 </head>
 <body>
+<div class="progress" id="progress"></div>
 
-<nav class="top-bar" id="topbar">
-    <a class="brand" href="index.html">
-        <svg class="spark" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c1 6 5 10 12 12-7 2-11 6-12 12-1-6-5-10-12-12C7 10 11 6 12 0z"/></svg>
-        Yi-Hsuan Chiu
-    </a>
-    <div class="nav-links">
-        <a href="index.html" class="nav-desktop" data-fr="Mon CV" data-en="About me">Mon CV</a>
-        <a href="#work" class="nav-desktop active" data-fr="Projets" data-en="Work">Projets</a>
-        <a href="#recommandations" class="nav-desktop" data-fr="Recommandations" data-en="Recommendations">Recommandations</a>
-        <a href="mailto:c.hsuann@gmail.com" class="nav-cta nav-desktop" data-fr="Me contacter" data-en="Get in touch">Me contacter</a>
-        <div class="lang-toggle">
-            <button class="lang-btn active" id="btn-fr" onclick="setLang('fr')">FR</button>
-            <button class="lang-btn" id="btn-en" onclick="setLang('en')">EN</button>
-        </div>
+<nav class="top-bar">
+  <a class="brand" href="index.html"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c1 6 5 10 12 12-7 2-11 6-12 12-1-6-5-10-12-12C7 10 11 6 12 0z"/></svg>Yi-Hsuan Chiu</a>
+  <div class="nav-links">
+    <a href="index.html" class="nav-desktop" data-fr="Mon CV" data-en="About me">Mon CV</a>
+    <a href="#work" class="nl nav-desktop" data-sec="work" data-fr="Projets" data-en="Work">Projets</a>
+    <a href="#research" class="nl nav-desktop" data-sec="research" data-fr="Recherche" data-en="Research">Recherche</a>
+    <a href="#creator" class="nl nav-desktop" data-sec="creator">Creator Lab</a>
+    <a href="#recommandations" class="nl nav-desktop" data-sec="recommandations" data-fr="Recommandations" data-en="Recommendations">Recommandations</a>
+    <a href="mailto:c.hsuann@gmail.com" class="nav-cta nav-desktop" data-fr="Me contacter" data-en="Get in touch">Me contacter</a>
+    <button class="music" id="music" aria-pressed="false" title="Musique d'ambiance">
+      <span class="eq" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+      <span id="music-label">Son</span>
+    </button>
+    <div class="lang-toggle">
+      <button class="lang-btn active" id="btn-fr" onclick="setLang('fr')">FR</button>
+      <button class="lang-btn" id="btn-en" onclick="setLang('en')">EN</button>
     </div>
+  </div>
 </nav>
 
 <header class="hero">
-    <div class="hero-media">
-        <img src="bg.png" alt="" loading="eager">
-        <div class="hero-top"><span class="tag-light" data-fr="Présentation personnelle" data-en="Personal presentation">Présentation personnelle</span><span class="tag-light">2026</span></div>
-        <h1 class="display">Portfolio</h1>
+  <div class="hero-media" id="heroMedia">
+    <img src="bg.png" alt="" data-file="bg.png">
+    <div class="hero-top"><span class="tag-light" data-fr="Présentation personnelle" data-en="Personal presentation">Présentation personnelle</span><span class="tag-light">2026</span></div>
+    <svg class="float-spark fs1" data-depth="30" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c1 6 5 10 12 12-7 2-11 6-12 12-1-6-5-10-12-12C7 10 11 6 12 0z"/></svg>
+    <svg class="float-spark fs2" data-depth="-18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c1 6 5 10 12 12-7 2-11 6-12 12-1-6-5-10-12-12C7 10 11 6 12 0z"/></svg>
+    <svg class="float-spark fs3" data-depth="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c1 6 5 10 12 12-7 2-11 6-12 12-1-6-5-10-12-12C7 10 11 6 12 0z"/></svg>
+    <h1 id="heroTitle" aria-label="Portfolio">Portfolio</h1>
+    <span class="sticker st1" data-fr="Bonjour !" data-en="Hello!">Bonjour !</span>
+    <span class="sticker st2">FR / EN / 中文</span>
+    <span class="sticker st3">Jo ✦</span>
+    <span class="drag-hint" data-fr="Les stickers se déplacent" data-en="Stickers can be dragged">Les stickers se déplacent</span>
+  </div>
+  <div class="hero-body">
+    <div>
+      <p class="rotator"><span data-fr="De la donnée à" data-en="From data to">De la donnée à</span> <span class="rot-word" id="rotWord">l'action</span></p>
+      <p class="sub" data-fr="Quatre projets et un mémoire qui montrent comment je passe de la donnée à l'action : marketing digital, image de marque, lancement produit et animation de communauté. En dehors du travail, je raconte ma vie en France sur <a href='#creator'>YouTube, Threads, Instagram et mon blog</a>, et j'y applique les mêmes méthodes de bout en bout." data-en="Four projects and a thesis showing how I move from data to action: digital marketing, brand identity, product launch and community management. Outside work, I share my life in France on <a href='#creator'>YouTube, Threads, Instagram and my blog</a>, using the same methods end to end.">Quatre projets et un mémoire qui montrent comment je passe de la donnée à l'action : marketing digital, image de marque, lancement produit et animation de communauté. En dehors du travail, je raconte ma vie en France sur <a href='#creator'>YouTube, Threads, Instagram et mon blog</a>, et j'y applique les mêmes méthodes de bout en bout.</p>
+      <p class="creds" data-fr="Certifications : Google Analytics, Amazon Ads Retail, Marketing Analytics, Data Analysis with Spreadsheets & SQL, Scrum. Ambassadrice internationale EM Strasbourg (2022-2024)." data-en="Certifications: Google Analytics, Amazon Ads Retail, Marketing Analytics, Data Analysis with Spreadsheets & SQL, Scrum. International ambassador, EM Strasbourg (2022-2024).">Certifications : Google Analytics, Amazon Ads Retail, Marketing Analytics, Data Analysis with Spreadsheets & SQL, Scrum. Ambassadrice internationale EM Strasbourg (2022-2024).</p>
     </div>
-    <div class="hero-body">
-        <div>
-            <p class="sub" data-fr="Quatre projets qui montrent comment je passe de la donnée à l'action : marketing digital, image de marque, lancement produit et animation de communauté. Chaque étude de cas suit le même fil : la mission, les objectifs, les tâches, les résultats." data-en="Four projects showing how I move from data to action: digital marketing, brand identity, product launch and community management. Each case study follows the same thread: the mission, the goals, the tasks, the results.">Quatre projets qui montrent comment je passe de la donnée à l'action : marketing digital, image de marque, lancement produit et animation de communauté. Chaque étude de cas suit le même fil : la mission, les objectifs, les tâches, les résultats.</p>
-            <p class="creds" data-fr="Certifications : Google Analytics, Amazon Ads Retail, Marketing Analytics, Data Analysis with Spreadsheets & SQL, Scrum. Ambassadrice internationale EM Strasbourg (2022–2024)." data-en="Certifications: Google Analytics, Amazon Ads Retail, Marketing Analytics, Data Analysis with Spreadsheets & SQL, Scrum. International ambassador, EM Strasbourg (2022–2024).">Certifications : Google Analytics, Amazon Ads Retail, Marketing Analytics, Data Analysis with Spreadsheets & SQL, Scrum. Ambassadrice internationale EM Strasbourg (2022–2024).</p>
-        </div>
-        <div class="meta">
-            <div><b>Yi-Hsuan Chiu</b></div>
-            <div data-fr="Bordeaux · mobile France entière" data-en="Bordeaux · open to relocation across France">Bordeaux · mobile France entière</div>
-            <div><a href="mailto:c.hsuann@gmail.com">c.hsuann@gmail.com</a></div>
-            <div><a href="https://www.linkedin.com/in/yihsuan-chiu/" target="_blank" rel="noopener">LinkedIn</a> · <a href="index.html" data-fr="CV" data-en="CV">CV</a></div>
-        </div>
+    <div class="meta">
+      <div><b>Yi-Hsuan Chiu</b></div>
+      <div data-fr="Bordeaux, mobile France entière" data-en="Bordeaux, open to relocation across France">Bordeaux, mobile France entière</div>
+      <div><a href="mailto:c.hsuann@gmail.com">c.hsuann@gmail.com</a></div>
+      <div><a href="https://www.linkedin.com/in/yihsuan-chiu/" target="_blank" rel="noopener">LinkedIn</a> / <a href="https://www.youtube.com/@josdiary_france" target="_blank" rel="noopener">YouTube</a> / <a href="https://www.instagram.com/jo.lifeinfrance/" target="_blank" rel="noopener">Instagram</a> / <a href="index.html">CV</a></div>
     </div>
+  </div>
 </header>
 
-<nav class="chapters" id="work" aria-label="Sommaire des projets">
-    <a href="#strategy"><span class="n">01</span><span class="t">Digital Marketing</span><span class="s">UniFox · GreenTech, Web3</span></a>
-    <a href="#brand"><span class="n">02</span><span class="t">Brand Strategy</span><span class="s" data-fr="Hôtel 4★ · Dordogne" data-en="4★ Hotel · Dordogne">Hôtel 4★ · Dordogne</span></a>
-    <a href="#product"><span class="n">03</span><span class="t">Product Strategy</span><span class="s">Reinventing Carrière · Paris</span></a>
-    <a href="#community"><span class="n">04</span><span class="t">Community & Project</span><span class="s">Linkee · Bordeaux</span></a>
+<nav class="chapters" id="work" aria-label="Sommaire">
+  <a href="#strategy"><span class="n">01</span><span class="t">Digital Marketing</span><span class="s">UniFox, GreenTech Web3</span></a>
+  <a href="#brand"><span class="n">02</span><span class="t">Brand Strategy</span><span class="s" data-fr="Hôtel 4★, Dordogne" data-en="4★ Hotel, Dordogne">Hôtel 4★, Dordogne</span></a>
+  <a href="#product"><span class="n">03</span><span class="t">Product Strategy</span><span class="s">Reinventing Carrière, Paris</span></a>
+  <a href="#community"><span class="n">04</span><span class="t">Community & Project</span><span class="s">Linkee, Bordeaux</span></a>
+  <a href="#research"><span class="n">05</span><span class="t" data-fr="Recherche" data-en="Research">Recherche</span><span class="s" data-fr="Mémoire, EM Strasbourg" data-en="Master's thesis, EM Strasbourg">Mémoire, EM Strasbourg</span></a>
+  <a href="#creator" class="yt"><span class="n">06</span><span class="t">Creator Lab</span><span class="s" data-fr="YouTube, Threads, blog, stickers" data-en="YouTube, Threads, blog, stickers">YouTube, Threads, blog, stickers</span></a>
 </nav>
 
 <section class="recs" id="recommandations">
-    <h2 data-fr="Ils recommandent" data-en="Recommendations">Ils recommandent</h2>
-    <div class="row">
-        <div class="rec">
-            <div class="who">Aline Farah<small data-fr="Chargée de la promotion et du recrutement à l'international, EM Strasbourg Business School" data-en="International Promotion and Recruitment Officer, EM Strasbourg Business School">Chargée de la promotion et du recrutement à l'international, EM Strasbourg Business School</small></div>
-            <p data-fr="Collaboration sur plusieurs événements, dont un salon étudiant international en tant qu'ambassadrice. La lettre souligne l'aisance relationnelle avec des publics très divers (étudiants, familles, partenaires institutionnels), la capacité d'adaptation et le sens de l'initiative en environnement multiculturel." data-en="Worked together on several events, including an international student fair as school ambassador. The letter highlights ease with very diverse audiences (students, families, institutional partners), adaptability and initiative in a multicultural setting.">Collaboration sur plusieurs événements, dont un salon étudiant international en tant qu'ambassadrice. La lettre souligne l'aisance relationnelle avec des publics très divers (étudiants, familles, partenaires institutionnels), la capacité d'adaptation et le sens de l'initiative en environnement multiculturel.</p>
-            <a href="https://drive.google.com/file/d/1lUREkXxnFECmVdLZW3kv-2W_g_X6A1lL/view" target="_blank" rel="noopener"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 2h8l4 4v12a1 1 0 01-1 1H6a1 1 0 01-1-1V3a1 1 0 011-1z"/><path d="M14 2v4h4M8 10h4M8 13h6"/></svg><span data-fr="Lire la lettre (FR)" data-en="Read the letter (FR)">Lire la lettre (FR)</span></a>
-        </div>
-        <div class="rec">
-            <div class="who">Dr. Nada Maaninou<small data-fr="Professeure associée en marketing, EM Strasbourg Business School" data-en="Associate Professor of Marketing, EM Strasbourg Business School">Professeure associée en marketing, EM Strasbourg Business School</small></div>
-            <p data-fr="Cours Product & Brand Management : étude de marché pour Tupperware France sur les attentes des millennials, avec 12 entretiens semi-directifs et des recommandations marketing présentées au directeur général. Meilleure note de la promotion (16,35/20) et prix du challenge sponsorisé par Tupperware." data-en="Product & Brand Management course: market study for Tupperware France on millennials' expectations, with 12 semi-structured interviews and marketing recommendations presented to the General Manager. Highest score in the class (16.35/20) and winner of the Tupperware-sponsored challenge.">Cours Product & Brand Management : étude de marché pour Tupperware France sur les attentes des millennials, avec 12 entretiens semi-directifs et des recommandations marketing présentées au directeur général. Meilleure note de la promotion (16,35/20) et prix du challenge sponsorisé par Tupperware.</p>
-            <a href="https://drive.google.com/file/d/1Qivjg1WIUYeIFS0770pRjLxwXwecH-kw/view" target="_blank" rel="noopener"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 2h8l4 4v12a1 1 0 01-1 1H6a1 1 0 01-1-1V3a1 1 0 011-1z"/><path d="M14 2v4h4M8 10h4M8 13h6"/></svg><span data-fr="Lire la lettre (EN)" data-en="Read the letter (EN)">Lire la lettre (EN)</span></a>
-        </div>
+  <h2 class="h-mid" data-fr="Ils recommandent" data-en="Recommendations">Ils recommandent</h2>
+  <div class="row">
+    <div class="rec">
+      <div class="who">Aline Farah<small data-fr="Chargée de la promotion et du recrutement à l'international, EM Strasbourg Business School" data-en="International Promotion and Recruitment Officer, EM Strasbourg Business School">Chargée de la promotion et du recrutement à l'international, EM Strasbourg Business School</small></div>
+      <p data-fr="Collaboration sur plusieurs événements, dont un salon étudiant international en tant qu'ambassadrice. La lettre souligne l'aisance relationnelle avec des publics très divers, la capacité d'adaptation et le sens de l'initiative en environnement multiculturel." data-en="Worked together on several events, including an international student fair as school ambassador. The letter highlights ease with very diverse audiences, adaptability and initiative in a multicultural setting.">Collaboration sur plusieurs événements, dont un salon étudiant international en tant qu'ambassadrice. La lettre souligne l'aisance relationnelle avec des publics très divers, la capacité d'adaptation et le sens de l'initiative en environnement multiculturel.</p>
+      <a href="https://drive.google.com/file/d/1lUREkXxnFECmVdLZW3kv-2W_g_X6A1lL/view" target="_blank" rel="noopener" data-fr="Lire la lettre (FR)" data-en="Read the letter (FR)">Lire la lettre (FR)</a>
     </div>
+    <div class="rec">
+      <div class="who">Dr. Nada Maaninou<small data-fr="Professeure associée en marketing, EM Strasbourg Business School" data-en="Associate Professor of Marketing, EM Strasbourg Business School">Professeure associée en marketing, EM Strasbourg Business School</small></div>
+      <p data-fr="Cours Product & Brand Management : étude de marché pour Tupperware France sur les attentes des millennials, avec 12 entretiens semi-directifs et des recommandations présentées au directeur général. Meilleure note de la promotion (16,35/20) et prix du challenge sponsorisé par Tupperware." data-en="Product & Brand Management course: market study for Tupperware France on millennials' expectations, with 12 semi-structured interviews and recommendations presented to the General Manager. Highest score in the class (16.35/20) and winner of the Tupperware-sponsored challenge.">Cours Product & Brand Management : étude de marché pour Tupperware France sur les attentes des millennials, avec 12 entretiens semi-directifs et des recommandations présentées au directeur général. Meilleure note de la promotion (16,35/20) et prix du challenge sponsorisé par Tupperware.</p>
+      <a href="https://drive.google.com/file/d/1Qivjg1WIUYeIFS0770pRjLxwXwecH-kw/view" target="_blank" rel="noopener" data-fr="Lire la lettre (EN)" data-en="Read the letter (EN)">Lire la lettre (EN)</a>
+    </div>
+  </div>
 </section>
 
-<!-- ===================================================== 01 ===================================================== -->
+<!-- 01 UniFox -->
 <section class="case" id="strategy">
 <div class="inner">
-    <div class="case-head"><div class="marquee" aria-hidden="true">Digital Marketing Digital Marketing Digital Marketing</div><div class="case-num">01</div></div>
-
-    <div class="intro">
-        <div class="intro-panel">
-            <h2>UniFox</h2>
-            <div class="org" data-fr="Plateforme GreenTech Web3 de trading crypto avec bot IA" data-en="GreenTech Web3 AI-bot crypto trading platform">Plateforme GreenTech Web3 de trading crypto avec bot IA</div>
-            <p class="desc" data-fr="Stage de six mois en marketing digital international. Pilotage de la stratégie de campagne et de contenu sur les marchés APAC et EMEA, du ciblage au reporting, avec construction de toute l'infrastructure de tracking." data-en="Six-month internship in international digital marketing. Led campaign and content strategy across APAC and EMEA markets, from targeting to reporting, and built the entire tracking infrastructure from scratch.">Stage de six mois en marketing digital international. Pilotage de la stratégie de campagne et de contenu sur les marchés APAC et EMEA, du ciblage au reporting, avec construction de toute l'infrastructure de tracking.</p>
-            <div class="loc">
-                <span><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M10 18s6-5.2 6-10a6 6 0 10-12 0c0 4.8 6 10 6 10z"/><circle cx="10" cy="8" r="2"/></svg>Bordeaux, France</span>
-                <span><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="4" width="14" height="13" rx="1.5"/><path d="M3 8h14M7 2v4M13 2v4"/></svg>06 – 12/2024</span>
-            </div>
-        </div>
-        <div class="intro-visual">
-            <img src="Marketing%20Strategy_unifox.png" alt="Marketing Strategy & Analysis" loading="lazy">
-            <div class="cap" data-fr="Stratégie marketing & analyse (GA4, Google Ads, Meta, PostHog)" data-en="Marketing strategy & analysis (GA4, Google Ads, Meta, PostHog)">Stratégie marketing & analyse (GA4, Google Ads, Meta, PostHog)</div>
-        </div>
+  <div class="case-head"><div class="marquee" aria-hidden="true"><div>Digital Marketing • Digital Marketing • Digital Marketing • Digital Marketing • </div></div><div class="case-num">01</div></div>
+  <div class="intro">
+    <div class="intro-panel">
+      <h2>UniFox</h2>
+      <div class="org" data-fr="Plateforme GreenTech Web3 de trading crypto avec bot IA" data-en="GreenTech Web3 AI-bot crypto trading platform">Plateforme GreenTech Web3 de trading crypto avec bot IA</div>
+      <p class="desc" data-fr="Stage de six mois en marketing digital international. J'ai piloté la stratégie de campagne et de contenu sur les marchés APAC et EMEA, du ciblage au reporting, et construit toute l'infrastructure de tracking." data-en="Six-month internship in international digital marketing. I led campaign and content strategy across APAC and EMEA, from targeting to reporting, and built the whole tracking infrastructure.">Stage de six mois en marketing digital international. J'ai piloté la stratégie de campagne et de contenu sur les marchés APAC et EMEA, du ciblage au reporting, et construit toute l'infrastructure de tracking.</p>
+      <div class="loc"><span>Bordeaux, France</span><span>06-12/2024</span></div>
     </div>
+    <div class="intro-visual"><div class="im"><img src="Marketing%20Strategy_unifox.png" alt="Marketing strategy" data-file="Marketing Strategy_unifox.png" loading="lazy"></div><div class="cap" data-fr="Stratégie marketing & analyse (GA4, Google Ads, Meta, PostHog)" data-en="Marketing strategy & analysis (GA4, Google Ads, Meta, PostHog)">Stratégie marketing & analyse (GA4, Google Ads, Meta, PostHog)</div></div>
+  </div>
 
-    <div class="block">
-        <h3 class="h-mid display" data-fr="Les objectifs" data-en="The goals">Les objectifs</h3>
+  <div class="tabs">
+    <div class="tablist" role="tablist">
+      <button class="tab" role="tab" aria-selected="true" data-fr="Objectifs & outils" data-en="Goals & tools">Objectifs & outils</button>
+      <button class="tab" role="tab" aria-selected="false" data-fr="Tâches" data-en="Tasks">Tâches</button>
+      <button class="tab" role="tab" aria-selected="false" data-fr="Résultats" data-en="Results">Résultats</button>
+    </div>
+    <div class="panel" role="tabpanel">
+      <div class="box"><ul class="check cols">
+        <li data-fr="Réduire le taux de rebond et améliorer la conversion" data-en="Reduce bounce rate and improve conversion">Réduire le taux de rebond et améliorer la conversion</li>
+        <li data-fr="Centraliser le suivi des performances multi-plateformes" data-en="Centralize multi-platform performance tracking">Centraliser le suivi des performances multi-plateformes</li>
+        <li data-fr="Développer la visibilité organique et payante sur APAC / EMEA" data-en="Grow organic and paid visibility across APAC / EMEA">Développer la visibilité organique et payante sur APAC / EMEA</li>
+        <li data-fr="Comprendre les parcours utilisateurs par appareil et navigateur" data-en="Understand user journeys by device and browser">Comprendre les parcours utilisateurs par appareil et navigateur</li>
+      </ul></div>
+      <div class="two">
+        <div class="card"><div class="lbl" data-fr="Compétences mobilisées" data-en="Skills applied">Compétences mobilisées</div><div class="pills"><span class="pill">Content strategy</span><span class="pill">CRO</span><span class="pill" data-fr="Analyse UX & funnel" data-en="UX & funnel analysis">Analyse UX & funnel</span><span class="pill">SEO</span><span class="pill" data-fr="Campagnes payantes" data-en="Paid campaigns">Campagnes payantes</span><span class="pill">Dashboards</span></div></div>
+        <div class="card"><div class="lbl" data-fr="Outils" data-en="Tools">Outils</div><div class="tools">
+          <div class="tool"><div class="ic">G</div><div><b>GA4 + Google Tag Manager</b><small data-fr="Tracking mis en place de zéro" data-en="Tracking set up from scratch">Tracking mis en place de zéro</small></div></div>
+          <div class="tool"><div class="ic">P</div><div><b>PostHog</b><small data-fr="Replays de sessions" data-en="Session replays">Replays de sessions</small></div></div>
+          <div class="tool"><div class="ic">T</div><div><b>Tableau + SQL</b><small data-fr="Dashboards centralisés" data-en="Centralized dashboards">Dashboards centralisés</small></div></div>
+          <div class="tool"><div class="ic">A</div><div><b>Google Ads, Meta</b><small data-fr="Campagnes payantes" data-en="Paid campaigns">Campagnes payantes</small></div></div>
+          <div class="tool"><div class="ic">I</div><div><b>Iconosquare</b><small data-fr="Planification du contenu" data-en="Content scheduling">Planification du contenu</small></div></div>
+          <div class="tool"><div class="ic">C</div><div><b>Canva, Figma, CapCut</b><small data-fr="Visuels et vidéos" data-en="Visuals and videos">Visuels et vidéos</small></div></div>
+        </div></div>
+      </div>
+    </div>
+    <div class="panel" role="tabpanel" hidden>
+      <div class="task-grid">
+        <div class="task"><h4 data-fr="Stratégie de contenu & analytics" data-en="Content strategy & analytics">Stratégie de contenu & analytics</h4><ul>
+          <li data-fr="Dashboards centralisés multi-plateformes construits de zéro (GA4, Tableau, Google Ads, LinkedIn, TikTok, Instagram)" data-en="<span class=kw>Centralized multi-platform dashboards built from scratch</span> (GA4, Tableau, Google Ads, LinkedIn, TikTok, Instagram)">Dashboards centralisés multi-plateformes construits de zéro (GA4, Tableau, Google Ads, LinkedIn, TikTok, Instagram)</li>
+          <li data-fr="Contenus basés sur la segmentation : 8,67 événements par session sur le social organique" data-en="Content based on segmentation: <span class=kw>8.67 events per session</span> on organic social">Contenus basés sur la segmentation : 8,67 événements par session sur le social organique</li>
+          <li data-fr="Représentation de la marque lors d'un salon tech international" data-en="Represented the brand at an international tech trade show">Représentation de la marque lors d'un salon tech international</li></ul></div>
+        <div class="task"><h4 data-fr="Création & optimisation" data-en="Creation & optimization">Création & optimisation</h4><ul>
+          <li data-fr="Visuels et vidéos adaptés à chaque plateforme" data-en="Platform-specific visuals and videos">Visuels et vidéos adaptés à chaque plateforme</li>
+          <li data-fr="Stratégie d'acquisition B2C APAC/EMEA via Google Ads et SEO" data-en="<span class=kw>B2C acquisition across APAC/EMEA</span> via Google Ads and SEO">Stratégie d'acquisition B2C APAC/EMEA via Google Ads et SEO</li>
+          <li data-fr="Optimisation du taux de conversion des campagnes" data-en="<span class=kw>Conversion rate optimization</span> across campaigns">Optimisation du taux de conversion des campagnes</li></ul></div>
+        <div class="task"><h4 data-fr="Suivi des performances & UX" data-en="Performance tracking & UX">Suivi des performances & UX</h4><ul>
+          <li data-fr="Écart de conversion iOS vs Android identifié (58,82 % vs 95,2 %)" data-en="Identified an <span class=kw>iOS vs Android conversion gap (58.82% vs 95.2%)</span>">Écart de conversion iOS vs Android identifié (58,82 % vs 95,2 %)</li>
+          <li data-fr="PostHog en complément de GA4" data-en="PostHog alongside GA4">PostHog en complément de GA4</li>
+          <li data-fr="Correctifs : formulaire simplifié, CTA repositionnés, chargement optimisé" data-en="Fixes: simpler form, repositioned CTAs, faster page load">Correctifs : formulaire simplifié, CTA repositionnés, chargement optimisé</li></ul></div>
+      </div>
+    </div>
+    <div class="panel" role="tabpanel" hidden>
+      <div class="results">
         <div class="box">
-                <ul class="check">
-                    <li data-fr="Réduire le taux de rebond et améliorer la conversion" data-en="Reduce bounce rate and improve conversion">Réduire le taux de rebond et améliorer la conversion</li>
-                    <li data-fr="Centraliser le suivi des performances multi-plateformes" data-en="Centralize multi-platform performance tracking">Centraliser le suivi des performances multi-plateformes</li>
-                    <li data-fr="Développer la visibilité organique et payante sur APAC / EMEA" data-en="Grow organic and paid visibility across APAC / EMEA">Développer la visibilité organique et payante sur APAC / EMEA</li>
-                    <li data-fr="Comprendre les parcours utilisateurs par appareil et navigateur" data-en="Understand user journeys by device and browser">Comprendre les parcours utilisateurs par appareil et navigateur</li>
-                </ul>
-            </div>
+          <div class="stats">
+            <div class="stat"><b class="count" data-to="-52.6" data-dec="1" data-pct="1">0</b><span data-fr="taux de rebond" data-en="bounce rate">taux de rebond</span></div>
+            <div class="stat"><b class="count" data-to="53.52" data-dec="2" data-pct="1">0</b><span data-fr="conversion Google Ads" data-en="Google Ads conversion">conversion Google Ads</span></div>
+            <div class="stat"><b class="count" data-to="114" data-dec="0" data-pct="1" data-plus="1">0</b><span data-fr="vues mensuelles du site" data-en="monthly site views">vues mensuelles du site</span></div>
+          </div>
+          <ul class="check">
+            <li data-fr="Écart iOS vs Android comblé grâce à des correctifs UX ciblés" data-en="iOS vs Android gap closed through targeted UX fixes">Écart iOS vs Android comblé grâce à des correctifs UX ciblés</li>
+            <li data-fr="Un seul endroit pour suivre six plateformes" data-en="One place to track six platforms">Un seul endroit pour suivre six plateformes</li>
+          </ul>
+        </div>
+        <div class="ba" id="ba">
+          <div class="seg" role="group">
+            <button aria-pressed="true" data-state="before" data-fr="Avant correctifs" data-en="Before fixes">Avant correctifs</button>
+            <button aria-pressed="false" data-state="after" data-fr="Après correctifs" data-en="After fixes">Après correctifs</button>
+          </div>
+          <div>
+            <h5 data-fr="Taux de rebond (indice, avant = 100)" data-en="Bounce rate (index, before = 100)">Taux de rebond (indice, avant = 100)</h5>
+            <div class="bar-row"><span class="lab" data-fr="Site" data-en="Site">Site</span><div class="track"><div class="fill" id="bBounce" style="width:100%"></div></div><span class="val" id="vBounce">100</span></div>
+          </div>
+          <div>
+            <h5 data-fr="Conversion par appareil" data-en="Conversion by device">Conversion par appareil</h5>
+            <div class="bar-row"><span class="lab">iOS</span><div class="track"><div class="fill" id="bIos" style="width:58.82%"></div></div><span class="val" id="vIos">58,82 %</span></div>
+            <div class="bar-row"><span class="lab">Android</span><div class="track"><div class="fill g" style="width:95.2%"></div></div><span class="val" id="vAnd">95,2 %</span></div>
+          </div>
+          <p class="note" data-fr="Cliquez pour comparer l'état avant et après les correctifs UX." data-en="Click to compare before and after the UX fixes.">Cliquez pour comparer l'état avant et après les correctifs UX.</p>
+        </div>
+      </div>
+      <div class="gallery c2">
+        <div class="shot"><div class="im"><img src="Content%20Creation_unifox.png" alt="Content creation" data-file="Content Creation_unifox.png" loading="lazy"></div><div class="cap" data-fr="Création de contenu social (hook, value, CTA)" data-en="Social content creation (hook, value, CTA)">Création de contenu social (hook, value, CTA)</div></div>
+        <div class="shot"><div class="im"><img src="Content%20Planning_Unifox.png" alt="Content planning" data-file="Content Planning_Unifox.png" loading="lazy"></div><div class="cap" data-fr="Planification du contenu (Iconosquare)" data-en="Content planning (Iconosquare)">Planification du contenu (Iconosquare)</div></div>
+      </div>
     </div>
-    <div class="block two">
-        <div class="card"><div class="lbl" data-fr="Compétences mobilisées" data-en="Skills applied">Compétences mobilisées</div><div class="pills">
-                <span class="pill">Content strategy</span><span class="pill">CRO</span><span class="pill" data-fr="Analyse UX & funnel" data-en="UX & funnel analysis">Analyse UX & funnel</span><span class="pill">SEO</span><span class="pill" data-fr="Campagnes payantes" data-en="Paid campaigns">Campagnes payantes</span><span class="pill">Dashboards</span>
-            </div></div>
-        <div class="card"><div class="lbl" data-fr="Outils & apps" data-en="Tools & apps">Outils & apps</div><div class="tools">
-                <div class="tool"><div class="ic">G</div><div><b>GA4 + Google Tag Manager</b><small data-fr="Tracking des événements et conversions, mis en place de zéro" data-en="Event and conversion tracking, set up from scratch">Tracking des événements et conversions, mis en place de zéro</small></div></div>
-                <div class="tool"><div class="ic">P</div><div><b>PostHog</b><small data-fr="Replays de sessions et analyse comportementale" data-en="Session replays and behavioral analysis">Replays de sessions et analyse comportementale</small></div></div>
-                <div class="tool"><div class="ic">T</div><div><b>Tableau + SQL</b><small data-fr="Dashboards centralisés et requêtes sur les métriques" data-en="Centralized dashboards and metric queries">Dashboards centralisés et requêtes sur les métriques</small></div></div>
-                <div class="tool"><div class="ic">A</div><div><b>Google Ads · Meta Business Suite</b><small data-fr="Campagnes payantes et gestion des comptes" data-en="Paid campaigns and account management">Campagnes payantes et gestion des comptes</small></div></div>
-                <div class="tool"><div class="ic">I</div><div><b>Iconosquare</b><small data-fr="Planification et programmation du contenu social" data-en="Social content planning and scheduling">Planification et programmation du contenu social</small></div></div>
-                <div class="tool"><div class="ic">C</div><div><b>Canva · Figma · CapCut</b><small data-fr="Visuels et vidéos adaptés à chaque plateforme" data-en="Platform-specific visuals and videos">Visuels et vidéos adaptés à chaque plateforme</small></div></div>
-            </div></div>
-    </div>
-
-    
-
-    <div class="block tasks">
-        <h3 class="h-mid display" data-fr="Les tâches" data-en="The tasks">Les tâches</h3>
-        <div class="task-grid">
-
-        <div class="task">
-            <h4><span class="k">01</span><span data-fr="Stratégie de contenu & analytics" data-en="Content strategy & analytics">Stratégie de contenu & analytics</span></h4>
-            <ul>
-                <li data-fr="Construction de zéro de dashboards de performance centralisés multi-plateformes (GA4, Tableau, Google Ads, LinkedIn, TikTok, Instagram)" data-en="Built <span class=kw>centralized multi-platform performance dashboards from scratch</span> (GA4, Tableau, Google Ads, LinkedIn, TikTok, Instagram)">Construction de zéro de dashboards de performance centralisés multi-plateformes (GA4, Tableau, Google Ads, LinkedIn, TikTok, Instagram)</li>
-                <li data-fr="Contenus personnalisés basés sur la segmentation et les données comportementales : 8,67 événements par session sur le social organique" data-en="Personalized content based on <span class=kw>segmentation and behavioral data</span>: <span class=kw>8.67 events per session</span> on organic social">Contenus personnalisés basés sur la segmentation et les données comportementales : 8,67 événements par session sur le social organique</li>
-                <li data-fr="Gestion de la diffusion sur LinkedIn, Facebook, Twitter, Instagram, TikTok et Threads" data-en="Managed distribution across LinkedIn, Facebook, Twitter, Instagram, TikTok and Threads">Gestion de la diffusion sur LinkedIn, Facebook, Twitter, Instagram, TikTok et Threads</li>
-                <li data-fr="Représentation de la marque lors d'un salon tech international" data-en="Represented the brand at an international tech trade show">Représentation de la marque lors d'un salon tech international</li>
-            </ul>
-        </div>
-
-        <div class="task">
-            <h4><span class="k">02</span><span data-fr="Création de contenu & optimisation" data-en="Content creation & optimization">Création de contenu & optimisation</span></h4>
-            <ul>
-                <li data-fr="Visuels et vidéos adaptés à chaque plateforme avec Canva, Figma et CapCut" data-en="Platform-specific visuals and videos with Canva, Figma and CapCut">Visuels et vidéos adaptés à chaque plateforme avec Canva, Figma et CapCut</li>
-                <li data-fr="Stratégie d'acquisition B2C APAC/EMEA via Google Ads et SEO, avec contenus optimisés par mots-clés pour la visibilité organique" data-en="<span class=kw>B2C acquisition strategy across APAC/EMEA</span> via Google Ads and SEO, with keyword-optimized content for organic visibility">Stratégie d'acquisition B2C APAC/EMEA via Google Ads et SEO, avec contenus optimisés par mots-clés pour la visibilité organique</li>
-                <li data-fr="Stratégies d'optimisation du taux de conversion sur les campagnes Google Ads" data-en="<span class=kw>Conversion rate optimization</span> across Google Ads campaigns">Stratégies d'optimisation du taux de conversion sur les campagnes Google Ads</li>
-            </ul>
-        </div>
-
-        <div class="task">
-            <h4><span class="k">03</span><span data-fr="Suivi des performances & UX" data-en="Performance tracking & UX">Suivi des performances & UX</span></h4>
-            <ul>
-                <li data-fr="Recherche UX par appareil et navigateur : identification d'un écart de conversion critique iOS vs Android (58,82 % vs 95,2 %)" data-en="<span class=kw>Device and browser-level UX research</span>: identified a critical <span class=kw>iOS vs Android conversion gap (58.82% vs 95.2%)</span>">Recherche UX par appareil et navigateur : identification d'un écart de conversion critique iOS vs Android (58,82 % vs 95,2 %)</li>
-                <li data-fr="PostHog en complément de GA4 pour un tracking approfondi des sessions et des comportements" data-en="<span class=kw>PostHog</span> alongside GA4 for deeper session and behavioral tracking">PostHog en complément de GA4 pour un tracking approfondi des sessions et des comportements</li>
-                <li data-fr="Correctifs implémentés : simplification du formulaire d'inscription, repositionnement des CTA, optimisation du temps de chargement" data-en="Fixes implemented: subscription form simplification, CTA repositioning, page-load optimization">Correctifs implémentés : simplification du formulaire d'inscription, repositionnement des CTA, optimisation du temps de chargement</li>
-            </ul>
-        </div>
-        </div>
-    </div>
-
-    <div class="block results">
-        <h3 class="h-mid display" data-fr="Les résultats" data-en="The results">Les résultats</h3>
-        <div>
-            <div class="box">
-                <div class="stats">
-                    <div class="stat"><b data-fr="−52,6 %" data-en="−52.6%">−52,6 %</b><span data-fr="taux de rebond" data-en="bounce rate">taux de rebond</span></div>
-                    <div class="stat"><b data-fr="53,52 %" data-en="53.52%">53,52 %</b><span data-fr="conversion Google Ads" data-en="Google Ads conversion">conversion Google Ads</span></div>
-                    <div class="stat"><b data-fr="+114 %" data-en="+114%">+114 %</b><span data-fr="vues mensuelles du site" data-en="monthly site views">vues mensuelles du site</span></div>
-                </div>
-                <ul class="check">
-                    <li data-fr="Écart de conversion iOS vs Android comblé grâce à des correctifs UX ciblés" data-en="iOS vs Android conversion gap closed through targeted UX fixes">Écart de conversion iOS vs Android comblé grâce à des correctifs UX ciblés</li>
-                    <li data-fr="Un seul endroit pour suivre contenus et campagnes sur six plateformes" data-en="One place to track content and campaigns across six platforms">Un seul endroit pour suivre contenus et campagnes sur six plateformes</li>
-                </ul>
-            </div>
-        </div>
-        <div class="results-visual">
-            <svg class="spark a" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c1 6 5 10 12 12-7 2-11 6-12 12-1-6-5-10-12-12C7 10 11 6 12 0z"/></svg>
-            <img src="Marketing%20Strategy_unifox.png" alt="Dashboards GA4 / PostHog" loading="lazy">
-            <svg class="spark b" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c1 6 5 10 12 12-7 2-11 6-12 12-1-6-5-10-12-12C7 10 11 6 12 0z"/></svg>
-        </div>
-    </div>
-
-    <div class="block gallery"><div class="lbl" data-fr="Galerie" data-en="Gallery">Galerie</div><div class="grid c2">
-        <div class="shot"><img src="Content%20Creation_unifox.png" alt="Content Creation" loading="lazy"><div class="cap" data-fr="Création de contenu social (hook, line, value, CTA)" data-en="Social media content creation (hook, line, value, CTA)">Création de contenu social (hook, line, value, CTA)</div></div>
-        <div class="shot"><img src="Content%20Planning_Unifox.png" alt="Content Planning" loading="lazy"><div class="cap" data-fr="Planification et programmation du contenu (Iconosquare)" data-en="Content planning & scheduling (Iconosquare)">Planification et programmation du contenu (Iconosquare)</div></div>
-    </div></div>
-
-    <div class="case-foot"><span data-fr="Projet 01 | UniFox" data-en="Project 01 | UniFox">Projet 01 | UniFox</span><span>Digital Marketing</span></div>
+  </div>
+  <div class="case-foot"><span data-fr="Projet 01 | UniFox" data-en="Project 01 | UniFox">Projet 01 | UniFox</span><span>Digital Marketing</span></div>
 </div>
 </section>
 
-<!-- ===================================================== 02 ===================================================== -->
-<section class="case" id="brand">
+<!-- 02 Hotel -->
+<section class="case alt" id="brand">
 <div class="inner">
-    <div class="case-head"><div class="marquee" aria-hidden="true">Brand Strategy Brand Strategy Brand Strategy Brand</div><div class="case-num">02</div></div>
-
-    <div class="intro">
-        <div class="intro-panel">
-            <h2 data-fr="Hôtel 4★" data-en="4★ Hotel">Hôtel 4★</h2>
-            <div class="org" data-fr="Hôtellerie de charme & restaurant · Dordogne" data-en="Boutique hotel & restaurant · Dordogne">Hôtellerie de charme & restaurant · Dordogne</div>
-            <p class="desc" data-fr="Mission freelance : définir une stratégie digitale bilingue FR/EN pour positionner l'établissement auprès d'une clientèle premium sur les marchés européen et américain, avec analyse de marché, localisation B2C, recommandations éditoriales et maquette de présence Instagram." data-en="Freelance mission: define a bilingual FR/EN digital strategy to position the hotel with a premium clientele on the EU and US markets, with market analysis, B2C localization, editorial recommendations and an Instagram mockup.">Mission freelance : définir une stratégie digitale bilingue FR/EN pour positionner l'établissement auprès d'une clientèle premium sur les marchés européen et américain, avec analyse de marché, localisation B2C, recommandations éditoriales et maquette de présence Instagram.</p>
-            <div class="loc">
-                <span><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M10 18s6-5.2 6-10a6 6 0 10-12 0c0 4.8 6 10 6 10z"/><circle cx="10" cy="8" r="2"/></svg>Dordogne, France</span>
-                <span><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="4" width="14" height="13" rx="1.5"/><path d="M3 8h14M7 2v4M13 2v4"/></svg>04 – 05/2025 · Freelance</span>
-            </div>
-        </div>
-        <div class="intro-visual">
-            <img src="hotel_2.png" alt="Instagram mockup" loading="lazy">
-            <div class="cap" data-fr="Maquette Instagram & identité visuelle" data-en="Instagram mockup & visual identity">Maquette Instagram & identité visuelle</div>
-        </div>
+  <div class="case-head"><div class="marquee" aria-hidden="true"><div>Brand Strategy • Brand Strategy • Brand Strategy • Brand Strategy • </div></div><div class="case-num">02</div></div>
+  <div class="intro">
+    <div class="intro-panel">
+      <h2 data-fr="Hôtel 4★" data-en="4★ Hotel">Hôtel 4★</h2>
+      <div class="org" data-fr="Hôtellerie de charme & restaurant, Dordogne" data-en="Boutique hotel & restaurant, Dordogne">Hôtellerie de charme & restaurant, Dordogne</div>
+      <p class="desc" data-fr="Mission freelance : stratégie digitale bilingue FR/EN pour positionner l'établissement auprès d'une clientèle premium européenne et américaine, avec analyse de marché, recommandations éditoriales et maquette Instagram." data-en="Freelance mission: a bilingual FR/EN digital strategy to position the hotel with premium European and US travelers, with market analysis, editorial recommendations and an Instagram mockup.">Mission freelance : stratégie digitale bilingue FR/EN pour positionner l'établissement auprès d'une clientèle premium européenne et américaine, avec analyse de marché, recommandations éditoriales et maquette Instagram.</p>
+      <div class="loc"><span>Dordogne, France</span><span>04-05/2025, Freelance</span></div>
     </div>
-
-    <div class="block">
-        <h3 class="h-mid display" data-fr="Les objectifs" data-en="The goals">Les objectifs</h3>
-        <div class="box">
-                <ul class="check">
-                    <li data-fr="Attirer une clientèle américaine haut de gamme" data-en="Attract a US premium clientele">Attirer une clientèle américaine haut de gamme</li>
-                    <li data-fr="Rendre l'offre lisible pour un public anglophone" data-en="Make the offer legible to an English-speaking audience">Rendre l'offre lisible pour un public anglophone</li>
-                    <li data-fr="Donner une ligne éditoriale cohérente à Instagram" data-en="Give Instagram a coherent editorial line">Donner une ligne éditoriale cohérente à Instagram</li>
-                    <li data-fr="Poser des axes de mesure pour la suite" data-en="Set measurement axes for what comes next">Poser des axes de mesure pour la suite</li>
-                </ul>
-            </div>
+    <div class="intro-visual"><div class="im"><img src="hotel_2.png" alt="Instagram mockup" data-file="hotel_2.png" loading="lazy"></div><div class="cap" data-fr="Maquette Instagram & identité visuelle" data-en="Instagram mockup & visual identity">Maquette Instagram & identité visuelle</div></div>
+  </div>
+  <div class="tabs">
+    <div class="tablist" role="tablist">
+      <button class="tab" role="tab" aria-selected="true" data-fr="Objectifs & outils" data-en="Goals & tools">Objectifs & outils</button>
+      <button class="tab" role="tab" aria-selected="false" data-fr="Tâches" data-en="Tasks">Tâches</button>
+      <button class="tab" role="tab" aria-selected="false" data-fr="Résultats" data-en="Results">Résultats</button>
     </div>
-    <div class="block two">
-        <div class="card"><div class="lbl" data-fr="Compétences mobilisées" data-en="Skills applied">Compétences mobilisées</div><div class="pills">
-                <span class="pill" data-fr="Analyse de marché" data-en="Market analysis">Analyse de marché</span><span class="pill">Brand positioning</span><span class="pill">Personas</span><span class="pill" data-fr="Stratégie bilingue FR/EN" data-en="Bilingual strategy FR/EN">Stratégie bilingue FR/EN</span><span class="pill" data-fr="Identité visuelle" data-en="Visual identity">Identité visuelle</span><span class="pill">Benchmark</span>
-            </div></div>
-        <div class="card"><div class="lbl" data-fr="Outils & apps" data-en="Tools & apps">Outils & apps</div><div class="tools">
-                <div class="tool"><div class="ic">F</div><div><b>Figma</b><small data-fr="Maquette Instagram et système visuel" data-en="Instagram mockup and visual system">Maquette Instagram et système visuel</small></div></div>
-                <div class="tool"><div class="ic">C</div><div><b>Canva</b><small data-fr="Séries de contenus et exemples de Reels" data-en="Content series and Reels examples">Séries de contenus et exemples de Reels</small></div></div>
-                <div class="tool"><div class="ic">M</div><div><b>Meta Business Suite</b><small data-fr="Benchmark de la présence existante" data-en="Benchmark of the existing presence">Benchmark de la présence existante</small></div></div>
-                <div class="tool"><div class="ic">P</div><div><b>PowerPoint</b><small data-fr="Proposition stratégique livrée au client" data-en="Strategic proposal delivered to the client">Proposition stratégique livrée au client</small></div></div>
-            </div></div>
+    <div class="panel" role="tabpanel">
+      <div class="box"><ul class="check cols">
+        <li data-fr="Attirer une clientèle américaine haut de gamme" data-en="Attract US premium travelers">Attirer une clientèle américaine haut de gamme</li>
+        <li data-fr="Rendre l'offre lisible pour un public anglophone" data-en="Make the offer clear to English speakers">Rendre l'offre lisible pour un public anglophone</li>
+        <li data-fr="Donner une ligne éditoriale cohérente à Instagram" data-en="Give Instagram a coherent editorial line">Donner une ligne éditoriale cohérente à Instagram</li>
+        <li data-fr="Poser des axes de mesure pour la suite" data-en="Set measurement axes for next steps">Poser des axes de mesure pour la suite</li>
+      </ul></div>
+      <div class="two">
+        <div class="card"><div class="lbl" data-fr="Compétences mobilisées" data-en="Skills applied">Compétences mobilisées</div><div class="pills"><span class="pill" data-fr="Analyse de marché" data-en="Market analysis">Analyse de marché</span><span class="pill">Brand positioning</span><span class="pill">Personas</span><span class="pill" data-fr="Stratégie bilingue" data-en="Bilingual strategy">Stratégie bilingue</span><span class="pill">Benchmark</span></div></div>
+        <div class="card"><div class="lbl" data-fr="Outils" data-en="Tools">Outils</div><div class="tools">
+          <div class="tool"><div class="ic">F</div><div><b>Figma</b><small data-fr="Maquette Instagram" data-en="Instagram mockup">Maquette Instagram</small></div></div>
+          <div class="tool"><div class="ic">C</div><div><b>Canva</b><small data-fr="Séries et Reels" data-en="Series and Reels">Séries et Reels</small></div></div>
+          <div class="tool"><div class="ic">M</div><div><b>Meta Business Suite</b><small data-fr="Benchmark de l'existant" data-en="Benchmark of the existing presence">Benchmark de l'existant</small></div></div>
+          <div class="tool"><div class="ic">P</div><div><b>PowerPoint</b><small data-fr="Proposition livrée au client" data-en="Proposal delivered to the client">Proposition livrée au client</small></div></div>
+        </div></div>
+      </div>
     </div>
-
-    <div class="block tasks">
-        <h3 class="h-mid display" data-fr="Les tâches" data-en="The tasks">Les tâches</h3>
-        <div class="task-grid">
-
-        <div class="task">
-            <h4><span class="k">01</span><span data-fr="Recherche de marque" data-en="Brand research">Recherche de marque</span></h4>
-            <div class="tri">
-                <div><b>Image</b><p data-fr="Charme, authenticité, campagne française, gastronomie et vin, service attentif et anglophone." data-en="Charm, authenticity, French countryside, gastronomy and wine, attentive English-speaking service.">Charme, authenticité, campagne française, gastronomie et vin, service attentif et anglophone.</p></div>
-                <div><b data-fr="Cible" data-en="Target">Cible</b><p data-fr="Voyageurs américains CSP+ : séjours longs, attentes œnotouristiques, décisions influencées par les avis et les réseaux sociaux." data-en="US premium travelers: long stays, wine tourism expectations, decisions influenced by reviews and social media.">Voyageurs américains CSP+ : séjours longs, attentes œnotouristiques, décisions influencées par les avis et les réseaux sociaux.</p></div>
-                <div><b data-fr="Valeurs" data-en="Values">Valeurs</b><p data-fr="Expérience plutôt que luxe ostentatoire. Rencontre, terroir, temps long." data-en="Experience over ostentatious luxury. Encounter, terroir, slow time.">Expérience plutôt que luxe ostentatoire. Rencontre, terroir, temps long.</p></div>
-            </div>
-        </div>
-
-        <div class="task">
-            <h4><span class="k">02</span><span data-fr="Identité visuelle & concept de feed" data-en="Visual identity & feed concept">Identité visuelle & concept de feed</span></h4>
-            <div>
-                <ul>
-                    <li data-fr="Palette de couleurs alignée avec l'identité existante de la marque" data-en="Color palette aligned with the existing brand identity">Palette de couleurs alignée avec l'identité existante de la marque</li>
-                    <li data-fr="Maquette Instagram complète avec structure éditoriale et séries thématiques : gastronomie, témoignages voyageurs, offres saisonnières" data-en="<span class=kw>Complete Instagram mockup</span> with editorial structure and thematic series: gastronomy, traveler testimonials, seasonal offers">Maquette Instagram complète avec structure éditoriale et séries thématiques : gastronomie, témoignages voyageurs, offres saisonnières</li>
-                    <li data-fr="Charte hashtags incluant un hashtag de marque pour le contenu généré par les clients" data-en="Hashtag guidelines including a branded hashtag for guest-generated content">Charte hashtags incluant un hashtag de marque pour le contenu généré par les clients</li>
-                </ul>
-                <div class="swatches" aria-hidden="true"><span style="background:#4A3B2E"></span><span style="background:#B08A52"></span><span style="background:#DDD3C2"></span><span style="background:#8E4A35"></span></div>
-            </div>
-        </div>
-
-        <div class="task">
-            <h4><span class="k">03</span><span data-fr="Stratégie éditoriale bilingue" data-en="Bilingual editorial strategy">Stratégie éditoriale bilingue</span></h4>
-            <ul>
-                <li data-fr="Recommandations de publications FR/EN adaptées au double public local et international" data-en="<span class=kw>FR/EN publication</span> recommendations adapted to local and international audiences">Recommandations de publications FR/EN adaptées au double public local et international</li>
-                <li data-fr="Exemples de Reels pour le marché américain : sous-titres anglais, narration émotionnelle, mise en avant du service anglophone et des visites privées" data-en="Reels examples for the US market: English subtitles, emotional storytelling, English-speaking service and private tours">Exemples de Reels pour le marché américain : sous-titres anglais, narration émotionnelle, mise en avant du service anglophone et des visites privées</li>
-                <li data-fr="Storytelling axé sur l'expérience authentique de la campagne française" data-en="Storytelling focused on the authentic French countryside experience">Storytelling axé sur l'expérience authentique de la campagne française</li>
-            </ul>
-        </div>
-        </div>
+    <div class="panel" role="tabpanel" hidden>
+      <div class="task-grid">
+        <div class="task"><h4 data-fr="Recherche de marque" data-en="Brand research">Recherche de marque</h4><div class="tri">
+          <div><b>Image</b><p data-fr="Charme, authenticité, gastronomie et vin, service anglophone." data-en="Charm, authenticity, food and wine, English-speaking service.">Charme, authenticité, gastronomie et vin, service anglophone.</p></div>
+          <div><b data-fr="Cible" data-en="Target">Cible</b><p data-fr="Voyageurs américains CSP+ : séjours longs, œnotourisme, décisions influencées par les avis." data-en="US premium travelers: long stays, wine tourism, review-driven decisions.">Voyageurs américains CSP+ : séjours longs, œnotourisme, décisions influencées par les avis.</p></div>
+          <div><b data-fr="Valeurs" data-en="Values">Valeurs</b><p data-fr="Expérience plutôt que luxe ostentatoire." data-en="Experience over showy luxury.">Expérience plutôt que luxe ostentatoire.</p></div></div></div>
+        <div class="task"><h4 data-fr="Identité visuelle & feed" data-en="Visual identity & feed">Identité visuelle & feed</h4><ul>
+          <li data-fr="Palette alignée avec l'identité existante" data-en="Palette aligned with the existing identity">Palette alignée avec l'identité existante</li>
+          <li data-fr="Maquette Instagram complète avec séries thématiques" data-en="<span class=kw>Complete Instagram mockup</span> with themed series">Maquette Instagram complète avec séries thématiques</li>
+          <li data-fr="Charte hashtags avec hashtag de marque" data-en="Hashtag guidelines with a branded hashtag">Charte hashtags avec hashtag de marque</li></ul>
+          <div class="swatches" aria-hidden="true"><span style="background:#4A3B2E"></span><span style="background:#B08A52"></span><span style="background:#DDD3C2"></span><span style="background:#8E4A35"></span></div></div>
+        <div class="task"><h4 data-fr="Stratégie éditoriale bilingue" data-en="Bilingual editorial strategy">Stratégie éditoriale bilingue</h4><ul>
+          <li data-fr="Publications FR/EN pour un double public" data-en="<span class=kw>FR/EN posts</span> for two audiences">Publications FR/EN pour un double public</li>
+          <li data-fr="Exemples de Reels pour le marché américain" data-en="Reels examples for the US market">Exemples de Reels pour le marché américain</li>
+          <li data-fr="Storytelling autour de la campagne française" data-en="Storytelling around the French countryside">Storytelling autour de la campagne française</li></ul></div>
+      </div>
     </div>
-
-    
-
-    <div class="block results">
-        <h3 class="h-mid display" data-fr="Les résultats" data-en="The results">Les résultats</h3>
-        <div>
-            <div class="box">
-                <ul class="check">
-                    <li data-fr="Proposition stratégique complète livrée sous forme de présentation professionnelle" data-en="Complete strategic proposal delivered as a professional presentation">Proposition stratégique complète livrée sous forme de présentation professionnelle</li>
-                    <li data-fr="Cadre activable : analyse de marché, identité visuelle, ligne éditoriale, axes de mesure" data-en="Actionable framework: market analysis, visual identity, editorial line, measurement axes">Cadre activable : analyse de marché, identité visuelle, ligne éditoriale, axes de mesure</li>
-                    <li data-fr="Bases posées pour un repositionnement digital sur le marché américain CSP+" data-en="Foundation laid for a digital repositioning on the US premium market">Bases posées pour un repositionnement digital sur le marché américain CSP+</li>
-                </ul>
-            </div>
-        </div>
-        <div class="results-visual">
-            <svg class="spark a" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c1 6 5 10 12 12-7 2-11 6-12 12-1-6-5-10-12-12C7 10 11 6 12 0z"/></svg>
-            <img src="hotel_3.png" alt="Bilingual content" loading="lazy">
-        </div>
+    <div class="panel" role="tabpanel" hidden>
+      <div class="box"><ul class="check">
+        <li data-fr="Proposition stratégique complète livrée en présentation professionnelle" data-en="Complete strategic proposal delivered as a professional presentation">Proposition stratégique complète livrée en présentation professionnelle</li>
+        <li data-fr="Cadre activable : analyse de marché, identité visuelle, ligne éditoriale, axes de mesure" data-en="Actionable framework: market analysis, visual identity, editorial line, measurement axes">Cadre activable : analyse de marché, identité visuelle, ligne éditoriale, axes de mesure</li>
+      </ul></div>
+      <div class="gallery c3">
+        <div class="shot"><div class="im"><img src="hotel_1.png" alt="Personas" data-file="hotel_1.png" loading="lazy"></div><div class="cap" data-fr="Public cible et personas" data-en="Target audience and personas">Public cible et personas</div></div>
+        <div class="shot"><div class="im"><img src="hotel_2.png" alt="Instagram" data-file="hotel_2.png" loading="lazy"></div><div class="cap" data-fr="Maquette Instagram" data-en="Instagram mockup">Maquette Instagram</div></div>
+        <div class="shot"><div class="im"><img src="hotel_3.png" alt="Contenu" data-file="hotel_3.png" loading="lazy"></div><div class="cap" data-fr="Contenu bilingue FR/EN" data-en="Bilingual FR/EN content">Contenu bilingue FR/EN</div></div>
+      </div>
     </div>
-
-    <div class="block gallery"><div class="lbl" data-fr="Galerie" data-en="Gallery">Galerie</div><div class="grid c3">
-        <div class="shot"><img src="hotel_1.png" alt="Public cible" loading="lazy"><div class="cap" data-fr="Analyse du public cible et définition des personas" data-en="Target audience analysis and persona definition">Analyse du public cible et définition des personas</div></div>
-        <div class="shot"><img src="hotel_2.png" alt="Instagram mockup" loading="lazy"><div class="cap" data-fr="Maquette Instagram & identité visuelle" data-en="Instagram mockup & visual identity">Maquette Instagram & identité visuelle</div></div>
-        <div class="shot"><img src="hotel_3.png" alt="Content creation" loading="lazy"><div class="cap" data-fr="Création de contenu bilingue FR/EN" data-en="Bilingual FR/EN content creation">Création de contenu bilingue FR/EN</div></div>
-    </div></div>
-
-    <div class="case-foot"><span data-fr="Projet 02 | Hôtel 4★" data-en="Project 02 | 4★ Hotel">Projet 02 | Hôtel 4★</span><span>Brand Strategy</span></div>
+  </div>
+  <div class="case-foot"><span data-fr="Projet 02 | Hôtel 4★" data-en="Project 02 | 4★ Hotel">Projet 02 | Hôtel 4★</span><span>Brand Strategy</span></div>
 </div>
 </section>
 
-<!-- ===================================================== 03 ===================================================== -->
+<!-- 03 Reinventing -->
 <section class="case" id="product">
 <div class="inner">
-    <div class="case-head"><div class="marquee" aria-hidden="true">Product Strategy Product Strategy Product Strategy</div><div class="case-num">03</div></div>
-
-    <div class="intro">
-        <div class="intro-panel">
-            <h2>Reinventing Carrière</h2>
-            <div class="org" data-fr="Cabinet de coaching professionnel certifié ICF (PCC) · Paris" data-en="ICF (PCC) certified professional coaching firm · Paris">Cabinet de coaching professionnel certifié ICF (PCC) · Paris</div>
-            <p class="desc" data-fr="Développement complet d'un cours en ligne de formation carrière, de la conception à la mise en marché, pour un cabinet spécialisé dans l'accompagnement des personnes souhaitant travailler à l'international." data-en="Full-cycle development of an online career training course, from concept to market launch, for a firm specializing in supporting people aiming to work internationally.">Développement complet d'un cours en ligne de formation carrière, de la conception à la mise en marché, pour un cabinet spécialisé dans l'accompagnement des personnes souhaitant travailler à l'international.</p>
-            <div class="loc">
-                <span><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M10 18s6-5.2 6-10a6 6 0 10-12 0c0 4.8 6 10 6 10z"/><circle cx="10" cy="8" r="2"/></svg>Paris, France</span>
-                <span><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="4" width="14" height="13" rx="1.5"/><path d="M3 8h14M7 2v4M13 2v4"/></svg>06 – 09/2023</span>
-            </div>
-        </div>
-        <div class="intro-visual">
-            <img src="Banner.jpg" alt="Banner design" loading="lazy">
-            <div class="cap" data-fr="Bannières, landing page, Reels et contenus promotionnels" data-en="Banners, landing page, Reels and promotional content">Bannières, landing page, Reels et contenus promotionnels</div>
-        </div>
+  <div class="case-head"><div class="marquee" aria-hidden="true"><div>Product Strategy • Product Strategy • Product Strategy • Product Strategy • </div></div><div class="case-num">03</div></div>
+  <div class="intro">
+    <div class="intro-panel">
+      <h2>Reinventing Carrière</h2>
+      <div class="org" data-fr="Cabinet de coaching certifié ICF (PCC), Paris" data-en="ICF (PCC) certified coaching firm, Paris">Cabinet de coaching certifié ICF (PCC), Paris</div>
+      <p class="desc" data-fr="Développement complet d'un cours en ligne de formation carrière, de la conception à la mise en marché, pour un cabinet qui accompagne les personnes souhaitant travailler à l'international." data-en="Full-cycle development of an online career course, from concept to launch, for a firm supporting people who want to work abroad.">Développement complet d'un cours en ligne de formation carrière, de la conception à la mise en marché, pour un cabinet qui accompagne les personnes souhaitant travailler à l'international.</p>
+      <div class="loc"><span>Paris, France</span><span>06-09/2023</span></div>
     </div>
-
-    <div class="block">
-        <h3 class="h-mid display" data-fr="Les objectifs" data-en="The goals">Les objectifs</h3>
-        <div class="box">
-                <ul class="check">
-                    <li data-fr="Lancer un produit de formation en ligne complet en deux mois" data-en="Launch a complete online training product in two months">Lancer un produit de formation en ligne complet en deux mois</li>
-                    <li data-fr="Positionner l'offre face aux concurrents avec un prix cohérent" data-en="Position the offer against competitors with coherent pricing">Positionner l'offre face aux concurrents avec un prix cohérent</li>
-                    <li data-fr="Créer un workflow de production réutilisable" data-en="Create a reusable production workflow">Créer un workflow de production réutilisable</li>
-                    <li data-fr="Activer les canaux d'acquisition existants" data-en="Activate existing acquisition channels">Activer les canaux d'acquisition existants</li>
-                </ul>
-            </div>
+    <div class="intro-visual"><div class="im"><img src="Banner.jpg" alt="Banner" data-file="Banner.jpg" loading="lazy"></div><div class="cap" data-fr="Bannières, landing page, Reels" data-en="Banners, landing page, Reels">Bannières, landing page, Reels</div></div>
+  </div>
+  <div class="tabs">
+    <div class="tablist" role="tablist">
+      <button class="tab" role="tab" aria-selected="true" data-fr="Objectifs & outils" data-en="Goals & tools">Objectifs & outils</button>
+      <button class="tab" role="tab" aria-selected="false" data-fr="Tâches" data-en="Tasks">Tâches</button>
+      <button class="tab" role="tab" aria-selected="false" data-fr="Résultats" data-en="Results">Résultats</button>
     </div>
-    <div class="block two">
-        <div class="card"><div class="lbl" data-fr="Compétences mobilisées" data-en="Skills applied">Compétences mobilisées</div><div class="pills">
-                <span class="pill" data-fr="Gestion de projet" data-en="Project management">Gestion de projet</span><span class="pill" data-fr="Analyse concurrentielle" data-en="Competitive analysis">Analyse concurrentielle</span><span class="pill">Pricing</span><span class="pill">Go-to-market</span><span class="pill" data-fr="Production vidéo" data-en="Video production">Production vidéo</span><span class="pill">Landing page</span>
-            </div></div>
-        <div class="card"><div class="lbl" data-fr="Outils & apps" data-en="Tools & apps">Outils & apps</div><div class="tools">
-                <div class="tool"><div class="ic">P</div><div><b>Podia</b><small data-fr="Hébergement du cours et page produit" data-en="Course hosting and product page">Hébergement du cours et page produit</small></div></div>
-                <div class="tool"><div class="ic">C</div><div><b>CapCut</b><small data-fr="Montage de 3,5 h de contenu de cours" data-en="Editing of 3.5h of course content">Montage de 3,5 h de contenu de cours</small></div></div>
-                <div class="tool"><div class="ic">C</div><div><b>Canva</b><small data-fr="Bannières, visuels promotionnels, Reels" data-en="Banners, promotional visuals, Reels">Bannières, visuels promotionnels, Reels</small></div></div>
-                <div class="tool"><div class="ic">N</div><div><b>Notion</b><small data-fr="Planning de production et suivi des phases" data-en="Production planning and phase tracking">Planning de production et suivi des phases</small></div></div>
-            </div></div>
+    <div class="panel" role="tabpanel">
+      <div class="box"><ul class="check cols">
+        <li data-fr="Lancer un produit de formation complet en deux mois" data-en="Launch a complete training product in two months">Lancer un produit de formation complet en deux mois</li>
+        <li data-fr="Positionner l'offre avec un prix cohérent" data-en="Position the offer with coherent pricing">Positionner l'offre avec un prix cohérent</li>
+        <li data-fr="Créer un workflow de production réutilisable" data-en="Create a reusable production workflow">Créer un workflow de production réutilisable</li>
+        <li data-fr="Activer les canaux d'acquisition existants" data-en="Activate existing acquisition channels">Activer les canaux d'acquisition existants</li>
+      </ul></div>
+      <div class="two">
+        <div class="card"><div class="lbl" data-fr="Compétences mobilisées" data-en="Skills applied">Compétences mobilisées</div><div class="pills"><span class="pill" data-fr="Gestion de projet" data-en="Project management">Gestion de projet</span><span class="pill" data-fr="Analyse concurrentielle" data-en="Competitive analysis">Analyse concurrentielle</span><span class="pill">Pricing</span><span class="pill">Go-to-market</span><span class="pill" data-fr="Production vidéo" data-en="Video production">Production vidéo</span></div></div>
+        <div class="card"><div class="lbl" data-fr="Outils" data-en="Tools">Outils</div><div class="tools">
+          <div class="tool"><div class="ic">P</div><div><b>Podia</b><small data-fr="Hébergement du cours" data-en="Course hosting">Hébergement du cours</small></div></div>
+          <div class="tool"><div class="ic">C</div><div><b>CapCut</b><small data-fr="Montage de 3,5 h de cours" data-en="Editing 3.5h of course">Montage de 3,5 h de cours</small></div></div>
+          <div class="tool"><div class="ic">C</div><div><b>Canva</b><small data-fr="Visuels promotionnels" data-en="Promotional visuals">Visuels promotionnels</small></div></div>
+          <div class="tool"><div class="ic">N</div><div><b>Notion</b><small data-fr="Planning de production" data-en="Production planning">Planning de production</small></div></div>
+        </div></div>
+      </div>
     </div>
-
-    <div class="block tasks">
-        <h3 class="h-mid display" data-fr="Les tâches" data-en="The tasks">Les tâches</h3>
-        <div class="task-grid">
-
-        <div class="task">
-            <h4><span class="k">01</span><span data-fr="Étude de marché & concept" data-en="Market research & concept">Étude de marché & concept</span></h4>
-            <ul>
-                <li data-fr="Analyse des concurrents : positionnement, offre produit, structure tarifaire et stratégie de contenu" data-en="<span class=kw>Competitor analysis</span>: positioning, product offering, <span class=kw>pricing structure</span> and content strategy">Analyse des concurrents : positionnement, offre produit, structure tarifaire et stratégie de contenu</li>
-                <li data-fr="Personas cibles et stratégies de positionnement basées sur les insights marché" data-en="Target personas and positioning strategies based on market insights">Personas cibles et stratégies de positionnement basées sur les insights marché</li>
-                <li data-fr="Concept board alignant les fonctionnalités du produit avec les besoins de l'audience" data-en="Concept board aligning product features with audience needs">Concept board alignant les fonctionnalités du produit avec les besoins de l'audience</li>
-            </ul>
-        </div>
-
-        <div class="task">
-            <h4><span class="k">02</span><span data-fr="Production & gestion de projet" data-en="Production & project management">Production & gestion de projet</span></h4>
-            <ul>
-                <li data-fr="Coordination de la production de 26 sessions de cours en 2 mois, de bout en bout, avec respect des délais à chaque phase" data-en="Coordinated the <span class=kw>end-to-end production of 26 course sessions</span> in 2 months, meeting deadlines at every phase">Coordination de la production de 26 sessions de cours en 2 mois, de bout en bout, avec respect des délais à chaque phase</li>
-                <li data-fr="Production de 3,5 h de vidéos de formation et de supports pédagogiques digitaux, bannières pour la landing page et visuels promotionnels" data-en="Produced 3.5h of training videos and digital learning materials, landing page banners and promotional visuals">Production de 3,5 h de vidéos de formation et de supports pédagogiques digitaux, bannières pour la landing page et visuels promotionnels</li>
-                <li data-fr="Organisation d'un webinaire : déroulé et coordination avec les intervenants" data-en="Organized a webinar: flow planning and coordination with guest speakers">Organisation d'un webinaire : déroulé et coordination avec les intervenants</li>
-            </ul>
-        </div>
-
-        <div class="task">
-            <h4><span class="k">03</span><span data-fr="Prix & go-to-market" data-en="Pricing & go-to-market">Prix & go-to-market</span></h4>
-            <ul>
-                <li data-fr="Stratégie tarifaire basée sur l'analyse concurrentielle et le positionnement" data-en="<span class=kw>Pricing strategy</span> based on competitive analysis and positioning">Stratégie tarifaire basée sur l'analyse concurrentielle et le positionnement</li>
-                <li data-fr="Déploiement go-to-market : canaux d'acquisition et programmes d'affiliation" data-en="<span class=kw>Go-to-market</span> rollout: acquisition channels and affiliate programs">Déploiement go-to-market : canaux d'acquisition et programmes d'affiliation</li>
-                <li data-fr="Optimisation du contenu marketing sur les canaux existants : articles du site, emails, plateformes de promotion" data-en="Optimized marketing content on existing channels: website articles, emails, promotion platforms">Optimisation du contenu marketing sur les canaux existants : articles du site, emails, plateformes de promotion</li>
-            </ul>
-        </div>
-        </div>
+    <div class="panel" role="tabpanel" hidden>
+      <div class="task-grid">
+        <div class="task"><h4 data-fr="Étude de marché & concept" data-en="Market research & concept">Étude de marché & concept</h4><ul>
+          <li data-fr="Analyse des concurrents : positionnement, offre, prix, contenu" data-en="<span class=kw>Competitor analysis</span>: positioning, offer, pricing, content">Analyse des concurrents : positionnement, offre, prix, contenu</li>
+          <li data-fr="Personas cibles et positionnement" data-en="Target personas and positioning">Personas cibles et positionnement</li>
+          <li data-fr="Concept board produit / audience" data-en="Product / audience concept board">Concept board produit / audience</li></ul></div>
+        <div class="task"><h4 data-fr="Production & gestion de projet" data-en="Production & project management">Production & gestion de projet</h4><ul>
+          <li data-fr="Production de 26 sessions en 2 mois, délais tenus à chaque phase" data-en="<span class=kw>26 course sessions in 2 months</span>, deadlines met at every phase">Production de 26 sessions en 2 mois, délais tenus à chaque phase</li>
+          <li data-fr="3,5 h de vidéos de formation et supports digitaux" data-en="3.5h of training videos and digital materials">3,5 h de vidéos de formation et supports digitaux</li>
+          <li data-fr="Organisation d'un webinaire avec intervenants" data-en="Organized a webinar with guest speakers">Organisation d'un webinaire avec intervenants</li></ul></div>
+        <div class="task"><h4 data-fr="Prix & go-to-market" data-en="Pricing & go-to-market">Prix & go-to-market</h4><ul>
+          <li data-fr="Stratégie tarifaire basée sur le benchmark" data-en="<span class=kw>Pricing strategy</span> based on the benchmark">Stratégie tarifaire basée sur le benchmark</li>
+          <li data-fr="Canaux d'acquisition et programmes d'affiliation" data-en="Acquisition channels and affiliate programs">Canaux d'acquisition et programmes d'affiliation</li>
+          <li data-fr="Optimisation des contenus : articles, emails, plateformes" data-en="Optimized content: articles, emails, platforms">Optimisation des contenus : articles, emails, plateformes</li></ul></div>
+      </div>
     </div>
-
-    
-
-    <div class="block results">
-        <h3 class="h-mid display" data-fr="Les résultats" data-en="The results">Les résultats</h3>
-        <div>
-            <div class="box">
-                <div class="stats">
-                    <div class="stat"><b>26</b><span data-fr="sessions de cours lancées" data-en="course sessions launched">sessions de cours lancées</span></div>
-                    <div class="stat"><b>2</b><span data-fr="mois de production" data-en="months of production">mois de production</span></div>
-                    <div class="stat"><b data-fr="3,5 h" data-en="3.5h">3,5 h</b><span data-fr="de contenu produit" data-en="of content produced">de contenu produit</span></div>
-                </div>
-                <ul class="check">
-                    <li data-fr="Forts taux d'engagement sur les sessions livrées" data-en="Strong engagement rates on the delivered sessions">Forts taux d'engagement sur les sessions livrées</li>
-                    <li data-fr="Workflow de production scalable, réutilisé pour les créations suivantes" data-en="Scalable production workflow, reused for later content">Workflow de production scalable, réutilisé pour les créations suivantes</li>
-                </ul>
-            </div>
-            <div class="refs">
-                <a href="https://reinventingcarriere.com/" target="_blank" rel="noopener"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="10" cy="10" r="7"/><path d="M3 10h14M10 3c-2 2.5-2 11.5 0 14M10 3c2 2.5 2 11.5 0 14"/></svg><span data-fr="Site de l'entreprise" data-en="Company website">Site de l'entreprise</span></a>
-                <a href="https://member.reinventingcarriere.com/career" target="_blank" rel="noopener"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 2h8l4 4v12a1 1 0 01-1 1H6a1 1 0 01-1-1V3a1 1 0 011-1z"/><path d="M14 2v4h4M8 10h4M8 13h6"/></svg><span data-fr="Page produit" data-en="Product page">Page produit</span></a>
-            </div>
+    <div class="panel" role="tabpanel" hidden>
+      <div class="box">
+        <div class="stats">
+          <div class="stat"><b class="count" data-to="26" data-dec="0">0</b><span data-fr="sessions lancées" data-en="sessions launched">sessions lancées</span></div>
+          <div class="stat"><b class="count" data-to="2" data-dec="0">0</b><span data-fr="mois de production" data-en="months of production">mois de production</span></div>
+          <div class="stat"><b class="count" data-to="3.5" data-dec="1" data-unit="h">0</b><span data-fr="de contenu produit" data-en="of content produced">de contenu produit</span></div>
         </div>
-        <div class="results-visual">
-            <svg class="spark a" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c1 6 5 10 12 12-7 2-11 6-12 12-1-6-5-10-12-12C7 10 11 6 12 0z"/></svg>
-            <img src="Courses%20video%20editing_Paris.webp" alt="Course editing" loading="lazy">
-        </div>
+        <ul class="check"><li data-fr="Workflow de production réutilisé pour les créations suivantes" data-en="Production workflow reused for later content">Workflow de production réutilisé pour les créations suivantes</li></ul>
+      </div>
+      <div class="refs">
+        <a href="https://reinventingcarriere.com/" target="_blank" rel="noopener" data-fr="Site de l'entreprise" data-en="Company website">Site de l'entreprise</a>
+        <a href="https://member.reinventingcarriere.com/career" target="_blank" rel="noopener" data-fr="Page produit" data-en="Product page">Page produit</a>
+      </div>
+      <div class="gallery c3">
+        <div class="shot"><div class="im"><img src="Product%20Strategy_paris.png" alt="Product strategy" data-file="Product Strategy_paris.png" loading="lazy"></div><div class="cap" data-fr="Persona et concept board" data-en="Persona and concept board">Persona et concept board</div></div>
+        <div class="shot"><div class="im"><img src="Competitive%20Analysis_paris.png" alt="Competitive analysis" data-file="Competitive Analysis_paris.png" loading="lazy"></div><div class="cap" data-fr="Analyse concurrentielle" data-en="Competitive analysis">Analyse concurrentielle</div></div>
+        <div class="shot"><div class="im"><img src="Courses%20video%20editing_Paris.webp" alt="Video editing" data-file="Courses video editing_Paris.webp" loading="lazy"></div><div class="cap" data-fr="Montage des 26 sessions" data-en="Editing the 26 sessions">Montage des 26 sessions</div></div>
+      </div>
     </div>
-
-    <div class="block gallery"><div class="lbl" data-fr="Galerie" data-en="Gallery">Galerie</div><div class="grid c3">
-        <div class="shot"><img src="Product%20Strategy_paris.png" alt="Product Strategy" loading="lazy"><div class="cap" data-fr="Stratégie produit : persona, concept board, audience cible" data-en="Product strategy: persona, concept board, target audience">Stratégie produit : persona, concept board, audience cible</div></div>
-        <div class="shot"><img src="Competitive%20Analysis_paris.png" alt="Competitive Analysis" loading="lazy"><div class="cap" data-fr="Analyse concurrentielle : positionnement, offre, prix, benchmark" data-en="Competitive analysis: positioning, offer, pricing, benchmark">Analyse concurrentielle : positionnement, offre, prix, benchmark</div></div>
-        <div class="shot"><img src="Courses%20video%20editing_Paris.webp" alt="Courses video editing" loading="lazy"><div class="cap" data-fr="Montage vidéo des sessions de formation (26 sessions, 3,5 h)" data-en="Training course video editing (26 sessions, 3.5h)">Montage vidéo des sessions de formation (26 sessions, 3,5 h)</div></div>
-    </div></div>
-
-    <div class="case-foot"><span data-fr="Projet 03 | Reinventing Carrière" data-en="Project 03 | Reinventing Carrière">Projet 03 | Reinventing Carrière</span><span>Product Strategy</span></div>
+  </div>
+  <div class="case-foot"><span data-fr="Projet 03 | Reinventing Carrière" data-en="Project 03 | Reinventing Carrière">Projet 03 | Reinventing Carrière</span><span>Product Strategy</span></div>
 </div>
 </section>
 
-<!-- ===================================================== 04 ===================================================== -->
-<section class="case" id="community">
+<!-- 04 Linkee -->
+<section class="case alt" id="community">
 <div class="inner">
-    <div class="case-head"><div class="marquee" aria-hidden="true">Community Community Community Community Community</div><div class="case-num">04</div></div>
-
-    <div class="intro">
-        <div class="intro-panel">
-            <h2>Linkee</h2>
-            <div class="org" data-fr="Association anti-gaspillage alimentaire · Bordeaux" data-en="Food waste reduction nonprofit · Bordeaux">Association anti-gaspillage alimentaire · Bordeaux</div>
-            <p class="desc" data-fr="Animation d'une communauté de 550+ bénévoles et accompagnement de 1 000+ bénéficiaires. Maintien des relations avec les partenaires existants, organisation de 30+ événements et communication hebdomadaire par newsletter, email, WhatsApp et téléphone." data-en="Managed a community of 550+ volunteers and supported 1,000+ beneficiaries. Maintained relationships with existing partners, organized 30+ events and handled weekly communications via newsletter, email, WhatsApp and phone.">Animation d'une communauté de 550+ bénévoles et accompagnement de 1 000+ bénéficiaires. Maintien des relations avec les partenaires existants, organisation de 30+ événements et communication hebdomadaire par newsletter, email, WhatsApp et téléphone.</p>
-            <div class="loc">
-                <span><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M10 18s6-5.2 6-10a6 6 0 10-12 0c0 4.8 6 10 6 10z"/><circle cx="10" cy="8" r="2"/></svg>Bordeaux, France</span>
-                <span><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="4" width="14" height="13" rx="1.5"/><path d="M3 8h14M7 2v4M13 2v4"/></svg>08/2025 – 02/2026</span>
-            </div>
-        </div>
-        <div class="intro-visual">
-            <img src="Linkee_Distrib.jpeg" alt="Distribution" loading="lazy">
-            <div class="cap" data-fr="Distribution hebdomadaire : 2 sessions/semaine, ~500 bénéficiaires par session" data-en="Weekly distribution: 2 sessions/week, ~500 beneficiaries per session">Distribution hebdomadaire : 2 sessions/semaine, ~500 bénéficiaires par session</div>
-        </div>
+  <div class="case-head"><div class="marquee" aria-hidden="true"><div>Community • Community • Community • Community • Community • Community • </div></div><div class="case-num">04</div></div>
+  <div class="intro">
+    <div class="intro-panel">
+      <h2>Linkee</h2>
+      <div class="org" data-fr="Association anti-gaspillage alimentaire, Bordeaux" data-en="Food waste nonprofit, Bordeaux">Association anti-gaspillage alimentaire, Bordeaux</div>
+      <p class="desc" data-fr="Animation d'une communauté de 550+ bénévoles et accompagnement de 1 000+ bénéficiaires. Relations avec les partenaires existants, 30+ événements organisés et communication hebdomadaire par newsletter, email, WhatsApp et téléphone." data-en="Managed a community of 550+ volunteers and supported 1,000+ beneficiaries. Kept relationships with existing partners, organized 30+ events and ran weekly communication by newsletter, email, WhatsApp and phone.">Animation d'une communauté de 550+ bénévoles et accompagnement de 1 000+ bénéficiaires. Relations avec les partenaires existants, 30+ événements organisés et communication hebdomadaire par newsletter, email, WhatsApp et téléphone.</p>
+      <div class="loc"><span>Bordeaux, France</span><span>08/2025-02/2026</span></div>
     </div>
+    <div class="intro-visual"><div class="im"><img src="Linkee_Distrib.jpeg" alt="Distribution" data-file="Linkee_Distrib.jpeg" loading="lazy"></div><div class="cap" data-fr="2 distributions par semaine, ~500 bénéficiaires par session" data-en="2 distributions a week, ~500 beneficiaries per session">2 distributions par semaine, ~500 bénéficiaires par session</div></div>
+  </div>
+  <div class="tabs">
+    <div class="tablist" role="tablist">
+      <button class="tab" role="tab" aria-selected="true" data-fr="Objectifs & outils" data-en="Goals & tools">Objectifs & outils</button>
+      <button class="tab" role="tab" aria-selected="false" data-fr="Tâches" data-en="Tasks">Tâches</button>
+      <button class="tab" role="tab" aria-selected="false" data-fr="Résultats" data-en="Results">Résultats</button>
+    </div>
+    <div class="panel" role="tabpanel">
+      <div class="box"><ul class="check cols">
+        <li data-fr="Assurer chaque distribution avec assez de bénévoles" data-en="Staff every distribution">Assurer chaque distribution avec assez de bénévoles</li>
+        <li data-fr="Fluidifier l'onboarding des nouveaux bénévoles" data-en="Smooth new volunteer onboarding">Fluidifier l'onboarding des nouveaux bénévoles</li>
+        <li data-fr="Maintenir la confiance des partenaires" data-en="Keep partners' trust">Maintenir la confiance des partenaires</li>
+        <li data-fr="Informer les bénéficiaires chaque semaine" data-en="Inform beneficiaries every week">Informer les bénéficiaires chaque semaine</li>
+      </ul></div>
+      <div class="two">
+        <div class="card"><div class="lbl" data-fr="Compétences mobilisées" data-en="Skills applied">Compétences mobilisées</div><div class="pills"><span class="pill">Community management</span><span class="pill" data-fr="Coordination d'événements" data-en="Event coordination">Coordination d'événements</span><span class="pill">Onboarding</span><span class="pill" data-fr="Relations partenaires" data-en="Partner relations">Relations partenaires</span><span class="pill" data-fr="Médiation" data-en="Mediation">Médiation</span></div></div>
+        <div class="card"><div class="lbl" data-fr="Outils" data-en="Tools">Outils</div><div class="tools">
+          <div class="tool"><div class="ic">S</div><div><b>Sarbacane</b><small data-fr="Newsletter à 5 000+ abonnés" data-en="Newsletter to 5,000+ subscribers">Newsletter à 5 000+ abonnés</small></div></div>
+          <div class="tool"><div class="ic">A</div><div><b>Airtable</b><small data-fr="Base bénévoles" data-en="Volunteer database">Base bénévoles</small></div></div>
+          <div class="tool"><div class="ic">G</div><div><b>Google Apps Script</b><small data-fr="Automatisation des emails" data-en="Email automation">Automatisation des emails</small></div></div>
+          <div class="tool"><div class="ic">J</div><div><b>JeVeuxAider</b><small data-fr="Recrutement de bénévoles" data-en="Volunteer recruitment">Recrutement de bénévoles</small></div></div>
+        </div></div>
+      </div>
+    </div>
+    <div class="panel" role="tabpanel" hidden>
+      <div class="task-grid">
+        <div class="task"><h4 data-fr="Communauté bénévole" data-en="Volunteer community">Communauté bénévole</h4><ul>
+          <li data-fr="Onboarding d'environ 10 nouveaux bénévoles par semaine, avec suivi individualisé" data-en="Onboarded about <span class=kw>10 new volunteers a week</span>, with individual follow-up">Onboarding d'environ 10 nouveaux bénévoles par semaine, avec suivi individualisé</li>
+          <li data-fr="Guides pour les Linkers et SOP ajoutées là où elles manquaient" data-en="Guides for Linkers and SOPs added where missing">Guides pour les Linkers et SOP ajoutées là où elles manquaient</li>
+          <li data-fr="Programme bénévoles KEDGE géré de bout en bout" data-en="KEDGE volunteer programme run end to end">Programme bénévoles KEDGE géré de bout en bout</li></ul></div>
+        <div class="task"><h4 data-fr="Événements & logistique" data-en="Events & logistics">Événements & logistique</h4><ul>
+          <li data-fr="30+ événements : prospection B2B, ateliers cuisine, stands, collectes" data-en="<span class=kw>30+ events</span>: B2B prospection, cooking workshops, stands, food drives">30+ événements : prospection B2B, ateliers cuisine, stands, collectes</li>
+          <li data-fr="2 distributions hebdomadaires, ~500 bénéficiaires par session" data-en="2 weekly distributions, ~500 beneficiaries each">2 distributions hebdomadaires, ~500 bénéficiaires par session</li>
+          <li data-fr="Adaptation aux imprévus : approvisionnement, météo, manque de bras" data-en="Adapted to the unexpected: supply, weather, short staffing">Adaptation aux imprévus : approvisionnement, météo, manque de bras</li></ul></div>
+        <div class="task"><h4 data-fr="Partenaires & communication" data-en="Partners & communication">Partenaires & communication</h4><ul>
+          <li data-fr="Point de contact entre partenaires, bénévoles, bénéficiaires et équipe nationale" data-en="Point of contact between partners, volunteers, beneficiaries and the national team">Point de contact entre partenaires, bénévoles, bénéficiaires et équipe nationale</li>
+          <li data-fr="Newsletter hebdomadaire Sarbacane à 5 000+ abonnés" data-en="Weekly Sarbacane newsletter to <span class=kw>5,000+ subscribers</span>">Newsletter hebdomadaire Sarbacane à 5 000+ abonnés</li>
+          <li data-fr="Reporting hebdomadaire à l'équipe nationale" data-en="Weekly reporting to the national team">Reporting hebdomadaire à l'équipe nationale</li></ul></div>
+      </div>
+    </div>
+    <div class="panel" role="tabpanel" hidden>
+      <div class="box">
+        <div class="stats">
+          <div class="stat"><b class="count" data-to="550" data-dec="0" data-plus2="1">0</b><span data-fr="bénévoles" data-en="volunteers">bénévoles</span></div>
+          <div class="stat"><b class="count" data-to="1000" data-dec="0" data-plus2="1">0</b><span data-fr="bénéficiaires" data-en="beneficiaries">bénéficiaires</span></div>
+          <div class="stat"><b class="count" data-to="30" data-dec="0" data-plus2="1">0</b><span data-fr="événements" data-en="events">événements</span></div>
+        </div>
+        <ul class="check">
+          <li data-fr="Aucune distribution manquée sur la période" data-en="Zero missed distributions over the period">Aucune distribution manquée sur la période</li>
+          <li data-fr="Processus d'onboarding documenté et transmissible" data-en="Documented, transferable onboarding process">Processus d'onboarding documenté et transmissible</li>
+        </ul>
+      </div>
+      <div class="gallery c3">
+        <div class="shot"><div class="im"><img src="Linkee_Distrib.jpeg" alt="Distribution" data-file="Linkee_Distrib.jpeg" loading="lazy"></div><div class="cap" data-fr="Distribution et onboarding sur le terrain" data-en="Distribution and on-site onboarding">Distribution et onboarding sur le terrain</div></div>
+        <div class="shot"><div class="im"><img src="Linkee_Stand.jpeg" alt="Stand" data-file="Linkee_Stand.jpeg" loading="lazy"></div><div class="cap" data-fr="Stand sur forum étudiant" data-en="Student forum stand">Stand sur forum étudiant</div></div>
+        <div class="shot"><div class="im"><img src="reconditionment.JPG" alt="Reconditionnement" data-file="reconditionment.JPG" loading="lazy"></div><div class="cap" data-fr="Reconditionnement en portions" data-en="Food reconditioning">Reconditionnement en portions</div></div>
+      </div>
+    </div>
+  </div>
+  <div class="case-foot"><span data-fr="Projet 04 | Linkee" data-en="Project 04 | Linkee">Projet 04 | Linkee</span><span>Community & Project Management</span></div>
+</div>
+</section>
 
-    <div class="block">
-        <h3 class="h-mid display" data-fr="Les objectifs" data-en="The goals">Les objectifs</h3>
+<!-- 05 Research -->
+<section class="case" id="research">
+<div class="inner">
+  <div class="case-head"><div class="marquee" aria-hidden="true"><div>Consumer Research • Consumer Research • Consumer Research • Consumer Research • </div></div><div class="case-num">05</div></div>
+  <div class="intro">
+    <div class="intro-panel">
+      <h2 data-fr="Mémoire de master" data-en="Master's thesis">Mémoire de master</h2>
+      <div class="org">EM Strasbourg Business School</div>
+      <p class="desc" data-fr="Dans quelle mesure les initiatives éthiques et les valeurs personnelles poussent-elles les consommateurs à récompenser ou à sanctionner les marques de mode ?" data-en="To what extent do ethical initiatives and personal values drive consumers to reward or punish fashion brands?">Dans quelle mesure les initiatives éthiques et les valeurs personnelles poussent-elles les consommateurs à récompenser ou à sanctionner les marques de mode ?</p>
+      <div class="loc"><span>Strasbourg, France</span><span>2025</span><span data-fr="Note : 15/20" data-en="Grade: 15/20">Note : 15/20</span></div>
+    </div>
+    <div class="intro-visual"><div class="im" style="background:#C9D3C0"><img src="thesis_model.jpg" alt="Modèle de recherche" data-file="thesis_model.jpg" loading="lazy" style="object-fit:contain"></div><div class="cap" data-fr="Modèle de recherche : valeurs personnelles, engagements éthiques et intention de récompenser ou de sanctionner (H1 à H9)" data-en="Research model: personal values, ethical claims and intention to reward or punish (H1 to H9)">Modèle de recherche : valeurs personnelles, engagements éthiques et intention de récompenser ou de sanctionner (H1 à H9)</div></div>
+  </div>
+  <div class="tabs">
+    <div class="tablist" role="tablist">
+      <button class="tab" role="tab" aria-selected="true" data-fr="Méthode" data-en="Method">Méthode</button>
+      <button class="tab" role="tab" aria-selected="false" data-fr="Résultats" data-en="Findings">Résultats</button>
+      <button class="tab" role="tab" aria-selected="false" data-fr="Pour les marques" data-en="For brands">Pour les marques</button>
+    </div>
+    <div class="panel" role="tabpanel">
+      <div class="task-grid">
+        <div class="task"><h4 data-fr="Cadre théorique" data-en="Framework">Cadre théorique</h4><ul>
+          <li data-fr="Théorie du comportement planifié" data-en="<span class=kw>Theory of Planned Behavior</span>">Théorie du comportement planifié</li>
+          <li data-fr="4 valeurs personnelles, 3 types d'engagements éthiques (environnement, bien-être animal, social)" data-en="4 personal values, 3 ethical claims (environment, animal welfare, social)">4 valeurs personnelles, 3 types d'engagements éthiques (environnement, bien-être animal, social)</li>
+          <li data-fr="9 hypothèses, dont un effet modérateur" data-en="9 hypotheses, including a moderating effect">9 hypothèses, dont un effet modérateur</li></ul></div>
+        <div class="task"><h4 data-fr="Collecte" data-en="Data collection">Collecte</h4><ul>
+          <li data-fr="Enquête Qualtrics dans plusieurs pays, Europe et Afrique" data-en="Qualtrics survey across several countries in Europe and Africa">Enquête Qualtrics dans plusieurs pays, Europe et Afrique</li>
+          <li data-fr="166 répondants, 41 questions, échelle de Likert à 7 points" data-en="<span class=kw>166 respondents</span>, 41 questions, 7-point Likert scale">166 répondants, 41 questions, échelle de Likert à 7 points</li></ul></div>
+        <div class="task"><h4 data-fr="Analyse" data-en="Analysis">Analyse</h4><ul>
+          <li data-fr="Régression multiple et ANOVA à deux facteurs (XLStat)" data-en="<span class=kw>Multiple regression and two-way ANOVA</span> (XLStat)">Régression multiple et ANOVA à deux facteurs (XLStat)</li>
+          <li data-fr="Effets modérateurs : âge, genre, éducation, nationalité" data-en="Moderators: age, gender, education, nationality">Effets modérateurs : âge, genre, éducation, nationalité</li></ul></div>
+      </div>
+    </div>
+    <div class="panel" role="tabpanel" hidden>
+      <div class="results">
         <div class="box">
-                <ul class="check">
-                    <li data-fr="Assurer chaque distribution avec assez de bénévoles" data-en="Staff every distribution with enough volunteers">Assurer chaque distribution avec assez de bénévoles</li>
-                    <li data-fr="Fluidifier l'onboarding des nouveaux bénévoles" data-en="Smooth the onboarding of new volunteers">Fluidifier l'onboarding des nouveaux bénévoles</li>
-                    <li data-fr="Maintenir la confiance des partenaires par une exécution fiable" data-en="Keep partners' trust through reliable execution">Maintenir la confiance des partenaires par une exécution fiable</li>
-                    <li data-fr="Tenir les bénéficiaires informés chaque semaine" data-en="Keep beneficiaries informed every week">Tenir les bénéficiaires informés chaque semaine</li>
-                </ul>
-            </div>
+          <div class="stats">
+            <div class="stat"><b class="count" data-to="166" data-dec="0">0</b><span data-fr="répondants" data-en="respondents">répondants</span></div>
+            <div class="stat"><b class="count" data-to="9" data-dec="0">0</b><span data-fr="hypothèses testées" data-en="hypotheses tested">hypothèses testées</span></div>
+            <div class="stat"><b>15/20</b><span data-fr="note du mémoire" data-en="thesis grade">note du mémoire</span></div>
+          </div>
+          <ul class="check">
+            <li data-fr="La durabilité environnementale pèse fortement dans les choix de mode" data-en="Environmental sustainability weighs heavily in fashion choices">La durabilité environnementale pèse fortement dans les choix de mode</li>
+            <li data-fr="Le bien-être animal compte dans le choix des marques" data-en="Animal welfare matters in brand selection">Le bien-être animal compte dans le choix des marques</li>
+            <li data-fr="Les valeurs personnelles orientent le soutien ou le rejet d'une marque" data-en="Personal values shape support for or avoidance of a brand">Les valeurs personnelles orientent le soutien ou le rejet d'une marque</li>
+          </ul>
+        </div>
+        <div class="ba">
+          <h5 data-fr="Quelle valeur influence le comportement éthique ?" data-en="Which value drives ethical behavior?">Quelle valeur influence le comportement éthique ?</h5>
+          <div class="hyp" id="hyp">
+            <button aria-pressed="true" data-v="0">Self-transcendence</button>
+            <button aria-pressed="false" data-v="1">Conservation</button>
+            <button aria-pressed="false" data-v="2">Openness</button>
+            <button aria-pressed="false" data-v="3">Self-enhancement</button>
+          </div>
+          <div class="hyp-out" aria-live="polite"><div class="gauge" id="gauge">+</div><p id="hypText"></p></div>
+          <p class="note" data-fr="Cliquez sur une valeur pour voir le résultat de la régression." data-en="Click a value to see the regression result.">Cliquez sur une valeur pour voir le résultat de la régression.</p>
+        </div>
+      </div>
     </div>
-    <div class="block two">
-        <div class="card"><div class="lbl" data-fr="Compétences mobilisées" data-en="Skills applied">Compétences mobilisées</div><div class="pills">
-                <span class="pill">Community management</span><span class="pill" data-fr="Coordination d'événements" data-en="Event coordination">Coordination d'événements</span><span class="pill">Onboarding</span><span class="pill" data-fr="Relations partenaires" data-en="Partner relations">Relations partenaires</span><span class="pill">Newsletter</span><span class="pill" data-fr="Médiation" data-en="Mediation">Médiation</span>
-            </div></div>
-        <div class="card"><div class="lbl" data-fr="Outils & apps" data-en="Tools & apps">Outils & apps</div><div class="tools">
-                <div class="tool"><div class="ic">S</div><div><b>Sarbacane</b><small data-fr="Newsletter hebdomadaire à 5 000+ abonnés" data-en="Weekly newsletter to 5,000+ subscribers">Newsletter hebdomadaire à 5 000+ abonnés</small></div></div>
-                <div class="tool"><div class="ic">A</div><div><b>Airtable</b><small data-fr="Base bénévoles et fiches de suivi" data-en="Volunteer database and tracking records">Base bénévoles et fiches de suivi</small></div></div>
-                <div class="tool"><div class="ic">W</div><div><b>WhatsApp</b><small data-fr="Accompagnement quotidien et onboarding" data-en="Daily support and onboarding">Accompagnement quotidien et onboarding</small></div></div>
-                <div class="tool"><div class="ic">J</div><div><b>JeVeuxAider</b><small data-fr="Recrutement de bénévoles" data-en="Volunteer recruitment">Recrutement de bénévoles</small></div></div>
-                <div class="tool"><div class="ic">G</div><div><b>Google Sheets · Docs · Apps Script</b><small data-fr="Planning des événements, gestion partenaires, automatisation des emails" data-en="Event planning, partner management, email automation">Planning des événements, gestion partenaires, automatisation des emails</small></div></div>
-            </div></div>
+    <div class="panel" role="tabpanel" hidden>
+      <div class="box"><ul class="check cols">
+        <li data-fr="Aligner l'offre sur les attentes éthiques des consommateurs pour rester compétitive" data-en="Align the offer with consumers' ethical expectations to stay competitive">Aligner l'offre sur les attentes éthiques des consommateurs pour rester compétitive</li>
+        <li data-fr="La responsabilité sociale prend de plus en plus de poids sur le marché de la mode" data-en="Social responsibility carries growing weight in the fashion market">La responsabilité sociale prend de plus en plus de poids sur le marché de la mode</li>
+        <li data-fr="Les consommateurs engagés font avancer les tendances du marché" data-en="Socially conscious consumers increasingly drive market trends">Les consommateurs engagés font avancer les tendances du marché</li>
+        <li data-fr="La transparence et un engagement sincère construisent la confiance" data-en="Transparency and real commitment build consumer trust">La transparence et un engagement sincère construisent la confiance</li>
+      </ul></div>
     </div>
+  </div>
+  <div class="case-foot"><span data-fr="Projet 05 | Mémoire" data-en="Project 05 | Thesis">Projet 05 | Mémoire</span><span>Consumer Research</span></div>
+</div>
+</section>
 
-    <div class="block tasks">
-        <h3 class="h-mid display" data-fr="Les tâches" data-en="The tasks">Les tâches</h3>
-        <div class="task-grid">
-
-        <div class="task">
-            <h4><span class="k">01</span><span data-fr="Communauté bénévole" data-en="Volunteer community">Communauté bénévole</span></h4>
-            <ul>
-                <li data-fr="Animation d'une communauté de 550+ bénévoles, avec onboarding d'environ 10 nouveaux bénévoles par semaine et suivi individualisé" data-en="Managed a community of <span class=kw>550+ volunteers</span>, onboarding about 10 new volunteers per week with individualized follow-up">Animation d'une communauté de 550+ bénévoles, avec onboarding d'environ 10 nouveaux bénévoles par semaine et suivi individualisé</li>
-                <li data-fr="Guides d'onboarding pour les Linkers (bénévoles de collecte) et SOP ajoutées là où elles manquaient (prospection, certains ateliers)" data-en="Onboarding guides for Linkers (food collection volunteers) and SOPs added where missing (prospection, some workshops)">Guides d'onboarding pour les Linkers (bénévoles de collecte) et SOP ajoutées là où elles manquaient (prospection, certains ateliers)</li>
-                <li data-fr="Programme des bénévoles étudiants KEDGE géré de bout en bout : information, sélection, onboarding, Q&A, attestations" data-en="KEDGE student volunteer programme managed end-to-end: information, screening, onboarding, Q&A, attestations">Programme des bénévoles étudiants KEDGE géré de bout en bout : information, sélection, onboarding, Q&A, attestations</li>
-                <li data-fr="Médiation et gestion des dynamiques interpersonnelles au sein d'une communauté diverse" data-en="Mediation and interpersonal dynamics across a diverse community">Médiation et gestion des dynamiques interpersonnelles au sein d'une communauté diverse</li>
-            </ul>
-        </div>
-
-        <div class="task">
-            <h4><span class="k">02</span><span data-fr="Événements & logistique" data-en="Events & logistics">Événements & logistique</span></h4>
-            <ul>
-                <li data-fr="Organisation de 30+ événements : prospection B2B, ateliers cuisine, reconditionnement, stands sur forums, campagnes de sensibilisation, collectes saisonnières" data-en="Organized <span class=kw>30+ events</span>: B2B prospection, cooking workshops, food reconditioning, forum stands, awareness campaigns, seasonal food drives">Organisation de 30+ événements : prospection B2B, ateliers cuisine, reconditionnement, stands sur forums, campagnes de sensibilisation, collectes saisonnières</li>
-                <li data-fr="Coordination de 2 distributions hebdomadaires pour environ 500 bénéficiaires par session, et accompagnement quotidien de 10 à 20 bénéficiaires" data-en="Coordinated 2 weekly distributions serving around 500 beneficiaries per session, plus daily support for 10 to 20 beneficiaries">Coordination de 2 distributions hebdomadaires pour environ 500 bénéficiaires par session, et accompagnement quotidien de 10 à 20 bénéficiaires</li>
-                <li data-fr="Adaptation des opérations aux imprévus : changements d'approvisionnement, manque de bénévoles, météo" data-en="Adapted operations to the unexpected: supply changes, volunteer shortages, weather">Adaptation des opérations aux imprévus : changements d'approvisionnement, manque de bénévoles, météo</li>
-            </ul>
-        </div>
-
-        <div class="task">
-            <h4><span class="k">03</span><span data-fr="Partenaires, communication & reporting" data-en="Partners, communication & reporting">Partenaires, communication & reporting</span></h4>
-            <ul>
-                <li data-fr="Point de contact principal entre partenaires, bénévoles, bénéficiaires et équipe nationale ; maintien des relations avec les partenaires et lieux d'événements existants" data-en="Primary point of contact between partners, volunteers, beneficiaries and the national team; maintained relationships with existing partners and venues">Point de contact principal entre partenaires, bénévoles, bénéficiaires et équipe nationale ; maintien des relations avec les partenaires et lieux d'événements existants</li>
-                <li data-fr="Newsletter hebdomadaire via Sarbacane à 5 000+ abonnés, avec optimisation des campagnes emailing" data-en="Weekly Sarbacane newsletter to 5,000+ subscribers, with ongoing optimization of the email campaigns">Newsletter hebdomadaire via Sarbacane à 5 000+ abonnés, avec optimisation des campagnes emailing</li>
-                <li data-fr="Automatisation des emails avec Google Apps Script ; données bénévoles sur Airtable ; reporting oral hebdomadaire à l'équipe nationale" data-en="Email automation with Google Apps Script; volunteer data on Airtable; weekly oral reporting to the national team">Automatisation des emails avec Google Apps Script ; données bénévoles sur Airtable ; reporting oral hebdomadaire à l'équipe nationale</li>
-            </ul>
-        </div>
-        </div>
+<!-- 06 Creator Lab -->
+<section class="lab-sec" id="creator">
+<div class="inner">
+  <div class="case-head"><div class="marquee" aria-hidden="true"><div>Creator Lab • Creator Lab • Creator Lab • Creator Lab • Creator Lab • </div></div><div class="case-num">06</div></div>
+  <div class="lab-grid">
+    <div>
+      <h2 data-fr="Ma vie en France, en plusieurs formats" data-en="My life in France, in many formats">Ma vie en France, en plusieurs formats</h2>
+      <p class="lead" data-fr="Je raconte mes voyages et mon quotidien en France en mandarin, sur YouTube, Threads, Instagram et mon blog. J'essaie à chaque fois un style différent : montage, sous-titres, voix off, effets. Je m'occupe de tout, du sujet jusqu'à l'analyse des chiffres." data-en="I share my travels and daily life in France in Mandarin, on YouTube, Threads, Instagram and my blog. Each time I try a different style: editing, subtitles, voiceover, effects. I handle everything, from the topic to reading the numbers.">Je raconte mes voyages et mon quotidien en France en mandarin, sur YouTube, Threads, Instagram et mon blog. J'essaie à chaque fois un style différent : montage, sous-titres, voix off, effets. Je m'occupe de tout, du sujet jusqu'à l'analyse des chiffres.</p>
+      <a class="yt-btn" href="https://www.youtube.com/@josdiary_france" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M23 7.2a3 3 0 00-2.1-2.1C19 4.6 12 4.6 12 4.6s-7 0-8.9.5A3 3 0 001 7.2 31 31 0 00.5 12a31 31 0 00.5 4.8 3 3 0 002.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5a3 3 0 002.1-2.1 31 31 0 00.5-4.8 31 31 0 00-.5-4.8zM9.8 15.1V8.9L15.2 12z"/></svg>@josdiary_france</a>
+      <div class="links-row">
+        <a href="https://www.instagram.com/jo.lifeinfrance/" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://yhchiuportfolio.wordpress.com/" target="_blank" rel="noopener" data-fr="Site WordPress" data-en="WordPress site">Site WordPress</a>
+      </div>
+      <div class="yt-stats stats" style="border:none">
+        <div class="stat"><b class="count" data-to="245" data-dec="0" data-unit="K">0</b><span data-fr="vues Threads en 3 mois" data-en="Threads views in 3 months">vues Threads en 3 mois</span></div>
+        <div class="stat"><b class="count" data-to="22933" data-dec="0">0</b><span data-fr="vues sur le blog" data-en="blog views">vues sur le blog</span></div>
+        <div class="stat"><b class="count" data-to="9.7" data-dec="1" data-unit="k">0</b><span data-fr="vues, vidéo la plus vue" data-en="views, top video">vues, vidéo la plus vue</span></div>
+      </div>
     </div>
-
-    
-
-    <div class="block results">
-        <h3 class="h-mid display" data-fr="Les résultats" data-en="The results">Les résultats</h3>
-        <div>
-            <div class="box">
-                <div class="stats">
-                    <div class="stat"><b>550+</b><span data-fr="bénévoles" data-en="volunteers">bénévoles</span></div>
-                    <div class="stat"><b data-fr="1 000+" data-en="1,000+">1 000+</b><span data-fr="bénéficiaires" data-en="beneficiaries">bénéficiaires</span></div>
-                    <div class="stat"><b>30+</b><span data-fr="événements" data-en="events">événements</span></div>
-                </div>
-                <ul class="check">
-                    <li data-fr="Aucune distribution manquée sur la période" data-en="Zero missed distributions over the period">Aucune distribution manquée sur la période</li>
-                    <li data-fr="Engagement durable des partenaires grâce à une exécution fiable des événements" data-en="Sustained partner engagement through reliable event execution">Engagement durable des partenaires grâce à une exécution fiable des événements</li>
-                    <li data-fr="Processus d'onboarding documenté et transmissible" data-en="Documented, transferable onboarding process">Processus d'onboarding documenté et transmissible</li>
-                </ul>
-            </div>
-        </div>
-        <div class="results-visual">
-            <svg class="spark a" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c1 6 5 10 12 12-7 2-11 6-12 12-1-6-5-10-12-12C7 10 11 6 12 0z"/></svg>
-            <img src="Linkee_Stand.jpeg" alt="Stand forum" loading="lazy">
-            <svg class="spark b" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c1 6 5 10 12 12-7 2-11 6-12 12-1-6-5-10-12-12C7 10 11 6 12 0z"/></svg>
-        </div>
+    <div>
+      <p class="pipe-title" data-fr="Cliquez sur une étape pour voir le lien avec mon travail" data-en="Click a step to see how it connects to my work">Cliquez sur une étape pour voir le lien avec mon travail</p>
+      <div class="pipe" id="pipe">
+        <button aria-pressed="true" data-i="0"><span class="k">1</span><span class="t" data-fr="Sujet" data-en="Topic">Sujet</span></button>
+        <button aria-pressed="false" data-i="1"><span class="k">2</span><span class="t" data-fr="Tournage" data-en="Shoot">Tournage</span></button>
+        <button aria-pressed="false" data-i="2"><span class="k">3</span><span class="t" data-fr="Montage" data-en="Edit">Montage</span></button>
+        <button aria-pressed="false" data-i="3"><span class="k">4</span><span class="t" data-fr="Publication" data-en="Publish">Publication</span></button>
+        <button aria-pressed="false" data-i="4"><span class="k">5</span><span class="t" data-fr="Analyse" data-en="Analyze">Analyse</span></button>
+      </div>
+      <div class="pipe-out" aria-live="polite">
+        <div><small data-fr="Sur mes chaînes" data-en="On my channels">Sur mes chaînes</small><p id="pChan"></p></div>
+        <div class="pro"><small data-fr="En entreprise" data-en="At work">En entreprise</small><p id="pPro"></p></div>
+      </div>
     </div>
+  </div>
 
-    <div class="block gallery"><div class="lbl" data-fr="Galerie" data-en="Gallery">Galerie</div><div class="grid c3">
-        <div class="shot"><img src="Linkee_Distrib.jpeg" alt="Distribution" loading="lazy"><div class="cap" data-fr="Distribution : coordination et onboarding des nouveaux bénévoles sur le terrain" data-en="Distribution: coordination and on-site onboarding of new volunteers">Distribution : coordination et onboarding des nouveaux bénévoles sur le terrain</div></div>
-        <div class="shot"><img src="Linkee_Stand.jpeg" alt="Stand forum" loading="lazy"><div class="cap" data-fr="Stand sur forum : présentation de la mission, recrutement, sensibilisation des étudiants éligibles" data-en="Forum stand: presenting the mission, recruiting, raising awareness among eligible students">Stand sur forum : présentation de la mission, recrutement, sensibilisation des étudiants éligibles</div></div>
-        <div class="shot"><img src="reconditionment.JPG" alt="Reconditionnement" loading="lazy"><div class="cap" data-fr="Reconditionnement : portions individuelles, coordination des bénévoles, logistique avec les partenaires" data-en="Food reconditioning: individual portions, volunteer coordination, logistics with partners">Reconditionnement : portions individuelles, coordination des bénévoles, logistique avec les partenaires</div></div>
+  <h3 class="sub-h" data-fr="Vidéos les plus vues" data-en="Most viewed videos">Vidéos les plus vues</h3>
+  <div class="videos">
+    <a class="video" href="https://www.youtube.com/@josdiary_france/videos?view=0&amp;sort=p&amp;shelf_id=1" target="_blank" rel="noopener"><div class="thumb"><img src="yt_1.jpg" alt="" data-file="yt_1.jpg" loading="lazy"><span class="play"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M6 4l14 8-14 8z"/></svg></span><span class="scrub"></span></div><div class="vt"><span data-fr="Porto : Noël au Portugal entre amies" data-en="Porto: Christmas in Portugal with friends">Porto : Noël au Portugal entre amies</span><small data-fr="9,7 k vues, 23:04" data-en="9.7k views, 23:04">9,7 k vues, 23:04</small></div></a>
+    <a class="video" href="https://www.youtube.com/@josdiary_france/videos?view=0&amp;sort=p&amp;shelf_id=1" target="_blank" rel="noopener"><div class="thumb"><img src="yt_2.jpg" alt="" data-file="yt_2.jpg" loading="lazy"><span class="play"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M6 4l14 8-14 8z"/></svg></span><span class="scrub"></span></div><div class="vt"><span data-fr="Bâle en une journée, en train depuis Strasbourg" data-en="Basel day trip by train from Strasbourg">Bâle en une journée, en train depuis Strasbourg</span><small data-fr="6,5 k vues, 11:37" data-en="6.5k views, 11:37">6,5 k vues, 11:37</small></div></a>
+    <a class="video" href="https://www.youtube.com/@josdiary_france/videos?view=0&amp;sort=p&amp;shelf_id=1" target="_blank" rel="noopener"><div class="thumb"><img src="yt_3.jpg" alt="" data-file="yt_3.jpg" loading="lazy"><span class="play"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M6 4l14 8-14 8z"/></svg></span><span class="scrub"></span></div><div class="vt"><span data-fr="Lisbonne en 3 jours : itinéraire" data-en="Lisbon in 3 days: itinerary">Lisbonne en 3 jours : itinéraire</span><small data-fr="3,3 k vues, 18:26" data-en="3.3k views, 18:26">3,3 k vues, 18:26</small></div></a>
+    <a class="video" href="https://www.youtube.com/@josdiary_france/videos?view=0&amp;sort=p&amp;shelf_id=1" target="_blank" rel="noopener"><div class="thumb"><img src="yt_4.jpg" alt="" data-file="yt_4.jpg" loading="lazy"><span class="play"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M6 4l14 8-14 8z"/></svg></span><span class="scrub"></span></div><div class="vt"><span data-fr="Bordeaux : restos, huîtres et cannelés" data-en="Bordeaux: restaurants, oysters, cannelés">Bordeaux : restos, huîtres et cannelés</span><small data-fr="1,7 k vues, 10:23" data-en="1.7k views, 10:23">1,7 k vues, 10:23</small></div></a>
+    <a class="video" href="https://www.youtube.com/@josdiary_france/videos?view=0&amp;sort=p&amp;shelf_id=1" target="_blank" rel="noopener"><div class="thumb"><img src="yt_5.jpg" alt="" data-file="yt_5.jpg" loading="lazy"><span class="play"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M6 4l14 8-14 8z"/></svg></span><span class="scrub"></span></div><div class="vt"><span data-fr="Une semaine en France : stage, job et prépa C1" data-en="A week in France: internship, job, C1 prep">Une semaine en France : stage, job et prépa C1</span><small data-fr="1,4 k vues, 12:07" data-en="1.4k views, 12:07">1,4 k vues, 12:07</small></div></a>
+  </div>
+  <a class="all-videos" href="https://www.youtube.com/@josdiary_france/videos?view=0&amp;sort=p&amp;shelf_id=1" target="_blank" rel="noopener" data-fr="Voir toutes les vidéos populaires" data-en="See all popular videos">Voir toutes les vidéos populaires</a>
+
+  <h3 class="sub-h" data-fr="Autres formats" data-en="Other formats">Autres formats</h3>
+  <div class="formats">
+    <div class="fmt"><div class="fim"><img src="blog_threads.jpg" alt="Blog et Threads" data-file="blog_threads.jpg" loading="lazy"></div><div class="fb">
+      <h4>Blog & Threads</h4>
+      <p data-fr="Études, voyages et food. Sur le blog, j'utilise Google Analytics pour repérer les mots-clés qui amènent du trafic organique et écrire en conséquence." data-en="Study, travel and food. On the blog, I use Google Analytics to find the keywords that bring organic traffic and write around them.">Études, voyages et food. Sur le blog, j'utilise Google Analytics pour repérer les mots-clés qui amènent du trafic organique et écrire en conséquence.</p>
+      <div class="fstats"><div><b data-fr="245 K" data-en="245K">245 K</b><span data-fr="vues Threads" data-en="Threads views">vues Threads</span></div><div><b data-fr="4 760" data-en="4,760">4 760</b><span data-fr="interactions Threads" data-en="Threads interactions">interactions Threads</span></div><div><b data-fr="22 933" data-en="22,933">22 933</b><span data-fr="vues blog" data-en="blog views">vues blog</span></div></div>
     </div></div>
-
-    <div class="case-foot"><span data-fr="Projet 04 | Linkee" data-en="Project 04 | Linkee">Projet 04 | Linkee</span><span>Community & Project Management</span></div>
+    <div class="fmt"><div class="fim"><img src="line_stickers.jpg" alt="Stickers LINE" data-file="line_stickers.jpg" loading="lazy"></div><div class="fb">
+      <h4 data-fr="Stickers LINE" data-en="LINE stickers">Stickers LINE</h4>
+      <p data-fr="Deux packs publiés sur le store LINE : Ooops Office Slacker, en illustration, et weiwei and tofu, à partir de photos." data-en="Two packs published on the LINE store: Ooops Office Slacker, illustrated, and weiwei and tofu, made from photos.">Deux packs publiés sur le store LINE : Ooops Office Slacker, en illustration, et weiwei and tofu, à partir de photos.</p>
+      <div class="links-row"><a href="https://store.line.me/stickershop/product/24153067/zh-Hant" target="_blank" rel="noopener">Ooops Office Slacker</a><a href="https://store.line.me/stickershop/product/18233964/zh-Hant" target="_blank" rel="noopener">weiwei and tofu</a></div>
+    </div></div>
+  </div>
 </div>
 </section>
 
 <footer>
-    <div class="inner">
-        <div>
-            <h2 data-fr="Envie d'en parler ?" data-en="Let's talk.">Envie d'en parler ?</h2>
-            <p data-fr="Je cherche un poste en opérations marketing, analytics ou gestion de projet, partout en France. Je parle français, anglais et mandarin." data-en="I'm looking for a role in marketing operations, analytics or project management, anywhere in France. I speak French, English and Mandarin.">Je cherche un poste en opérations marketing, analytics ou gestion de projet, partout en France. Je parle français, anglais et mandarin.</p>
-        </div>
-        <div class="links">
-            <a class="cta" href="mailto:c.hsuann@gmail.com">c.hsuann@gmail.com</a>
-            <a href="https://www.linkedin.com/in/yihsuan-chiu/" target="_blank" rel="noopener">LinkedIn</a>
-            <a href="index.html" data-fr="Voir mon CV" data-en="See my CV">Voir mon CV</a>
-        </div>
-        <p class="copy">&copy; 2026 Yi-Hsuan Chiu</p>
+  <div class="inner">
+    <div>
+      <h2 data-fr="Envie d'en parler ?" data-en="Let's talk.">Envie d'en parler ?</h2>
+      <p data-fr="Je cherche un poste en opérations marketing, analytics ou gestion de projet, partout en France. Je parle français, anglais et mandarin." data-en="I'm looking for a role in marketing operations, analytics or project management, anywhere in France. I speak French, English and Mandarin.">Je cherche un poste en opérations marketing, analytics ou gestion de projet, partout en France. Je parle français, anglais et mandarin.</p>
     </div>
+    <div class="links">
+      <a class="cta" href="mailto:c.hsuann@gmail.com">c.hsuann@gmail.com</a>
+      <a href="https://www.linkedin.com/in/yihsuan-chiu/" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://www.youtube.com/@josdiary_france" target="_blank" rel="noopener">YouTube</a>
+      <a href="https://www.instagram.com/jo.lifeinfrance/" target="_blank" rel="noopener">Instagram</a>
+      <a href="index.html" data-fr="Voir mon CV" data-en="See my CV">Voir mon CV</a>
+    </div>
+    <p class="copy">&copy; 2026 Yi-Hsuan Chiu</p>
+  </div>
 </footer>
 
-<button class="back-to-top" id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">
-    <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 16V4M4 10l6-6 6 6"/></svg>
-    <span data-fr="Haut de page" data-en="Back to top">Haut de page</span>
-</button>
+<button class="back-to-top" id="backToTop" aria-label="Haut de page" onclick="window.scrollTo({top:0,behavior:'smooth'})"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 16V4M4 10l6-6 6 6"/></svg></button>
 
 <script>
-function setLang(l){document.documentElement.lang=l;document.getElementById('btn-fr').classList.toggle('active',l==='fr');document.getElementById('btn-en').classList.toggle('active',l==='en');document.querySelectorAll('[data-fr][data-en]').forEach(function(e){e.innerHTML=e.getAttribute('data-'+l)});try{localStorage.setItem('cv-lang',l)}catch(x){}}
-window.addEventListener('scroll',function(){var b=document.getElementById('backToTop');if(b)b.classList.toggle('visible',window.scrollY>400)},{passive:true});
-document.addEventListener('DOMContentLoaded',function(){var s=null;try{s=localStorage.getItem('cv-lang')}catch(x){}if(s)setLang(s)});
+var LANG='fr';
+var $=function(s,r){return (r||document).querySelector(s)};
+var $$=function(s,r){return Array.prototype.slice.call((r||document).querySelectorAll(s))};
+
+/* image fallback (preview without local files) */
+$$('img[data-file]').forEach(function(img){
+  function fail(){var d=document.createElement('div');d.className='ph '+(img.parentElement.classList.contains('thumb')?'':'');d.setAttribute('data-file',img.getAttribute('data-file'));d.style.width='100%';d.style.height='100%';if(img.parentElement.classList.contains('thumb')){img.parentElement.classList.add('ph');img.parentElement.setAttribute('data-file',img.getAttribute('data-file'));img.remove();}else{img.replaceWith(d);}}
+  if(img.complete&&img.naturalWidth===0)fail();else img.addEventListener('error',fail);
+});
+
+/* hero letters */
+(function(){var h=$('#heroTitle'),t=h.textContent;h.textContent='';
+  t.split('').forEach(function(c,i){var s=document.createElement('span');s.textContent=c;s.setAttribute('aria-hidden','true');s.style.animationDelay=(0.15+i*0.06)+'s';h.appendChild(s);});
+  setTimeout(function(){$$('span',h).forEach(function(s){s.style.transform='translateY(0)';s.style.opacity='1';s.style.animation='none';});},1400);
+})();
+/* spark parallax */
+(function(){var m=$('#heroMedia'),sp=$$('.float-spark',m);
+  if(matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+  m.addEventListener('pointermove',function(e){var r=m.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;
+    sp.forEach(function(s){var d=+s.dataset.depth;s.style.transform='translate('+(x*d)+'px,'+(y*d)+'px) rotate('+(x*d*2)+'deg)';});});
+  m.addEventListener('pointerleave',function(){sp.forEach(function(s){s.style.transform='';});});
+})();
+
+/* numbers */
+function fmt(v,dec){var s=Math.abs(v).toFixed(dec);if(LANG==='fr'){s=s.replace('.',',');s=s.replace(/\B(?=(\d{3})+(?!\d))/g,'\u202f');}else{s=s.replace(/\B(?=(\d{3})+(?!\d))/g,',');}return (v<0?'\u2212':'')+s;}
+function render(el,v){var d=+el.dataset.dec||0,out=fmt(v,d);
+  if(el.dataset.plus)out='+'+out;
+  if(el.dataset.pct)out+=(LANG==='fr'?'\u202f%':'%');
+  if(el.dataset.unit)out+=(LANG==='fr'?'\u202f':'')+el.dataset.unit;
+  if(el.dataset.plus2)out+='+';
+  el.textContent=out;el.dataset.cur=v;}
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(!e.isIntersecting)return;var el=e.target;io.unobserve(el);
+  var to=+el.dataset.to,t0=null,dur=1300;
+  if(matchMedia('(prefers-reduced-motion: reduce)').matches){render(el,to);return;}
+  function step(ts){if(!t0)t0=ts;var p=Math.min((ts-t0)/dur,1),k=1-Math.pow(1-p,3);render(el,to*k);if(p<1)requestAnimationFrame(step);}
+  requestAnimationFrame(step);});},{threshold:.4});
+$$('.count').forEach(function(el){io.observe(el);});
+
+/* tabs */
+$$('.tabs').forEach(function(t){var tabs=$$('[role=tab]',t),panels=$$('[role=tabpanel]',t);
+  tabs.forEach(function(b,i){b.addEventListener('click',function(){tabs.forEach(function(x,j){x.setAttribute('aria-selected',j===i);panels[j].hidden=j!==i;});});
+    b.addEventListener('keydown',function(e){var n=e.key==='ArrowRight'?1:e.key==='ArrowLeft'?-1:0;if(!n)return;var k=(i+n+tabs.length)%tabs.length;tabs[k].focus();tabs[k].click();});});
+});
+
+/* before / after */
+var BA='before';
+function drawBA(){var a=BA==='after';
+  $('#bBounce').style.width=a?'47.4%':'100%';$('#vBounce').textContent=a?fmt(47.4,1):'100';
+  $('#bIos').style.width=a?'95.2%':'58.82%';$('#vIos').textContent=a?(LANG==='fr'?'comblé':'closed'):fmt(58.82,2)+(LANG==='fr'?'\u202f%':'%');
+  $('#vAnd').textContent=fmt(95.2,1)+(LANG==='fr'?'\u202f%':'%');}
+$$('#ba .seg button').forEach(function(b){b.addEventListener('click',function(){BA=b.dataset.state;$$('#ba .seg button').forEach(function(x){x.setAttribute('aria-pressed',x===b);});drawBA();});});
+
+/* creator pipeline */
+var PIPE=[
+ {fr:["Je choisis le sujet en regardant ce que les gens cherchent. Sur mon blog, Google Analytics m'aide à repérer les mots-clés qui amènent du trafic.","Recherche de mots-clés et contenus optimisés pour le SEO chez UniFox."],
+  en:["I pick topics by looking at what people search for. On my blog, Google Analytics shows me which keywords bring traffic.","Keyword research and SEO-optimized content at UniFox."]},
+ {fr:["Je prépare l'itinéraire, les plans et le timing avant de partir.","Planification et logistique de 30+ événements chez Linkee."],
+  en:["I plan the route, shots and timing before leaving.","Planning and logistics for 30+ events at Linkee."]},
+ {fr:["Montage sur CapCut en changeant de style d'une vidéo à l'autre : sous-titres, voix off, effets.","3,5 h de vidéos de formation montées pour Reinventing Carrière."],
+  en:["Editing in CapCut with a different style each time: subtitles, voiceover, effects.","3.5h of training videos edited for Reinventing Carrière."]},
+ {fr:["Titre, miniature, description, et le bon format selon la plateforme : YouTube, Threads ou Instagram.","Diffusion sur six plateformes et planification avec Iconosquare chez UniFox."],
+  en:["Title, thumbnail, description, and the right format for each platform: YouTube, Threads or Instagram.","Distribution on six platforms and scheduling with Iconosquare at UniFox."]},
+ {fr:["Je regarde les vues, les interactions et l'âge du public pour ajuster le contenu suivant.","Dashboards GA4 et Tableau, et un taux de rebond réduit de 52,6 % chez UniFox."],
+  en:["I check views, interactions and audience age to adjust the next piece.","GA4 and Tableau dashboards, and a 52.6% bounce rate drop at UniFox."]}
+];
+var HYP=[
+ {p:1,fr:["Self-transcendance","Influence positive et significative sur la volonté de récompenser ou de sanctionner une marque."],en:["Self-transcendence","Significant positive influence on willingness to reward or punish a brand."]},
+ {p:1,fr:["Conservation","Influence positive et significative."],en:["Conservation","Significant positive influence."]},
+ {p:1,fr:["Ouverture","Influence positive et significative."],en:["Openness","Significant positive influence."]},
+ {p:0,fr:["Self-enhancement","Aucune influence significative sur le comportement éthique."],en:["Self-enhancement","No significant influence on ethical behavior."]}
+];
+var HI=0;
+function drawHyp(){var h=HYP[HI],g=document.getElementById('gauge'),t=HYP[HI][LANG];
+  g.textContent=h.p?'+':'0';g.classList.toggle('none',!h.p);
+  document.getElementById('hypText').innerHTML='<b>'+t[0]+'</b>'+t[1];}
+Array.prototype.forEach.call(document.querySelectorAll('#hyp button'),function(b){b.addEventListener('click',function(){HI=+b.dataset.v;Array.prototype.forEach.call(document.querySelectorAll('#hyp button'),function(x){x.setAttribute('aria-pressed',x===b);});drawHyp();});});
+var PI=0;
+function drawPipe(){var d=PIPE[PI][LANG];[['#pChan',0],['#pPro',1]].forEach(function(p){var el=$(p[0]);el.classList.remove('swap');void el.offsetWidth;el.classList.add('swap');el.textContent=d[p[1]];});}
+$$('#pipe button').forEach(function(b){b.addEventListener('click',function(){PI=+b.dataset.i;$$('#pipe button').forEach(function(x){x.setAttribute('aria-pressed',x===b);});drawPipe();});});
+
+/* language */
+function setLang(l){LANG=l;document.documentElement.lang=l;
+  $('#btn-fr').classList.toggle('active',l==='fr');$('#btn-en').classList.toggle('active',l==='en');
+  $$('[data-fr][data-en]').forEach(function(e){e.innerHTML=e.getAttribute('data-'+l);});
+  $$('.count').forEach(function(el){if(el.dataset.cur!==undefined)render(el,+el.dataset.cur);});
+  drawBA();drawPipe();drawHyp();$('#music-label').textContent=l==='fr'?'Son':'Sound';
+  try{localStorage.setItem('cv-lang',l);}catch(x){}}
+
+/* scroll: progress, back to top, active nav */
+function onScroll(){var h=document.documentElement,p=h.scrollTop/(h.scrollHeight-h.clientHeight||1);
+  $('#progress').style.transform='scaleX('+p+')';$('#backToTop').classList.toggle('visible',h.scrollTop>400);}
+addEventListener('scroll',onScroll,{passive:true});
+var navIO=new IntersectionObserver(function(es){es.forEach(function(e){if(!e.isIntersecting)return;var id=e.target.id;
+  var key=(id==='creator'||id==='recommandations'||id==='research')?id:'work';
+  $$('.nl').forEach(function(a){a.classList.toggle('active',a.dataset.sec===key);});});},{rootMargin:'-45% 0px -50% 0px'});
+['recommandations','strategy','brand','product','community','research','creator'].forEach(function(id){navIO.observe(document.getElementById(id));});
+
+/* generative ambient music (Web Audio, no external file) */
+var Music=(function(){var ctx,master,delay,timer,on=false,step=0,next=0;
+  var chords=[[53,57,60,64],[52,55,59,62],[50,53,57,60],[48,52,55,59]];
+  var hz=function(n){return 440*Math.pow(2,(n-69)/12);};
+  function init(){ctx=new (window.AudioContext||window.webkitAudioContext)();master=ctx.createGain();master.gain.value=0;
+    var lp=ctx.createBiquadFilter();lp.type='lowpass';lp.frequency.value=1800;
+    delay=ctx.createDelay(1);delay.delayTime.value=.375;var fb=ctx.createGain();fb.gain.value=.35;delay.connect(fb);fb.connect(delay);
+    delay.connect(lp);master.connect(lp);lp.connect(ctx.destination);}
+  function pad(notes,t,len){notes.forEach(function(n){[-5,5].forEach(function(det){var o=ctx.createOscillator(),g=ctx.createGain();o.type='triangle';o.frequency.value=hz(n-12);o.detune.value=det;
+    g.gain.setValueAtTime(0,t);g.gain.linearRampToValueAtTime(.05,t+1.2);g.gain.linearRampToValueAtTime(0,t+len);o.connect(g);g.connect(master);o.start(t);o.stop(t+len+.1);});});}
+  function pluck(n,t){var o=ctx.createOscillator(),g=ctx.createGain();o.type='sine';o.frequency.value=hz(n+12);
+    g.gain.setValueAtTime(0,t);g.gain.linearRampToValueAtTime(.09,t+.01);g.gain.exponentialRampToValueAtTime(.0001,t+.9);o.connect(g);g.connect(master);g.connect(delay);o.start(t);o.stop(t+1);}
+  function kick(t){var o=ctx.createOscillator(),g=ctx.createGain();o.frequency.setValueAtTime(120,t);o.frequency.exponentialRampToValueAtTime(45,t+.25);
+    g.gain.setValueAtTime(.18,t);g.gain.exponentialRampToValueAtTime(.001,t+.3);o.connect(g);g.connect(master);o.start(t);o.stop(t+.35);}
+  function tick(){var beat=.75;while(next<ctx.currentTime+.2){var bar=Math.floor(step/8)%4,c=chords[bar];
+      if(step%8===0)pad(c,next,beat*4.2);
+      if(step%4===0)kick(next);
+      if(Math.random()<.55)pluck(c[Math.floor(Math.random()*4)],next+(Math.random()<.3?beat/2:0));
+      step++;next+=beat/2;}
+  }
+  return{toggle:function(){if(!ctx)init();on=!on;
+    if(on){ctx.resume();next=ctx.currentTime+.1;master.gain.cancelScheduledValues(ctx.currentTime);master.gain.linearRampToValueAtTime(.7,ctx.currentTime+1.5);timer=setInterval(tick,50);}
+    else{master.gain.cancelScheduledValues(ctx.currentTime);master.gain.linearRampToValueAtTime(0,ctx.currentTime+.8);clearInterval(timer);setTimeout(function(){if(!on)ctx.suspend();},900);}
+    return on;}};
+})();
+$('#music').addEventListener('click',function(){var on=Music.toggle();this.setAttribute('aria-pressed',on);});
+
+/* placeholder links */
+$$('[data-todo]').forEach(function(a){a.addEventListener('click',function(e){if(a.getAttribute('href')==='#'){e.preventDefault();}});});
+
+document.addEventListener('DOMContentLoaded',function(){var s=null;try{s=localStorage.getItem('cv-lang');}catch(x){}setLang(s||'fr');onScroll();});
+
+/* ===== lively layer ===== */
+(function(){
+var RM=matchMedia('(prefers-reduced-motion: reduce)').matches, FINE=matchMedia('(pointer:fine)').matches;
+var SPARK='<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c1 6 5 10 12 12-7 2-11 6-12 12-1-6-5-10-12-12C7 10 11 6 12 0z"/></svg>';
+
+/* rotating word */
+var WORDS={fr:["l'action","la campagne","la communauté","la vidéo","la décision"],en:["action","campaigns","community","video","decisions"]},wi=0;
+var rw=document.getElementById('rotWord');
+if(rw){rw.textContent=WORDS[LANG][0];
+  setInterval(function(){rw.classList.add('out');setTimeout(function(){wi=(wi+1)%WORDS.fr.length;rw.textContent=WORDS[LANG][wi];rw.classList.remove('out');},350);},2300);
+  var _set=window.setLang;window.setLang=function(l){_set(l);rw.textContent=WORDS[l][wi];};}
+
+/* draggable stickers */
+Array.prototype.forEach.call(document.querySelectorAll('.sticker'),function(st){
+  var sx,sy,ox=0,oy=0,drag=false;
+  st.addEventListener('pointerdown',function(e){drag=true;sx=e.clientX-ox;sy=e.clientY-oy;st.setPointerCapture(e.pointerId);});
+  st.addEventListener('pointermove',function(e){if(!drag)return;ox=e.clientX-sx;oy=e.clientY-sy;st.style.transform='translate('+ox+'px,'+oy+'px) rotate('+(ox/12)+'deg)';});
+  st.addEventListener('pointerup',function(){drag=false;});
+});
+
+if(RM)return;
+
+/* scroll reveal with stagger */
+var sel='.intro,.task,.shot,.rec,.video,.fmt,.chapters a,.card,.ba,.results>.box,.pipe button,.yt-stats .stat,.hero-body>div';
+var rio=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');rio.unobserve(e.target);}});},{threshold:.12});
+Array.prototype.forEach.call(document.querySelectorAll(sel),function(el){
+  var sib=Array.prototype.indexOf.call(el.parentElement.children,el);
+  el.style.setProperty('--d',Math.min(sib,5)*0.08+'s');el.classList.add('rv');rio.observe(el);});
+
+/* 3D tilt */
+if(FINE)Array.prototype.forEach.call(document.querySelectorAll('.chapters a,.video,.fmt,.rec,.task,.shot'),function(el){
+  el.classList.add('tilt');
+  el.addEventListener('pointermove',function(e){var r=el.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;
+    el.style.transform='perspective(700px) rotateY('+(x*8)+'deg) rotateX('+(-y*8)+'deg) translateZ(4px)';});
+  el.addEventListener('pointerleave',function(){el.style.transform='';});
+});
+
+/* magnetic buttons */
+if(FINE)Array.prototype.forEach.call(document.querySelectorAll('.nav-cta,.yt-btn,footer .cta,.music,.rec a'),function(b){
+  b.classList.add('magnet');
+  b.addEventListener('pointermove',function(e){var r=b.getBoundingClientRect();b.style.translate=((e.clientX-r.left-r.width/2)*.25)+'px '+((e.clientY-r.top-r.height/2)*.35)+'px';});
+  b.addEventListener('pointerleave',function(){b.style.translate='0 0';});
+});
+
+/* spark cursor */
+if(FINE){var c=document.createElement('div');c.className='cursor';c.innerHTML=SPARK;document.body.appendChild(c);
+  var mx=-50,my=-50,cx=-50,cy=-50;
+  addEventListener('pointermove',function(e){mx=e.clientX;my=e.clientY;var t=e.target.closest&&e.target.closest('a,button,.sticker');c.classList.toggle('big',!!t);},{passive:true});
+  (function loop(){cx+=(mx-cx)*.18;cy+=(my-cy)*.18;c.style.transform='translate('+cx+'px,'+cy+'px)';requestAnimationFrame(loop);})();}
+
+/* click burst */
+addEventListener('click',function(e){if(!(e.target.closest&&e.target.closest('button,a')))return;
+  for(var i=0;i<9;i++){(function(i){var p=document.createElement('div');p.className='burst';p.innerHTML=SPARK;p.style.left=e.clientX+'px';p.style.top=e.clientY+'px';
+    if(i%3===1)p.style.color='#8E4A35';if(i%3===2)p.style.color='#D98FC7';document.body.appendChild(p);
+    var a=(Math.PI*2/9)*i+Math.random()*.4,d=40+Math.random()*40;
+    p.animate([{transform:'translate(0,0) scale(1) rotate(0)',opacity:1},{transform:'translate('+Math.cos(a)*d+'px,'+Math.sin(a)*d+'px) scale(.2) rotate(180deg)',opacity:0}],{duration:650,easing:'cubic-bezier(.2,.8,.3,1)'}).onfinish=function(){p.remove();};})(i);}
+},true);
+
+/* marquee reacts to scroll speed */
+var last=scrollY,mqs=document.querySelectorAll('.marquee div');
+(function tick(){var v=scrollY-last;last=scrollY;var sk=Math.max(-12,Math.min(12,v*.6));
+  Array.prototype.forEach.call(mqs,function(m){m.style.transform='skewX('+(-sk)+'deg)';m.style.transformOrigin='center';});requestAnimationFrame(tick);})();
+})();
 </script>
-    <!-- Start of HubSpot Embed Code -->
-    <script type="text/javascript" id="hs-script-loader" async defer src="//js-eu1.hs-scripts.com/148257116.js"></script>
-    <!-- End of HubSpot Embed Code -->
 </body>
 </html>
