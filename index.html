@@ -290,6 +290,36 @@ footer{font-size:1.35rem}
 .endorse .amp{font-family:var(--serif);font-style:italic;color:var(--coral)}
 .endorse .sub-e{color:var(--faint);font-size:.9rem}
 @media(max-width:880px){.stage{padding-bottom:14rem}}
+
+/* round 3 */
+.job{grid-template-columns:170px 1fr}
+.job .yr{font-family:var(--sans);font-size:.98rem;font-weight:600;color:var(--ink);line-height:1.4}
+.job .yr small{font-weight:400}
+.job::after{left:140px}
+.job-actions{display:flex;flex-wrap:wrap;align-items:center;gap:.6rem 1.6rem;margin-top:.8rem}
+.job-actions .toggle{margin-top:0}
+.job-actions .case{margin-top:0;font-size:.95rem;display:inline-flex;align-items:center;gap:.35rem}
+.job-actions .case::after{content:'';width:14px;height:10px;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 10' fill='none' stroke='%236E8B74' stroke-width='1.6' stroke-linecap='round'%3E%3Cpath d='M1 5.5C5 4.5 9 5.5 12.5 5M9.5 2 12.5 5 9.5 8'/%3E%3C/svg%3E") center/contain no-repeat;transition:transform .25s}
+.job-actions .case:hover::after{transform:translateX(3px)}
+.photo-card .pc-in{width:52%;margin:0 auto}
+.photo-card .frame{border-radius:22px}
+.photo-card .tag-note{font-size:1.15rem!important;left:-38px;bottom:14px}
+.photo-card .spark{width:30px;height:30px;right:14%;top:-12px}
+.photo-card .contacts{justify-content:center;text-align:center}
+.reco-sec .recos{max-width:864px}
+.reco{padding:1.6rem 1.6rem 1.3rem}
+.reco .q{font-size:3.6rem;height:1.3rem}
+.reco p{font-size:1.15rem!important}
+.reco .who{font-size:.95rem!important;margin-top:.8rem}
+.reco .who span{font-size:.88rem!important}
+.reco a{font-size:.9rem!important}
+.zoom,.pics img,.pol{cursor:zoom-in}
+.pics .ph,.pol:has(.ph),.zoom:has(.photo-fb){cursor:default}
+.lightbox{flex-direction:column;gap:.8rem}
+.lightbox .lb-cap{color:#fff;font-family:var(--hand);font-size:1.4rem}
+.lb-close{position:absolute;top:1.2rem;right:1.4rem;width:44px;height:44px;border-radius:50%;border:none;background:rgba(255,255,255,.15);color:#fff;font-size:1.6rem;line-height:1}
+.lb-close:hover{background:rgba(255,255,255,.3)}
+@media(max-width:880px){.job{grid-template-columns:1fr}.photo-card .pc-in{width:60%}}
 @media(max-width:880px){
   .nav-l{display:none}.nav-in{grid-template-columns:auto 1fr}.logo{padding:0}
   .nav-r .nl{display:none}
@@ -408,7 +438,7 @@ footer{font-size:1.35rem}
         <div class="trait reveal">
           <div class="ic"><svg viewBox="0 0 44 44"><circle cx="22" cy="22" r="19" fill="var(--blue)" opacity=".45"/><path d="M11 30 18 22 24 26 33 14M28 14H33V19" fill="none" stroke="var(--ink)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
           <div><h3 data-fr="Je propose des solutions <small>force de proposition</small>" data-en="I bring solutions <small>proactive proposals</small>">Je propose des solutions <small>force de proposition</small></h3>
-          <p data-fr="J'observe le parcours utilisateur, je trouve où il bloque et je propose un correctif chiffré, comme l'écart de conversion iOS / Android comblé chez UniFox." data-en="I look at the user journey, find where it breaks and propose a measurable fix, like the iOS / Android conversion gap closed at UniFox.">J'observe le parcours utilisateur, je trouve où il bloque et je propose un correctif chiffré, comme l'écart de conversion iOS / Android comblé chez UniFox.</p></div>
+          <p data-fr="J'observe le parcours utilisateur, je trouve où il bloque et je propose un correctif chiffré, comme chez UniFox où la conversion iOS est passée de 58,82 % à 95,2 %." data-en="I look at the user journey, find where it breaks and propose a measurable fix, like at UniFox where iOS conversion rose from 58.82% to 95.2%.">J'observe le parcours utilisateur, je trouve où il bloque et je propose un correctif chiffré, comme chez UniFox où la conversion iOS est passée de 58,82 % à 95,2 %.</p></div>
         </div>
         <div class="trait reveal">
           <div class="ic"><svg viewBox="0 0 44 44"><circle cx="22" cy="22" r="19" fill="var(--coral)" opacity=".35"/><path d="M22 32C14 26 11 22 13 17.5 15 13.5 20 14 22 18 24 14 29 13.5 31 17.5 33 22 30 26 22 32Z" fill="none" stroke="var(--ink)" stroke-width="1.8" stroke-linejoin="round"/></svg></div>
@@ -420,7 +450,7 @@ footer{font-size:1.35rem}
 
     <div class="photo-card reveal" style="--d:.15s">
       <svg class="spark" viewBox="0 0 24 24" fill="var(--butter)" stroke="var(--ink)" stroke-width="1.2"><use href="#i-spark"/></svg>
-      <div class="pc-in"><div class="frame"><img src="photo.jpg" alt="Yi-Hsuan Chiu" id="photo"></div>
+      <div class="pc-in"><div class="frame zoom"><img src="photo.jpg" alt="Yi-Hsuan Chiu" id="photo"></div>
       <div class="tag-note" data-fr="c'est moi !" data-en="that's me!">c'est moi !</div></div>
       <div class="contacts">
         <a href="mailto:c.hsuann@gmail.com">c.hsuann@gmail.com</a>
@@ -458,119 +488,115 @@ footer{font-size:1.35rem}
     <button class="all" id="toggleAll" data-fr="tout ouvrir" data-en="open all">tout ouvrir</button>
   </h2>
   <div class="xp">
-
     <article class="job reveal">
-      <div class="yr">2025 - 2026<small>Bordeaux</small></div>
+      <div class="yr">08/2025 – 02/2026<small>Bordeaux</small></div>
       <div>
-        <h3 data-fr="Chargée des Projets et Communautés" data-en="Projects & Community Specialist">Chargée des Projets et Communautés</h3>
+        <h3 data-fr="Chargée des Projets et Communautés" data-en="Projects &amp; Community Specialist">Chargée des Projets et Communautés</h3>
         <div class="co"><img src="Linkee_logo.png" alt="">Linkee, <span data-fr="association anti-gaspillage alimentaire" data-en="food waste nonprofit">association anti-gaspillage alimentaire</span></div>
-        <p class="lead" data-fr="Le point de contact de l'antenne locale : j'ai animé une communauté de <span class='hl g'>550+ bénévoles</span>, organisé <span class='hl'>30+ événements</span> et envoyé chaque semaine une newsletter à <span class='hl b'>5 000+ abonnés</span>." data-en="The local branch's point of contact: I managed a community of <span class='hl g'>550+ volunteers</span>, organised <span class='hl'>30+ events</span> and sent a weekly newsletter to <span class='hl b'>5,000+ subscribers</span>.">Le point de contact de l'antenne locale : j'ai animé une communauté de <span class='hl g'>550+ bénévoles</span>, organisé <span class='hl'>30+ événements</span> et envoyé chaque semaine une newsletter à <span class='hl b'>5 000+ abonnés</span>.</p>
-        <button class="toggle" aria-expanded="false"><span class="pm"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 1v10M1 6h10"/></svg></span><span class="tl" data-fr="Voir le détail" data-en="See details">Voir le détail</span></button>
+        <p class="lead" data-fr="Point de contact de l&#x27;antenne locale : j&#x27;ai animé une communauté de &lt;span class=&#x27;hl g&#x27;&gt;550+ bénévoles&lt;/span&gt;, organisé &lt;span class=&#x27;hl&#x27;&gt;30+ événements&lt;/span&gt; et géré la newsletter hebdomadaire vers &lt;span class=&#x27;hl b&#x27;&gt;5 000+ abonnés&lt;/span&gt;." data-en="The local branch&#x27;s point of contact: I managed a community of &lt;span class=&#x27;hl g&#x27;&gt;550+ volunteers&lt;/span&gt;, organised &lt;span class=&#x27;hl&#x27;&gt;30+ events&lt;/span&gt; and ran the weekly newsletter to &lt;span class=&#x27;hl b&#x27;&gt;5,000+ subscribers&lt;/span&gt;.">Point de contact de l'antenne locale : j'ai animé une communauté de <span class='hl g'>550+ bénévoles</span>, organisé <span class='hl'>30+ événements</span> et géré la newsletter hebdomadaire vers <span class='hl b'>5 000+ abonnés</span>.</p>
+        <div class="job-actions"><button class="toggle" aria-expanded="false"><span class="pm"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 1v10M1 6h10"/></svg></span><span class="tl">Voir le détail</span></button><a class="case" href="portfolio.html#community"><span data-fr="Voir le projet dans le portfolio" data-en="See the project in my portfolio">Voir le projet dans le portfolio</span></a></div>
         <div class="detail"><div><div class="detail-in">
           <ul>
-            <li data-fr="Organisation de <strong>30+ événements</strong> (prospection B2B, ateliers cuisine, stands, collectes) et entretien des relations avec les partenaires existants" data-en="Organised <strong>30+ events</strong> (B2B prospection, cooking workshops, stands, food drives) and maintained relationships with existing partners">Organisation de <strong>30+ événements</strong> (prospection B2B, ateliers cuisine, stands, collectes) et entretien des relations avec les partenaires existants</li>
-            <li data-fr="Onboarding d'environ 10 nouveaux bénévoles par semaine et accompagnement quotidien de 10 à 20 bénéficiaires" data-en="Onboarded about 10 new volunteers a week and supported 10 to 20 beneficiaries daily">Onboarding d'environ 10 nouveaux bénévoles par semaine et accompagnement quotidien de 10 à 20 bénéficiaires</li>
-            <li data-fr="<span class='why'>initiative</span>Création des guides d'onboarding des Linkers et de SOP là où il n'en existait pas (prospection, ateliers)" data-en="<span class='why'>initiative</span>Created onboarding guides for Linkers and SOPs where none existed (prospection, workshops)"><span class='why'>initiative</span>Création des guides d'onboarding des Linkers et de SOP là où il n'en existait pas (prospection, ateliers)</li>
+            <li data-fr="Newsletter hebdomadaire (Sarbacane) vers &lt;strong&gt;5 000+ abonnés&lt;/strong&gt; : planning éditorial et envois automatisés via Google Apps Script" data-en="Weekly newsletter (Sarbacane) to &lt;strong&gt;5,000+ subscribers&lt;/strong&gt;: editorial planning and automated sends with Google Apps Script">Newsletter hebdomadaire (Sarbacane) vers <strong>5 000+ abonnés</strong> : planning éditorial et envois automatisés via Google Apps Script</li>
+            <li data-fr="Organisation de &lt;strong&gt;30+ événements&lt;/strong&gt; (prospection B2B, ateliers cuisine, stands, collectes) et coordination avec les organisations partenaires" data-en="Organised &lt;strong&gt;30+ events&lt;/strong&gt; (B2B prospection, cooking workshops, stands, food drives) and coordinated with partner organisations">Organisation de <strong>30+ événements</strong> (prospection B2B, ateliers cuisine, stands, collectes) et coordination avec les organisations partenaires</li>
+            <li data-fr="Onboarding d&#x27;environ 10 nouveaux bénévoles par semaine et accompagnement quotidien de 10 à 20 bénéficiaires, &lt;strong&gt;par téléphone, messagerie, email et en face à face&lt;/strong&gt; sur le terrain" data-en="Onboarded about 10 new volunteers a week and supported 10 to 20 beneficiaries daily, &lt;strong&gt;by phone, messaging, email and face to face&lt;/strong&gt; on site">Onboarding d'environ 10 nouveaux bénévoles par semaine et accompagnement quotidien de 10 à 20 bénéficiaires, <strong>par téléphone, messagerie, email et en face à face</strong> sur le terrain</li>
+            <li data-fr="&lt;span class=&#x27;why&#x27;&gt;initiative&lt;/span&gt;Création et optimisation des guides d&#x27;onboarding des Linkers et des SOP (prospection, ateliers), et création de &lt;strong&gt;jeux pour les stands&lt;/strong&gt; autour des dates DLC / DDM pour sensibiliser au gaspillage alimentaire" data-en="&lt;span class=&#x27;why&#x27;&gt;initiative&lt;/span&gt;Created and improved onboarding guides for Linkers and SOPs (prospection, workshops), and designed &lt;strong&gt;stand games&lt;/strong&gt; on use-by and best-before dates to raise awareness of food waste"><span class='why'>initiative</span>Création et optimisation des guides d'onboarding des Linkers et des SOP (prospection, ateliers), et création de <strong>jeux pour les stands</strong> autour des dates DLC / DDM pour sensibiliser au gaspillage alimentaire</li>
             <li data-fr="Programme de bénévoles étudiants KEDGE géré de bout en bout : information, sélection, entretiens, onboarding, attestations" data-en="Ran the KEDGE student volunteer programme end to end: information, screening, interviews, onboarding, attestations">Programme de bénévoles étudiants KEDGE géré de bout en bout : information, sélection, entretiens, onboarding, attestations</li>
-            <li data-fr="Newsletter Sarbacane hebdomadaire, automatisation des emails avec Google Apps Script, données suivies sur Airtable" data-en="Weekly Sarbacane newsletter, email automation with Google Apps Script, data tracked in Airtable">Newsletter Sarbacane hebdomadaire, automatisation des emails avec Google Apps Script, données suivies sur Airtable</li>
           </ul>
-          <p class="stack"><b data-fr="Outils :" data-en="Tools:">Outils :</b> Sarbacane, Google Apps Script, Airtable, Notion, WhatsApp</p>
+          <p class="stack"><span data-fr="&lt;b&gt;Outils :&lt;/b&gt; " data-en="&lt;b&gt;Tools:&lt;/b&gt; "><b>Outils :</b> </span>Sarbacane, Google Apps Script, Airtable, Notion, Google Drive, WhatsApp</p>
           <div class="pics"><img src="Linkee_Distrib.jpeg" alt="Distribution Linkee" loading="lazy"><img src="Linkee_Stand.jpeg" alt="Stand Linkee" loading="lazy"></div>
-          <a class="case" href="portfolio.html#community" data-fr="Lire l'étude de cas" data-en="Read the case study">Lire l'étude de cas</a>
         </div></div></div>
       </div>
     </article>
-
     <article class="job reveal">
-      <div class="yr">2025<small data-fr="Freelance" data-en="Freelance">Freelance</small></div>
+      <div class="yr">04 – 05/2025<small>Bordeaux, freelance</small></div>
       <div>
         <h3 data-fr="Chargée de Projets Communication" data-en="Communications Project Specialist">Chargée de Projets Communication</h3>
         <div class="co"><img src="hotel_logo.webp" alt="">Hôtel Le Manoir De Bellerive</div>
-        <p class="lead" data-fr="J'ai proposé une stratégie digitale <span class='hl b'>bilingue FR / EN</span> pour positionner un hôtel 4★ auprès d'une clientèle premium européenne et américaine." data-en="I proposed a <span class='hl b'>bilingual FR / EN</span> digital strategy to position a 4★ hotel with premium European and US travellers.">J'ai proposé une stratégie digitale <span class='hl b'>bilingue FR / EN</span> pour positionner un hôtel 4★ auprès d'une clientèle premium européenne et américaine.</p>
-        <button class="toggle" aria-expanded="false"><span class="pm"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 1v10M1 6h10"/></svg></span><span class="tl" data-fr="Voir le détail" data-en="See details">Voir le détail</span></button>
+        <p class="lead" data-fr="Identité de marque digitale et contenus &lt;span class=&#x27;hl b&#x27;&gt;bilingues FR / EN&lt;/span&gt; pour positionner un hôtel 4★ auprès d&#x27;une clientèle premium européenne et anglophone." data-en="Digital brand identity and &lt;span class=&#x27;hl b&#x27;&gt;bilingual FR / EN&lt;/span&gt; content to position a 4★ hotel with premium European and English-speaking travellers.">Identité de marque digitale et contenus <span class='hl b'>bilingues FR / EN</span> pour positionner un hôtel 4★ auprès d'une clientèle premium européenne et anglophone.</p>
+        <div class="job-actions"><button class="toggle" aria-expanded="false"><span class="pm"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 1v10M1 6h10"/></svg></span><span class="tl">Voir le détail</span></button><a class="case" href="portfolio.html#brand"><span data-fr="Voir le projet dans le portfolio" data-en="See the project in my portfolio">Voir le projet dans le portfolio</span></a></div>
         <div class="detail"><div><div class="detail-in">
           <ul>
-            <li data-fr="Analyse du marché américain CSP+ et définition des personas européens et américains" data-en="Analysed the US premium market and defined European and US personas">Analyse du marché américain CSP+ et définition des personas européens et américains</li>
-            <li data-fr="<span class='why'>proposition</span>Recommandation complète livrée : identité visuelle, maquette Instagram, ligne éditoriale FR/EN, exemples de Reels et axes de mesure" data-en="<span class='why'>proposal</span>Delivered a full recommendation: visual identity, Instagram mockup, FR/EN editorial line, Reels examples and measurement axes"><span class='why'>proposition</span>Recommandation complète livrée : identité visuelle, maquette Instagram, ligne éditoriale FR/EN, exemples de Reels et axes de mesure</li>
+            <li data-fr="Analyse de marché et définition de personas pour une clientèle premium européenne et anglophone, avec localisation B2C des contenus" data-en="Market analysis and personas for premium European and English-speaking travellers, with B2C content localisation">Analyse de marché et définition de personas pour une clientèle premium européenne et anglophone, avec localisation B2C des contenus</li>
+            <li data-fr="&lt;span class=&#x27;why&#x27;&gt;proposition&lt;/span&gt;Recommandation complète livrée : identité visuelle, maquette Instagram, ligne éditoriale FR / EN, exemples de Reels et axes de mesure" data-en="&lt;span class=&#x27;why&#x27;&gt;proposal&lt;/span&gt;Delivered a full recommendation: visual identity, Instagram mockup, FR / EN editorial line, Reels examples and measurement axes"><span class='why'>proposition</span>Recommandation complète livrée : identité visuelle, maquette Instagram, ligne éditoriale FR / EN, exemples de Reels et axes de mesure</li>
           </ul>
-          <p class="stack"><b data-fr="Outils :" data-en="Tools:">Outils :</b> Figma, Canva, Meta Business Suite</p>
-          <a class="case" href="portfolio.html#brand" data-fr="Lire l'étude de cas" data-en="Read the case study">Lire l'étude de cas</a>
+          <p class="stack"><span data-fr="&lt;b&gt;Outils :&lt;/b&gt; " data-en="&lt;b&gt;Tools:&lt;/b&gt; "><b>Outils :</b> </span>Figma, Canva, Meta Business Suite</p>
+          
         </div></div></div>
       </div>
     </article>
-
     <article class="job reveal open">
-      <div class="yr">2024<small>Bordeaux</small></div>
+      <div class="yr">06/2024 – 12/2024<small>Bordeaux</small></div>
       <div>
         <h3 data-fr="Chargée de Marketing Digital International" data-en="International Digital Marketing Specialist">Chargée de Marketing Digital International</h3>
         <div class="co"><img src="Unifox_logo.webp" alt="">UniFox, GreenTech & Web3</div>
-        <p class="lead" data-fr="J'ai piloté la stratégie digitale APAC / EMEA de bout en bout et construit le tracking à partir de zéro : <span class='hl g'>taux de rebond −52,6 %</span>, <span class='hl'>53,52 % de conversion</span> sur Google Ads et <span class='hl b'>+114 % de vues</span> mensuelles." data-en="I led the APAC / EMEA digital strategy end to end and built tracking from scratch: <span class='hl g'>bounce rate −52.6%</span>, <span class='hl'>53.52% conversion</span> on Google Ads and <span class='hl b'>+114% monthly views</span>.">J'ai piloté la stratégie digitale APAC / EMEA de bout en bout et construit le tracking à partir de zéro : <span class='hl g'>taux de rebond −52,6 %</span>, <span class='hl'>53,52 % de conversion</span> sur Google Ads et <span class='hl b'>+114 % de vues</span> mensuelles.</p>
-        <button class="toggle" aria-expanded="true"><span class="pm"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 1v10M1 6h10"/></svg></span><span class="tl" data-fr="Voir le détail" data-en="See details">Voir le détail</span></button>
+        <p class="lead" data-fr="J&#x27;ai piloté les campagnes APAC / EMEA en ciblant des &lt;span class=&#x27;hl&#x27;&gt;audiences françaises (35 %) et internationales (65 %)&lt;/span&gt;, et construit le tracking à partir de zéro : &lt;span class=&#x27;hl g&#x27;&gt;taux de rebond −52,6 %&lt;/span&gt;, &lt;span class=&#x27;hl b&#x27;&gt;conversion iOS de 58,82 % à 95,2 %&lt;/span&gt;." data-en="I led APAC / EMEA campaigns targeting &lt;span class=&#x27;hl&#x27;&gt;French (35%) and international (65%) audiences&lt;/span&gt;, and built tracking from scratch: &lt;span class=&#x27;hl g&#x27;&gt;bounce rate −52.6%&lt;/span&gt;, &lt;span class=&#x27;hl b&#x27;&gt;iOS conversion from 58.82% to 95.2%&lt;/span&gt;.">J'ai piloté les campagnes APAC / EMEA en ciblant des <span class='hl'>audiences françaises (35 %) et internationales (65 %)</span>, et construit le tracking à partir de zéro : <span class='hl g'>taux de rebond −52,6 %</span>, <span class='hl b'>conversion iOS de 58,82 % à 95,2 %</span>.</p>
+        <div class="job-actions"><button class="toggle" aria-expanded="true"><span class="pm"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 1v10M1 6h10"/></svg></span><span class="tl">Voir le détail</span></button><a class="case" href="portfolio.html#strategy"><span data-fr="Voir le projet dans le portfolio" data-en="See the project in my portfolio">Voir le projet dans le portfolio</span></a></div>
         <div class="detail"><div><div class="detail-in">
           <ul>
-            <li data-fr="<span class='why'>de zéro</span>Conception et déploiement de bout en bout de la stratégie marketing digital : mise en place intégrale de <strong>GA4, Google Tag Manager, des dashboards KPI</strong> (Tableau, SQL) et des processus de reporting analytique" data-en="<span class='why'>from scratch</span>Designed and rolled out the digital marketing strategy end to end: full set-up of <strong>GA4, Google Tag Manager, KPI dashboards</strong> (Tableau, SQL) and analytics reporting processes"><span class='why'>de zéro</span>Conception et déploiement de bout en bout de la stratégie marketing digital : mise en place intégrale de <strong>GA4, Google Tag Manager, des dashboards KPI</strong> (Tableau, SQL) et des processus de reporting analytique</li>
-            <li data-fr="Analyse du comportement utilisateur et <strong>cartographie du parcours client</strong>, de la découverte à la mesure finale, avec PostHog (<strong>heatmaps</strong>, replays de sessions) et GA4" data-en="Analysed user behaviour and <strong>mapped the customer journey</strong> from first discovery to final measurement, with PostHog (<strong>heatmaps</strong>, session replays) and GA4">Analyse du comportement utilisateur et <strong>cartographie du parcours client</strong>, de la découverte à la mesure finale, avec PostHog (<strong>heatmaps</strong>, replays de sessions) et GA4</li>
-            <li data-fr="<span class='why'>proposition</span>Identification d'un écart de conversion <strong>iOS vs Android (58,82 % vs 95,2 %)</strong>, puis correctifs UX proposés et mis en place (formulaire simplifié, CTA repositionnés, chargement optimisé) qui ont comblé l'écart" data-en="<span class='why'>proposal</span>Identified an <strong>iOS vs Android conversion gap (58.82% vs 95.2%)</strong>, then proposed and shipped UX fixes (simpler form, repositioned CTAs, faster load) that closed the gap"><span class='why'>proposition</span>Identification d'un écart de conversion <strong>iOS vs Android (58,82 % vs 95,2 %)</strong>, puis correctifs UX proposés et mis en place (formulaire simplifié, CTA repositionnés, chargement optimisé) qui ont comblé l'écart</li>
-            <li data-fr="Optimisation des campagnes d'acquisition B2C APAC / EMEA (Google Ads, réseaux sociaux, SEO)" data-en="Optimised B2C acquisition campaigns across APAC / EMEA (Google Ads, social, SEO)">Optimisation des campagnes d'acquisition B2C APAC / EMEA (Google Ads, réseaux sociaux, SEO)</li>
-            <li data-fr="Contenus segmentés sur 6 plateformes (8,67 événements par session sur le social organique) et représentation de la marque sur un salon tech international" data-en="Segmented content across 6 platforms (8.67 events per session on organic social) and represented the brand at an international tech trade show">Contenus segmentés sur 6 plateformes (8,67 événements par session sur le social organique) et représentation de la marque sur un salon tech international</li>
+            <li data-fr="&lt;span class=&#x27;why&#x27;&gt;de zéro&lt;/span&gt;Configuration de &lt;strong&gt;GA4 et Google Tag Manager&lt;/strong&gt; sur une plateforme sans mesure fiable, puis tableaux de bord KPI (Tableau, SQL) et reporting mensuel avec recommandations" data-en="&lt;span class=&#x27;why&#x27;&gt;from scratch&lt;/span&gt;Set up &lt;strong&gt;GA4 and Google Tag Manager&lt;/strong&gt; on a platform with no reliable measurement, then KPI dashboards (Tableau, SQL) and monthly reporting with recommendations"><span class='why'>de zéro</span>Configuration de <strong>GA4 et Google Tag Manager</strong> sur une plateforme sans mesure fiable, puis tableaux de bord KPI (Tableau, SQL) et reporting mensuel avec recommandations</li>
+            <li data-fr="Pilotage des campagnes internationales APAC / EMEA sur 5 plateformes, du ciblage au reporting (audiences FR 35 %, international 65 %), avec Google Ads et SEO" data-en="Led international APAC / EMEA campaigns on 5 platforms, from targeting to reporting (FR audiences 35%, international 65%), with Google Ads and SEO">Pilotage des campagnes internationales APAC / EMEA sur 5 plateformes, du ciblage au reporting (audiences FR 35 %, international 65 %), avec Google Ads et SEO</li>
+            <li data-fr="Analyse du comportement utilisateur et &lt;strong&gt;cartographie du parcours client&lt;/strong&gt;, de la découverte à la mesure finale, avec PostHog (&lt;strong&gt;heatmaps&lt;/strong&gt;, replays de sessions) et GA4 : taux de rebond réduit de &lt;strong&gt;52,6 %&lt;/strong&gt;" data-en="Analysed user behaviour and &lt;strong&gt;mapped the customer journey&lt;/strong&gt; from discovery to final measurement with PostHog (&lt;strong&gt;heatmaps&lt;/strong&gt;, session replays) and GA4: bounce rate cut by &lt;strong&gt;52.6%&lt;/strong&gt;">Analyse du comportement utilisateur et <strong>cartographie du parcours client</strong>, de la découverte à la mesure finale, avec PostHog (<strong>heatmaps</strong>, replays de sessions) et GA4 : taux de rebond réduit de <strong>52,6 %</strong></li>
+            <li data-fr="&lt;span class=&#x27;why&#x27;&gt;proposition&lt;/span&gt;Refonte d&#x27;une page d&#x27;atterrissage après analyse du comportement mobile : &lt;strong&gt;conversion iOS de 58,82 % à 95,2 %&lt;/strong&gt;, et &lt;strong&gt;53,52 % de conversion&lt;/strong&gt; sur Google Ads" data-en="&lt;span class=&#x27;why&#x27;&gt;proposal&lt;/span&gt;Redesigned a landing page after analysing mobile behaviour: &lt;strong&gt;iOS conversion from 58.82% to 95.2%&lt;/strong&gt;, and &lt;strong&gt;53.52% conversion&lt;/strong&gt; on Google Ads"><span class='why'>proposition</span>Refonte d'une page d'atterrissage après analyse du comportement mobile : <strong>conversion iOS de 58,82 % à 95,2 %</strong>, et <strong>53,52 % de conversion</strong> sur Google Ads</li>
+            <li data-fr="Représentation de la marque sur un salon tech international" data-en="Represented the brand at an international tech trade show">Représentation de la marque sur un salon tech international</li>
           </ul>
-          <p class="stack"><b data-fr="Outils :" data-en="Tools:">Outils :</b> GA4, Google Tag Manager, PostHog, Tableau, SQL, Google Ads, Meta Ads, Iconosquare, Figma, CapCut</p>
-          <a class="case" href="portfolio.html#strategy" data-fr="Lire l'étude de cas" data-en="Read the case study">Lire l'étude de cas</a>
+          <p class="stack"><span data-fr="&lt;b&gt;Outils :&lt;/b&gt; " data-en="&lt;b&gt;Tools:&lt;/b&gt; "><b>Outils :</b> </span>GA4, Google Tag Manager, PostHog, Tableau, SQL, Google Ads, Meta Ads, Figma, CapCut</p>
+          
         </div></div></div>
       </div>
     </article>
-
     <article class="job reveal">
-      <div class="yr">2023<small>Paris</small></div>
+      <div class="yr">06/2023 – 09/2023<small>Paris</small></div>
       <div>
         <h3 data-fr="Chargée de Développement Marketing" data-en="Marketing Development Specialist">Chargée de Développement Marketing</h3>
         <div class="co"><img src="reinventing_logo.png" alt="">Reinventing Carrière Coaching</div>
-        <p class="lead" data-fr="J'ai lancé un cours en ligne de l'étude de marché à la mise en vente : <span class='hl'>26 sessions</span> et <span class='hl b'>3,5 h de vidéo</span> produites en <span class='hl g'>2 mois</span>, délais tenus." data-en="I launched an online course from market research to going on sale: <span class='hl'>26 sessions</span> and <span class='hl b'>3.5h of video</span> produced in <span class='hl g'>2 months</span>, on schedule.">J'ai lancé un cours en ligne de l'étude de marché à la mise en vente : <span class='hl'>26 sessions</span> et <span class='hl b'>3,5 h de vidéo</span> produites en <span class='hl g'>2 mois</span>, délais tenus.</p>
-        <button class="toggle" aria-expanded="false"><span class="pm"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 1v10M1 6h10"/></svg></span><span class="tl" data-fr="Voir le détail" data-en="See details">Voir le détail</span></button>
+        <p class="lead" data-fr="J&#x27;ai construit et déployé la &lt;span class=&#x27;hl&#x27;&gt;stratégie go-to-market&lt;/span&gt; d&#x27;un cours en ligne, de l&#x27;étude de marché au lancement, avec &lt;span class=&#x27;hl g&#x27;&gt;26 sessions&lt;/span&gt; et &lt;span class=&#x27;hl b&#x27;&gt;3,5 h de vidéo&lt;/span&gt; produites en 2 mois." data-en="I built and rolled out the &lt;span class=&#x27;hl&#x27;&gt;go-to-market strategy&lt;/span&gt; for an online course, from market research to launch, with &lt;span class=&#x27;hl g&#x27;&gt;26 sessions&lt;/span&gt; and &lt;span class=&#x27;hl b&#x27;&gt;3.5h of video&lt;/span&gt; produced in 2 months.">J'ai construit et déployé la <span class='hl'>stratégie go-to-market</span> d'un cours en ligne, de l'étude de marché au lancement, avec <span class='hl g'>26 sessions</span> et <span class='hl b'>3,5 h de vidéo</span> produites en 2 mois.</p>
+        <div class="job-actions"><button class="toggle" aria-expanded="false"><span class="pm"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 1v10M1 6h10"/></svg></span><span class="tl">Voir le détail</span></button><a class="case" href="portfolio.html#product"><span data-fr="Voir le projet dans le portfolio" data-en="See the project in my portfolio">Voir le projet dans le portfolio</span></a></div>
         <div class="detail"><div><div class="detail-in">
           <ul>
-            <li data-fr="Stratégie d'acquisition de A à Z : analyse marché et concurrentielle, personas, positionnement, <strong>proposition tarifaire</strong>, canaux et programme d'affiliation" data-en="Acquisition strategy from A to Z: market and competitive analysis, personas, positioning, <strong>pricing proposal</strong>, channels and affiliate programme">Stratégie d'acquisition de A à Z : analyse marché et concurrentielle, personas, positionnement, <strong>proposition tarifaire</strong>, canaux et programme d'affiliation</li>
-            <li data-fr="<span class='why'>de zéro</span>Coordination de la production des 26 sessions avec un workflow réutilisé ensuite pour les créations suivantes" data-en="<span class='why'>from scratch</span>Coordinated production of the 26 sessions with a workflow later reused for new content"><span class='why'>de zéro</span>Coordination de la production des 26 sessions avec un workflow réutilisé ensuite pour les créations suivantes</li>
-            <li data-fr="Montage des vidéos de formation, conception d'un webinaire et contenus digitaux (bannières, Reels)" data-en="Edited the training videos, designed a webinar and created digital content (banners, Reels)">Montage des vidéos de formation, conception d'un webinaire et contenus digitaux (bannières, Reels)</li>
+            <li data-fr="&lt;span class=&#x27;why&#x27;&gt;de zéro&lt;/span&gt;&lt;strong&gt;Stratégie go-to-market de A à Z&lt;/strong&gt; : analyse marché et concurrentielle, personas, positionnement, proposition tarifaire, canaux d&#x27;acquisition et programme d&#x27;affiliation" data-en="&lt;span class=&#x27;why&#x27;&gt;from scratch&lt;/span&gt;&lt;strong&gt;Go-to-market strategy from A to Z&lt;/strong&gt;: market and competitive analysis, personas, positioning, pricing proposal, acquisition channels and affiliate programme"><span class='why'>de zéro</span><strong>Stratégie go-to-market de A à Z</strong> : analyse marché et concurrentielle, personas, positionnement, proposition tarifaire, canaux d'acquisition et programme d'affiliation</li>
+            <li data-fr="Coordination du lancement : production de &lt;strong&gt;26 sessions en 2 mois&lt;/strong&gt;, délais tenus à chaque phase, avec un workflow réutilisé pour les créations suivantes" data-en="Coordinated the launch: &lt;strong&gt;26 sessions produced in 2 months&lt;/strong&gt;, on schedule at every phase, with a workflow reused for later content">Coordination du lancement : production de <strong>26 sessions en 2 mois</strong>, délais tenus à chaque phase, avec un workflow réutilisé pour les créations suivantes</li>
+            <li data-fr="Production de &lt;strong&gt;3,5 h de vidéos&lt;/strong&gt; de formation et de supports pédagogiques digitaux, conception d&#x27;un webinaire et contenus de lancement (bannières de landing page, Reels)" data-en="Produced &lt;strong&gt;3.5h of training videos&lt;/strong&gt; and digital learning materials, designed a webinar and launch content (landing page banners, Reels)">Production de <strong>3,5 h de vidéos</strong> de formation et de supports pédagogiques digitaux, conception d'un webinaire et contenus de lancement (bannières de landing page, Reels)</li>
           </ul>
-          <p class="stack"><b data-fr="Outils :" data-en="Tools:">Outils :</b> Podia, CapCut, Canva, Notion</p>
-          <a class="case" href="portfolio.html#product" data-fr="Lire l'étude de cas" data-en="Read the case study">Lire l'étude de cas</a>
+          <p class="stack"><span data-fr="&lt;b&gt;Outils :&lt;/b&gt; " data-en="&lt;b&gt;Tools:&lt;/b&gt; "><b>Outils :</b> </span>Podia, CapCut, Canva, Notion</p>
+          
         </div></div></div>
       </div>
     </article>
-
     <article class="job reveal">
-      <div class="yr">2020 - 2022<small>Taipei</small></div>
+      <div class="yr">12/2020 – 07/2022<small>Taipei</small></div>
       <div>
         <h3 data-fr="Analyste Documentation Technique" data-en="Technical Document Control Analyst">Analyste Documentation Technique</h3>
         <div class="co"><img src="corsair_logo.png" alt="">Corsair Gaming, <span data-fr="entreprise américaine" data-en="US company">entreprise américaine</span></div>
-        <p class="lead" data-fr="En anglais au quotidien, je gardais les données produits fiables entre les usines et les équipes <span class='hl b'>APAC, EMEA et Amériques</span>, sur <span class='hl'>10 à 15 projets par trimestre</span> et <span class='hl g'>20+ tickets par semaine</span> répartis sur trois fuseaux horaires." data-en="Working in English every day, I kept product data reliable between factories and the <span class='hl b'>APAC, EMEA and Americas</span> teams, across <span class='hl'>10 to 15 projects a quarter</span> and <span class='hl g'>20+ tickets a week</span> spread over three time zones.">En anglais au quotidien, je gardais les données produits fiables entre les usines et les équipes <span class='hl b'>APAC, EMEA et Amériques</span>, sur <span class='hl'>10 à 15 projets par trimestre</span> et <span class='hl g'>20+ tickets par semaine</span> répartis sur trois fuseaux horaires.</p>
-        <button class="toggle" aria-expanded="false"><span class="pm"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 1v10M1 6h10"/></svg></span><span class="tl" data-fr="Voir le détail" data-en="See details">Voir le détail</span></button>
+        <p class="lead" data-fr="Dans une entreprise américaine, en anglais au quotidien, j&#x27;ai géré les données de &lt;span class=&#x27;hl&#x27;&gt;3 gammes de produits&lt;/span&gt; entre l&#x27;&lt;span class=&#x27;hl b&#x27;&gt;Asie, l&#x27;Europe et les Amériques&lt;/span&gt;, du prototype à la production, sur &lt;span class=&#x27;hl g&#x27;&gt;10 à 15 projets par trimestre&lt;/span&gt;, avec un &lt;span class=&#x27;hl&#x27;&gt;taux de conformité technique de 95 %+&lt;/span&gt;." data-en="At a US company, working in English every day, I managed data for &lt;span class=&#x27;hl&#x27;&gt;3 product lines&lt;/span&gt; across &lt;span class=&#x27;hl b&#x27;&gt;Asia, Europe and the Americas&lt;/span&gt;, from prototype to production, on &lt;span class=&#x27;hl g&#x27;&gt;10 to 15 projects a quarter&lt;/span&gt;, with a &lt;span class=&#x27;hl&#x27;&gt;95%+ technical compliance rate&lt;/span&gt;.">Dans une entreprise américaine, en anglais au quotidien, j'ai géré les données de <span class='hl'>3 gammes de produits</span> entre l'<span class='hl b'>Asie, l'Europe et les Amériques</span>, du prototype à la production, sur <span class='hl g'>10 à 15 projets par trimestre</span>, avec un <span class='hl'>taux de conformité technique de 95 %+</span>.</p>
+        <div class="job-actions"><button class="toggle" aria-expanded="false"><span class="pm"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 1v10M1 6h10"/></svg></span><span class="tl">Voir le détail</span></button></div>
         <div class="detail"><div><div class="detail-in">
           <ul>
-            <li data-fr="Coordination avec les équipes des trois régions et cohérence des données produits sur <strong>3 lignes de produits</strong>" data-en="Coordinated with teams in all three regions and kept product data consistent across <strong>3 product lines</strong>">Coordination avec les équipes des trois régions et cohérence des données produits sur <strong>3 lignes de produits</strong></li>
-            <li data-fr="Suivi quotidien des modifications avec les usines dans Oracle PLM (substitutions de composants, quantités, blocages, fins de vie) et génération des nomenclatures (BOM) de nombreuses séries en parallèle" data-en="Daily factory change tracking in Oracle PLM (component substitutions, quantities, holds, end of life) and BOM generation for many series in parallel">Suivi quotidien des modifications avec les usines dans Oracle PLM (substitutions de composants, quantités, blocages, fins de vie) et génération des nomenclatures (BOM) de nombreuses séries en parallèle</li>
-            <li data-fr="Tickets inter-équipes traités en parallèle : qualification, priorisation et résolution" data-en="Handled cross-team tickets in parallel: triage, prioritisation and resolution">Tickets inter-équipes traités en parallèle : qualification, priorisation et résolution</li>
-            <li data-fr="<span class='why'>initiative</span>Automatisations <strong>Google Apps Script</strong> pour supprimer des étapes manuelles, et reporting sous Excel" data-en="<span class='why'>initiative</span>Built <strong>Google Apps Script</strong> automations to remove manual steps, and reported in Excel"><span class='why'>initiative</span>Automatisations <strong>Google Apps Script</strong> pour supprimer des étapes manuelles, et reporting sous Excel</li>
+            <li data-fr="Gestion de &lt;strong&gt;3 gammes de produits&lt;/strong&gt; (moniteurs, périphériques desktop, refroidissement sur mesure) entre l&#x27;Asie, l&#x27;Europe et les Amériques : création des SKU et des nomenclatures (BOM) des nouveaux produits, gestion des emballages et des fichiers marketing, du prototype à la production (PLM)" data-en="Managed &lt;strong&gt;3 product lines&lt;/strong&gt; (monitors, desktop devices, custom cooling) across Asia, Europe and the Americas: SKU and BOM creation for new products, packaging and marketing files, from prototype to production (PLM)">Gestion de <strong>3 gammes de produits</strong> (moniteurs, périphériques desktop, refroidissement sur mesure) entre l'Asie, l'Europe et les Amériques : création des SKU et des nomenclatures (BOM) des nouveaux produits, gestion des emballages et des fichiers marketing, du prototype à la production (PLM)</li>
+            <li data-fr="Optimisation des processus dans Oracle PLM pour garantir l&#x27;&lt;strong&gt;intégrité des données produits&lt;/strong&gt; et la conformité aux normes internationales, et coordination des lancements en respectant les spécificités et les standards de chaque marché" data-en="Optimised processes in Oracle PLM to ensure &lt;strong&gt;product data integrity&lt;/strong&gt; and compliance with international standards, and coordinated launches in line with each market&#x27;s specifics and standards">Optimisation des processus dans Oracle PLM pour garantir l'<strong>intégrité des données produits</strong> et la conformité aux normes internationales, et coordination des lancements en respectant les spécificités et les standards de chaque marché</li>
+            <li data-fr="Coordination de &lt;strong&gt;10 à 15 projets par trimestre&lt;/strong&gt; avec les équipes APAC, EMEA et Amériques" data-en="Coordinated &lt;strong&gt;10 to 15 projects per quarter&lt;/strong&gt; with APAC, EMEA and Americas teams">Coordination de <strong>10 à 15 projets par trimestre</strong> avec les équipes APAC, EMEA et Amériques</li>
+            <li data-fr="Résolution de tickets Helpdesk liés au cycle de vie produit sur trois fuseaux horaires, <strong>en réduisant les délais de traitement des requêtes</strong> et en assurant un <strong>taux de conformité technique de 95 %+</strong>" data-en="Resolved product lifecycle Helpdesk tickets across three time zones, <strong>reducing request handling times</strong> and maintaining a <strong>95%+ technical compliance rate</strong>">Résolution de tickets Helpdesk liés au cycle de vie produit sur trois fuseaux horaires, <strong>en réduisant les délais de traitement des requêtes</strong> et en assurant un <strong>taux de conformité technique de 95 %+</strong></li>
+            <li data-fr="Maîtrise d&#x27;&lt;strong&gt;Excel&lt;/strong&gt; pour le suivi et le reporting des données produits" data-en="Strong &lt;strong&gt;Excel&lt;/strong&gt; skills for product data tracking and reporting">Maîtrise d'<strong>Excel</strong> pour le suivi et le reporting des données produits</li>
           </ul>
-          <p class="stack"><b data-fr="Outils :" data-en="Tools:">Outils :</b> Oracle PLM/ERP, Omnify, Google Apps Script, Excel, Slack</p>
+          <p class="stack"><span data-fr="&lt;b&gt;Outils :&lt;/b&gt; " data-en="&lt;b&gt;Tools:&lt;/b&gt; "><b>Outils :</b> </span>Oracle PLM/ERP, Omnify, Excel</p>
+          
         </div></div></div>
       </div>
     </article>
-
     <article class="job reveal">
-      <div class="yr">2018 - 2020<small>Taipei</small></div>
+      <div class="yr">08/2018 – 12/2020<small>Taipei</small></div>
       <div>
-        <h3 data-fr="Chargée de Marques & Développement Commercial" data-en="Trademark & Business Development Specialist">Chargée de Marques & Développement Commercial</h3>
+        <h3 data-fr="Chargée de Marques &amp; Développement Commercial" data-en="Trademark &amp; Business Development Specialist">Chargée de Marques & Développement Commercial</h3>
         <div class="co"><img src="best_ip_logo.jpg" alt="">BEST International IP, <span data-fr="cabinet de propriété intellectuelle" data-en="IP law firm">cabinet de propriété intellectuelle</span></div>
-        <p class="lead" data-fr="J'ai été le point de contact de <span class='hl'>200+ clients B2B internationaux</span>, du premier devis jusqu'à la résolution des litiges." data-en="I was the point of contact for <span class='hl'>200+ international B2B clients</span>, from the first quote to dispute resolution.">J'ai été le point de contact de <span class='hl'>200+ clients B2B internationaux</span>, du premier devis jusqu'à la résolution des litiges.</p>
-        <button class="toggle" aria-expanded="false"><span class="pm"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 1v10M1 6h10"/></svg></span><span class="tl" data-fr="Voir le détail" data-en="See details">Voir le détail</span></button>
+        <p class="lead" data-fr="J&#x27;ai suivi &lt;span class=&#x27;hl&#x27;&gt;200+ comptes B2B internationaux&lt;/span&gt;, du premier devis jusqu&#x27;à la facturation et la résolution des litiges." data-en="I managed &lt;span class=&#x27;hl&#x27;&gt;200+ international B2B accounts&lt;/span&gt;, from the first quote to invoicing and dispute resolution.">J'ai suivi <span class='hl'>200+ comptes B2B internationaux</span>, du premier devis jusqu'à la facturation et la résolution des litiges.</p>
+        <div class="job-actions"><button class="toggle" aria-expanded="false"><span class="pm"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 1v10M1 6h10"/></svg></span><span class="tl">Voir le détail</span></button></div>
         <div class="detail"><div><div class="detail-in">
           <ul>
-            <li data-fr="Suivi du portefeuille sur tout le cycle de vie des marques : devis de dépôt, conseil stratégique, suivi des dossiers et litiges" data-en="Managed the portfolio across the full trademark lifecycle: filing quotes, strategic advice, case follow-up and disputes">Suivi du portefeuille sur tout le cycle de vie des marques : devis de dépôt, conseil stratégique, suivi des dossiers et litiges</li>
-            <li data-fr="Rédaction de mémoires de défense et contribution, aux côtés d'avocats partenaires, à la victoire d'un dossier complexe aux États-Unis" data-en="Drafted defence briefs and contributed, alongside partner attorneys, to winning a complex case in the United States">Rédaction de mémoires de défense et contribution, aux côtés d'avocats partenaires, à la victoire d'un dossier complexe aux États-Unis</li>
-            <li data-fr="Développement commercial et facturation : identification de prospects, relances et vérification des virements avec la comptabilité" data-en="Business development and invoicing: prospect identification, reminders and payment checks with accounting">Développement commercial et facturation : identification de prospects, relances et vérification des virements avec la comptabilité</li>
+            <li data-fr="Suivi de &lt;strong&gt;200+ comptes B2B internationaux&lt;/strong&gt; sur tout le cycle de vie des marques : devis de dépôt, conseil stratégique, suivi des dossiers et litiges" data-en="Managed &lt;strong&gt;200+ international B2B accounts&lt;/strong&gt; across the full trademark lifecycle: filing quotes, strategic advice, case follow-up and disputes">Suivi de <strong>200+ comptes B2B internationaux</strong> sur tout le cycle de vie des marques : devis de dépôt, conseil stratégique, suivi des dossiers et litiges</li>
+            <li data-fr="Rédaction de mémoires de défense et procédure complexe &lt;strong&gt;remportée aux États-Unis&lt;/strong&gt; avec les avocats partenaires" data-en="Drafted defence briefs and &lt;strong&gt;won a complex procedure in the United States&lt;/strong&gt; with partner attorneys">Rédaction de mémoires de défense et procédure complexe <strong>remportée aux États-Unis</strong> avec les avocats partenaires</li>
+            <li data-fr="Développement commercial et facturation : identification de prospects, relances de paiement et vérification des virements avec la comptabilité" data-en="Business development and invoicing: prospect identification, payment reminders and transfer checks with accounting">Développement commercial et facturation : identification de prospects, relances de paiement et vérification des virements avec la comptabilité</li>
           </ul>
+          
         </div></div></div>
       </div>
     </article>
@@ -620,8 +646,8 @@ footer{font-size:1.35rem}
     <div class="school reveal">
       <h3>M2 Strategic & Operational Marketing<br>M1 International & European Business</h3>
       <div class="where" data-fr="Grande École, EM Strasbourg Business School, 2025" data-en="Grande École, EM Strasbourg Business School, 2025">Grande École, EM Strasbourg Business School, 2025</div>
-      <div class="proj">
-        <button aria-expanded="false"><span class="pm"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 1v10M1 6h10"/></svg></span><span data-fr="Mémoire de recherche" data-en="Research thesis">Mémoire de recherche</span><span class="badge">15/20</span></button>
+      <div class="proj open">
+        <button aria-expanded="true"><span class="pm"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 1v10M1 6h10"/></svg></span><span data-fr="Mémoire de recherche" data-en="Research thesis">Mémoire de recherche</span><span class="badge">15/20</span></button>
         <div class="detail"><div><p data-fr="Comment les valeurs personnelles et les initiatives éthiques influencent la volonté de récompenser ou de sanctionner les marques de mode (Europe et Afrique). 166 répondants, régression multiple et ANOVA à deux facteurs. <a href='portfolio.html#research'>Voir le mémoire</a>" data-en="How personal values and ethical initiatives shape willingness to reward or punish fashion brands (Europe and Africa). 166 respondents, multiple regression and two-way ANOVA. <a href='portfolio.html#research'>See the thesis</a>">Comment les valeurs personnelles et les initiatives éthiques influencent la volonté de récompenser ou de sanctionner les marques de mode (Europe et Afrique). 166 répondants, régression multiple et ANOVA à deux facteurs. <a href='portfolio.html#research'>Voir le mémoire</a></p></div></div>
       </div>
       <div class="proj">
@@ -705,7 +731,7 @@ footer{font-size:1.35rem}
   <p data-fr="Votre message est bien arrivé, je vous réponds très vite. Un email de confirmation vous a été envoyé." data-en="Your message arrived safely, I'll reply very soon. A confirmation email has been sent to you.">Votre message est bien arrivé, je vous réponds très vite. Un email de confirmation vous a été envoyé.</p>
   <button class="btn" onclick="document.getElementById('successOverlay').classList.remove('active');history.replaceState(null,'',location.pathname)">OK</button>
 </div></div>
-<div class="lightbox" id="lightbox"><img id="lightbox-img" src="" alt=""></div>
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Photo"><button class="lb-close" aria-label="Fermer">×</button><img id="lightbox-img" src="" alt=""><p class="lb-cap" id="lb-cap"></p></div>
 
 <script>
 var LANG = 'fr';
@@ -715,6 +741,7 @@ var FINE = matchMedia('(pointer: fine)').matches;
 
 /* image fallbacks */
 QA('img').forEach(function (img) {
+  if (img.id === 'lightbox-img') return;
   function fail() {
     if (img.id === 'photo') { var d = document.createElement('div'); d.className = 'photo-fb'; d.textContent = 'Yi-Hsuan'; img.replaceWith(d); return; }
     if (img.closest('.co')) { img.remove(); return; }
@@ -786,11 +813,21 @@ function setLang(l) {
 }
 
 /* lightbox */
-QA('.pics img, .pol img').forEach(function (img) {
-  img.addEventListener('click', function () { document.getElementById('lightbox-img').src = img.src; document.getElementById('lightbox').classList.add('active'); });
+function openLb(img) {
+  document.getElementById('lightbox-img').src = img.src;
+  document.getElementById('lb-cap').textContent = img.alt || '';
+  document.getElementById('lightbox').classList.add('active');
+  document.body.style.overflow = 'hidden';
+}
+function closeLb() { document.getElementById('lightbox').classList.remove('active'); document.body.style.overflow = ''; }
+document.addEventListener('click', function (e) {
+  var z = e.target.closest && e.target.closest('.zoom, .pics img, .pol');
+  if (!z) return;
+  var img = z.tagName === 'IMG' ? z : z.querySelector('img');
+  if (img && img.naturalWidth) openLb(img);
 });
-document.getElementById('lightbox').addEventListener('click', function () { this.classList.remove('active'); });
-document.addEventListener('keydown', function (e) { if (e.key === 'Escape') document.getElementById('lightbox').classList.remove('active'); });
+document.getElementById('lightbox').addEventListener('click', closeLb);
+document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeLb(); });
 
 /* scroll state */
 function onScroll() {
