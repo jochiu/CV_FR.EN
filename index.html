@@ -1,1122 +1,817 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="format-detection" content="telephone=no, date=no, email=no, address=no">
-    <meta name="description" content="Yi-Hsuan Chiu — Marketing opérationnel & CRM | Analytics | Gestion de projet | Coordination APAC/EMEA">
-    <!-- Open Graph / Facebook / LinkedIn / WhatsApp / iMessage -->
-    <meta property="og:type" content="profile">
-    <meta property="og:title" content="Yi-Hsuan Chiu — CV">
-    <meta property="og:description" content="Marketing opérationnel & CRM · Analytics · Gestion de projet · Coordination internationale APAC/EMEA · FR · EN · 中文">
-    <meta property="og:image" content="https://jochiu.github.io/CV_FR.EN/photo.jpg">
-    <meta property="og:image:width" content="600">
-    <meta property="og:image:height" content="600">
-    <meta property="og:url" content="https://jochiu.github.io/CV_FR.EN/">
-    <!-- Twitter / X -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Yi-Hsuan Chiu — CV">
-    <meta name="twitter:description" content="Marketing opérationnel & CRM · Analytics · Gestion de projet · Coordination internationale APAC/EMEA · FR · EN · 中文">
-    <meta name="twitter:image" content="https://jochiu.github.io/CV_FR.EN/photo.jpg">
-    <link rel="icon" type="image/jpeg" href="photo.jpg">
-    <title>Yi-Hsuan Chiu — CV</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --cream: #FAFAF7;
-            --dark: #141414;
-            --accent: #2D5A47;
-            --accent-light: #EBF1EE;
-            --gold: #C5A44E;
-            --gold-light: #F8F3E8;
-            --muted: #5C5C5C;
-            --muted-light: #8A8A8A;
-            --border: #E2E0DB;
-            --border-light: #EEECE8;
-            --warm-gray: #F3F2EE;
-            --white: #FFFFFF;
-            --shadow-sm: 0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.06);
-            --shadow-md: 0 4px 16px rgba(0,0,0,0.06), 0 2px 6px rgba(0,0,0,0.04);
-            --radius: 10px;
-        }
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        html { overflow-x: hidden; }
-        body {
-            font-family: 'DM Sans', -apple-system, sans-serif;
-            background: var(--cream);
-            color: var(--dark);
-            line-height: 1.65;
-            -webkit-font-smoothing: antialiased;
-            overflow-x: hidden;
-        }
-        body::before {
-            content: '';
-            position: fixed;
-            inset: 0;
-            background:
-                radial-gradient(ellipse at 20% 0%, rgba(45,90,71,0.03) 0%, transparent 50%),
-                radial-gradient(ellipse at 80% 100%, rgba(197,164,78,0.03) 0%, transparent 50%);
-            pointer-events: none;
-            z-index: -1;
-        }
-        .top-bar {
-            position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-            background: rgba(250,250,247,0.82);
-            backdrop-filter: blur(20px) saturate(1.2);
-            -webkit-backdrop-filter: blur(20px) saturate(1.2);
-            border-bottom: 1px solid rgba(226,224,219,0.6);
-            padding: 0 2.5rem; height: 56px;
-            display: flex; justify-content: space-between; align-items: center;
-            transition: box-shadow 0.3s;
-        }
-        .top-bar.scrolled { box-shadow: 0 1px 8px rgba(0,0,0,0.06); }
-        .top-bar .name-small {
-            font-family: 'DM Sans', -apple-system, sans-serif;
-            font-size: 1.15rem; font-weight: 600; color: var(--dark);
-        }
-        .nav-links { display: flex; align-items: center; gap: 1.8rem; }
-        .nav-links a {
-            text-decoration: none; color: var(--muted-light);
-            font-size: 0.8rem; font-weight: 500; letter-spacing: 0.04em;
-            text-transform: uppercase; transition: color 0.25s; position: relative;
-        }
-        .nav-links a::after {
-            content: ''; position: absolute; bottom: -4px; left: 0; right: 0;
-            height: 1.5px; background: var(--accent); transform: scaleX(0); transition: transform 0.25s;
-        }
-        .nav-links a:hover { color: var(--dark); }
-        .nav-links a:hover::after { transform: scaleX(1); }
-        .lang-toggle {
-            display: flex; background: var(--white); border-radius: 22px;
-            overflow: hidden; border: 1px solid var(--border); box-shadow: var(--shadow-sm);
-        }
-        .lang-btn {
-            padding: 0.35rem 1rem; font-size: 0.75rem; font-weight: 600;
-            font-family: 'DM Sans', sans-serif; border: none; cursor: pointer;
-            background: transparent; color: var(--muted-light); transition: all 0.25s;
-            letter-spacing: 0.06em;
-        }
-        .lang-btn.active {
-            background: var(--accent); color: white; border-radius: 20px;
-            box-shadow: 0 2px 8px rgba(45,90,71,0.25);
-        }
-        .hero {
-            margin-top: 56px; padding: 5rem 2.5rem 3.5rem;
-            max-width: 1000px; margin-left: auto; margin-right: auto;
-        }
-        .hero-inner {
-            display: grid; grid-template-columns: 170px 1fr; gap: 3rem; align-items: start;
-            background: var(--white); border: 1px solid var(--border-light);
-            border-radius: 16px; padding: 3rem; box-shadow: var(--shadow-md);
-            position: relative; overflow: hidden;
-        }
-        .hero-inner::before {
-            content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px;
-            background: linear-gradient(90deg, var(--accent), var(--gold));
-        }
-        .hero-photo {
-            width: 170px; height: 170px; border-radius: 50%; object-fit: cover;
-            border: 2px solid var(--border-light); box-shadow: var(--shadow-sm);
-            transition: transform 0.4s, box-shadow 0.4s;
-        }
-        .hero-photo:hover { transform: scale(1.02); box-shadow: var(--shadow-md); }
-        .hero-text h1 {
-            font-family: 'DM Sans', -apple-system, sans-serif; font-size: 2.8rem; font-weight: 700;
-            letter-spacing: -0.02em; line-height: 1.1; margin-bottom: 0.4rem;
-        }
-        .hero-text .tagline {
-            font-size: 1.05rem; color: var(--accent); font-weight: 500; margin-bottom: 1rem;
-        }
-        .hero-text .intro {
-            font-size: 0.92rem; color: var(--muted); max-width: 560px; line-height: 1.75;
-        }
-        .hero-contact { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1.4rem; }
-        .contact-chip {
-            display: inline-flex; align-items: center; gap: 0.4rem;
-            font-size: 0.78rem; color: var(--muted); text-decoration: none;
-            padding: 0.4rem 0.8rem; border: 1px solid var(--border);
-            border-radius: 8px; transition: all 0.25s; background: var(--cream);
-        }
-        a.contact-chip:hover {
-            border-color: var(--accent); color: var(--accent);
-            background: var(--accent-light); transform: translateY(-1px); box-shadow: var(--shadow-sm);
-        }
-        .contact-chip svg { width: 15px; height: 15px; flex-shrink: 0; }
-        .main { max-width: 1000px; margin: 0 auto; padding: 0 2.5rem 5rem; overflow-x: hidden; }
-        .section { margin-bottom: 3.5rem; overflow: hidden; scroll-margin-top: 80px; }
-        .section-header { display: flex; align-items: center; gap: 1rem; margin-bottom: 1.8rem; }
-        .section-number {
-            font-family: 'Cormorant Garamond', serif; font-size: 0.85rem; font-weight: 600;
-            color: var(--gold); background: var(--gold-light);
-            width: 28px; height: 28px; display: flex; align-items: center;
-            justify-content: center; border-radius: 6px; flex-shrink: 0;
-        }
-        .section-title {
-            font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 700;
-            color: var(--dark); letter-spacing: -0.01em;
-        }
-        .section-line { flex: 1; height: 1px; background: var(--border); }
-        .card-wrap {
-            background: var(--white); border: 1px solid var(--border-light);
-            border-radius: var(--radius); padding: 2rem 2.2rem; box-shadow: var(--shadow-sm);
-        }
-        .exp-card {
-            display: grid; grid-template-columns: 160px 1fr; gap: 2rem;
-            padding: 1.8rem 0; border-bottom: 1px solid var(--border-light); position: relative;
-        }
-        .exp-card:last-child { border-bottom: none; }
-        .exp-card::before {
-            content: ''; position: absolute; left: 172px; top: 0; bottom: 0;
-            width: 1px; background: var(--border-light);
-        }
-        .exp-meta { font-size: 0.8rem; color: var(--muted-light); padding-top: 0.15rem; }
-        .exp-meta .dates { font-weight: 600; color: var(--dark); margin-bottom: 0.2rem; font-size: 0.82rem; }
-        .exp-meta .location { font-style: italic; font-size: 0.78rem; }
-        .exp-body { padding-left: 0.5rem; }
-        .exp-body h3 { font-size: 1rem; font-weight: 600; margin-bottom: 0.1rem; line-height: 1.35; }
-        .exp-body .company { font-size: 0.88rem; color: var(--accent); font-weight: 500; margin-bottom: 0.65rem; display: flex; align-items: center; gap: 0.45rem; flex-wrap: wrap; }
-        .company-logo { width: 22px; height: 22px; object-fit: contain; flex-shrink: 0; border-radius: 3px; background: var(--white); padding: 1px; }
-        .exp-body ul { list-style: none; padding: 0; }
-        .exp-body ul li {
-            position: relative; padding-left: 1.1rem; font-size: 0.87rem;
-            color: var(--muted); margin-bottom: 0.45rem; line-height: 1.65;
-        }
-        .exp-body ul li::before {
-            content: ''; position: absolute; left: 0; top: 0.6em;
-            width: 4px; height: 4px; background: var(--gold); border-radius: 50%;
-        }
-        .exp-tags { display: flex; flex-wrap: wrap; gap: 0.3rem; margin-top: 0.7rem; }
-        .exp-tags .exp-tag {
-            font-size: 0.7rem; padding: 0.2rem 0.55rem; background: var(--accent-light);
-            color: var(--accent); font-weight: 600; border-radius: 12px;
-            border: 1px solid rgba(45,90,71,0.15);
-        }
-        .skills-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2rem; }
-        .skill-category h3 {
-            font-size: 0.78rem; font-weight: 600; margin-bottom: 0.7rem;
-            color: var(--accent); text-transform: uppercase; letter-spacing: 0.08em;
-        }
-        .skill-tags { display: flex; flex-wrap: wrap; gap: 0.35rem; }
-        .skill-tag {
-            font-size: 0.77rem; padding: 0.3rem 0.6rem; background: var(--warm-gray);
-            border-radius: 5px; color: var(--dark); border: 1px solid var(--border-light);
-            transition: all 0.2s;
-        }
-        .skill-tag:hover { background: var(--accent-light); border-color: var(--accent); color: var(--accent); }
-        #skills .card-wrap, #tools .card-wrap { padding: 1.3rem 1.6rem; }
-        #skills, #tools, #certifications { margin-bottom: 2rem; }
-        #skills .skills-grid { gap: 1.2rem; }
-        #skills .skill-category h3 { margin-bottom: 0.45rem; font-size: 0.74rem; }
-        #skills .skill-tag, #tools .skill-tag { font-size: 0.73rem; padding: 0.22rem 0.5rem; }
-        #skills .skill-tags, #tools .skill-tags { gap: 0.3rem; }
-        .edu-card {
-            background: var(--white); border: 1px solid var(--border-light);
-            border-radius: var(--radius); padding: 1.6rem 2rem;
-            box-shadow: var(--shadow-sm); margin-bottom: 1rem;
-        }
-        .edu-card:last-child { margin-bottom: 0; }
-        .edu-card h3 { font-size: 0.98rem; font-weight: 600; line-height: 1.4; }
-        .edu-card .school { font-size: 0.88rem; color: var(--accent); font-weight: 500; margin-top: 0.1rem; }
-        .edu-achievements {
-            margin-top: 0.75rem; padding-top: 0.75rem; border-top: 1px solid var(--border-light);
-        }
-        .edu-achievements li {
-            position: relative; padding-left: 1.1rem; font-size: 0.85rem;
-            color: var(--muted); margin-bottom: 0.35rem; line-height: 1.6; list-style: none;
-        }
-        .edu-achievements li::before {
-            content: ''; position: absolute; left: 0; top: 0.6em;
-            width: 4px; height: 4px; background: var(--gold); border-radius: 50%;
-        }
-        .reco-link {
-            display: inline-flex; align-items: center; gap: 0.4rem;
-            font-size: 0.8rem; font-weight: 500; color: var(--accent);
-            text-decoration: none; padding: 0.35rem 0.8rem;
-            border: 1px solid var(--accent); border-radius: 6px;
-            transition: all 0.25s; margin-top: 0.5rem; background: transparent;
-        }
-        .reco-link:hover {
-            background: var(--accent); color: var(--white);
-            box-shadow: 0 2px 8px rgba(45,90,71,0.2);
-        }
-        .reco-link svg { width: 14px; height: 14px; }
-        /* Recommendations */
-        .reco-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; }
-        .reco-card {
-            background: var(--white); border: 1px solid var(--border-light);
-            border-radius: var(--radius); padding: 1.5rem 1.8rem;
-            box-shadow: var(--shadow-sm); display: flex; flex-direction: column;
-        }
-        .reco-card .reco-who { font-size: 0.95rem; font-weight: 600; line-height: 1.35; }
-        .reco-card .reco-role { font-size: 0.8rem; color: var(--accent); font-weight: 500; margin-top: 0.1rem; }
-        .reco-card .reco-context { font-size: 0.78rem; color: var(--muted-light); font-style: italic; margin-top: 0.15rem; }
-        .reco-card p { font-size: 0.83rem; color: var(--muted); line-height: 1.65; margin-top: 0.7rem; flex: 1; }
-        .reco-card .reco-link { align-self: flex-start; margin-top: 0.9rem; }
-        .lang-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; }
-        .lang-item {
-            padding: 1.2rem; background: var(--white); border-radius: var(--radius);
-            border: 1px solid var(--border-light); box-shadow: var(--shadow-sm);
-            transition: transform 0.2s, box-shadow 0.2s;
-        }
-        .lang-item:hover { transform: translateY(-2px); box-shadow: var(--shadow-md); }
-        .lang-item .lang-name { font-weight: 600; font-size: 0.92rem; margin-bottom: 0.25rem; }
-        .lang-item .lang-level { font-size: 0.78rem; color: var(--muted-light); line-height: 1.45; }
-        .lang-bar { height: 3px; background: var(--border-light); border-radius: 2px; margin-top: 0.65rem; overflow: hidden; }
-        .lang-bar-fill {
-            height: 100%; border-radius: 2px;
-            background: linear-gradient(90deg, var(--accent), var(--gold));
-            transition: width 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-        }
-        .links-row { display: flex; flex-wrap: wrap; gap: 0.8rem; }
-        .link-card {
-            display: inline-flex; align-items: center; gap: 0.6rem;
-            text-decoration: none; padding: 0.85rem 1.4rem;
-            border: 1px solid var(--border); border-radius: var(--radius);
-            color: var(--dark); font-size: 0.85rem; font-weight: 500;
-            transition: all 0.3s; background: var(--white); box-shadow: var(--shadow-sm);
-        }
-        .link-card:hover {
-            border-color: var(--accent); background: var(--accent-light);
-            transform: translateY(-3px); box-shadow: var(--shadow-md); color: var(--accent);
-        }
-        .link-card svg { width: 18px; height: 18px; flex-shrink: 0; }
-        .link-card.primary { border-color: var(--gold); background: var(--gold-light); font-weight: 600; }
-        .extras-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; }
-        .extra-item {
-            padding: 1.2rem 1.4rem; background: var(--white); border-radius: var(--radius);
-            border: 1px solid var(--border-light); box-shadow: var(--shadow-sm); transition: transform 0.2s;
-        }
-        .extra-item:hover { transform: translateY(-1px); }
-        .extra-item h4 { font-size: 0.88rem; font-weight: 600; margin-bottom: 0.25rem; }
-        .extra-item p { font-size: 0.8rem; color: var(--muted); line-height: 1.55; }
-        .extra-item a { color: var(--accent); text-decoration: none; font-weight: 500; }
-        .extra-item a:hover { text-decoration: underline; }
-        .extra-item ul { list-style: none; padding: 0; margin-top: 0.4rem; }
-        .extra-item ul li {
-            position: relative; padding-left: 1.1rem; font-size: 0.8rem;
-            color: var(--muted); margin-bottom: 0.3rem; line-height: 1.55;
-        }
-        .extra-item ul li::before {
-            content: ''; position: absolute; left: 0; top: 0.6em;
-            width: 4px; height: 4px; background: var(--gold); border-radius: 50%;
-        }
-        .exp-photos { display: flex; gap: 0.6rem; margin-top: 0.8rem; flex-wrap: wrap; }
-        .exp-photos img {
-            width: 120px; max-width: calc(50% - 0.3rem); height: 80px; object-fit: cover; border-radius: 6px;
-            border: 1px solid var(--border-light); transition: transform 0.3s, box-shadow 0.3s;
-            cursor: pointer;
-        }
-        .exp-photos img:hover { transform: scale(1.05); box-shadow: var(--shadow-md); }
-        .exp-link {
-            display: inline-flex; align-items: center; gap: 0.35rem; margin-top: 0.6rem;
-            font-size: 0.8rem; font-weight: 500; color: var(--accent); text-decoration: none;
-            padding: 0.3rem 0.7rem; border: 1px solid var(--accent); border-radius: 6px;
-            transition: all 0.25s;
-        }
-        .exp-link:hover { background: var(--accent); color: var(--white); }
-        .exp-link svg { width: 13px; height: 13px; }
-        .cert-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.7rem; }
-        .cert-item {
-            padding: 0.85rem 1rem; background: var(--white); border-radius: var(--radius);
-            border: 1px solid var(--border-light); box-shadow: var(--shadow-sm);
-            transition: transform 0.2s;
-        }
-        .cert-item:hover { transform: translateY(-1px); }
-        .cert-item h4 { font-size: 0.78rem; font-weight: 600; margin-bottom: 0.1rem; line-height: 1.35; word-break: break-word; }
-        .cert-item .cert-issuer { font-size: 0.73rem; color: var(--accent); font-weight: 500; }
-        .cert-item .cert-date { font-size: 0.7rem; color: var(--muted-light); margin-top: 0.1rem; }
-        .cert-item .cert-id { font-size: 0.68rem; color: var(--muted-light); font-style: italic; margin-top: 0.15rem; line-height: 1.4; }
-        .extra-item.full-width {
-            grid-column: 1 / -1;
-            display: flex; gap: 1.5rem; align-items: flex-start;
-        }
-        .extra-item.full-width .extra-text { flex: 1; min-width: 0; }
-        .extra-item.full-width .ambassador-photos {
-            flex-shrink: 0; margin-top: 0;
-            display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.4rem;
-            width: 200px;
-        }
-        .ambassador-photos img {
-            width: 100%; height: auto; aspect-ratio: 4/3; object-fit: cover; border-radius: 6px;
-            border: 1px solid var(--border-light); transition: transform 0.3s;
-        }
-        .ambassador-photos img:hover { transform: scale(1.05); }
-        .edu-project { margin-top: 0.6rem; padding: 0.8rem 1rem; background: var(--warm-gray); border-radius: 8px; }
-        .edu-project h4 { font-size: 0.82rem; font-weight: 600; margin-bottom: 0.3rem; color: var(--dark); }
-        .edu-project p { font-size: 0.78rem; color: var(--muted); line-height: 1.6; }
-        .lightbox {
-            display: none; position: fixed; inset: 0; z-index: 999;
-            background: rgba(0,0,0,0.85); align-items: center; justify-content: center;
-            cursor: zoom-out; animation: lbIn 0.25s ease;
-        }
-        .lightbox.active { display: flex; }
-        .lightbox img {
-            max-width: 90vw; max-height: 90vh; border-radius: 10px;
-            box-shadow: 0 8px 40px rgba(0,0,0,0.4); object-fit: contain;
-        }
-        .lightbox-close {
-            position: absolute; top: 1.2rem; right: 1.5rem;
-            background: rgba(255,255,255,0.15); border: none; color: white;
-            width: 36px; height: 36px; border-radius: 50%; font-size: 1.2rem;
-            cursor: pointer; display: flex; align-items: center; justify-content: center;
-            transition: background 0.2s;
-        }
-        .lightbox-close:hover { background: rgba(255,255,255,0.3); }
-        @keyframes lbIn { from { opacity: 0; } to { opacity: 1; } }
-        .email-cta {
-            background: #f8f3e8 !important; color: var(--muted) !important;
-            border-color: var(--border) !important; font-weight: 600;
-        }
-        .email-cta svg { stroke: var(--muted); }
-        .email-cta:hover {
-            background: #f0e8d5 !important; border-color: var(--accent) !important;
-            color: var(--accent) !important;
-            transform: translateY(-1px); box-shadow: var(--shadow-sm) !important;
-        }
-        .email-cta:hover svg { stroke: var(--accent); }
-        .back-to-top {
-            display: flex; position: fixed; bottom: 1.5rem; right: 1.5rem; z-index: 90;
-            padding: 0.5rem 1rem; border-radius: 22px; border: none;
-            background: var(--accent); color: white; cursor: pointer;
-            box-shadow: 0 3px 12px rgba(45,90,71,0.3);
-            align-items: center; justify-content: center; gap: 0.35rem;
-            font-family: 'DM Sans', sans-serif; font-size: 0.75rem; font-weight: 600;
-            transition: opacity 0.3s, transform 0.3s;
-            opacity: 0; transform: translateY(10px);
-        }
-        .back-to-top.visible { opacity: 1; transform: translateY(0); }
-        .back-to-top:hover { background: #1e4535; }
-        .back-to-top svg { width: 16px; height: 16px; }
-        .contact-section {
-            max-width: 600px; margin: 0 auto; padding: 2.5rem;
-            background: var(--white); border: 1px solid var(--border-light);
-            border-radius: var(--radius); box-shadow: var(--shadow-sm);
-        }
-        .contact-section h3 {
-            font-family: 'Cormorant Garamond', serif; font-size: 1.3rem;
-            font-weight: 700; margin-bottom: 0.3rem;
-        }
-        .contact-section .contact-subtitle {
-            font-size: 0.85rem; color: var(--muted); margin-bottom: 1.5rem;
-        }
-        .form-group { margin-bottom: 1rem; }
-        .form-group label {
-            display: block; font-size: 0.78rem; font-weight: 600;
-            color: var(--dark); margin-bottom: 0.3rem;
-        }
-        .form-group label .optional { font-weight: 400; color: var(--muted-light); }
-        .form-group input, .form-group textarea {
-            width: 100%; padding: 0.6rem 0.8rem; font-size: 0.85rem;
-            font-family: 'DM Sans', sans-serif; border: 1px solid var(--border);
-            border-radius: 8px; background: var(--cream); color: var(--dark);
-            transition: border-color 0.2s, box-shadow 0.2s; outline: none;
-        }
-        .form-group input:focus, .form-group textarea:focus {
-            border-color: var(--accent); box-shadow: 0 0 0 3px rgba(45,90,71,0.1);
-        }
-        .form-group textarea { resize: vertical; min-height: 80px; }
-        .form-submit {
-            display: inline-flex; align-items: center; gap: 0.5rem;
-            padding: 0.65rem 1.5rem; background: var(--accent); color: white;
-            border: none; border-radius: 8px; font-size: 0.85rem; font-weight: 600;
-            font-family: 'DM Sans', sans-serif; cursor: pointer;
-            transition: background 0.2s, transform 0.2s;
-        }
-        .form-submit:hover { background: #1e4535; transform: translateY(-1px); }
-        .form-submit svg { width: 16px; height: 16px; }
-        .success-overlay {
-            display: none; position: fixed; inset: 0; z-index: 998;
-            background: rgba(0,0,0,0.5); align-items: center; justify-content: center;
-        }
-        .success-overlay.active { display: flex; }
-        .success-box {
-            background: var(--white); border-radius: 16px; padding: 2.5rem;
-            max-width: 420px; width: 90%; text-align: center;
-            box-shadow: 0 8px 40px rgba(0,0,0,0.15); animation: heroIn 0.4s ease;
-        }
-        .success-box .check { font-size: 2.5rem; margin-bottom: 0.8rem; }
-        .success-box h3 {
-            font-family: 'DM Sans', sans-serif; font-size: 1.15rem;
-            font-weight: 700; margin-bottom: 0.5rem; color: var(--dark);
-        }
-        .success-box p { font-size: 0.88rem; color: var(--muted); line-height: 1.6; margin-bottom: 1.2rem; }
-        .success-box button {
-            padding: 0.55rem 1.5rem; background: var(--accent); color: white;
-            border: none; border-radius: 8px; font-size: 0.85rem; font-weight: 600;
-            font-family: 'DM Sans', sans-serif; cursor: pointer; transition: background 0.2s;
-        }
-        .success-box button:hover { background: #1e4535; }
-        footer {
-            text-align: center; padding: 2.5rem; font-size: 0.78rem;
-            color: var(--muted-light); border-top: 1px solid var(--border-light);
-            max-width: 1000px; margin: 0 auto;
-        }
-        .reveal { opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease, transform 0.6s ease; }
-        .reveal.visible { opacity: 1; transform: translateY(0); }
-        .hero-inner { opacity: 0; transform: translateY(24px); animation: heroIn 0.7s 0.15s ease forwards; }
-        @keyframes heroIn { to { opacity: 1; transform: translateY(0); } }
-        .side-nav {
-            display: none; position: fixed; left: 0; top: 50%; transform: translateY(-50%);
-            z-index: 95; padding: 0.5rem 0;
-            opacity: 0; transition: opacity 0.3s;
-        }
-        .side-nav.visible { opacity: 1; }
-        .side-nav a {
-            display: block; padding: 0.3rem 0.5rem; font-size: 0.55rem; font-weight: 600;
-            color: var(--muted-light); text-decoration: none; letter-spacing: 0.03em;
-            text-transform: uppercase; transition: all 0.25s; position: relative;
-            border-left: 2px solid transparent;
-        }
-        .side-nav a.active {
-            color: var(--accent); border-left-color: var(--accent);
-            background: rgba(45,90,71,0.06);
-        }
-        @media (min-width: 769px) {
-            .hero-text .intro { font-size: 0.98rem; }
-            .hero-text .tagline { font-size: 1.12rem; }
-            .exp-body ul li { font-size: 0.93rem; }
-            .exp-body h3 { font-size: 1.06rem; }
-            .exp-body .company { font-size: 0.93rem; }
-            .skill-tag { font-size: 0.78rem; }
-            #skills .skill-tag, #tools .skill-tag { font-size: 0.76rem; padding: 0.25rem 0.55rem; }
-            .edu-card h3 { font-size: 1.04rem; }
-            .edu-card .school { font-size: 0.93rem; }
-            .edu-achievements li { font-size: 0.9rem; }
-            .lang-item .lang-name { font-size: 0.98rem; }
-            .extra-item h4 { font-size: 0.93rem; }
-            .extra-item p { font-size: 0.85rem; }
-            .cert-item h4 { font-size: 0.83rem; }
-        }
-        @media (max-width: 768px) {
-            .side-nav { display: block; }
-            .hero { padding: 4rem 1.2rem 2.5rem; }
-            .hero-inner { grid-template-columns: 1fr; text-align: center; padding: 2rem 1.5rem; gap: 1.5rem; }
-            .hero-photo { margin: 0 auto; width: 130px; height: 130px; }
-            .hero-contact { justify-content: center; }
-            .hero-text .intro { margin: 0 auto; }
-            .exp-card { grid-template-columns: 1fr; gap: 0.5rem; }
-            .exp-card::before { display: none; }
-            .exp-body { padding-left: 0; }
-            .hero-text h1 { font-size: 2.1rem; }
-            .top-bar { padding: 0 1rem; }
-            .main { padding: 0 1.2rem 3rem; }
-            .skills-grid { grid-template-columns: 1fr; }
-            .lang-grid { grid-template-columns: repeat(2, 1fr); }
-            .extras-grid, .reco-grid { grid-template-columns: 1fr; }
-            .extra-item.full-width { flex-direction: column; }
-            .extra-item.full-width .ambassador-photos { width: 100%; grid-template-columns: repeat(2, 1fr); }
-            .cert-grid { grid-template-columns: repeat(3, 1fr); }
-            .nav-links a.nav-desktop { display: none; }
-        }
-        @media (max-width: 480px) {
-            .hero-text h1 { font-size: 1.8rem; }
-            .lang-grid { grid-template-columns: 1fr; }
-        }
-        @media print {
-            .top-bar, .lang-toggle { display: none; }
-            .hero { margin-top: 0; padding-top: 1rem; }
-            body { background: white; }
-            .hero-inner, .card-wrap, .edu-card, .lang-item, .extra-item, .link-card, .reco-card { box-shadow: none; border-color: #ddd; }
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="format-detection" content="telephone=no, date=no, email=no, address=no">
+<meta name="color-scheme" content="light">
+<meta name="description" content="Yi-Hsuan Chiu, marketing opérationnel & CRM, analytics, gestion de projet et relation client, entre l'Europe et l'Asie. FR / EN / 中文.">
+<meta property="og:type" content="profile">
+<meta property="og:title" content="Yi-Hsuan Chiu, CV">
+<meta property="og:description" content="Marketing opérationnel & CRM, analytics, gestion de projet, relation client. FR / EN / 中文">
+<meta property="og:image" content="https://jochiu.github.io/CV_FR.EN/photo.jpg">
+<meta property="og:url" content="https://jochiu.github.io/CV_FR.EN/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://jochiu.github.io/CV_FR.EN/photo.jpg">
+<link rel="icon" type="image/jpeg" href="photo.jpg">
+<title>Yi-Hsuan Chiu, CV</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&family=Caveat:wght@500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#FFFEFB; --paper-2:#F8F5F0; --line:#ECE6DE;
+  --ink:#2F2B28; --soft:#6F6862; --faint:#A39C95;
+  --sage:#6E8B74; --sage-l:#EEF3EC;
+  --blue:#9DBCE3; --coral:#EF8A74; --leaf:#B9CF7E; --butter:#F3D27A; --blush:#F6E3DE;
+  --serif:'Instrument Serif',Georgia,'Times New Roman',serif;
+  --sans:'DM Sans',-apple-system,'Segoe UI',Arial,sans-serif;
+  --hand:'Caveat','Segoe Print','Bradley Hand',cursive;
+  --max:1080px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;overflow-x:hidden}
+body{font-family:var(--sans);background:var(--paper);color:var(--ink);line-height:1.7;font-size:15.5px;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+::selection{background:var(--butter)}
+a{color:inherit}
+a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{outline:2px dashed var(--sage);outline-offset:3px;border-radius:6px}
+button{font-family:inherit;cursor:pointer}
+img{max-width:100%;display:block}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 clamp(1.2rem,4vw,2.5rem)}
+.ph{background:repeating-linear-gradient(135deg,var(--paper-2) 0 10px,var(--line) 10px 11px)}
+
+/* nav */
+.nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(255,254,251,.9);backdrop-filter:blur(10px);transition:box-shadow .3s}
+.nav.scrolled{box-shadow:0 1px 0 var(--line)}
+.nav-in{max-width:var(--max);margin:0 auto;height:66px;padding:0 clamp(1.2rem,4vw,2.5rem);display:grid;grid-template-columns:1fr auto 1fr;align-items:center}
+.nav-l,.nav-r{display:flex;gap:1.8rem;align-items:center}
+.nav-r{justify-content:flex-end}
+.nav a.nl{text-decoration:none;color:var(--soft);font-size:.92rem;transition:color .2s;position:relative}
+.nav a.nl:hover,.nav a.nl.active{color:var(--ink)}
+.nav a.nl.active::after{content:'';position:absolute;left:0;right:0;bottom:-6px;height:6px;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 6'%3E%3Cpath d='M1 4 Q10 1 20 3.5 T39 2.5' fill='none' stroke='%236E8B74' stroke-width='1.6' stroke-linecap='round'/%3E%3C/svg%3E") center/100% 100% no-repeat}
+.logo{font-family:var(--hand);font-weight:700;font-size:1.9rem;text-decoration:none;color:var(--ink);line-height:1;padding:0 1.6rem}
+.lang{display:flex;gap:.1rem;font-size:.82rem}
+.lang button{background:none;border:none;color:var(--faint);padding:.2rem .35rem;font-weight:500}
+.lang button.active{color:var(--ink);text-decoration:underline;text-decoration-color:var(--coral);text-underline-offset:4px;text-decoration-thickness:2px}
+
+/* hero */
+.hero{padding-top:66px}
+.stage{position:relative;max-width:1120px;margin:0 auto;height:min(720px,92vh);min-height:600px}
+.doodles{position:absolute;inset:0;pointer-events:none}
+.dd{position:absolute;transition:transform .8s cubic-bezier(.2,.8,.2,1)}
+.dd svg{width:100%;height:100%;overflow:visible;animation:bob 6s ease-in-out infinite}
+.dd:nth-child(2n) svg{animation-duration:7.5s;animation-direction:reverse}
+.dd:nth-child(3n) svg{animation-duration:5s}
+@keyframes bob{50%{transform:translateY(-8px) rotate(4deg)}}
+.stroke{fill:none;stroke:var(--ink);stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:1;stroke-dashoffset:1;animation:draw 1.4s ease forwards;animation-delay:var(--dl,.2s)}
+.fillin{opacity:0;animation:fadein .6s ease forwards;animation-delay:calc(var(--dl,.2s) + .9s)}
+@keyframes draw{to{stroke-dashoffset:0}}
+@keyframes fadein{to{opacity:1}}
+.hero-copy{position:absolute;left:50%;top:44%;transform:translate(-50%,-50%);width:min(660px,90%);text-align:center}
+.hello{font-family:var(--serif);font-weight:400;font-size:clamp(2rem,4.4vw,2.9rem);line-height:1.1;color:var(--ink)}
+.hero-line{font-family:var(--serif);font-size:clamp(1.6rem,3.6vw,2.45rem);line-height:1.15;color:#8C857E;margin-top:.2rem}
+.hero-line em{color:var(--sage);display:inline-block;transition:opacity .35s,transform .35s}
+.hero-line em.out{opacity:0;transform:translateY(8px)}
+.hero-cta{display:flex;align-items:center;justify-content:center;gap:1rem;margin-top:1.8rem;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:.5rem;background:var(--ink);color:#fff;text-decoration:none;border:none;border-radius:999px;padding:.62rem 1.3rem;font-size:.9rem;font-weight:500;transition:transform .25s,background .25s}
+.btn:hover{transform:translateY(-2px) rotate(-1.5deg);background:#4A443F}
+.btn.light{background:transparent;color:var(--ink);box-shadow:inset 0 0 0 1.5px var(--ink)}
+.btn.light:hover{background:var(--sage-l)}
+.avail{text-align:left;font-size:.84rem;line-height:1.35}
+.avail span{display:block;color:var(--faint)}
+.avail b{font-weight:500;display:inline-flex;align-items:center;gap:.4rem}
+.avail b i{width:8px;height:8px;border-radius:50%;background:var(--leaf);box-shadow:0 0 0 0 rgba(185,207,126,.7);animation:pulse 2.4s infinite}
+@keyframes pulse{70%{box-shadow:0 0 0 8px rgba(185,207,126,0)}100%{box-shadow:0 0 0 0 rgba(185,207,126,0)}}
+.ground{position:absolute;left:4%;right:4%;bottom:6%;height:190px}
+.ground svg{width:100%;height:100%;overflow:visible}
+.place{font-family:var(--hand);font-size:22px;fill:var(--soft)}
+
+/* sections */
+section{padding:5.5rem 0 1rem;scroll-margin-top:70px}
+.h2{font-family:var(--serif);font-weight:400;font-size:clamp(2.2rem,4.6vw,3.2rem);line-height:1;letter-spacing:-.01em;margin-bottom:1.6rem;display:flex;align-items:baseline;gap:.8rem;flex-wrap:wrap}
+.h2 .note{font-family:var(--hand);font-size:1.35rem;color:var(--sage);transform:rotate(-3deg);display:inline-flex;align-items:center;gap:.3rem}
+.h2 .note svg{width:34px;height:22px}
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .8s ease,transform .8s cubic-bezier(.2,.8,.2,1);transition-delay:var(--d,0s)}
+.reveal.in{opacity:1;transform:none}
+
+/* hand highlights */
+.hl{position:relative;white-space:nowrap;font-weight:600;color:var(--ink)}
+.hl::after{content:'';position:absolute;left:-2px;right:-2px;bottom:-4px;height:8px;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 8' preserveAspectRatio='none'%3E%3Cpath d='M1 5 C20 1 35 7 52 4 S85 2 99 5' fill='none' stroke='%23F3D27A' stroke-width='3.5' stroke-linecap='round'/%3E%3C/svg%3E") left/100% 100% no-repeat;clip-path:inset(0 100% 0 0);transition:clip-path .9s ease .2s;z-index:-1}
+.hl.g::after{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 8' preserveAspectRatio='none'%3E%3Cpath d='M1 5 C20 1 35 7 52 4 S85 2 99 5' fill='none' stroke='%23B9CF7E' stroke-width='3.5' stroke-linecap='round'/%3E%3C/svg%3E")}
+.hl.b::after{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 8' preserveAspectRatio='none'%3E%3Cpath d='M1 5 C20 1 35 7 52 4 S85 2 99 5' fill='none' stroke='%239DBCE3' stroke-width='3.5' stroke-linecap='round'/%3E%3C/svg%3E")}
+.on .hl::after,.hl.on::after{clip-path:inset(0 0 0 0)}
+.circ{position:relative;white-space:nowrap;font-weight:600}
+.circ svg{position:absolute;left:-22%;top:-45%;width:144%;height:190%;overflow:visible;pointer-events:none}
+.circ path{fill:none;stroke:var(--coral);stroke-width:1.6;stroke-linecap:round;stroke-dasharray:1;stroke-dashoffset:1;transition:stroke-dashoffset 1.1s ease .3s}
+.on .circ path{stroke-dashoffset:0}
+
+/* about */
+.about{display:grid;grid-template-columns:1.2fr .8fr;gap:4rem;align-items:start}
+.about p{color:var(--soft);margin-bottom:1rem;max-width:38rem}
+.about p strong{color:var(--ink);font-weight:600}
+.traits{display:grid;gap:1.1rem;margin-top:2rem}
+.trait{display:grid;grid-template-columns:44px 1fr;gap:1rem;align-items:start}
+.trait .ic{width:44px;height:44px}
+.trait .ic svg{width:100%;height:100%;overflow:visible;transition:transform .5s cubic-bezier(.3,1.6,.5,1)}
+.trait:hover .ic svg{transform:rotate(-14deg) scale(1.1)}
+.trait h3{font-family:var(--serif);font-weight:400;font-size:1.45rem;line-height:1.1}
+.trait h3 small{font-family:var(--hand);font-size:1.1rem;color:var(--sage);margin-left:.4rem}
+.trait p{margin:.2rem 0 0;font-size:.92rem}
+.photo-card{position:relative;margin-top:.5rem}
+.photo-card .frame{border-radius:28px;overflow:hidden;aspect-ratio:4/5;background:var(--blush);transform:rotate(2deg);transition:transform .5s cubic-bezier(.3,1.6,.5,1)}
+.photo-card:hover .frame{transform:rotate(-1deg) scale(1.02)}
+.photo-card img{width:100%;height:100%;object-fit:cover}
+.photo-fb{width:100%;height:100%;display:grid;place-items:center;font-family:var(--serif);font-size:4rem;color:var(--sage)}
+.pc-in{position:relative}
+.photo-card .tag-note{position:absolute;left:-24px;bottom:28px;font-family:var(--hand);font-size:1.4rem;background:#fff;padding:.2rem .8rem;border-radius:10px;box-shadow:0 4px 14px rgba(0,0,0,.06);transform:rotate(-6deg)}
+.photo-card .spark{position:absolute;right:-14px;top:-18px;width:44px;height:44px}
+.contacts{display:flex;flex-wrap:wrap;gap:.5rem 1.2rem;margin-top:1.4rem;font-size:.9rem}
+.contacts a{text-decoration:none;border-bottom:1px solid var(--line);transition:border-color .2s,color .2s}
+.contacts a:hover{border-color:var(--sage);color:var(--sage)}
+.contacts span{color:var(--faint)}
+
+/* experience */
+.xp{border-top:1px solid var(--line)}
+.job{border-bottom:1px solid var(--line);display:grid;grid-template-columns:140px 1fr;gap:2rem;padding:1.6rem 0;position:relative}
+.job .yr{font-family:var(--hand);font-size:1.35rem;line-height:1.2;color:var(--soft)}
+.job .yr small{display:block;font-family:var(--sans);font-size:.78rem;color:var(--faint);margin-top:.2rem}
+.job h3{font-family:var(--serif);font-weight:400;font-size:1.7rem;line-height:1.1}
+.job .co{display:flex;align-items:center;gap:.45rem;color:var(--sage);font-size:.9rem;margin:.25rem 0 .55rem}
+.job .co img{width:20px;height:20px;object-fit:contain;border-radius:4px}
+.job .lead{color:var(--soft);max-width:44rem}
+.toggle{display:inline-flex;align-items:center;gap:.5rem;margin-top:.8rem;background:none;border:none;color:var(--ink);font-size:.86rem;font-weight:500;padding:0}
+.toggle .pm{width:26px;height:26px;border-radius:50%;box-shadow:inset 0 0 0 1.5px var(--ink);display:grid;place-items:center;transition:transform .4s,background .3s}
+.toggle .pm svg{width:12px;height:12px}
+.job.open .toggle .pm{transform:rotate(45deg);background:var(--butter);box-shadow:none}
+.toggle:hover .pm{background:var(--sage-l)}
+.detail{display:grid;grid-template-rows:0fr;transition:grid-template-rows .5s cubic-bezier(.2,.8,.2,1)}
+.job.open .detail{grid-template-rows:1fr}
+.detail>div{overflow:hidden}
+.detail-in{padding-top:1rem;opacity:0;transform:translateY(-6px);transition:opacity .4s .1s,transform .4s .1s}
+.job.open .detail-in{opacity:1;transform:none}
+.detail ul{list-style:none;max-width:46rem}
+.detail li{position:relative;padding-left:1.4rem;margin-bottom:.55rem;color:var(--soft);font-size:.95rem}
+.detail li::before{content:'';position:absolute;left:0;top:.45em;width:12px;height:12px;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 2c1 6 4 9 10 10-6 1-9 4-10 10-1-6-4-9-10-10 6-1 9-4 10-10z' fill='%23B9CF7E'/%3E%3C/svg%3E") center/contain no-repeat}
+.detail li strong{color:var(--ink);font-weight:600}
+.why{font-family:var(--hand);font-size:1.15rem;color:var(--coral);margin-right:.3rem}
+.stack{margin-top:.8rem;font-size:.84rem;color:var(--faint)}
+.stack b{font-weight:500;color:var(--soft)}
+.pics{display:flex;gap:.8rem;margin-top:1rem}
+.pics img,.pics .ph{width:130px;height:90px;object-fit:cover;border-radius:12px;cursor:zoom-in;transition:transform .4s}
+.pics img:nth-child(1){transform:rotate(-2deg)}.pics img:nth-child(2){transform:rotate(2deg)}
+.pics img:hover{transform:rotate(0) scale(1.05)}
+.case{display:inline-block;margin-top:1rem;font-size:.86rem;color:var(--sage);text-decoration:none;border-bottom:1.5px solid currentColor}
+.job::after{content:'';position:absolute;left:112px;top:1.9rem;width:18px;height:18px;opacity:0;transform:scale(.4) rotate(-40deg);transition:all .5s cubic-bezier(.3,1.8,.5,1);background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 2c1 6 4 9 10 10-6 1-9 4-10 10-1-6-4-9-10-10 6-1 9-4 10-10z' fill='%23F3D27A'/%3E%3C/svg%3E") center/contain no-repeat}
+.job.open::after{opacity:1;transform:none}
+.all{background:none;border:none;font-family:var(--hand);font-size:1.3rem;color:var(--sage);margin-left:auto}
+
+/* skills */
+.cols{display:grid;grid-template-columns:repeat(4,1fr);gap:2.4rem}
+.col h3{font-family:var(--serif);font-weight:400;font-size:1.6rem;margin-bottom:.6rem;display:flex;align-items:center;gap:.5rem}
+.col h3 svg{width:22px;height:22px}
+.col ul{list-style:none}
+.col li{font-size:.92rem;color:var(--soft);padding:.18rem 0;transition:color .2s,transform .2s}
+.col li:hover{color:var(--ink);transform:translateX(4px)}
+.col li small{color:var(--faint)}
+.col .grp{font-family:var(--hand);font-size:1.15rem;color:var(--sage);margin-top:.7rem}
+.col .grp:first-of-type{margin-top:0}
+.dots{display:inline-flex;gap:3px;margin-left:.4rem;vertical-align:1px}
+.dots i{width:7px;height:7px;border-radius:50%;background:var(--line)}
+.dots i.f{background:var(--sage)}
+
+/* education + recos */
+.edu{display:grid;grid-template-columns:1.2fr .8fr;gap:3rem}
+.school h3{font-family:var(--serif);font-weight:400;font-size:1.6rem;line-height:1.15}
+.school .where{color:var(--sage);font-size:.92rem;margin:.2rem 0 .8rem}
+.proj{border-top:1px dashed var(--line)}
+.proj button{width:100%;display:flex;align-items:center;gap:.8rem;background:none;border:none;text-align:left;padding:.8rem 0;font-size:.95rem;font-weight:500;color:var(--ink)}
+.proj button .badge{font-family:var(--hand);font-size:1.2rem;color:var(--coral);margin-left:auto}
+.proj .pm{width:22px;height:22px;border-radius:50%;box-shadow:inset 0 0 0 1.5px var(--ink);display:grid;place-items:center;transition:transform .4s,background .3s;flex-shrink:0}
+.proj .pm svg{width:10px;height:10px}
+.proj.open .pm{transform:rotate(45deg);background:var(--butter);box-shadow:none}
+.proj.open .detail{grid-template-rows:1fr}
+.proj p{color:var(--soft);font-size:.9rem;padding-bottom:.9rem}
+.proj p a{color:var(--sage)}
+.side-schools{display:grid;gap:1.2rem;align-content:start}
+.side-schools div{padding-left:1rem;border-left:2px solid var(--blush)}
+.side-schools b{font-weight:500;display:block}
+.side-schools span{color:var(--sage);font-size:.88rem}
+.recos{display:grid;grid-template-columns:1fr 1fr;gap:1.4rem;margin-top:3.5rem}
+.reco{border-radius:24px;padding:2rem 2rem 1.6rem;position:relative;transition:transform .4s cubic-bezier(.3,1.6,.5,1)}
+.reco:nth-child(1){background:var(--sage-l);transform:rotate(-.6deg)}
+.reco:nth-child(2){background:#F9F1EC;transform:rotate(.6deg)}
+.reco:hover{transform:rotate(0) translateY(-3px)}
+.reco .q{font-family:var(--serif);font-size:4.5rem;line-height:.5;color:var(--coral);display:block;height:1.6rem}
+.reco p{font-family:var(--serif);font-size:1.3rem;line-height:1.35;color:var(--ink)}
+.reco .who{margin-top:1rem;font-size:.9rem}
+.reco .who b{font-weight:600}
+.reco .who span{display:block;color:var(--soft);font-size:.82rem}
+.reco a{display:inline-block;margin-top:.8rem;font-size:.84rem;color:var(--ink);border-bottom:1.5px solid var(--coral);text-decoration:none}
+
+/* beyond */
+.beyond{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:start}
+.beyond h3{font-family:var(--serif);font-weight:400;font-size:1.6rem;line-height:1.1}
+.beyond .when{color:var(--sage);font-size:.88rem;margin:.2rem 0 .6rem}
+.beyond p,.beyond li{color:var(--soft);font-size:.93rem}
+.beyond ul{list-style:none;margin-top:.4rem}
+.beyond li{padding-left:1.2rem;position:relative;margin-bottom:.4rem}
+.beyond li::before{content:'~';position:absolute;left:0;color:var(--coral);font-family:var(--hand);font-size:1.2rem;line-height:1.2}
+.polaroids{display:flex;margin-top:1.4rem;padding-left:10px}
+.pol{background:#fff;padding:8px 8px 26px;box-shadow:0 6px 18px rgba(0,0,0,.08);width:130px;margin-left:-14px;transition:transform .4s cubic-bezier(.3,1.6,.5,1);cursor:zoom-in}
+.pol img,.pol .ph{width:100%;aspect-ratio:1;object-fit:cover}
+.pol:nth-child(1){transform:rotate(-7deg)}.pol:nth-child(2){transform:rotate(4deg) translateY(10px)}.pol:nth-child(3){transform:rotate(-2deg)}.pol:nth-child(4){transform:rotate(6deg) translateY(6px)}
+.pol:hover{transform:rotate(0) translateY(-10px) scale(1.06);z-index:2}
+.creator{background:var(--paper-2);border-radius:24px;padding:1.8rem;position:relative}
+.creator .spark{position:absolute;right:18px;top:-16px;width:40px;height:40px}
+.pill-links{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1rem}
+.pill-links a{font-size:.84rem;text-decoration:none;padding:.35rem .9rem;border-radius:999px;box-shadow:inset 0 0 0 1.5px var(--ink);transition:background .2s,transform .2s}
+.pill-links a:hover{background:var(--butter);box-shadow:none;transform:rotate(-2deg)}
+.small-notes{display:grid;grid-template-columns:1fr 1fr;gap:1.4rem;margin-top:2rem}
+
+/* contact */
+.contact{display:grid;grid-template-columns:.9fr 1.1fr;gap:3rem;align-items:start;padding-bottom:2rem}
+.contact .big{font-family:var(--serif);font-size:clamp(2.6rem,6vw,4.2rem);line-height:.95}
+.contact .big em{color:var(--sage)}
+.contact p{color:var(--soft);margin-top:1rem;max-width:26rem}
+.heart{width:56px;height:56px;margin-top:1.4rem}
+form .fg{margin-bottom:1rem}
+form label{display:block;font-size:.84rem;color:var(--soft);margin-bottom:.2rem}
+form label span{color:var(--faint)}
+form input,form textarea{width:100%;border:none;border-bottom:1.5px solid var(--line);background:transparent;padding:.5rem 0;font:inherit;color:var(--ink);transition:border-color .3s;outline:none}
+form input:focus,form textarea:focus{border-color:var(--sage)}
+form textarea{min-height:80px;resize:vertical}
+footer{text-align:center;padding:2.5rem 1rem;font-family:var(--hand);font-size:1.2rem;color:var(--faint)}
+
+.overlay,.lightbox{display:none;position:fixed;inset:0;z-index:300;align-items:center;justify-content:center}
+.overlay{background:rgba(47,43,40,.35)}
+.lightbox{background:rgba(47,43,40,.85);cursor:zoom-out}
+.overlay.active,.lightbox.active{display:flex}
+.okbox{background:#fff;border-radius:24px;padding:2.2rem;max-width:400px;width:90%;text-align:center}
+.okbox h3{font-family:var(--serif);font-weight:400;font-size:2rem}
+.okbox p{color:var(--soft);margin:.4rem 0 1.2rem}
+.lightbox img{max-width:90vw;max-height:88vh;border-radius:16px}
+.to-top{position:fixed;right:1.4rem;bottom:1.4rem;z-index:90;width:46px;height:46px;border:none;border-radius:50%;background:#fff;box-shadow:0 4px 16px rgba(0,0,0,.1);display:grid;place-items:center;opacity:0;transform:translateY(10px);transition:opacity .3s,transform .3s}
+.to-top.show{opacity:1;transform:none}
+.to-top:hover svg{transform:translateY(-3px)}
+.to-top svg{width:22px;height:22px;transition:transform .3s}
+
+
+/* readability + references */
+body{font-size:17px;line-height:1.75}
+.nav a.nl{font-size:1rem;white-space:nowrap}
+.nav-l,.nav-r{gap:1.5rem}
+.lang{font-size:.95rem}
+.avail{font-size:.95rem}
+.about p,.job .lead,.beyond p,.beyond li,.contact p{font-size:1.05rem}
+.trait p{font-size:1rem}
+.job .co{font-size:1rem}
+.job .yr{font-size:1.5rem}.job .yr small{font-size:.9rem}
+.detail li{font-size:1rem}
+.stack{font-size:.95rem}
+.toggle{font-size:.95rem}
+.col li{font-size:1rem}.col li small{font-size:.88rem}
+.col .grp{font-size:1.3rem}
+.school .where,.side-schools span,.beyond .when{font-size:1rem}
+.proj button{font-size:1.05rem}.proj p{font-size:1rem}
+.contacts{font-size:1rem}
+form label{font-size:.95rem}
+.reco p{font-size:1.4rem}
+.reco .who{font-size:1rem}.reco .who span{font-size:.92rem}
+.reco a{font-size:.95rem}
+.h2 .note{font-size:1.5rem}
+.why{font-size:1.3rem}
+.photo-card .tag-note{font-size:1.5rem}
+footer{font-size:1.35rem}
+.reco-sec{padding-top:3.5rem}
+.reco-sec .recos{margin-top:0}
+.endorse{display:inline-flex;flex-wrap:wrap;justify-content:center;align-items:baseline;gap:.35rem;margin-top:1.3rem;font-size:1rem;color:var(--ink);text-decoration:none;padding:.45rem 1rem;border-radius:999px;background:var(--sage-l);transition:background .25s,transform .25s}
+.endorse:hover{background:var(--blush);transform:translateY(-2px)}
+.endorse .hand{font-family:var(--hand);font-size:1.3rem;color:var(--sage)}
+.endorse .amp{font-family:var(--serif);font-style:italic;color:var(--coral)}
+.endorse .sub-e{color:var(--faint);font-size:.9rem}
+@media(max-width:880px){.stage{padding-bottom:14rem}}
+@media(max-width:880px){
+  .nav-l{display:none}.nav-in{grid-template-columns:auto 1fr}.logo{padding:0}
+  .nav-r .nl{display:none}
+  .stage{height:auto;min-height:0;padding:6rem 0 13rem}
+  .hero-copy{position:relative;left:auto;top:auto;transform:none;margin:0 auto}
+  .ground{height:150px;bottom:1rem;left:2%;right:2%}
+  .dd{display:none}.dd.keep-m{display:block;top:4%!important}
+  .about,.edu,.beyond,.contact,.recos,.small-notes{grid-template-columns:1fr}
+  .about{gap:2.5rem}.photo-card{max-width:320px;margin:0 auto}
+  .job{grid-template-columns:1fr;gap:.3rem}.job::after{display:none}
+  .cols{grid-template-columns:1fr 1fr;gap:2rem}
+}
+@media(max-width:520px){.cols{grid-template-columns:1fr}.polaroids .pol{width:96px}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}.stroke{stroke-dashoffset:0}.fillin{opacity:1}.reveal{opacity:1;transform:none}.hl::after{clip-path:none}.circ path{stroke-dashoffset:0}html{scroll-behavior:auto}}
+@media print{.nav,.doodles,.ground,.to-top,.toggle,.all,form,.hero-cta .btn{display:none!important}.detail{grid-template-rows:1fr!important}.detail-in{opacity:1!important;transform:none!important}.reveal{opacity:1;transform:none}.stage{height:auto;min-height:0;padding:1rem 0}.hero-copy{position:static;transform:none}}
+</style>
 </head>
 <body>
 
-<nav class="top-bar" id="topbar">
-    <span class="name-small">Yi-Hsuan Chiu</span>
-    <div class="nav-links">
-        <a href="#experience" class="nav-desktop" data-fr="Expérience" data-en="Experience">Expérience</a>
-        <a href="#skills" class="nav-desktop" data-fr="Compétences" data-en="Skills">Compétences</a>
-        <a href="#education" class="nav-desktop" data-fr="Formation" data-en="Education">Formation</a>
-        <a href="#recommendations" class="nav-desktop" data-fr="Recommandations" data-en="Recommendations">Recommandations</a>
-        <a href="#contact" class="nav-desktop">Contact</a>
-        <a href="portfolio.html" class="nav-desktop" style="color:var(--gold);font-weight:700;" target="_blank">Portfolio ↗</a>
-        <div class="lang-toggle">
-            <button class="lang-btn active" id="btn-fr" onclick="setLang('fr')">FR</button>
-            <button class="lang-btn" id="btn-en" onclick="setLang('en')">EN</button>
-        </div>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <filter id="rough"><feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="2" seed="3"/><feDisplacementMap in="SourceGraphic" scale="1.8"/></filter>
+    <symbol id="i-spark" viewBox="0 0 24 24"><path d="M12 1.5C13 8 16 11 22.5 12 16 13 13 16 12 22.5 11 16 8 13 1.5 12 8 11 11 8 12 1.5Z"/></symbol>
+  </defs>
+</svg>
+
+<nav class="nav" id="nav">
+  <div class="nav-in">
+    <div class="nav-l">
+      <a class="nl" href="#about" data-sec="about" data-fr="À propos" data-en="About">À propos</a>
+      <a class="nl" href="#recommendations" data-sec="recommendations" data-fr="Recommandations" data-en="References">Recommandations</a>
+      <a class="nl" href="#experience" data-sec="experience" data-fr="Expérience" data-en="Experience">Expérience</a>
     </div>
+    <a class="logo" href="#top">yi-hsuan</a>
+    <div class="nav-r">
+      <a class="nl" href="#skills" data-sec="skills" data-fr="Compétences" data-en="Skills">Compétences</a>
+      <a class="nl" href="portfolio.html">Portfolio</a>
+      <a class="nl" href="#contact" data-sec="contact">Contact</a>
+      <div class="lang"><button id="btn-fr" class="active" onclick="setLang('fr')">FR</button><button id="btn-en" onclick="setLang('en')">EN</button></div>
+    </div>
+  </div>
 </nav>
 
-<nav class="side-nav" id="sideNav">
-    <a href="#experience">Exp.</a>
-    <a href="#skills">Skills</a>
-    <a href="#tools">Outils</a>
-    <a href="#education">Études</a>
-    <a href="#languages">Langues</a>
-    <a href="#certifications">Certifs</a>
-    <a href="#recommendations">Reco.</a>
-    <a href="#portfolio">Portfolio</a>
-    <a href="#extras">Extras</a>
-    <a href="#contact">Contact</a>
-</nav>
-
-<header class="hero">
-    <div class="hero-inner">
-        <img src="photo.jpg" alt="Yi-Hsuan Chiu" class="hero-photo">
-        <div class="hero-text">
-            <h1>Yi-Hsuan Chiu</h1>
-            <p class="tagline" data-fr="Marketing opérationnel & CRM · Analytics · Gestion de projet · Coordination APAC/EMEA" data-en="Marketing Operations & CRM · Analytics · Project Management · APAC/EMEA Coordination">Marketing opérationnel & CRM · Analytics · Gestion de projet · Coordination APAC/EMEA</p>
-            <p class="intro" data-fr="5,5 ans d'expérience en marketing B2B/B2C et gestion de projets internationaux (APAC, EMEA, Amériques). À l'interface entre stratégie, performance et analyse de données : optimisation des campagnes, des parcours clients et des processus marketing pour soutenir acquisition, conversion et fidélisation. Maîtrise de GA4, Tableau, SQL et des outils CRM. Mandarin natif, anglais professionnel et français C1. Basée à Bordeaux, mobile France entière." data-en="5.5 years of experience in B2B/B2C marketing and international project management (APAC, EMEA, Americas). Working at the intersection of strategy, performance and data analysis: optimizing campaigns, customer journeys and marketing processes to support acquisition, conversion and retention. Proficient in GA4, Tableau, SQL and CRM tools. Native Mandarin, professional English, C1 French. Based in Bordeaux, open to relocation across France.">5,5 ans d'expérience en marketing B2B/B2C et gestion de projets internationaux (APAC, EMEA, Amériques). À l'interface entre stratégie, performance et analyse de données : optimisation des campagnes, des parcours clients et des processus marketing pour soutenir acquisition, conversion et fidélisation. Maîtrise de GA4, Tableau, SQL et des outils CRM. Mandarin natif, anglais professionnel et français C1. Basée à Bordeaux, mobile France entière.</p>
-            <div class="hero-contact">
-                <a class="contact-chip email-cta" href="mailto:c.hsuann@gmail.com">
-                    <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="4" width="16" height="12" rx="2"/><path d="M2 4l8 6 8-6"/></svg>
-                    c.hsuann@gmail.com
-                </a>
-                <a class="contact-chip" href="tel:+33635713264">
-                    <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4a1 1 0 011-1h2.5a1 1 0 011 .8l.8 3.2a1 1 0 01-.3 1L7.5 9.3a11 11 0 005.2 5.2l1.3-1.5a1 1 0 011-.3l3.2.8a1 1 0 01.8 1V17a1 1 0 01-1 1A14 14 0 014 5a1 1 0 010-1z"/></svg>
-                    +33 6 35 71 32 64
-                </a>
-                <a class="contact-chip" href="https://www.linkedin.com/in/yihsuan-chiu/" target="_blank" rel="noopener">
-                    <svg viewBox="0 0 20 20" fill="currentColor"><path d="M4.5 3A1.5 1.5 0 003 4.5 1.5 1.5 0 004.5 6 1.5 1.5 0 006 4.5 1.5 1.5 0 004.5 3zM3 8h3v9H3V8zm5.5 0H11v1.2h.03c.35-.66 1.2-1.35 2.47-1.35 2.64 0 3.13 1.74 3.13 4v5.15h-3V12.4c0-1.1-.02-2.5-1.53-2.5s-1.76 1.2-1.76 2.43V17H7.5V8z"/></svg>
-                    LinkedIn
-                </a>
-                <span class="contact-chip">
-                    <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h12a1 1 0 011 1v10a1 1 0 01-1 1H4a1 1 0 01-1-1V5a1 1 0 011-1z"/><path d="M7 8h6M7 11h4"/><circle cx="14" cy="7" r="1.5"/></svg>
-                    <span data-fr="Permis de travail valide" data-en="Valid work permit">Permis de travail valide</span>
-                </span>
-                <span class="contact-chip">
-                    <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M10 11a3 3 0 100-6 3 3 0 000 6z"/><path d="M10 18s-7-4.35-7-9A7 7 0 0117 9c0 4.65-7 9-7 9z"/></svg>
-                    <span data-fr="Bordeaux · Mobilité France entière" data-en="Bordeaux · Open to relocation across France">Bordeaux · Mobilité France entière</span>
-                </span>
-                <a class="contact-chip" href="portfolio.html" target="_blank" rel="noopener">
-                    <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="14" height="14" rx="2"/><path d="M3 8h14M8 3v14"/></svg>
-                    Portfolio FR / EN
-                </a>
-            </div>
-        </div>
+<header class="hero" id="top">
+  <div class="stage" id="stage">
+    <div class="doodles" id="doodles" aria-hidden="true" style="filter:url(#rough)">
+      <div class="dd keep-m" data-depth="20" style="left:13%;top:12%;width:34px;height:30px"><svg viewBox="0 0 24 24"><path class="stroke" pathLength="1" style="--dl:.1s" d="M12 20C5 15 2 11 4 7 6 3.5 10 4 12 8 14 4 18 3.5 20 7 22 11 19 15 12 20Z"/></svg></div>
+      <div class="dd" data-depth="-14" style="left:7%;top:30%;width:70px;height:48px"><svg viewBox="0 0 48 32"><path class="fillin" style="--dl:.3s;fill:var(--blue)" d="M9 27C3 27 2 20 7 19 6 12 15 9 18 15 21 7 32 9 31 16 38 16 38 27 32 27Z"/><path class="stroke" pathLength="1" style="--dl:.3s" d="M9 27C3 27 2 20 7 19 6 12 15 9 18 15 21 7 32 9 31 16 38 16 38 27 32 27Z"/></svg></div>
+      <div class="dd" data-depth="26" style="left:21%;top:20%;width:30px;height:30px"><svg viewBox="0 0 24 24"><path class="stroke" pathLength="1" style="--dl:.5s" d="M12 1.5C13 8 16 11 22.5 12 16 13 13 16 12 22.5 11 16 8 13 1.5 12 8 11 11 8 12 1.5Z"/></svg></div>
+      <div class="dd hide-m" data-depth="-22" style="left:12%;top:58%;width:110px;height:50px"><svg viewBox="0 0 110 50"><path class="stroke" pathLength="1" style="--dl:.7s" d="M2 46C18 20 40 8 58 14 72 19 60 36 50 28 42 21 60 6 80 8 92 9 100 4 108 2"/></svg></div>
+      <div class="dd" data-depth="16" style="left:10%;top:62%;width:36px;height:36px"><svg viewBox="0 0 24 24"><path class="stroke" pathLength="1" style="--dl:.9s" d="M12 2.5 14.6 9.2 21.6 9.6 16.2 14 18 21 12 17.1 6 21 7.8 14 2.4 9.6 9.4 9.2Z"/></svg></div>
+      <div class="dd" data-depth="-10" style="left:24%;top:66%;width:44px;height:44px"><svg viewBox="0 0 24 24"><path class="fillin" style="--dl:1s;fill:var(--coral)" d="M4 6C10 2 20 5 20 12 20 18 13 21 8 19 11 15 9 11 4 6Z"/><path class="stroke" pathLength="1" style="--dl:1s" d="M4 6C10 2 20 5 20 12 20 18 13 21 8 19 11 15 9 11 4 6Z"/></svg></div>
+      <div class="dd hide-m" data-depth="12" style="left:31%;top:11%;width:12px;height:12px"><svg viewBox="0 0 12 12"><circle class="stroke" pathLength="1" style="--dl:1.1s" cx="6" cy="6" r="4"/></svg></div>
+      <div class="dd keep-m" data-depth="-24" style="left:40%;top:9%;width:42px;height:40px"><svg viewBox="0 0 24 24"><g class="fillin" style="--dl:.4s;fill:var(--leaf)"><circle cx="12" cy="6" r="4.5"/><circle cx="18" cy="11" r="4.5"/><circle cx="15.5" cy="18" r="4.5"/><circle cx="8.5" cy="18" r="4.5"/><circle cx="6" cy="11" r="4.5"/></g><path class="stroke" pathLength="1" style="--dl:.4s" d="M10 10C12 8 15 10 13.5 12.5 12 15 9 13 10.5 11.5"/></svg></div>
+      <div class="dd hide-m" data-depth="18" style="right:36%;top:14%;width:120px;height:40px"><svg viewBox="0 0 120 40"><path class="stroke" pathLength="1" style="--dl:.6s" d="M2 38C20 10 40 4 50 14 56 20 44 26 44 18 44 10 60 4 72 12 78 16 70 22 70 15 70 6 90 2 118 10"/></svg></div>
+      <div class="dd keep-m" data-depth="-18" style="right:18%;top:12%;width:36px;height:34px"><svg viewBox="0 0 24 24"><path class="fillin" style="--dl:.8s;fill:var(--coral)" d="M12 2.5 14.6 9.2 21.6 9.6 16.2 14 18 21 12 17.1 6 21 7.8 14 2.4 9.6 9.4 9.2Z"/><path class="stroke" pathLength="1" style="--dl:.8s" d="M12 2.5 14.6 9.2 21.6 9.6 16.2 14 18 21 12 17.1 6 21 7.8 14 2.4 9.6 9.4 9.2Z"/></svg></div>
+      <div class="dd" data-depth="22" style="right:8%;top:20%;width:30px;height:30px"><svg viewBox="0 0 24 24"><path class="stroke" pathLength="1" style="--dl:1s" d="M12 2.5 14.6 9.2 21.6 9.6 16.2 14 18 21 12 17.1 6 21 7.8 14 2.4 9.6 9.4 9.2Z"/></svg></div>
+      <div class="dd" data-depth="-12" style="right:14%;top:30%;width:68px;height:46px"><svg viewBox="0 0 48 32"><path class="fillin" style="--dl:.5s;fill:var(--blue)" d="M9 27C3 27 2 20 7 19 6 12 15 9 18 15 21 7 32 9 31 16 38 16 38 27 32 27Z"/><path class="stroke" pathLength="1" style="--dl:.5s" d="M9 27C3 27 2 20 7 19 6 12 15 9 18 15 21 7 32 9 31 16 38 16 38 27 32 27Z"/></svg></div>
+      <div class="dd" data-depth="14" style="right:4%;top:36%;width:64px;height:64px"><svg viewBox="0 0 24 24"><path class="stroke" pathLength="1" style="--dl:1.2s" d="M12 21C5 15 2.5 11 4 7 5.5 3.5 10 3.6 12 8 14 3.6 18.5 3.5 20 7 21.5 11 19 15 12 21Z"/></svg></div>
+      <div class="dd hide-m" data-depth="-20" style="right:21%;top:72%;width:26px;height:26px"><svg viewBox="0 0 24 24"><path class="stroke" pathLength="1" style="--dl:1.3s" d="M12 1.5C13 8 16 11 22.5 12 16 13 13 16 12 22.5 11 16 8 13 1.5 12 8 11 11 8 12 1.5Z"/></svg></div>
+      <div class="dd" data-depth="20" style="right:10%;top:52%;width:26px;height:24px"><svg viewBox="0 0 24 24"><path class="fillin" style="--dl:1.4s;fill:var(--coral)" d="M12 20C5 15 2 11 4 7 6 3.5 10 4 12 8 14 4 18 3.5 20 7 22 11 19 15 12 20Z"/><path class="stroke" pathLength="1" style="--dl:1.4s" d="M12 20C5 15 2 11 4 7 6 3.5 10 4 12 8 14 4 18 3.5 20 7 22 11 19 15 12 20Z"/></svg></div>
+      <div class="dd hide-m" data-depth="10" style="right:30%;top:58%;width:12px;height:12px"><svg viewBox="0 0 12 12"><circle class="stroke" pathLength="1" style="--dl:1.5s" cx="6" cy="6" r="4"/></svg></div>
+      <div class="dd" data-depth="-16" style="right:22%;top:22%;width:24px;height:24px"><svg viewBox="0 0 24 24"><path class="fillin" style="--dl:1.1s;fill:var(--butter)" d="M12 1.5C13 8 16 11 22.5 12 16 13 13 16 12 22.5 11 16 8 13 1.5 12 8 11 11 8 12 1.5Z"/><path class="stroke" pathLength="1" style="--dl:1.1s" d="M12 1.5C13 8 16 11 22.5 12 16 13 13 16 12 22.5 11 16 8 13 1.5 12 8 11 11 8 12 1.5Z"/></svg></div>
     </div>
+
+    <div class="hero-copy">
+      <h1 class="hello" data-fr="Bonjour ! Je suis Yi-Hsuan," data-en="Hello! I'm Yi-Hsuan,">Bonjour ! Je suis Yi-Hsuan,</h1>
+      <p class="hero-line"><span data-fr="chargée marketing & projets qui aime" data-en="a marketing & project specialist who loves">chargée marketing & projets qui aime</span><br><em id="rot">construire à partir de zéro.</em></p>
+      <div class="hero-cta">
+        <a class="btn" href="#contact" data-fr="On discute ?" data-en="Let's chat">On discute ?</a>
+        <a class="btn light" href="#recommendations" data-fr="Lire mes recommandations" data-en="Read my references">Lire mes recommandations</a>
+        <div class="avail"><b><i></i><span style="display:inline;color:inherit" data-fr="Disponible dès maintenant" data-en="Available now">Disponible dès maintenant</span></b><span data-fr="Bordeaux, mobile France entière" data-en="Bordeaux, open to relocation across France">Bordeaux, mobile France entière</span></div>
+      </div>
+    </div>
+
+    <div class="ground" aria-hidden="true" style="filter:url(#rough)">
+      <svg viewBox="0 0 1000 190" preserveAspectRatio="xMidYMax meet">
+        <!-- Taipei 101 -->
+        <g transform="translate(120 20)">
+          <path class="stroke" pathLength="1" style="--dl:.6s" d="M30 0V14M22 14H38L36 24H24ZM18 24H42L39 44H21ZM16 44H44L41 64H19ZM14 64H46L43 84H17ZM12 84H48L45 104H15ZM10 104H50L47 124H13ZM6 124H54V160H6Z"/>
+          <text class="place" x="-8" y="186" data-fr="Taïwan" data-en="Taiwan">Taïwan</text>
+        </g>
+        <!-- Eiffel tower -->
+        <g transform="translate(800 18)">
+          <path class="stroke" pathLength="1" style="--dl:.9s" d="M40 0V12M36 12H44L48 50 56 90 76 160M36 12 32 50 24 90 4 160M30 56H50M20 94H60M14 118H66M24 160C28 138 52 138 56 160"/>
+          <text class="place" x="10" y="186">France</text>
+        </g>
+        <path class="stroke" pathLength="1" style="--dl:.2s" d="M20 180C200 178 400 182 600 179S900 181 980 180"/>
+        <path id="flight" d="M180 60C330 -40 650 -40 815 40" fill="none" stroke="var(--faint)" stroke-width="1.6" stroke-dasharray="6 8" stroke-linecap="round" class="fillin" style="--dl:.8s"/>
+        <g class="fillin" style="--dl:1.2s">
+          <path d="M15 0C13 -1.6 6 -1.6 -12 -1.1V1.1C6 1.6 13 1.6 15 0ZM3 -1 -4 -10H-7L-3 -1ZM3 1 -4 10H-7L-3 1ZM-9 -1 -13 -5.5H-15.5L-13 -1ZM-9 1 -13 5.5H-15.5L-13 1Z" fill="var(--ink)">
+            <animateMotion dur="7s" repeatCount="indefinite" rotate="auto" keyPoints="0;1" keyTimes="0;1" calcMode="linear"><mpath href="#flight"/></animateMotion>
+          </path>
+        </g>
+      </svg>
+    </div>
+  </div>
 </header>
 
-<main class="main">
+<main class="wrap">
 
-    <section class="section" id="experience">
-        <div class="section-header">
-            <span class="section-number">01</span>
-            <h2 class="section-title" data-fr="Expérience professionnelle" data-en="Professional Experience">Expérience professionnelle</h2>
-            <div class="section-line"></div>
-        </div>
-        <div class="card-wrap">
-            <div class="exp-card">
-                <div class="exp-meta"><div class="dates">08/2025 – 02/2026</div><div class="location">Bordeaux</div></div>
-                <div class="exp-body">
-                    <h3 data-fr="Chargée des Projets et Communautés" data-en="Projects & Community Specialist">Chargée des Projets et Communautés</h3>
-                    <div class="company"><img class="company-logo" src="Linkee_logo.png" alt="Linkee"><span>Linkee · <span data-fr="Anti-gaspillage alimentaire" data-en="Food waste reduction">Anti-gaspillage alimentaire</span></span></div>
-                    <ul>
-                        <li data-fr="Pilotage de 30+ événements, de la prospection B2B à l'onboarding des bénévoles, et développement des relations partenaires" data-en="Led 30+ events, from B2B prospection to volunteer onboarding, and developed partner relationships">Pilotage de 30+ événements, de la prospection B2B à l'onboarding des bénévoles, et développement des relations partenaires</li>
-                        <li data-fr="Suivi d'une communauté de 550+ bénévoles et accompagnement quotidien de 10 à 20 bénéficiaires par téléphone et messagerie (WhatsApp, e-mail)" data-en="Supported a community of 550+ volunteers and provided daily follow-up to 10 to 20 beneficiaries by phone and messaging (WhatsApp, email)">Suivi d'une communauté de 550+ bénévoles et accompagnement quotidien de 10 à 20 bénéficiaires par téléphone et messagerie (WhatsApp, e-mail)</li>
-                        <li data-fr="Pilotage du programme de bénévoles étudiants KEDGE de bout en bout : information, qualification des candidatures, entretiens, onboarding et délivrance des attestations" data-en="Ran the KEDGE student volunteer programme end-to-end: information sessions, application screening, interviews, onboarding and attestations">Pilotage du programme de bénévoles étudiants KEDGE de bout en bout : information, qualification des candidatures, entretiens, onboarding et délivrance des attestations</li>
-                        <li data-fr="Gestion d'une base de 5 000+ abonnés, optimisation des campagnes emailing (Sarbacane) et automatisation via Google Apps Script" data-en="Managed a 5,000+ subscriber base, optimized email campaigns (Sarbacane) and automated workflows with Google Apps Script">Gestion d'une base de 5 000+ abonnés, optimisation des campagnes emailing (Sarbacane) et automatisation via Google Apps Script</li>
-                        <li data-fr="Optimisation des process et outils via Google Drive, Notion, Airtable et WhatsApp" data-en="Optimized processes and tools with Google Drive, Notion, Airtable and WhatsApp">Optimisation des process et outils via Google Drive, Notion, Airtable et WhatsApp</li>
-                    </ul>
-                    <div class="exp-tags"><span class="exp-tag">Community Management</span><span class="exp-tag">Event Coordination</span><span class="exp-tag">Onboarding & Formation</span><span class="exp-tag">Partner Relations</span><span class="exp-tag">Emailing</span><span class="exp-tag">Google Apps Script</span><span class="exp-tag">Airtable</span><span class="exp-tag">Sarbacane</span><span class="exp-tag">Notion</span><span class="exp-tag">Google Workspace</span></div>
+<section id="about">
+  <div class="about">
+    <div class="reveal">
+      <h2 class="h2" data-fr="À propos" data-en="About me">À propos</h2>
+      <p data-fr="Je suis taïwanaise, je vis en France depuis quatre ans et j'y ai obtenu un <strong>master Grande École à EM Strasbourg</strong>. Ce double regard franco-taïwanais, je l'utilise tous les jours pour faire le lien entre des équipes, des marchés et des façons de travailler très différentes." data-en="I'm Taiwanese, I've lived in France for four years and earned a <strong>Grande École master's at EM Strasbourg</strong>. I use this Taiwanese and French perspective every day to connect teams, markets and very different ways of working.">Je suis taïwanaise, je vis en France depuis quatre ans et j'y ai obtenu un <strong>master Grande École à EM Strasbourg</strong>. Ce double regard franco-taïwanais, je l'utilise tous les jours pour faire le lien entre des équipes, des marchés et des façons de travailler très différentes.</p>
+      <p class="hl-zone" data-fr="En <span class='circ'>5,5 ans<svg viewBox='0 0 100 40' preserveAspectRatio='none'><path pathLength='1' d='M60 4C30 0 4 8 6 22 8 36 70 40 92 26 104 16 86 2 50 5'/></svg></span>, j'ai accompagné <span class='hl'>200+ clients B2B</span>, coordonné des projets entre l'<span class='hl b'>APAC, l'EMEA et les Amériques</span>, et construit des processus marketing et des systèmes de tracking à partir de zéro. Chez UniFox, cela s'est traduit par un <span class='hl g'>taux de rebond en baisse de 52,6 %</span>." data-en="In <span class='circ'>5.5 years<svg viewBox='0 0 100 40' preserveAspectRatio='none'><path pathLength='1' d='M60 4C30 0 4 8 6 22 8 36 70 40 92 26 104 16 86 2 50 5'/></svg></span> I've supported <span class='hl'>200+ B2B clients</span>, coordinated projects across <span class='hl b'>APAC, EMEA and the Americas</span>, and built marketing processes and tracking systems from scratch. At UniFox, that meant a <span class='hl g'>52.6% drop in bounce rate</span>.">En <span class='circ'>5,5 ans<svg viewBox='0 0 100 40' preserveAspectRatio='none'><path pathLength='1' d='M60 4C30 0 4 8 6 22 8 36 70 40 92 26 104 16 86 2 50 5'/></svg></span>, j'ai accompagné <span class='hl'>200+ clients B2B</span>, coordonné des projets entre l'<span class='hl b'>APAC, l'EMEA et les Amériques</span>, et construit des processus marketing et des systèmes de tracking à partir de zéro. Chez UniFox, cela s'est traduit par un <span class='hl g'>taux de rebond en baisse de 52,6 %</span>.</p>
+      <p data-fr="Aujourd'hui, j'aimerais aider une marque en France à fluidifier sa communication entre l'Europe et l'Asie et à rendre son marketing digital plus efficace." data-en="Today, I'd like to help a brand in France communicate more smoothly between Europe and Asia and make its digital marketing more efficient.">Aujourd'hui, j'aimerais aider une marque en France à fluidifier sa communication entre l'Europe et l'Asie et à rendre son marketing digital plus efficace.</p>
 
-                    <div class="exp-photos">
-                        <img src="Linkee_Distrib.jpeg" alt="Linkee distribution" loading="lazy">
-                        <img src="Linkee_Stand.jpeg" alt="Linkee stand" loading="lazy">
-                    </div>
-                    <a class="exp-link" href="portfolio.html#community" target="_blank" rel="noopener">
-                        <svg viewBox="0 0 512 512" fill="currentColor"><path d="M184 48H328c4.4 0 8 3.6 8 8V96H176V56c0-4.4 3.6-8 8-8zm-56 8V96H64C28.7 96 0 124.7 0 160V296 416c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V296 160c0-35.3-28.7-64-64-64H384V56c0-30.9-25.1-56-56-56H184c-30.9 0-56 25.1-56 56z"/></svg>
-                        <span data-fr="Voir le portfolio" data-en="View portfolio">Voir le portfolio</span>
-                    </a>
-                </div>
-            </div>
-            <div class="exp-card">
-                <div class="exp-meta"><div class="dates">04 – 05/2025</div><div class="location">Bordeaux</div></div>
-                <div class="exp-body">
-                    <h3 data-fr="Chargée de Projets Communication" data-en="Communications Project Specialist">Chargée de Projets Communication</h3>
-                    <div class="company"><img class="company-logo" src="hotel_logo.webp" alt="Hôtel Le Manoir De Bellerive"><span>Hôtel Le Manoir De Bellerive</span></div>
-                    <ul>
-                        <li data-fr="Développement de l'identité de marque digitale et de contenus bilingues FR/EN pour les marchés EU/US, avec analyse de marché et localisation B2C premium" data-en="Developed the digital brand identity and bilingual FR/EN content for EU/US markets, with market analysis and premium B2C localization">Développement de l'identité de marque digitale et de contenus bilingues FR/EN pour les marchés EU/US, avec analyse de marché et localisation B2C premium</li>
-                    </ul>
-                    <div class="exp-tags"><span class="exp-tag">Market Analysis</span><span class="exp-tag">Brand Positioning</span><span class="exp-tag">Persona Definition</span><span class="exp-tag">Bilingual Strategy (FR/EN)</span><span class="exp-tag">Visual Identity</span><span class="exp-tag">Instagram</span></div>
+      <div class="traits">
+        <div class="trait reveal">
+          <div class="ic"><svg viewBox="0 0 44 44"><circle cx="22" cy="22" r="19" fill="var(--butter)" opacity=".55"/><path d="M24 8 14 25H22L20 36 30 19H22Z" fill="none" stroke="var(--ink)" stroke-width="1.8" stroke-linejoin="round"/></svg></div>
+          <div><h3 data-fr="Je prends les devants <small>prise d'initiative</small>" data-en="I take the lead <small>initiative</small>">Je prends les devants <small>prise d'initiative</small></h3>
+          <p data-fr="Quand un outil ou un process manque, je le construis : tracking GA4 et GTM chez UniFox, guides d'onboarding et SOP chez Linkee." data-en="When a tool or process is missing, I build it: GA4 and GTM tracking at UniFox, onboarding guides and SOPs at Linkee.">Quand un outil ou un process manque, je le construis : tracking GA4 et GTM chez UniFox, guides d'onboarding et SOP chez Linkee.</p></div>
+        </div>
+        <div class="trait reveal">
+          <div class="ic"><svg viewBox="0 0 44 44"><circle cx="22" cy="22" r="19" fill="var(--blue)" opacity=".45"/><path d="M11 30 18 22 24 26 33 14M28 14H33V19" fill="none" stroke="var(--ink)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <div><h3 data-fr="Je propose des solutions <small>force de proposition</small>" data-en="I bring solutions <small>proactive proposals</small>">Je propose des solutions <small>force de proposition</small></h3>
+          <p data-fr="J'observe le parcours utilisateur, je trouve où il bloque et je propose un correctif chiffré, comme l'écart de conversion iOS / Android comblé chez UniFox." data-en="I look at the user journey, find where it breaks and propose a measurable fix, like the iOS / Android conversion gap closed at UniFox.">J'observe le parcours utilisateur, je trouve où il bloque et je propose un correctif chiffré, comme l'écart de conversion iOS / Android comblé chez UniFox.</p></div>
+        </div>
+        <div class="trait reveal">
+          <div class="ic"><svg viewBox="0 0 44 44"><circle cx="22" cy="22" r="19" fill="var(--coral)" opacity=".35"/><path d="M22 32C14 26 11 22 13 17.5 15 13.5 20 14 22 18 24 14 29 13.5 31 17.5 33 22 30 26 22 32Z" fill="none" stroke="var(--ink)" stroke-width="1.8" stroke-linejoin="round"/></svg></div>
+          <div><h3 data-fr="Je crée des liens durables <small>relation client</small>" data-en="I build lasting bonds <small>client relations</small>">Je crée des liens durables <small>relation client</small></h3>
+          <p data-fr="J'aime connaître mes clients et apporter de la valeur à leur activité sur la durée, du premier devis jusqu'à la résolution d'un litige." data-en="I enjoy getting to know my clients and adding value to their business over time, from the first quote to settling a dispute.">J'aime connaître mes clients et apporter de la valeur à leur activité sur la durée, du premier devis jusqu'à la résolution d'un litige.</p></div>
+        </div>
+      </div>
+    </div>
 
-                    <a class="exp-link" href="portfolio.html#brand" target="_blank" rel="noopener">
-                        <svg viewBox="0 0 512 512" fill="currentColor"><path d="M184 48H328c4.4 0 8 3.6 8 8V96H176V56c0-4.4 3.6-8 8-8zm-56 8V96H64C28.7 96 0 124.7 0 160V296 416c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V296 160c0-35.3-28.7-64-64-64H384V56c0-30.9-25.1-56-56-56H184c-30.9 0-56 25.1-56 56z"/></svg>
-                        <span data-fr="Voir le portfolio" data-en="View portfolio">Voir le portfolio</span>
-                    </a>
-                </div>
-            </div>
-            <div class="exp-card">
-                <div class="exp-meta"><div class="dates">06 – 12/2024</div><div class="location">Bordeaux</div></div>
-                <div class="exp-body">
-                    <h3 data-fr="Chargée de Marketing Digital International" data-en="International Digital Marketing Specialist">Chargée de Marketing Digital International</h3>
-                    <div class="company"><img class="company-logo" src="Unifox_logo.webp" alt="UniFox"><span>UniFox · GreenTech, Web3</span></div>
-                    <ul>
-                        <li data-fr="Stratégie d'acquisition B2C APAC/EMEA via Google Ads et SEO, réduction du taux de rebond de 52,6 %" data-en="B2C acquisition strategy across APAC/EMEA via Google Ads and SEO, reducing bounce rate by 52.6%">Stratégie d'acquisition B2C APAC/EMEA via Google Ads et SEO, réduction du taux de rebond de 52,6 %</li>
-                        <li data-fr="Optimisation du taux de conversion iOS de 58,82 % à 95,2 % via l'analyse UX et la refonte des landing pages" data-en="Improved iOS conversion rate from 58.82% to 95.2% through UX analysis and landing page redesign">Optimisation du taux de conversion iOS de 58,82 % à 95,2 % via l'analyse UX et la refonte des landing pages</li>
-                        <li data-fr="Analyse des performances digitales via GA4, PostHog et Tableau pour orienter les décisions CRO et acquisition" data-en="Analyzed digital performance with GA4, PostHog and Tableau to guide CRO and acquisition decisions">Analyse des performances digitales via GA4, PostHog et Tableau pour orienter les décisions CRO et acquisition</li>
-                        <li data-fr="Gestion des contenus multicanaux et représentation de la marque lors d'un salon tech international" data-en="Managed multichannel content and represented the brand at an international tech trade show">Gestion des contenus multicanaux et représentation de la marque lors d'un salon tech international</li>
-                    </ul>
-                    <div class="exp-tags"><span class="exp-tag">GA4</span><span class="exp-tag">Google Tag Manager</span><span class="exp-tag">PostHog</span><span class="exp-tag">Tableau</span><span class="exp-tag">SQL</span><span class="exp-tag">Google Ads</span><span class="exp-tag">Meta Ads</span><span class="exp-tag">SEO</span><span class="exp-tag">CRO</span><span class="exp-tag">UX & Funnel Analysis</span><span class="exp-tag">Audience Segmentation</span><span class="exp-tag">Canva</span><span class="exp-tag">Figma</span><span class="exp-tag">CapCut</span></div>
+    <div class="photo-card reveal" style="--d:.15s">
+      <svg class="spark" viewBox="0 0 24 24" fill="var(--butter)" stroke="var(--ink)" stroke-width="1.2"><use href="#i-spark"/></svg>
+      <div class="pc-in"><div class="frame"><img src="photo.jpg" alt="Yi-Hsuan Chiu" id="photo"></div>
+      <div class="tag-note" data-fr="c'est moi !" data-en="that's me!">c'est moi !</div></div>
+      <div class="contacts">
+        <a href="mailto:c.hsuann@gmail.com">c.hsuann@gmail.com</a>
+        <a href="tel:+33635713264">+33 6 35 71 32 64</a>
+        <a href="https://www.linkedin.com/in/yihsuan-chiu/" target="_blank" rel="noopener">LinkedIn</a>
+        <span data-fr="Permis de travail valide" data-en="Valid work permit">Permis de travail valide</span>
+      </div>
+    </div>
+  </div>
+</section>
 
-                    <a class="exp-link" href="portfolio.html#strategy" target="_blank" rel="noopener">
-                        <svg viewBox="0 0 512 512" fill="currentColor"><path d="M184 48H328c4.4 0 8 3.6 8 8V96H176V56c0-4.4 3.6-8 8-8zm-56 8V96H64C28.7 96 0 124.7 0 160V296 416c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V296 160c0-35.3-28.7-64-64-64H384V56c0-30.9-25.1-56-56-56H184c-30.9 0-56 25.1-56 56z"/></svg>
-                        <span data-fr="Voir le portfolio" data-en="View portfolio">Voir le portfolio</span>
-                    </a>
-                </div>
-            </div>
-            <div class="exp-card">
-                <div class="exp-meta"><div class="dates">06 – 09/2023</div><div class="location">Paris</div></div>
-                <div class="exp-body">
-                    <h3 data-fr="Chargée de Développement Marketing" data-en="Marketing Development Specialist">Chargée de Développement Marketing</h3>
-                    <div class="company"><img class="company-logo" src="reinventing_logo.png" alt="Reinventing Carrière"><span>Reinventing Carrière Coaching</span></div>
-                    <ul>
-                        <li data-fr="Déploiement d'une stratégie d'acquisition de A à Z : analyse marché et concurrentielle, personas, positionnement, stratégie tarifaire, canaux et programme d'affiliation" data-en="Deployed an acquisition strategy from A to Z: market and competitive analysis, personas, positioning, pricing, channels and affiliate programme">Déploiement d'une stratégie d'acquisition de A à Z : analyse marché et concurrentielle, personas, positionnement, stratégie tarifaire, canaux et programme d'affiliation</li>
-                        <li data-fr="Production de 3,5 h de vidéos de formation et supports pédagogiques digitaux (26 sessions), conception d'un webinaire et création de contenus digitaux (landing page banners, Reels)" data-en="Produced 3.5h of training videos and digital learning materials (26 sessions), designed a webinar and created digital content (landing page banners, Reels)">Production de 3,5 h de vidéos de formation et supports pédagogiques digitaux (26 sessions), conception d'un webinaire et création de contenus digitaux (landing page banners, Reels)</li>
-                    </ul>
-                    <div class="exp-tags"><span class="exp-tag">Go-to-Market Strategy</span><span class="exp-tag">Persona</span><span class="exp-tag">Product Concept</span><span class="exp-tag">Pricing Strategy</span><span class="exp-tag">Competitive Analysis</span><span class="exp-tag">Content Production</span><span class="exp-tag">Video Editing</span><span class="exp-tag">Webinars</span><span class="exp-tag">Podia</span></div>
+<section id="recommendations" class="reco-sec">
+  <h2 class="h2 reveal"><span data-fr="Ils me recommandent" data-en="They recommend me">Ils me recommandent</span>
+    <span class="note"><span data-fr="deux lettres à lire" data-en="two letters to read">deux lettres à lire</span><svg viewBox="0 0 34 22" fill="none" stroke="var(--sage)" stroke-width="1.6" stroke-linecap="round"><path d="M2 4C12 2 24 6 28 16M22 13 28 17 31 10"/></svg></span>
+  </h2>
+  <div class="recos">
+    <div class="reco reveal">
+      <span class="q">“</span>
+      <p data-fr="Une grande aisance avec des publics très divers, une adaptation rapide et un vrai sens de l'initiative en environnement multiculturel." data-en="Great ease with very diverse audiences, quick adaptation and real initiative in a multicultural setting.">Une grande aisance avec des publics très divers, une adaptation rapide et un vrai sens de l'initiative en environnement multiculturel.</p>
+      <div class="who"><b>Aline Farah</b><span data-fr="Chargée de la promotion et du recrutement à l'international, EM Strasbourg" data-en="International Promotion and Recruitment Officer, EM Strasbourg">Chargée de la promotion et du recrutement à l'international, EM Strasbourg</span></div>
+      <a href="https://drive.google.com/file/d/1lUREkXxnFECmVdLZW3kv-2W_g_X6A1lL/view" target="_blank" rel="noopener" data-fr="Lire la lettre (FR)" data-en="Read the letter (FR)">Lire la lettre (FR)</a>
+    </div>
+    <div class="reco reveal" style="--d:.1s">
+      <span class="q">“</span>
+      <p data-fr="Étude de marché Tupperware France : meilleure note de la promotion et prix sponsorisé par Tupperware." data-en="Tupperware France market study: top grade of the class and a Tupperware-sponsored prize.">Étude de marché Tupperware France : meilleure note de la promotion et prix sponsorisé par Tupperware.</p>
+      <div class="who"><b>Dr. Nada Maaninou</b><span data-fr="Professeure associée en marketing, EM Strasbourg" data-en="Associate Professor of Marketing, EM Strasbourg">Professeure associée en marketing, EM Strasbourg</span></div>
+      <a href="https://drive.google.com/file/d/1Qivjg1WIUYeIFS0770pRjLxwXwecH-kw/view" target="_blank" rel="noopener" data-fr="Lire la lettre (EN)" data-en="Read the letter (EN)">Lire la lettre (EN)</a>
+    </div>
+  </div>
+</section>
 
-                    <a class="exp-link" href="portfolio.html#product" target="_blank" rel="noopener">
-                        <svg viewBox="0 0 512 512" fill="currentColor"><path d="M184 48H328c4.4 0 8 3.6 8 8V96H176V56c0-4.4 3.6-8 8-8zm-56 8V96H64C28.7 96 0 124.7 0 160V296 416c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V296 160c0-35.3-28.7-64-64-64H384V56c0-30.9-25.1-56-56-56H184c-30.9 0-56 25.1-56 56z"/></svg>
-                        <span data-fr="Voir le portfolio" data-en="View portfolio">Voir le portfolio</span>
-                    </a>
-                </div>
-            </div>
-            <div class="exp-card">
-                <div class="exp-meta"><div class="dates">12/2020 – 07/2022</div><div class="location">Taipei</div></div>
-                <div class="exp-body">
-                    <h3 data-fr="Analyste Documentation Technique" data-en="Technical Document Control Analyst">Analyste Documentation Technique</h3>
-                    <div class="company"><img class="company-logo" src="corsair_logo.png" alt="Corsair Gaming"><span>Corsair Gaming · <span data-fr="Périphériques gaming (entreprise américaine)" data-en="Gaming peripherals (US company)">Périphériques gaming (entreprise américaine)</span></span></div>
-                    <ul>
-                        <li data-fr="Coordination de 10 à 15 projets par trimestre avec les équipes APAC, EMEA et Amériques, garantissant la cohérence des données produits sur 3 lignes de produits" data-en="Coordinated 10 to 15 projects per quarter with APAC, EMEA and Americas teams, ensuring product data consistency across 3 product lines">Coordination de 10 à 15 projets par trimestre avec les équipes APAC, EMEA et Amériques, garantissant la cohérence des données produits sur 3 lignes de produits</li>
-                        <li data-fr="Résolution de 20+ tickets techniques et opérationnels par semaine et coordination inter-équipes en anglais" data-en="Resolved 20+ technical and operational tickets per week and coordinated across teams in English">Résolution de 20+ tickets techniques et opérationnels par semaine et coordination inter-équipes en anglais</li>
-                        <li data-fr="Gestion des données produits via Oracle PLM/ERP, automatisations Google Apps Script et reporting sous Excel" data-en="Managed product data in Oracle PLM/ERP, built Google Apps Script automations and reported in Excel">Gestion des données produits via Oracle PLM/ERP, automatisations Google Apps Script et reporting sous Excel</li>
-                    </ul>
-                    <div class="exp-tags"><span class="exp-tag">Operations</span><span class="exp-tag">Process Optimization</span><span class="exp-tag">Product Data Management (PLM)</span><span class="exp-tag">Cross-functional Coordination</span><span class="exp-tag">APAC / EMEA / Americas</span><span class="exp-tag">Oracle PLM/ERP</span><span class="exp-tag">Google Apps Script</span><span class="exp-tag">Reporting (Excel)</span></div>
-                </div>
-            </div>
-            <div class="exp-card">
-                <div class="exp-meta"><div class="dates">08/2018 – 12/2020</div><div class="location">Taipei</div></div>
-                <div class="exp-body">
-                    <h3 data-fr="Chargée de Marques & Développement Commercial" data-en="Trademark & Business Development Specialist">Chargée de Marques & Développement Commercial</h3>
-                    <div class="company"><img class="company-logo" src="best_ip_logo.jpg" alt="BEST International IP"><span>BEST International IP · <span data-fr="Cabinet de propriété intellectuelle" data-en="IP law firm">Cabinet de propriété intellectuelle</span></span></div>
-                    <ul>
-                        <li data-fr="Gestion d'un portefeuille de 200+ clients internationaux B2B sur l'ensemble du cycle de vie des marques" data-en="Managed a portfolio of 200+ international B2B clients across the full trademark lifecycle">Gestion d'un portefeuille de 200+ clients internationaux B2B sur l'ensemble du cycle de vie des marques</li>
-                        <li data-fr="Conseil stratégique, suivi des dossiers, gestion des litiges et coordination de la facturation (devis, suivi des paiements, relances)" data-en="Strategic advisory, case follow-up, dispute handling and invoicing coordination (quotes, payment tracking, reminders)">Conseil stratégique, suivi des dossiers, gestion des litiges et coordination de la facturation (devis, suivi des paiements, relances)</li>
-                    </ul>
-                    <div class="exp-tags"><span class="exp-tag">B2B Account Management (200+)</span><span class="exp-tag">Client Retention</span><span class="exp-tag">Strategic Advisory</span><span class="exp-tag">CRM B2B</span><span class="exp-tag">Business Development</span><span class="exp-tag">Invoicing</span><span class="exp-tag">International Negotiation</span></div>
-                </div>
-            </div>
-        </div>
-    </section>
+<section id="experience">
+  <h2 class="h2 reveal"><span data-fr="Expérience" data-en="Experience">Expérience</span>
+    <span class="note"><span data-fr="cliquez pour dérouler" data-en="click to unfold">cliquez pour dérouler</span><svg viewBox="0 0 34 22" fill="none" stroke="var(--sage)" stroke-width="1.6" stroke-linecap="round"><path d="M2 4C12 2 24 6 28 16M22 13 28 17 31 10"/></svg></span>
+    <button class="all" id="toggleAll" data-fr="tout ouvrir" data-en="open all">tout ouvrir</button>
+  </h2>
+  <div class="xp">
 
-    <section class="section reveal" id="skills">
-        <div class="section-header">
-            <span class="section-number">02</span>
-            <h2 class="section-title" data-fr="Compétences" data-en="Skills">Compétences</h2>
-            <div class="section-line"></div>
-        </div>
-        <div class="card-wrap">
-            <div class="skills-grid">
-                <div class="skill-category">
-                    <h3>Marketing Operations & CRM</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag" data-fr="Gestion de campagnes" data-en="Campaign Management">Gestion de campagnes</span>
-                        <span class="skill-tag">CRM B2B/B2C</span>
-                        <span class="skill-tag" data-fr="Automatisation des workflows" data-en="Workflow Automation">Automatisation des workflows</span>
-                        <span class="skill-tag" data-fr="Gestion de projet" data-en="Project Management">Gestion de projet</span>
-                        <span class="skill-tag" data-fr="Coordination APAC/EMEA/Amériques" data-en="APAC/EMEA/Americas Coordination">Coordination APAC/EMEA/Amériques</span>
-                        <span class="skill-tag" data-fr="Optimisation des processus" data-en="Process Optimization">Optimisation des processus</span>
-                    </div>
-                </div>
-                <div class="skill-category">
-                    <h3 data-fr="Analyse & Data" data-en="Analytics & Data">Analyse & Data</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">GA4</span><span class="skill-tag">GTM</span>
-                        <span class="skill-tag">SQL</span><span class="skill-tag">Tableau</span>
-                        <span class="skill-tag">Dashboards</span>
-                        <span class="skill-tag">Excel / Power Query</span>
-                        <span class="skill-tag">Reporting</span>
-                        <span class="skill-tag">CRO</span>
-                    </div>
-                </div>
-                <div class="skill-category">
-                    <h3>Performance & Acquisition</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">Google Ads</span><span class="skill-tag">Meta Ads</span>
-                        <span class="skill-tag">SEO / SEA / SMA</span>
-                        <span class="skill-tag" data-fr="Acquisition B2B/B2C" data-en="B2B/B2C Acquisition">Acquisition B2B/B2C</span>
-                        <span class="skill-tag" data-fr="Campagnes emailing" data-en="Email Campaigns">Campagnes emailing</span>
-                        <span class="skill-tag" data-fr="Stratégie Go-to-Market" data-en="Go-to-Market Strategy">Stratégie Go-to-Market</span>
-                    </div>
-                </div>
-                <div class="skill-category">
-                    <h3 data-fr="Contenu, Marque & IA" data-en="Content, Brand & AI">Contenu, Marque & IA</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag" data-fr="Calendrier éditorial" data-en="Editorial Calendar">Calendrier éditorial</span>
-                        <span class="skill-tag" data-fr="Rédaction multilingue" data-en="Multilingual Copywriting">Rédaction multilingue</span>
-                        <span class="skill-tag" data-fr="Identité de marque" data-en="Brand Identity">Identité de marque</span>
-                        <span class="skill-tag">LinkedIn · Instagram · TikTok</span>
-                        <span class="skill-tag" data-fr="Automatisations IA (Apps Script)" data-en="AI Automations (Apps Script)">Automatisations IA (Apps Script)</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    <article class="job reveal">
+      <div class="yr">2025 - 2026<small>Bordeaux</small></div>
+      <div>
+        <h3 data-fr="Chargée des Projets et Communautés" data-en="Projects & Community Specialist">Chargée des Projets et Communautés</h3>
+        <div class="co"><img src="Linkee_logo.png" alt="">Linkee, <span data-fr="association anti-gaspillage alimentaire" data-en="food waste nonprofit">association anti-gaspillage alimentaire</span></div>
+        <p class="lead" data-fr="Le point de contact de l'antenne locale : j'ai animé une communauté de <span class='hl g'>550+ bénévoles</span>, organisé <span class='hl'>30+ événements</span> et envoyé chaque semaine une newsletter à <span class='hl b'>5 000+ abonnés</span>." data-en="The local branch's point of contact: I managed a community of <span class='hl g'>550+ volunteers</span>, organised <span class='hl'>30+ events</span> and sent a weekly newsletter to <span class='hl b'>5,000+ subscribers</span>.">Le point de contact de l'antenne locale : j'ai animé une communauté de <span class='hl g'>550+ bénévoles</span>, organisé <span class='hl'>30+ événements</span> et envoyé chaque semaine une newsletter à <span class='hl b'>5 000+ abonnés</span>.</p>
+        <button class="toggle" aria-expanded="false"><span class="pm"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 1v10M1 6h10"/></svg></span><span class="tl" data-fr="Voir le détail" data-en="See details">Voir le détail</span></button>
+        <div class="detail"><div><div class="detail-in">
+          <ul>
+            <li data-fr="Organisation de <strong>30+ événements</strong> (prospection B2B, ateliers cuisine, stands, collectes) et entretien des relations avec les partenaires existants" data-en="Organised <strong>30+ events</strong> (B2B prospection, cooking workshops, stands, food drives) and maintained relationships with existing partners">Organisation de <strong>30+ événements</strong> (prospection B2B, ateliers cuisine, stands, collectes) et entretien des relations avec les partenaires existants</li>
+            <li data-fr="Onboarding d'environ 10 nouveaux bénévoles par semaine et accompagnement quotidien de 10 à 20 bénéficiaires" data-en="Onboarded about 10 new volunteers a week and supported 10 to 20 beneficiaries daily">Onboarding d'environ 10 nouveaux bénévoles par semaine et accompagnement quotidien de 10 à 20 bénéficiaires</li>
+            <li data-fr="<span class='why'>initiative</span>Création des guides d'onboarding des Linkers et de SOP là où il n'en existait pas (prospection, ateliers)" data-en="<span class='why'>initiative</span>Created onboarding guides for Linkers and SOPs where none existed (prospection, workshops)"><span class='why'>initiative</span>Création des guides d'onboarding des Linkers et de SOP là où il n'en existait pas (prospection, ateliers)</li>
+            <li data-fr="Programme de bénévoles étudiants KEDGE géré de bout en bout : information, sélection, entretiens, onboarding, attestations" data-en="Ran the KEDGE student volunteer programme end to end: information, screening, interviews, onboarding, attestations">Programme de bénévoles étudiants KEDGE géré de bout en bout : information, sélection, entretiens, onboarding, attestations</li>
+            <li data-fr="Newsletter Sarbacane hebdomadaire, automatisation des emails avec Google Apps Script, données suivies sur Airtable" data-en="Weekly Sarbacane newsletter, email automation with Google Apps Script, data tracked in Airtable">Newsletter Sarbacane hebdomadaire, automatisation des emails avec Google Apps Script, données suivies sur Airtable</li>
+          </ul>
+          <p class="stack"><b data-fr="Outils :" data-en="Tools:">Outils :</b> Sarbacane, Google Apps Script, Airtable, Notion, WhatsApp</p>
+          <div class="pics"><img src="Linkee_Distrib.jpeg" alt="Distribution Linkee" loading="lazy"><img src="Linkee_Stand.jpeg" alt="Stand Linkee" loading="lazy"></div>
+          <a class="case" href="portfolio.html#community" data-fr="Lire l'étude de cas" data-en="Read the case study">Lire l'étude de cas</a>
+        </div></div></div>
+      </div>
+    </article>
 
-    <section class="section reveal" id="tools">
-        <div class="section-header">
-            <span class="section-number">03</span>
-            <h2 class="section-title" data-fr="Outils" data-en="Tools">Outils</h2>
-            <div class="section-line"></div>
-        </div>
-        <div class="card-wrap">
-            <div class="skill-tags">
-                <span class="skill-tag">HubSpot</span><span class="skill-tag">Salesforce</span>
-                <span class="skill-tag">Airtable</span><span class="skill-tag">Notion</span>
-                <span class="skill-tag">Google Workspace</span><span class="skill-tag">Google Apps Script</span>
-                <span class="skill-tag">Jira</span><span class="skill-tag">Smartsheet</span>
-                <span class="skill-tag">GA4</span><span class="skill-tag">GTM</span>
-                <span class="skill-tag">PostHog</span><span class="skill-tag">Tableau</span>
-                <span class="skill-tag">SQL</span><span class="skill-tag">Google Ads</span>
-                <span class="skill-tag">Meta Ads</span><span class="skill-tag">Sarbacane</span>
-                <span class="skill-tag">Oracle PLM/ERP</span>
-                <span class="skill-tag">Figma</span><span class="skill-tag">Canva</span>
-                <span class="skill-tag">CapCut</span><span class="skill-tag">ChatGPT · Claude · Gemini</span>
-                <span class="skill-tag">HTML / CSS</span><span class="skill-tag">WordPress</span>
-            </div>
-        </div>
-    </section>
+    <article class="job reveal">
+      <div class="yr">2025<small data-fr="Freelance" data-en="Freelance">Freelance</small></div>
+      <div>
+        <h3 data-fr="Chargée de Projets Communication" data-en="Communications Project Specialist">Chargée de Projets Communication</h3>
+        <div class="co"><img src="hotel_logo.webp" alt="">Hôtel Le Manoir De Bellerive</div>
+        <p class="lead" data-fr="J'ai proposé une stratégie digitale <span class='hl b'>bilingue FR / EN</span> pour positionner un hôtel 4★ auprès d'une clientèle premium européenne et américaine." data-en="I proposed a <span class='hl b'>bilingual FR / EN</span> digital strategy to position a 4★ hotel with premium European and US travellers.">J'ai proposé une stratégie digitale <span class='hl b'>bilingue FR / EN</span> pour positionner un hôtel 4★ auprès d'une clientèle premium européenne et américaine.</p>
+        <button class="toggle" aria-expanded="false"><span class="pm"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 1v10M1 6h10"/></svg></span><span class="tl" data-fr="Voir le détail" data-en="See details">Voir le détail</span></button>
+        <div class="detail"><div><div class="detail-in">
+          <ul>
+            <li data-fr="Analyse du marché américain CSP+ et définition des personas européens et américains" data-en="Analysed the US premium market and defined European and US personas">Analyse du marché américain CSP+ et définition des personas européens et américains</li>
+            <li data-fr="<span class='why'>proposition</span>Recommandation complète livrée : identité visuelle, maquette Instagram, ligne éditoriale FR/EN, exemples de Reels et axes de mesure" data-en="<span class='why'>proposal</span>Delivered a full recommendation: visual identity, Instagram mockup, FR/EN editorial line, Reels examples and measurement axes"><span class='why'>proposition</span>Recommandation complète livrée : identité visuelle, maquette Instagram, ligne éditoriale FR/EN, exemples de Reels et axes de mesure</li>
+          </ul>
+          <p class="stack"><b data-fr="Outils :" data-en="Tools:">Outils :</b> Figma, Canva, Meta Business Suite</p>
+          <a class="case" href="portfolio.html#brand" data-fr="Lire l'étude de cas" data-en="Read the case study">Lire l'étude de cas</a>
+        </div></div></div>
+      </div>
+    </article>
 
-    <section class="section reveal" id="education">
-        <div class="section-header">
-            <span class="section-number">04</span>
-            <h2 class="section-title" data-fr="Formation" data-en="Education">Formation</h2>
-            <div class="section-line"></div>
-        </div>
-        <div class="edu-card">
-            <h3>M2 Strategic & Operational Marketing / M1 International & European Business</h3>
-            <div class="school" data-fr="Grande École, EM Strasbourg Business School · 2025" data-en="Grande École, EM Strasbourg Business School · 2025">Grande École, EM Strasbourg Business School · 2025</div>
-            <ul class="edu-achievements">
-                <li data-fr="Mémoire (15/20) : comportement d'achat éthique dans le secteur de la mode en Europe et Afrique" data-en="Master's thesis (15/20): ethical purchasing behavior in the fashion sector across Europe and Africa">Mémoire (15/20) : comportement d'achat éthique dans le secteur de la mode en Europe et Afrique</li>
-                <li data-fr="1ère place : étude de marché Tupperware France, cible millennials (16,35/20)" data-en="1st place: Tupperware France market study, millennial target (16.35/20)">1ère place : étude de marché Tupperware France, cible millennials (16,35/20)</li>
-            </ul>
-            <div class="edu-project">
-                <h4 data-fr="Mémoire de recherche" data-en="Research Thesis">Mémoire de recherche</h4>
-                <p data-fr="Étude quantitative sur l'influence des valeurs personnelles et des initiatives éthiques sur le comportement des consommateurs dans la mode. 166 répondants, échelle de Likert 7 points, régression multiple et ANOVA à deux facteurs. Résultat : la self-transcendance, la conservation et l'ouverture influencent significativement la volonté de récompenser ou punir les entreprises." data-en="Quantitative study on how personal values and ethical initiatives influence consumer behavior in fashion. 166 respondents, 7-point Likert scale, multiple regression and two-way ANOVA. Finding: self-transcendence, conservation and openness significantly influence willingness to reward or punish companies.">Étude quantitative sur l'influence des valeurs personnelles et des initiatives éthiques sur le comportement des consommateurs dans la mode. 166 répondants, échelle de Likert 7 points, régression multiple et ANOVA à deux facteurs. Résultat : la self-transcendance, la conservation et l'ouverture influencent significativement la volonté de récompenser ou punir les entreprises.</p>
-            </div>
-            <div class="edu-project">
-                <h4 data-fr="Cas Tupperware, 1ère place" data-en="Tupperware Case Competition, 1st Place">Cas Tupperware, 1ère place</h4>
-                <p data-fr="Cours Product & Brand Management : comment rajeunir la marque auprès des millennials ? Analyse du marché des contenants alimentaires, 12 entretiens semi-directifs et recommandations marketing présentées au directeur général de Tupperware France. Meilleure note de la promotion (16,35/20) et prix sponsorisé par Tupperware." data-en="Product & Brand Management course: how to rejuvenate the brand for millennials? Analysis of the food storage market, 12 semi-structured interviews and marketing recommendations presented to the General Manager of Tupperware France. Highest score in the class (16.35/20) and a Tupperware-sponsored prize.">Cours Product & Brand Management : comment rajeunir la marque auprès des millennials ? Analyse du marché des contenants alimentaires, 12 entretiens semi-directifs et recommandations marketing présentées au directeur général de Tupperware France. Meilleure note de la promotion (16,35/20) et prix sponsorisé par Tupperware.</p>
-            </div>
-            <a class="reco-link" href="#recommendations">
-                <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 2h8l4 4v12a1 1 0 01-1 1H6a1 1 0 01-1-1V3a1 1 0 011-1z"/><path d="M14 2v4h4M8 10h4M8 13h6"/></svg>
-                <span data-fr="Voir les lettres de recommandation" data-en="See recommendation letters">Voir les lettres de recommandation</span>
-            </a>
-        </div>
-        <div class="edu-card">
-            <h3 data-fr="Année d'échange universitaire, UFR Langues et Civilisations" data-en="University Exchange Year, UFR Languages and Civilizations">Année d'échange universitaire, UFR Langues et Civilisations</h3>
-            <div class="school">Université Paris-Est Marne-la-Vallée</div>
-        </div>
-        <div class="edu-card">
-            <h3 data-fr="Licence en Sciences de l'Éducation, formation des enseignants du primaire" data-en="Bachelor of Education, Primary School Teacher Training">Licence en Sciences de l'Éducation, formation des enseignants du primaire</h3>
-            <div class="school" data-fr="Université nationale d'éducation de Taipei" data-en="National Taipei University of Education">Université nationale d'éducation de Taipei</div>
-        </div>
-    </section>
+    <article class="job reveal open">
+      <div class="yr">2024<small>Bordeaux</small></div>
+      <div>
+        <h3 data-fr="Chargée de Marketing Digital International" data-en="International Digital Marketing Specialist">Chargée de Marketing Digital International</h3>
+        <div class="co"><img src="Unifox_logo.webp" alt="">UniFox, GreenTech & Web3</div>
+        <p class="lead" data-fr="J'ai piloté la stratégie digitale APAC / EMEA de bout en bout et construit le tracking à partir de zéro : <span class='hl g'>taux de rebond −52,6 %</span>, <span class='hl'>53,52 % de conversion</span> sur Google Ads et <span class='hl b'>+114 % de vues</span> mensuelles." data-en="I led the APAC / EMEA digital strategy end to end and built tracking from scratch: <span class='hl g'>bounce rate −52.6%</span>, <span class='hl'>53.52% conversion</span> on Google Ads and <span class='hl b'>+114% monthly views</span>.">J'ai piloté la stratégie digitale APAC / EMEA de bout en bout et construit le tracking à partir de zéro : <span class='hl g'>taux de rebond −52,6 %</span>, <span class='hl'>53,52 % de conversion</span> sur Google Ads et <span class='hl b'>+114 % de vues</span> mensuelles.</p>
+        <button class="toggle" aria-expanded="true"><span class="pm"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 1v10M1 6h10"/></svg></span><span class="tl" data-fr="Voir le détail" data-en="See details">Voir le détail</span></button>
+        <div class="detail"><div><div class="detail-in">
+          <ul>
+            <li data-fr="<span class='why'>de zéro</span>Conception et déploiement de bout en bout de la stratégie marketing digital : mise en place intégrale de <strong>GA4, Google Tag Manager, des dashboards KPI</strong> (Tableau, SQL) et des processus de reporting analytique" data-en="<span class='why'>from scratch</span>Designed and rolled out the digital marketing strategy end to end: full set-up of <strong>GA4, Google Tag Manager, KPI dashboards</strong> (Tableau, SQL) and analytics reporting processes"><span class='why'>de zéro</span>Conception et déploiement de bout en bout de la stratégie marketing digital : mise en place intégrale de <strong>GA4, Google Tag Manager, des dashboards KPI</strong> (Tableau, SQL) et des processus de reporting analytique</li>
+            <li data-fr="Analyse du comportement utilisateur et <strong>cartographie du parcours client</strong>, de la découverte à la mesure finale, avec PostHog (<strong>heatmaps</strong>, replays de sessions) et GA4" data-en="Analysed user behaviour and <strong>mapped the customer journey</strong> from first discovery to final measurement, with PostHog (<strong>heatmaps</strong>, session replays) and GA4">Analyse du comportement utilisateur et <strong>cartographie du parcours client</strong>, de la découverte à la mesure finale, avec PostHog (<strong>heatmaps</strong>, replays de sessions) et GA4</li>
+            <li data-fr="<span class='why'>proposition</span>Identification d'un écart de conversion <strong>iOS vs Android (58,82 % vs 95,2 %)</strong>, puis correctifs UX proposés et mis en place (formulaire simplifié, CTA repositionnés, chargement optimisé) qui ont comblé l'écart" data-en="<span class='why'>proposal</span>Identified an <strong>iOS vs Android conversion gap (58.82% vs 95.2%)</strong>, then proposed and shipped UX fixes (simpler form, repositioned CTAs, faster load) that closed the gap"><span class='why'>proposition</span>Identification d'un écart de conversion <strong>iOS vs Android (58,82 % vs 95,2 %)</strong>, puis correctifs UX proposés et mis en place (formulaire simplifié, CTA repositionnés, chargement optimisé) qui ont comblé l'écart</li>
+            <li data-fr="Optimisation des campagnes d'acquisition B2C APAC / EMEA (Google Ads, réseaux sociaux, SEO)" data-en="Optimised B2C acquisition campaigns across APAC / EMEA (Google Ads, social, SEO)">Optimisation des campagnes d'acquisition B2C APAC / EMEA (Google Ads, réseaux sociaux, SEO)</li>
+            <li data-fr="Contenus segmentés sur 6 plateformes (8,67 événements par session sur le social organique) et représentation de la marque sur un salon tech international" data-en="Segmented content across 6 platforms (8.67 events per session on organic social) and represented the brand at an international tech trade show">Contenus segmentés sur 6 plateformes (8,67 événements par session sur le social organique) et représentation de la marque sur un salon tech international</li>
+          </ul>
+          <p class="stack"><b data-fr="Outils :" data-en="Tools:">Outils :</b> GA4, Google Tag Manager, PostHog, Tableau, SQL, Google Ads, Meta Ads, Iconosquare, Figma, CapCut</p>
+          <a class="case" href="portfolio.html#strategy" data-fr="Lire l'étude de cas" data-en="Read the case study">Lire l'étude de cas</a>
+        </div></div></div>
+      </div>
+    </article>
 
-    <section class="section reveal" id="languages">
-        <div class="section-header">
-            <span class="section-number">05</span>
-            <h2 class="section-title" data-fr="Langues" data-en="Languages">Langues</h2>
-            <div class="section-line"></div>
-        </div>
-        <div class="lang-grid">
-            <div class="lang-item">
-                <div class="lang-name" data-fr="Mandarin & Taïwanais" data-en="Mandarin & Taiwanese">Mandarin & Taïwanais</div>
-                <div class="lang-level" data-fr="Langue maternelle" data-en="Native">Langue maternelle</div>
-                <div class="lang-bar"><div class="lang-bar-fill" data-width="100"></div></div>
-            </div>
-            <div class="lang-item">
-                <div class="lang-name" data-fr="Anglais" data-en="English">Anglais</div>
-                <div class="lang-level" data-fr="C1 (2,5 ans en entreprise américaine)" data-en="C1 (2.5 years in a US company)">C1 (2,5 ans en entreprise américaine)</div>
-                <div class="lang-bar"><div class="lang-bar-fill" data-width="88"></div></div>
-            </div>
-            <div class="lang-item">
-                <div class="lang-name" data-fr="Français" data-en="French">Français</div>
-                <div class="lang-level" data-fr="C1 (1,2 ans en entreprises françaises)" data-en="C1 (1.2 years in French companies)">C1 (1,2 ans en entreprises françaises)</div>
-                <div class="lang-bar"><div class="lang-bar-fill" data-width="85"></div></div>
-            </div>
-            <div class="lang-item">
-                <div class="lang-name" data-fr="Coréen" data-en="Korean">Coréen</div>
-                <div class="lang-level" data-fr="A2 (intermédiaire)" data-en="A2 (intermediate)">A2 (intermédiaire)</div>
-                <div class="lang-bar"><div class="lang-bar-fill" data-width="25"></div></div>
-            </div>
-        </div>
-    </section>
+    <article class="job reveal">
+      <div class="yr">2023<small>Paris</small></div>
+      <div>
+        <h3 data-fr="Chargée de Développement Marketing" data-en="Marketing Development Specialist">Chargée de Développement Marketing</h3>
+        <div class="co"><img src="reinventing_logo.png" alt="">Reinventing Carrière Coaching</div>
+        <p class="lead" data-fr="J'ai lancé un cours en ligne de l'étude de marché à la mise en vente : <span class='hl'>26 sessions</span> et <span class='hl b'>3,5 h de vidéo</span> produites en <span class='hl g'>2 mois</span>, délais tenus." data-en="I launched an online course from market research to going on sale: <span class='hl'>26 sessions</span> and <span class='hl b'>3.5h of video</span> produced in <span class='hl g'>2 months</span>, on schedule.">J'ai lancé un cours en ligne de l'étude de marché à la mise en vente : <span class='hl'>26 sessions</span> et <span class='hl b'>3,5 h de vidéo</span> produites en <span class='hl g'>2 mois</span>, délais tenus.</p>
+        <button class="toggle" aria-expanded="false"><span class="pm"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 1v10M1 6h10"/></svg></span><span class="tl" data-fr="Voir le détail" data-en="See details">Voir le détail</span></button>
+        <div class="detail"><div><div class="detail-in">
+          <ul>
+            <li data-fr="Stratégie d'acquisition de A à Z : analyse marché et concurrentielle, personas, positionnement, <strong>proposition tarifaire</strong>, canaux et programme d'affiliation" data-en="Acquisition strategy from A to Z: market and competitive analysis, personas, positioning, <strong>pricing proposal</strong>, channels and affiliate programme">Stratégie d'acquisition de A à Z : analyse marché et concurrentielle, personas, positionnement, <strong>proposition tarifaire</strong>, canaux et programme d'affiliation</li>
+            <li data-fr="<span class='why'>de zéro</span>Coordination de la production des 26 sessions avec un workflow réutilisé ensuite pour les créations suivantes" data-en="<span class='why'>from scratch</span>Coordinated production of the 26 sessions with a workflow later reused for new content"><span class='why'>de zéro</span>Coordination de la production des 26 sessions avec un workflow réutilisé ensuite pour les créations suivantes</li>
+            <li data-fr="Montage des vidéos de formation, conception d'un webinaire et contenus digitaux (bannières, Reels)" data-en="Edited the training videos, designed a webinar and created digital content (banners, Reels)">Montage des vidéos de formation, conception d'un webinaire et contenus digitaux (bannières, Reels)</li>
+          </ul>
+          <p class="stack"><b data-fr="Outils :" data-en="Tools:">Outils :</b> Podia, CapCut, Canva, Notion</p>
+          <a class="case" href="portfolio.html#product" data-fr="Lire l'étude de cas" data-en="Read the case study">Lire l'étude de cas</a>
+        </div></div></div>
+      </div>
+    </article>
 
-    <section class="section reveal" id="certifications">
-        <div class="section-header">
-            <span class="section-number">06</span>
-            <h2 class="section-title" data-fr="Certifications" data-en="Certifications">Certifications</h2>
-            <div class="section-line"></div>
-        </div>
-        <div class="card-wrap" style="padding:1.1rem 1.6rem;">
-            <div class="skill-tags">
-                <span class="skill-tag">Google Analytics</span>
-                <span class="skill-tag">Amazon Ads Retail</span>
-                <span class="skill-tag">Marketing Analytics</span>
-                <span class="skill-tag">Data Analysis with Spreadsheets & SQL</span>
-                <span class="skill-tag">Scrum</span>
-                <span class="skill-tag">CFORCSR© (RSE)</span>
-                <span class="skill-tag">Data Culture Certificate</span>
-            </div>
-        </div>
-    </section>
+    <article class="job reveal">
+      <div class="yr">2020 - 2022<small>Taipei</small></div>
+      <div>
+        <h3 data-fr="Analyste Documentation Technique" data-en="Technical Document Control Analyst">Analyste Documentation Technique</h3>
+        <div class="co"><img src="corsair_logo.png" alt="">Corsair Gaming, <span data-fr="entreprise américaine" data-en="US company">entreprise américaine</span></div>
+        <p class="lead" data-fr="En anglais au quotidien, je gardais les données produits fiables entre les usines et les équipes <span class='hl b'>APAC, EMEA et Amériques</span>, sur <span class='hl'>10 à 15 projets par trimestre</span> et <span class='hl g'>20+ tickets par semaine</span> répartis sur trois fuseaux horaires." data-en="Working in English every day, I kept product data reliable between factories and the <span class='hl b'>APAC, EMEA and Americas</span> teams, across <span class='hl'>10 to 15 projects a quarter</span> and <span class='hl g'>20+ tickets a week</span> spread over three time zones.">En anglais au quotidien, je gardais les données produits fiables entre les usines et les équipes <span class='hl b'>APAC, EMEA et Amériques</span>, sur <span class='hl'>10 à 15 projets par trimestre</span> et <span class='hl g'>20+ tickets par semaine</span> répartis sur trois fuseaux horaires.</p>
+        <button class="toggle" aria-expanded="false"><span class="pm"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 1v10M1 6h10"/></svg></span><span class="tl" data-fr="Voir le détail" data-en="See details">Voir le détail</span></button>
+        <div class="detail"><div><div class="detail-in">
+          <ul>
+            <li data-fr="Coordination avec les équipes des trois régions et cohérence des données produits sur <strong>3 lignes de produits</strong>" data-en="Coordinated with teams in all three regions and kept product data consistent across <strong>3 product lines</strong>">Coordination avec les équipes des trois régions et cohérence des données produits sur <strong>3 lignes de produits</strong></li>
+            <li data-fr="Suivi quotidien des modifications avec les usines dans Oracle PLM (substitutions de composants, quantités, blocages, fins de vie) et génération des nomenclatures (BOM) de nombreuses séries en parallèle" data-en="Daily factory change tracking in Oracle PLM (component substitutions, quantities, holds, end of life) and BOM generation for many series in parallel">Suivi quotidien des modifications avec les usines dans Oracle PLM (substitutions de composants, quantités, blocages, fins de vie) et génération des nomenclatures (BOM) de nombreuses séries en parallèle</li>
+            <li data-fr="Tickets inter-équipes traités en parallèle : qualification, priorisation et résolution" data-en="Handled cross-team tickets in parallel: triage, prioritisation and resolution">Tickets inter-équipes traités en parallèle : qualification, priorisation et résolution</li>
+            <li data-fr="<span class='why'>initiative</span>Automatisations <strong>Google Apps Script</strong> pour supprimer des étapes manuelles, et reporting sous Excel" data-en="<span class='why'>initiative</span>Built <strong>Google Apps Script</strong> automations to remove manual steps, and reported in Excel"><span class='why'>initiative</span>Automatisations <strong>Google Apps Script</strong> pour supprimer des étapes manuelles, et reporting sous Excel</li>
+          </ul>
+          <p class="stack"><b data-fr="Outils :" data-en="Tools:">Outils :</b> Oracle PLM/ERP, Omnify, Google Apps Script, Excel, Slack</p>
+        </div></div></div>
+      </div>
+    </article>
 
-    <section class="section reveal" id="recommendations">
-        <div class="section-header">
-            <span class="section-number">07</span>
-            <h2 class="section-title" data-fr="Recommandations" data-en="Recommendations">Recommandations</h2>
-            <div class="section-line"></div>
-        </div>
-        <div class="reco-grid">
-            <div class="reco-card">
-                <div class="reco-who">Aline Farah</div>
-                <div class="reco-role" data-fr="Chargée de la promotion et du recrutement à l'international, EM Strasbourg Business School" data-en="International Promotion and Recruitment Officer, EM Strasbourg Business School">Chargée de la promotion et du recrutement à l'international, EM Strasbourg Business School</div>
-                <div class="reco-context" data-fr="Collaboration directe, salon étudiant international (rôle d'ambassadrice)" data-en="Direct collaboration, international student fair (ambassador role)">Collaboration directe, salon étudiant international (rôle d'ambassadrice)</div>
-                <p data-fr="La lettre souligne l'aisance relationnelle avec des publics très divers (étudiants, familles, partenaires institutionnels), la capacité d'adaptation rapide à différents interlocuteurs, ainsi que l'initiative et la rigueur en environnement multiculturel." data-en="The letter highlights ease with very diverse audiences (students, families, institutional partners), quick adaptation to different counterparts, and initiative and rigour in a multicultural setting.">La lettre souligne l'aisance relationnelle avec des publics très divers (étudiants, familles, partenaires institutionnels), la capacité d'adaptation rapide à différents interlocuteurs, ainsi que l'initiative et la rigueur en environnement multiculturel.</p>
-                <a class="reco-link" href="https://drive.google.com/file/d/1lUREkXxnFECmVdLZW3kv-2W_g_X6A1lL/view" target="_blank" rel="noopener">
-                    <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 2h8l4 4v12a1 1 0 01-1 1H6a1 1 0 01-1-1V3a1 1 0 011-1z"/><path d="M14 2v4h4M8 10h4M8 13h6"/></svg>
-                    <span data-fr="Lire la lettre (FR)" data-en="Read the letter (FR)">Lire la lettre (FR)</span>
-                </a>
-            </div>
-            <div class="reco-card">
-                <div class="reco-who">Dr. Nada Maaninou</div>
-                <div class="reco-role" data-fr="Professeure associée en marketing, EM Strasbourg Business School" data-en="Associate Professor of Marketing, EM Strasbourg Business School">Professeure associée en marketing, EM Strasbourg Business School</div>
-                <div class="reco-context" data-fr="Cours Product & Brand Management, étude de marché Tupperware" data-en="Product & Brand Management course, Tupperware market study">Cours Product & Brand Management, étude de marché Tupperware</div>
-                <p data-fr="Attestation du travail réalisé sur l'étude de marché Tupperware France : analyse du marché et du comportement des millennials, 12 entretiens semi-directifs, recommandations présentées au directeur général. Meilleure note de la promotion (16,35/20) et prix sponsorisé par Tupperware." data-en="Attests to the work on the Tupperware France market study: market and millennial behaviour analysis, 12 semi-structured interviews, recommendations presented to the General Manager. Highest score in the class (16.35/20) and a Tupperware-sponsored prize.">Attestation du travail réalisé sur l'étude de marché Tupperware France : analyse du marché et du comportement des millennials, 12 entretiens semi-directifs, recommandations présentées au directeur général. Meilleure note de la promotion (16,35/20) et prix sponsorisé par Tupperware.</p>
-                <a class="reco-link" href="https://drive.google.com/file/d/1Qivjg1WIUYeIFS0770pRjLxwXwecH-kw/view" target="_blank" rel="noopener">
-                    <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 2h8l4 4v12a1 1 0 01-1 1H6a1 1 0 01-1-1V3a1 1 0 011-1z"/><path d="M14 2v4h4M8 10h4M8 13h6"/></svg>
-                    <span data-fr="Lire la lettre (EN)" data-en="Read the letter (EN)">Lire la lettre (EN)</span>
-                </a>
-            </div>
-        </div>
-    </section>
+    <article class="job reveal">
+      <div class="yr">2018 - 2020<small>Taipei</small></div>
+      <div>
+        <h3 data-fr="Chargée de Marques & Développement Commercial" data-en="Trademark & Business Development Specialist">Chargée de Marques & Développement Commercial</h3>
+        <div class="co"><img src="best_ip_logo.jpg" alt="">BEST International IP, <span data-fr="cabinet de propriété intellectuelle" data-en="IP law firm">cabinet de propriété intellectuelle</span></div>
+        <p class="lead" data-fr="J'ai été le point de contact de <span class='hl'>200+ clients B2B internationaux</span>, du premier devis jusqu'à la résolution des litiges." data-en="I was the point of contact for <span class='hl'>200+ international B2B clients</span>, from the first quote to dispute resolution.">J'ai été le point de contact de <span class='hl'>200+ clients B2B internationaux</span>, du premier devis jusqu'à la résolution des litiges.</p>
+        <button class="toggle" aria-expanded="false"><span class="pm"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 1v10M1 6h10"/></svg></span><span class="tl" data-fr="Voir le détail" data-en="See details">Voir le détail</span></button>
+        <div class="detail"><div><div class="detail-in">
+          <ul>
+            <li data-fr="Suivi du portefeuille sur tout le cycle de vie des marques : devis de dépôt, conseil stratégique, suivi des dossiers et litiges" data-en="Managed the portfolio across the full trademark lifecycle: filing quotes, strategic advice, case follow-up and disputes">Suivi du portefeuille sur tout le cycle de vie des marques : devis de dépôt, conseil stratégique, suivi des dossiers et litiges</li>
+            <li data-fr="Rédaction de mémoires de défense et contribution, aux côtés d'avocats partenaires, à la victoire d'un dossier complexe aux États-Unis" data-en="Drafted defence briefs and contributed, alongside partner attorneys, to winning a complex case in the United States">Rédaction de mémoires de défense et contribution, aux côtés d'avocats partenaires, à la victoire d'un dossier complexe aux États-Unis</li>
+            <li data-fr="Développement commercial et facturation : identification de prospects, relances et vérification des virements avec la comptabilité" data-en="Business development and invoicing: prospect identification, reminders and payment checks with accounting">Développement commercial et facturation : identification de prospects, relances et vérification des virements avec la comptabilité</li>
+          </ul>
+        </div></div></div>
+      </div>
+    </article>
+  </div>
+</section>
 
-    <section class="section reveal" id="portfolio">
-        <div class="section-header">
-            <span class="section-number">08</span>
-            <h2 class="section-title" data-fr="Portfolio & Liens" data-en="Portfolio & Links">Portfolio & Liens</h2>
-            <div class="section-line"></div>
-        </div>
-        <div class="links-row">
-            <a class="link-card primary" href="portfolio.html" target="_blank" rel="noopener">
-                <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="14" height="14" rx="2"/><path d="M3 8h14M8 3v14"/></svg>
-                <span data-fr="Portfolio (4 études de cas, FR/EN)" data-en="Portfolio (4 case studies, FR/EN)">Portfolio (4 études de cas, FR/EN)</span>
-            </a>
-            <a class="link-card" href="https://www.linkedin.com/in/yihsuan-chiu/" target="_blank" rel="noopener">
-                <svg viewBox="0 0 20 20" fill="currentColor"><path d="M4.5 3A1.5 1.5 0 003 4.5 1.5 1.5 0 004.5 6 1.5 1.5 0 006 4.5 1.5 1.5 0 004.5 3zM3 8h3v9H3V8zm5.5 0H11v1.2h.03c.35-.66 1.2-1.35 2.47-1.35 2.64 0 3.13 1.74 3.13 4v5.15h-3V12.4c0-1.1-.02-2.5-1.53-2.5s-1.76 1.2-1.76 2.43V17H7.5V8z"/></svg>
-                LinkedIn
-            </a>
-            <a class="link-card" href="https://www.youtube.com/@josdiary_%E6%88%91%E7%9A%84%E7%95%99%E5%AD%B8%E6%97%A5%E8%A8%98" target="_blank" rel="noopener">
-                <svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 3.4C4.36 3.4 2 5.06 2 5.06v9.88s2.36 1.66 8 1.66 8-1.66 8-1.66V5.06S15.64 3.4 10 3.4zM8 13V7l5 3-5 3z"/></svg>
-                YouTube
-            </a>
-        </div>
-    </section>
+<section id="skills">
+  <h2 class="h2 reveal" data-fr="Compétences & outils" data-en="Skills & tools">Compétences & outils</h2>
+  <div class="cols">
+    <div class="col reveal">
+      <h3><svg viewBox="0 0 24 24" fill="var(--leaf)"><use href="#i-spark"/></svg><span data-fr="Compétences" data-en="Skills">Compétences</span></h3>
+      <div class="grp" data-fr="marketing & CRM" data-en="marketing & CRM">marketing & CRM</div>
+      <ul><li data-fr="Gestion de campagnes" data-en="Campaign management">Gestion de campagnes</li><li data-fr="CRM B2B / B2C" data-en="B2B / B2C CRM">CRM B2B / B2C</li><li data-fr="Automatisation des workflows" data-en="Workflow automation">Automatisation des workflows</li><li data-fr="Stratégie go-to-market" data-en="Go-to-market strategy">Stratégie go-to-market</li></ul>
+      <div class="grp" data-fr="analyse" data-en="analytics">analyse</div>
+      <ul><li data-fr="Parcours client" data-en="Customer journey mapping">Parcours client</li><li>Heatmaps, UX & funnel</li><li>CRO, dashboards KPI</li></ul>
+      <div class="grp" data-fr="projets & clients" data-en="projects & clients">projets & clients</div>
+      <ul><li data-fr="Gestion de projet" data-en="Project management">Gestion de projet</li><li data-fr="Coordination APAC / EMEA" data-en="APAC / EMEA coordination">Coordination APAC / EMEA</li><li data-fr="Suivi de portefeuille B2B" data-en="B2B account management">Suivi de portefeuille B2B</li></ul>
+    </div>
+    <div class="col reveal" style="--d:.08s">
+      <h3><svg viewBox="0 0 24 24" fill="var(--blue)"><use href="#i-spark"/></svg><span data-fr="Outils" data-en="Tools">Outils</span></h3>
+      <div class="grp">data & tracking</div>
+      <ul><li>GA4, Google Tag Manager</li><li>PostHog, Tableau</li><li>SQL, Excel / Power Query</li></ul>
+      <div class="grp" data-fr="CRM & automatisation" data-en="CRM & automation">CRM & automatisation</div>
+      <ul><li>HubSpot, Salesforce</li><li>Airtable, Sarbacane</li><li>Google Apps Script</li><li>Google Ads, Meta Ads</li></ul>
+      <div class="grp" data-fr="création" data-en="creative">création</div>
+      <ul><li>Figma, Canva, CapCut</li><li>WordPress, HTML / CSS</li><li>Notion, Jira</li></ul>
+    </div>
+    <div class="col reveal" style="--d:.16s">
+      <h3><svg viewBox="0 0 24 24" fill="var(--coral)"><use href="#i-spark"/></svg><span data-fr="Langues" data-en="Languages">Langues</span></h3>
+      <ul>
+        <li data-fr="Mandarin & taïwanais <span class='dots'><i class='f'></i><i class='f'></i><i class='f'></i><i class='f'></i><i class='f'></i></span><br><small>langue maternelle</small>" data-en="Mandarin & Taiwanese <span class='dots'><i class='f'></i><i class='f'></i><i class='f'></i><i class='f'></i><i class='f'></i></span><br><small>native</small>">Mandarin & taïwanais <span class='dots'><i class='f'></i><i class='f'></i><i class='f'></i><i class='f'></i><i class='f'></i></span><br><small>langue maternelle</small></li>
+        <li data-fr="Anglais <span class='dots'><i class='f'></i><i class='f'></i><i class='f'></i><i class='f'></i><i></i></span><br><small>C1, 2,5 ans en entreprise américaine</small>" data-en="English <span class='dots'><i class='f'></i><i class='f'></i><i class='f'></i><i class='f'></i><i></i></span><br><small>C1, 2.5 years in a US company</small>">Anglais <span class='dots'><i class='f'></i><i class='f'></i><i class='f'></i><i class='f'></i><i></i></span><br><small>C1, 2,5 ans en entreprise américaine</small></li>
+        <li data-fr="Français <span class='dots'><i class='f'></i><i class='f'></i><i class='f'></i><i class='f'></i><i></i></span><br><small>C1, 1,2 an en entreprises françaises</small>" data-en="French <span class='dots'><i class='f'></i><i class='f'></i><i class='f'></i><i class='f'></i><i></i></span><br><small>C1, 1.2 years in French companies</small>">Français <span class='dots'><i class='f'></i><i class='f'></i><i class='f'></i><i class='f'></i><i></i></span><br><small>C1, 1,2 an en entreprises françaises</small></li>
+        <li data-fr="Coréen <span class='dots'><i class='f'></i><i class='f'></i><i></i><i></i><i></i></span><br><small>intermédiaire</small>" data-en="Korean <span class='dots'><i class='f'></i><i class='f'></i><i></i><i></i><i></i></span><br><small>intermediate</small>">Coréen <span class='dots'><i class='f'></i><i class='f'></i><i></i><i></i><i></i></span><br><small>intermédiaire</small></li>
+      </ul>
+    </div>
+    <div class="col reveal" style="--d:.24s">
+      <h3><svg viewBox="0 0 24 24" fill="var(--butter)"><use href="#i-spark"/></svg>Certifications</h3>
+      <ul><li>Google Analytics</li><li>Amazon Ads Retail</li><li>Marketing Analytics</li><li>Data Analysis with Spreadsheets & SQL</li><li>Scrum</li><li>CFORCSR© (RSE)</li><li>Data Culture Certificate</li></ul>
+    </div>
+  </div>
+</section>
 
-    <section class="section reveal" id="extras">
-        <div class="section-header">
-            <span class="section-number">09</span>
-            <h2 class="section-title" data-fr="Engagement & Centres d'intérêts" data-en="Engagement & Interests">Engagement & Centres d'intérêts</h2>
-            <div class="section-line"></div>
-        </div>
-        <div class="extras-grid">
-            <div class="extra-item full-width">
-                <div class="extra-text">
-                    <h4 data-fr="Ambassadrice Internationale" data-en="International Ambassador">Ambassadrice Internationale</h4>
-                    <p data-fr="EM Strasbourg Business School · 12/2022 – 11/2024" data-en="EM Strasbourg Business School · 12/2022 – 11/2024">EM Strasbourg Business School · 12/2022 – 11/2024</p>
-                    <ul>
-                        <li data-fr="Accueil et accompagnement des étudiants internationaux sur leurs démarches d'installation : visa, logement et vie quotidienne en France" data-en="Welcomed and supported international students with their settling-in steps: visa, housing and daily life in France">Accueil et accompagnement des étudiants internationaux sur leurs démarches d'installation : visa, logement et vie quotidienne en France</li>
-                        <li data-fr="Promotion de l'école lors du salon EEFT Taiwan 2024 : présentation des programmes, échanges avec les candidats et suivi post-salon, avec des candidatures abouties à une inscription" data-en="Promoted the school at the EEFT Taiwan 2024 fair: programme presentations, candidate conversations and post-fair follow-up, with applications converted into enrolments">Promotion de l'école lors du salon EEFT Taiwan 2024 : présentation des programmes, échanges avec les candidats et suivi post-salon, avec des candidatures abouties à une inscription</li>
-                        <li data-fr="Création de contenus vidéo pour promouvoir les programmes d'échange auprès des candidats internationaux" data-en="Created video content to promote exchange programmes to international candidates">Création de contenus vidéo pour promouvoir les programmes d'échange auprès des candidats internationaux</li>
-                    </ul>
-                    <a class="reco-link" href="https://drive.google.com/file/d/1lUREkXxnFECmVdLZW3kv-2W_g_X6A1lL/view" target="_blank" rel="noopener">
-                        <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 2h8l4 4v12a1 1 0 01-1 1H6a1 1 0 01-1-1V3a1 1 0 011-1z"/><path d="M14 2v4h4M8 10h4M8 13h6"/></svg>
-                        <span data-fr="Lettre de recommandation" data-en="Recommendation letter">Lettre de recommandation</span>
-                    </a>
-                </div>
-                <div class="ambassador-photos">
-                    <img src="Integration%20team.jpeg" alt="Integration team" loading="lazy">
-                    <img src="Team%20building.jpeg" alt="Team building" loading="lazy">
-                    <img src="European%20Education%20Fair%20Taiwan_1.jpeg" alt="European Education Fair Taiwan" loading="lazy">
-                    <img src="European%20Education%20Fair%20Taiwan_2.jpeg" alt="European Education Fair Taiwan" loading="lazy">
-                </div>
-            </div>
-            <div class="extra-item">
-                <h4 data-fr="Création de contenu" data-en="Content Creation">Création de contenu</h4>
-                <p data-fr="Chaîne YouTube voyage sur les villes françaises et européennes : script, tournage, montage, publication et analyse des performances." data-en="YouTube travel channel on French and European cities: scripting, filming, editing, publishing and performance analysis.">Chaîne YouTube voyage sur les villes françaises et européennes : script, tournage, montage, publication et analyse des performances.</p>
-                <a class="reco-link" href="https://www.youtube.com/@josdiary_%E6%88%91%E7%9A%84%E7%95%99%E5%AD%B8%E6%97%A5%E8%A8%98" target="_blank" rel="noopener">
-                    <svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 3.4C4.36 3.4 2 5.06 2 5.06v9.88s2.36 1.66 8 1.66 8-1.66 8-1.66V5.06S15.64 3.4 10 3.4zM8 13V7l5 3-5 3z"/></svg>
-                    <span data-fr="Voir la chaîne" data-en="View channel">Voir la chaîne</span>
-                </a>
-            </div>
-            <div class="extra-item">
-                <h4 data-fr="Enquêtrice bénévole" data-en="Volunteer Investigator">Enquêtrice bénévole</h4>
-                <p data-fr="Faith for Animals (2020) : coordination de stérilisations canines" data-en="Faith for Animals (2020): coordination of canine sterilization programs">Faith for Animals (2020) : coordination de stérilisations canines</p>
-            </div>
-            <div class="extra-item">
-                <h4 data-fr="Musique" data-en="Music">Musique</h4>
-                <p data-fr="Piano (8 ans), Clarinette (10 ans)" data-en="Piano (8 years), Clarinet (10 years)">Piano (8 ans), Clarinette (10 ans)</p>
-            </div>
-        </div>
-    </section>
+<section id="education">
+  <h2 class="h2 reveal" data-fr="Formation" data-en="Education">Formation</h2>
+  <div class="edu">
+    <div class="school reveal">
+      <h3>M2 Strategic & Operational Marketing<br>M1 International & European Business</h3>
+      <div class="where" data-fr="Grande École, EM Strasbourg Business School, 2025" data-en="Grande École, EM Strasbourg Business School, 2025">Grande École, EM Strasbourg Business School, 2025</div>
+      <div class="proj">
+        <button aria-expanded="false"><span class="pm"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 1v10M1 6h10"/></svg></span><span data-fr="Mémoire de recherche" data-en="Research thesis">Mémoire de recherche</span><span class="badge">15/20</span></button>
+        <div class="detail"><div><p data-fr="Comment les valeurs personnelles et les initiatives éthiques influencent la volonté de récompenser ou de sanctionner les marques de mode (Europe et Afrique). 166 répondants, régression multiple et ANOVA à deux facteurs. <a href='portfolio.html#research'>Voir le mémoire</a>" data-en="How personal values and ethical initiatives shape willingness to reward or punish fashion brands (Europe and Africa). 166 respondents, multiple regression and two-way ANOVA. <a href='portfolio.html#research'>See the thesis</a>">Comment les valeurs personnelles et les initiatives éthiques influencent la volonté de récompenser ou de sanctionner les marques de mode (Europe et Afrique). 166 répondants, régression multiple et ANOVA à deux facteurs. <a href='portfolio.html#research'>Voir le mémoire</a></p></div></div>
+      </div>
+      <div class="proj">
+        <button aria-expanded="false"><span class="pm"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 1v10M1 6h10"/></svg></span><span data-fr="Cas Tupperware France" data-en="Tupperware France case">Cas Tupperware France</span><span class="badge" data-fr="1ère place !" data-en="1st place!">1ère place !</span></button>
+        <div class="detail"><div><p data-fr="Comment rajeunir la marque auprès des millennials ? 12 entretiens semi-directifs et recommandations présentées au directeur général de Tupperware France. Meilleure note de la promotion (16,35/20) et prix sponsorisé par Tupperware." data-en="How to make the brand relevant to millennials? 12 semi-structured interviews and recommendations presented to Tupperware France's General Manager. Top grade of the class (16.35/20) and a Tupperware-sponsored prize.">Comment rajeunir la marque auprès des millennials ? 12 entretiens semi-directifs et recommandations présentées au directeur général de Tupperware France. Meilleure note de la promotion (16,35/20) et prix sponsorisé par Tupperware.</p></div></div>
+      </div>
+    </div>
+    <div class="side-schools reveal" style="--d:.1s">
+      <div><b data-fr="Année d'échange, UFR Langues et Civilisations" data-en="Exchange year, Languages and Civilizations">Année d'échange, UFR Langues et Civilisations</b><span>Université Paris-Est Marne-la-Vallée</span></div>
+      <div><b data-fr="Licence en Sciences de l'Éducation" data-en="Bachelor of Education">Licence en Sciences de l'Éducation</b><span data-fr="Université nationale d'éducation de Taipei" data-en="National Taipei University of Education">Université nationale d'éducation de Taipei</span></div>
+    </div>
+  </div>
 
-    <section class="section reveal" id="contact">
-        <div class="section-header">
-            <span class="section-number">10</span>
-            <h2 class="section-title" data-fr="Me contacter" data-en="Get in Touch">Me contacter</h2>
-            <div class="section-line"></div>
-        </div>
-        <div class="contact-section">
-            <h3 data-fr="N'hésitez pas à me contacter !" data-en="Feel free to reach out!">N'hésitez pas à me contacter !</h3>
-            <p class="contact-subtitle" data-fr="Je serais ravie d'échanger avec vous. Laissez-moi un message et je vous répondrai dès que possible." data-en="I'd love to hear from you. Leave me a message and I'll get back to you as soon as possible.">Je serais ravie d'échanger avec vous. Laissez-moi un message et je vous répondrai dès que possible.</p>
-            <form id="contact-form" action="https://formsubmit.co/c.hsuann@gmail.com" method="POST">
-                <input type="hidden" name="_subject" value="Nouveau message depuis votre CV en ligne">
-                <input type="hidden" name="_next" value="https://jochiu.github.io/CV_FR.EN?sent=true">
-                <input type="hidden" name="_autoresponse" value="Bonjour et merci pour votre message ! Je l'ai bien reçu et je vous répondrai dès que possible. Yi-Hsuan Chiu (c.hsuann@gmail.com / 06 35 71 32 64 / CV: https://jochiu.github.io/CV_FR.EN )">
-                <input type="hidden" name="_template" value="table">
-                <input type="text" name="_honey" style="display:none">
-                <div class="form-group">
-                    <label data-fr="Nom" data-en="Name">Nom</label>
-                    <input type="text" name="name" required>
-                </div>
-                <div class="form-group">
-                    <label>Email</label>
-                    <input type="email" name="email" required>
-                </div>
-                <div class="form-group">
-                    <label><span data-fr="Téléphone" data-en="Phone">Téléphone</span> <span class="optional" data-fr="(optionnel)" data-en="(optional)">(optionnel)</span></label>
-                    <input type="tel" name="phone">
-                </div>
-                <div class="form-group">
-                    <label>Message <span class="optional" data-fr="(optionnel)" data-en="(optional)">(optionnel)</span></label>
-                    <textarea name="message" rows="3"></textarea>
-                </div>
-                <button type="submit" class="form-submit">
-                    <svg viewBox="0 0 20 20" fill="currentColor" stroke="none"><path d="M10 17.5s-7.5-4.5-7.5-9a4 4 0 017.5-1.5A4 4 0 0117.5 8.5c0 4.5-7.5 9-7.5 9z"/></svg>
-                    <span data-fr="Envoyer" data-en="Send">Envoyer</span>
-                </button>
-            </form>
-        </div>
-    </section>
+</section>
+
+<section id="beyond">
+  <h2 class="h2 reveal" data-fr="En dehors du bureau" data-en="Beyond the office">En dehors du bureau</h2>
+  <div class="beyond">
+    <div class="reveal">
+      <h3 data-fr="Ambassadrice internationale" data-en="International ambassador">Ambassadrice internationale</h3>
+      <div class="when">EM Strasbourg, 2022 - 2024</div>
+      <ul>
+        <li data-fr="Accueil des étudiants internationaux : visa, logement, vie en France" data-en="Welcomed international students: visa, housing, life in France">Accueil des étudiants internationaux : visa, logement, vie en France</li>
+        <li data-fr="Salon EEFT Taiwan 2024 : présentation des programmes et suivi des candidats, avec des candidatures converties en inscriptions" data-en="EEFT Taiwan 2024 fair: programme presentations and candidate follow-up, with applications converted into enrolments">Salon EEFT Taiwan 2024 : présentation des programmes et suivi des candidats, avec des candidatures converties en inscriptions</li>
+        <li data-fr="Vidéos de promotion des programmes d'échange" data-en="Promotional videos for exchange programmes">Vidéos de promotion des programmes d'échange</li>
+      </ul>
+      <div class="polaroids">
+        <div class="pol"><img src="Integration%20team.jpeg" alt="Integration team" loading="lazy"></div>
+        <div class="pol"><img src="Team%20building.jpeg" alt="Team building" loading="lazy"></div>
+        <div class="pol"><img src="European%20Education%20Fair%20Taiwan_1.jpeg" alt="EEFT Taiwan" loading="lazy"></div>
+        <div class="pol"><img src="European%20Education%20Fair%20Taiwan_2.jpeg" alt="EEFT Taiwan" loading="lazy"></div>
+      </div>
+    </div>
+    <div class="reveal" style="--d:.1s">
+      <div class="creator">
+        <svg class="spark" viewBox="0 0 24 24" fill="var(--coral)" stroke="var(--ink)" stroke-width="1.2"><use href="#i-spark"/></svg>
+        <h3 data-fr="Ma vie en France, en vidéos" data-en="My life in France, on video">Ma vie en France, en vidéos</h3>
+        <div class="when" data-fr="YouTube, Threads, Instagram, blog, stickers LINE" data-en="YouTube, Threads, Instagram, blog, LINE stickers">YouTube, Threads, Instagram, blog, stickers LINE</div>
+        <p data-fr="Je raconte mes voyages et mon quotidien en mandarin, en changeant de style à chaque fois : montage, sous-titres, voix off, effets. Mes posts Threads ont cumulé <span class='hl'>245 K vues en 3 mois</span>, mon blog <span class='hl b'>22 933 vues</span> grâce au SEO, et ma vidéo la plus vue <span class='hl g'>9,7 k vues</span>." data-en="I share my travels and daily life in Mandarin, trying a new style each time: editing, subtitles, voiceover, effects. My Threads posts reached <span class='hl'>245K views in 3 months</span>, my blog <span class='hl b'>22,933 views</span> through SEO, and my top video <span class='hl g'>9.7k views</span>.">Je raconte mes voyages et mon quotidien en mandarin, en changeant de style à chaque fois : montage, sous-titres, voix off, effets. Mes posts Threads ont cumulé <span class='hl'>245 K vues en 3 mois</span>, mon blog <span class='hl b'>22 933 vues</span> grâce au SEO, et ma vidéo la plus vue <span class='hl g'>9,7 k vues</span>.</p>
+        <div class="pill-links"><a href="https://www.youtube.com/@josdiary_france" target="_blank" rel="noopener">YouTube</a><a href="https://www.instagram.com/jo.lifeinfrance/" target="_blank" rel="noopener">Instagram</a><a href="https://yhchiuportfolio.wordpress.com/" target="_blank" rel="noopener">WordPress</a><a href="portfolio.html#creator">Creator Lab</a></div>
+      </div>
+      <div class="small-notes">
+        <div><h3 style="font-size:1.3rem" data-fr="Bénévolat" data-en="Volunteering">Bénévolat</h3><p data-fr="Faith for Animals (2020), coordination de campagnes de stérilisation canine" data-en="Faith for Animals (2020), coordinated dog sterilisation campaigns">Faith for Animals (2020), coordination de campagnes de stérilisation canine</p></div>
+        <div><h3 style="font-size:1.3rem" data-fr="Musique" data-en="Music">Musique</h3><p data-fr="Piano pendant 8 ans, clarinette pendant 10 ans" data-en="Piano for 8 years, clarinet for 10 years">Piano pendant 8 ans, clarinette pendant 10 ans</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="contact">
+    <div class="reveal">
+      <div class="big" data-fr="On se <em>rencontre</em> ?" data-en="Shall we <em>meet</em>?">On se <em>rencontre</em> ?</div>
+      <p data-fr="Je cherche un poste en marketing opérationnel, analytics, gestion de projet ou customer success, partout en France. Écrivez-moi, je réponds vite." data-en="I'm looking for a role in marketing operations, analytics, project management or customer success, anywhere in France. Write to me, I reply quickly.">Je cherche un poste en marketing opérationnel, analytics, gestion de projet ou customer success, partout en France. Écrivez-moi, je réponds vite.</p>
+      <div class="contacts"><a href="mailto:c.hsuann@gmail.com">c.hsuann@gmail.com</a><a href="tel:+33635713264">+33 6 35 71 32 64</a></div>
+      <svg class="heart" viewBox="0 0 24 24" style="filter:url(#rough)"><path d="M12 20C5 15 2 11 4 7 6 3.5 10 4 12 8 14 4 18 3.5 20 7 22 11 19 15 12 20Z" fill="var(--coral)" opacity=".8"/><path d="M12 20C5 15 2 11 4 7 6 3.5 10 4 12 8 14 4 18 3.5 20 7 22 11 19 15 12 20Z" fill="none" stroke="var(--ink)" stroke-width="1.2"/></svg>
+    </div>
+    <form class="reveal" style="--d:.1s" id="contact-form" action="https://formsubmit.co/c.hsuann@gmail.com" method="POST">
+      <input type="hidden" name="_subject" value="Nouveau message depuis votre CV en ligne">
+      <input type="hidden" name="_next" value="https://jochiu.github.io/CV_FR.EN?sent=true">
+      <input type="hidden" name="_autoresponse" value="Bonjour et merci pour votre message ! Je l'ai bien reçu et je vous répondrai dès que possible. Yi-Hsuan Chiu (c.hsuann@gmail.com / 06 35 71 32 64 / CV: https://jochiu.github.io/CV_FR.EN )">
+      <input type="hidden" name="_template" value="table">
+      <input type="text" name="_honey" style="display:none">
+      <div class="fg"><label for="f-name" data-fr="Nom" data-en="Name">Nom</label><input id="f-name" type="text" name="name" required></div>
+      <div class="fg"><label for="f-mail">Email</label><input id="f-mail" type="email" name="email" required></div>
+      <div class="fg"><label for="f-tel" data-fr="Téléphone <span>(optionnel)</span>" data-en="Phone <span>(optional)</span>">Téléphone <span>(optionnel)</span></label><input id="f-tel" type="tel" name="phone"></div>
+      <div class="fg"><label for="f-msg" data-fr="Message <span>(optionnel)</span>" data-en="Message <span>(optional)</span>">Message <span>(optionnel)</span></label><textarea id="f-msg" name="message"></textarea></div>
+      <button type="submit" class="btn" data-fr="Envoyer le message" data-en="Send message">Envoyer le message</button>
+    </form>
+  </div>
+</section>
 
 </main>
 
-<button class="back-to-top" id="backToTop" aria-label="Back to top" onclick="window.scrollTo({top:0,behavior:'smooth'})">
-    <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 16V4M4 10l6-6 6 6"/></svg>
-    <span data-fr="Retour en haut" data-en="Back to top">Retour en haut</span>
-</button>
+<footer data-fr="fait avec soin, 2026" data-en="made with care, 2026">fait avec soin, 2026</footer>
 
-<footer>
-    <p>© 2026 Yi-Hsuan Chiu</p>
-</footer>
+<button class="to-top" id="toTop" aria-label="Haut de page" onclick="window.scrollTo({top:0,behavior:'smooth'})"><svg viewBox="0 0 24 24" fill="none" stroke="var(--ink)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19C11 14 12.5 9 12 5M7 10C9 8 10.5 6 12 5 13.5 6 15 8 17 10"/></svg></button>
 
-<div class="success-overlay" id="successOverlay">
-    <div class="success-box">
-        <div class="check">✓</div>
-        <h3 data-fr="Message envoyé !" data-en="Message sent!">Message envoyé !</h3>
-        <p data-fr="Merci pour votre message ! Je vous répondrai dès que possible. Un email de confirmation a été envoyé à votre adresse." data-en="Thank you for your message! I'll get back to you as soon as possible. A confirmation email has been sent to your address.">Merci pour votre message ! Je vous répondrai dès que possible. Un email de confirmation a été envoyé à votre adresse.</p>
-        <button onclick="document.getElementById('successOverlay').classList.remove('active');history.replaceState(null,'',location.pathname)">OK</button>
-    </div>
-</div>
-
-<div class="lightbox" id="lightbox" onclick="closeLightbox()">
-    <button class="lightbox-close" onclick="closeLightbox()">&times;</button>
-    <img id="lightbox-img" src="" alt="">
-</div>
+<div class="overlay" id="successOverlay"><div class="okbox">
+  <h3 data-fr="Merci !" data-en="Thank you!">Merci !</h3>
+  <p data-fr="Votre message est bien arrivé, je vous réponds très vite. Un email de confirmation vous a été envoyé." data-en="Your message arrived safely, I'll reply very soon. A confirmation email has been sent to you.">Votre message est bien arrivé, je vous réponds très vite. Un email de confirmation vous a été envoyé.</p>
+  <button class="btn" onclick="document.getElementById('successOverlay').classList.remove('active');history.replaceState(null,'',location.pathname)">OK</button>
+</div></div>
+<div class="lightbox" id="lightbox"><img id="lightbox-img" src="" alt=""></div>
 
 <script>
-    function openLightbox(src, alt) {
-        const lb = document.getElementById('lightbox');
-        const img = document.getElementById('lightbox-img');
-        img.src = src;
-        img.alt = alt || '';
-        lb.classList.add('active');
-        document.body.style.overflow = 'hidden';
-    }
-    function closeLightbox() {
-        document.getElementById('lightbox').classList.remove('active');
-        document.body.style.overflow = '';
-    }
-    document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(); });
+var LANG = 'fr';
+var QA = function (s, r) { return Array.prototype.slice.call((r || document).querySelectorAll(s)); };
+var RM = matchMedia('(prefers-reduced-motion: reduce)').matches;
+var FINE = matchMedia('(pointer: fine)').matches;
 
-    document.querySelectorAll('.exp-photos img, .ambassador-photos img').forEach(img => {
-        img.style.cursor = 'zoom-in';
-        img.addEventListener('click', () => openLightbox(img.src, img.alt));
-    });
+/* image fallbacks */
+QA('img').forEach(function (img) {
+  function fail() {
+    if (img.id === 'photo') { var d = document.createElement('div'); d.className = 'photo-fb'; d.textContent = 'Yi-Hsuan'; img.replaceWith(d); return; }
+    if (img.closest('.co')) { img.remove(); return; }
+    var p = document.createElement('div'); p.className = 'ph'; img.replaceWith(p);
+  }
+  if (img.complete && img.naturalWidth === 0) fail(); else img.addEventListener('error', fail);
+});
 
-    function setLang(lang) {
-        document.documentElement.lang = lang;
-        document.getElementById('btn-fr').classList.toggle('active', lang === 'fr');
-        document.getElementById('btn-en').classList.toggle('active', lang === 'en');
-        document.querySelectorAll('[data-fr][data-en]').forEach(el => {
-            el.textContent = el.getAttribute('data-' + lang);
-        });
-        try { localStorage.setItem('cv-lang', lang); } catch(e) {}
-    }
+/* rotating phrase */
+var PHRASES = {
+  fr: ['construire à partir de zéro.', 'transformer la data en décisions.', 'relier l\u2019Europe et l\u2019Asie.', 'prendre soin de ses clients.'],
+  en: ['building things from scratch.', 'turning data into decisions.', 'connecting Europe and Asia.', 'taking care of her clients.']
+}, pi = 0, rot = document.getElementById('rot');
+if (!RM) setInterval(function () {
+  rot.classList.add('out');
+  setTimeout(function () { pi = (pi + 1) % PHRASES.fr.length; rot.textContent = PHRASES[LANG][pi]; rot.classList.remove('out'); }, 350);
+}, 3000);
 
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
-    }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
-    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+/* doodle parallax */
+if (FINE && !RM) {
+  var stage = document.getElementById('stage'), dds = QA('.dd');
+  stage.addEventListener('pointermove', function (e) {
+    var r = stage.getBoundingClientRect(), x = (e.clientX - r.left) / r.width - .5, y = (e.clientY - r.top) / r.height - .5;
+    dds.forEach(function (d) { var k = +d.dataset.depth; d.style.transform = 'translate(' + (x * k) + 'px,' + (y * k) + 'px)'; });
+  });
+  stage.addEventListener('pointerleave', function () { dds.forEach(function (d) { d.style.transform = ''; }); });
+}
 
-    const barObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.querySelectorAll('.lang-bar-fill').forEach(bar => {
-                    bar.style.width = bar.getAttribute('data-width') + '%';
-                });
-            }
-        });
-    }, { threshold: 0.3 });
-    document.querySelectorAll('#languages').forEach(el => barObserver.observe(el));
+/* accordion */
+function label(job) {
+  var o = job.classList.contains('open'), t = job.querySelector('.tl');
+  if (t) t.textContent = o ? (LANG === 'fr' ? 'Masquer le détail' : 'Hide details') : (LANG === 'fr' ? 'Voir le détail' : 'See details');
+}
+function syncAll() {
+  var all = QA('.job').every(function (j) { return j.classList.contains('open'); });
+  document.getElementById('toggleAll').textContent = all ? (LANG === 'fr' ? 'tout fermer' : 'close all') : (LANG === 'fr' ? 'tout ouvrir' : 'open all');
+  QA('.job').forEach(label);
+}
+function setOpen(job, open) { job.classList.toggle('open', open); job.querySelector('.toggle').setAttribute('aria-expanded', open); if (open) job.classList.add('on'); syncAll(); }
+QA('.job').forEach(function (j) { j.querySelector('.toggle').addEventListener('click', function () { setOpen(j, !j.classList.contains('open')); }); });
+document.getElementById('toggleAll').addEventListener('click', function () {
+  var all = QA('.job').every(function (j) { return j.classList.contains('open'); });
+  QA('.job').forEach(function (j) { setOpen(j, !all); });
+});
+QA('.proj').forEach(function (p) { var b = p.querySelector('button'); b.addEventListener('click', function () { var o = !p.classList.contains('open'); p.classList.toggle('open', o); b.setAttribute('aria-expanded', o); }); });
 
-    window.addEventListener('scroll', () => {
-        document.getElementById('topbar').classList.toggle('scrolled', window.scrollY > 10);
-        const btn = document.getElementById('backToTop');
-        if (btn) btn.classList.toggle('visible', window.scrollY > 400);
+/* reveal + hand-drawn highlights */
+var io = new IntersectionObserver(function (es) {
+  es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('in', 'on'); io.unobserve(e.target); } });
+}, { threshold: .15, rootMargin: '0px 0px -40px 0px' });
+QA('.reveal').forEach(function (el) { io.observe(el); });
+var hio = new IntersectionObserver(function (es) {
+  es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('on'); hio.unobserve(e.target); } });
+}, { threshold: .8 });
+function watchHl() { QA('.hl, .hl-zone').forEach(function (el) { if (!el.classList.contains('on')) hio.observe(el); }); }
+watchHl();
 
-        const sideNav = document.getElementById('sideNav');
-        if (sideNav) sideNav.classList.toggle('visible', window.scrollY > 300);
+/* language */
+function setLang(l) {
+  LANG = l;
+  document.documentElement.lang = l;
+  document.getElementById('btn-fr').classList.toggle('active', l === 'fr');
+  document.getElementById('btn-en').classList.toggle('active', l === 'en');
+  QA('[data-fr][data-en]').forEach(function (el) { el.innerHTML = el.getAttribute('data-' + l); });
+  rot.textContent = PHRASES[l][pi];
+  QA('.hl').forEach(function (h) { if (h.closest('.on') || h.closest('.in')) h.classList.add('on'); });
+  syncAll(); watchHl();
+  try { localStorage.setItem('cv-lang', l); } catch (e) {}
+}
 
-        const sections = document.querySelectorAll('.section[id]');
-        const sideLinks = document.querySelectorAll('.side-nav a');
-        let current = '';
-        sections.forEach(s => {
-            const top = s.offsetTop - 100;
-            if (window.scrollY >= top) current = s.id;
-        });
-        sideLinks.forEach(a => {
-            a.classList.toggle('active', a.getAttribute('href') === '#' + current);
-        });
-    }, { passive: true });
+/* lightbox */
+QA('.pics img, .pol img').forEach(function (img) {
+  img.addEventListener('click', function () { document.getElementById('lightbox-img').src = img.src; document.getElementById('lightbox').classList.add('active'); });
+});
+document.getElementById('lightbox').addEventListener('click', function () { this.classList.remove('active'); });
+document.addEventListener('keydown', function (e) { if (e.key === 'Escape') document.getElementById('lightbox').classList.remove('active'); });
 
-    document.querySelectorAll('.nav-links a[href^="#"], .side-nav a[href^="#"], .reco-link[href^="#"]').forEach(a => {
-        a.addEventListener('click', e => {
-            e.preventDefault();
-            const target = document.querySelector(a.getAttribute('href'));
-            if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        });
-    });
+/* scroll state */
+function onScroll() {
+  var y = window.scrollY;
+  document.getElementById('nav').classList.toggle('scrolled', y > 10);
+  document.getElementById('toTop').classList.toggle('show', y > 500);
+  var cur = '';
+  ['about', 'recommendations', 'experience', 'skills', 'education', 'beyond', 'contact'].forEach(function (id) { var s = document.getElementById(id); if (y >= s.offsetTop - 160) cur = id; });
+  if (cur === 'beyond' || cur === 'education') cur = 'skills';
+  QA('.nl[data-sec]').forEach(function (a) { a.classList.toggle('active', a.dataset.sec === cur); });
+}
+window.addEventListener('scroll', onScroll, { passive: true });
 
-    document.addEventListener('DOMContentLoaded', () => {
-        let saved = null;
-        try { saved = localStorage.getItem('cv-lang'); } catch(e) {}
-        if (saved) setLang(saved);
-
-        if (new URLSearchParams(window.location.search).get('sent') === 'true') {
-            document.getElementById('successOverlay').classList.add('active');
-        }
-    });
+document.addEventListener('DOMContentLoaded', function () {
+  var s = null; try { s = localStorage.getItem('cv-lang'); } catch (e) {}
+  setLang(s || 'fr'); onScroll();
+  if (new URLSearchParams(location.search).get('sent') === 'true') document.getElementById('successOverlay').classList.add('active');
+});
 </script>
-
 <!-- Start of HubSpot Embed Code -->
 <script type="text/javascript" id="hs-script-loader" async defer src="//js-eu1.hs-scripts.com/148257116.js"></script>
 <!-- End of HubSpot Embed Code -->
-
 </body>
 </html>
