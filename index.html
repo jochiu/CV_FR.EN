@@ -383,6 +383,23 @@ footer{font-size:1.35rem}
 @media(max-width:520px){.cols{grid-template-columns:1fr}.polaroids .pol{width:96px}}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}.stroke{stroke-dashoffset:0}.fillin{opacity:1}.reveal{opacity:1;transform:none}.hl::after{clip-path:none}.circ path{stroke-dashoffset:0}html{scroll-behavior:auto}}
 @media print{.nav,.doodles,.ground,.to-top,.toggle,.all,form,.hero-cta .btn{display:none!important}.detail{grid-template-rows:1fr!important}.detail-in{opacity:1!important;transform:none!important}.reveal{opacity:1;transform:none}.stage{height:auto;min-height:0;padding:1rem 0}.hero-copy{position:static;transform:none}}
+
+/* music button with play icon */
+.picon{width:24px;height:24px;border-radius:50%;background:var(--sage);color:#fff;display:grid;place-items:center;flex-shrink:0;transition:background .25s,transform .25s}
+.picon svg{width:13px;height:13px}
+.ic-pause{display:none}
+[aria-pressed="true"] .ic-play{display:none}
+[aria-pressed="true"] .ic-pause{display:block}
+.mnote{width:15px;height:15px;color:var(--sage);opacity:.7;transition:transform .4s cubic-bezier(.3,1.6,.5,1)}
+button:hover .mnote{transform:rotate(-12deg) translateY(-2px)}
+button:hover .picon{transform:scale(1.08)}
+[aria-pressed="false"] .picon{animation:mping 3.4s ease-out infinite}
+[aria-pressed="true"] .picon{background:var(--coral)}
+[aria-pressed="true"] .mnote{color:var(--coral);animation:mfloat 1.9s ease-in-out infinite}
+@keyframes mping{0%{box-shadow:0 0 0 0 rgba(110,139,116,.55)}70%,100%{box-shadow:0 0 0 9px rgba(110,139,116,0)}}
+@keyframes mfloat{50%{transform:translateY(-3px) rotate(8deg)}}
+.credit{display:block;font-family:var(--sans);font-size:.8rem;color:var(--faint);margin-top:.5rem}
+.credit a{color:inherit;text-decoration:underline}
 </style>
 </head>
 <body>
@@ -406,7 +423,7 @@ footer{font-size:1.35rem}
       <a class="nl" href="#skills" data-sec="skills" data-fr="Compétences" data-en="Skills">Compétences</a>
       <a class="nl" href="portfolio.html">Portfolio</a>
       <a class="nl" href="#contact" data-sec="contact">Contact</a>
-      <button class="music-btn" id="music" aria-pressed="false" title="Musique"><span class="eq" aria-hidden="true"><i></i><i></i><i></i><i></i></span><span class="ml" id="music-label">Musique</span></button>
+      <button class="music-btn" id="music" aria-pressed="false" title="Musique"><span class="picon" aria-hidden="true"><svg class="ic-play" viewBox="0 0 24 24" fill="currentColor"><path d="M9 6.8v10.4L17 12z"/></svg><svg class="ic-pause" viewBox="0 0 24 24" fill="currentColor"><path d="M8.6 6.6h2.4v10.8H8.6zM13 6.6h2.4v10.8H13z"/></svg></span><svg class="mnote" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20 3.5 9 6v9.4a3.4 3.4 0 10 1.6 2.9V8.6l7.8-1.8v6.1a3.4 3.4 0 101.6 2.9z"/></svg><span class="ml" id="music-label">Musique</span></button>
       <div class="lang"><button id="btn-fr" class="active" onclick="setLang('fr')">FR</button><button id="btn-en" onclick="setLang('en')">EN</button></div>
       <button class="burger" id="burger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
     </div>
@@ -784,7 +801,10 @@ footer{font-size:1.35rem}
 
 </main>
 
-<footer data-fr="fait avec soin, 2026" data-en="made with care, 2026">fait avec soin, 2026</footer>
+<footer>
+  <span data-fr="fait avec soin, 2026" data-en="made with care, 2026">fait avec soin, 2026</span>
+  <span class="credit" data-fr="Musique : Oneul, « New Day » &lt;a href=&quot;https://www.youtube.com/watch?v=Qfm1y8KOo5g&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;YouTube&lt;/a&gt;" data-en="Music: Oneul, "New Day" &lt;a href=&quot;https://www.youtube.com/watch?v=Qfm1y8KOo5g&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;YouTube&lt;/a&gt;">Musique : Oneul, « New Day » <a href="https://www.youtube.com/watch?v=Qfm1y8KOo5g" target="_blank" rel="noopener">YouTube</a></span>
+</footer>
 
 <button class="to-top" id="toTop" aria-label="Haut de page" onclick="window.scrollTo({top:0,behavior:'smooth'})"><svg viewBox="0 0 24 24" fill="none" stroke="var(--ink)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19C11 14 12.5 9 12 5M7 10C9 8 10.5 6 12 5 13.5 6 15 8 17 10"/></svg></button>
 
@@ -793,8 +813,6 @@ footer{font-size:1.35rem}
   <p data-fr="Votre message est bien arrivé, je vous réponds très vite. Un email de confirmation vous a été envoyé." data-en="Your message arrived safely, I'll reply very soon. A confirmation email has been sent to you.">Votre message est bien arrivé, je vous réponds très vite. Un email de confirmation vous a été envoyé.</p>
   <button class="btn" onclick="document.getElementById('successOverlay').classList.remove('active');history.replaceState(null,'',location.pathname)">OK</button>
 </div></div>
-<div class="spotify" id="spotify" hidden>
-  <div id="spotify-embed"></div>
 </div>
 <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Photo"><button class="lb-close" aria-label="Fermer">×</button><img id="lightbox-img" src="" alt=""><p class="lb-cap" id="lb-cap"></p></div>
 
@@ -877,36 +895,127 @@ function setLang(l) {
   try { localStorage.setItem('cv-lang', l); } catch (e) {}
 }
 
-/* Spotify player, starts on the visitor's first interaction */
-var SpotifyPlayer = (function () {
-  var ctrl = null, wanted = false, started = false, btn = document.getElementById('music'), box = document.getElementById('spotify');
-  function show(on) {
-    if (on) { box.hidden = false; requestAnimationFrame(function () { box.classList.add('show'); }); }
-    else { box.classList.remove('show'); setTimeout(function () { box.hidden = true; }, 320); }
-    if (btn) btn.setAttribute('aria-pressed', on);
+/* background music: plays music.mp3 if it is there, otherwise a generated soft loop */
+var Ambient = (function () {
+  var btn = document.getElementById('music');
+  var VOLUME = 0.18;            /* file volume, 0 to 1 */
+  var started = false, fading;
+
+  /* --- the audio file --- */
+  var audio = new Audio('music.mp3');
+  audio.loop = true; audio.preload = 'auto'; audio.volume = 0;
+  var fileOk = true;
+  audio.addEventListener('error', function () { fileOk = false; });
+  function fade(to, ms) {
+    clearInterval(fading);
+    var from = audio.volume, t0 = performance.now();
+    fading = setInterval(function () {
+      var k = Math.min((performance.now() - t0) / ms, 1);
+      audio.volume = from + (to - from) * k;
+      if (k === 1) { clearInterval(fading); if (to === 0) audio.pause(); }
+    }, 60);
   }
-  window.onSpotifyIframeApiReady = function (API) {
-    API.createController(document.getElementById('spotify-embed'),
-      { uri: 'spotify:track:5dxiriLgC9mu2FbSNqudld', width: '100%', height: 152 },
-      function (c) { ctrl = c; if (wanted) { ctrl.play(); show(true); } });
-  };
-  function play() { wanted = true; started = true; show(true); if (ctrl) ctrl.play(); }
-  function stop() { wanted = false; show(false); if (ctrl) ctrl.pause(); }
-  /* first tap or click anywhere starts the music, once */
+
+  /* --- fallback: soft generated loop, only used if music.mp3 is missing --- */
+  var Synth = (function () {
+    var ctx, master, delay, verb, timer, on = false, bar = 0, next = 0;
+    var prog = [
+      { bass: 41, pad: [53, 57, 60, 64], arp: [60, 64, 69, 72] },
+      { bass: 36, pad: [52, 55, 60, 67], arp: [60, 67, 72, 76] },
+      { bass: 33, pad: [52, 57, 60, 64], arp: [57, 64, 69, 72] },
+      { bass: 38, pad: [50, 54, 57, 62], arp: [62, 66, 69, 74] }
+    ];
+    function hz(n) { return 440 * Math.pow(2, (n - 69) / 12); }
+    function init() {
+      ctx = new (window.AudioContext || window.webkitAudioContext)();
+      master = ctx.createGain(); master.gain.value = 0;
+      delay = ctx.createDelay(1); delay.delayTime.value = .5;
+      var fb = ctx.createGain(); fb.gain.value = .16;
+      var dl = ctx.createBiquadFilter(); dl.type = 'lowpass'; dl.frequency.value = 1500;
+      delay.connect(fb); fb.connect(delay); delay.connect(dl);
+      verb = ctx.createConvolver();
+      var len = Math.floor(ctx.sampleRate * 2.6), buf = ctx.createBuffer(2, len, ctx.sampleRate);
+      for (var c = 0; c < 2; c++) {
+        var d = buf.getChannelData(c);
+        for (var i = 0; i < len; i++) d[i] = (Math.random() * 2 - 1) * Math.pow(1 - i / len, 2.8);
+      }
+      verb.buffer = buf;
+      var wet = ctx.createGain(); wet.gain.value = .18;
+      var soft = ctx.createBiquadFilter(); soft.type = 'lowpass'; soft.frequency.value = 1400;
+      var breeze = ctx.createOscillator(), depth = ctx.createGain();
+      breeze.frequency.value = .045; depth.gain.value = 420;
+      breeze.connect(depth); depth.connect(soft.frequency); breeze.start();
+      master.connect(soft); soft.connect(ctx.destination);
+      var echoOut = ctx.createGain(); echoOut.gain.value = .22;
+      dl.connect(echoOut); echoOut.connect(soft);
+      master.connect(verb); verb.connect(wet); wet.connect(ctx.destination);
+    }
+    function voice(n, t, vel, dur, type, toDelay, attack) {
+      [-5, 5].forEach(function (det) {
+        var o = ctx.createOscillator(), g = ctx.createGain();
+        o.type = type; o.frequency.value = hz(n); o.detune.value = det;
+        g.gain.setValueAtTime(0, t);
+        g.gain.linearRampToValueAtTime(vel, t + (attack || .02));
+        g.gain.exponentialRampToValueAtTime(.0001, t + dur);
+        o.connect(g); g.connect(master);
+        if (toDelay) g.connect(delay);
+        o.start(t); o.stop(t + dur + .1);
+      });
+    }
+    function playBar(t) {
+      var p = prog[bar % prog.length], beat = .84;
+      voice(p.bass, t, .05, 4.2, 'sine', false, .6);
+      p.pad.forEach(function (n, i) { voice(n, t + i * .12, .045, 5, 'triangle', false, 1.6); });
+      for (var i = 0; i < 8; i++) voice(p.arp[i % p.arp.length], t + i * beat * .5, .055, 2, 'sine', true, .09);
+      if (Math.random() < .5) voice(p.arp[3] + 5, t + beat * (1 + Math.random() * 2), .045, 3.2, 'sine', true, .35);
+      bar++; return beat * 4;
+    }
+    function tick() { while (next < ctx.currentTime + 1.2) next += playBar(next); }
+    return {
+      play: function () {
+        if (!ctx) init();
+        on = true; ctx.resume(); next = ctx.currentTime + .3;
+        master.gain.cancelScheduledValues(ctx.currentTime);
+        master.gain.linearRampToValueAtTime(.2, ctx.currentTime + 4);
+        clearInterval(timer); timer = setInterval(tick, 200); tick();
+      },
+      stop: function () {
+        on = false;
+        if (!ctx) return;
+        master.gain.cancelScheduledValues(ctx.currentTime);
+        master.gain.linearRampToValueAtTime(0, ctx.currentTime + 1.2);
+        clearInterval(timer);
+        setTimeout(function () { if (!on) ctx.suspend(); }, 1400);
+      }
+    };
+  })();
+
+  function play() {
+    started = true;
+    if (btn) btn.setAttribute('aria-pressed', 'true');
+    if (fileOk) {
+      var p = audio.play();
+      if (p && p.catch) p.catch(function () { fileOk = false; Synth.play(); });
+      fade(VOLUME, 2500);
+    } else { Synth.play(); }
+  }
+  function stop() {
+    if (btn) btn.setAttribute('aria-pressed', 'false');
+    if (fileOk) fade(0, 900); else Synth.stop();
+  }
   function first(e) {
     if (btn && e.target.closest && e.target.closest('#music')) return;
     if (!started) play();
-    remove();
-  }
-  function remove() {
     document.removeEventListener('pointerdown', first, true);
     document.removeEventListener('keydown', first, true);
   }
   document.addEventListener('pointerdown', first, true);
   document.addEventListener('keydown', first, true);
   if (btn) btn.addEventListener('click', function () {
+    started = true;
     if (btn.getAttribute('aria-pressed') === 'true') stop(); else play();
-    remove();
+    document.removeEventListener('pointerdown', first, true);
+    document.removeEventListener('keydown', first, true);
   });
   return { play: play, stop: stop };
 })();
@@ -954,7 +1063,6 @@ document.addEventListener('DOMContentLoaded', function () {
   if (new URLSearchParams(location.search).get('sent') === 'true') document.getElementById('successOverlay').classList.add('active');
 });
 </script>
-<script src="https://open.spotify.com/embed/iframe-api/v1" async></script>
 <!-- Start of HubSpot Embed Code -->
 <script type="text/javascript" id="hs-script-loader" async defer src="//js-eu1.hs-scripts.com/148257116.js"></script>
 <!-- End of HubSpot Embed Code -->
