@@ -306,10 +306,13 @@ footer{font-size:1.35rem}
 .photo-card .tag-note{font-size:1.15rem!important;left:-38px;bottom:14px}
 .photo-card .spark{width:30px;height:30px;right:14%;top:-12px}
 .photo-card .contacts{justify-content:center;text-align:center}
-.reco-sec .recos{max-width:864px}
+.reco-sec .recos{max-width:none;grid-template-columns:repeat(3,1fr)}
+.reco:nth-child(3){background:#FBF4E1;transform:rotate(-.4deg)}
+.reco:nth-child(3):hover{transform:rotate(0) translateY(-3px)}
+@media(max-width:1000px){.reco-sec .recos{grid-template-columns:1fr}}
 .reco{padding:1.6rem 1.6rem 1.3rem}
 .reco .q{font-size:3.6rem;height:1.3rem}
-.reco p{font-size:1.15rem!important}
+.reco p{font-size:1.08rem!important}
 .reco .who{font-size:.95rem!important;margin-top:.8rem}
 .reco .who span{font-size:.88rem!important}
 .reco a{font-size:.9rem!important}
@@ -541,20 +544,26 @@ button:hover .picon{transform:scale(1.08)}
 
 <section id="recommendations" class="reco-sec">
   <h2 class="h2 reveal"><span data-fr="Ils me recommandent" data-en="They recommend me">Ils me recommandent</span>
-    <span class="note"><span data-fr="deux lettres à lire" data-en="two letters to read">deux lettres à lire</span><svg viewBox="0 0 34 22" fill="none" stroke="var(--sage)" stroke-width="1.6" stroke-linecap="round"><path d="M2 4C12 2 24 6 28 16M22 13 28 17 31 10"/></svg></span>
+    <span class="note"><span data-fr="trois lettres à lire" data-en="three letters to read">trois lettres à lire</span><svg viewBox="0 0 34 22" fill="none" stroke="var(--sage)" stroke-width="1.6" stroke-linecap="round"><path d="M2 4C12 2 24 6 28 16M22 13 28 17 31 10"/></svg></span>
   </h2>
   <div class="recos">
     <div class="reco reveal">
       <span class="q">“</span>
-      <p data-fr="Une grande aisance avec des publics très divers, une adaptation rapide et un vrai sens de l'initiative en environnement multiculturel." data-en="Great ease with very diverse audiences, quick adaptation and real initiative in a multicultural setting.">Une grande aisance avec des publics très divers, une adaptation rapide et un vrai sens de l'initiative en environnement multiculturel.</p>
+      <p data-fr="Elle est à l'aise avec des publics très divers, s'adapte vite à ses interlocuteurs et fait preuve d'initiative dans un environnement multiculturel." data-en="She is at ease with very diverse audiences, adapts quickly to the people in front of her and shows real initiative in a multicultural setting.">Elle est à l'aise avec des publics très divers, s'adapte vite à ses interlocuteurs et fait preuve d'initiative dans un environnement multiculturel.</p>
       <div class="who"><b>Aline Farah</b><span data-fr="Chargée de la promotion et du recrutement à l'international, EM Strasbourg" data-en="International Promotion and Recruitment Officer, EM Strasbourg">Chargée de la promotion et du recrutement à l'international, EM Strasbourg</span></div>
       <a href="https://drive.google.com/file/d/1lUREkXxnFECmVdLZW3kv-2W_g_X6A1lL/view" target="_blank" rel="noopener" data-fr="Lire la lettre (FR)" data-en="Read the letter (FR)">Lire la lettre (FR)</a>
     </div>
     <div class="reco reveal" style="--d:.1s">
       <span class="q">“</span>
-      <p data-fr="Étude de marché Tupperware France : meilleure note de la promotion et prix sponsorisé par Tupperware." data-en="Tupperware France market study: top grade of the class and a Tupperware-sponsored prize.">Étude de marché Tupperware France : meilleure note de la promotion et prix sponsorisé par Tupperware.</p>
+      <p data-fr="Son étude de marché pour Tupperware France a obtenu la meilleure note de la promotion et le prix du challenge sponsorisé par Tupperware." data-en="Her market study for Tupperware France earned the top grade of the class and the Tupperware-sponsored challenge prize.">Son étude de marché pour Tupperware France a obtenu la meilleure note de la promotion et le prix du challenge sponsorisé par Tupperware.</p>
       <div class="who"><b>Dr. Nada Maaninou</b><span data-fr="Professeure associée en marketing, EM Strasbourg" data-en="Associate Professor of Marketing, EM Strasbourg">Professeure associée en marketing, EM Strasbourg</span></div>
       <a href="https://drive.google.com/file/d/1Qivjg1WIUYeIFS0770pRjLxwXwecH-kw/view" target="_blank" rel="noopener" data-fr="Lire la lettre (EN)" data-en="Read the letter (EN)">Lire la lettre (EN)</a>
+    </div>
+    <div class="reco reveal" style="--d:.2s">
+      <span class="q">“</span>
+      <p data-fr="Sa capacité d'analyse a permis la réussite de l'étude de marché et l'identification de la cible pour le lancement d'un cours en ligne. Elle apprend vite, avec de la créativité sur les supports de communication et un bon sens de l'organisation." data-en="Her analytical skills drove the market study and the audience targeting for an online course launch. She learns fast, with creativity on the communication materials and a strong sense of organisation.">Sa capacité d'analyse a permis la réussite de l'étude de marché et l'identification de la cible pour le lancement d'un cours en ligne. Elle apprend vite, avec de la créativité sur les supports de communication et un bon sens de l'organisation.</p>
+      <div class="who"><b>Kyria Chun-yin Dagorne</b><span data-fr="Gérante, coach et formatrice, Reinventing Carrière Coaching (Paris)" data-en="Founder, coach and trainer, Reinventing Carrière Coaching (Paris)">Gérante, coach et formatrice, Reinventing Carrière Coaching (Paris)</span></div>
+      <a href="https://drive.google.com/file/d/1xbyYphzLa_U_nZ79WqvOxRRDUnPmXt_W/view?usp=sharing" target="_blank" rel="noopener" data-fr="Lire la lettre (FR)" data-en="Read the letter (FR)">Lire la lettre (FR)</a>
     </div>
   </div>
 </section>
@@ -766,7 +775,7 @@ button:hover .picon{transform:scale(1.08)}
         <h3 data-fr="Ma vie en France, en vidéos" data-en="My life in France, on video">Ma vie en France, en vidéos</h3>
         <div class="when" data-fr="YouTube, Threads, Instagram, blog, stickers LINE" data-en="YouTube, Threads, Instagram, blog, LINE stickers">YouTube, Threads, Instagram, blog, stickers LINE</div>
         <p data-fr="Je raconte mes voyages et mon quotidien en mandarin, en changeant de style à chaque fois : montage, sous-titres, voix off, effets. Mes posts Threads ont cumulé <span class='hl'>245 K vues en 3 mois</span>, mon blog <span class='hl b'>22 933 vues</span> grâce au SEO, et ma vidéo la plus vue <span class='hl g'>9,7 k vues</span>." data-en="I share my travels and daily life in Mandarin, trying a new style each time: editing, subtitles, voiceover, effects. My Threads posts reached <span class='hl'>245K views in 3 months</span>, my blog <span class='hl b'>22,933 views</span> through SEO, and my top video <span class='hl g'>9.7k views</span>.">Je raconte mes voyages et mon quotidien en mandarin, en changeant de style à chaque fois : montage, sous-titres, voix off, effets. Mes posts Threads ont cumulé <span class='hl'>245 K vues en 3 mois</span>, mon blog <span class='hl b'>22 933 vues</span> grâce au SEO, et ma vidéo la plus vue <span class='hl g'>9,7 k vues</span>.</p>
-        <div class="pill-links"><a href="https://www.youtube.com/@josdiary_france" target="_blank" rel="noopener">YouTube</a><a href="https://www.instagram.com/jo.lifeinfrance/" target="_blank" rel="noopener">Instagram</a><a href="https://yhchiuportfolio.wordpress.com/" target="_blank" rel="noopener">WordPress</a><a href="portfolio.html#creator">Creator Lab</a></div>
+        <div class="pill-links"><a href="portfolio.html#creator" data-fr="Voir le Creator Lab" data-en="See the Creator Lab">Voir le Creator Lab</a></div>
       </div>
       <div class="small-notes">
         <div><h3 style="font-size:1.3rem" data-fr="Bénévolat" data-en="Volunteering">Bénévolat</h3><p data-fr="Faith for Animals (2020), coordination de campagnes de stérilisation canine" data-en="Faith for Animals (2020), coordinated dog sterilisation campaigns">Faith for Animals (2020), coordination de campagnes de stérilisation canine</p></div>
@@ -803,7 +812,7 @@ button:hover .picon{transform:scale(1.08)}
 
 <footer>
   <span data-fr="fait avec soin, 2026" data-en="made with care, 2026">fait avec soin, 2026</span>
-  <span class="credit" data-fr="Musique : Oneul, « New Day » &lt;a href=&quot;https://www.youtube.com/watch?v=Qfm1y8KOo5g&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;YouTube&lt;/a&gt;" data-en="Music: Oneul, "New Day" &lt;a href=&quot;https://www.youtube.com/watch?v=Qfm1y8KOo5g&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;YouTube&lt;/a&gt;">Musique : Oneul, « New Day » <a href="https://www.youtube.com/watch?v=Qfm1y8KOo5g" target="_blank" rel="noopener">YouTube</a></span>
+  <span class="credit" data-fr="Musique : Oneul, « New Day » &lt;a href=&quot;https://www.youtube.com/watch?v=Qfm1y8KOo5g&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;YouTube&lt;/a&gt;" data-en="Music: Oneul, &#8220;New Day&#8221; &lt;a href=&quot;https://www.youtube.com/watch?v=Qfm1y8KOo5g&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;YouTube&lt;/a&gt;">Musique : Oneul, « New Day » <a href="https://www.youtube.com/watch?v=Qfm1y8KOo5g" target="_blank" rel="noopener">YouTube</a></span>
 </footer>
 
 <button class="to-top" id="toTop" aria-label="Haut de page" onclick="window.scrollTo({top:0,behavior:'smooth'})"><svg viewBox="0 0 24 24" fill="none" stroke="var(--ink)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19C11 14 12.5 9 12 5M7 10C9 8 10.5 6 12 5 13.5 6 15 8 17 10"/></svg></button>
@@ -906,6 +915,32 @@ var Ambient = (function () {
   audio.loop = true; audio.preload = 'auto'; audio.volume = 0;
   var fileOk = true;
   audio.addEventListener('error', function () { fileOk = false; });
+
+  /* remember where the track is, so it carries on from page to page */
+  var KEY = 'bgm-state';
+  function remember(playing) {
+    try { localStorage.setItem(KEY, JSON.stringify({ t: audio.currentTime || 0, on: !!playing, at: Date.now() })); } catch (e) {}
+  }
+  function resumePoint() {
+    try {
+      var st = JSON.parse(localStorage.getItem(KEY) || 'null');
+      if (!st) return null;
+      var gone = (Date.now() - st.at) / 1000;
+      if (gone > 60) return null;                 /* left it a while ago, start fresh */
+      st.t = st.t + (st.on ? gone : 0);
+      return st;
+    } catch (e) { return null; }
+  }
+  function seek(t) {
+    var go = function () {
+      var d = audio.duration;
+      audio.currentTime = d && isFinite(d) ? (t % d) : t;
+    };
+    if (audio.readyState > 0) go(); else audio.addEventListener('loadedmetadata', go, { once: true });
+  }
+  setInterval(function () { if (!audio.paused) remember(true); }, 2000);
+  addEventListener('pagehide', function () { remember(!audio.paused); });
+  document.addEventListener('visibilitychange', function () { if (document.hidden) remember(!audio.paused); });
   function fade(to, ms) {
     clearInterval(fading);
     var from = audio.volume, t0 = performance.now();
@@ -990,27 +1025,35 @@ var Ambient = (function () {
     };
   })();
 
-  function play() {
+  function play(fromSaved) {
     started = true;
     if (btn) btn.setAttribute('aria-pressed', 'true');
     if (fileOk) {
+      if (fromSaved != null) seek(fromSaved);
       var p = audio.play();
-      if (p && p.catch) p.catch(function () { fileOk = false; Synth.play(); });
-      fade(VOLUME, 2500);
+      if (p && p.catch) p.catch(function () {
+        if (btn) btn.setAttribute('aria-pressed', 'false');
+        started = false;
+      });
+      fade(VOLUME, fromSaved != null ? 1200 : 2500);
+      remember(true);
     } else { Synth.play(); }
   }
   function stop() {
     if (btn) btn.setAttribute('aria-pressed', 'false');
-    if (fileOk) fade(0, 900); else Synth.stop();
+    if (fileOk) { remember(false); fade(0, 900); } else Synth.stop();
   }
   function first(e) {
     if (btn && e.target.closest && e.target.closest('#music')) return;
-    if (!started) play();
+    if (!started) { var st = resumePoint(); play(st && st.on ? st.t : null); }
     document.removeEventListener('pointerdown', first, true);
     document.removeEventListener('keydown', first, true);
   }
   document.addEventListener('pointerdown', first, true);
   document.addEventListener('keydown', first, true);
+  /* if the music was playing on the previous page, pick it up where it stopped */
+  var saved = resumePoint();
+  if (saved && saved.on) play(saved.t);
   if (btn) btn.addEventListener('click', function () {
     started = true;
     if (btn.getAttribute('aria-pressed') === 'true') stop(); else play();
