@@ -320,6 +320,54 @@ footer{font-size:1.35rem}
 .lb-close{position:absolute;top:1.2rem;right:1.4rem;width:44px;height:44px;border-radius:50%;border:none;background:rgba(255,255,255,.15);color:#fff;font-size:1.6rem;line-height:1}
 .lb-close:hover{background:rgba(255,255,255,.3)}
 @media(max-width:880px){.job{grid-template-columns:1fr}.photo-card .pc-in{width:60%}}
+
+/* mobile menu + mobile type scale */
+.burger{display:none;width:40px;height:40px;border:none;background:none;flex-direction:column;justify-content:center;gap:5px;padding:0 8px}
+.burger span{display:block;height:2px;background:var(--ink);border-radius:2px;transition:transform .3s,opacity .3s}
+.burger[aria-expanded="true"] span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.burger[aria-expanded="true"] span:nth-child(2){opacity:0}
+.burger[aria-expanded="true"] span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+.mob-menu{position:fixed;left:0;right:0;top:66px;z-index:99;background:var(--paper);border-bottom:1px solid var(--line);box-shadow:0 10px 26px rgba(47,43,40,.08);padding:.6rem 1.2rem 1.2rem;opacity:0;transform:translateY(-10px);pointer-events:none;transition:opacity .28s,transform .28s;display:none}
+.mob-menu.open{opacity:1;transform:none;pointer-events:auto}
+.mob-menu a{display:block;padding:.75rem .2rem;font-size:1.05rem;text-decoration:none;color:var(--ink);border-bottom:1px dashed var(--line)}
+.mob-menu a:last-child{border-bottom:none}
+
+/* music button + spotify */
+.music-btn{display:inline-flex;align-items:center;gap:.45rem;border:1.5px solid var(--line);background:transparent;color:var(--ink);border-radius:999px;padding:.25rem .8rem .25rem .6rem;font-size:.9rem}
+.music-btn[aria-pressed="true"]{background:var(--sage-l);border-color:var(--sage-l);color:var(--sage)}
+.eq{display:flex;align-items:flex-end;gap:2px;height:12px}
+.eq i{display:block;width:3px;height:4px;background:currentColor;border-radius:1px}
+.music-btn[aria-pressed="true"] .eq i{animation:eqb .9s ease-in-out infinite}
+.eq i:nth-child(2){animation-delay:.2s}.eq i:nth-child(3){animation-delay:.45s}.eq i:nth-child(4){animation-delay:.1s}
+@keyframes eqb{0%,100%{height:4px}50%{height:12px}}
+.spotify{position:fixed;left:1rem;bottom:1rem;z-index:120;width:min(340px,calc(100vw - 2rem));border-radius:14px;overflow:hidden;box-shadow:0 10px 30px rgba(47,43,40,.18);background:#fff;opacity:0;transform:translateY(12px);transition:opacity .3s,transform .3s}
+.spotify.show{opacity:1;transform:none}
+@media(max-width:880px){.music-btn .ml{display:none}.spotify{left:.7rem;right:.7rem;bottom:.7rem;width:auto}}
+@media(max-width:880px){
+  .burger{display:flex}
+  .job-actions{flex-direction:column;align-items:flex-start;gap:.6rem}
+  .mob-menu{display:block}
+  body{font-size:16px}
+  section{padding:3.2rem 0 .5rem}
+  .h2{font-size:clamp(1.9rem,8.5vw,2.5rem);gap:.5rem;margin-bottom:1.1rem}
+  .h2 .note{font-size:1.2rem}
+  .about p,.job .lead,.beyond p,.beyond li,.contact p{font-size:1rem}
+  .trait h3{font-size:1.25rem}.trait h3 small{font-size:1rem}
+  .trait p{font-size:.95rem}
+  .job h3{font-size:1.32rem}
+  .job .yr{font-size:.92rem}
+  .detail li{font-size:.96rem}
+  .stack,.toggle,.job-actions .case{font-size:.92rem}
+  .reco p{font-size:1.05rem!important}
+  .reco-sec .recos{max-width:none}
+  .photo-card .pc-in{width:64%;max-width:220px}
+  .photo-card .tag-note{left:-14px;bottom:8px;font-size:1.05rem!important}
+  .col h3{font-size:1.35rem}.col .grp{font-size:1.15rem}
+  .school h3,.beyond h3{font-size:1.35rem}
+  .contact .big{font-size:clamp(2.2rem,11vw,3rem)}
+  .proj button{font-size:1rem}
+  footer{font-size:1.1rem}
+}
 @media(max-width:880px){
   .nav-l{display:none}.nav-in{grid-template-columns:auto 1fr}.logo{padding:0}
   .nav-r .nl{display:none}
@@ -358,8 +406,20 @@ footer{font-size:1.35rem}
       <a class="nl" href="#skills" data-sec="skills" data-fr="Compétences" data-en="Skills">Compétences</a>
       <a class="nl" href="portfolio.html">Portfolio</a>
       <a class="nl" href="#contact" data-sec="contact">Contact</a>
+      <button class="music-btn" id="music" aria-pressed="false" title="Musique"><span class="eq" aria-hidden="true"><i></i><i></i><i></i><i></i></span><span class="ml" id="music-label">Musique</span></button>
       <div class="lang"><button id="btn-fr" class="active" onclick="setLang('fr')">FR</button><button id="btn-en" onclick="setLang('en')">EN</button></div>
+      <button class="burger" id="burger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
     </div>
+  </div>
+  <div class="mob-menu" id="mobMenu">
+    <a href="#about" data-fr="À propos" data-en="About">À propos</a>
+    <a href="#recommendations" data-fr="Recommandations" data-en="References">Recommandations</a>
+    <a href="#experience" data-fr="Expérience" data-en="Experience">Expérience</a>
+    <a href="#skills" data-fr="Compétences" data-en="Skills">Compétences</a>
+    <a href="#education" data-fr="Formation" data-en="Education">Formation</a>
+    <a href="#beyond" data-fr="En dehors du bureau" data-en="Beyond the office">En dehors du bureau</a>
+    <a href="portfolio.html">Portfolio</a>
+    <a href="#contact">Contact</a>
   </div>
 </nav>
 
@@ -731,6 +791,9 @@ footer{font-size:1.35rem}
   <p data-fr="Votre message est bien arrivé, je vous réponds très vite. Un email de confirmation vous a été envoyé." data-en="Your message arrived safely, I'll reply very soon. A confirmation email has been sent to you.">Votre message est bien arrivé, je vous réponds très vite. Un email de confirmation vous a été envoyé.</p>
   <button class="btn" onclick="document.getElementById('successOverlay').classList.remove('active');history.replaceState(null,'',location.pathname)">OK</button>
 </div></div>
+<div class="spotify" id="spotify" hidden>
+  <div id="spotify-embed"></div>
+</div>
 <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Photo"><button class="lb-close" aria-label="Fermer">×</button><img id="lightbox-img" src="" alt=""><p class="lb-cap" id="lb-cap"></p></div>
 
 <script>
@@ -812,6 +875,48 @@ function setLang(l) {
   try { localStorage.setItem('cv-lang', l); } catch (e) {}
 }
 
+/* Spotify player, starts on the visitor's first interaction */
+var SpotifyPlayer = (function () {
+  var ctrl = null, wanted = false, started = false, btn = document.getElementById('music'), box = document.getElementById('spotify');
+  function show(on) {
+    if (on) { box.hidden = false; requestAnimationFrame(function () { box.classList.add('show'); }); }
+    else { box.classList.remove('show'); setTimeout(function () { box.hidden = true; }, 320); }
+    if (btn) btn.setAttribute('aria-pressed', on);
+  }
+  window.onSpotifyIframeApiReady = function (API) {
+    API.createController(document.getElementById('spotify-embed'),
+      { uri: 'spotify:track:5dxiriLgC9mu2FbSNqudld', width: '100%', height: 152 },
+      function (c) { ctrl = c; if (wanted) { ctrl.play(); show(true); } });
+  };
+  function play() { wanted = true; started = true; show(true); if (ctrl) ctrl.play(); }
+  function stop() { wanted = false; show(false); if (ctrl) ctrl.pause(); }
+  /* first tap or click anywhere starts the music, once */
+  function first(e) {
+    if (btn && e.target.closest && e.target.closest('#music')) return;
+    if (!started) play();
+    remove();
+  }
+  function remove() {
+    document.removeEventListener('pointerdown', first, true);
+    document.removeEventListener('keydown', first, true);
+  }
+  document.addEventListener('pointerdown', first, true);
+  document.addEventListener('keydown', first, true);
+  if (btn) btn.addEventListener('click', function () {
+    if (btn.getAttribute('aria-pressed') === 'true') stop(); else play();
+    remove();
+  });
+  return { play: play, stop: stop };
+})();
+
+/* mobile menu */
+var burger = document.getElementById('burger'), mob = document.getElementById('mobMenu');
+burger.addEventListener('click', function () {
+  var open = !mob.classList.contains('open');
+  mob.classList.toggle('open', open); burger.setAttribute('aria-expanded', open);
+});
+QA('#mobMenu a').forEach(function (a) { a.addEventListener('click', function () { mob.classList.remove('open'); burger.setAttribute('aria-expanded', false); }); });
+
 /* lightbox */
 function openLb(img) {
   document.getElementById('lightbox-img').src = img.src;
@@ -847,6 +952,7 @@ document.addEventListener('DOMContentLoaded', function () {
   if (new URLSearchParams(location.search).get('sent') === 'true') document.getElementById('successOverlay').classList.add('active');
 });
 </script>
+<script src="https://open.spotify.com/embed/iframe-api/v1" async></script>
 <!-- Start of HubSpot Embed Code -->
 <script type="text/javascript" id="hs-script-loader" async defer src="//js-eu1.hs-scripts.com/148257116.js"></script>
 <!-- End of HubSpot Embed Code -->
