@@ -565,6 +565,23 @@ footer .copy{font-family:var(--hand);font-size:1.2rem;color:var(--faint)}
   footer h2{font-size:2.2rem}
   .spotify{left:.7rem;right:.7rem;bottom:.7rem;width:auto}
 }
+
+/* music button with play icon */
+.picon{width:24px;height:24px;border-radius:50%;background:var(--sage);color:#fff;display:grid;place-items:center;flex-shrink:0;transition:background .25s,transform .25s}
+.picon svg{width:13px;height:13px}
+.ic-pause{display:none}
+[aria-pressed="true"] .ic-play{display:none}
+[aria-pressed="true"] .ic-pause{display:block}
+.mnote{width:15px;height:15px;color:var(--sage);opacity:.7;transition:transform .4s cubic-bezier(.3,1.6,.5,1)}
+button:hover .mnote{transform:rotate(-12deg) translateY(-2px)}
+button:hover .picon{transform:scale(1.08)}
+[aria-pressed="false"] .picon{animation:mping 3.4s ease-out infinite}
+[aria-pressed="true"] .picon{background:var(--coral)}
+[aria-pressed="true"] .mnote{color:var(--coral);animation:mfloat 1.9s ease-in-out infinite}
+@keyframes mping{0%{box-shadow:0 0 0 0 rgba(110,139,116,.55)}70%,100%{box-shadow:0 0 0 9px rgba(110,139,116,0)}}
+@keyframes mfloat{50%{transform:translateY(-3px) rotate(8deg)}}
+footer .credit{grid-column:1/-1;margin-top:.3rem;font-family:var(--sans);font-size:.8rem;color:var(--faint)}
+footer .credit a{color:inherit;text-decoration:underline}
 </style>
 </head>
 <body>
@@ -580,7 +597,7 @@ footer .copy{font-family:var(--hand);font-size:1.2rem;color:var(--faint)}
     <a href="#recommandations" class="nl nav-desktop" data-sec="recommandations" data-fr="Recommandations" data-en="Recommendations">Recommandations</a>
     <a href="mailto:c.hsuann@gmail.com" class="nav-cta nav-desktop" data-fr="Me contacter" data-en="Get in touch">Me contacter</a>
     <button class="music" id="music" aria-pressed="false" title="Musique d'ambiance">
-      <span class="eq" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+      <span class="picon" aria-hidden="true"><svg class="ic-play" viewBox="0 0 24 24" fill="currentColor"><path d="M9 6.8v10.4L17 12z"/></svg><svg class="ic-pause" viewBox="0 0 24 24" fill="currentColor"><path d="M8.6 6.6h2.4v10.8H8.6zM13 6.6h2.4v10.8H13z"/></svg></span><svg class="mnote" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20 3.5 9 6v9.4a3.4 3.4 0 10 1.6 2.9V8.6l7.8-1.8v6.1a3.4 3.4 0 101.6 2.9z"/></svg>
       <span id="music-label">Musique</span>
     </button>
     <button class="burger" id="burger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
@@ -1117,7 +1134,7 @@ footer .copy{font-family:var(--hand);font-size:1.2rem;color:var(--faint)}
   <div class="inner">
     <div>
       <h2 data-fr="Envie d'en parler ?" data-en="Let's talk.">Envie d'en parler ?</h2>
-      <p data-fr="Je cherche un poste en opérations marketing, analytics ou gestion de projet, partout en France. Je parle français, anglais et mandarin." data-en="I'm looking for a role in marketing operations, analytics or project management, anywhere in France. I speak French, English and Mandarin.">Je cherche un poste en opérations marketing, analytics ou gestion de projet, partout en France. Je parle français, anglais et mandarin.</p>
+      <p data-fr="Je recherche un CDI ou un CDD en marketing opérationnel, CRM, marketing analytics ou gestion de projet, partout en France. Je parle français, anglais et mandarin, et j'ai l'habitude de travailler entre l'Europe et l'Asie." data-en="I'm looking for a permanent or fixed-term role in marketing operations, CRM, marketing analytics or project management, anywhere in France. I speak French, English and Mandarin, and I'm used to working between Europe and Asia.">Je recherche un CDI ou un CDD en marketing opérationnel, CRM, marketing analytics ou gestion de projet, partout en France. Je parle français, anglais et mandarin, et j'ai l'habitude de travailler entre l'Europe et l'Asie.</p>
     </div>
     <div class="links">
       <a class="cta" href="mailto:c.hsuann@gmail.com">c.hsuann@gmail.com</a>
@@ -1127,13 +1144,12 @@ footer .copy{font-family:var(--hand);font-size:1.2rem;color:var(--faint)}
       <a href="index.html" data-fr="Voir mon CV" data-en="See my CV">Voir mon CV</a>
     </div>
     <p class="copy">&copy; 2026 Yi-Hsuan Chiu</p>
+        <p class="credit" data-fr="Musique : Oneul, « New Day » &lt;a href=&quot;https://www.youtube.com/watch?v=Qfm1y8KOo5g&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;YouTube&lt;/a&gt;" data-en="Music: Oneul, "New Day" &lt;a href=&quot;https://www.youtube.com/watch?v=Qfm1y8KOo5g&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;YouTube&lt;/a&gt;">Musique : Oneul, « New Day » <a href="https://www.youtube.com/watch?v=Qfm1y8KOo5g" target="_blank" rel="noopener">YouTube</a></p>
   </div>
 </footer>
 
 <button class="back-to-top" id="backToTop" aria-label="Haut de page" onclick="window.scrollTo({top:0,behavior:'smooth'})"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 16V4M4 10l6-6 6 6"/></svg></button>
 
-<div class="spotify" id="spotify" hidden>
-  <div id="spotify-embed"></div>
 </div>
 <script>
 var LANG='fr';
@@ -1233,62 +1249,128 @@ var navIO=new IntersectionObserver(function(es){es.forEach(function(e){if(!e.isI
   $$('.nl').forEach(function(a){a.classList.toggle('active',a.dataset.sec===key);});});},{rootMargin:'-45% 0px -50% 0px'});
 ['recommandations','strategy','brand','product','community','research','creator'].forEach(function(id){navIO.observe(document.getElementById(id));});
 
-/* generative ambient music (Web Audio, no external file) */
-var Music=(function(){var ctx,master,delay,timer,on=false,step=0,next=0;
-  var chords=[[53,57,60,64],[52,55,59,62],[50,53,57,60],[48,52,55,59]];
-  var hz=function(n){return 440*Math.pow(2,(n-69)/12);};
-  function init(){ctx=new (window.AudioContext||window.webkitAudioContext)();master=ctx.createGain();master.gain.value=0;
-    var lp=ctx.createBiquadFilter();lp.type='lowpass';lp.frequency.value=1800;
-    delay=ctx.createDelay(1);delay.delayTime.value=.375;var fb=ctx.createGain();fb.gain.value=.35;delay.connect(fb);fb.connect(delay);
-    delay.connect(lp);master.connect(lp);lp.connect(ctx.destination);}
-  function pad(notes,t,len){notes.forEach(function(n){[-5,5].forEach(function(det){var o=ctx.createOscillator(),g=ctx.createGain();o.type='triangle';o.frequency.value=hz(n-12);o.detune.value=det;
-    g.gain.setValueAtTime(0,t);g.gain.linearRampToValueAtTime(.05,t+1.2);g.gain.linearRampToValueAtTime(0,t+len);o.connect(g);g.connect(master);o.start(t);o.stop(t+len+.1);});});}
-  function pluck(n,t){var o=ctx.createOscillator(),g=ctx.createGain();o.type='sine';o.frequency.value=hz(n+12);
-    g.gain.setValueAtTime(0,t);g.gain.linearRampToValueAtTime(.09,t+.01);g.gain.exponentialRampToValueAtTime(.0001,t+.9);o.connect(g);g.connect(master);g.connect(delay);o.start(t);o.stop(t+1);}
-  function kick(t){var o=ctx.createOscillator(),g=ctx.createGain();o.frequency.setValueAtTime(120,t);o.frequency.exponentialRampToValueAtTime(45,t+.25);
-    g.gain.setValueAtTime(.18,t);g.gain.exponentialRampToValueAtTime(.001,t+.3);o.connect(g);g.connect(master);o.start(t);o.stop(t+.35);}
-  function tick(){var beat=.75;while(next<ctx.currentTime+.2){var bar=Math.floor(step/8)%4,c=chords[bar];
-      if(step%8===0)pad(c,next,beat*4.2);
-      if(step%4===0)kick(next);
-      if(Math.random()<.55)pluck(c[Math.floor(Math.random()*4)],next+(Math.random()<.3?beat/2:0));
-      step++;next+=beat/2;}
-  }
-  return{toggle:function(){if(!ctx)init();on=!on;
-    if(on){ctx.resume();next=ctx.currentTime+.1;master.gain.cancelScheduledValues(ctx.currentTime);master.gain.linearRampToValueAtTime(.7,ctx.currentTime+1.5);timer=setInterval(tick,50);}
-    else{master.gain.cancelScheduledValues(ctx.currentTime);master.gain.linearRampToValueAtTime(0,ctx.currentTime+.8);clearInterval(timer);setTimeout(function(){if(!on)ctx.suspend();},900);}
-    return on;}};
-})();
 
-/* Spotify player, starts on the visitor's first interaction */
-var SpotifyPlayer = (function () {
-  var ctrl = null, wanted = false, started = false, btn = document.getElementById('music'), box = document.getElementById('spotify');
-  function show(on) {
-    if (on) { box.hidden = false; requestAnimationFrame(function () { box.classList.add('show'); }); }
-    else { box.classList.remove('show'); setTimeout(function () { box.hidden = true; }, 320); }
-    if (btn) btn.setAttribute('aria-pressed', on);
+/* background music: plays music.mp3 if it is there, otherwise a generated soft loop */
+var Ambient = (function () {
+  var btn = document.getElementById('music');
+  var VOLUME = 0.18;            /* file volume, 0 to 1 */
+  var started = false, fading;
+
+  /* --- the audio file --- */
+  var audio = new Audio('music.mp3');
+  audio.loop = true; audio.preload = 'auto'; audio.volume = 0;
+  var fileOk = true;
+  audio.addEventListener('error', function () { fileOk = false; });
+  function fade(to, ms) {
+    clearInterval(fading);
+    var from = audio.volume, t0 = performance.now();
+    fading = setInterval(function () {
+      var k = Math.min((performance.now() - t0) / ms, 1);
+      audio.volume = from + (to - from) * k;
+      if (k === 1) { clearInterval(fading); if (to === 0) audio.pause(); }
+    }, 60);
   }
-  window.onSpotifyIframeApiReady = function (API) {
-    API.createController(document.getElementById('spotify-embed'),
-      { uri: 'spotify:track:5dxiriLgC9mu2FbSNqudld', width: '100%', height: 152 },
-      function (c) { ctrl = c; if (wanted) { ctrl.play(); show(true); } });
-  };
-  function play() { wanted = true; started = true; show(true); if (ctrl) ctrl.play(); }
-  function stop() { wanted = false; show(false); if (ctrl) ctrl.pause(); }
-  /* first tap or click anywhere starts the music, once */
+
+  /* --- fallback: soft generated loop, only used if music.mp3 is missing --- */
+  var Synth = (function () {
+    var ctx, master, delay, verb, timer, on = false, bar = 0, next = 0;
+    var prog = [
+      { bass: 41, pad: [53, 57, 60, 64], arp: [60, 64, 69, 72] },
+      { bass: 36, pad: [52, 55, 60, 67], arp: [60, 67, 72, 76] },
+      { bass: 33, pad: [52, 57, 60, 64], arp: [57, 64, 69, 72] },
+      { bass: 38, pad: [50, 54, 57, 62], arp: [62, 66, 69, 74] }
+    ];
+    function hz(n) { return 440 * Math.pow(2, (n - 69) / 12); }
+    function init() {
+      ctx = new (window.AudioContext || window.webkitAudioContext)();
+      master = ctx.createGain(); master.gain.value = 0;
+      delay = ctx.createDelay(1); delay.delayTime.value = .5;
+      var fb = ctx.createGain(); fb.gain.value = .16;
+      var dl = ctx.createBiquadFilter(); dl.type = 'lowpass'; dl.frequency.value = 1500;
+      delay.connect(fb); fb.connect(delay); delay.connect(dl);
+      verb = ctx.createConvolver();
+      var len = Math.floor(ctx.sampleRate * 2.6), buf = ctx.createBuffer(2, len, ctx.sampleRate);
+      for (var c = 0; c < 2; c++) {
+        var d = buf.getChannelData(c);
+        for (var i = 0; i < len; i++) d[i] = (Math.random() * 2 - 1) * Math.pow(1 - i / len, 2.8);
+      }
+      verb.buffer = buf;
+      var wet = ctx.createGain(); wet.gain.value = .18;
+      var soft = ctx.createBiquadFilter(); soft.type = 'lowpass'; soft.frequency.value = 1400;
+      var breeze = ctx.createOscillator(), depth = ctx.createGain();
+      breeze.frequency.value = .045; depth.gain.value = 420;
+      breeze.connect(depth); depth.connect(soft.frequency); breeze.start();
+      master.connect(soft); soft.connect(ctx.destination);
+      var echoOut = ctx.createGain(); echoOut.gain.value = .22;
+      dl.connect(echoOut); echoOut.connect(soft);
+      master.connect(verb); verb.connect(wet); wet.connect(ctx.destination);
+    }
+    function voice(n, t, vel, dur, type, toDelay, attack) {
+      [-5, 5].forEach(function (det) {
+        var o = ctx.createOscillator(), g = ctx.createGain();
+        o.type = type; o.frequency.value = hz(n); o.detune.value = det;
+        g.gain.setValueAtTime(0, t);
+        g.gain.linearRampToValueAtTime(vel, t + (attack || .02));
+        g.gain.exponentialRampToValueAtTime(.0001, t + dur);
+        o.connect(g); g.connect(master);
+        if (toDelay) g.connect(delay);
+        o.start(t); o.stop(t + dur + .1);
+      });
+    }
+    function playBar(t) {
+      var p = prog[bar % prog.length], beat = .84;
+      voice(p.bass, t, .05, 4.2, 'sine', false, .6);
+      p.pad.forEach(function (n, i) { voice(n, t + i * .12, .045, 5, 'triangle', false, 1.6); });
+      for (var i = 0; i < 8; i++) voice(p.arp[i % p.arp.length], t + i * beat * .5, .055, 2, 'sine', true, .09);
+      if (Math.random() < .5) voice(p.arp[3] + 5, t + beat * (1 + Math.random() * 2), .045, 3.2, 'sine', true, .35);
+      bar++; return beat * 4;
+    }
+    function tick() { while (next < ctx.currentTime + 1.2) next += playBar(next); }
+    return {
+      play: function () {
+        if (!ctx) init();
+        on = true; ctx.resume(); next = ctx.currentTime + .3;
+        master.gain.cancelScheduledValues(ctx.currentTime);
+        master.gain.linearRampToValueAtTime(.2, ctx.currentTime + 4);
+        clearInterval(timer); timer = setInterval(tick, 200); tick();
+      },
+      stop: function () {
+        on = false;
+        if (!ctx) return;
+        master.gain.cancelScheduledValues(ctx.currentTime);
+        master.gain.linearRampToValueAtTime(0, ctx.currentTime + 1.2);
+        clearInterval(timer);
+        setTimeout(function () { if (!on) ctx.suspend(); }, 1400);
+      }
+    };
+  })();
+
+  function play() {
+    started = true;
+    if (btn) btn.setAttribute('aria-pressed', 'true');
+    if (fileOk) {
+      var p = audio.play();
+      if (p && p.catch) p.catch(function () { fileOk = false; Synth.play(); });
+      fade(VOLUME, 2500);
+    } else { Synth.play(); }
+  }
+  function stop() {
+    if (btn) btn.setAttribute('aria-pressed', 'false');
+    if (fileOk) fade(0, 900); else Synth.stop();
+  }
   function first(e) {
     if (btn && e.target.closest && e.target.closest('#music')) return;
     if (!started) play();
-    remove();
-  }
-  function remove() {
     document.removeEventListener('pointerdown', first, true);
     document.removeEventListener('keydown', first, true);
   }
   document.addEventListener('pointerdown', first, true);
   document.addEventListener('keydown', first, true);
   if (btn) btn.addEventListener('click', function () {
+    started = true;
     if (btn.getAttribute('aria-pressed') === 'true') stop(); else play();
-    remove();
+    document.removeEventListener('pointerdown', first, true);
+    document.removeEventListener('keydown', first, true);
   });
   return { play: play, stop: stop };
 })();
