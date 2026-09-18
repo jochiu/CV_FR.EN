@@ -582,6 +582,10 @@ button:hover .picon{transform:scale(1.08)}
 @keyframes mfloat{50%{transform:translateY(-3px) rotate(8deg)}}
 footer .credit{grid-column:1/-1;margin-top:.3rem;font-family:var(--sans);font-size:.8rem;color:var(--faint)}
 footer .credit a{color:inherit;text-decoration:underline}
+.recs .row{grid-template-columns:repeat(3,1fr)}
+.rec:nth-child(3){background:#FBF4E1;transform:rotate(-.4deg)}
+.rec:nth-child(3):hover{transform:rotate(0) translateY(-3px)}
+@media(max-width:1000px){.recs .row{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -670,15 +674,20 @@ footer .credit a{color:inherit;text-decoration:underline}
   <div class="row">
     <div class="rec">
       <div class="who">Aline Farah<small data-fr="Chargée de la promotion et du recrutement à l'international, EM Strasbourg Business School" data-en="International Promotion and Recruitment Officer, EM Strasbourg Business School">Chargée de la promotion et du recrutement à l'international, EM Strasbourg Business School</small></div>
-      <p data-fr="Collaboration sur plusieurs événements, dont un salon étudiant international en tant qu'ambassadrice. La lettre souligne l'aisance relationnelle avec des publics très divers, la capacité d'adaptation et le sens de l'initiative en environnement multiculturel." data-en="Worked together on several events, including an international student fair as school ambassador. The letter highlights ease with very diverse audiences, adaptability and initiative in a multicultural setting.">Collaboration sur plusieurs événements, dont un salon étudiant international en tant qu'ambassadrice. La lettre souligne l'aisance relationnelle avec des publics très divers, la capacité d'adaptation et le sens de l'initiative en environnement multiculturel.</p>
+      <p data-fr="Nous avons collaboré sur plusieurs événements, dont un salon étudiant international où elle représentait l'école. Elle est à l'aise avec des publics très divers, s'adapte vite et prend des initiatives dans un environnement multiculturel." data-en="We worked together on several events, including an international student fair where she represented the school. She is at ease with very diverse audiences, adapts quickly and takes initiative in a multicultural setting.">Nous avons collaboré sur plusieurs événements, dont un salon étudiant international où elle représentait l'école. Elle est à l'aise avec des publics très divers, s'adapte vite et prend des initiatives dans un environnement multiculturel.</p>
       <a href="https://drive.google.com/file/d/1lUREkXxnFECmVdLZW3kv-2W_g_X6A1lL/view" target="_blank" rel="noopener" data-fr="Lire la lettre (FR)" data-en="Read the letter (FR)">Lire la lettre (FR)</a>
     </div>
     <div class="rec">
       <div class="who">Dr. Nada Maaninou<small data-fr="Professeure associée en marketing, EM Strasbourg Business School" data-en="Associate Professor of Marketing, EM Strasbourg Business School">Professeure associée en marketing, EM Strasbourg Business School</small></div>
-      <p data-fr="Cours Product & Brand Management : étude de marché pour Tupperware France sur les attentes des millennials, avec 12 entretiens semi-directifs et des recommandations présentées au directeur général. Meilleure note de la promotion (16,35/20) et prix du challenge sponsorisé par Tupperware." data-en="Product & Brand Management course: market study for Tupperware France on millennials' expectations, with 12 semi-structured interviews and recommendations presented to the General Manager. Highest score in the class (16.35/20) and winner of the Tupperware-sponsored challenge.">Cours Product & Brand Management : étude de marché pour Tupperware France sur les attentes des millennials, avec 12 entretiens semi-directifs et des recommandations présentées au directeur général. Meilleure note de la promotion (16,35/20) et prix du challenge sponsorisé par Tupperware.</p>
+      <p data-fr="Dans mon cours Product & Brand Management, son étude de marché pour Tupperware France sur les attentes des millennials, avec 12 entretiens semi-directifs, a débouché sur des recommandations présentées au directeur général. Meilleure note de la promotion (16,35/20) et prix du challenge sponsorisé par Tupperware." data-en="In my Product & Brand Management course, her market study for Tupperware France on millennials' expectations, with 12 semi-structured interviews, led to recommendations presented to the General Manager. Highest score in the class (16.35/20) and winner of the Tupperware-sponsored challenge.">Dans mon cours Product & Brand Management, son étude de marché pour Tupperware France sur les attentes des millennials, avec 12 entretiens semi-directifs, a débouché sur des recommandations présentées au directeur général. Meilleure note de la promotion (16,35/20) et prix du challenge sponsorisé par Tupperware.</p>
       <a href="https://drive.google.com/file/d/1Qivjg1WIUYeIFS0770pRjLxwXwecH-kw/view" target="_blank" rel="noopener" data-fr="Lire la lettre (EN)" data-en="Read the letter (EN)">Lire la lettre (EN)</a>
     </div>
-  </div>
+          <div class="rec">
+            <div class="who">Kyria Chun-yin Dagorne<small data-fr="Gérante, coach et formatrice, Reinventing Carrière Coaching (Paris)" data-en="Founder, coach and trainer, Reinventing Carrière Coaching (Paris)">Gérante, coach et formatrice, Reinventing Carrière Coaching (Paris)</small></div>
+            <p data-fr="Sa capacité d'analyse a permis la réussite de l'étude de marché et l'identification de la cible pour le lancement d'un cours en ligne, avec de la créativité sur les supports de communication et un bon sens de l'organisation." data-en="Her analytical skills drove the market study and the audience targeting for an online course launch, with creativity on the communication materials and a strong sense of organisation.">Sa capacité d'analyse a permis la réussite de l'étude de marché et l'identification de la cible pour le lancement d'un cours en ligne, avec de la créativité sur les supports de communication et un bon sens de l'organisation.</p>
+            <a href="https://drive.google.com/file/d/1xbyYphzLa_U_nZ79WqvOxRRDUnPmXt_W/view?usp=sharing" target="_blank" rel="noopener"><span data-fr="Lire la lettre (FR)" data-en="Read the letter (FR)">Lire la lettre (FR)</span></a>
+        </div>
+</div>
 </section>
 
 <!-- 01 UniFox -->
@@ -1144,7 +1153,7 @@ footer .credit a{color:inherit;text-decoration:underline}
       <a href="index.html" data-fr="Voir mon CV" data-en="See my CV">Voir mon CV</a>
     </div>
     <p class="copy">&copy; 2026 Yi-Hsuan Chiu</p>
-        <p class="credit" data-fr="Musique : Oneul, « New Day » &lt;a href=&quot;https://www.youtube.com/watch?v=Qfm1y8KOo5g&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;YouTube&lt;/a&gt;" data-en="Music: Oneul, "New Day" &lt;a href=&quot;https://www.youtube.com/watch?v=Qfm1y8KOo5g&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;YouTube&lt;/a&gt;">Musique : Oneul, « New Day » <a href="https://www.youtube.com/watch?v=Qfm1y8KOo5g" target="_blank" rel="noopener">YouTube</a></p>
+        <p class="credit" data-fr="Musique : Oneul, « New Day » &lt;a href=&quot;https://www.youtube.com/watch?v=Qfm1y8KOo5g&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;YouTube&lt;/a&gt;" data-en="Music: Oneul, &#8220;New Day&#8221; &lt;a href=&quot;https://www.youtube.com/watch?v=Qfm1y8KOo5g&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;YouTube&lt;/a&gt;">Musique : Oneul, « New Day » <a href="https://www.youtube.com/watch?v=Qfm1y8KOo5g" target="_blank" rel="noopener">YouTube</a></p>
   </div>
 </footer>
 
@@ -1261,6 +1270,32 @@ var Ambient = (function () {
   audio.loop = true; audio.preload = 'auto'; audio.volume = 0;
   var fileOk = true;
   audio.addEventListener('error', function () { fileOk = false; });
+
+  /* remember where the track is, so it carries on from page to page */
+  var KEY = 'bgm-state';
+  function remember(playing) {
+    try { localStorage.setItem(KEY, JSON.stringify({ t: audio.currentTime || 0, on: !!playing, at: Date.now() })); } catch (e) {}
+  }
+  function resumePoint() {
+    try {
+      var st = JSON.parse(localStorage.getItem(KEY) || 'null');
+      if (!st) return null;
+      var gone = (Date.now() - st.at) / 1000;
+      if (gone > 60) return null;                 /* left it a while ago, start fresh */
+      st.t = st.t + (st.on ? gone : 0);
+      return st;
+    } catch (e) { return null; }
+  }
+  function seek(t) {
+    var go = function () {
+      var d = audio.duration;
+      audio.currentTime = d && isFinite(d) ? (t % d) : t;
+    };
+    if (audio.readyState > 0) go(); else audio.addEventListener('loadedmetadata', go, { once: true });
+  }
+  setInterval(function () { if (!audio.paused) remember(true); }, 2000);
+  addEventListener('pagehide', function () { remember(!audio.paused); });
+  document.addEventListener('visibilitychange', function () { if (document.hidden) remember(!audio.paused); });
   function fade(to, ms) {
     clearInterval(fading);
     var from = audio.volume, t0 = performance.now();
@@ -1345,27 +1380,35 @@ var Ambient = (function () {
     };
   })();
 
-  function play() {
+  function play(fromSaved) {
     started = true;
     if (btn) btn.setAttribute('aria-pressed', 'true');
     if (fileOk) {
+      if (fromSaved != null) seek(fromSaved);
       var p = audio.play();
-      if (p && p.catch) p.catch(function () { fileOk = false; Synth.play(); });
-      fade(VOLUME, 2500);
+      if (p && p.catch) p.catch(function () {
+        if (btn) btn.setAttribute('aria-pressed', 'false');
+        started = false;
+      });
+      fade(VOLUME, fromSaved != null ? 1200 : 2500);
+      remember(true);
     } else { Synth.play(); }
   }
   function stop() {
     if (btn) btn.setAttribute('aria-pressed', 'false');
-    if (fileOk) fade(0, 900); else Synth.stop();
+    if (fileOk) { remember(false); fade(0, 900); } else Synth.stop();
   }
   function first(e) {
     if (btn && e.target.closest && e.target.closest('#music')) return;
-    if (!started) play();
+    if (!started) { var st = resumePoint(); play(st && st.on ? st.t : null); }
     document.removeEventListener('pointerdown', first, true);
     document.removeEventListener('keydown', first, true);
   }
   document.addEventListener('pointerdown', first, true);
   document.addEventListener('keydown', first, true);
+  /* if the music was playing on the previous page, pick it up where it stopped */
+  var saved = resumePoint();
+  if (saved && saved.on) play(saved.t);
   if (btn) btn.addEventListener('click', function () {
     started = true;
     if (btn.getAttribute('aria-pressed') === 'true') stop(); else play();
