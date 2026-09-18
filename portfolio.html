@@ -526,6 +526,45 @@ footer .copy{font-family:var(--hand);font-size:1.2rem;color:var(--faint)}
   .st1{left:6%;top:12%}.st2{left:40%;top:82%}.st3{left:68%;top:10%}
 }
 @media(prefers-reduced-motion:reduce){.stroke{stroke-dashoffset:0}.fillin{opacity:1}}
+
+/* mobile menu, spotify, mobile type */
+.burger{display:none;width:38px;height:38px;border:none;background:none;flex-direction:column;justify-content:center;gap:5px;padding:0 7px}
+.burger span{display:block;height:2px;background:var(--ink);border-radius:2px;transition:transform .3s,opacity .3s}
+.burger[aria-expanded="true"] span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.burger[aria-expanded="true"] span:nth-child(2){opacity:0}
+.burger[aria-expanded="true"] span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+.mob-menu{position:fixed;left:0;right:0;top:66px;z-index:99;background:var(--bg);border-bottom:1px solid var(--sand);box-shadow:0 10px 26px rgba(47,43,40,.08);padding:.6rem 1.2rem 1.2rem;opacity:0;transform:translateY(-10px);pointer-events:none;transition:opacity .28s,transform .28s;display:none}
+.mob-menu.open{opacity:1;transform:none;pointer-events:auto}
+.mob-menu a{display:block;padding:.75rem .2rem;font-size:1.05rem;text-decoration:none;color:var(--ink);border-bottom:1px dashed var(--sand)}
+.mob-menu a:last-child{border-bottom:none}
+.spotify{position:fixed;left:1rem;bottom:1rem;z-index:120;width:min(340px,calc(100vw - 2rem));border-radius:14px;overflow:hidden;box-shadow:0 10px 30px rgba(47,43,40,.18);background:#fff;opacity:0;transform:translateY(12px);transition:opacity .3s,transform .3s}
+.spotify.show{opacity:1;transform:none}
+@media(max-width:900px){
+  .burger{display:flex}
+  .top-bar{padding:0 .9rem}
+  .brand{font-size:1.5rem;white-space:nowrap}
+  .nav-links{gap:.5rem}
+  .music{padding:.25rem .6rem}
+  #music-label{display:none}
+  .float-spark{display:none}
+  .st2{left:40%;top:26%}
+  .mob-menu{display:block}
+  body{font-size:16px}
+  .sticker{font-size:1.05rem;padding:.15rem .7rem}
+  .st1{left:5%;top:10%}.st2{left:44%;top:30%}.st3{left:66%;top:9%}
+  .drag-hint{font-size:1.05rem}
+  .hero-media h1{font-size:clamp(3rem,15vw,5rem)!important;bottom:6.2rem}
+  .hero-row{font-size:.92rem}
+  .rotator{font-size:1.8rem}
+  .sub{font-size:1rem}
+  .intro-panel h2{font-size:2.2rem}
+  .h-mid,.sub-h{font-size:1.8rem}
+  .task h4{font-size:1.2rem}
+  .stat b,#creator .stat b{font-size:1.4rem}
+  .lab-sec h2{font-size:2.2rem}
+  footer h2{font-size:2.2rem}
+  .spotify{left:.7rem;right:.7rem;bottom:.7rem;width:auto}
+}
 </style>
 </head>
 <body>
@@ -542,14 +581,23 @@ footer .copy{font-family:var(--hand);font-size:1.2rem;color:var(--faint)}
     <a href="mailto:c.hsuann@gmail.com" class="nav-cta nav-desktop" data-fr="Me contacter" data-en="Get in touch">Me contacter</a>
     <button class="music" id="music" aria-pressed="false" title="Musique d'ambiance">
       <span class="eq" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
-      <span id="music-label">Son</span>
+      <span id="music-label">Musique</span>
     </button>
+    <button class="burger" id="burger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
     <div class="lang-toggle">
       <button class="lang-btn active" id="btn-fr" onclick="setLang('fr')">FR</button>
       <button class="lang-btn" id="btn-en" onclick="setLang('en')">EN</button>
     </div>
   </div>
 </nav>
+<div class="mob-menu" id="mobMenu">
+  <a href="index.html" data-fr="Mon CV" data-en="About me">Mon CV</a>
+  <a href="#work" data-fr="Projets" data-en="Work">Projets</a>
+  <a href="#research" data-fr="Recherche" data-en="Research">Recherche</a>
+  <a href="#creator">Creator Lab</a>
+  <a href="#recommandations" data-fr="Recommandations" data-en="Recommendations">Recommandations</a>
+  <a href="mailto:c.hsuann@gmail.com" data-fr="Me contacter" data-en="Get in touch">Me contacter</a>
+</div>
 
 <header class="hero">
   <div class="hero-media" id="heroMedia">
@@ -1084,6 +1132,9 @@ footer .copy{font-family:var(--hand);font-size:1.2rem;color:var(--faint)}
 
 <button class="back-to-top" id="backToTop" aria-label="Haut de page" onclick="window.scrollTo({top:0,behavior:'smooth'})"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 16V4M4 10l6-6 6 6"/></svg></button>
 
+<div class="spotify" id="spotify" hidden>
+  <div id="spotify-embed"></div>
+</div>
 <script>
 var LANG='fr';
 var $=function(s,r){return (r||document).querySelector(s)};
@@ -1170,7 +1221,7 @@ function setLang(l){LANG=l;document.documentElement.lang=l;
   $('#btn-fr').classList.toggle('active',l==='fr');$('#btn-en').classList.toggle('active',l==='en');
   $$('[data-fr][data-en]').forEach(function(e){e.innerHTML=e.getAttribute('data-'+l);});
   $$('.count').forEach(function(el){if(el.dataset.cur!==undefined)render(el,+el.dataset.cur);});
-  drawBA();drawPipe();drawHyp();$('#music-label').textContent=l==='fr'?'Son':'Sound';
+  drawBA();drawPipe();drawHyp();$('#music-label').textContent=l==='fr'?'Musique':'Music';
   try{localStorage.setItem('cv-lang',l);}catch(x){}}
 
 /* scroll: progress, back to top, active nav */
@@ -1207,7 +1258,44 @@ var Music=(function(){var ctx,master,delay,timer,on=false,step=0,next=0;
     else{master.gain.cancelScheduledValues(ctx.currentTime);master.gain.linearRampToValueAtTime(0,ctx.currentTime+.8);clearInterval(timer);setTimeout(function(){if(!on)ctx.suspend();},900);}
     return on;}};
 })();
-$('#music').addEventListener('click',function(){var on=Music.toggle();this.setAttribute('aria-pressed',on);});
+
+/* Spotify player, starts on the visitor's first interaction */
+var SpotifyPlayer = (function () {
+  var ctrl = null, wanted = false, started = false, btn = document.getElementById('music'), box = document.getElementById('spotify');
+  function show(on) {
+    if (on) { box.hidden = false; requestAnimationFrame(function () { box.classList.add('show'); }); }
+    else { box.classList.remove('show'); setTimeout(function () { box.hidden = true; }, 320); }
+    if (btn) btn.setAttribute('aria-pressed', on);
+  }
+  window.onSpotifyIframeApiReady = function (API) {
+    API.createController(document.getElementById('spotify-embed'),
+      { uri: 'spotify:track:5dxiriLgC9mu2FbSNqudld', width: '100%', height: 152 },
+      function (c) { ctrl = c; if (wanted) { ctrl.play(); show(true); } });
+  };
+  function play() { wanted = true; started = true; show(true); if (ctrl) ctrl.play(); }
+  function stop() { wanted = false; show(false); if (ctrl) ctrl.pause(); }
+  /* first tap or click anywhere starts the music, once */
+  function first(e) {
+    if (btn && e.target.closest && e.target.closest('#music')) return;
+    if (!started) play();
+    remove();
+  }
+  function remove() {
+    document.removeEventListener('pointerdown', first, true);
+    document.removeEventListener('keydown', first, true);
+  }
+  document.addEventListener('pointerdown', first, true);
+  document.addEventListener('keydown', first, true);
+  if (btn) btn.addEventListener('click', function () {
+    if (btn.getAttribute('aria-pressed') === 'true') stop(); else play();
+    remove();
+  });
+  return { play: play, stop: stop };
+})();
+
+var burger=document.getElementById('burger'),mob=document.getElementById('mobMenu');
+burger.addEventListener('click',function(){var o=!mob.classList.contains('open');mob.classList.toggle('open',o);burger.setAttribute('aria-expanded',o);});
+Array.prototype.forEach.call(document.querySelectorAll('#mobMenu a'),function(a){a.addEventListener('click',function(){mob.classList.remove('open');burger.setAttribute('aria-expanded',false);});});
 
 /* placeholder links */
 $$('[data-todo]').forEach(function(a){a.addEventListener('click',function(e){if(a.getAttribute('href')==='#'){e.preventDefault();}});});
@@ -1282,5 +1370,6 @@ var last=scrollY,mqs=document.querySelectorAll('.marquee div');
   Array.prototype.forEach.call(mqs,function(m){m.style.transform='skewX('+(-sk)+'deg)';m.style.transformOrigin='center';});requestAnimationFrame(tick);})();
 })();
 </script>
+</div>
 </body>
 </html>
