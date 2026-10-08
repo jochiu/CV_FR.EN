@@ -67,10 +67,10 @@ img{max-width:100%;display:block}
 .fillin{opacity:0;animation:fadein .6s ease forwards;animation-delay:calc(var(--dl,.2s) + .9s)}
 @keyframes draw{to{stroke-dashoffset:0}}
 @keyframes fadein{to{opacity:1}}
-.hero-copy{position:absolute;left:50%;top:44%;transform:translate(-50%,-50%);width:min(660px,90%);text-align:center}
-.hello{font-family:var(--serif);font-weight:400;font-size:clamp(2rem,4.4vw,2.9rem);line-height:1.1;color:var(--ink)}
-.hero-line{font-family:var(--serif);font-size:clamp(1.6rem,3.6vw,2.45rem);line-height:1.15;color:#8C857E;margin-top:.2rem}
-.hero-line em{color:var(--sage);display:inline-block;transition:opacity .35s,transform .35s}
+.hero-copy{position:absolute;left:50%;top:41%;transform:translate(-50%,-50%);width:min(780px,92%);text-align:center}
+.hello{font-family:var(--serif);font-weight:400;font-size:clamp(2.2rem,5vw,3.3rem);line-height:1.1;color:var(--ink)}
+.hero-line{font-family:var(--serif);font-size:clamp(1.2rem,2.5vw,1.7rem);line-height:1.35;color:#8C857E;margin-top:.5rem}
+.hero-line em{color:var(--sage);display:inline-block;font-style:normal;transition:opacity .35s,transform .35s}
 .hero-line em.out{opacity:0;transform:translateY(8px)}
 .hero-cta{display:flex;align-items:center;justify-content:center;gap:1rem;margin-top:1.8rem;flex-wrap:wrap}
 .btn{display:inline-flex;align-items:center;gap:.5rem;background:var(--ink);color:#fff;text-decoration:none;border:none;border-radius:999px;padding:.62rem 1.3rem;font-size:.9rem;font-weight:500;transition:transform .25s,background .25s}
@@ -82,7 +82,7 @@ img{max-width:100%;display:block}
 .avail b{font-weight:500;display:inline-flex;align-items:center;gap:.4rem}
 .avail b i{width:8px;height:8px;border-radius:50%;background:var(--leaf);box-shadow:0 0 0 0 rgba(185,207,126,.7);animation:pulse 2.4s infinite}
 @keyframes pulse{70%{box-shadow:0 0 0 8px rgba(185,207,126,0)}100%{box-shadow:0 0 0 0 rgba(185,207,126,0)}}
-.ground{position:absolute;left:4%;right:4%;bottom:6%;height:190px}
+.ground{position:absolute;left:4%;right:4%;bottom:4%;height:170px}
 .ground svg{width:100%;height:100%;overflow:visible}
 .place{font-family:var(--hand);font-size:22px;fill:var(--soft)}
 
@@ -95,11 +95,7 @@ section{padding:5.5rem 0 1rem;scroll-margin-top:70px}
 .reveal.in{opacity:1;transform:none}
 
 /* hand highlights */
-.hl{position:relative;white-space:nowrap;font-weight:600;color:var(--ink)}
-.hl::after{content:'';position:absolute;left:-2px;right:-2px;bottom:-4px;height:8px;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 8' preserveAspectRatio='none'%3E%3Cpath d='M1 5 C20 1 35 7 52 4 S85 2 99 5' fill='none' stroke='%23F3D27A' stroke-width='3.5' stroke-linecap='round'/%3E%3C/svg%3E") left/100% 100% no-repeat;clip-path:inset(0 100% 0 0);transition:clip-path .9s ease .2s;z-index:-1}
-.hl.g::after{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 8' preserveAspectRatio='none'%3E%3Cpath d='M1 5 C20 1 35 7 52 4 S85 2 99 5' fill='none' stroke='%23B9CF7E' stroke-width='3.5' stroke-linecap='round'/%3E%3C/svg%3E")}
-.hl.b::after{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 8' preserveAspectRatio='none'%3E%3Cpath d='M1 5 C20 1 35 7 52 4 S85 2 99 5' fill='none' stroke='%239DBCE3' stroke-width='3.5' stroke-linecap='round'/%3E%3C/svg%3E")}
-.on .hl::after,.hl.on::after{clip-path:inset(0 0 0 0)}
+.hl{font-weight:600;color:var(--ink)}
 .circ{position:relative;white-space:nowrap;font-weight:600}
 .circ svg{position:absolute;left:-22%;top:-45%;width:144%;height:190%;overflow:visible;pointer-events:none}
 .circ path{fill:none;stroke:var(--coral);stroke-width:1.6;stroke-linecap:round;stroke-dasharray:1;stroke-dashoffset:1;transition:stroke-dashoffset 1.1s ease .3s}
@@ -109,14 +105,14 @@ section{padding:5.5rem 0 1rem;scroll-margin-top:70px}
 .about{display:grid;grid-template-columns:1.2fr .8fr;gap:4rem;align-items:start}
 .about p{color:var(--soft);margin-bottom:1rem;max-width:38rem}
 .about p strong{color:var(--ink);font-weight:600}
-.traits{display:grid;gap:1.1rem;margin-top:2rem}
-.trait{display:grid;grid-template-columns:44px 1fr;gap:1rem;align-items:start}
-.trait .ic{width:44px;height:44px}
+.traits{max-width:var(--max);margin:3.4rem auto 0;padding-top:2.4rem;border-top:1px solid var(--line);display:grid;grid-template-columns:repeat(3,1fr);gap:2rem}
+.trait{display:block}
+.trait .ic{width:38px;height:38px;margin-bottom:.8rem}
 .trait .ic svg{width:100%;height:100%;overflow:visible;transition:transform .5s cubic-bezier(.3,1.6,.5,1)}
 .trait:hover .ic svg{transform:rotate(-14deg) scale(1.1)}
-.trait h3{font-family:var(--serif);font-weight:400;font-size:1.45rem;line-height:1.1}
-.trait h3 small{font-family:var(--hand);font-size:1.1rem;color:var(--sage);margin-left:.4rem}
-.trait p{margin:.2rem 0 0;font-size:.92rem}
+.trait h3{font-family:var(--serif);font-weight:400;font-size:1.3rem;line-height:1.2}
+.trait h3 small{display:block;font-family:var(--sans);font-size:.76rem;font-weight:700;color:var(--sage);margin:.35rem 0 0}
+.trait p{margin:.6rem 0 0;font-size:.9rem}
 .photo-card{position:relative;margin-top:.5rem}
 .photo-card .frame{border-radius:28px;overflow:hidden;aspect-ratio:4/5;background:var(--blush);transform:rotate(2deg);transition:transform .5s cubic-bezier(.3,1.6,.5,1)}
 .photo-card:hover .frame{transform:rotate(-1deg) scale(1.02)}
@@ -151,9 +147,9 @@ section{padding:5.5rem 0 1rem;scroll-margin-top:70px}
 .job.open .detail-in{opacity:1;transform:none}
 .detail ul{list-style:none;max-width:46rem}
 .detail li{position:relative;padding-left:1.4rem;margin-bottom:.55rem;color:var(--soft);font-size:.95rem}
-.detail li::before{content:'';position:absolute;left:0;top:.45em;width:12px;height:12px;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 2c1 6 4 9 10 10-6 1-9 4-10 10-1-6-4-9-10-10 6-1 9-4 10-10z' fill='%23B9CF7E'/%3E%3C/svg%3E") center/contain no-repeat}
+.detail li::before{content:'';position:absolute;left:.15rem;top:.68em;width:5px;height:5px;border-radius:50%;background:var(--sage)}
 .detail li strong{color:var(--ink);font-weight:600}
-.why{font-family:var(--hand);font-size:1.15rem;color:var(--coral);margin-right:.3rem}
+.why{display:inline-block;font-size:.76rem;font-weight:700;color:var(--coral);background:var(--blush);padding:.1rem .5rem;border-radius:4px;margin-right:.55rem;vertical-align:.09em;white-space:nowrap}
 .stack{margin-top:.8rem;font-size:.84rem;color:var(--faint)}
 .stack b{font-weight:500;color:var(--soft)}
 .pics{display:flex;gap:.8rem;margin-top:1rem}
@@ -161,8 +157,7 @@ section{padding:5.5rem 0 1rem;scroll-margin-top:70px}
 .pics img:nth-child(1){transform:rotate(-2deg)}.pics img:nth-child(2){transform:rotate(2deg)}
 .pics img:hover{transform:rotate(0) scale(1.05)}
 .case{display:inline-block;margin-top:1rem;font-size:.86rem;color:var(--sage);text-decoration:none;border-bottom:1.5px solid currentColor}
-.job::after{content:'';position:absolute;left:112px;top:1.9rem;width:18px;height:18px;opacity:0;transform:scale(.4) rotate(-40deg);transition:all .5s cubic-bezier(.3,1.8,.5,1);background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 2c1 6 4 9 10 10-6 1-9 4-10 10-1-6-4-9-10-10 6-1 9-4 10-10z' fill='%23F3D27A'/%3E%3C/svg%3E") center/contain no-repeat}
-.job.open::after{opacity:1;transform:none}
+
 .all{background:none;border:none;font-family:var(--hand);font-size:1.3rem;color:var(--sage);margin-left:auto}
 
 /* skills */
@@ -173,7 +168,7 @@ section{padding:5.5rem 0 1rem;scroll-margin-top:70px}
 .col li{font-size:.92rem;color:var(--soft);padding:.18rem 0;transition:color .2s,transform .2s}
 .col li:hover{color:var(--ink);transform:translateX(4px)}
 .col li small{color:var(--faint)}
-.col .grp{font-family:var(--hand);font-size:1.15rem;color:var(--sage);margin-top:.7rem}
+.col .grp{font-size:1.05rem;font-weight:700;color:var(--ink);margin-top:1.4rem;margin-bottom:.15rem}
 .col .grp:first-of-type{margin-top:0}
 .dots{display:inline-flex;gap:3px;margin-left:.4rem;vertical-align:1px}
 .dots i{width:7px;height:7px;border-radius:50%;background:var(--line)}
@@ -185,7 +180,7 @@ section{padding:5.5rem 0 1rem;scroll-margin-top:70px}
 .school .where{color:var(--sage);font-size:.92rem;margin:.2rem 0 .8rem}
 .proj{border-top:1px dashed var(--line)}
 .proj button{width:100%;display:flex;align-items:center;gap:.8rem;background:none;border:none;text-align:left;padding:.8rem 0;font-size:.95rem;font-weight:500;color:var(--ink)}
-.proj button .badge{font-family:var(--hand);font-size:1.2rem;color:var(--coral);margin-left:auto}
+.proj button .badge{font-size:.76rem;font-weight:700;color:var(--coral);background:var(--blush);padding:.1rem .5rem;border-radius:4px;margin-left:auto;white-space:nowrap}
 .proj .pm{width:22px;height:22px;border-radius:50%;box-shadow:inset 0 0 0 1.5px var(--ink);display:grid;place-items:center;transition:transform .4s,background .3s;flex-shrink:0}
 .proj .pm svg{width:10px;height:10px}
 .proj.open .pm{transform:rotate(45deg);background:var(--butter);box-shadow:none}
@@ -215,7 +210,7 @@ section{padding:5.5rem 0 1rem;scroll-margin-top:70px}
 .beyond p,.beyond li{color:var(--soft);font-size:.93rem}
 .beyond ul{list-style:none;margin-top:.4rem}
 .beyond li{padding-left:1.2rem;position:relative;margin-bottom:.4rem}
-.beyond li::before{content:'~';position:absolute;left:0;color:var(--coral);font-family:var(--hand);font-size:1.2rem;line-height:1.2}
+.beyond li::before{content:'';position:absolute;left:.1rem;top:.7em;width:5px;height:5px;border-radius:50%;background:var(--sage)}
 .polaroids{display:flex;margin-top:1.4rem;padding-left:10px}
 .pol{background:#fff;padding:8px 8px 26px;box-shadow:0 6px 18px rgba(0,0,0,.08);width:130px;margin-left:-14px;transition:transform .4s cubic-bezier(.3,1.6,.5,1);cursor:zoom-in}
 .pol img,.pol .ph{width:100%;aspect-ratio:1;object-fit:cover}
@@ -269,8 +264,8 @@ body{font-size:17px;line-height:1.75}
 .detail li{font-size:1rem}
 .stack{font-size:.95rem}
 .toggle{font-size:.95rem}
-.col li{font-size:1rem}.col li small{font-size:.88rem}
-.col .grp{font-size:1.3rem}
+.col li{font-size:.88rem}.col li small{font-size:.8rem}
+.col .grp{font-size:1.05rem}
 .school .where,.side-schools span,.beyond .when{font-size:1rem}
 .proj button{font-size:1.05rem}.proj p{font-size:1rem}
 .contacts{font-size:1rem}
@@ -279,7 +274,7 @@ form label{font-size:.95rem}
 .reco .who{font-size:1rem}.reco .who span{font-size:.92rem}
 .reco a{font-size:.95rem}
 .h2 .note{font-size:1.5rem}
-.why{font-size:1.3rem}
+.why{font-size:.78rem}
 .photo-card .tag-note{font-size:1.5rem}
 footer{font-size:1.35rem}
 .reco-sec{padding-top:3.5rem}
@@ -295,7 +290,7 @@ footer{font-size:1.35rem}
 .job{grid-template-columns:170px 1fr}
 .job .yr{font-family:var(--sans);font-size:.98rem;font-weight:600;color:var(--ink);line-height:1.4}
 .job .yr small{font-weight:400}
-.job::after{left:140px}
+
 .job-actions{display:flex;flex-wrap:wrap;align-items:center;gap:.6rem 1.6rem;margin-top:.8rem}
 .job-actions .toggle{margin-top:0}
 .job-actions .case{margin-top:0;font-size:.95rem;display:inline-flex;align-items:center;gap:.35rem}
@@ -365,7 +360,7 @@ footer{font-size:1.35rem}
   .reco-sec .recos{max-width:none}
   .photo-card .pc-in{width:64%;max-width:220px}
   .photo-card .tag-note{left:-14px;bottom:8px;font-size:1.05rem!important}
-  .col h3{font-size:1.35rem}.col .grp{font-size:1.15rem}
+  .col h3{font-size:1.3rem}.col .grp{font-size:1rem}
   .school h3,.beyond h3{font-size:1.35rem}
   .contact .big{font-size:clamp(2.2rem,11vw,3rem)}
   .proj button{font-size:1rem}
@@ -374,13 +369,14 @@ footer{font-size:1.35rem}
 @media(max-width:880px){
   .nav-l{display:none}.nav-in{grid-template-columns:auto 1fr}.logo{padding:0}
   .nav-r .nl{display:none}
-  .stage{height:auto;min-height:0;padding:6rem 0 13rem}
+  .stage{height:auto;min-height:0;padding:5rem 0 9rem}
   .hero-copy{position:relative;left:auto;top:auto;transform:none;margin:0 auto}
   .ground{height:150px;bottom:1rem;left:2%;right:2%}
-  .dd{display:none}.dd.keep-m{display:block;top:4%!important}
+  .dd{display:none}.dd.keep-m{display:block;top:3%!important}
   .about,.edu,.beyond,.contact,.recos,.small-notes{grid-template-columns:1fr}
-  .about{gap:2.5rem}.photo-card{max-width:320px;margin:0 auto}
-  .job{grid-template-columns:1fr;gap:.3rem}.job::after{display:none}
+  .about{gap:2.5rem}
+  .traits{grid-template-columns:1fr;gap:1.6rem;margin-top:2.4rem;padding-top:1.8rem}.photo-card{max-width:320px;margin:0 auto}
+  .job{grid-template-columns:1fr;gap:.3rem}
   .cols{grid-template-columns:1fr 1fr;gap:2rem}
 }
 @media(max-width:520px){.cols{grid-template-columns:1fr}.polaroids .pol{width:96px}}
@@ -410,7 +406,6 @@ button:hover .picon{transform:scale(1.08)}
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
   <defs>
     <filter id="rough"><feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="2" seed="3"/><feDisplacementMap in="SourceGraphic" scale="1.8"/></filter>
-    <symbol id="i-spark" viewBox="0 0 24 24"><path d="M12 1.5C13 8 16 11 22.5 12 16 13 13 16 12 22.5 11 16 8 13 1.5 12 8 11 11 8 12 1.5Z"/></symbol>
   </defs>
 </svg>
 
@@ -446,28 +441,19 @@ button:hover .picon{transform:scale(1.08)}
 <header class="hero" id="top">
   <div class="stage" id="stage">
     <div class="doodles" id="doodles" aria-hidden="true" style="filter:url(#rough)">
-      <div class="dd keep-m" data-depth="20" style="left:13%;top:12%;width:34px;height:30px"><svg viewBox="0 0 24 24"><path class="stroke" pathLength="1" style="--dl:.1s" d="M12 20C5 15 2 11 4 7 6 3.5 10 4 12 8 14 4 18 3.5 20 7 22 11 19 15 12 20Z"/></svg></div>
-      <div class="dd" data-depth="-14" style="left:7%;top:30%;width:70px;height:48px"><svg viewBox="0 0 48 32"><path class="fillin" style="--dl:.3s;fill:var(--blue)" d="M9 27C3 27 2 20 7 19 6 12 15 9 18 15 21 7 32 9 31 16 38 16 38 27 32 27Z"/><path class="stroke" pathLength="1" style="--dl:.3s" d="M9 27C3 27 2 20 7 19 6 12 15 9 18 15 21 7 32 9 31 16 38 16 38 27 32 27Z"/></svg></div>
-      <div class="dd" data-depth="26" style="left:21%;top:20%;width:30px;height:30px"><svg viewBox="0 0 24 24"><path class="stroke" pathLength="1" style="--dl:.5s" d="M12 1.5C13 8 16 11 22.5 12 16 13 13 16 12 22.5 11 16 8 13 1.5 12 8 11 11 8 12 1.5Z"/></svg></div>
-      <div class="dd hide-m" data-depth="-22" style="left:12%;top:58%;width:110px;height:50px"><svg viewBox="0 0 110 50"><path class="stroke" pathLength="1" style="--dl:.7s" d="M2 46C18 20 40 8 58 14 72 19 60 36 50 28 42 21 60 6 80 8 92 9 100 4 108 2"/></svg></div>
+      <div class="dd keep-m" data-depth="-14" style="left:7%;top:30%;width:48px;height:33px"><svg viewBox="0 0 48 32"><path class="fillin" style="--dl:.3s;fill:var(--blue)" d="M9 27C3 27 2 20 7 19 6 12 15 9 18 15 21 7 32 9 31 16 38 16 38 27 32 27Z"/><path class="stroke" pathLength="1" style="--dl:.3s" d="M9 27C3 27 2 20 7 19 6 12 15 9 18 15 21 7 32 9 31 16 38 16 38 27 32 27Z"/></svg></div>
+      <div class="dd" data-depth="26" style="left:15%;top:10%;width:30px;height:30px"><svg viewBox="0 0 24 24"><path class="stroke" pathLength="1" style="--dl:.5s" d="M12 1.5C13 8 16 11 22.5 12 16 13 13 16 12 22.5 11 16 8 13 1.5 12 8 11 11 8 12 1.5Z"/></svg></div>
       <div class="dd" data-depth="16" style="left:10%;top:62%;width:36px;height:36px"><svg viewBox="0 0 24 24"><path class="stroke" pathLength="1" style="--dl:.9s" d="M12 2.5 14.6 9.2 21.6 9.6 16.2 14 18 21 12 17.1 6 21 7.8 14 2.4 9.6 9.4 9.2Z"/></svg></div>
-      <div class="dd" data-depth="-10" style="left:24%;top:66%;width:44px;height:44px"><svg viewBox="0 0 24 24"><path class="fillin" style="--dl:1s;fill:var(--coral)" d="M4 6C10 2 20 5 20 12 20 18 13 21 8 19 11 15 9 11 4 6Z"/><path class="stroke" pathLength="1" style="--dl:1s" d="M4 6C10 2 20 5 20 12 20 18 13 21 8 19 11 15 9 11 4 6Z"/></svg></div>
-      <div class="dd hide-m" data-depth="12" style="left:31%;top:11%;width:12px;height:12px"><svg viewBox="0 0 12 12"><circle class="stroke" pathLength="1" style="--dl:1.1s" cx="6" cy="6" r="4"/></svg></div>
-      <div class="dd keep-m" data-depth="-24" style="left:40%;top:9%;width:42px;height:40px"><svg viewBox="0 0 24 24"><g class="fillin" style="--dl:.4s;fill:var(--leaf)"><circle cx="12" cy="6" r="4.5"/><circle cx="18" cy="11" r="4.5"/><circle cx="15.5" cy="18" r="4.5"/><circle cx="8.5" cy="18" r="4.5"/><circle cx="6" cy="11" r="4.5"/></g><path class="stroke" pathLength="1" style="--dl:.4s" d="M10 10C12 8 15 10 13.5 12.5 12 15 9 13 10.5 11.5"/></svg></div>
-      <div class="dd hide-m" data-depth="18" style="right:36%;top:14%;width:120px;height:40px"><svg viewBox="0 0 120 40"><path class="stroke" pathLength="1" style="--dl:.6s" d="M2 38C20 10 40 4 50 14 56 20 44 26 44 18 44 10 60 4 72 12 78 16 70 22 70 15 70 6 90 2 118 10"/></svg></div>
-      <div class="dd keep-m" data-depth="-18" style="right:18%;top:12%;width:36px;height:34px"><svg viewBox="0 0 24 24"><path class="fillin" style="--dl:.8s;fill:var(--coral)" d="M12 2.5 14.6 9.2 21.6 9.6 16.2 14 18 21 12 17.1 6 21 7.8 14 2.4 9.6 9.4 9.2Z"/><path class="stroke" pathLength="1" style="--dl:.8s" d="M12 2.5 14.6 9.2 21.6 9.6 16.2 14 18 21 12 17.1 6 21 7.8 14 2.4 9.6 9.4 9.2Z"/></svg></div>
-      <div class="dd" data-depth="22" style="right:8%;top:20%;width:30px;height:30px"><svg viewBox="0 0 24 24"><path class="stroke" pathLength="1" style="--dl:1s" d="M12 2.5 14.6 9.2 21.6 9.6 16.2 14 18 21 12 17.1 6 21 7.8 14 2.4 9.6 9.4 9.2Z"/></svg></div>
-      <div class="dd" data-depth="-12" style="right:14%;top:30%;width:68px;height:46px"><svg viewBox="0 0 48 32"><path class="fillin" style="--dl:.5s;fill:var(--blue)" d="M9 27C3 27 2 20 7 19 6 12 15 9 18 15 21 7 32 9 31 16 38 16 38 27 32 27Z"/><path class="stroke" pathLength="1" style="--dl:.5s" d="M9 27C3 27 2 20 7 19 6 12 15 9 18 15 21 7 32 9 31 16 38 16 38 27 32 27Z"/></svg></div>
-      <div class="dd" data-depth="14" style="right:4%;top:36%;width:64px;height:64px"><svg viewBox="0 0 24 24"><path class="stroke" pathLength="1" style="--dl:1.2s" d="M12 21C5 15 2.5 11 4 7 5.5 3.5 10 3.6 12 8 14 3.6 18.5 3.5 20 7 21.5 11 19 15 12 21Z"/></svg></div>
-      <div class="dd hide-m" data-depth="-20" style="right:21%;top:72%;width:26px;height:26px"><svg viewBox="0 0 24 24"><path class="stroke" pathLength="1" style="--dl:1.3s" d="M12 1.5C13 8 16 11 22.5 12 16 13 13 16 12 22.5 11 16 8 13 1.5 12 8 11 11 8 12 1.5Z"/></svg></div>
-      <div class="dd" data-depth="20" style="right:10%;top:52%;width:26px;height:24px"><svg viewBox="0 0 24 24"><path class="fillin" style="--dl:1.4s;fill:var(--coral)" d="M12 20C5 15 2 11 4 7 6 3.5 10 4 12 8 14 4 18 3.5 20 7 22 11 19 15 12 20Z"/><path class="stroke" pathLength="1" style="--dl:1.4s" d="M12 20C5 15 2 11 4 7 6 3.5 10 4 12 8 14 4 18 3.5 20 7 22 11 19 15 12 20Z"/></svg></div>
-      <div class="dd hide-m" data-depth="10" style="right:30%;top:58%;width:12px;height:12px"><svg viewBox="0 0 12 12"><circle class="stroke" pathLength="1" style="--dl:1.5s" cx="6" cy="6" r="4"/></svg></div>
-      <div class="dd" data-depth="-16" style="right:22%;top:22%;width:24px;height:24px"><svg viewBox="0 0 24 24"><path class="fillin" style="--dl:1.1s;fill:var(--butter)" d="M12 1.5C13 8 16 11 22.5 12 16 13 13 16 12 22.5 11 16 8 13 1.5 12 8 11 11 8 12 1.5Z"/><path class="stroke" pathLength="1" style="--dl:1.1s" d="M12 1.5C13 8 16 11 22.5 12 16 13 13 16 12 22.5 11 16 8 13 1.5 12 8 11 11 8 12 1.5Z"/></svg></div>
+      <div class="dd keep-m" data-depth="-24" style="left:40%;top:9%;width:28px;height:27px"><svg viewBox="0 0 24 24"><g class="fillin" style="--dl:.4s;fill:var(--leaf)"><circle cx="12" cy="6" r="4.5"/><circle cx="18" cy="11" r="4.5"/><circle cx="15.5" cy="18" r="4.5"/><circle cx="8.5" cy="18" r="4.5"/><circle cx="6" cy="11" r="4.5"/></g><path class="stroke" pathLength="1" style="--dl:.4s" d="M10 10C12 8 15 10 13.5 12.5 12 15 9 13 10.5 11.5"/></svg></div>
+      <div class="dd hide-m" data-depth="18" style="right:34%;top:2%;width:120px;height:40px"><svg viewBox="0 0 120 40"><path class="stroke" pathLength="1" style="--dl:.6s" d="M2 38C20 10 40 4 50 14 56 20 44 26 44 18 44 10 60 4 72 12 78 16 70 22 70 15 70 6 90 2 118 10"/></svg></div>
+      <div class="dd" data-depth="-12" style="right:5%;top:30%;width:46px;height:31px"><svg viewBox="0 0 48 32"><path class="fillin" style="--dl:.5s;fill:var(--blue)" d="M9 27C3 27 2 20 7 19 6 12 15 9 18 15 21 7 32 9 31 16 38 16 38 27 32 27Z"/><path class="stroke" pathLength="1" style="--dl:.5s" d="M9 27C3 27 2 20 7 19 6 12 15 9 18 15 21 7 32 9 31 16 38 16 38 27 32 27Z"/></svg></div>
+      <div class="dd keep-m" data-depth="14" style="right:4%;top:36%;width:40px;height:40px"><svg viewBox="0 0 24 24"><path class="stroke" pathLength="1" style="--dl:1.2s" d="M12 21C5 15 2.5 11 4 7 5.5 3.5 10 3.6 12 8 14 3.6 18.5 3.5 20 7 21.5 11 19 15 12 21Z"/></svg></div>
+      <div class="dd" data-depth="-16" style="right:3%;top:24%;width:24px;height:24px"><svg viewBox="0 0 24 24"><path class="fillin" style="--dl:1.1s;fill:var(--butter)" d="M12 1.5C13 8 16 11 22.5 12 16 13 13 16 12 22.5 11 16 8 13 1.5 12 8 11 11 8 12 1.5Z"/><path class="stroke" pathLength="1" style="--dl:1.1s" d="M12 1.5C13 8 16 11 22.5 12 16 13 13 16 12 22.5 11 16 8 13 1.5 12 8 11 11 8 12 1.5Z"/></svg></div>
     </div>
 
     <div class="hero-copy">
-      <h1 class="hello" data-fr="Bonjour ! Je suis Yi-Hsuan," data-en="Hello! I'm Yi-Hsuan,">Bonjour ! Je suis Yi-Hsuan,</h1>
-      <p class="hero-line"><span data-fr="chargée marketing & projets qui aime" data-en="a marketing & project specialist who loves">chargée marketing & projets qui aime</span><br><em id="rot">construire à partir de zéro.</em></p>
+      <h1 class="hello" data-fr="Bonjour ! Je suis Yi-Hsuan," data-en="Bonjour ! I&#x27;m Yi-Hsuan,">Bonjour ! Je suis Yi-Hsuan,</h1>
+      <p class="hero-line"><span data-fr="Marketing opérationnel, CRM &amp; analytics" data-en="Marketing operations, CRM &amp; analytics">Marketing opérationnel, CRM &amp; analytics</span><br><em id="rot">Je construis le tracking à partir de zéro.</em></p>
       <div class="hero-cta">
         <a class="btn" href="#contact" data-fr="On discute ?" data-en="Let's chat">On discute ?</a>
         <a class="btn light" href="#recommendations" data-fr="Lire mes recommandations" data-en="Read my references">Lire mes recommandations</a>
@@ -506,32 +492,14 @@ button:hover .picon{transform:scale(1.08)}
     <div class="reveal">
       <h2 class="h2" data-fr="À propos" data-en="About me">À propos</h2>
       <p data-fr="Je suis taïwanaise, je vis en France depuis quatre ans et j'y ai obtenu un <strong>master Grande École à EM Strasbourg</strong>. Ce double regard franco-taïwanais, je l'utilise tous les jours pour faire le lien entre des équipes, des marchés et des façons de travailler très différentes." data-en="I'm Taiwanese, I've lived in France for four years and earned a <strong>Grande École master's at EM Strasbourg</strong>. I use this Taiwanese and French perspective every day to connect teams, markets and very different ways of working.">Je suis taïwanaise, je vis en France depuis quatre ans et j'y ai obtenu un <strong>master Grande École à EM Strasbourg</strong>. Ce double regard franco-taïwanais, je l'utilise tous les jours pour faire le lien entre des équipes, des marchés et des façons de travailler très différentes.</p>
-      <p class="hl-zone" data-fr="En <span class='circ'>5,5 ans<svg viewBox='0 0 100 40' preserveAspectRatio='none'><path pathLength='1' d='M60 4C30 0 4 8 6 22 8 36 70 40 92 26 104 16 86 2 50 5'/></svg></span>, j'ai accompagné <span class='hl'>200+ clients B2B</span>, coordonné des projets entre l'<span class='hl b'>APAC, l'EMEA et les Amériques</span>, et construit des processus marketing et des systèmes de tracking à partir de zéro. Chez UniFox, cela s'est traduit par un <span class='hl g'>taux de rebond en baisse de 52,6 %</span>." data-en="In <span class='circ'>5.5 years<svg viewBox='0 0 100 40' preserveAspectRatio='none'><path pathLength='1' d='M60 4C30 0 4 8 6 22 8 36 70 40 92 26 104 16 86 2 50 5'/></svg></span> I've supported <span class='hl'>200+ B2B clients</span>, coordinated projects across <span class='hl b'>APAC, EMEA and the Americas</span>, and built marketing processes and tracking systems from scratch. At UniFox, that meant a <span class='hl g'>52.6% drop in bounce rate</span>.">En <span class='circ'>5,5 ans<svg viewBox='0 0 100 40' preserveAspectRatio='none'><path pathLength='1' d='M60 4C30 0 4 8 6 22 8 36 70 40 92 26 104 16 86 2 50 5'/></svg></span>, j'ai accompagné <span class='hl'>200+ clients B2B</span>, coordonné des projets entre l'<span class='hl b'>APAC, l'EMEA et les Amériques</span>, et construit des processus marketing et des systèmes de tracking à partir de zéro. Chez UniFox, cela s'est traduit par un <span class='hl g'>taux de rebond en baisse de 52,6 %</span>.</p>
-      <p data-fr="Aujourd'hui, j'aimerais aider une marque en France à fluidifier sa communication entre l'Europe et l'Asie et à rendre son marketing digital plus efficace." data-en="Today, I'd like to help a brand in France communicate more smoothly between Europe and Asia and make its digital marketing more efficient.">Aujourd'hui, j'aimerais aider une marque en France à fluidifier sa communication entre l'Europe et l'Asie et à rendre son marketing digital plus efficace.</p>
+      <p class="hl-zone" data-fr="En <strong>5,5 ans</strong>, j'ai accompagné <span class='hl'>200+ clients B2B</span>, coordonné des projets entre l'<span class='hl b'>APAC, l'EMEA et les Amériques</span>, et construit des processus marketing et des systèmes de tracking à partir de zéro. Chez UniFox, cela s'est traduit par un <span class='hl g'>taux de rebond en baisse de 52,6 %</span>." data-en="In <strong>5.5 years</strong> I've supported <span class='hl'>200+ B2B clients</span>, coordinated projects across <span class='hl b'>APAC, EMEA and the Americas</span>, and built marketing processes and tracking systems from scratch. At UniFox, that meant a <span class='hl g'>52.6% drop in bounce rate</span>.">En <strong>5,5 ans</strong>, j'ai accompagné <span class='hl'>200+ clients B2B</span>, coordonné des projets entre l'<span class='hl b'>APAC, l'EMEA et les Amériques</span>, et construit des processus marketing et des systèmes de tracking à partir de zéro. Chez UniFox, cela s'est traduit par un <span class='hl g'>taux de rebond en baisse de 52,6 %</span>.</p>
+      <p data-fr="Aujourd'hui, je poursuis ma carrière en France en <strong>marketing opérationnel, CRM et analytics</strong>, en m'appuyant sur cette expérience internationale." data-en="Today, I'm building my career in France in <strong>marketing operations, CRM and analytics</strong>, drawing on that international experience.">Aujourd'hui, je poursuis ma carrière en France en <strong>marketing opérationnel, CRM et analytics</strong>, en m'appuyant sur cette expérience internationale.</p>
 
-      <div class="traits">
-        <div class="trait reveal">
-          <div class="ic"><svg viewBox="0 0 44 44"><circle cx="22" cy="22" r="19" fill="var(--butter)" opacity=".55"/><path d="M24 8 14 25H22L20 36 30 19H22Z" fill="none" stroke="var(--ink)" stroke-width="1.8" stroke-linejoin="round"/></svg></div>
-          <div><h3 data-fr="Je prends les devants <small>prise d'initiative</small>" data-en="I take the lead <small>initiative</small>">Je prends les devants <small>prise d'initiative</small></h3>
-          <p data-fr="Quand un outil ou un process manque, je le construis : tracking GA4 et GTM chez UniFox, guides d'onboarding et SOP chez Linkee." data-en="When a tool or process is missing, I build it: GA4 and GTM tracking at UniFox, onboarding guides and SOPs at Linkee.">Quand un outil ou un process manque, je le construis : tracking GA4 et GTM chez UniFox, guides d'onboarding et SOP chez Linkee.</p></div>
-        </div>
-        <div class="trait reveal">
-          <div class="ic"><svg viewBox="0 0 44 44"><circle cx="22" cy="22" r="19" fill="var(--blue)" opacity=".45"/><path d="M11 30 18 22 24 26 33 14M28 14H33V19" fill="none" stroke="var(--ink)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-          <div><h3 data-fr="Je propose des solutions <small>force de proposition</small>" data-en="I bring solutions <small>proactive proposals</small>">Je propose des solutions <small>force de proposition</small></h3>
-          <p data-fr="J'observe le parcours utilisateur, je trouve où il bloque et je propose un correctif chiffré, comme chez UniFox où la conversion iOS est passée de 58,82 % à 95,2 %." data-en="I look at the user journey, find where it breaks and propose a measurable fix, like at UniFox where iOS conversion rose from 58.82% to 95.2%.">J'observe le parcours utilisateur, je trouve où il bloque et je propose un correctif chiffré, comme chez UniFox où la conversion iOS est passée de 58,82 % à 95,2 %.</p></div>
-        </div>
-        <div class="trait reveal">
-          <div class="ic"><svg viewBox="0 0 44 44"><circle cx="22" cy="22" r="19" fill="var(--coral)" opacity=".35"/><path d="M22 32C14 26 11 22 13 17.5 15 13.5 20 14 22 18 24 14 29 13.5 31 17.5 33 22 30 26 22 32Z" fill="none" stroke="var(--ink)" stroke-width="1.8" stroke-linejoin="round"/></svg></div>
-          <div><h3 data-fr="Je crée des liens durables <small>relation client</small>" data-en="I build lasting bonds <small>client relations</small>">Je crée des liens durables <small>relation client</small></h3>
-          <p data-fr="J'aime connaître mes clients et apporter de la valeur à leur activité sur la durée, du premier devis jusqu'à la résolution d'un litige." data-en="I enjoy getting to know my clients and adding value to their business over time, from the first quote to settling a dispute.">J'aime connaître mes clients et apporter de la valeur à leur activité sur la durée, du premier devis jusqu'à la résolution d'un litige.</p></div>
-        </div>
-      </div>
     </div>
 
     <div class="photo-card reveal" style="--d:.15s">
-      <svg class="spark" viewBox="0 0 24 24" fill="var(--butter)" stroke="var(--ink)" stroke-width="1.2"><use href="#i-spark"/></svg>
       <div class="pc-in"><div class="frame zoom"><img src="photo.jpg" alt="Yi-Hsuan Chiu" id="photo"></div>
-      <div class="tag-note" data-fr="c'est moi !" data-en="that's me!">c'est moi !</div></div>
+      <div class="tag-note" data-fr="hello" data-en="hello">hello</div></div>
       <div class="contacts">
         <a href="mailto:c.hsuann@gmail.com">c.hsuann@gmail.com</a>
         <a href="tel:+33635713264">+33 6 35 71 32 64</a>
@@ -539,6 +507,24 @@ button:hover .picon{transform:scale(1.08)}
         <span data-fr="Permis de travail valide" data-en="Valid work permit">Permis de travail valide</span>
       </div>
     </div>
+  </div>
+
+  <div class="traits">
+    <div class="trait reveal">
+      <div class="ic"><svg viewBox="0 0 44 44"><circle cx="22" cy="22" r="19" fill="var(--butter)" opacity=".55"/><path d="M24 8 14 25H22L20 36 30 19H22Z" fill="none" stroke="var(--ink)" stroke-width="1.8" stroke-linejoin="round"/></svg></div>
+      <div><h3 data-fr="Je prends les devants <small>prise d'initiative</small>" data-en="I take the lead <small>initiative</small>">Je prends les devants <small>prise d'initiative</small></h3>
+      <p data-fr="Quand un outil ou un process manque, je le construis : tracking GA4 et GTM chez UniFox, guides d'onboarding et SOP chez Linkee." data-en="When a tool or process is missing, I build it: GA4 and GTM tracking at UniFox, onboarding guides and SOPs at Linkee.">Quand un outil ou un process manque, je le construis : tracking GA4 et GTM chez UniFox, guides d'onboarding et SOP chez Linkee.</p></div>
+        </div>
+    <div class="trait reveal">
+      <div class="ic"><svg viewBox="0 0 44 44"><circle cx="22" cy="22" r="19" fill="var(--blue)" opacity=".45"/><path d="M11 30 18 22 24 26 33 14M28 14H33V19" fill="none" stroke="var(--ink)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+      <div><h3 data-fr="Je propose des solutions <small>force de proposition</small>" data-en="I bring solutions <small>proactive proposals</small>">Je propose des solutions <small>force de proposition</small></h3>
+      <p data-fr="J'observe le parcours utilisateur, je trouve où il bloque et je propose un correctif chiffré, comme chez UniFox où la conversion iOS est passée de 58,82 % à 95,2 %." data-en="I look at the user journey, find where it breaks and propose a measurable fix, like at UniFox where iOS conversion rose from 58.82% to 95.2%.">J'observe le parcours utilisateur, je trouve où il bloque et je propose un correctif chiffré, comme chez UniFox où la conversion iOS est passée de 58,82 % à 95,2 %.</p></div>
+        </div>
+    <div class="trait reveal">
+      <div class="ic"><svg viewBox="0 0 44 44"><circle cx="22" cy="22" r="19" fill="var(--coral)" opacity=".35"/><path d="M22 32C14 26 11 22 13 17.5 15 13.5 20 14 22 18 24 14 29 13.5 31 17.5 33 22 30 26 22 32Z" fill="none" stroke="var(--ink)" stroke-width="1.8" stroke-linejoin="round"/></svg></div>
+      <div><h3 data-fr="Je crée des liens durables <small>relation client</small>" data-en="I build lasting bonds <small>client relations</small>">Je crée des liens durables <small>relation client</small></h3>
+      <p data-fr="J'aime connaître mes clients et apporter de la valeur à leur activité sur la durée, du premier devis jusqu'à la résolution d'un litige." data-en="I enjoy getting to know my clients and adding value to their business over time, from the first quote to settling a dispute.">J'aime connaître mes clients et apporter de la valeur à leur activité sur la durée, du premier devis jusqu'à la résolution d'un litige.</p></div>
+        </div>
   </div>
 </section>
 
@@ -583,12 +569,11 @@ button:hover .picon{transform:scale(1.08)}
         <div class="job-actions"><button class="toggle" aria-expanded="false"><span class="pm"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 1v10M1 6h10"/></svg></span><span class="tl">Voir le détail</span></button><a class="case" href="portfolio.html#community"><span data-fr="Voir le projet dans le portfolio" data-en="See the project in my portfolio">Voir le projet dans le portfolio</span></a></div>
         <div class="detail"><div><div class="detail-in">
           <ul>
-            <li data-fr="&lt;strong&gt;Communauté bénévole&lt;/strong&gt; : 550+ bénévoles animés, avec l&#x27;onboarding d&#x27;environ 10 nouveaux par semaine et un suivi individualisé" data-en="&lt;strong&gt;Volunteer community&lt;/strong&gt;: 550+ volunteers, onboarding about 10 new ones a week with individual follow-up"><strong>Communauté bénévole</strong> : 550+ bénévoles animés, avec l'onboarding d'environ 10 nouveaux par semaine et un suivi individualisé</li>
-            <li data-fr="&lt;span class=&#x27;why&#x27;&gt;initiative&lt;/span&gt;Création et optimisation des guides d&#x27;onboarding des Linkers et des SOP (prospection, ateliers), et création de &lt;strong&gt;jeux pour les stands&lt;/strong&gt; autour des dates DLC / DDM pour sensibiliser au gaspillage alimentaire" data-en="&lt;span class=&#x27;why&#x27;&gt;initiative&lt;/span&gt;Created and improved onboarding guides for Linkers and SOPs (prospection, workshops), and designed &lt;strong&gt;stand games&lt;/strong&gt; on use-by and best-before dates to raise awareness of food waste"><span class='why'>initiative</span>Création et optimisation des guides d'onboarding des Linkers et des SOP (prospection, ateliers), et création de <strong>jeux pour les stands</strong> autour des dates DLC / DDM pour sensibiliser au gaspillage alimentaire</li>
-            <li data-fr="&lt;strong&gt;Événements &amp;amp; inscriptions&lt;/strong&gt; : 30+ événements organisés (ateliers cuisine, stands, collectes, sorties culturelles proposées par les partenaires), avec la gestion des inscriptions sur &lt;strong&gt;Billetweb&lt;/strong&gt;" data-en="&lt;strong&gt;Events &amp;amp; registrations&lt;/strong&gt;: 30+ events organised (cooking workshops, stands, food drives, partner-led cultural outings), with registrations managed on &lt;strong&gt;Billetweb&lt;/strong&gt;"><strong>Événements &amp; inscriptions</strong> : 30+ événements organisés (ateliers cuisine, stands, collectes, sorties culturelles proposées par les partenaires), avec la gestion des inscriptions sur <strong>Billetweb</strong></li>
-            <li data-fr="&lt;span class=&#x27;why&#x27;&gt;terrain&lt;/span&gt;&lt;strong&gt;Prospection auprès des commerçants&lt;/strong&gt; : premier contact, identification et remontée des enseignes intéressées, puis planification des tournées suivantes menées avec les bénévoles" data-en="&lt;span class=&#x27;why&#x27;&gt;on the ground&lt;/span&gt;&lt;strong&gt;Prospection with local shops&lt;/strong&gt;: first contact, identifying and flagging interested outlets, then planning the follow-up rounds run with volunteers"><span class='why'>terrain</span><strong>Prospection auprès des commerçants</strong> : premier contact, identification et remontée des enseignes intéressées, puis planification des tournées suivantes menées avec les bénévoles</li>
-            <li data-fr="&lt;strong&gt;Distributions &amp;amp; bénéficiaires&lt;/strong&gt; : environ &lt;strong&gt;1 000 personnes servies chaque semaine&lt;/strong&gt; sur deux distributions, et accompagnement individuel de 10 à 20 personnes par jour par téléphone, messagerie, email et en face à face" data-en="&lt;strong&gt;Distributions &amp;amp; beneficiaries&lt;/strong&gt;: around &lt;strong&gt;1,000 people served each week&lt;/strong&gt; across two distributions, plus individual support for 10 to 20 people a day by phone, messaging, email and face to face"><strong>Distributions &amp; bénéficiaires</strong> : environ <strong>1 000 personnes servies chaque semaine</strong> sur deux distributions, et accompagnement individuel de 10 à 20 personnes par jour par téléphone, messagerie, email et en face à face</li>
-            <li data-fr="&lt;strong&gt;Communication &amp;amp; données&lt;/strong&gt; : newsletter hebdomadaire (Sarbacane) vers &lt;strong&gt;5 000+ bénéficiaires inscrits&lt;/strong&gt;, envois automatisés via Google Apps Script, segmentation des abonnés actifs et suivi des données sur Airtable" data-en="&lt;strong&gt;Communication &amp;amp; data&lt;/strong&gt;: weekly newsletter (Sarbacane) to &lt;strong&gt;5,000+ registered beneficiaries&lt;/strong&gt;, automated sends with Google Apps Script, segmentation of active subscribers and data tracked in Airtable"><strong>Communication &amp; données</strong> : newsletter hebdomadaire (Sarbacane) vers <strong>5 000+ bénéficiaires inscrits</strong>, envois automatisés via Google Apps Script, segmentation des abonnés actifs et suivi des données sur Airtable</li>
+            <li data-fr="&lt;strong&gt;Communauté &amp;amp; opérations&lt;/strong&gt; : 550+ bénévoles animés, environ 10 nouveaux onboardés par semaine, et 2 distributions hebdomadaires servant environ 1 000 personnes" data-en="&lt;strong&gt;Community &amp;amp; operations&lt;/strong&gt;: 550+ volunteers managed, about 10 new ones onboarded each week, and 2 weekly distributions serving around 1,000 people"><strong>Communauté &amp; opérations</strong> : 550+ bénévoles animés, environ 10 nouveaux onboardés par semaine, et 2 distributions hebdomadaires servant environ 1 000 personnes</li>
+            <li data-fr="&lt;strong&gt;Communication &amp;amp; CRM&lt;/strong&gt; : newsletter hebdomadaire (Sarbacane) vers 5 000+ bénéficiaires inscrits, envois automatisés via Google Apps Script, segmentation des abonnés actifs et base de contacts suivie sur Airtable" data-en="&lt;strong&gt;Communication &amp;amp; CRM&lt;/strong&gt;: weekly newsletter (Sarbacane) to 5,000+ registered beneficiaries, automated sends with Google Apps Script, segmentation of active subscribers and a contact base tracked in Airtable"><strong>Communication &amp; CRM</strong> : newsletter hebdomadaire (Sarbacane) vers 5 000+ bénéficiaires inscrits, envois automatisés via Google Apps Script, segmentation des abonnés actifs et base de contacts suivie sur Airtable</li>
+            <li data-fr="&lt;span class=&#x27;why&#x27;&gt;initiative&lt;/span&gt;&lt;strong&gt;Process &amp;amp; outils&lt;/strong&gt; : création et optimisation des guides d&#x27;onboarding des Linkers et des SOP (prospection, ateliers), et jeux de sensibilisation aux dates DLC / DDM pour les stands" data-en="&lt;span class=&#x27;why&#x27;&gt;initiative&lt;/span&gt;&lt;strong&gt;Process &amp;amp; tools&lt;/strong&gt;: created and improved the Linkers onboarding guides and SOPs (prospection, workshops), plus awareness games on use-by and best-before dates for the stands"><span class='why'>initiative</span><strong>Process &amp; outils</strong> : création et optimisation des guides d'onboarding des Linkers et des SOP (prospection, ateliers), et jeux de sensibilisation aux dates DLC / DDM pour les stands</li>
+            <li data-fr="&lt;strong&gt;Événements &amp;amp; inscriptions&lt;/strong&gt; : 30+ événements organisés (ateliers cuisine, stands, collectes, sorties culturelles des partenaires), inscriptions gérées sur Billetweb" data-en="&lt;strong&gt;Events &amp;amp; registrations&lt;/strong&gt;: 30+ events organised (cooking workshops, stands, food drives, partner-led cultural outings), registrations managed on Billetweb"><strong>Événements &amp; inscriptions</strong> : 30+ événements organisés (ateliers cuisine, stands, collectes, sorties culturelles des partenaires), inscriptions gérées sur Billetweb</li>
+            <li data-fr="&lt;span class=&#x27;why&#x27;&gt;terrain&lt;/span&gt;&lt;strong&gt;Prospection commerçants&lt;/strong&gt; : premier contact, identification et remontée des enseignes intéressées, puis planification des tournées menées avec les bénévoles" data-en="&lt;span class=&#x27;why&#x27;&gt;on the ground&lt;/span&gt;&lt;strong&gt;Shop prospection&lt;/strong&gt;: first contact, identifying and flagging interested outlets, then planning the rounds run with volunteers"><span class='why'>terrain</span><strong>Prospection commerçants</strong> : premier contact, identification et remontée des enseignes intéressées, puis planification des tournées menées avec les bénévoles</li>
             <li data-fr="&lt;strong&gt;Programme KEDGE&lt;/strong&gt; : bénévoles étudiants gérés de bout en bout, de l&#x27;information et la sélection jusqu&#x27;aux entretiens, à l&#x27;onboarding et aux attestations" data-en="&lt;strong&gt;KEDGE programme&lt;/strong&gt;: student volunteers managed end to end, from information and screening through to interviews, onboarding and attestations"><strong>Programme KEDGE</strong> : bénévoles étudiants gérés de bout en bout, de l'information et la sélection jusqu'aux entretiens, à l'onboarding et aux attestations</li>
           </ul>
           <p class="stack"><span data-fr="&lt;b&gt;Outils :&lt;/b&gt; " data-en="&lt;b&gt;Tools:&lt;/b&gt; "><b>Outils :</b> </span>Sarbacane, Billetweb, Google Apps Script, Airtable, Notion, Google Drive, WhatsApp</p>
@@ -601,12 +586,13 @@ button:hover .picon{transform:scale(1.08)}
       <div>
         <h3 data-fr="Chargée de Projets Communication" data-en="Communications Project Specialist">Chargée de Projets Communication</h3>
         <div class="co"><img src="hotel_logo.webp" alt="">Hôtel Le Manoir De Bellerive</div>
-        <p class="lead" data-fr="Identité de marque digitale et contenus &lt;span class=&#x27;hl b&#x27;&gt;bilingues FR / EN&lt;/span&gt; pour positionner un hôtel 4★ auprès d&#x27;une clientèle premium européenne et anglophone." data-en="Digital brand identity and &lt;span class=&#x27;hl b&#x27;&gt;bilingual FR / EN&lt;/span&gt; content to position a 4★ hotel with premium European and English-speaking travellers.">Identité de marque digitale et contenus <span class='hl b'>bilingues FR / EN</span> pour positionner un hôtel 4★ auprès d'une clientèle premium européenne et anglophone.</p>
+        <p class="lead" data-fr="Positionnement d&#x27;un &lt;strong&gt;manoir 4★ en Dordogne&lt;/strong&gt; auprès des voyageurs anglophones qui rêvent de la vie de domaine à la française : patrimoine, vignobles et lieu de tournage réunis dans une même promesse, en FR et en EN." data-en="Positioned a &lt;strong&gt;4★ manor house in the Dordogne&lt;/strong&gt; for English-speaking travellers who dream of life on a French estate: heritage, vineyards and a film location brought together into one promise, in French and English.">Positionnement d'un <strong>manoir 4★ en Dordogne</strong> auprès des voyageurs anglophones qui rêvent de la vie de domaine à la française : patrimoine, vignobles et lieu de tournage réunis dans une même promesse, en FR et en EN.</p>
         <div class="job-actions"><button class="toggle" aria-expanded="false"><span class="pm"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 1v10M1 6h10"/></svg></span><span class="tl">Voir le détail</span></button><a class="case" href="portfolio.html#brand"><span data-fr="Voir le projet dans le portfolio" data-en="See the project in my portfolio">Voir le projet dans le portfolio</span></a></div>
         <div class="detail"><div><div class="detail-in">
           <ul>
-            <li data-fr="Analyse de marché et définition de personas pour une clientèle premium européenne et anglophone, avec localisation B2C des contenus" data-en="Market analysis and personas for premium European and English-speaking travellers, with B2C content localisation">Analyse de marché et définition de personas pour une clientèle premium européenne et anglophone, avec localisation B2C des contenus</li>
-            <li data-fr="&lt;span class=&#x27;why&#x27;&gt;proposition&lt;/span&gt;Recommandation complète livrée : identité visuelle, maquette Instagram, ligne éditoriale FR / EN, exemples de Reels et axes de mesure" data-en="&lt;span class=&#x27;why&#x27;&gt;proposal&lt;/span&gt;Delivered a full recommendation: visual identity, Instagram mockup, FR / EN editorial line, Reels examples and measurement axes"><span class='why'>proposition</span>Recommandation complète livrée : identité visuelle, maquette Instagram, ligne éditoriale FR / EN, exemples de Reels et axes de mesure</li>
+            <li data-fr="&lt;strong&gt;Positionnement&lt;/strong&gt; : promesse construite sur les trois atouts du domaine, l&#x27;art de vivre à la française, l&#x27;œnotourisme en Dordogne et le passé de &lt;strong&gt;lieu de tournage&lt;/strong&gt; du manoir" data-en="&lt;strong&gt;Positioning&lt;/strong&gt;: a promise built on the estate&#x27;s three assets, the French art of living, wine tourism in the Dordogne and the manor&#x27;s past as a &lt;strong&gt;film location&lt;/strong&gt;"><strong>Positionnement</strong> : promesse construite sur les trois atouts du domaine, l'art de vivre à la française, l'œnotourisme en Dordogne et le passé de <strong>lieu de tournage</strong> du manoir</li>
+            <li data-fr="&lt;strong&gt;Cible&lt;/strong&gt; : voyageurs anglophones CSP+ en quête d&#x27;une expérience de domaine authentique, séjours longs et décisions influencées par les avis ; personas et messages localisés pour ce public" data-en="&lt;strong&gt;Audience&lt;/strong&gt;: affluent English-speaking travellers looking for an authentic estate experience, long stays and review-driven decisions; personas and messaging localised for them"><strong>Cible</strong> : voyageurs anglophones CSP+ en quête d'une expérience de domaine authentique, séjours longs et décisions influencées par les avis ; personas et messages localisés pour ce public</li>
+            <li data-fr="&lt;span class=&#x27;why&#x27;&gt;proposition&lt;/span&gt;&lt;strong&gt;Livrable&lt;/strong&gt; : recommandation complète remise au client, identité visuelle, maquette Instagram, ligne éditoriale FR / EN, exemples de Reels et axes de mesure" data-en="&lt;span class=&#x27;why&#x27;&gt;proposal&lt;/span&gt;&lt;strong&gt;Deliverable&lt;/strong&gt;: a full recommendation handed to the client, visual identity, Instagram mockup, FR / EN editorial line, Reels examples and measurement axes"><span class='why'>proposition</span><strong>Livrable</strong> : recommandation complète remise au client, identité visuelle, maquette Instagram, ligne éditoriale FR / EN, exemples de Reels et axes de mesure</li>
           </ul>
           <p class="stack"><span data-fr="&lt;b&gt;Outils :&lt;/b&gt; " data-en="&lt;b&gt;Tools:&lt;/b&gt; "><b>Outils :</b> </span>Figma, Canva, Meta Business Suite</p>
           
@@ -622,12 +608,10 @@ button:hover .picon{transform:scale(1.08)}
         <div class="job-actions"><button class="toggle" aria-expanded="true"><span class="pm"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 1v10M1 6h10"/></svg></span><span class="tl">Voir le détail</span></button><a class="case" href="portfolio.html#strategy"><span data-fr="Voir le projet dans le portfolio" data-en="See the project in my portfolio">Voir le projet dans le portfolio</span></a></div>
         <div class="detail"><div><div class="detail-in">
           <ul>
-            <li data-fr="&lt;span class=&#x27;why&#x27;&gt;de zéro&lt;/span&gt;&lt;strong&gt;Tracking &amp;amp; mesure&lt;/strong&gt; : configuration de &lt;strong&gt;GA4 et Google Tag Manager&lt;/strong&gt; sur une plateforme sans mesure fiable, puis tableaux de bord KPI et reporting mensuel avec recommandations" data-en="&lt;span class=&#x27;why&#x27;&gt;from scratch&lt;/span&gt;&lt;strong&gt;Tracking &amp;amp; measurement&lt;/strong&gt;: set up &lt;strong&gt;GA4 and Google Tag Manager&lt;/strong&gt; on a platform with no reliable measurement, then KPI dashboards and monthly reporting with recommendations"><span class='why'>de zéro</span><strong>Tracking &amp; mesure</strong> : configuration de <strong>GA4 et Google Tag Manager</strong> sur une plateforme sans mesure fiable, puis tableaux de bord KPI et reporting mensuel avec recommandations</li>
-            <li data-fr="&lt;strong&gt;Données &amp;amp; insights&lt;/strong&gt; : requêtes &lt;strong&gt;SQL&lt;/strong&gt; pour extraire la performance des bots de trading IA et les nouvelles inscriptions clients, et en tirer les arguments et les chiffres des campagnes" data-en="&lt;strong&gt;Data &amp;amp; insights&lt;/strong&gt;: &lt;strong&gt;SQL&lt;/strong&gt; queries to pull AI trading bot performance and new client sign-ups, and turn them into campaign angles and figures"><strong>Données &amp; insights</strong> : requêtes <strong>SQL</strong> pour extraire la performance des bots de trading IA et les nouvelles inscriptions clients, et en tirer les arguments et les chiffres des campagnes</li>
-            <li data-fr="&lt;strong&gt;Campagnes payantes&lt;/strong&gt; : pilotage des campagnes APAC / EMEA sur &lt;strong&gt;Google Ads, Meta, TikTok et X&lt;/strong&gt;, du ciblage au reporting, auprès d&#x27;audiences françaises (35 %) et internationales (65 %)" data-en="&lt;strong&gt;Paid campaigns&lt;/strong&gt;: led APAC / EMEA campaigns on &lt;strong&gt;Google Ads, Meta, TikTok and X&lt;/strong&gt;, from targeting to reporting, for French (35%) and international (65%) audiences"><strong>Campagnes payantes</strong> : pilotage des campagnes APAC / EMEA sur <strong>Google Ads, Meta, TikTok et X</strong>, du ciblage au reporting, auprès d'audiences françaises (35 %) et internationales (65 %)</li>
-            <li data-fr="&lt;span class=&#x27;why&#x27;&gt;budget limité&lt;/span&gt;&lt;strong&gt;SEO &amp;amp; contenus&lt;/strong&gt; : mots-clés identifiés dans Google Ads pour optimiser les campagnes, puis repris dans les contenus organiques publiés sur les &lt;strong&gt;5 plateformes gérées&lt;/strong&gt; (LinkedIn, Instagram, Facebook, X, TikTok), avec suivi de l&#x27;indexation, des requêtes et des positions dans &lt;strong&gt;Google Search Console&lt;/strong&gt;" data-en="&lt;span class=&#x27;why&#x27;&gt;limited budget&lt;/span&gt;&lt;strong&gt;SEO &amp;amp; content&lt;/strong&gt;: keywords identified in Google Ads to optimise the campaigns, then reused in the organic content published across the &lt;strong&gt;5 platforms I managed&lt;/strong&gt; (LinkedIn, Instagram, Facebook, X, TikTok), with indexing, queries and rankings tracked in &lt;strong&gt;Google Search Console&lt;/strong&gt;"><span class='why'>budget limité</span><strong>SEO &amp; contenus</strong> : mots-clés identifiés dans Google Ads pour optimiser les campagnes, puis repris dans les contenus organiques publiés sur les <strong>5 plateformes gérées</strong> (LinkedIn, Instagram, Facebook, X, TikTok), avec suivi de l'indexation, des requêtes et des positions dans <strong>Google Search Console</strong></li>
-            <li data-fr="&lt;strong&gt;Parcours client &amp;amp; UX&lt;/strong&gt; : analyse du comportement utilisateur et cartographie du parcours, de la découverte à la mesure finale, avec PostHog (&lt;strong&gt;heatmaps&lt;/strong&gt;, replays de sessions) et GA4, taux de rebond réduit de &lt;strong&gt;52,6 %&lt;/strong&gt;" data-en="&lt;strong&gt;Customer journey &amp;amp; UX&lt;/strong&gt;: analysed user behaviour and mapped the journey from discovery to final measurement with PostHog (&lt;strong&gt;heatmaps&lt;/strong&gt;, session replays) and GA4, bounce rate cut by &lt;strong&gt;52.6%&lt;/strong&gt;"><strong>Parcours client &amp; UX</strong> : analyse du comportement utilisateur et cartographie du parcours, de la découverte à la mesure finale, avec PostHog (<strong>heatmaps</strong>, replays de sessions) et GA4, taux de rebond réduit de <strong>52,6 %</strong></li>
-            <li data-fr="&lt;span class=&#x27;why&#x27;&gt;proposition&lt;/span&gt;&lt;strong&gt;Conversion&lt;/strong&gt; : refonte d&#x27;une page d&#x27;atterrissage après analyse du comportement mobile, &lt;strong&gt;conversion iOS de 58,82 % à 95,2 %&lt;/strong&gt; et &lt;strong&gt;53,52 % de conversion&lt;/strong&gt; sur Google Ads" data-en="&lt;span class=&#x27;why&#x27;&gt;proposal&lt;/span&gt;&lt;strong&gt;Conversion&lt;/strong&gt;: redesigned a landing page after analysing mobile behaviour, &lt;strong&gt;iOS conversion from 58.82% to 95.2%&lt;/strong&gt; and &lt;strong&gt;53.52% conversion&lt;/strong&gt; on Google Ads"><span class='why'>proposition</span><strong>Conversion</strong> : refonte d'une page d'atterrissage après analyse du comportement mobile, <strong>conversion iOS de 58,82 % à 95,2 %</strong> et <strong>53,52 % de conversion</strong> sur Google Ads</li>
+            <li data-fr="&lt;span class=&#x27;why&#x27;&gt;proposition&lt;/span&gt;&lt;strong&gt;Analyse &amp;amp; conversion&lt;/strong&gt; : cartographie du parcours client, de la découverte à la mesure finale (PostHog, heatmaps et replays de sessions, et GA4), puis refonte d&#x27;une page d&#x27;atterrissage à partir du comportement mobile observé, &lt;strong&gt;conversion iOS de 58,82 % à 95,2 %&lt;/strong&gt;, &lt;strong&gt;53,52 % de conversion&lt;/strong&gt; sur Google Ads et &lt;strong&gt;taux de rebond réduit de 52,6 %&lt;/strong&gt;" data-en="&lt;span class=&#x27;why&#x27;&gt;proposal&lt;/span&gt;&lt;strong&gt;Analysis &amp;amp; conversion&lt;/strong&gt;: mapped the customer journey from discovery to final measurement (PostHog, heatmaps and session replays, and GA4), then redesigned a landing page from the mobile behaviour observed, &lt;strong&gt;iOS conversion from 58.82% to 95.2%&lt;/strong&gt;, &lt;strong&gt;53.52% conversion&lt;/strong&gt; on Google Ads and &lt;strong&gt;bounce rate cut by 52.6%&lt;/strong&gt;"><span class='why'>proposition</span><strong>Analyse &amp; conversion</strong> : cartographie du parcours client, de la découverte à la mesure finale (PostHog, heatmaps et replays de sessions, et GA4), puis refonte d'une page d'atterrissage à partir du comportement mobile observé, <strong>conversion iOS de 58,82 % à 95,2 %</strong>, <strong>53,52 % de conversion</strong> sur Google Ads et <strong>taux de rebond réduit de 52,6 %</strong></li>
+            <li data-fr="&lt;span class=&#x27;why&#x27;&gt;de zéro&lt;/span&gt;&lt;strong&gt;Tracking &amp;amp; données&lt;/strong&gt; : GA4 et Google Tag Manager configurés sur une plateforme sans mesure fiable, tableaux de bord KPI, reporting mensuel et requêtes SQL (performance des bots de trading IA, nouvelles inscriptions clients)" data-en="&lt;span class=&#x27;why&#x27;&gt;from scratch&lt;/span&gt;&lt;strong&gt;Tracking &amp;amp; data&lt;/strong&gt;: GA4 and Google Tag Manager set up on a platform with no reliable measurement, KPI dashboards, monthly reporting and SQL queries (AI trading bot performance, new client sign-ups)"><span class='why'>de zéro</span><strong>Tracking &amp; données</strong> : GA4 et Google Tag Manager configurés sur une plateforme sans mesure fiable, tableaux de bord KPI, reporting mensuel et requêtes SQL (performance des bots de trading IA, nouvelles inscriptions clients)</li>
+            <li data-fr="&lt;strong&gt;Campagnes payantes&lt;/strong&gt; : APAC / EMEA sur Google Ads, Meta, TikTok et X, du ciblage au reporting, auprès d&#x27;audiences françaises (35 %) et internationales (65 %)" data-en="&lt;strong&gt;Paid campaigns&lt;/strong&gt;: APAC / EMEA on Google Ads, Meta, TikTok and X, from targeting to reporting, for French (35%) and international (65%) audiences"><strong>Campagnes payantes</strong> : APAC / EMEA sur Google Ads, Meta, TikTok et X, du ciblage au reporting, auprès d'audiences françaises (35 %) et internationales (65 %)</li>
+            <li data-fr="&lt;span class=&#x27;why&#x27;&gt;budget limité&lt;/span&gt;&lt;strong&gt;SEO &amp;amp; contenus&lt;/strong&gt; : mots-clés identifiés dans Google Ads, repris dans les contenus organiques des 5 plateformes gérées (LinkedIn, Instagram, Facebook, X, TikTok), avec suivi de l&#x27;indexation et des positions dans Google Search Console" data-en="&lt;span class=&#x27;why&#x27;&gt;limited budget&lt;/span&gt;&lt;strong&gt;SEO &amp;amp; content&lt;/strong&gt;: keywords identified in Google Ads, reused in the organic content of the 5 platforms I managed (LinkedIn, Instagram, Facebook, X, TikTok), with indexing and rankings tracked in Google Search Console"><span class='why'>budget limité</span><strong>SEO &amp; contenus</strong> : mots-clés identifiés dans Google Ads, repris dans les contenus organiques des 5 plateformes gérées (LinkedIn, Instagram, Facebook, X, TikTok), avec suivi de l'indexation et des positions dans Google Search Console</li>
             <li data-fr="&lt;strong&gt;Événement&lt;/strong&gt; : participation à un salon tech international" data-en="&lt;strong&gt;Event&lt;/strong&gt;: took part in an international tech trade show"><strong>Événement</strong> : participation à un salon tech international</li>
           </ul>
           <p class="stack"><span data-fr="&lt;b&gt;Outils :&lt;/b&gt; " data-en="&lt;b&gt;Tools:&lt;/b&gt; "><b>Outils :</b> </span>GA4, Google Tag Manager, Google Search Console, PostHog, Tableau, SQL, Google Ads, Meta Ads, TikTok Ads, X Ads, Figma, CapCut</p>
@@ -698,7 +682,7 @@ button:hover .picon{transform:scale(1.08)}
   <h2 class="h2 reveal" data-fr="Compétences & outils" data-en="Skills & tools">Compétences & outils</h2>
   <div class="cols">
     <div class="col reveal">
-      <h3><svg viewBox="0 0 24 24" fill="var(--leaf)"><use href="#i-spark"/></svg><span data-fr="Compétences" data-en="Skills">Compétences</span></h3>
+      <h3><span data-fr="Compétences" data-en="Skills">Compétences</span></h3>
       <div class="grp" data-fr="marketing & CRM" data-en="marketing & CRM">marketing & CRM</div>
       <ul><li data-fr="Gestion de campagnes" data-en="Campaign management">Gestion de campagnes</li><li data-fr="CRM B2B / B2C" data-en="B2B / B2C CRM">CRM B2B / B2C</li><li data-fr="Automatisation des workflows" data-en="Workflow automation">Automatisation des workflows</li><li data-fr="Segmentation & base de contacts" data-en="Segmentation & contact database">Segmentation & base de contacts</li><li data-fr="Publipostage (ERP, Excel, Word)" data-en="Mail merge (ERP, Excel, Word)">Publipostage (ERP, Excel, Word)</li><li data-fr="Stratégie go-to-market" data-en="Go-to-market strategy">Stratégie go-to-market</li></ul>
       <div class="grp" data-fr="analyse" data-en="analytics">analyse</div>
@@ -707,7 +691,7 @@ button:hover .picon{transform:scale(1.08)}
       <ul><li data-fr="Gestion de projet" data-en="Project management">Gestion de projet</li><li data-fr="Coordination APAC / EMEA" data-en="APAC / EMEA coordination">Coordination APAC / EMEA</li><li data-fr="Suivi de portefeuille B2B" data-en="B2B account management">Suivi de portefeuille B2B</li></ul>
     </div>
     <div class="col reveal" style="--d:.08s">
-      <h3><svg viewBox="0 0 24 24" fill="var(--blue)"><use href="#i-spark"/></svg><span data-fr="Outils" data-en="Tools">Outils</span></h3>
+      <h3><span data-fr="Outils" data-en="Tools">Outils</span></h3>
       <div class="grp">data & tracking</div>
       <ul><li>GA4, Google Tag Manager</li><li>PostHog, Tableau</li><li>SQL, Excel / Power Query</li></ul>
       <div class="grp" data-fr="CRM & automatisation" data-en="CRM & automation">CRM & automatisation</div>
@@ -716,7 +700,7 @@ button:hover .picon{transform:scale(1.08)}
       <ul><li>Figma, Canva, CapCut</li><li>WordPress, HTML / CSS</li><li>Notion, Jira</li></ul>
     </div>
     <div class="col reveal" style="--d:.16s">
-      <h3><svg viewBox="0 0 24 24" fill="var(--coral)"><use href="#i-spark"/></svg><span data-fr="Langues" data-en="Languages">Langues</span></h3>
+      <h3><span data-fr="Langues" data-en="Languages">Langues</span></h3>
       <ul>
         <li data-fr="Mandarin & taïwanais <span class='dots'><i class='f'></i><i class='f'></i><i class='f'></i><i class='f'></i><i class='f'></i></span><br><small>langue maternelle</small>" data-en="Mandarin & Taiwanese <span class='dots'><i class='f'></i><i class='f'></i><i class='f'></i><i class='f'></i><i class='f'></i></span><br><small>native</small>">Mandarin & taïwanais <span class='dots'><i class='f'></i><i class='f'></i><i class='f'></i><i class='f'></i><i class='f'></i></span><br><small>langue maternelle</small></li>
         <li data-fr="Anglais <span class='dots'><i class='f'></i><i class='f'></i><i class='f'></i><i class='f'></i><i></i></span><br><small>C1, 2,5 ans en entreprise américaine</small>" data-en="English <span class='dots'><i class='f'></i><i class='f'></i><i class='f'></i><i class='f'></i><i></i></span><br><small>C1, 2.5 years in a US company</small>">Anglais <span class='dots'><i class='f'></i><i class='f'></i><i class='f'></i><i class='f'></i><i></i></span><br><small>C1, 2,5 ans en entreprise américaine</small></li>
@@ -725,7 +709,7 @@ button:hover .picon{transform:scale(1.08)}
       </ul>
     </div>
     <div class="col reveal" style="--d:.24s">
-      <h3><svg viewBox="0 0 24 24" fill="var(--butter)"><use href="#i-spark"/></svg>Certifications</h3>
+      <h3>Certifications</h3>
       <ul><li>Google Analytics</li><li>Amazon Ads Retail</li><li>Marketing Analytics</li><li>Data Analysis with Spreadsheets & SQL</li><li>Scrum</li><li>CFORCSR© (RSE)</li><li>Data Culture Certificate</li></ul>
     </div>
   </div>
@@ -742,7 +726,7 @@ button:hover .picon{transform:scale(1.08)}
         <div class="detail"><div><p data-fr="Comment les valeurs personnelles et les initiatives éthiques influencent la volonté de récompenser ou de sanctionner les marques de mode (Europe et Afrique). 166 répondants, régression multiple et ANOVA à deux facteurs. <a href='portfolio.html#research'>Voir le mémoire</a>" data-en="How personal values and ethical initiatives shape willingness to reward or punish fashion brands (Europe and Africa). 166 respondents, multiple regression and two-way ANOVA. <a href='portfolio.html#research'>See the thesis</a>">Comment les valeurs personnelles et les initiatives éthiques influencent la volonté de récompenser ou de sanctionner les marques de mode (Europe et Afrique). 166 répondants, régression multiple et ANOVA à deux facteurs. <a href='portfolio.html#research'>Voir le mémoire</a></p></div></div>
       </div>
       <div class="proj">
-        <button aria-expanded="false"><span class="pm"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 1v10M1 6h10"/></svg></span><span data-fr="Cas Tupperware France" data-en="Tupperware France case">Cas Tupperware France</span><span class="badge" data-fr="1ère place !" data-en="1st place!">1ère place !</span></button>
+        <button aria-expanded="false"><span class="pm"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 1v10M1 6h10"/></svg></span><span data-fr="Cas Tupperware France" data-en="Tupperware France case">Cas Tupperware France</span><span class="badge" data-fr="1ère place" data-en="1st place">1ère place</span></button>
         <div class="detail"><div><p data-fr="Comment rajeunir la marque auprès des millennials ? 12 entretiens semi-directifs et recommandations présentées au directeur général de Tupperware France. Meilleure note de la promotion (16,35/20) et prix sponsorisé par Tupperware." data-en="How to make the brand relevant to millennials? 12 semi-structured interviews and recommendations presented to Tupperware France's General Manager. Top grade of the class (16.35/20) and a Tupperware-sponsored prize.">Comment rajeunir la marque auprès des millennials ? 12 entretiens semi-directifs et recommandations présentées au directeur général de Tupperware France. Meilleure note de la promotion (16,35/20) et prix sponsorisé par Tupperware.</p></div></div>
       </div>
     </div>
@@ -774,7 +758,6 @@ button:hover .picon{transform:scale(1.08)}
     </div>
     <div class="reveal" style="--d:.1s">
       <div class="creator">
-        <svg class="spark" viewBox="0 0 24 24" fill="var(--coral)" stroke="var(--ink)" stroke-width="1.2"><use href="#i-spark"/></svg>
         <h3 data-fr="Ma vie en France, en vidéos" data-en="My life in France, on video">Ma vie en France, en vidéos</h3>
         <div class="when" data-fr="YouTube, Threads, Instagram, blog, stickers LINE" data-en="YouTube, Threads, Instagram, blog, LINE stickers">YouTube, Threads, Instagram, blog, stickers LINE</div>
         <p data-fr="Je raconte mes voyages et mon quotidien en mandarin, en changeant de style à chaque fois : montage, sous-titres, voix off, effets. Mes posts Threads ont cumulé <span class='hl'>245 K vues en 3 mois</span>, mon blog <span class='hl b'>22 933 vues</span> grâce au SEO, et ma vidéo la plus vue <span class='hl g'>9,7 k vues</span>." data-en="I share my travels and daily life in Mandarin, trying a new style each time: editing, subtitles, voiceover, effects. My Threads posts reached <span class='hl'>245K views in 3 months</span>, my blog <span class='hl b'>22,933 views</span> through SEO, and my top video <span class='hl g'>9.7k views</span>.">Je raconte mes voyages et mon quotidien en mandarin, en changeant de style à chaque fois : montage, sous-titres, voix off, effets. Mes posts Threads ont cumulé <span class='hl'>245 K vues en 3 mois</span>, mon blog <span class='hl b'>22 933 vues</span> grâce au SEO, et ma vidéo la plus vue <span class='hl g'>9,7 k vues</span>.</p>
@@ -845,15 +828,16 @@ QA('img').forEach(function (img) {
   if (img.complete && img.naturalWidth === 0) fail(); else img.addEventListener('error', fail);
 });
 
+
 /* rotating phrase */
 var PHRASES = {
-  fr: ['construire à partir de zéro.', 'transformer la data en décisions.', 'relier l\u2019Europe et l\u2019Asie.', 'prendre soin de ses clients.'],
-  en: ['building things from scratch.', 'turning data into decisions.', 'connecting Europe and Asia.', 'taking care of her clients.']
+  fr: ['Je construis le tracking à partir de zéro.', 'Je mets en place les processus marketing.', 'Je coordonne des projets internationaux.'],
+  en: ['I build tracking from scratch.', 'I set up marketing processes.', 'I coordinate international projects.']
 }, pi = 0, rot = document.getElementById('rot');
 if (!RM) setInterval(function () {
   rot.classList.add('out');
   setTimeout(function () { pi = (pi + 1) % PHRASES.fr.length; rot.textContent = PHRASES[LANG][pi]; rot.classList.remove('out'); }, 350);
-}, 3000);
+}, 3200);
 
 /* doodle parallax */
 if (FINE && !RM) {
@@ -1046,23 +1030,21 @@ var Ambient = (function () {
     if (btn) btn.setAttribute('aria-pressed', 'false');
     if (fileOk) { remember(false); fade(0, 900); } else Synth.stop();
   }
-  function first(e) {
-    if (btn && e.target.closest && e.target.closest('#music')) return;
-    if (!started) { var st = resumePoint(); play(st && st.on ? st.t : null); }
-    document.removeEventListener('pointerdown', first, true);
-    document.removeEventListener('keydown', first, true);
-  }
-  document.addEventListener('pointerdown', first, true);
-  document.addEventListener('keydown', first, true);
-  /* if the music was playing on the previous page, pick it up where it stopped */
-  var saved = resumePoint();
-  if (saved && saved.on) play(saved.t);
+  /* the music only starts when the button is clicked */
   if (btn) btn.addEventListener('click', function () {
     started = true;
     if (btn.getAttribute('aria-pressed') === 'true') stop(); else play();
-    document.removeEventListener('pointerdown', first, true);
-    document.removeEventListener('keydown', first, true);
   });
+  /* exception: it was already playing on the page before, so carry it on */
+  var saved = resumePoint();
+  if (saved && saved.on) {
+    play(saved.t);
+    var resume = function () {
+      document.removeEventListener('pointerdown', resume, true);
+      if (audio.paused && btn && btn.getAttribute('aria-pressed') !== 'true') play(resumePoint() ? resumePoint().t : saved.t);
+    };
+    document.addEventListener('pointerdown', resume, true);
+  }
   return { play: play, stop: stop };
 })();
 
