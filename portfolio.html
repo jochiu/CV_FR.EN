@@ -875,6 +875,17 @@ footer p{line-height:1.5}
 /* hover on the email: yellow */
 footer .links .cta:hover{background:#F9D400;color:#1F1C19}
 .meta a:hover,.socials a:hover{text-decoration:underline;text-decoration-color:#F9D400;text-decoration-thickness:3px;text-underline-offset:.22em;color:var(--ink)}
+
+/* the three reels now lead the UniFox case */
+.reels-visual{background:none;overflow:visible;justify-content:center;padding:0 0 0 clamp(.8rem,2vw,1.6rem)}
+.rv-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:.7rem;align-items:start}
+.rv-grid figure{margin:0}
+.rv-grid .im{aspect-ratio:9/16;min-height:0;background:#EFF0EF;border-radius:12px;overflow:hidden;display:grid;place-items:center}
+.rv-grid img{width:100%;height:100%;object-fit:contain;transition:transform 1s cubic-bezier(.2,.8,.2,1)}
+.rv-grid figure:hover img{transform:scale(1.04)}
+.rv-grid figcaption{margin-top:.45rem;font-size:.68rem;line-height:1.35;color:var(--ink-soft);letter-spacing:.02em}
+@media(max-width:900px){.reels-visual{padding:1rem}.rv-grid figcaption{font-size:.72rem}}
+@media(max-width:520px){.rv-grid{grid-template-columns:1fr 1fr}.rv-grid figure:nth-child(3){grid-column:1/-1;max-width:50%}}
 </style>
 </head>
 <body>
@@ -985,7 +996,7 @@ footer .links .cta:hover{background:#F9D400;color:#1F1C19}
       <p class="desc" data-fr="Une plateforme sans mesure fiable au départ. J'ai construit tout le tracking de zéro, piloté l'acquisition payante et organique sur l'APAC et l'EMEA, puis transformé ce que montraient les données en correctifs : taux de rebond en baisse de 52,6 % et conversion iOS passée de 58,82 % à 95,2 %." data-en="A platform with no reliable measurement to start from. I built the whole tracking stack from scratch, ran paid and organic acquisition across APAC and EMEA, then turned what the data showed into fixes: bounce rate down 52.6% and iOS conversion from 58.82% to 95.2%.">Une plateforme sans mesure fiable au départ. J'ai construit tout le tracking de zéro, piloté l'acquisition payante et organique sur l'APAC et l'EMEA, puis transformé ce que montraient les données en correctifs : taux de rebond en baisse de 52,6 % et conversion iOS passée de 58,82 % à 95,2 %.</p>
       <div class="loc"><span>Bordeaux, France</span><span>06-12/2024</span></div>
     </div>
-    <div class="intro-visual"><div class="im"><img src="Content%20Planning_Unifox.png" alt="Content planning" data-file="Content Planning_Unifox.png" loading="lazy"></div><div class="cap" data-fr="Planification éditoriale des 5 plateformes (Iconosquare)" data-en="Editorial planning across the 5 platforms (Iconosquare)">Planification éditoriale des 5 plateformes (Iconosquare)</div></div>
+    <div class="intro-visual reels-visual"><div class="rv-grid"><figure><div class="im"><img src="unifox_reels_1.png" alt="Reel programme ambassadeur" data-file="unifox_reels_1.png" loading="lazy"></div><figcaption data-fr="Promotion du programme ambassadeur" data-en="Ambassador programme promotion">Promotion du programme ambassadeur</figcaption></figure><figure><div class="im"><img src="unifox_reels_2.png" alt="Roulette en GIF" data-file="unifox_reels_2.png" loading="lazy"></div><figcaption data-fr="Roulette en GIF pour faire réagir l’audience" data-en="GIF roulette to get the audience reacting">Roulette en GIF pour faire réagir l’audience</figcaption></figure><figure><div class="im"><img src="unifox_reels_3.png" alt="Séries de questions-réponses" data-file="unifox_reels_3.png" loading="lazy"></div><figcaption data-fr="Séries de questions-réponses publiées régulièrement" data-en="Q&amp;A series published on a regular rhythm">Séries de questions-réponses publiées régulièrement</figcaption></figure></div></div>
   </div>
 
   <div class="tabs filecard">
@@ -1062,15 +1073,10 @@ footer .links .cta:hover{background:#F9D400;color:#1F1C19}
           <p class="note" data-fr="Cliquez pour comparer l'état avant et après les correctifs UX." data-en="Click to compare before and after the UX fixes.">Cliquez pour comparer l'état avant et après les correctifs UX.</p>
         </div>
       </div>
-      <div class="gallery c2">
+      <div class="gallery c3">
         <div class="shot"><div class="im"><img src="Content%20Creation_unifox.png" alt="Content creation" data-file="Content Creation_unifox.png" loading="lazy"></div><div class="cap" data-fr="Création de contenu social (hook, value, CTA)" data-en="Social content creation (hook, value, CTA)">Création de contenu social (hook, value, CTA)</div></div>
         <div class="shot"><div class="im"><img src="Marketing%20Strategy_unifox.png" alt="Marketing strategy" data-file="Marketing Strategy_unifox.png" loading="lazy"></div><div class="cap" data-fr="Stratégie marketing & analyse (GA4, Google Ads, Meta, PostHog)" data-en="Marketing strategy & analysis (GA4, Google Ads, Meta, PostHog)">Stratégie marketing & analyse (GA4, Google Ads, Meta, PostHog)</div></div>
-      </div>
-      <h3 class="sub-h" data-fr="Reels &amp; formats courts" data-en="Reels &amp; short-form">Reels &amp; formats courts</h3>
-      <div class="gallery reels">
-        <div class="shot"><div class="im"><img src="unifox_reels_1.png" alt="Reel programme ambassadeur" data-file="unifox_reels_1.png" loading="lazy"></div><div class="cap" data-fr="Promotion du programme ambassadeur" data-en="Ambassador programme promotion">Promotion du programme ambassadeur</div></div>
-        <div class="shot"><div class="im"><img src="unifox_reels_2.png" alt="Roulette en GIF" data-file="unifox_reels_2.png" loading="lazy"></div><div class="cap" data-fr="Roulette en GIF pour faire réagir l’audience" data-en="GIF roulette to get the audience reacting">Roulette en GIF pour faire réagir l’audience</div></div>
-        <div class="shot"><div class="im"><img src="unifox_reels_3.png" alt="Séries de questions-réponses" data-file="unifox_reels_3.png" loading="lazy"></div><div class="cap" data-fr="Séries de questions-réponses publiées régulièrement" data-en="Q&amp;A series published on a regular rhythm">Séries de questions-réponses publiées régulièrement</div></div>
+        <div class="shot"><div class="im"><img src="Content%20Planning_Unifox.png" alt="Content planning" data-file="Content Planning_Unifox.png" loading="lazy"></div><div class="cap" data-fr="Planification éditoriale des 5 plateformes (Iconosquare)" data-en="Editorial planning across the 5 platforms (Iconosquare)">Planification éditoriale des 5 plateformes (Iconosquare)</div></div>
       </div>
     </div>
   </div>
