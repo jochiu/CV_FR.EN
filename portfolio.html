@@ -927,6 +927,24 @@ footer p{font-size:.95rem;line-height:1.45}
 /* Creator Lab channel figures, smaller */
 #creator .stat b{font-size:clamp(1.22rem,1.9vw,1.5rem)}
 @media(max-width:900px){#creator .stat b{font-size:1.18rem}}
+
+/* project shots: always visible under the card, click to enlarge */
+.case-shots{display:grid;grid-template-columns:repeat(auto-fill,minmax(158px,196px));gap:.9rem;margin-top:1.7rem;justify-content:start}
+.case-shots .shot{cursor:zoom-in;transition:transform .35s cubic-bezier(.2,.8,.2,1),box-shadow .35s}
+.case-shots .shot:hover{transform:translateY(-4px);box-shadow:0 12px 26px rgba(31,28,25,.13)}
+.case-shots .shot .im{height:auto;aspect-ratio:4/3}
+.case-shots .cap{font-size:.71rem;padding:.5rem .7rem;line-height:1.4}
+.intro-visual .im,.rv-grid figure{cursor:zoom-in}
+@media(max-width:620px){.case-shots{grid-template-columns:repeat(auto-fill,minmax(132px,1fr))}}
+
+/* lightbox */
+.lb{position:fixed;inset:0;z-index:400;background:rgba(31,28,25,.88);display:none;place-items:center;align-content:center;padding:5vh 5vw;cursor:zoom-out}
+.lb.on{display:grid}
+.lb img{max-width:100%;max-height:80vh;object-fit:contain;border-radius:10px;background:#FAFBFA}
+.lb-cap{margin:.9rem 0 0;color:#F5F6F5;font-size:.86rem;text-align:center;max-width:46rem;justify-self:center}
+.lb-x{position:absolute;top:1.1rem;right:1.4rem;width:40px;height:40px;border-radius:50%;border:none;background:rgba(245,246,245,.16);color:#F5F6F5;font-size:1.5rem;line-height:1;cursor:pointer}
+.lb-x:hover{background:rgba(245,246,245,.3)}
+@media(prefers-reduced-motion:reduce){.case-shots .shot{transition:none}}
 </style>
 </head>
 <body>
@@ -1114,13 +1132,13 @@ footer p{font-size:.95rem;line-height:1.45}
           <p class="note" data-fr="Cliquez pour comparer l'état avant et après les correctifs UX." data-en="Click to compare before and after the UX fixes.">Cliquez pour comparer l'état avant et après les correctifs UX.</p>
         </div>
       </div>
-      <div class="gallery c3">
+    </div>
+  </div>
+  <div class="case-shots">
         <div class="shot"><div class="im"><img src="Content%20Creation_unifox.png" alt="Content creation" data-file="Content Creation_unifox.png" loading="lazy"></div><div class="cap" data-fr="Création de contenu social (hook, value, CTA)" data-en="Social content creation (hook, value, CTA)">Création de contenu social (hook, value, CTA)</div></div>
         <div class="shot"><div class="im"><img src="Marketing%20Strategy_unifox.png" alt="Marketing strategy" data-file="Marketing Strategy_unifox.png" loading="lazy"></div><div class="cap" data-fr="Stratégie marketing & analyse (GA4, Google Ads, Meta, PostHog)" data-en="Marketing strategy & analysis (GA4, Google Ads, Meta, PostHog)">Stratégie marketing & analyse (GA4, Google Ads, Meta, PostHog)</div></div>
         <div class="shot"><div class="im"><img src="Content%20Planning_Unifox.png" alt="Content planning" data-file="Content Planning_Unifox.png" loading="lazy"></div><div class="cap" data-fr="Planification éditoriale des 5 plateformes (Iconosquare)" data-en="Editorial planning across the 5 platforms (Iconosquare)">Planification éditoriale des 5 plateformes (Iconosquare)</div></div>
       </div>
-    </div>
-  </div>
   <div class="case-foot"><span data-fr="Projet 01 | UniFox" data-en="Project 01 | UniFox">Projet 01 | UniFox</span><span>Digital Marketing</span></div>
 </div>
 </section>
@@ -1136,7 +1154,7 @@ footer p{font-size:.95rem;line-height:1.45}
       <p class="desc" data-fr="Positionner un manoir 4★ en Dordogne auprès des voyageurs anglophones qui rêvent de la vie de domaine à la française. La promesse réunit trois atouts, le patrimoine, l'œnotourisme et le passé de lieu de tournage du manoir, déclinée en FR et en EN." data-en="Position a 4★ manor house in the Dordogne for English-speaking travellers who dream of life on a French estate. The promise brings together three assets, the heritage, the wine tourism and the manor's past as a film location, in French and English.">Positionner un manoir 4★ en Dordogne auprès des voyageurs anglophones qui rêvent de la vie de domaine à la française. La promesse réunit trois atouts, le patrimoine, l'œnotourisme et le passé de lieu de tournage du manoir, déclinée en FR et en EN.</p>
       <div class="loc"><span>Dordogne, France</span><span>04-05/2025, Freelance</span></div>
     </div>
-    <div class="intro-visual"><div class="im"><img src="hotel_2.png" alt="Instagram mockup" data-file="hotel_2.png" loading="lazy"></div><div class="cap" data-fr="Maquette Instagram & identité visuelle" data-en="Instagram mockup & visual identity">Maquette Instagram & identité visuelle</div></div>
+    <div class="intro-visual"><div class="im"><img src="hotel_3.png" alt="Contenu bilingue FR/EN" data-file="hotel_3.png" loading="lazy"></div><div class="cap" data-fr="Contenu bilingue FR / EN" data-en="Bilingual content FR / EN">Contenu bilingue FR / EN</div></div>
   </div>
   <div class="tabs filecard">
     <div class="tablist" role="tablist">
@@ -1183,13 +1201,12 @@ footer p{font-size:.95rem;line-height:1.45}
         <li data-fr="Proposition stratégique complète livrée en présentation professionnelle" data-en="Complete strategic proposal delivered as a professional presentation">Proposition stratégique complète livrée en présentation professionnelle</li>
         <li data-fr="Cadre activable : analyse de marché, identité visuelle, ligne éditoriale, axes de mesure" data-en="Actionable framework: market analysis, visual identity, editorial line, measurement axes">Cadre activable : analyse de marché, identité visuelle, ligne éditoriale, axes de mesure</li>
       </ul></div>
-      <div class="gallery c3">
-        <div class="shot"><div class="im"><img src="hotel_1.png" alt="Personas" data-file="hotel_1.png" loading="lazy"></div><div class="cap" data-fr="Public cible et personas" data-en="Target audience and personas">Public cible et personas</div></div>
-        <div class="shot"><div class="im"><img src="hotel_2.png" alt="Instagram" data-file="hotel_2.png" loading="lazy"></div><div class="cap" data-fr="Maquette Instagram" data-en="Instagram mockup">Maquette Instagram</div></div>
-        <div class="shot"><div class="im"><img src="hotel_3.png" alt="Contenu" data-file="hotel_3.png" loading="lazy"></div><div class="cap" data-fr="Contenu bilingue FR/EN" data-en="Bilingual FR/EN content">Contenu bilingue FR/EN</div></div>
-      </div>
     </div>
   </div>
+  <div class="case-shots">
+        <div class="shot"><div class="im"><img src="hotel_1.png" alt="Personas" data-file="hotel_1.png" loading="lazy"></div><div class="cap" data-fr="Public cible et personas" data-en="Target audience and personas">Public cible et personas</div></div>
+        <div class="shot"><div class="im"><img src="hotel_2.png" alt="Instagram" data-file="hotel_2.png" loading="lazy"></div><div class="cap" data-fr="Maquette Instagram" data-en="Instagram mockup">Maquette Instagram</div></div>
+      </div>
   <div class="case-foot"><span data-fr="Projet 02 | Hôtel 4★" data-en="Project 02 | 4★ Hotel">Projet 02 | Hôtel 4★</span><span>Brand Strategy</span></div>
 </div>
 </section>
@@ -1259,13 +1276,13 @@ footer p{font-size:.95rem;line-height:1.45}
         <a href="https://reinventingcarriere.com/" target="_blank" rel="noopener" data-fr="Site de l'entreprise" data-en="Company website">Site de l'entreprise</a>
         <a href="https://member.reinventingcarriere.com/career" target="_blank" rel="noopener" data-fr="Page produit" data-en="Product page">Page produit</a>
       </div>
-      <div class="gallery c3">
+    </div>
+  </div>
+  <div class="case-shots">
         <div class="shot"><div class="im"><img src="Product%20Strategy_paris.png" alt="Product strategy" data-file="Product Strategy_paris.png" loading="lazy"></div><div class="cap" data-fr="Persona et concept board" data-en="Persona and concept board">Persona et concept board</div></div>
         <div class="shot"><div class="im"><img src="Competitive%20Analysis_paris.png" alt="Competitive analysis" data-file="Competitive Analysis_paris.png" loading="lazy"></div><div class="cap" data-fr="Analyse concurrentielle" data-en="Competitive analysis">Analyse concurrentielle</div></div>
         <div class="shot"><div class="im"><img src="Courses%20video%20editing_Paris.webp" alt="Video editing" data-file="Courses video editing_Paris.webp" loading="lazy"></div><div class="cap" data-fr="Montage des 26 sessions" data-en="Editing the 26 sessions">Montage des 26 sessions</div></div>
       </div>
-    </div>
-  </div>
   <div class="case-foot"><span data-fr="Projet 03 | Reinventing Carrière" data-en="Project 03 | Reinventing Carrière">Projet 03 | Reinventing Carrière</span><span>Product Strategy</span></div>
 </div>
 </section>
@@ -1336,13 +1353,12 @@ footer p{font-size:.95rem;line-height:1.45}
           <li data-fr="Processus d'onboarding documenté et transmissible" data-en="Documented, transferable onboarding process">Processus d'onboarding documenté et transmissible</li>
         </ul>
       </div>
-      <div class="gallery c3">
-        <div class="shot"><div class="im"><img src="Linkee_Distrib.jpeg" alt="Distribution" data-file="Linkee_Distrib.jpeg" loading="lazy"></div><div class="cap" data-fr="Distribution et onboarding sur le terrain" data-en="Distribution and on-site onboarding">Distribution et onboarding sur le terrain</div></div>
+    </div>
+  </div>
+  <div class="case-shots">
         <div class="shot"><div class="im"><img src="Linkee_Stand.jpeg" alt="Stand" data-file="Linkee_Stand.jpeg" loading="lazy"></div><div class="cap" data-fr="Stand sur forum étudiant" data-en="Student forum stand">Stand sur forum étudiant</div></div>
         <div class="shot"><div class="im"><img src="reconditionment.JPG" alt="Reconditionnement" data-file="reconditionment.JPG" loading="lazy"></div><div class="cap" data-fr="Reconditionnement en portions" data-en="Food reconditioning">Reconditionnement en portions</div></div>
       </div>
-    </div>
-  </div>
   <div class="case-foot"><span data-fr="Projet 04 | Linkee" data-en="Project 04 | Linkee">Projet 04 | Linkee</span><span>Community & Project Management</span></div>
 </div>
 </section>
@@ -1832,5 +1848,24 @@ var last=scrollY,mqs=document.querySelectorAll('.marquee div');
 })();
 </script>
 </div>
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Image"><button class="lb-x" type="button" aria-label="Fermer">×</button><img id="lb-img" src="" alt=""><p class="lb-cap" id="lb-cap"></p></div>
+<script>
+(function(){var lb=document.getElementById("lb"),li=document.getElementById("lb-img"),lc=document.getElementById("lb-cap");
+  function close(){lb.classList.remove("on");document.body.style.overflow="";li.src="";}
+  document.addEventListener("click",function(e){
+    if(!e.target.closest)return;
+    if(e.target.closest(".lb")){close();return;}
+    var sh=e.target.closest(".case-shots .shot, .rv-grid figure, .intro-visual .im");
+    if(!sh)return;
+    var img=sh.querySelector("img")||sh; if(!img||img.tagName!=="IMG"||!img.getAttribute("src"))return;
+    var cap=sh.querySelector(".cap,figcaption");
+    if(!cap){var par=sh.parentElement;cap=par&&par.querySelector(".cap,figcaption");}
+    li.src=img.currentSrc||img.src; li.alt=img.alt||"";
+    lc.textContent=cap?cap.textContent.trim():"";
+    lb.classList.add("on"); document.body.style.overflow="hidden";
+  });
+  document.addEventListener("keydown",function(e){if(e.key==="Escape")close();});
+})();
+</script>
 </body>
 </html>
