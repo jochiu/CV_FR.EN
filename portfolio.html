@@ -695,6 +695,55 @@ footer .credit a{color:inherit;text-decoration:underline}
 .sub-h{font-size:1.3rem;letter-spacing:.02em}
 .scatter i{opacity:.22}
 .scatter i.a{opacity:.38}
+
+/* ---- hero: a small photo on the desk, with the six project folders ---- */
+.hero{margin-top:66px;padding:clamp(2.2rem,5vw,4rem) var(--gutter) 0}
+.hero-head{max-width:var(--max);margin:0 auto clamp(2rem,4.5vw,3.4rem);text-align:center}
+.hero-eyebrow{display:block;margin-bottom:1.5rem;font-size:.62rem;font-weight:600;letter-spacing:.34em;text-transform:uppercase;color:var(--ink-soft)}
+.hero-head .hero-script{position:relative;z-index:3;display:block;margin:0 0 -.85em;font-family:var(--hand);font-weight:700;font-size:clamp(1.45rem,4.2vw,3.05rem);line-height:1.1;color:#5E87B8;transform:rotate(-3deg) translateX(-11%);text-shadow:none;pointer-events:none}
+.hero-head h1{position:static!important;left:auto!important;right:auto!important;top:auto!important;bottom:auto!important;margin:0;display:flex;justify-content:center;font-family:var(--serif);font-weight:400;font-size:clamp(3rem,9vw,6.2rem)!important;line-height:1;letter-spacing:-.02em;color:var(--ink);text-shadow:none}
+.hero h1 span:hover{color:var(--pop)}
+
+.desk{max-width:var(--max);margin:0 auto;display:grid;grid-template-columns:1fr minmax(300px,520px) 1fr;gap:clamp(1rem,3vw,2.4rem);align-items:center;scroll-margin-top:90px}
+.fcol{display:grid;gap:clamp(1.4rem,3.2vw,2.6rem);justify-items:center}
+.deskmid{display:block}
+.hero-media{position:relative;height:auto;aspect-ratio:4/3;margin:0;border-radius:18px;overflow:hidden;background:var(--bg-2);box-shadow:0 14px 36px rgba(31,28,25,.12)}
+.hero-media>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 42%}
+.hero-media::after{display:none}
+.hero-row{position:static;display:flex;justify-content:space-between;align-items:baseline;gap:1rem;margin-top:.9rem;padding:0 .2rem;color:var(--ink-soft);font-size:.85rem}
+.hr-name{font-family:var(--serif);font-size:1.05rem;color:var(--ink)}
+.hr-year{font-family:var(--hand);font-size:1.2rem;color:var(--ink-soft)}
+
+.folder{display:block;width:min(100%,170px);text-decoration:none;text-align:center;transition:transform .4s cubic-bezier(.2,.8,.2,1)}
+.fcol:first-child .folder:nth-child(1){transform:translateX(-10%) rotate(-2deg)}
+.fcol:first-child .folder:nth-child(2){transform:translateX(16%) rotate(1.5deg)}
+.fcol:first-child .folder:nth-child(3){transform:translateX(-4%) rotate(-1deg)}
+.fcol:last-child .folder:nth-child(1){transform:translateX(12%) rotate(2deg)}
+.fcol:last-child .folder:nth-child(2){transform:translateX(-14%) rotate(-1.5deg)}
+.fcol:last-child .folder:nth-child(3){transform:translateX(6%) rotate(1deg)}
+.folder:hover,.folder:focus-visible{transform:translateY(-8px) rotate(0)!important}
+.ficon{position:relative;display:block;width:clamp(74px,8vw,104px);margin:0 auto}
+.fsvg{display:block;width:100%;height:auto;filter:drop-shadow(0 6px 14px rgba(31,28,25,.16))}
+.fcur{position:absolute;right:-2px;bottom:12%;width:15px;height:auto;opacity:0;transform:translate(4px,4px);transition:opacity .25s,transform .25s}
+.folder:hover .fcur,.folder:focus-visible .fcur{opacity:1;transform:none}
+.fname{display:inline-block;margin-top:.6rem;padding:.12rem .4rem;border-radius:3px;font-size:.66rem;letter-spacing:.03em;color:var(--ink-soft);word-break:break-word;transition:background .25s,color .25s}
+.folder:hover .fname,.folder:focus-visible .fname{background:var(--accent);color:#1F1C19}
+
+@media(max-width:900px){
+  .hero{padding-top:1.6rem}
+  .desk{grid-template-columns:repeat(3,1fr);gap:1.8rem .6rem;justify-items:center}
+  .fcol{display:contents}
+  .deskmid{grid-column:1/-1;order:-1;width:100%;margin-bottom:.6rem}
+  .folder{width:100%;max-width:150px;transform:none!important}
+  .ficon{width:clamp(60px,18vw,86px)}
+  .fname{font-size:.6rem}
+  .hero-media{aspect-ratio:16/10;border-radius:14px}
+}
+@media(max-width:520px){
+  .desk{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:600px){.hero-head .hero-script{margin-bottom:-.45em;transform:rotate(-3deg) translateX(-7%)}}
+.hero-body{padding-top:clamp(3rem,6vw,5rem)}
 </style>
 </head>
 <body>
@@ -730,19 +779,27 @@ footer .credit a{color:inherit;text-decoration:underline}
 </div>
 
 <header class="hero">
-  <div class="hero-media" id="heroMedia">
-    <img src="bg.png" alt="" data-file="bg.png">
-    <div class="hero-top"><span class="tag-light" data-fr="Présentation personnelle" data-en="Personal presentation">Présentation personnelle</span><span class="tag-light">FR / EN</span></div>
-    <div class="hero-title">
-      <span class="hero-script" data-fr="Marketing &amp; data" data-en="Marketing &amp; data">Marketing &amp; data</span>
-      <h1 id="heroTitle" aria-label="Portfolio">Portfolio</h1>
-    </div>
-    <div class="hero-row"><span class="hr-name">Yi-Hsuan Chiu</span><span class="hr-year">2026</span></div>
-    <span class="sticker st1" data-fr="Bonjour !" data-en="Hello!">Bonjour !</span>
-    <span class="sticker st2">FR / EN / 中文</span>
-    <span class="sticker st3">Jo</span>
+  <div class="hero-head">
+    <span class="hero-eyebrow" data-fr="Présentation personnelle" data-en="Personal presentation">Présentation personnelle</span>
+    <span class="hero-script" data-fr="Marketing &amp; data" data-en="Marketing &amp; data">Marketing &amp; data</span>
+    <h1 id="heroTitle" aria-label="Portfolio">Portfolio</h1>
   </div>
-<span class="drag-hint" data-fr="psst, les stickers se déplacent" data-en="psst, the stickers move">psst, les stickers se déplacent</span>
+  <div class="desk" id="work">
+    <div class="fcol">
+      <a class="folder" href="#strategy" style="--fc:#9DC0E8;--fc-d:#7FA8D8"><span class="ficon"><svg class="fsvg" viewBox="0 0 120 96" aria-hidden="true"><path d="M6 20a10 10 0 0 1 10-10h27a7 7 0 0 1 5.1 2.2l6.4 6.9A7 7 0 0 0 59.6 21H104a10 10 0 0 1 10 10v55a10 10 0 0 1-10 10H16A10 10 0 0 1 6 86Z" fill="var(--fc-d)"/><path d="M6 34a10 10 0 0 1 10-10h88a10 10 0 0 1 10 10v52a10 10 0 0 1-10 10H16A10 10 0 0 1 6 86Z" fill="var(--fc)"/></svg><svg class="fcur" viewBox="0 0 16 18" aria-hidden="true"><path d="M1.4 1 13.6 9.2 7.6 10.1 10.6 15.9 8.4 17 5.4 11.2 1.4 14.6Z" fill="#1F1C19" stroke="#FFFDF8" stroke-width="1.2" stroke-linejoin="round"/></svg></span><span class="fname" data-fr="01_digital_marketing" data-en="01_digital_marketing">01_digital_marketing</span></a>
+      <a class="folder" href="#brand" style="--fc:#E8A98F;--fc-d:#DA8E6F"><span class="ficon"><svg class="fsvg" viewBox="0 0 120 96" aria-hidden="true"><path d="M6 20a10 10 0 0 1 10-10h27a7 7 0 0 1 5.1 2.2l6.4 6.9A7 7 0 0 0 59.6 21H104a10 10 0 0 1 10 10v55a10 10 0 0 1-10 10H16A10 10 0 0 1 6 86Z" fill="var(--fc-d)"/><path d="M6 34a10 10 0 0 1 10-10h88a10 10 0 0 1 10 10v52a10 10 0 0 1-10 10H16A10 10 0 0 1 6 86Z" fill="var(--fc)"/></svg><svg class="fcur" viewBox="0 0 16 18" aria-hidden="true"><path d="M1.4 1 13.6 9.2 7.6 10.1 10.6 15.9 8.4 17 5.4 11.2 1.4 14.6Z" fill="#1F1C19" stroke="#FFFDF8" stroke-width="1.2" stroke-linejoin="round"/></svg></span><span class="fname" data-fr="02_brand_strategy" data-en="02_brand_strategy">02_brand_strategy</span></a>
+      <a class="folder" href="#product" style="--fc:#C3D4E8;--fc-d:#A8BFDA"><span class="ficon"><svg class="fsvg" viewBox="0 0 120 96" aria-hidden="true"><path d="M6 20a10 10 0 0 1 10-10h27a7 7 0 0 1 5.1 2.2l6.4 6.9A7 7 0 0 0 59.6 21H104a10 10 0 0 1 10 10v55a10 10 0 0 1-10 10H16A10 10 0 0 1 6 86Z" fill="var(--fc-d)"/><path d="M6 34a10 10 0 0 1 10-10h88a10 10 0 0 1 10 10v52a10 10 0 0 1-10 10H16A10 10 0 0 1 6 86Z" fill="var(--fc)"/></svg><svg class="fcur" viewBox="0 0 16 18" aria-hidden="true"><path d="M1.4 1 13.6 9.2 7.6 10.1 10.6 15.9 8.4 17 5.4 11.2 1.4 14.6Z" fill="#1F1C19" stroke="#FFFDF8" stroke-width="1.2" stroke-linejoin="round"/></svg></span><span class="fname" data-fr="03_product_strategy" data-en="03_product_strategy">03_product_strategy</span></a>
+    </div>
+    <div class="deskmid">
+      <div class="hero-media" id="heroMedia"><img src="bg.png" alt="" data-file="bg.png"></div>
+      <div class="hero-row"><span class="hr-name">Yi-Hsuan Chiu</span><span class="hr-year">2026</span></div>
+    </div>
+    <div class="fcol">
+      <a class="folder" href="#community" style="--fc:#E2DAC6;--fc-d:#CEC4AC"><span class="ficon"><svg class="fsvg" viewBox="0 0 120 96" aria-hidden="true"><path d="M6 20a10 10 0 0 1 10-10h27a7 7 0 0 1 5.1 2.2l6.4 6.9A7 7 0 0 0 59.6 21H104a10 10 0 0 1 10 10v55a10 10 0 0 1-10 10H16A10 10 0 0 1 6 86Z" fill="var(--fc-d)"/><path d="M6 34a10 10 0 0 1 10-10h88a10 10 0 0 1 10 10v52a10 10 0 0 1-10 10H16A10 10 0 0 1 6 86Z" fill="var(--fc)"/></svg><svg class="fcur" viewBox="0 0 16 18" aria-hidden="true"><path d="M1.4 1 13.6 9.2 7.6 10.1 10.6 15.9 8.4 17 5.4 11.2 1.4 14.6Z" fill="#1F1C19" stroke="#FFFDF8" stroke-width="1.2" stroke-linejoin="round"/></svg></span><span class="fname" data-fr="04_community_project" data-en="04_community_project">04_community_project</span></a>
+      <a class="folder" href="#research" style="--fc:#86ACD8;--fc-d:#6B92C2"><span class="ficon"><svg class="fsvg" viewBox="0 0 120 96" aria-hidden="true"><path d="M6 20a10 10 0 0 1 10-10h27a7 7 0 0 1 5.1 2.2l6.4 6.9A7 7 0 0 0 59.6 21H104a10 10 0 0 1 10 10v55a10 10 0 0 1-10 10H16A10 10 0 0 1 6 86Z" fill="var(--fc-d)"/><path d="M6 34a10 10 0 0 1 10-10h88a10 10 0 0 1 10 10v52a10 10 0 0 1-10 10H16A10 10 0 0 1 6 86Z" fill="var(--fc)"/></svg><svg class="fcur" viewBox="0 0 16 18" aria-hidden="true"><path d="M1.4 1 13.6 9.2 7.6 10.1 10.6 15.9 8.4 17 5.4 11.2 1.4 14.6Z" fill="#1F1C19" stroke="#FFFDF8" stroke-width="1.2" stroke-linejoin="round"/></svg></span><span class="fname" data-fr="05_recherche" data-en="05_research">05_recherche</span></a>
+      <a class="folder" href="#creator" style="--fc:#D98A6A;--fc-d:#C5704E"><span class="ficon"><svg class="fsvg" viewBox="0 0 120 96" aria-hidden="true"><path d="M6 20a10 10 0 0 1 10-10h27a7 7 0 0 1 5.1 2.2l6.4 6.9A7 7 0 0 0 59.6 21H104a10 10 0 0 1 10 10v55a10 10 0 0 1-10 10H16A10 10 0 0 1 6 86Z" fill="var(--fc-d)"/><path d="M6 34a10 10 0 0 1 10-10h88a10 10 0 0 1 10 10v52a10 10 0 0 1-10 10H16A10 10 0 0 1 6 86Z" fill="var(--fc)"/></svg><svg class="fcur" viewBox="0 0 16 18" aria-hidden="true"><path d="M1.4 1 13.6 9.2 7.6 10.1 10.6 15.9 8.4 17 5.4 11.2 1.4 14.6Z" fill="#1F1C19" stroke="#FFFDF8" stroke-width="1.2" stroke-linejoin="round"/></svg></span><span class="fname" data-fr="06_creator_lab" data-en="06_creator_lab">06_creator_lab</span></a>
+    </div>
+  </div>
   <div class="hero-body">
     <div>
       <p class="rotator"><span data-fr="De la donnée à" data-en="From data to">De la donnée à</span> <span class="rot-word" id="rotWord">l'action</span></p>
@@ -758,14 +815,6 @@ footer .credit a{color:inherit;text-decoration:underline}
   </div>
 </header>
 
-<nav class="chapters" id="work" aria-label="Sommaire">
-  <a href="#strategy"><span class="n">01</span><span class="t">Digital Marketing</span><span class="s">UniFox, GreenTech Web3</span></a>
-  <a href="#brand"><span class="n">02</span><span class="t">Brand Strategy</span><span class="s" data-fr="Hôtel 4★, Dordogne" data-en="4★ Hotel, Dordogne">Hôtel 4★, Dordogne</span></a>
-  <a href="#product"><span class="n">03</span><span class="t">Product Strategy</span><span class="s">Reinventing Carrière, Paris</span></a>
-  <a href="#community"><span class="n">04</span><span class="t">Community & Project</span><span class="s">Linkee, Bordeaux</span></a>
-  <a href="#research"><span class="n">05</span><span class="t" data-fr="Recherche" data-en="Research">Recherche</span><span class="s" data-fr="Mémoire, EM Strasbourg" data-en="Master's thesis, EM Strasbourg">Mémoire, EM Strasbourg</span></a>
-  <a href="#creator" class="yt"><span class="n">06</span><span class="t">Creator Lab</span><span class="s" data-fr="YouTube, Threads, blog, stickers" data-en="YouTube, Threads, blog, stickers">YouTube, Threads, blog, stickers</span></a>
-</nav>
 
 <section class="recs" id="recommandations">
   <h2 class="h-mid" data-fr="Ils recommandent" data-en="Recommendations">Ils recommandent</h2>
@@ -1548,13 +1597,6 @@ if(rw){rw.textContent=WORDS[LANG][0];
   setInterval(function(){rw.classList.add('out');setTimeout(function(){wi=(wi+1)%WORDS.fr.length;rw.textContent=WORDS[LANG][wi];rw.classList.remove('out');},350);},2300);
   var _set=window.setLang;window.setLang=function(l){_set(l);rw.textContent=WORDS[l][wi];};}
 
-/* draggable stickers */
-Array.prototype.forEach.call(document.querySelectorAll('.sticker'),function(st){
-  var sx,sy,ox=0,oy=0,drag=false;
-  st.addEventListener('pointerdown',function(e){drag=true;sx=e.clientX-ox;sy=e.clientY-oy;st.setPointerCapture(e.pointerId);});
-  st.addEventListener('pointermove',function(e){if(!drag)return;ox=e.clientX-sx;oy=e.clientY-sy;st.style.transform='translate('+ox+'px,'+oy+'px) rotate('+(ox/12)+'deg)';});
-  st.addEventListener('pointerup',function(){drag=false;});
-});
 
 if(RM)return;
 
@@ -1583,7 +1625,7 @@ if(FINE)Array.prototype.forEach.call(document.querySelectorAll('.nav-cta,.yt-btn
 /* spark cursor */
 if(FINE){var c=document.createElement('div');c.className='cursor';c.innerHTML=SPARK;document.body.appendChild(c);
   var mx=-50,my=-50,cx=-50,cy=-50;
-  addEventListener('pointermove',function(e){mx=e.clientX;my=e.clientY;var t=e.target.closest&&e.target.closest('a,button,.sticker');c.classList.toggle('big',!!t);},{passive:true});
+  addEventListener('pointermove',function(e){mx=e.clientX;my=e.clientY;var t=e.target.closest&&e.target.closest('a,button');c.classList.toggle('big',!!t);},{passive:true});
   (function loop(){cx+=(mx-cx)*.18;cy+=(my-cy)*.18;c.style.transform='translate('+cx+'px,'+cy+'px)';requestAnimationFrame(loop);})();}
 
 /* click burst */
