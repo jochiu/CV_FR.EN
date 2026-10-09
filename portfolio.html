@@ -837,8 +837,8 @@ body,.case,.case.alt,.lab-sec,footer,.recs{background:var(--bg)}
 .socials{font-size:.86rem;line-height:1.45;gap:.12rem .9rem;margin-top:.5rem}
 .sico{width:14px;height:14px}
 
-/* project subtitle in plain black */
-.case .intro-panel .org{color:#000}
+/* project subtitle in plain black, no bold */
+.case .intro-panel .org{color:#000;font-weight:400}
 
 /* footer invitation */
 footer p{line-height:1.5}
@@ -886,6 +886,47 @@ footer .links .cta:hover{background:#F9D400;color:#1F1C19}
 .rv-grid figcaption{margin-top:.45rem;font-size:.68rem;line-height:1.35;color:var(--ink-soft);letter-spacing:.02em}
 @media(max-width:900px){.reels-visual{padding:1rem}.rv-grid figcaption{font-size:.72rem}}
 @media(max-width:520px){.rv-grid{grid-template-columns:1fr 1fr}.rv-grid figure:nth-child(3){grid-column:1/-1;max-width:50%}}
+
+/* project descriptions, a touch smaller */
+.intro-panel .desc{font-size:.92rem}
+@media(max-width:620px){.intro-panel .desc{font-size:.9rem}}
+
+/* hero lead paragraph, a touch smaller */
+.sub{font-size:.98rem}
+@media(max-width:900px){.sub{font-size:.94rem}}
+
+/* hero headline and the recommendations title, 20% smaller */
+.rotator{font-size:clamp(1.6rem,3.2vw,2.24rem)}
+.recs h2{font-size:clamp(1.52rem,2.9vw,2.16rem)}
+@media(max-width:900px){.rotator{font-size:1.44rem}.recs h2{font-size:1.44rem}}
+
+/* Creator Lab: the three channel buttons share one row */
+.yt-row{display:flex;flex-wrap:wrap;align-items:center;gap:.5rem;margin-top:1.5rem}
+.yt-row .yt-btn{margin-top:0;font-size:.8rem;padding:.6rem 1.1rem;gap:.45rem}
+.yt-row .yt-btn svg{width:16px;height:16px}
+.yt-row .links-row{margin-top:0}
+.yt-row .links-row a{font-size:.8rem;padding:.45rem .9rem}
+@media(max-width:520px){.yt-row .yt-btn,.yt-row .links-row a{font-size:.76rem;padding:.42rem .85rem}}
+
+/* pipeline answers: smaller, tighter */
+.pipe-out p{font-size:.88rem;line-height:1.45}
+
+/* channel numbers in the body face */
+#creator .stat b,.fmt .fstats b,.yt-stats b{font-family:var(--sans);font-weight:700;letter-spacing:-.01em}
+
+/* YouTube mark before the "all videos" link */
+.av-wrap{display:inline-flex;align-items:center;gap:.45rem;margin-top:1rem}
+.av-wrap .all-videos{margin-top:0}
+.ytico{width:17px;height:17px;flex:none;color:var(--pop-d)}
+
+/* footer */
+footer h2{font-size:clamp(1.8rem,4vw,3rem)}
+footer p{font-size:.95rem;line-height:1.45}
+@media(max-width:900px){footer h2{font-size:1.8rem}footer p{font-size:.92rem}}
+
+/* Creator Lab channel figures, smaller */
+#creator .stat b{font-size:clamp(1.22rem,1.9vw,1.5rem)}
+@media(max-width:900px){#creator .stat b{font-size:1.18rem}}
 </style>
 </head>
 <body>
@@ -1389,10 +1430,12 @@ footer .links .cta:hover{background:#F9D400;color:#1F1C19}
     <div>
       <h2 data-fr="Ma vie en France, en plusieurs formats" data-en="My life in France, in many formats">Ma vie en France, en plusieurs formats</h2>
       <p class="lead" data-fr="Je raconte mes voyages et mon quotidien en France en mandarin, sur YouTube, Threads, Instagram et mon blog. J'essaie à chaque fois un style différent : montage, sous-titres, voix off, effets. Je m'occupe de tout, du sujet jusqu'à l'analyse des chiffres." data-en="I share my travels and daily life in France in Mandarin, on YouTube, Threads, Instagram and my blog. Each time I try a different style: editing, subtitles, voiceover, effects. I handle everything, from the topic to reading the numbers.">Je raconte mes voyages et mon quotidien en France en mandarin, sur YouTube, Threads, Instagram et mon blog. J'essaie à chaque fois un style différent : montage, sous-titres, voix off, effets. Je m'occupe de tout, du sujet jusqu'à l'analyse des chiffres.</p>
-      <a class="yt-btn" href="https://www.youtube.com/@josdiary_france" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M23 7.2a3 3 0 00-2.1-2.1C19 4.6 12 4.6 12 4.6s-7 0-8.9.5A3 3 0 001 7.2 31 31 0 00.5 12a31 31 0 00.5 4.8 3 3 0 002.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5a3 3 0 002.1-2.1 31 31 0 00.5-4.8 31 31 0 00-.5-4.8zM9.8 15.1V8.9L15.2 12z"/></svg>@josdiary_france</a>
-      <div class="links-row">
+      <div class="yt-row">
+        <a class="yt-btn" href="https://www.youtube.com/@josdiary_france" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M23 7.2a3 3 0 00-2.1-2.1C19 4.6 12 4.6 12 4.6s-7 0-8.9.5A3 3 0 001 7.2 31 31 0 00.5 12a31 31 0 00.5 4.8 3 3 0 002.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5a3 3 0 002.1-2.1 31 31 0 00.5-4.8 31 31 0 00-.5-4.8zM9.8 15.1V8.9L15.2 12z"/></svg>@josdiary_france</a>
+        <div class="links-row">
         <a href="https://www.instagram.com/jo.lifeinfrance/" target="_blank" rel="noopener">Instagram</a>
         <a href="https://yhchiuportfolio.wordpress.com/" target="_blank" rel="noopener" data-fr="Site WordPress" data-en="WordPress site">Site WordPress</a>
+        </div>
       </div>
       <div class="yt-stats stats" style="border:none">
         <div class="stat"><b class="count" data-to="245" data-dec="0" data-unit="K">0</b><span data-fr="vues Threads en 3 mois" data-en="Threads views in 3 months">vues Threads en 3 mois</span></div>
@@ -1424,7 +1467,7 @@ footer .links .cta:hover{background:#F9D400;color:#1F1C19}
     <a class="video" href="https://www.youtube.com/@josdiary_france/videos?view=0&amp;sort=p&amp;shelf_id=1" target="_blank" rel="noopener"><div class="thumb"><img src="yt_4.jpg" alt="" data-file="yt_4.jpg" loading="lazy"><span class="play"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M6 4l14 8-14 8z"/></svg></span><span class="scrub"></span></div><div class="vt"><span data-fr="Bordeaux : restos, huîtres et cannelés" data-en="Bordeaux: restaurants, oysters, cannelés">Bordeaux : restos, huîtres et cannelés</span><small data-fr="1,7 k vues, 10:23" data-en="1.7k views, 10:23">1,7 k vues, 10:23</small></div></a>
     <a class="video" href="https://www.youtube.com/@josdiary_france/videos?view=0&amp;sort=p&amp;shelf_id=1" target="_blank" rel="noopener"><div class="thumb"><img src="yt_5.jpg" alt="" data-file="yt_5.jpg" loading="lazy"><span class="play"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M6 4l14 8-14 8z"/></svg></span><span class="scrub"></span></div><div class="vt"><span data-fr="Une semaine en France : stage, job et prépa C1" data-en="A week in France: internship, job, C1 prep">Une semaine en France : stage, job et prépa C1</span><small data-fr="1,4 k vues, 12:07" data-en="1.4k views, 12:07">1,4 k vues, 12:07</small></div></a>
   </div>
-  <a class="all-videos" href="https://www.youtube.com/@josdiary_france/videos?view=0&amp;sort=p&amp;shelf_id=1" target="_blank" rel="noopener" data-fr="Voir toutes les vidéos populaires" data-en="See all popular videos">Voir toutes les vidéos populaires</a>
+  <span class="av-wrap"><svg class="ytico" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23 7.2a3 3 0 0 0-2.1-2.1C19 4.6 12 4.6 12 4.6s-7 0-8.9.5A3 3 0 0 0 1 7.2 31 31 0 0 0 .5 12 31 31 0 0 0 1 16.8a3 3 0 0 0 2.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5a3 3 0 0 0 2.1-2.1 31 31 0 0 0 .5-4.8 31 31 0 0 0-.5-4.8ZM9.7 15.4V8.6l6 3.4Z"/></svg><a class="all-videos" href="https://www.youtube.com/@josdiary_france/videos?view=0&amp;sort=p&amp;shelf_id=1" target="_blank" rel="noopener" data-fr="Voir toutes les vidéos populaires" data-en="See all popular videos">Voir toutes les vidéos populaires</a></span>
 
   <h3 class="sub-h" data-fr="Autres formats" data-en="Other formats">Autres formats</h3>
   <div class="formats">
@@ -1446,7 +1489,7 @@ footer .links .cta:hover{background:#F9D400;color:#1F1C19}
   <div class="inner">
     <div>
       <h2 data-fr="Envie d'en parler ?" data-en="Let's talk.">Envie d'en parler ?</h2>
-      <p data-fr="Je recherche un CDI ou un CDD en marketing opérationnel, CRM, marketing analytics ou gestion de projet, partout en France. Je parle français, anglais et mandarin et j'ai l'habitude de piloter des projets internationaux. Écrivez-moi, même juste pour échanger : je réponds vite." data-en="I'm looking for a permanent or fixed-term role in marketing operations, CRM, marketing analytics or project management, anywhere in France. I speak French, English and Mandarin and I'm used to running international projects. Write to me, even just to talk — I reply quickly.">Je recherche un CDI ou un CDD en marketing opérationnel, CRM, marketing analytics ou gestion de projet, partout en France. Je parle français, anglais et mandarin et j'ai l'habitude de piloter des projets internationaux. Écrivez-moi, même juste pour échanger : je réponds vite.</p>
+      <p data-fr="Je recherche un CDI ou un CDD en marketing opérationnel, CRM, marketing analytics ou gestion de projet, partout en France. Je parle français, anglais et mandarin et j'ai l'habitude de piloter des projets internationaux. N'hésitez pas à me contacter !" data-en="I'm looking for a permanent or fixed-term role in marketing operations, CRM, marketing analytics or project management, anywhere in France. I speak French, English and Mandarin and I'm used to running international projects. Feel free to get in touch!">Je recherche un CDI ou un CDD en marketing opérationnel, CRM, marketing analytics ou gestion de projet, partout en France. Je parle français, anglais et mandarin et j'ai l'habitude de piloter des projets internationaux. N'hésitez pas à me contacter !</p>
     </div>
     <div class="links">
       <a class="cta" href="mailto:c.hsuann@gmail.com">c.hsuann@gmail.com</a>
