@@ -18,7 +18,7 @@
 <style>
 :root{
   /* three colours only: cream paper, near-black ink, one light blue */
-  --bg:#F7F4EB;--bg-2:#EFEADD;--panel:#FFFDF8;
+  --bg:#FEFDF8;--bg-2:#F2EEE2;--panel:#FEFDF8;--card:#F6F2E7;
   --ink:#1F1C19;--ink-soft:#57514B;--faint:#6E6760;--sand:#E0DACB;
   --accent:#8FB4DF;--accent-d:#35618F;--accent-l:#DEEAF7;
   --pop:#CC5F3F;--pop-d:#AF4B2B;--pop-l:#F9E4D9;
@@ -744,6 +744,53 @@ footer .credit a{color:inherit;text-decoration:underline}
 }
 @media(max-width:600px){.hero-head .hero-script{margin-bottom:-.45em;transform:rotate(-3deg) translateX(-7%)}}
 .hero-body{padding-top:clamp(3rem,6vw,5rem)}
+
+/* ---- case sections as file cards with folder tabs ---- */
+.filecard{position:relative;margin-top:3.2rem;background:var(--card);border-radius:22px;padding:0 0 1.9rem;box-shadow:0 14px 38px rgba(31,28,25,.09)}
+.filecard .tablist{display:flex;align-items:flex-end;gap:0;margin:0;padding:0 1.1rem;border:none;overflow:visible}
+.filecard .tab{position:relative;margin:0 -16px 0 0;padding:.62rem 2.5rem .62rem 1.25rem;border:none;border-radius:13px 9px 0 0;background:var(--tb,#E6DFCC);color:var(--ink);font-size:.82rem;font-weight:600;letter-spacing:.03em;white-space:nowrap;opacity:.5;clip-path:polygon(0 0,calc(100% - 20px) 0,100% 100%,0 100%);transition:opacity .3s,padding .3s}
+.filecard .tab:nth-child(1){--tb:#BFD3EA;z-index:3}
+.filecard .tab:nth-child(2){--tb:#EFC9B7;z-index:2}
+.filecard .tab:nth-child(3){--tb:#E4DDC8;z-index:1}
+.filecard .tab:hover{opacity:.82}
+.filecard .tab[aria-selected="true"]{opacity:1;font-weight:700;padding-top:.92rem;z-index:4}
+.filecard .tab::after{display:none}
+.card-id{margin:1.4rem clamp(1.2rem,2.6vw,2.1rem) 0;padding-bottom:.75rem;border-bottom:1px solid rgba(31,28,25,.28);font-family:var(--serif);font-size:1.05rem;color:var(--ink-soft);letter-spacing:.04em}
+.filecard .panel{padding:1.5rem clamp(1.2rem,2.6vw,2.1rem) 0}
+.filecard .box,.filecard .card{background:var(--panel)}
+
+@media(min-width:1280px){
+  .filecard .panel{padding-left:64px;padding-right:64px}
+  .card-id{margin-left:64px;margin-right:64px}
+}
+@media(max-width:620px){
+  .filecard{border-radius:16px}
+  .filecard .tablist{padding:0 .5rem;overflow-x:auto}
+  .filecard .tab{font-size:.74rem;padding:.55rem 1.9rem .55rem 1rem;margin-right:-14px}
+  .filecard .tab[aria-selected="true"]{padding-top:.8rem}
+}
+
+/* the pointer carries a little cat */
+.cursor{width:29px;height:29px;margin:-2px 0 0 -3px;color:inherit;transform-origin:3px 2px}
+.cursor svg{width:100%;height:100%;display:block}
+.cursor.big{scale:1.18;rotate:0deg}
+
+/* ---- one background colour for every block ---- */
+:root{--bg-2:#FEFDF8;--card:#FEFDF8}
+body,.case,.case.alt,.lab-sec,footer,.recs{background:var(--bg)}
+.case .intro-panel,.case .box,.filecard,.filecard .box,.filecard .card,
+.intro-visual,.card,.task,.ba,.shot,.pipe-out div,.pipe-out div.pro{background:var(--bg)}
+.case .intro-panel{box-shadow:inset 0 0 0 1px var(--sand)}
+.case .box,.filecard .box,.filecard .card,.pipe-out div.pro{border:1px solid var(--sand)}
+.filecard{border:1px solid var(--sand);box-shadow:0 14px 38px rgba(31,28,25,.07)}
+/* blocks that still need to be readable without a fill */
+.track{background:var(--sand)}
+.tool .ic{background:var(--bg);box-shadow:inset 0 0 0 1px var(--sand)}
+.fmt .fim,.hero-media{background:var(--bg)}
+.env-cards .rec,.video,.fmt{background:var(--bg)}
+.video,.fmt{box-shadow:0 8px 22px rgba(31,28,25,.12)}
+
+.top-bar{background:rgba(254,253,248,.92)}
 </style>
 </head>
 <body>
@@ -859,12 +906,13 @@ footer .credit a{color:inherit;text-decoration:underline}
     <div class="intro-visual"><div class="im"><img src="Marketing%20Strategy_unifox.png" alt="Marketing strategy" data-file="Marketing Strategy_unifox.png" loading="lazy"></div><div class="cap" data-fr="Stratégie marketing & analyse (GA4, Google Ads, Meta, PostHog)" data-en="Marketing strategy & analysis (GA4, Google Ads, Meta, PostHog)">Stratégie marketing & analyse (GA4, Google Ads, Meta, PostHog)</div></div>
   </div>
 
-  <div class="tabs">
+  <div class="tabs filecard">
     <div class="tablist" role="tablist">
       <button class="tab" role="tab" aria-selected="true" data-fr="Objectifs & outils" data-en="Goals & tools">Objectifs & outils</button>
       <button class="tab" role="tab" aria-selected="false" data-fr="Tâches" data-en="Tasks">Tâches</button>
       <button class="tab" role="tab" aria-selected="false" data-fr="Résultats" data-en="Results">Résultats</button>
     </div>
+    <div class="card-id">#01</div>
     <div class="panel" role="tabpanel">
       <div class="box"><ul class="check cols">
         <li data-fr="Réduire le taux de rebond et améliorer la conversion" data-en="Reduce bounce rate and improve conversion">Réduire le taux de rebond et améliorer la conversion</li>
@@ -956,12 +1004,13 @@ footer .credit a{color:inherit;text-decoration:underline}
     </div>
     <div class="intro-visual"><div class="im"><img src="hotel_2.png" alt="Instagram mockup" data-file="hotel_2.png" loading="lazy"></div><div class="cap" data-fr="Maquette Instagram & identité visuelle" data-en="Instagram mockup & visual identity">Maquette Instagram & identité visuelle</div></div>
   </div>
-  <div class="tabs">
+  <div class="tabs filecard">
     <div class="tablist" role="tablist">
       <button class="tab" role="tab" aria-selected="true" data-fr="Objectifs & outils" data-en="Goals & tools">Objectifs & outils</button>
       <button class="tab" role="tab" aria-selected="false" data-fr="Tâches" data-en="Tasks">Tâches</button>
       <button class="tab" role="tab" aria-selected="false" data-fr="Résultats" data-en="Results">Résultats</button>
     </div>
+    <div class="card-id">#02</div>
     <div class="panel" role="tabpanel">
       <div class="box"><ul class="check cols">
         <li data-fr="Attirer les voyageurs anglophones en quête d'un domaine français authentique" data-en="Attract English-speaking travellers looking for an authentic French estate">Attirer les voyageurs anglophones en quête d'un domaine français authentique</li>
@@ -1025,12 +1074,13 @@ footer .credit a{color:inherit;text-decoration:underline}
     </div>
     <div class="intro-visual"><div class="im"><img src="Banner.jpg" alt="Banner" data-file="Banner.jpg" loading="lazy"></div><div class="cap" data-fr="Bannières, landing page, Reels" data-en="Banners, landing page, Reels">Bannières, landing page, Reels</div></div>
   </div>
-  <div class="tabs">
+  <div class="tabs filecard">
     <div class="tablist" role="tablist">
       <button class="tab" role="tab" aria-selected="true" data-fr="Objectifs & outils" data-en="Goals & tools">Objectifs & outils</button>
       <button class="tab" role="tab" aria-selected="false" data-fr="Tâches" data-en="Tasks">Tâches</button>
       <button class="tab" role="tab" aria-selected="false" data-fr="Résultats" data-en="Results">Résultats</button>
     </div>
+    <div class="card-id">#03</div>
     <div class="panel" role="tabpanel">
       <div class="box"><ul class="check cols">
         <li data-fr="Lancer un produit de formation complet en deux mois" data-en="Launch a complete training product in two months">Lancer un produit de formation complet en deux mois</li>
@@ -1101,12 +1151,13 @@ footer .credit a{color:inherit;text-decoration:underline}
     </div>
     <div class="intro-visual"><div class="im"><img src="Linkee_Distrib.jpeg" alt="Distribution" data-file="Linkee_Distrib.jpeg" loading="lazy"></div><div class="cap" data-fr="2 distributions par semaine, ~500 bénéficiaires par session" data-en="2 distributions a week, ~500 beneficiaries per session">2 distributions par semaine, ~500 bénéficiaires par session</div></div>
   </div>
-  <div class="tabs">
+  <div class="tabs filecard">
     <div class="tablist" role="tablist">
       <button class="tab" role="tab" aria-selected="true" data-fr="Objectifs & outils" data-en="Goals & tools">Objectifs & outils</button>
       <button class="tab" role="tab" aria-selected="false" data-fr="Tâches" data-en="Tasks">Tâches</button>
       <button class="tab" role="tab" aria-selected="false" data-fr="Résultats" data-en="Results">Résultats</button>
     </div>
+    <div class="card-id">#04</div>
     <div class="panel" role="tabpanel">
       <div class="box"><ul class="check cols">
         <li data-fr="Assurer chaque distribution avec assez de bénévoles" data-en="Staff every distribution">Assurer chaque distribution avec assez de bénévoles</li>
@@ -1176,14 +1227,15 @@ footer .credit a{color:inherit;text-decoration:underline}
       <p class="desc" data-fr="Dans quelle mesure les initiatives éthiques et les valeurs personnelles poussent-elles les consommateurs à récompenser ou à sanctionner les marques de mode ?" data-en="To what extent do ethical initiatives and personal values drive consumers to reward or punish fashion brands?">Dans quelle mesure les initiatives éthiques et les valeurs personnelles poussent-elles les consommateurs à récompenser ou à sanctionner les marques de mode ?</p>
       <div class="loc"><span>Strasbourg, France</span><span>2025</span><span data-fr="Note : 15/20" data-en="Grade: 15/20">Note : 15/20</span></div>
     </div>
-    <div class="intro-visual"><div class="im" style="background:#DEEAF7"><img src="thesis_model.jpg" alt="Modèle de recherche" data-file="thesis_model.jpg" loading="lazy" style="object-fit:contain"></div><div class="cap" data-fr="Modèle de recherche : valeurs personnelles, engagements éthiques et intention de récompenser ou de sanctionner (H1 à H9)" data-en="Research model: personal values, ethical claims and intention to reward or punish (H1 to H9)">Modèle de recherche : valeurs personnelles, engagements éthiques et intention de récompenser ou de sanctionner (H1 à H9)</div></div>
+    <div class="intro-visual"><div class="im" style="background:var(--bg)"><img src="thesis_model.jpg" alt="Modèle de recherche" data-file="thesis_model.jpg" loading="lazy" style="object-fit:contain"></div><div class="cap" data-fr="Modèle de recherche : valeurs personnelles, engagements éthiques et intention de récompenser ou de sanctionner (H1 à H9)" data-en="Research model: personal values, ethical claims and intention to reward or punish (H1 to H9)">Modèle de recherche : valeurs personnelles, engagements éthiques et intention de récompenser ou de sanctionner (H1 à H9)</div></div>
   </div>
-  <div class="tabs">
+  <div class="tabs filecard">
     <div class="tablist" role="tablist">
       <button class="tab" role="tab" aria-selected="true" data-fr="Méthode" data-en="Method">Méthode</button>
       <button class="tab" role="tab" aria-selected="false" data-fr="Résultats" data-en="Findings">Résultats</button>
       <button class="tab" role="tab" aria-selected="false" data-fr="Pour les marques" data-en="For brands">Pour les marques</button>
     </div>
+    <div class="card-id">#05</div>
     <div class="panel" role="tabpanel">
       <div class="task-grid">
         <div class="task"><h4 data-fr="Cadre théorique" data-en="Framework">Cadre théorique</h4><ul>
@@ -1588,6 +1640,7 @@ document.addEventListener('DOMContentLoaded',function(){var s=null;try{s=localSt
 /* ===== lively layer ===== */
 (function(){
 var RM=matchMedia('(prefers-reduced-motion: reduce)').matches, FINE=matchMedia('(pointer:fine)').matches;
+var CAT='<svg viewBox="0 0 48 48"><g fill="#FFFFFF" stroke="#1F1C19" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round"><path d="M5 3.5 5 24.5 10.6 19.2 14.2 27.4 18.4 25.5 14.9 17.6 22.4 17.2Z"/><path d="M24.6 29.2 22.9 22.9c-.3-1.1.9-2 1.8-1.3l4.6 3.2c1.1-.3 2.3-.4 3.5-.4s2.4.1 3.5.4l4.6-3.2c.9-.6 2.1.2 1.8 1.3l-1.7 6.3c2.4 1.9 3.9 4.6 3.9 7.5 0 5.6-5.1 9.7-12.1 9.7s-12.1-4.1-12.1-9.7c0-2.9 1.5-5.6 3.9-7.5Z"/></g><g fill="#1F1C19"><circle cx="29" cy="34.5" r="1.5"/><circle cx="37" cy="34.5" r="1.5"/></g><path d="M30.6 39.2c.9.9 2.3.9 3.2 0" fill="none" stroke="#1F1C19" stroke-width="1.8" stroke-linecap="round"/></svg>';
 var SPARK='<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5 14.6 9.2 21.6 9.6 16.2 14 18 21 12 17.1 6 21 7.8 14 2.4 9.6 9.4 9.2Z"/></svg>';
 
 /* rotating word */
@@ -1623,7 +1676,7 @@ if(FINE)Array.prototype.forEach.call(document.querySelectorAll('.nav-cta,.yt-btn
 });
 
 /* spark cursor */
-if(FINE){var c=document.createElement('div');c.className='cursor';c.innerHTML=SPARK;document.body.appendChild(c);
+if(FINE){var c=document.createElement('div');c.className='cursor';c.innerHTML=CAT;document.body.appendChild(c);
   var mx=-50,my=-50,cx=-50,cy=-50;
   addEventListener('pointermove',function(e){mx=e.clientX;my=e.clientY;var t=e.target.closest&&e.target.closest('a,button');c.classList.toggle('big',!!t);},{passive:true});
   (function loop(){cx+=(mx-cx)*.18;cy+=(my-cy)*.18;c.style.transform='translate('+cx+'px,'+cy+'px)';requestAnimationFrame(loop);})();}
