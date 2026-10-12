@@ -953,6 +953,36 @@ footer p{font-size:.95rem;line-height:1.45}
 .hero-media>img:not(.hero-wave){border-radius:inherit;animation:none;scale:1;transform:none}
 .hero-media .hero-wave{position:absolute;inset:auto -8.5% 0 auto;width:27.5%;max-width:216px;height:auto;object-fit:contain;z-index:6;pointer-events:none;animation:none;transform:none;filter:drop-shadow(-6px 8px 18px rgba(31,28,25,.18))}
 @media(max-width:620px){.hero-media .hero-wave{width:30.2%;right:-9.2%}}
+
+/* project meta: place only, smaller */
+.intro-panel .loc{font-size:.8rem;margin-top:.9rem}
+
+/* hero contact block + skills line */
+.meta{font-size:.84rem}
+.meta b,.meta a{font-weight:400}
+.creds{font-size:.82rem;font-style:italic;line-height:1.5}
+
+/* recommendations heading */
+.recs h2{font-size:clamp(1.4rem,2.65vw,1.98rem)}
+
+/* project result figures use the body typeface */
+.stat b{font-family:var(--sans);font-weight:700;letter-spacing:-.01em}
+
+/* project intro panel centred */
+.case .intro-panel{align-items:center;text-align:center}
+.case .intro-panel .desc{margin-left:auto;margin-right:auto}
+.case .intro-panel .loc{justify-content:center}
+
+/* small instruction lines: body typeface, italic */
+.ba .note,.pipe-title{font-family:var(--sans);font-style:italic;font-weight:400;font-size:.82rem;letter-spacing:0}
+
+/* Creator Lab heading */
+.lab-sec h2{font-style:italic;font-size:clamp(1.6rem,3.5vw,2.8rem)}
+@media(max-width:620px){.lab-sec h2{font-size:1.55rem}}
+
+/* Creator Lab figures */
+#creator .stat b{font-size:clamp(1.02rem,1.55vw,1.24rem)}
+@media(max-width:900px){#creator .stat b{font-size:1rem}}
 </style>
 </head>
 <body>
@@ -1013,7 +1043,7 @@ footer p{font-size:.95rem;line-height:1.45}
     <div>
       <p class="rotator"><span data-fr="De la donnée à" data-en="From data to">De la donnée à</span> <span class="rot-word" id="rotWord">l'action</span></p>
       <p class="sub" data-fr="Quatre projets et un mémoire qui montrent comment je passe de la donnée à l'action : marketing digital, image de marque, lancement produit et animation de communauté. En dehors du travail, je raconte ma vie en France sur <a href='#creator'>YouTube, Threads, Instagram et mon blog</a>, et j'y applique les mêmes méthodes de bout en bout." data-en="Four projects and a thesis showing how I move from data to action: digital marketing, brand identity, product launch and community management. Outside work, I share my life in France on <a href='#creator'>YouTube, Threads, Instagram and my blog</a>, using the same methods end to end.">Quatre projets et un mémoire qui montrent comment je passe de la donnée à l'action : marketing digital, image de marque, lancement produit et animation de communauté. En dehors du travail, je raconte ma vie en France sur <a href='#creator'>YouTube, Threads, Instagram et mon blog</a>, et j'y applique les mêmes méthodes de bout en bout.</p>
-      <p class="creds" data-fr="Certifications : Google Analytics, Amazon Ads Retail, Marketing Analytics, Data Analysis with Spreadsheets & SQL, Scrum. Ambassadrice internationale EM Strasbourg (2022-2024)." data-en="Certifications: Google Analytics, Amazon Ads Retail, Marketing Analytics, Data Analysis with Spreadsheets & SQL, Scrum. International ambassador, EM Strasbourg (2022-2024).">Certifications : Google Analytics, Amazon Ads Retail, Marketing Analytics, Data Analysis with Spreadsheets & SQL, Scrum. Ambassadrice internationale EM Strasbourg (2022-2024).</p>
+      <p class="creds" data-fr="Marketing opérationnel & CRM, campagnes et automatisation, analytics et tracking, SEO et CRO, gestion de projet APAC / EMEA." data-en="Marketing operations & CRM, campaigns and automation, analytics and tracking, SEO and CRO, project management across APAC / EMEA.">Marketing opérationnel & CRM, campagnes et automatisation, analytics et tracking, SEO et CRO, gestion de projet APAC / EMEA.</p>
     </div>
     <div class="meta">
       <div><b>Yi-Hsuan Chiu</b></div>
@@ -1061,7 +1091,7 @@ footer p{font-size:.95rem;line-height:1.45}
       <h2>UniFox</h2>
       <div class="org" data-fr="Plateforme GreenTech Web3 de trading crypto avec bot IA" data-en="GreenTech Web3 AI-bot crypto trading platform">Plateforme GreenTech Web3 de trading crypto avec bot IA</div>
       <p class="desc" data-fr="Une plateforme sans mesure fiable au départ. J'ai construit tout le tracking de zéro, piloté l'acquisition payante et organique sur l'APAC et l'EMEA, puis transformé ce que montraient les données en correctifs : taux de rebond en baisse de 52,6 % et conversion iOS passée de 58,82 % à 95,2 %." data-en="A platform with no reliable measurement to start from. I built the whole tracking stack from scratch, ran paid and organic acquisition across APAC and EMEA, then turned what the data showed into fixes: bounce rate down 52.6% and iOS conversion from 58.82% to 95.2%.">Une plateforme sans mesure fiable au départ. J'ai construit tout le tracking de zéro, piloté l'acquisition payante et organique sur l'APAC et l'EMEA, puis transformé ce que montraient les données en correctifs : taux de rebond en baisse de 52,6 % et conversion iOS passée de 58,82 % à 95,2 %.</p>
-      <div class="loc"><span>Bordeaux, France</span><span>06-12/2024</span></div>
+      <div class="loc"><span>Bordeaux, France</span></div>
     </div>
     <div class="intro-visual reels-visual"><div class="rv-grid"><figure><div class="im"><img src="unifox_reels_1.png" alt="Reel programme ambassadeur" data-file="unifox_reels_1.png" loading="lazy"></div><figcaption data-fr="Promotion du programme ambassadeur" data-en="Ambassador programme promotion">Promotion du programme ambassadeur</figcaption></figure><figure><div class="im"><img src="unifox_reels_2.png" alt="Roulette en GIF" data-file="unifox_reels_2.png" loading="lazy"></div><figcaption data-fr="Roulette en GIF pour faire réagir l’audience" data-en="GIF roulette to get the audience reacting">Roulette en GIF pour faire réagir l’audience</figcaption></figure><figure><div class="im"><img src="unifox_reels_3.png" alt="Séries de questions-réponses" data-file="unifox_reels_3.png" loading="lazy"></div><figcaption data-fr="Séries de questions-réponses publiées régulièrement" data-en="Q&amp;A series published on a regular rhythm">Séries de questions-réponses publiées régulièrement</figcaption></figure></div></div>
   </div>
@@ -1160,7 +1190,7 @@ footer p{font-size:.95rem;line-height:1.45}
       <h2 data-fr="Hôtel 4★" data-en="4★ Hotel">Hôtel 4★</h2>
       <div class="org" data-fr="Hôtellerie de charme & restaurant, Dordogne" data-en="Boutique hotel & restaurant, Dordogne">Hôtellerie de charme & restaurant, Dordogne</div>
       <p class="desc" data-fr="Positionner un manoir 4★ en Dordogne auprès des voyageurs anglophones qui rêvent de la vie de domaine à la française. La promesse réunit trois atouts, le patrimoine, l'œnotourisme et le passé de lieu de tournage du manoir, déclinée en FR et en EN." data-en="Position a 4★ manor house in the Dordogne for English-speaking travellers who dream of life on a French estate. The promise brings together three assets, the heritage, the wine tourism and the manor's past as a film location, in French and English.">Positionner un manoir 4★ en Dordogne auprès des voyageurs anglophones qui rêvent de la vie de domaine à la française. La promesse réunit trois atouts, le patrimoine, l'œnotourisme et le passé de lieu de tournage du manoir, déclinée en FR et en EN.</p>
-      <div class="loc"><span>Dordogne, France</span><span>04-05/2025, Freelance</span></div>
+      <div class="loc"><span>Dordogne, France</span><span>Freelance</span></div>
     </div>
     <div class="intro-visual"><div class="im"><img src="hotel_3.png" alt="Contenu bilingue FR/EN" data-file="hotel_3.png" loading="lazy"></div><div class="cap" data-fr="Contenu bilingue FR / EN" data-en="Bilingual content FR / EN">Contenu bilingue FR / EN</div></div>
   </div>
@@ -1228,7 +1258,7 @@ footer p{font-size:.95rem;line-height:1.45}
       <h2>Reinventing Carrière</h2>
       <div class="org" data-fr="Cabinet de coaching certifié ICF (PCC), Paris" data-en="ICF (PCC) certified coaching firm, Paris">Cabinet de coaching certifié ICF (PCC), Paris</div>
       <p class="desc" data-fr="Développement complet d'un cours en ligne de formation carrière, de la conception à la mise en marché, pour un cabinet qui accompagne les personnes souhaitant travailler à l'international." data-en="Full-cycle development of an online career course, from concept to launch, for a firm supporting people who want to work abroad.">Développement complet d'un cours en ligne de formation carrière, de la conception à la mise en marché, pour un cabinet qui accompagne les personnes souhaitant travailler à l'international.</p>
-      <div class="loc"><span>Paris, France</span><span>06-09/2023</span></div>
+      <div class="loc"><span>Paris, France</span></div>
     </div>
     <div class="intro-visual"><div class="im"><img src="Banner.jpg" alt="Banner" data-file="Banner.jpg" loading="lazy"></div><div class="cap" data-fr="Bannières, landing page, Reels" data-en="Banners, landing page, Reels">Bannières, landing page, Reels</div></div>
   </div>
@@ -1304,7 +1334,7 @@ footer p{font-size:.95rem;line-height:1.45}
       <h2>Linkee</h2>
       <div class="org" data-fr="Association anti-gaspillage alimentaire, Bordeaux" data-en="Food waste nonprofit, Bordeaux">Association anti-gaspillage alimentaire, Bordeaux</div>
       <p class="desc" data-fr="Animation d'une communauté de 550+ bénévoles, pour une base de 5 000+ bénéficiaires inscrits dont environ 1 000 servis chaque semaine. Relations avec les partenaires existants, 30+ événements organisés et communication hebdomadaire par newsletter, email, WhatsApp et téléphone." data-en="Managed a community of 550+ volunteers, for a base of 5,000+ registered beneficiaries, about 1,000 of them served every week. Kept relationships with existing partners, organized 30+ events and ran weekly communication by newsletter, email, WhatsApp and phone.">Animation d'une communauté de 550+ bénévoles, pour une base de 5 000+ bénéficiaires inscrits dont environ 1 000 servis chaque semaine. Relations avec les partenaires existants, 30+ événements organisés et communication hebdomadaire par newsletter, email, WhatsApp et téléphone.</p>
-      <div class="loc"><span>Bordeaux, France</span><span>08/2025-02/2026</span></div>
+      <div class="loc"><span>Bordeaux, France</span></div>
     </div>
     <div class="intro-visual"><div class="im"><img src="Linkee_Distrib.jpeg" alt="Distribution" data-file="Linkee_Distrib.jpeg" loading="lazy"></div><div class="cap" data-fr="2 distributions par semaine, ~500 bénéficiaires par session" data-en="2 distributions a week, ~500 beneficiaries per session">2 distributions par semaine, ~500 bénéficiaires par session</div></div>
   </div>
@@ -1380,7 +1410,7 @@ footer p{font-size:.95rem;line-height:1.45}
       <h2 data-fr="Mémoire de master" data-en="Master's thesis">Mémoire de master</h2>
       <div class="org">EM Strasbourg Business School</div>
       <p class="desc" data-fr="Dans quelle mesure les initiatives éthiques et les valeurs personnelles poussent-elles les consommateurs à récompenser ou à sanctionner les marques de mode ?" data-en="To what extent do ethical initiatives and personal values drive consumers to reward or punish fashion brands?">Dans quelle mesure les initiatives éthiques et les valeurs personnelles poussent-elles les consommateurs à récompenser ou à sanctionner les marques de mode ?</p>
-      <div class="loc"><span>Strasbourg, France</span><span>2025</span><span data-fr="Note : 15/20" data-en="Grade: 15/20">Note : 15/20</span></div>
+      <div class="loc"><span>Strasbourg, France</span><span data-fr="Note : 15/20" data-en="Grade: 15/20">Note : 15/20</span></div>
     </div>
     <div class="intro-visual"><div class="im" style="background:var(--bg)"><img src="thesis_model.jpg" alt="Modèle de recherche" data-file="thesis_model.jpg" loading="lazy" style="object-fit:contain"></div><div class="cap" data-fr="Modèle de recherche : valeurs personnelles, engagements éthiques et intention de récompenser ou de sanctionner (H1 à H9)" data-en="Research model: personal values, ethical claims and intention to reward or punish (H1 to H9)">Modèle de recherche : valeurs personnelles, engagements éthiques et intention de récompenser ou de sanctionner (H1 à H9)</div></div>
   </div>
@@ -1453,7 +1483,7 @@ footer p{font-size:.95rem;line-height:1.45}
   <div class="lab-grid">
     <div>
       <h2 data-fr="Ma vie en France, en plusieurs formats" data-en="My life in France, in many formats">Ma vie en France, en plusieurs formats</h2>
-      <p class="lead" data-fr="Je raconte mes voyages et mon quotidien en France en mandarin, sur YouTube, Threads, Instagram et mon blog. J'essaie à chaque fois un style différent : montage, sous-titres, voix off, effets. Je m'occupe de tout, du sujet jusqu'à l'analyse des chiffres." data-en="I share my travels and daily life in France in Mandarin, on YouTube, Threads, Instagram and my blog. Each time I try a different style: editing, subtitles, voiceover, effects. I handle everything, from the topic to reading the numbers.">Je raconte mes voyages et mon quotidien en France en mandarin, sur YouTube, Threads, Instagram et mon blog. J'essaie à chaque fois un style différent : montage, sous-titres, voix off, effets. Je m'occupe de tout, du sujet jusqu'à l'analyse des chiffres.</p>
+      <p class="lead" data-fr="Je raconte mes voyages et mon quotidien en France en mandarin et en anglais, sur YouTube, Threads, Instagram et mon blog. J'essaie à chaque fois un style différent : montage, sous-titres, voix off, effets. Je m'occupe de tout, du sujet jusqu'à l'analyse des chiffres." data-en="I share my travels and daily life in France in Mandarin and English, on YouTube, Threads, Instagram and my blog. Each time I try a different style: editing, subtitles, voiceover, effects. I handle everything, from the topic to reading the numbers.">Je raconte mes voyages et mon quotidien en France en mandarin et en anglais, sur YouTube, Threads, Instagram et mon blog. J'essaie à chaque fois un style différent : montage, sous-titres, voix off, effets. Je m'occupe de tout, du sujet jusqu'à l'analyse des chiffres.</p>
       <div class="yt-row">
         <a class="yt-btn" href="https://www.youtube.com/@josdiary_france" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M23 7.2a3 3 0 00-2.1-2.1C19 4.6 12 4.6 12 4.6s-7 0-8.9.5A3 3 0 001 7.2 31 31 0 00.5 12a31 31 0 00.5 4.8 3 3 0 002.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5a3 3 0 002.1-2.1 31 31 0 00.5-4.8 31 31 0 00-.5-4.8zM9.8 15.1V8.9L15.2 12z"/></svg>@josdiary_france</a>
         <div class="links-row">
