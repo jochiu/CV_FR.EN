@@ -487,6 +487,19 @@ button:hover .picon{transform:scale(1.08)}
 /* Bénévolat / Musique notes: tighter lines */
 .small-notes h3{line-height:1.2}
 .small-notes p{line-height:1.38;margin-top:.15rem}
+
+/* round portrait */
+.photo-card .pc-in{width:68%}
+.photo-card .frame{aspect-ratio:1;border-radius:50%;transform:none;box-shadow:0 10px 30px rgba(47,43,40,.1)}
+.photo-card:hover .frame{transform:scale(1.03)}
+.photo-card .tag-note{left:-16px;bottom:26px}
+@media(max-width:1024px){.photo-card .tag-note{left:-22px;bottom:18px}}
+@media(max-width:620px){.photo-card .pc-in{width:72%;max-width:230px}.photo-card .tag-note{left:-10px;bottom:10px}}
+
+/* small waving cut-out on the right of the hero */
+.stage>.hero-wave{position:absolute;right:4%;bottom:5%;width:clamp(104px,13%,156px);height:auto;z-index:4;pointer-events:none;filter:drop-shadow(0 6px 14px rgba(47,43,40,.16))}
+@media(max-width:880px){.stage>.hero-wave{bottom:23px;right:2%;width:104px}}
+@media(max-width:620px){.stage>.hero-wave{display:none}}
 </style>
 </head>
 <body>
@@ -570,6 +583,7 @@ button:hover .picon{transform:scale(1.08)}
         </g>
       </svg>
     </div>
+    <img class="hero-wave" src="hero_wave.gif" alt="" data-file="hero_wave.gif" aria-hidden="true" loading="lazy">
   </div>
 </header>
 
@@ -586,8 +600,8 @@ button:hover .picon{transform:scale(1.08)}
     </div>
 
     <div class="photo-card reveal" style="--d:.15s">
-      <div class="pc-in"><div class="frame zoom"><img src="photo.jpg" alt="Yi-Hsuan Chiu" id="photo"></div>
-      <div class="tag-note" data-fr="hello" data-en="hello">hello</div></div>
+      <div class="pc-in"><div class="frame zoom"><img src="photo_2026.jpg" alt="Yi-Hsuan Chiu" id="photo" data-file="photo_2026.jpg"></div>
+      <div class="tag-note" data-fr="hello&#x202F;!" data-en="hello!">hello&#x202F;!</div></div>
       <div class="contacts">
         <a href="mailto:c.hsuann@gmail.com">c.hsuann@gmail.com</a>
         <a href="tel:+33635713264">+33 6 35 71 32 64</a>
