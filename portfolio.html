@@ -1008,6 +1008,32 @@ footer p{font-size:.95rem;line-height:1.45}
 .case-shots::-webkit-scrollbar-thumb{background:var(--sand);border-radius:3px}
 .case-shots::-webkit-scrollbar-track{background:transparent}
 @media(max-width:620px){.case-shots .shot{min-width:124px}}
+
+/* ===== hero: Hello! I'm [photo] Yi-Hsuan ===== */
+:root{--bg:#FEFCED;--bg-2:#FEFCED;--panel:#FEFCED;--card:#FEFCED;
+  --ink:#35281A;--ink-soft:#6A5B48;--faint:#7D6E58;--sand:#E6DCC6}
+.top-bar{background:rgba(254,252,237,.94)}
+
+.hero-head{max-width:var(--max);margin:0 auto clamp(2.2rem,5vw,3.6rem);padding-top:clamp(4.6rem,8vw,7rem);text-align:center}
+.hero-head h1.hello{display:block;margin:0;font-family:var(--serif);font-weight:400;color:var(--ink);
+  font-size:clamp(1.9rem,5.2vw,3.9rem)!important;line-height:1.18;letter-spacing:-.015em;text-align:center}
+.hello .hl-name{white-space:nowrap}
+.hello .hl-ph{position:relative;display:inline-block;width:1em;height:0;
+  vertical-align:baseline;margin:0 .2em}
+.hello .hl-ph img{position:absolute;left:0;bottom:-.04em;width:100%;height:auto;
+  filter:drop-shadow(0 10px 22px rgba(53,40,26,.18))}
+@media(max-width:620px){.hero-head h1.hello{font-size:1.72rem!important;line-height:1.22}}
+
+/* the six folders sit under the headline, on one row */
+.desk{max-width:var(--max);margin:0 auto;display:grid;
+  grid-template-columns:repeat(6,1fr);gap:clamp(.5rem,1.8vw,1.5rem);
+  align-items:start;justify-items:center;scroll-margin-top:90px}
+.desk>.folder{width:min(100%,150px)}
+@media(max-width:900px){.desk{grid-template-columns:repeat(3,1fr);row-gap:1.8rem}}
+@media(max-width:520px){.desk{grid-template-columns:repeat(2,1fr);row-gap:1.6rem}}
+/* the click hint moves with the new order */
+.fcol:last-child .folder:nth-child(2) .fcur{opacity:0;animation:none}
+.desk>.folder:nth-child(5) .fcur{opacity:1;animation:fnudge 2.4s ease-in-out infinite}
 </style>
 </head>
 <body>
@@ -1044,26 +1070,19 @@ footer p{font-size:.95rem;line-height:1.45}
 
 <header class="hero">
   <div class="hero-head">
-    <span class="hero-eyebrow" data-fr="Présentation personnelle" data-en="Personal presentation">Présentation personnelle</span>
-    <span class="hero-script" data-fr="Marketing &amp; data" data-en="Marketing &amp; data">Marketing &amp; data</span>
-    <h1 id="heroTitle" aria-label="Portfolio">Portfolio</h1>
+    <h1 class="hello">
+      <span class="hl-t" data-fr="Bonjour&#8239;! Moi c'est" data-en="Hello! I'm">Bonjour&#8239;! Moi c'est</span><span class="hl-ph"><img src="hello_me.png" alt="Yi-Hsuan Chiu" data-file="hello_me.png"></span><span class="hl-t hl-name">Yi-Hsuan</span>
+    </h1>
   </div>
   <div class="desk" id="work">
-    <div class="fcol">
       <a class="folder" href="#strategy" style="--fc:#7DC2F5;--fc-d:#71A8DB"><span class="ficon"><svg class="fsvg" viewBox="0 0 120 96" aria-hidden="true"><path d="M6 20a10 10 0 0 1 10-10h27a7 7 0 0 1 5.1 2.2l6.4 6.9A7 7 0 0 0 59.6 21H104a10 10 0 0 1 10 10v55a10 10 0 0 1-10 10H16A10 10 0 0 1 6 86Z" fill="var(--fc-d)"/><path d="M6 34a10 10 0 0 1 10-10h88a10 10 0 0 1 10 10v52a10 10 0 0 1-10 10H16A10 10 0 0 1 6 86Z" fill="var(--fc)"/></svg><span class="fpeek" aria-hidden="true"><img src="unifox_reels_1.png" alt="" data-file="unifox_reels_1.png" loading="lazy"><img src="Marketing%20Strategy_unifox.png" alt="" data-file="Marketing Strategy_unifox.png" loading="lazy"></span><svg class="ffront" viewBox="0 0 120 96" aria-hidden="true"><path d="M6 34a10 10 0 0 1 10-10h88a10 10 0 0 1 10 10v52a10 10 0 0 1-10 10H16A10 10 0 0 1 6 86Z" fill="var(--fc)"/></svg><svg class="fcur" viewBox="0 0 16 18" aria-hidden="true"><path d="M1.4 1 13.6 9.2 7.6 10.1 10.6 15.9 8.4 17 5.4 11.2 1.4 14.6Z" fill="#1F1C19" stroke="#F5F6F5" stroke-width="1.2" stroke-linejoin="round"/></svg></span><span class="fname" data-fr="01_digital_marketing" data-en="01_digital_marketing">01_digital_marketing</span></a>
       <a class="folder" href="#brand" style="--fc:#7DC2F5;--fc-d:#71A8DB"><span class="ficon"><svg class="fsvg" viewBox="0 0 120 96" aria-hidden="true"><path d="M6 20a10 10 0 0 1 10-10h27a7 7 0 0 1 5.1 2.2l6.4 6.9A7 7 0 0 0 59.6 21H104a10 10 0 0 1 10 10v55a10 10 0 0 1-10 10H16A10 10 0 0 1 6 86Z" fill="var(--fc-d)"/><path d="M6 34a10 10 0 0 1 10-10h88a10 10 0 0 1 10 10v52a10 10 0 0 1-10 10H16A10 10 0 0 1 6 86Z" fill="var(--fc)"/></svg><span class="fpeek" aria-hidden="true"><img src="hotel_1.png" alt="" data-file="hotel_1.png" loading="lazy"><img src="hotel_3.png" alt="" data-file="hotel_3.png" loading="lazy"></span><svg class="ffront" viewBox="0 0 120 96" aria-hidden="true"><path d="M6 34a10 10 0 0 1 10-10h88a10 10 0 0 1 10 10v52a10 10 0 0 1-10 10H16A10 10 0 0 1 6 86Z" fill="var(--fc)"/></svg><svg class="fcur" viewBox="0 0 16 18" aria-hidden="true"><path d="M1.4 1 13.6 9.2 7.6 10.1 10.6 15.9 8.4 17 5.4 11.2 1.4 14.6Z" fill="#1F1C19" stroke="#F5F6F5" stroke-width="1.2" stroke-linejoin="round"/></svg></span><span class="fname" data-fr="02_brand_strategy" data-en="02_brand_strategy">02_brand_strategy</span></a>
       <a class="folder" href="#product" style="--fc:#7DC2F5;--fc-d:#71A8DB"><span class="ficon"><svg class="fsvg" viewBox="0 0 120 96" aria-hidden="true"><path d="M6 20a10 10 0 0 1 10-10h27a7 7 0 0 1 5.1 2.2l6.4 6.9A7 7 0 0 0 59.6 21H104a10 10 0 0 1 10 10v55a10 10 0 0 1-10 10H16A10 10 0 0 1 6 86Z" fill="var(--fc-d)"/><path d="M6 34a10 10 0 0 1 10-10h88a10 10 0 0 1 10 10v52a10 10 0 0 1-10 10H16A10 10 0 0 1 6 86Z" fill="var(--fc)"/></svg><span class="fpeek" aria-hidden="true"><img src="Product%20Strategy_paris.png" alt="" data-file="Product Strategy_paris.png" loading="lazy"><img src="Banner.jpg" alt="" data-file="Banner.jpg" loading="lazy"></span><svg class="ffront" viewBox="0 0 120 96" aria-hidden="true"><path d="M6 34a10 10 0 0 1 10-10h88a10 10 0 0 1 10 10v52a10 10 0 0 1-10 10H16A10 10 0 0 1 6 86Z" fill="var(--fc)"/></svg><svg class="fcur" viewBox="0 0 16 18" aria-hidden="true"><path d="M1.4 1 13.6 9.2 7.6 10.1 10.6 15.9 8.4 17 5.4 11.2 1.4 14.6Z" fill="#1F1C19" stroke="#F5F6F5" stroke-width="1.2" stroke-linejoin="round"/></svg></span><span class="fname" data-fr="03_product_strategy" data-en="03_product_strategy">03_product_strategy</span></a>
-    </div>
-    <div class="deskmid">
-      <div class="hero-media" id="heroMedia"><img src="bg.png" alt="" data-file="bg.png"><img class="hero-wave" src="hero_wave.gif" alt="" data-file="hero_wave.gif" aria-hidden="true" loading="lazy"></div>
-      <div class="hero-row"><span class="hr-name">Yi-Hsuan Chiu</span><span class="hr-year">2026</span></div>
-    </div>
-    <div class="fcol">
       <a class="folder" href="#community" style="--fc:#7DC2F5;--fc-d:#71A8DB"><span class="ficon"><svg class="fsvg" viewBox="0 0 120 96" aria-hidden="true"><path d="M6 20a10 10 0 0 1 10-10h27a7 7 0 0 1 5.1 2.2l6.4 6.9A7 7 0 0 0 59.6 21H104a10 10 0 0 1 10 10v55a10 10 0 0 1-10 10H16A10 10 0 0 1 6 86Z" fill="var(--fc-d)"/><path d="M6 34a10 10 0 0 1 10-10h88a10 10 0 0 1 10 10v52a10 10 0 0 1-10 10H16A10 10 0 0 1 6 86Z" fill="var(--fc)"/></svg><span class="fpeek" aria-hidden="true"><img src="Linkee_Distrib.jpeg" alt="" data-file="Linkee_Distrib.jpeg" loading="lazy"><img src="Linkee_Stand.jpeg" alt="" data-file="Linkee_Stand.jpeg" loading="lazy"></span><svg class="ffront" viewBox="0 0 120 96" aria-hidden="true"><path d="M6 34a10 10 0 0 1 10-10h88a10 10 0 0 1 10 10v52a10 10 0 0 1-10 10H16A10 10 0 0 1 6 86Z" fill="var(--fc)"/></svg><svg class="fcur" viewBox="0 0 16 18" aria-hidden="true"><path d="M1.4 1 13.6 9.2 7.6 10.1 10.6 15.9 8.4 17 5.4 11.2 1.4 14.6Z" fill="#1F1C19" stroke="#F5F6F5" stroke-width="1.2" stroke-linejoin="round"/></svg></span><span class="fname" data-fr="04_community_project" data-en="04_community_project">04_community_project</span></a>
       <a class="folder" href="#research" style="--fc:#7DC2F5;--fc-d:#71A8DB"><span class="ficon"><svg class="fsvg" viewBox="0 0 120 96" aria-hidden="true"><path d="M6 20a10 10 0 0 1 10-10h27a7 7 0 0 1 5.1 2.2l6.4 6.9A7 7 0 0 0 59.6 21H104a10 10 0 0 1 10 10v55a10 10 0 0 1-10 10H16A10 10 0 0 1 6 86Z" fill="var(--fc-d)"/><path d="M6 34a10 10 0 0 1 10-10h88a10 10 0 0 1 10 10v52a10 10 0 0 1-10 10H16A10 10 0 0 1 6 86Z" fill="var(--fc)"/></svg><span class="fpeek" aria-hidden="true"><img src="thesis_model.jpg" alt="" data-file="thesis_model.jpg" loading="lazy"></span><svg class="ffront" viewBox="0 0 120 96" aria-hidden="true"><path d="M6 34a10 10 0 0 1 10-10h88a10 10 0 0 1 10 10v52a10 10 0 0 1-10 10H16A10 10 0 0 1 6 86Z" fill="var(--fc)"/></svg><svg class="fcur" viewBox="0 0 16 18" aria-hidden="true"><path d="M1.4 1 13.6 9.2 7.6 10.1 10.6 15.9 8.4 17 5.4 11.2 1.4 14.6Z" fill="#1F1C19" stroke="#F5F6F5" stroke-width="1.2" stroke-linejoin="round"/></svg></span><span class="fname" data-fr="05_recherche" data-en="05_research">05_recherche</span></a>
       <a class="folder" href="#creator" style="--fc:#7DC2F5;--fc-d:#71A8DB"><span class="ficon"><svg class="fsvg" viewBox="0 0 120 96" aria-hidden="true"><path d="M6 20a10 10 0 0 1 10-10h27a7 7 0 0 1 5.1 2.2l6.4 6.9A7 7 0 0 0 59.6 21H104a10 10 0 0 1 10 10v55a10 10 0 0 1-10 10H16A10 10 0 0 1 6 86Z" fill="var(--fc-d)"/><path d="M6 34a10 10 0 0 1 10-10h88a10 10 0 0 1 10 10v52a10 10 0 0 1-10 10H16A10 10 0 0 1 6 86Z" fill="var(--fc)"/></svg><span class="fpeek" aria-hidden="true"><img src="yt_1.jpg" alt="" data-file="yt_1.jpg" loading="lazy"><img src="line_stickers.jpg" alt="" data-file="line_stickers.jpg" loading="lazy"></span><svg class="ffront" viewBox="0 0 120 96" aria-hidden="true"><path d="M6 34a10 10 0 0 1 10-10h88a10 10 0 0 1 10 10v52a10 10 0 0 1-10 10H16A10 10 0 0 1 6 86Z" fill="var(--fc)"/></svg><svg class="fcur" viewBox="0 0 16 18" aria-hidden="true"><path d="M1.4 1 13.6 9.2 7.6 10.1 10.6 15.9 8.4 17 5.4 11.2 1.4 14.6Z" fill="#1F1C19" stroke="#F5F6F5" stroke-width="1.2" stroke-linejoin="round"/></svg></span><span class="fname" data-fr="06_creator_lab" data-en="06_creator_lab">06_creator_lab</span></a>
-    </div>
   </div>
+
   <div class="hero-body">
     <div>
       <p class="rotator"><span data-fr="De la donnée à" data-en="From data to">De la donnée à</span> <span class="rot-word" id="rotWord">l'action</span></p>
@@ -1599,12 +1618,12 @@ $$('img[data-file]').forEach(function(img){
 });
 
 /* hero letters */
-(function(){var h=$('#heroTitle'),t=h.textContent;h.textContent='';
+(function(){var h=$('#heroTitle');if(!h)return;var t=h.textContent;h.textContent='';
   t.split('').forEach(function(c,i){var s=document.createElement('span');s.textContent=c;s.setAttribute('aria-hidden','true');s.style.animationDelay=(0.15+i*0.06)+'s';h.appendChild(s);});
   setTimeout(function(){$$('span',h).forEach(function(s){s.style.transform='translateY(0)';s.style.opacity='1';s.style.animation='none';});},1400);
 })();
 /* spark parallax */
-(function(){var m=$('#heroMedia'),sp=$$('.float-spark',m);
+(function(){var m=$('#heroMedia');if(!m)return;var sp=$$('.float-spark',m);
   if(matchMedia('(prefers-reduced-motion: reduce)').matches)return;
   m.addEventListener('pointermove',function(e){var r=m.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;
     sp.forEach(function(s){var d=+s.dataset.depth;s.style.transform='translate('+(x*d)+'px,'+(y*d)+'px) rotate('+(x*d*2)+'deg)';});});
@@ -1906,7 +1925,7 @@ addEventListener('click',function(e){if(!(e.target.closest&&e.target.closest('bu
 
 /* doodle parallax */
 var hm=document.getElementById('heroMedia'),dds=document.querySelectorAll('.dd');
-if(FINE)hm.addEventListener('pointermove',function(e){var r=hm.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;
+if(FINE&&hm)hm.addEventListener('pointermove',function(e){var r=hm.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;
   Array.prototype.forEach.call(dds,function(d){var k=+d.dataset.depth;d.style.transform='translate('+x*k+'px,'+y*k+'px)';});});
 /* marquee reacts to scroll speed */
 var last=scrollY,mqs=document.querySelectorAll('.marquee div');
