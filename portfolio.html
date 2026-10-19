@@ -15,7 +15,7 @@
 <title>Yi-Hsuan Chiu | Portfolio</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Caveat:wght@500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Caveat:wght@500;700&family=Fira+Code:wght@400;500;600;700&family=DM+Serif+Display:ital@0;1&family=Inter:wght@400;500;600;700&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
 <style>
 :root{
   /* three colours only: cream paper, near-black ink, one light blue */
@@ -1034,13 +1034,157 @@ footer p{font-size:.95rem;line-height:1.45}
 /* the click hint moves with the new order */
 .fcol:last-child .folder:nth-child(2) .fcur{opacity:0;animation:none}
 .desk>.folder:nth-child(5) .fcur{opacity:1;animation:fnudge 2.4s ease-in-out infinite}
+
+/* ---- back to the grey paper ---- */
+:root{--bg:#FAFBFA;--bg-2:#FAFBFA;--panel:#FAFBFA;--card:#FAFBFA}
+.top-bar{background:rgba(250,251,250,.94)}
+
+/* ---- body copy in Georgia ---- */
+:root{--sans:'Georgia Pro',Georgia,'Times New Roman',serif}
+body{letter-spacing:0}
+
+/* ---- sky behind the hero, fading into the page ---- */
+.hero{position:relative;isolation:isolate}
+.hero>.sky{position:absolute;inset:0 0 auto;z-index:-1;overflow:hidden;
+  height:clamp(300px,52vw,620px);pointer-events:none}
+.hero>.sky img{width:100%;height:100%;object-fit:cover;object-position:center top;display:block;
+  -webkit-mask-image:linear-gradient(to bottom,#000 0%,#000 34%,rgba(0,0,0,.55) 66%,transparent 100%);
+  mask-image:linear-gradient(to bottom,#000 0%,#000 34%,rgba(0,0,0,.55) 66%,transparent 100%)}
+.hero>.sky::after{content:'';position:absolute;inset:0;
+  background:linear-gradient(to bottom,rgba(250,251,250,.18) 0%,rgba(250,251,250,.5) 70%,var(--bg) 100%)}
+
+/* ---- one blue for the three tabs ---- */
+.filecard .tab:nth-child(1),.filecard .tab:nth-child(2),.filecard .tab:nth-child(3){--tb:#7DC2F5}
+.filecard .tab{filter:saturate(.45) brightness(1.06)}
+.filecard .tab:hover{filter:saturate(.8)}
+.filecard .tab[aria-selected="true"]{filter:none}
+
+/* ---- the cut-out, 10% smaller ---- */
+.hello .hl-ph{width:.9em}
+
+/* ---- project numbers match the project titles ---- */
+.case-head .case-num{font-family:var(--serif);font-style:italic;font-weight:400;
+  font-size:clamp(1.6rem,3.5vw,2.8rem);line-height:1;color:var(--ink)}
+@media(max-width:620px){.case-head .case-num{font-size:1.55rem}}
+.lab-sec .case-num{color:var(--ink)}
+
+/* ---- tabs: lifted clear of the card frame ---- */
+.filecard{position:relative;overflow:visible;margin-top:4.8rem}
+.filecard .tablist{position:absolute;left:0;right:0;bottom:100%;
+  gap:.45rem;padding:0 clamp(1.6rem,2.8vw,2.3rem);margin:0;align-items:flex-end}
+.filecard .tab{margin:0 0 -1px 0;padding:.62rem 1.45rem .78rem;border-radius:14px 14px 0 0;
+  clip-path:none;opacity:1;line-height:1.15;
+  filter:saturate(.42) brightness(1.07);transition:filter .25s,padding .25s,transform .25s}
+.filecard .tab:hover{filter:saturate(.72) brightness(1.03);transform:translateY(-2px)}
+.filecard .tab[aria-selected="true"]{filter:none;color:var(--ink);font-weight:700;
+  padding-top:.92rem;padding-bottom:.86rem;transform:none;z-index:4}
+@media(max-width:620px){.filecard .tablist{padding:0 1rem;gap:.3rem}
+  .filecard .tab{padding:.55rem 1rem .7rem;font-size:.76rem}}
+
+/* ---- rotator in Cre Hearttree, with a close fallback ---- */
+.rotator{font-family:'Cre Hearttree','Instrument Serif',Georgia,serif}
+.rot-word{font-family:inherit}
+
+/* ---- the two intro paragraphs in Georgia ---- */
+.sub{font-size:1.02rem;line-height:1.55}
+.creds{font-size:.86rem;line-height:1.5}
+
+/* ---- headline ---- */
+.hero-head h1.hello{font-family:'Trebuchet MS','Lucida Grande','Segoe UI',sans-serif;
+  font-size:clamp(2.6rem,8vw,6rem)!important;line-height:1.1}
+.hello .hl-ph{width:.78em;margin:0 0 0 .3em}
+@media(max-width:620px){.hero-head h1.hello{font-size:2.5rem!important}}
+
+/* skills chips: regular weight */
+.pill{font-weight:400}
+
+/* ---- the bar reads like a browser window ---- */
+.top-bar .tb-left{display:flex;align-items:center;gap:clamp(.7rem,1.6vw,1.1rem);min-width:0}
+.top-bar .winbtns{display:flex;align-items:center;gap:7px;flex:none}
+.top-bar .winbtns i{width:11px;height:11px;border-radius:50%;display:block;
+  box-shadow:inset 0 0 0 .5px rgba(0,0,0,.09)}
+.top-bar .winbtns i:nth-child(1){background:#FF5F57}
+.top-bar .winbtns i:nth-child(2){background:#FEBC2E}
+.top-bar .winbtns i:nth-child(3){background:#28C840}
+@media(max-width:620px){.top-bar .winbtns i{width:9px;height:9px}.top-bar .winbtns{gap:5px}}
+
+/* ---- typography pass ---- */
+:root{--sans:'Inter',-apple-system,'Segoe UI',Helvetica,Arial,sans-serif}
+
+/* hero title */
+.hero-head h1.hello{font-family:'DM Serif Display','Instrument Serif',Georgia,serif}
+
+/* project titles */
+.intro-panel h2{font-family:'Trebuchet MS','Lucida Grande','Segoe UI',sans-serif;letter-spacing:-.01em}
+
+/* the strip under each project, and the eyebrow above it */
+.ch-label{font-family:'EB Garamond',Georgia,serif;letter-spacing:.3em;font-weight:500}
+.case-foot{font-family:'Trebuchet MS','Lucida Grande','Segoe UI',sans-serif;
+  font-size:.86rem;letter-spacing:.02em;font-weight:500}
+
+/* rotating headline + recommendations title */
+.rotator,.recs h2{font-family:'Trebuchet MS','Lucida Grande','Segoe UI',sans-serif}
+.rotator{letter-spacing:-.015em}
+.recs h2{letter-spacing:-.01em}
+
+/* brand mark */
+.brand{font-family:'EB Garamond',Georgia,serif;font-style:italic;font-weight:500;font-size:1.6rem}
+@media(max-width:620px){.brand{font-size:1.35rem}}
+
+/* task cards: heading matches the project strip, list tighter and 5% smaller */
+.task h4{font-family:'Trebuchet MS','Lucida Grande','Segoe UI',sans-serif;
+  font-weight:600;font-size:1.08rem;letter-spacing:-.01em;line-height:1.3}
+@media(max-width:900px){.task h4{font-size:1rem}}
+.task li{font-size:.91rem;line-height:1.38;margin-bottom:.42rem}
+
+/* goals checklist, tighter */
+.check li{line-height:1.38;margin-bottom:.38rem}
+
+/* hero lead paragraph, tighter */
+.sub{line-height:1.42}
+
+/* rotating headline and the recommendations title, smaller */
+.rotator{font-size:clamp(1.4rem,2.7vw,1.95rem)}
+@media(max-width:900px){.rotator{font-size:1.3rem}}
+.recs h2{font-size:clamp(1.25rem,2.3vw,1.72rem)}
+@media(max-width:900px){.recs h2{font-size:1.25rem}}
+.recs h2::before{content:'\1F48C';margin-right:.4em;font-size:.86em;
+  font-family:'Apple Color Emoji','Segoe UI Emoji','Noto Color Emoji',sans-serif}
+
+/* nav typography matches the body */
+.nav-links a,.nav-cta{font-family:var(--sans)}
+.nav-links a{font-size:.88rem;font-weight:500}
+
+/* contact pill: smaller, folder blue */
+.nav-cta{background:#7DC2F5!important;color:var(--ink)!important;font-weight:600!important;
+  font-size:.84rem;padding:.34rem .9rem}
+.nav-cta:hover{background:#9BD1F8!important}
+@media(max-width:620px){.nav-cta{font-size:.8rem;padding:.3rem .8rem}}
+
+/* hero title turns gold on hover */
+.hero-head h1.hello{transition:color .3s}
+.hero-head h1.hello:hover{color:#B98600}
+
+/* rotating word: blue text, yellow underline */
+.rot-word{color:#35618F;background:linear-gradient(transparent 68%,#F9D400 68%)}
+
+/* result figures sit 10% above their label */
+#strategy .stat b,.case .stat b{font-size:1.1rem;padding:0 .18em}
+@media(max-width:900px){.case .stat b{font-size:1.02rem}}
+
+/* checklist: real grid columns, so the tick boxes stop fragmenting */
+.box .check.cols{columns:auto;column-gap:normal;display:grid;grid-template-columns:1fr 1fr;gap:0 2.5rem;align-items:start}
+@media(max-width:620px){.box .check.cols{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
 <div class="progress" id="progress"></div>
 
 <nav class="top-bar">
-  <a class="brand" href="index.html"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5 14.6 9.2 21.6 9.6 16.2 14 18 21 12 17.1 6 21 7.8 14 2.4 9.6 9.4 9.2Z"/></svg>yi-hsuan</a>
+  <div class="tb-left">
+    <span class="winbtns" aria-hidden="true"><i></i><i></i><i></i></span>
+    <a class="brand" href="index.html"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5 14.6 9.2 21.6 9.6 16.2 14 18 21 12 17.1 6 21 7.8 14 2.4 9.6 9.4 9.2Z"/></svg>yi-hsuan</a>
+  </div>
   <div class="nav-links">
     <a href="index.html" class="nav-desktop" data-fr="Mon CV" data-en="About me">Mon CV</a>
     <a href="#work" class="nl nav-desktop" data-sec="work" data-fr="Projets" data-en="Work">Projets</a>
@@ -1069,9 +1213,10 @@ footer p{font-size:.95rem;line-height:1.45}
 </div>
 
 <header class="hero">
+  <div class="sky" aria-hidden="true"><img src="hero_sky.jpg" alt="" data-file="hero_sky.jpg"></div>
   <div class="hero-head">
     <h1 class="hello">
-      <span class="hl-t" data-fr="Bonjour&#8239;! Moi c'est" data-en="Hello! I'm">Bonjour&#8239;! Moi c'est</span><span class="hl-ph"><img src="hello_me.png" alt="Yi-Hsuan Chiu" data-file="hello_me.png"></span><span class="hl-t hl-name">Yi-Hsuan</span>
+      <span class="hl-t hl-name">Portfolio</span><span class="hl-ph"><img src="hello_me.png" alt="Yi-Hsuan Chiu" data-file="hello_me.png"></span>
     </h1>
   </div>
   <div class="desk" id="work">
