@@ -18,7 +18,7 @@
 <title>Yi-Hsuan Chiu, CV</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&family=Caveat:wght@500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&family=Caveat:wght@500;700&family=Inter:wght@400;500;600;700&family=DM+Serif+Display:ital@0;1&family=EB+Garamond:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
 <style>
 :root{
   --paper:#FFFEFB; --paper-2:#F8F5F0; --line:#ECE6DE;
@@ -501,6 +501,79 @@ button:hover .picon{transform:scale(1.08)}
 .stage>.hero-wave{position:absolute;right:4%;bottom:5%;width:clamp(75px,9.4%,113px);height:auto;z-index:4;pointer-events:none;filter:drop-shadow(0 6px 14px rgba(47,43,40,.16))}
 @media(max-width:880px){.stage>.hero-wave{bottom:23px;right:2%;width:75px}}
 @media(max-width:620px){.stage>.hero-wave{display:none}}
+
+/* ===== typography aligned with the portfolio page ===== */
+:root{--sans:'Inter',-apple-system,'Segoe UI',Helvetica,Arial,sans-serif;
+  --ink:#35281A;--soft:#6A5B48;--faint:#7D6E58}
+
+/* wordmark */
+.logo{font-family:'EB Garamond',Georgia,serif;font-style:italic;font-weight:500}
+
+/* nav links read like the body */
+.nav a.nl{font-family:var(--sans);font-size:.88rem;font-weight:500}
+@media(min-width:900px){.nav a.nl{font-size:.88rem}}
+
+/* hero */
+.hello{font-family:'DM Serif Display','Instrument Serif',Georgia,serif}
+.hero-line{font-family:'Trebuchet MS','Lucida Grande','Segoe UI',sans-serif}
+.hero-line em{color:#35618F;background:linear-gradient(transparent 82%,#F9D400 82%,#F9D400 96%,transparent 96%);padding:0 .14em}
+
+/* section headings + sub-headings */
+.h2,.contact .big{font-family:'Trebuchet MS','Lucida Grande','Segoe UI',sans-serif;letter-spacing:-.01em}
+.job h3,.col h3,.school h3,.beyond h3,.trait h3{
+  font-family:'Trebuchet MS','Lucida Grande','Segoe UI',sans-serif;font-weight:600;letter-spacing:-.01em}
+.reco p{font-family:'EB Garamond',Georgia,serif}
+
+/* contrast corrections (small labels were under WCAG AA) */
+:root{--sage:#5F7C66}
+.proj button .badge,.trait h3 small,.why{color:#A34429}
+.reco .q{color:#C4553A}
+
+/* ===== review pass: music accent + text sizing ===== */
+/* music control in folder blue */
+.picon{background:#5FA8E0}
+[aria-pressed="true"] .picon{background:#7DC2F5}
+.mnote{color:#4A90C8}
+[aria-pressed="true"] .mnote{color:#5FA8E0}
+@keyframes mping{0%{box-shadow:0 0 0 0 rgba(95,168,224,.5)}70%,100%{box-shadow:0 0 0 9px rgba(95,168,224,0)}}
+
+/* hero sub-line */
+.hero-line{font-size:clamp(1.05rem,2.1vw,1.42rem);line-height:1.32;color:var(--soft)}
+
+/* about + trait copy */
+.about p,#about p{font-size:.98rem;line-height:1.45}
+#about .trait p,.trait p{font-size:.9rem;line-height:1.4}
+
+/* recommendation quotes: tighter */
+.reco p{line-height:1.3}
+
+/* "open all" in the body face */
+.all{font-family:var(--sans);font-size:.84rem;font-weight:500}
+
+/* experience: toggles, portfolio links, detail bullets */
+.toggle,.job .case{font-size:.84rem}
+.detail li{font-size:.9rem;line-height:1.42;margin-bottom:.45rem}
+.job .lead{font-size:.96rem;line-height:1.45}
+
+/* beyond the office */
+.beyond p,.beyond li{font-size:.9rem;line-height:1.42}
+.beyond li{margin-bottom:.32rem}
+
+/* contact */
+.contact p{font-size:.95rem;line-height:1.45}
+
+/* hero sub-line: one line, quiet role label, the rotating phrase carries the colour */
+.hero-copy{width:min(1000px,94%)}
+.hero-line{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:center;gap:0 .55rem;
+  font-size:clamp(.98rem,1.72vw,1.22rem)}
+.hero-line .hl-role{color:var(--faint);font-weight:400}
+.hero-line .hl-sep{width:4px;height:4px;border-radius:50%;background:#C4B49A;
+  display:inline-block;align-self:center;flex:none}
+.hero-line em{font-weight:500}
+@media(max-width:620px){.hero-line{font-size:1rem;gap:0 .4rem}}
+
+/* thesis blurb, smaller */
+.proj .detail p{font-size:.88rem;line-height:1.45}
 </style>
 </head>
 <body>
@@ -555,7 +628,7 @@ button:hover .picon{transform:scale(1.08)}
 
     <div class="hero-copy">
       <h1 class="hello" data-fr="Bonjour ! Je suis Yi-Hsuan," data-en="Bonjour ! I&#x27;m Yi-Hsuan,">Bonjour ! Je suis Yi-Hsuan,</h1>
-      <p class="hero-line"><span data-fr="Marketing opérationnel, CRM &amp; analytics" data-en="Marketing operations, CRM &amp; analytics">Marketing opérationnel, CRM &amp; analytics</span><br><em id="rot">Je construis le tracking à partir de zéro.</em></p>
+      <p class="hero-line"><span class="hl-role" data-fr="Marketing opérationnel, CRM &amp; analytics" data-en="Marketing operations, CRM &amp; analytics">Marketing opérationnel, CRM &amp; analytics</span><span class="hl-sep" aria-hidden="true"></span><em id="rot">Je construis le tracking à partir de zéro.</em></p>
       <div class="hero-cta">
         <a class="btn" href="#contact" data-fr="On discute ?" data-en="Let's chat">On discute ?</a>
         <a class="btn light" href="#recommendations" data-fr="Lire mes recommandations" data-en="Read my references">Lire mes recommandations</a>
@@ -751,9 +824,9 @@ button:hover .picon{transform:scale(1.08)}
         <div class="job-actions"><button class="toggle" aria-expanded="false"><span class="pm"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 1v10M1 6h10"/></svg></span><span class="tl">Voir le détail</span></button></div>
         <div class="detail"><div><div class="detail-in">
           <ul>
-            <li data-fr="Gestion de &lt;strong&gt;3 gammes de produits&lt;/strong&gt; (moniteurs, périphériques desktop, refroidissement sur mesure) entre l&#x27;Asie, l&#x27;Europe et les Amériques : création des SKU et des nomenclatures (BOM) des nouveaux produits, gestion des emballages et des fichiers marketing, du prototype à la production (PLM)" data-en="Managed &lt;strong&gt;3 product lines&lt;/strong&gt; (monitors, desktop devices, custom cooling) across Asia, Europe and the Americas: SKU and BOM creation for new products, packaging and marketing files, from prototype to production (PLM)">Gestion de <strong>3 gammes de produits</strong> (moniteurs, périphériques desktop, refroidissement sur mesure) entre l'Asie, l'Europe et les Amériques : création des SKU et des nomenclatures (BOM) des nouveaux produits, gestion des emballages et des fichiers marketing, du prototype à la production (PLM)</li>
-            <li data-fr="Optimisation des processus dans Oracle PLM pour garantir l&#x27;&lt;strong&gt;intégrité des données produits&lt;/strong&gt; et la conformité aux normes internationales, et coordination des lancements en respectant les spécificités et les standards de chaque marché" data-en="Optimised processes in Oracle PLM to ensure &lt;strong&gt;product data integrity&lt;/strong&gt; and compliance with international standards, and coordinated launches in line with each market&#x27;s specifics and standards">Optimisation des processus dans Oracle PLM pour garantir l'<strong>intégrité des données produits</strong> et la conformité aux normes internationales, et coordination des lancements en respectant les spécificités et les standards de chaque marché</li>
-            <li data-fr="Coordination de &lt;strong&gt;10 à 15 projets par trimestre&lt;/strong&gt; avec les équipes APAC, EMEA et Amériques" data-en="Coordinated &lt;strong&gt;10 to 15 projects per quarter&lt;/strong&gt; with APAC, EMEA and Americas teams">Coordination de <strong>10 à 15 projets par trimestre</strong> avec les équipes APAC, EMEA et Amériques</li>
+            <li data-fr="&lt;span class=&#x27;why&#x27;&gt;international&lt;/span&gt;Gestion de &lt;strong&gt;3 gammes de produits&lt;/strong&gt; (moniteurs, périphériques desktop, refroidissement sur mesure) entre l&#x27;Asie, l&#x27;Europe et les Amériques : création des SKU et des nomenclatures (BOM) des nouveaux produits, gestion des emballages et des fichiers marketing, du prototype à la production (PLM)" data-en="&lt;span class=&#x27;why&#x27;&gt;international&lt;/span&gt;Managed &lt;strong&gt;3 product lines&lt;/strong&gt; (monitors, desktop devices, custom cooling) across Asia, Europe and the Americas: SKU and BOM creation for new products, packaging and marketing files, from prototype to production (PLM)">Gestion de <strong>3 gammes de produits</strong> (moniteurs, périphériques desktop, refroidissement sur mesure) entre l'Asie, l'Europe et les Amériques : création des SKU et des nomenclatures (BOM) des nouveaux produits, gestion des emballages et des fichiers marketing, du prototype à la production (PLM)</li>
+            <li data-fr="&lt;span class=&#x27;why&#x27;&gt;analyse&lt;/span&gt;Optimisation des processus dans Oracle PLM pour garantir l&#x27;&lt;strong&gt;intégrité des données produits&lt;/strong&gt; et la conformité aux normes internationales, et coordination des lancements en respectant les spécificités et les standards de chaque marché" data-en="&lt;span class=&#x27;why&#x27;&gt;analysis&lt;/span&gt;Optimised processes in Oracle PLM to ensure &lt;strong&gt;product data integrity&lt;/strong&gt; and compliance with international standards, and coordinated launches in line with each market&#x27;s specifics and standards">Optimisation des processus dans Oracle PLM pour garantir l'<strong>intégrité des données produits</strong> et la conformité aux normes internationales, et coordination des lancements en respectant les spécificités et les standards de chaque marché</li>
+            <li data-fr="&lt;span class=&#x27;why&#x27;&gt;coordination&lt;/span&gt;Coordination de &lt;strong&gt;10 à 15 projets par trimestre&lt;/strong&gt; avec les équipes APAC, EMEA et Amériques" data-en="&lt;span class=&#x27;why&#x27;&gt;coordination&lt;/span&gt;Coordinated &lt;strong&gt;10 to 15 projects per quarter&lt;/strong&gt; with APAC, EMEA and Americas teams">Coordination de <strong>10 à 15 projets par trimestre</strong> avec les équipes APAC, EMEA et Amériques</li>
             <li data-fr="Résolution de tickets Helpdesk liés au cycle de vie produit sur trois fuseaux horaires, <strong>en réduisant les délais de traitement des requêtes</strong> et en assurant un <strong>taux de conformité technique de 95 %+</strong>" data-en="Resolved product lifecycle Helpdesk tickets across three time zones, <strong>reducing request handling times</strong> and maintaining a <strong>95%+ technical compliance rate</strong>">Résolution de tickets Helpdesk liés au cycle de vie produit sur trois fuseaux horaires, <strong>en réduisant les délais de traitement des requêtes</strong> et en assurant un <strong>taux de conformité technique de 95 %+</strong></li>
             <li data-fr="Maîtrise d&#x27;&lt;strong&gt;Excel&lt;/strong&gt; pour le suivi et le reporting des données produits" data-en="Strong &lt;strong&gt;Excel&lt;/strong&gt; skills for product data tracking and reporting">Maîtrise d'<strong>Excel</strong> pour le suivi et le reporting des données produits</li>
           </ul>
