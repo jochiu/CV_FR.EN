@@ -1112,7 +1112,10 @@ body{letter-spacing:0}
 :root{--sans:'Inter',-apple-system,'Segoe UI',Helvetica,Arial,sans-serif}
 
 /* hero title */
-.hero-head h1.hello{font-family:'DM Serif Display','Instrument Serif',Georgia,serif}
+.hero-head h1.hello{font-family:'DM Serif Display','Instrument Serif',Georgia,serif;
+  font-size:clamp(3rem,9.2vw,7rem)!important}
+@media(max-width:620px){.hero-head h1.hello{font-size:2.8rem!important}}
+.hello .hl-ph{width:.6em;margin:0 0 0 -.1em}
 
 /* project titles */
 .intro-panel h2{font-family:'Trebuchet MS','Lucida Grande','Segoe UI',sans-serif;letter-spacing:-.01em}
