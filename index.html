@@ -525,7 +525,7 @@ button:hover .picon{transform:scale(1.08)}
 .reco p{font-family:'EB Garamond',Georgia,serif}
 
 /* contrast corrections (small labels were under WCAG AA) */
-:root{--sage:#5F7C66}
+:root{--sage:#587459}
 .proj button .badge,.trait h3 small,.why{color:#A34429}
 .reco .q{color:#C4553A}
 
@@ -574,6 +574,52 @@ button:hover .picon{transform:scale(1.08)}
 
 /* thesis blurb, smaller */
 .proj .detail p{font-size:.88rem;line-height:1.45}
+
+/* section headings and job titles, smaller */
+.h2{font-size:clamp(1.85rem,3.7vw,2.55rem)}
+@media(max-width:620px){.h2{font-size:clamp(1.6rem,7vw,2.05rem)}}
+.job h3{font-size:1.42rem}
+@media(max-width:620px){.job h3{font-size:1.2rem}}
+
+/* graduation photo: body-face caption, 10% smaller image */
+.grad-cap{font-family:var(--sans);font-size:.84rem;line-height:1.4}
+.grad-shot{width:81%}
+
+/* section headings a step smaller again */
+.h2{font-size:clamp(1.6rem,3vw,2.05rem)}
+@media(max-width:620px){.h2{font-size:clamp(1.5rem,6.4vw,1.85rem)}}
+
+/* contact headline, 20% smaller */
+.contact .big{font-size:clamp(2.1rem,4.8vw,3.35rem)}
+@media(max-width:620px){.contact .big{font-size:2rem}}
+
+/* heading notes in the body face, same scale as "open all" */
+.h2 .note{font-family:var(--sans);font-size:.84rem;font-weight:500;transform:none;
+  color:var(--soft);letter-spacing:.01em}
+.h2 .note svg{width:24px;height:16px}
+
+/* a point smaller, each */
+.job .co{font-size:.92rem}
+.col h3,.school h3{font-size:1.52rem}
+.contact .big{font-size:clamp(1.9rem,4.3vw,3rem)}
+@media(max-width:620px){.contact .big{font-size:1.8rem}}
+
+/* skill group labels: an eyebrow instead of bold */
+.col .grp{font-size:.72rem;font-weight:500;letter-spacing:.16em;text-transform:uppercase;
+  color:#1E72AE;margin-top:1.5rem;margin-bottom:.4rem}
+.col .grp:first-of-type{margin-top:.2rem}
+
+/* About portrait, 10% smaller */
+.photo-card .pc-in{width:61%}
+@media(max-width:620px){.photo-card .pc-in{width:65%;max-width:208px}}
+
+/* "Beyond the office" entry titles, smaller */
+.beyond h3{font-size:1.3rem}
+@media(max-width:620px){.beyond h3{font-size:1.18rem}}
+
+/* contact headline, smaller again */
+.contact .big{font-size:clamp(1.7rem,3.8vw,2.6rem)}
+@media(max-width:620px){.contact .big{font-size:1.65rem}}
 </style>
 </head>
 <body>
@@ -615,18 +661,7 @@ button:hover .picon{transform:scale(1.08)}
 
 <header class="hero" id="top">
   <div class="stage" id="stage">
-    <div class="doodles" id="doodles" aria-hidden="true" style="filter:url(#rough)">
-      <div class="dd keep-m" data-depth="-14" style="left:7%;top:30%;width:48px;height:33px"><svg viewBox="0 0 48 32"><path class="fillin" style="--dl:.3s;fill:var(--blue)" d="M9 27C3 27 2 20 7 19 6 12 15 9 18 15 21 7 32 9 31 16 38 16 38 27 32 27Z"/><path class="stroke" pathLength="1" style="--dl:.3s" d="M9 27C3 27 2 20 7 19 6 12 15 9 18 15 21 7 32 9 31 16 38 16 38 27 32 27Z"/></svg></div>
-      <div class="dd" data-depth="26" style="left:15%;top:10%;width:30px;height:30px"><svg viewBox="0 0 24 24"><path class="stroke" pathLength="1" style="--dl:.5s" d="M12 1.5C13 8 16 11 22.5 12 16 13 13 16 12 22.5 11 16 8 13 1.5 12 8 11 11 8 12 1.5Z"/></svg></div>
-      <div class="dd" data-depth="16" style="left:10%;top:62%;width:36px;height:36px"><svg viewBox="0 0 24 24"><path class="stroke" pathLength="1" style="--dl:.9s" d="M12 2.5 14.6 9.2 21.6 9.6 16.2 14 18 21 12 17.1 6 21 7.8 14 2.4 9.6 9.4 9.2Z"/></svg></div>
-      <div class="dd keep-m" data-depth="-24" style="left:40%;top:9%;width:28px;height:27px"><svg viewBox="0 0 24 24"><g class="fillin" style="--dl:.4s;fill:var(--leaf)"><circle cx="12" cy="6" r="4.5"/><circle cx="18" cy="11" r="4.5"/><circle cx="15.5" cy="18" r="4.5"/><circle cx="8.5" cy="18" r="4.5"/><circle cx="6" cy="11" r="4.5"/></g><path class="stroke" pathLength="1" style="--dl:.4s" d="M10 10C12 8 15 10 13.5 12.5 12 15 9 13 10.5 11.5"/></svg></div>
-      <div class="dd hide-m" data-depth="18" style="right:34%;top:2%;width:120px;height:40px"><svg viewBox="0 0 120 40"><path class="stroke" pathLength="1" style="--dl:.6s" d="M2 38C20 10 40 4 50 14 56 20 44 26 44 18 44 10 60 4 72 12 78 16 70 22 70 15 70 6 90 2 118 10"/></svg></div>
-      <div class="dd" data-depth="-12" style="right:5%;top:30%;width:46px;height:31px"><svg viewBox="0 0 48 32"><path class="fillin" style="--dl:.5s;fill:var(--blue)" d="M9 27C3 27 2 20 7 19 6 12 15 9 18 15 21 7 32 9 31 16 38 16 38 27 32 27Z"/><path class="stroke" pathLength="1" style="--dl:.5s" d="M9 27C3 27 2 20 7 19 6 12 15 9 18 15 21 7 32 9 31 16 38 16 38 27 32 27Z"/></svg></div>
-      <div class="dd keep-m" data-depth="14" style="right:4%;top:36%;width:40px;height:40px"><svg viewBox="0 0 24 24"><path class="stroke" pathLength="1" style="--dl:1.2s" d="M12 21C5 15 2.5 11 4 7 5.5 3.5 10 3.6 12 8 14 3.6 18.5 3.5 20 7 21.5 11 19 15 12 21Z"/></svg></div>
-      <div class="dd" data-depth="-16" style="right:3%;top:24%;width:24px;height:24px"><svg viewBox="0 0 24 24"><path class="fillin" style="--dl:1.1s;fill:var(--butter)" d="M12 1.5C13 8 16 11 22.5 12 16 13 13 16 12 22.5 11 16 8 13 1.5 12 8 11 11 8 12 1.5Z"/><path class="stroke" pathLength="1" style="--dl:1.1s" d="M12 1.5C13 8 16 11 22.5 12 16 13 13 16 12 22.5 11 16 8 13 1.5 12 8 11 11 8 12 1.5Z"/></svg></div>
-    </div>
-
-    <div class="hero-copy">
+<div class="hero-copy">
       <h1 class="hello" data-fr="Bonjour ! Je suis Yi-Hsuan," data-en="Bonjour ! I&#x27;m Yi-Hsuan,">Bonjour ! Je suis Yi-Hsuan,</h1>
       <p class="hero-line"><span class="hl-role" data-fr="Marketing opérationnel, CRM &amp; analytics" data-en="Marketing operations, CRM &amp; analytics">Marketing opérationnel, CRM &amp; analytics</span><span class="hl-sep" aria-hidden="true"></span><em id="rot">Je construis le tracking à partir de zéro.</em></p>
       <div class="hero-cta">
@@ -667,7 +702,7 @@ button:hover .picon{transform:scale(1.08)}
   <div class="about">
     <div class="reveal">
       <h2 class="h2" data-fr="À propos" data-en="About me">À propos</h2>
-      <p data-fr="Je suis taïwanaise, je vis en France depuis quatre ans et j'y ai obtenu un <strong>master Grande École à EM Strasbourg</strong>. Ce double regard franco-taïwanais, je l'utilise tous les jours pour faire le lien entre des équipes, des marchés et des façons de travailler très différentes." data-en="I'm Taiwanese, I've lived in France for four years and earned a <strong>Grande École master's at EM Strasbourg</strong>. I use this Taiwanese and French perspective every day to connect teams, markets and very different ways of working.">Je suis taïwanaise, je vis en France depuis quatre ans et j'y ai obtenu un <strong>master Grande École à EM Strasbourg</strong>. Ce double regard franco-taïwanais, je l'utilise tous les jours pour faire le lien entre des équipes, des marchés et des façons de travailler très différentes.</p>
+      <p data-fr="Je suis taïwanaise, je vis en France depuis quatre ans et j'y ai obtenu un <strong>master Grande École à EM Strasbourg</strong>. Je travaille en environnement international depuis le début de ma carrière : je m'adapte vite aux codes de chaque équipe et je fais avancer les projets entre des interlocuteurs de langues et de cultures professionnelles différentes." data-en="I'm Taiwanese, I've lived in France for four years and earned a <strong>Grande École master's at EM Strasbourg</strong>. I've worked in international settings since the start of my career: I pick up each team's codes quickly and keep projects moving between people from different languages and working cultures.">Je suis taïwanaise, je vis en France depuis quatre ans et j'y ai obtenu un <strong>master Grande École à EM Strasbourg</strong>. Je travaille en environnement international depuis le début de ma carrière : je m'adapte vite aux codes de chaque équipe et je fais avancer les projets entre des interlocuteurs de langues et de cultures professionnelles différentes.</p>
       <p class="hl-zone" data-fr="En <strong>5,5 ans</strong>, j'ai accompagné <span class='hl'>200+ clients B2B</span>, coordonné des projets entre l'<span class='hl b'>APAC, l'EMEA et les Amériques</span>, et construit des processus marketing et des systèmes de tracking à partir de zéro. Chez UniFox, cela s'est traduit par un <span class='hl g'>taux de rebond en baisse de 52,6 %</span>." data-en="In <strong>5.5 years</strong> I've supported <span class='hl'>200+ B2B clients</span>, coordinated projects across <span class='hl b'>APAC, EMEA and the Americas</span>, and built marketing processes and tracking systems from scratch. At UniFox, that meant a <span class='hl g'>52.6% drop in bounce rate</span>.">En <strong>5,5 ans</strong>, j'ai accompagné <span class='hl'>200+ clients B2B</span>, coordonné des projets entre l'<span class='hl b'>APAC, l'EMEA et les Amériques</span>, et construit des processus marketing et des systèmes de tracking à partir de zéro. Chez UniFox, cela s'est traduit par un <span class='hl g'>taux de rebond en baisse de 52,6 %</span>.</p>
       <p data-fr="Aujourd'hui, je poursuis ma carrière en France en <strong>marketing opérationnel, CRM et analytics</strong>, en m'appuyant sur cette expérience internationale." data-en="Today, I'm building my career in France in <strong>marketing operations, CRM and analytics</strong>, drawing on that international experience.">Aujourd'hui, je poursuis ma carrière en France en <strong>marketing opérationnel, CRM et analytics</strong>, en m'appuyant sur cette expérience internationale.</p>
 
@@ -706,7 +741,6 @@ button:hover .picon{transform:scale(1.08)}
 
 <section id="recommendations" class="reco-sec">
   <h2 class="h2 reveal"><span data-fr="Ils me recommandent" data-en="They recommend me">Ils me recommandent</span>
-    <span class="note"><span data-fr="trois lettres à lire" data-en="three letters to read">trois lettres à lire</span><svg viewBox="0 0 34 22" fill="none" stroke="var(--sage)" stroke-width="1.6" stroke-linecap="round"><path d="M2 4C12 2 24 6 28 16M22 13 28 17 31 10"/></svg></span>
   </h2>
   <div class="recos">
     <div class="reco reveal">
@@ -956,7 +990,6 @@ button:hover .picon{transform:scale(1.08)}
       <div class="big" data-fr="On se <em>rencontre</em> ?" data-en="Shall we <em>meet</em>?">On se <em>rencontre</em> ?</div>
       <p data-fr="Je recherche un CDI ou un CDD en marketing opérationnel, CRM, marketing analytics ou gestion de projet, partout en France. Je parle français, anglais et mandarin et j'ai l'habitude de piloter des projets internationaux. N'hésitez pas à me contacter !" data-en="I'm looking for a permanent or fixed-term role in marketing operations, CRM, marketing analytics or project management, anywhere in France. I speak French, English and Mandarin and I'm used to running international projects. Feel free to get in touch!">Je recherche un CDI ou un CDD en marketing opérationnel, CRM, marketing analytics ou gestion de projet, partout en France. Je parle français, anglais et mandarin et j'ai l'habitude de piloter des projets internationaux. N'hésitez pas à me contacter !</p>
       <div class="contacts"><a href="mailto:c.hsuann@gmail.com">c.hsuann@gmail.com</a><a href="tel:+33635713264">+33 6 35 71 32 64</a></div>
-      <svg class="heart" viewBox="0 0 24 24" style="filter:url(#rough)"><path d="M12 20C5 15 2 11 4 7 6 3.5 10 4 12 8 14 4 18 3.5 20 7 22 11 19 15 12 20Z" fill="var(--coral)" opacity=".8"/><path d="M12 20C5 15 2 11 4 7 6 3.5 10 4 12 8 14 4 18 3.5 20 7 22 11 19 15 12 20Z" fill="none" stroke="var(--ink)" stroke-width="1.2"/></svg>
     </div>
     <form class="reveal" style="--d:.1s" id="contact-form" action="https://formsubmit.co/c.hsuann@gmail.com" method="POST">
       <input type="hidden" name="_subject" value="Nouveau message depuis votre CV en ligne">
@@ -976,7 +1009,6 @@ button:hover .picon{transform:scale(1.08)}
 </main>
 
 <footer>
-  <span data-fr="fait avec soin, 2026" data-en="made with care, 2026">fait avec soin, 2026</span>
   <span class="credit" data-fr="Musique : Oneul, « New Day » &lt;a href=&quot;https://www.youtube.com/watch?v=Qfm1y8KOo5g&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;YouTube&lt;/a&gt;" data-en="Music: Oneul, &#8220;New Day&#8221; &lt;a href=&quot;https://www.youtube.com/watch?v=Qfm1y8KOo5g&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;YouTube&lt;/a&gt;">Musique : Oneul, « New Day » <a href="https://www.youtube.com/watch?v=Qfm1y8KOo5g" target="_blank" rel="noopener">YouTube</a></span>
 </footer>
 
@@ -1018,15 +1050,6 @@ if (!RM) setInterval(function () {
   setTimeout(function () { pi = (pi + 1) % PHRASES.fr.length; rot.textContent = PHRASES[LANG][pi]; rot.classList.remove('out'); }, 350);
 }, 3200);
 
-/* doodle parallax */
-if (FINE && !RM) {
-  var stage = document.getElementById('stage'), dds = QA('.dd');
-  stage.addEventListener('pointermove', function (e) {
-    var r = stage.getBoundingClientRect(), x = (e.clientX - r.left) / r.width - .5, y = (e.clientY - r.top) / r.height - .5;
-    dds.forEach(function (d) { var k = +d.dataset.depth; d.style.transform = 'translate(' + (x * k) + 'px,' + (y * k) + 'px)'; });
-  });
-  stage.addEventListener('pointerleave', function () { dds.forEach(function (d) { d.style.transform = ''; }); });
-}
 
 /* accordion */
 function label(job) {
