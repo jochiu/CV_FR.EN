@@ -2074,6 +2074,18 @@ footer .links .cta:hover,.nav-cta:hover{background:#1F56C4!important;
 /* graduation shot is landscape; give it room */
 .px.pC{--w:164px;--h:116px}
 .px.pA{--w:138px;--h:104px}
+
+/* the graduation shot is already a cut-out PNG: let the transparency
+   show instead of framing it like a card */
+.px.cut img{box-shadow:none;border-radius:0;background:none;object-fit:contain;
+  filter:drop-shadow(0 10px 20px rgba(18,24,34,.18))}
+
+/* nudges */
+.px.pA{left:21%;right:auto;top:7%}
+.px.pD{right:21%;left:auto;top:7%}
+.px.pC{--w:176px;--h:127px;left:6%;right:auto;top:72%}
+.desk>.folder:nth-child(2){left:5%;right:auto;top:38%}
+.desk>.folder:nth-child(5){left:auto;right:6%;top:42%}
 </style>
 </head>
 <body>
@@ -2126,7 +2138,7 @@ footer .links .cta:hover,.nav-cta:hover{background:#1F56C4!important;
   <div class="pix">
     <figure class="px pA"><img src="European%20Education%20Fair%20Taiwan_1.jpeg" alt="" data-file="European Education Fair Taiwan_1.jpeg" loading="lazy"><figcaption data-fr="ambassadrice-eef-taiwan.jpg" data-en="ambassador-eef-taiwan.jpg">ambassadrice-eef-taiwan.jpg</figcaption></figure>
     <figure class="px pB"><img src="reconditionment.JPG" alt="" data-file="reconditionment.JPG" loading="lazy"><figcaption data-fr="linkee-reconditionnement.jpg" data-en="linkee-refurbishing.jpg">linkee-reconditionnement.jpg</figcaption></figure>
-    <figure class="px pC"><img src="master_marketing.png" alt="" data-file="master_marketing.png" loading="lazy"><figcaption data-fr="em-strasbourg-diplome.jpg" data-en="em-strasbourg-graduation.jpg">em-strasbourg-diplome.jpg</figcaption></figure>
+    <figure class="px pC cut"><img src="master_marketing.png" alt="" data-file="master_marketing.png" loading="lazy"><figcaption data-fr="em-strasbourg-diplome.jpg" data-en="em-strasbourg-graduation.jpg">em-strasbourg-diplome.jpg</figcaption></figure>
     <figure class="px pD"><img src="yt_1.jpg" alt="" data-file="yt_1.jpg" loading="lazy"><figcaption data-fr="ma-vie-en-france.jpg" data-en="my-life-in-france.jpg">ma-vie-en-france.jpg</figcaption></figure>
   </div>
   <div class="desk" id="work">
