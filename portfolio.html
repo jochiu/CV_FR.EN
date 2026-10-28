@@ -2134,6 +2134,21 @@ footer .links .cta:hover,.nav-cta:hover{background:#1F56C4!important;
 .env-cards .rec.rv.in{translate:0 0;scale:1;opacity:1}
 @media(prefers-reduced-motion:reduce){
   .env-cards .rec,.env-cards .rec.rv{transition:none;translate:none;scale:none;opacity:1}}
+
+/* only the letter under the cursor lights up */
+.hello:hover .ltr{color:inherit;transform:none}
+.hello .ltr{transition:color .18s ease,transform .18s ease;transition-delay:0s!important}
+.hello .ltr:hover{color:#2D6BE4;transform:translateY(-4px)}
+
+/* lift the title and tighten the gap to the subtitle */
+.hero-head{padding-bottom:clamp(3rem,7vw,6rem)}
+.hero-tag{margin-top:clamp(1.2rem,2.2vw,1.8rem)!important}
+
+/* "Autres formats" belongs on its own line, not beside the YouTube link */
+.sub-h{display:table}
+
+/* the letters themselves need to receive the pointer */
+.hero-head h1.hello .hl-t,.hero-head h1.hello .ltr{pointer-events:auto}
 </style>
 </head>
 <body>
