@@ -2086,6 +2086,54 @@ footer .links .cta:hover,.nav-cta:hover{background:#1F56C4!important;
 .px.pC{--w:176px;--h:127px;left:6%;right:auto;top:72%}
 .desk>.folder:nth-child(2){left:5%;right:auto;top:38%}
 .desk>.folder:nth-child(5){left:auto;right:6%;top:42%}
+
+/* ===================================================================
+   HERO v4 — letters light up one by one, the whole stack fits a
+   screen, captions say what the photo is.
+   =================================================================== */
+.hero-head h1.hello{pointer-events:auto;cursor:default}
+.hello .ltr{display:inline-block;transition:color .3s ease,transform .3s ease}
+.hello:hover .ltr{color:#2D6BE4;transform:translateY(-3px)}
+.hello .ltr:nth-child(1){transition-delay:0s}
+.hello .ltr:nth-child(2){transition-delay:.05s}
+.hello .ltr:nth-child(3){transition-delay:.1s}
+.hello .ltr:nth-child(4){transition-delay:.15s}
+.hello .ltr:nth-child(5){transition-delay:.2s}
+.hello .ltr:nth-child(6){transition-delay:.25s}
+.hello .ltr:nth-child(7){transition-delay:.3s}
+.hello .ltr:nth-child(8){transition-delay:.35s}
+.hello .ltr:nth-child(9){transition-delay:.4s}
+@media(prefers-reduced-motion:reduce){.hello .ltr{transition:none}}
+
+/* photo captions are sentences now, so let them wrap */
+.px figcaption{white-space:normal;max-width:100%;line-height:1.35}
+
+/* the whole hero fits one screen */
+.hero-head{min-height:clamp(400px,46vw,600px);padding-top:clamp(2rem,3.6vw,3.2rem)}
+.desk{height:clamp(400px,46vw,600px)}
+.pix{height:clamp(400px,46vw,600px)}
+
+/* nudges */
+.desk>.folder:nth-child(1){left:7%;right:auto;top:8%}
+.desk>.folder:nth-child(3){left:22%;right:auto;top:74%}
+.desk>.folder:nth-child(4){left:auto;right:22%;top:76%}
+.px.pA{left:25%;right:auto;top:7%}
+.px.pD{right:25%;left:auto;top:4%}
+.px.pB{right:7%;left:auto;top:69%;--w:104px;--h:132px}
+.px.pC{left:6%;right:auto;top:68%}
+
+/* envelope: make all three letters visibly rise, one after the other */
+.env-cards .rec{transition:transform 1.05s cubic-bezier(.18,.9,.24,1.1),box-shadow .4s;
+  transition-delay:calc(var(--d,0s) * 3.4)}
+.env-cards .rec.rv{translate:0 120px;scale:.9;opacity:0;
+  transition:opacity .85s ease calc(var(--d,0s) * 3.4),
+             translate 1.05s cubic-bezier(.18,.9,.24,1.1) calc(var(--d,0s) * 3.4),
+             scale 1.05s cubic-bezier(.18,.9,.24,1.1) calc(var(--d,0s) * 3.4),
+             transform 1.05s cubic-bezier(.18,.9,.24,1.1) calc(var(--d,0s) * 3.4),
+             box-shadow .4s}
+.env-cards .rec.rv.in{translate:0 0;scale:1;opacity:1}
+@media(prefers-reduced-motion:reduce){
+  .env-cards .rec,.env-cards .rec.rv{transition:none;translate:none;scale:none;opacity:1}}
 </style>
 </head>
 <body>
@@ -2127,19 +2175,19 @@ footer .links .cta:hover,.nav-cta:hover{background:#1F56C4!important;
   <div class="sky" aria-hidden="true"><img src="hero_sky.jpg" alt="" data-file="hero_sky.jpg"></div>
   <div class="hero-head">
     <h1 class="hello">
-      <span class="hl-t hl-name">portfolio</span><span class="hl-ph"><img src="hello_me.png" alt="Yi-Hsuan Chiu" data-file="hello_me.png"></span>
+      <span class="hl-t hl-name"><span class="ltr">p</span><span class="ltr">o</span><span class="ltr">r</span><span class="ltr">t</span><span class="ltr">f</span><span class="ltr">o</span><span class="ltr">l</span><span class="ltr">i</span><span class="ltr">o</span></span><span class="hl-ph"><img src="hello_me.png" alt="Yi-Hsuan Chiu" data-file="hello_me.png"></span>
       <i class="sh h-nw" aria-hidden="true"></i><i class="sh h-n" aria-hidden="true"></i><i class="sh h-ne" aria-hidden="true"></i>
       <i class="sh h-w" aria-hidden="true"></i><i class="sh h-e" aria-hidden="true"></i>
       <i class="sh h-sw" aria-hidden="true"></i><i class="sh h-s" aria-hidden="true"></i><i class="sh h-se" aria-hidden="true"></i>
       <i class="sel-cursor2" aria-hidden="true"></i>
     </h1>
-    <p class="hero-tag" data-fr="(quatre projets, un mémoire et une vie de créatrice, entre l'APAC et l'EMEA)" data-en="(four projects, a thesis and a creator life, between APAC and EMEA)">(quatre projets, un mémoire et une vie de créatrice, entre l'APAC et l'EMEA)</p>
+    <p class="hero-tag" data-fr="(quatre projets · marketing opérationnel, CRM, analytics et gestion de projet)" data-en="(four projects · marketing operations, CRM, analytics and project management)">(quatre projets · marketing opérationnel, CRM, analytics et gestion de projet)</p>
   </div>
   <div class="pix">
-    <figure class="px pA"><img src="European%20Education%20Fair%20Taiwan_1.jpeg" alt="" data-file="European Education Fair Taiwan_1.jpeg" loading="lazy"><figcaption data-fr="ambassadrice-eef-taiwan.jpg" data-en="ambassador-eef-taiwan.jpg">ambassadrice-eef-taiwan.jpg</figcaption></figure>
-    <figure class="px pB"><img src="reconditionment.JPG" alt="" data-file="reconditionment.JPG" loading="lazy"><figcaption data-fr="linkee-reconditionnement.jpg" data-en="linkee-refurbishing.jpg">linkee-reconditionnement.jpg</figcaption></figure>
-    <figure class="px pC cut"><img src="master_marketing.png" alt="" data-file="master_marketing.png" loading="lazy"><figcaption data-fr="em-strasbourg-diplome.jpg" data-en="em-strasbourg-graduation.jpg">em-strasbourg-diplome.jpg</figcaption></figure>
-    <figure class="px pD"><img src="yt_1.jpg" alt="" data-file="yt_1.jpg" loading="lazy"><figcaption data-fr="ma-vie-en-france.jpg" data-en="my-life-in-france.jpg">ma-vie-en-france.jpg</figcaption></figure>
+    <figure class="px pA"><img src="European%20Education%20Fair%20Taiwan_1.jpeg" alt="" data-file="European Education Fair Taiwan_1.jpeg" loading="lazy"><figcaption data-fr="Salon EEF Taiwan, ambassadrice" data-en="EEF Taiwan fair, ambassador">Salon EEF Taiwan, ambassadrice</figcaption></figure>
+    <figure class="px pB"><img src="reconditionment.JPG" alt="" data-file="reconditionment.JPG" loading="lazy"><figcaption data-fr="Linkee, projets anti-gaspillage" data-en="Linkee, food-waste projects">Linkee, projets anti-gaspillage</figcaption></figure>
+    <figure class="px pC cut"><img src="master_marketing.png" alt="" data-file="master_marketing.png" loading="lazy"><figcaption data-fr="Remise des diplômes, EM Strasbourg" data-en="Graduation, EM Strasbourg">Remise des diplômes, EM Strasbourg</figcaption></figure>
+    <figure class="px pD"><img src="yt_1.jpg" alt="" data-file="yt_1.jpg" loading="lazy"><figcaption data-fr="Ma vie en France, sur YouTube" data-en="My life in France, on YouTube">Ma vie en France, sur YouTube</figcaption></figure>
   </div>
   <div class="desk" id="work">
       <a class="folder" href="#strategy" style="--fc:#7DC2F5;--fc-d:#71A8DB"><span class="ficon"><svg class="fsvg" viewBox="0 0 120 96" aria-hidden="true"><path d="M6 20a10 10 0 0 1 10-10h27a7 7 0 0 1 5.1 2.2l6.4 6.9A7 7 0 0 0 59.6 21H104a10 10 0 0 1 10 10v55a10 10 0 0 1-10 10H16A10 10 0 0 1 6 86Z" fill="var(--fc-d)"/><path d="M6 34a10 10 0 0 1 10-10h88a10 10 0 0 1 10 10v52a10 10 0 0 1-10 10H16A10 10 0 0 1 6 86Z" fill="var(--fc)"/></svg><span class="fpeek" aria-hidden="true"><img src="unifox_reels_1.png" alt="" data-file="unifox_reels_1.png" loading="lazy"><img src="Marketing%20Strategy_unifox.png" alt="" data-file="Marketing Strategy_unifox.png" loading="lazy"></span><svg class="ffront" viewBox="0 0 120 96" aria-hidden="true"><path d="M6 34a10 10 0 0 1 10-10h88a10 10 0 0 1 10 10v52a10 10 0 0 1-10 10H16A10 10 0 0 1 6 86Z" fill="var(--fc)"/></svg><svg class="fcur" viewBox="0 0 16 18" aria-hidden="true"><path d="M1.4 1 13.6 9.2 7.6 10.1 10.6 15.9 8.4 17 5.4 11.2 1.4 14.6Z" fill="#1F1C19" stroke="#F5F6F5" stroke-width="1.2" stroke-linejoin="round"/></svg></span><span class="fname" data-fr="01_digital_marketing" data-en="01_digital_marketing">01_digital_marketing</span></a>
@@ -3093,6 +3141,11 @@ var last=scrollY,mqs=document.querySelectorAll('.marquee div');
     else closeProj();
   }
   fromHash(320);
+  /* OPEN_ON_LOAD: show one project straight away. Set to '' to stop this. */
+  var OPEN_ON_LOAD='brand';
+  if(!location.hash && secs[OPEN_ON_LOAD]){
+    setTimeout(function(){ openProj(OPEN_ON_LOAD, niceLabel(OPEN_ON_LOAD)); }, 650);
+  }
   window.addEventListener('hashchange',function(){ fromHash(0); });
 
   /* ---- the route between the folders ---- */
