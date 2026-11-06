@@ -2550,6 +2550,59 @@ header,section,footer,.recs,.hero-body{background:#ffffff}
 
 /* the recommendations run straight on, without a heading */
 .recs{padding-top:1.2rem}
+
+/* ===================================================================
+   PREVIOUS / NEXT PROJECT — the neighbouring windows peek out at each
+   side, half faded. Click one to swap without closing anything; the
+   close button keeps doing exactly what it did.
+   =================================================================== */
+.pm-nav{position:absolute;top:50%;translate:0 -50%;z-index:3;
+  width:clamp(52px,5.4vw,76px);height:min(58vh,460px);
+  display:flex;flex-direction:column;align-items:center;gap:.6rem;
+  padding:0 0 .7rem;cursor:pointer;
+  background:#fff;border:1.6px solid #26262B;border-radius:14px;overflow:hidden;
+  box-shadow:0 6px 0 rgba(38,38,43,.9),0 18px 44px rgba(18,24,34,.22);
+  opacity:.5;transition:opacity .25s ease,translate .25s ease}
+.pm-nav[hidden]{display:none}
+.pmodal{--pmpad:clamp(.5rem,2.6vw,2rem);
+  --halfwin:min(550px,calc((100vw - 2 * var(--pmpad)) / 2))}
+.pm-prev{right:calc(50% + var(--halfwin) + 14px);left:auto}
+.pm-next{left:calc(50% + var(--halfwin) + 14px);right:auto}
+.pm-nav:hover,.pm-nav:focus-visible{opacity:1;outline:none}
+.pm-prev:hover,.pm-prev:focus-visible{translate:-5px -50%}
+.pm-next:hover,.pm-next:focus-visible{translate:5px -50%}
+.pn-bar{flex:none;align-self:stretch;height:20px;background:#f2f2f5;
+  border-bottom:1.6px solid #26262B;display:flex;align-items:center;gap:4px;
+  padding-left:7px}
+.pn-bar i{width:6px;height:6px;border-radius:50%;background:#1a73e8;display:block}
+.pn-bar i:nth-child(2){background:#7fb2f3}
+.pn-bar i:nth-child(3){background:#cfe4ff}
+.pn-label{flex:1;min-height:0;writing-mode:vertical-rl;text-orientation:mixed;
+  rotate:180deg;font-family:'Poppins',var(--sans);font-weight:500;
+  font-size:.74rem;letter-spacing:.01em;color:#1d1d1f;
+  display:flex;align-items:center;justify-content:center;
+  overflow:hidden;text-overflow:ellipsis;white-space:nowrap;padding:.5rem 0}
+.pn-arrow{flex:none;width:26px;height:26px;border-radius:50%;background:#eaf2fe;
+  color:#1557b0;font-size:1rem;line-height:26px;text-align:center}
+.pm-nav:hover .pn-arrow{background:#1a73e8;color:#fff}
+
+/* the body cross-fades when a neighbour is opened */
+.pm-body.swap{animation:pmswap .32s cubic-bezier(.2,.8,.25,1)}
+@keyframes pmswap{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+
+/* no side room: the peeks become small round arrows at the viewport edge */
+@media(max-width:1339px){
+  .pm-nav{width:36px;height:36px;border-radius:50%;padding:0;gap:0;
+    justify-content:center;opacity:.85;border-width:1.4px;
+    box-shadow:0 3px 0 rgba(38,38,43,.85),0 8px 20px rgba(18,24,34,.2)}
+  .pm-prev{left:.35rem;right:auto} .pm-next{right:.35rem;left:auto}
+  .pn-bar,.pn-label{display:none}
+  .pn-arrow{width:100%;height:100%;line-height:33px;border-radius:50%;
+    background:none;font-size:1.05rem}
+  .pm-prev:hover,.pm-prev:focus-visible{translate:0 -50%}
+  .pm-next:hover,.pm-next:focus-visible{translate:0 -50%}}
+@media(prefers-reduced-motion:reduce){
+  .pm-nav{transition:none}.pm-body.swap{animation:none}}
 </style>
 </head>
 <body>
@@ -3506,6 +3559,14 @@ var last=scrollY,mqs=document.querySelectorAll('.marquee div');
   var modal=document.createElement('div');
   modal.className='pmodal';
   modal.innerHTML='<div class="pm-back"></div>'+
+    '<button class="pm-nav pm-prev" type="button" hidden>'+
+      '<span class="pn-bar" aria-hidden="true"><i></i><i></i><i></i></span>'+
+      '<span class="pn-label"></span>'+
+      '<span class="pn-arrow" aria-hidden="true">\u2039</span></button>'+
+    '<button class="pm-nav pm-next" type="button" hidden>'+
+      '<span class="pn-bar" aria-hidden="true"><i></i><i></i><i></i></span>'+
+      '<span class="pn-label"></span>'+
+      '<span class="pn-arrow" aria-hidden="true">\u203A</span></button>'+
     '<div class="pm-win" role="dialog" aria-modal="true" aria-label="Projet">'+
       '<div class="pm-bar"><span class="pm-dots" aria-hidden="true"><i></i><i></i><i></i></span>'+
       '<span class="pm-name"></span>'+
@@ -3515,28 +3576,82 @@ var last=scrollY,mqs=document.querySelectorAll('.marquee div');
 
   var pbody=modal.querySelector('.pm-body'),
       pname=modal.querySelector('.pm-name'),
-      cur=null, lastFocus=null;
+      cur=null, lastFocus=null, curId=null,
+      prevBtn=modal.querySelector('.pm-prev'),
+      nextBtn=modal.querySelector('.pm-next');
+
+  /* the reading order is the order the folders sit on the desk */
+  function orderIds(){
+    var out=[];
+    Array.prototype.forEach.call(
+      document.querySelectorAll('.desk a.folder[href^="#"]'),function(a){
+        var id=a.getAttribute('href').slice(1);
+        if(secs[id]&&out.indexOf(id)<0) out.push(id);
+      });
+    return out;
+  }
+  function syncNav(){
+    var ids=orderIds(), i=ids.indexOf(curId);
+    if(i<0||ids.length<2){ prevBtn.hidden=true; nextBtn.hidden=true; return; }
+    if(curId) pname.textContent=niceLabel(curId);
+    var p=ids[(i-1+ids.length)%ids.length], n=ids[(i+1)%ids.length];
+    prevBtn.hidden=false; nextBtn.hidden=false;
+    prevBtn.setAttribute('data-target',p);
+    nextBtn.setAttribute('data-target',n);
+    prevBtn.querySelector('.pn-label').textContent=niceLabel(p);
+    nextBtn.querySelector('.pn-label').textContent=niceLabel(n);
+    prevBtn.setAttribute('aria-label',niceLabel(p));
+    nextBtn.setAttribute('aria-label',niceLabel(n));
+  }
 
   function stow(){ if(cur){ store.appendChild(cur); cur=null; } }
   function openProj(id,label){
     var sec=secs[id]; if(!sec) return;
-    stow(); pbody.appendChild(sec); cur=sec;
+    var swapping=modal.classList.contains('on');
+    stow(); pbody.appendChild(sec); cur=sec; curId=id;
     pname.textContent=label||id;
     modal.classList.add('on');
     document.body.style.overflow='hidden';
     pbody.scrollTop=0;
-    var x=modal.querySelector('.pm-x'); if(x) x.focus();
+    syncNav();
+    if(swapping){
+      pbody.classList.remove('swap');
+      void pbody.offsetWidth;
+      pbody.classList.add('swap');
+    } else {
+      var x=modal.querySelector('.pm-x'); if(x) x.focus();
+    }
   }
+  function go(btn){
+    var t=btn.getAttribute('data-target');
+    if(!t||!secs[t]) return;
+    openProj(t,niceLabel(t));
+    try{ if(history.replaceState) history.replaceState(null,'','#'+t); }catch(err){}
+  }
+  prevBtn.addEventListener('click',function(){ go(prevBtn); });
+  nextBtn.addEventListener('click',function(){ go(nextBtn); });
   function closeProj(){
     if(!modal.classList.contains('on')) return;
     modal.classList.remove('on');
     document.body.style.overflow='';
+    curId=null;
     setTimeout(stow,260);
     if(lastFocus&&lastFocus.focus) lastFocus.focus();
   }
   modal.querySelector('.pm-x').addEventListener('click',closeProj);
   modal.querySelector('.pm-back').addEventListener('click',closeProj);
-  document.addEventListener('keydown',function(e){ if(e.key==='Escape') closeProj(); });
+  document.addEventListener('keydown',function(e){
+    if(e.key==='Escape'){ closeProj(); return; }
+    if(!modal.classList.contains('on')) return;
+    if(e.target&&/^(INPUT|TEXTAREA|SELECT)$/.test(e.target.tagName)) return;
+    if(e.key==='ArrowLeft'&&!prevBtn.hidden){ e.preventDefault(); go(prevBtn); }
+    if(e.key==='ArrowRight'&&!nextBtn.hidden){ e.preventDefault(); go(nextBtn); }
+  });
+  /* folder names are bilingual: relabel the peeks after a language switch */
+  var topbar=document.querySelector('.top-bar');
+  if(topbar) topbar.addEventListener('click',function(){
+    if(modal.classList.contains('on')) setTimeout(syncNav,60);
+  });
 
   function labelOf(a){
     var n=a.querySelector('.fname');
